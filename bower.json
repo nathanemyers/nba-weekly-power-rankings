@@ -1,0 +1,23 @@
+{
+  "name": "nba-weekly-power-rankings",
+  "authors": [
+    "Nathan Myers <nathanemyers@gmail.com>"
+  ],
+  "description": "A D3.js visualization of the weekly ESPN NBA power rankings",
+  "main": "",
+  "keywords": [
+    "D3.js"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^4.2.5"
+  }
+}
