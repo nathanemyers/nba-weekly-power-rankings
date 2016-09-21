@@ -1,0 +1,5 @@
+## To Install
+
+```
+bower install
+```
