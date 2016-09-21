@@ -21,6 +21,7 @@
   "homepage": "https://github.com/nathanemyers/nba-weekly-power-rankings#readme",
   "devDependencies": {
     "babel": "^6.5.2",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-sass": "^2.3.2"
