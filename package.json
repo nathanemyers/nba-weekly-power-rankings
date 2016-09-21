@@ -1,0 +1,28 @@
+{
+  "name": "nba-weekly-power-rankings",
+  "version": "1.0.0",
+  "description": "``` bower install ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanemyers/nba-weekly-power-rankings.git"
+  },
+  "keywords": [
+    "d3.js"
+  ],
+  "author": "Nathan Myers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathanemyers/nba-weekly-power-rankings/issues"
+  },
+  "homepage": "https://github.com/nathanemyers/nba-weekly-power-rankings#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-sass": "^2.3.2"
+  }
+}

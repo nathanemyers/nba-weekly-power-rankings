@@ -1,5 +1,11 @@
 ## To Install
 
 ```
-bower install
+npm install
+```
+
+## To Build
+
+```
+gulp build
 ```

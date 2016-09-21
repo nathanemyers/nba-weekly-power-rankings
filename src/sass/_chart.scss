@@ -1,0 +1,29 @@
+@import 'variables';
+
+g.voronoi {
+  cursor: pointer;
+  fill: none;
+  path {
+    pointer-events: all;
+    stroke: none;
+  }
+}
+
+.zoom-handle {
+  fill: none;
+  pointer-events: all;
+
+  @media screen and (min-width: $mobile-break) {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.team-label {
+  cursor: pointer;
+}
+
+.playoffs-marker {
+  stroke: red;
+  fill: red;
+}
