@@ -1,4 +1,8 @@
 /* jshint esnext: true */
+
+import d3 from 'd3';
+
+
 var data;
 
 var margin = {top: 0, right: 60, bottom: 50, left: 100};

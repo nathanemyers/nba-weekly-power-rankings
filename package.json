@@ -1,8 +1,8 @@
 {
   "name": "nba-weekly-power-rankings",
   "version": "1.0.0",
-  "description": "``` bower install ```",
-  "main": "index.js",
+  "description": "``` npm install ```",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,20 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/nathanemyers/nba-weekly-power-rankings.git"
   },
-  "keywords": [
-    "d3.js"
-  ],
-  "author": "Nathan Myers",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/nathanemyers/nba-weekly-power-rankings/issues"
   },
   "homepage": "https://github.com/nathanemyers/nba-weekly-power-rankings#readme",
   "devDependencies": {
-    "babel": "^6.5.2",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-sass": "^2.3.2"
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015-webpack": "^6.4.3",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "dependencies": {
+    "d3": "^4.2.5"
   }
 }
