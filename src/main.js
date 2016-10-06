@@ -1,7 +1,6 @@
 /* jshint esnext: true */
 
-import d3 from 'd3';
-
+import * as d3 from 'd3';
 
 var data;
 
@@ -41,7 +40,7 @@ var voronoi = d3.voronoi()
 var format = d3.format(".01f");
 
 window.onload = function() {
-  d3.json('api.nathanemyers.com/nba/rankings/2016', function(error, json) {
+  d3.json('http://api.nathanemyers.com/nba/rankings/2016', function(error, json) {
     if (error) {
       return console.warn(error);
     }

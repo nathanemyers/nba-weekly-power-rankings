@@ -1,7 +1,7 @@
 //const path = require('path');
 
 module.exports = {
-  entry: ['./src/main.js', './src/scaffolding.jsx'],
+  entry: './src/main.js',
   output: {
     path: './dist',
     filename: 'bundle.js'
@@ -24,6 +24,7 @@ module.exports = {
   watch: true,
   devServer: {
     port: 8080,
-    host: 'localhost'
+    host: 'localhost',
+    contentBase: './dist'
   }
 };

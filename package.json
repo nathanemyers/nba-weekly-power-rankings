@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,7 @@
     "webpack-dev-server": "^1.16.1"
   },
   "dependencies": {
-    "d3": "^4.2.5",
+    "d3": "^4.2.6",
     "react": "^15.3.2"
   }
 }
