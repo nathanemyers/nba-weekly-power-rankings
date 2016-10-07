@@ -55,7 +55,7 @@ window.onload = function() {
     var start_rankings = new Array(30);
     data.forEach(function(team) {
       let rank = team.rankings[0].rank;
-      start_rankings[rank - 1] = '.' + team.slug;
+      start_rankings[rank - 1] = '.' + team.css_slug;
     });
     start_rankings.reverse();
 
@@ -109,14 +109,14 @@ window.onload = function() {
     var labels = gY.selectAll('.team-label')
       .data(data)
       .enter().append('text')
-        .attr('class', d => `${d.slug} team-label`)
+        .attr('class', d => `${d.css_slug} team-label`)
         .attr('text-anchor', 'end')
         .attr('transform', d => `translate(0, ${y(d.rankings[current_x_min].rank) + 5})`)
         .text(d => d.name)
-        .on('click', team => pin(team.slug))
+        .on('click', team => pin(team.css_slug))
         .on('mouseover', team => {
             if (team && !pinned) {
-              highlightTeam(team.slug);
+              highlightTeam(team.css_slug);
             }
           })
         .on('mouseout', () => {
@@ -128,7 +128,7 @@ window.onload = function() {
     var team = inner.selectAll('.team')
       .data(data)
       .enter().append('g')
-        .attr('class', d => `${d.slug} team`);
+        .attr('class', d => `${d.css_slug} team`);
 
     team
       .append('path')
@@ -136,7 +136,7 @@ window.onload = function() {
         .style('fill', 'none')
         .style('stroke-width', 1.5)
         .style('stroke', d => d.color)
-        .attr('team', d => d.slug);
+        .attr('team', d => d.css_slug);
 
     team.selectAll('circle')
       .data(d => d.rankings)
@@ -187,10 +187,10 @@ window.onload = function() {
           .attr('class', d => 'voronoi')
         .append('path')
           .attr('d', d => d ? "M" + d.join("L") + "Z" : null)
-          .on('click', team => pin(team.data.slug))
+          .on('click', team => pin(team.data.css_slug))
           .on('mouseover', team => {
               if (team && !pinned) {
-                highlightTeam(team.data.slug);
+                highlightTeam(team.data.css_slug);
               }
             })
           .on('mouseout', () => {
@@ -368,14 +368,14 @@ window.onload = function() {
       .transition()
       .duration(15)
       .ease(d3.easeLinear)
-      .style('stroke-width', d => (slug === d.slug) ? '3px' : '1px')
-      .style('stroke', d => (slug === d.slug) ? d.color : 'gray');
+      .style('stroke-width', d => (slug === d.css_slug) ? '3px' : '1px')
+      .style('stroke', d => (slug === d.css_slug) ? d.color : 'gray');
 
     d3.selectAll('.team-label')
       .transition()
       .duration(15)
-      .attr('fill', d => (slug === d.slug) ? 'black' : 'gray')
-      .attr('font-weight', d => (slug === d.slug) ? 900 : 100);
+      .attr('fill', d => (slug === d.css_slug) ? 'black' : 'gray')
+      .attr('font-weight', d => (slug === d.css_slug) ? 900 : 100);
 
     d3.selectAll(`.${slug} > circle`)
       .transition()
@@ -416,7 +416,7 @@ window.onload = function() {
       samples.push({
         x: sample.x,
         y: sample.y,
-        slug: pathNode.__data__.slug // there is surely a better way to get this
+        slug: pathNode.__data__.css_slug // there is surely a better way to get this
       });
     }
     return samples;
