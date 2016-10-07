@@ -3,6 +3,7 @@
 import * as d3 from 'd3';
 import $ from 'jquery';
 import TweenMax from 'gsap';
+import {highlightTeam, highlightAll} from './highlighter.js';
 
 require('./sass/style.scss');
 
@@ -164,12 +165,6 @@ window.onload = function() {
       .translateExtent([[0,0], [3200, height + margin.top + margin.bottom]])
       .scaleExtent([1,1]);
 
-    let zoomHandle = inner.append('rect')
-      .attr('width', width)
-      .attr('height', height)
-      .attr('class', 'zoom-handle')
-      .call(zoom);
-
     window.onclick = function () {
       highlightAll();
       pinned = false;
@@ -181,12 +176,12 @@ window.onload = function() {
       gX.call(xAxis.scale(d3.event.transform.rescaleX(x)));
 
       let x_min = format(x.invert(-d3.event.transform.x));
-      let xFloor = Math.floor(x_min);
+      let xFloor = Math.floor(x_min); //TODO xFloor will resolve to -1 on first pan vvv
       let xCeil = Math.ceil(x_min);
       let percent = d3.easeCubic(x_min % 1);
 
       labels.attr('transform', function(d) {
-        let floor = y(d.rankings[xFloor].rank);
+        let floor = y(d.rankings[xFloor].rank); //TODO this will break right here ^^^
         let ceil = y(d.rankings[xCeil].rank);
         let travel = ceil - floor;
         let newY = floor + ( travel * percent );
@@ -194,12 +189,10 @@ window.onload = function() {
       });
     }
 
+
     /*
      *Panning Controls
      */
-    $('.button').on('click', (e) => {
-    });
-    
 
     let leftButton = d3.select('#left-button')
       .on('click', function() {
@@ -225,8 +218,7 @@ window.onload = function() {
     function centerOn(base) {
       panOffset = x(base); 
       let t = d3.zoomIdentity.translate(-panOffset, 0);
-      zoomHandle
-        .transition()
+      outer.transition()
         .duration(200)
         .call(zoom.transform, t);
     }
@@ -260,49 +252,6 @@ window.onload = function() {
     // Animate all this garbage in
     TweenMax.staggerFrom(start_rankings, 1, {opacity: 0}, 0.025);
 
-    /*
-     *I'm having trouble reconciling using zoom to pan
-     *and using scales to effect zooming in and out.
-     *One solution might be to zoom the scale only on one
-     *dimension, but I don't belive that's an option.
-     *Leaving this code in here for future reference.
-     */
-    //let zoomButton = d3.select('#zoom')
-      //.on('click', function() {
-        //d3.event.stopPropagation();
-        //if (zoomedOut) {
-          //x.domain([current_x_min, current_x_min + 10]);
-          //xAxis.scale(x);
-          //x.range([dataMargin.left, dataWidth]);
-          //settleZoom(500);
-          //zoomedOut = false;
-        //} else {
-          //x.domain([0, 24]);
-          //xAxis.scale(x);
-          //x.range([dataMargin.left + panOffset, dataWidth + panOffset]);
-          //settleZoom(500);
-          //zoomedOut = true;
-        //}
-      //});
-
-    //function settleZoom(duration) {
-      //gX.transition()
-        //.duration(duration)
-        //.call(xAxis)
-      //// slight kludge, we just want to to do this once
-        //.on('end', generateVoronoi); 
-
-      //team.selectAll('path')
-        //.transition()
-        //.duration(duration)
-        //.attr('d', d => line(d.rankings));
-        
-      //team.selectAll('circle')
-        //.transition()
-        //.duration(duration)
-        //.attr('cx', d => x(d.week))
-        //.attr('cy', d => y(d.rank));
-    //}
   }); // End of window.onload
 
   function pin(slug) {
@@ -310,48 +259,6 @@ window.onload = function() {
     highlightAll();
     highlightTeam(slug);
     pinned = true;
-  }
-
-  function highlightTeam(slug) {
-    d3.selectAll('.team > path')
-      .transition()
-      .duration(15)
-      .ease(d3.easeLinear)
-      .style('stroke-width', d => (slug === d.css_slug) ? '3px' : '1px')
-      .style('stroke', d => (slug === d.css_slug) ? d.color : 'gray');
-
-    d3.selectAll('.team-label')
-      .transition()
-      .duration(15)
-      .attr('fill', d => (slug === d.css_slug) ? 'black' : 'gray')
-      .attr('font-weight', d => (slug === d.css_slug) ? 900 : 100);
-
-    d3.selectAll(`.${slug} > circle`)
-      .transition()
-      .duration(200)
-      .ease(d3.easeLinear)
-      .style('opacity', 1);
-  }
-
-  function highlightAll() {
-    d3.selectAll('.team path')
-      .transition()
-      .duration(15)
-      .ease(d3.easeLinear)
-      .style('stroke', d => d.color)
-      .style('stroke-width', '1.5px');
-
-    d3.selectAll('.team-label')
-      .transition()
-      .duration(15)
-      .attr('font-weight', 100)
-      .attr('fill', 'black');
-
-    d3.selectAll('.team circle')
-      .transition()
-      .duration(15)
-      .ease(d3.easeLinear)
-      .style('opacity', 0);
   }
 
 };
