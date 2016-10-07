@@ -20,7 +20,6 @@ let zoomedOut = false;
 let current_x_min = 0;
 let panOffset = 0;
 
-let discrete_mode = false; // this is a kludge to fix centerOn bug
 let pinned = false;
 
 let x = d3.scaleLinear()
@@ -35,11 +34,6 @@ const line = d3.line()
   .curve(d3.curveMonotoneX)
   .x(d => x(d.week))
   .y(d => y(d.rank));
-
-const voronoi = d3.voronoi()
-  .x(d => d.x)
-  .y(d => d.y)
-  .size([x(24), height]);
 
 const format = d3.format(".01f");
 
@@ -167,7 +161,6 @@ window.onload = function() {
 
     let zoom = d3.zoom()
       .on('zoom', zoomed)
-      .on('end', centerOnNearestBase)
       .translateExtent([[0,0], [3200, height + margin.top + margin.bottom]])
       .scaleExtent([1,1]);
 
@@ -177,29 +170,6 @@ window.onload = function() {
       .attr('class', 'zoom-handle')
       .call(zoom);
 
-    generateVoronoi();
-
-    function generateVoronoi() {
-      let voronoiData = voronoi.polygons(generateVoronoiPoints($('.team path')));
-      inner.selectAll('.voronoi').remove();
-      inner.selectAll('.voronoi').data(voronoiData)
-        .enter().append('g')
-          .attr('class', d => 'voronoi')
-        .append('path')
-          .attr('d', d => d ? "M" + d.join("L") + "Z" : null)
-          .on('click', team => pin(team.data.css_slug))
-          .on('mouseover', team => {
-              if (team && !pinned) {
-                highlightTeam(team.data.css_slug);
-              }
-            })
-          .on('mouseout', () => {
-              if (!pinned) {
-                highlightAll();
-              }
-            });
-    }
-
     window.onclick = function () {
       highlightAll();
       pinned = false;
@@ -208,7 +178,6 @@ window.onload = function() {
     function zoomed() {
       team.attr('transform', d3.event.transform);
       playoffs.attr('transform', d3.event.transform);
-      inner.selectAll('.voronoi').attr('transform', d3.event.transform);
       gX.call(xAxis.scale(d3.event.transform.rescaleX(x)));
 
       let x_min = format(x.invert(-d3.event.transform.x));
@@ -226,39 +195,12 @@ window.onload = function() {
     }
 
     /*
-     * Panning Logic
-     */
-    function centerOnNearestBase() {
-      if (discrete_mode) {
-        // there's a bug here where if you hit the pan buttons too fast
-        // we get into an infinite loop trying to center while another
-        // zoom event is happening
-        return;
-      }
-      let base = format(x.invert(-d3.event.transform.x)); // where the left hand of the axis lies
-      let roundedBase = format(Math.round(base));
-      if (Math.abs(x(roundedBase - base)) > 1)  {
-        // if we're more than 1 pixel off
-        centerOn(roundedBase);
-      }
-    }
-
-    function centerOn(base) {
-      panOffset = x(base); 
-      let t = d3.zoomIdentity.translate(-panOffset, 0);
-      zoomHandle
-        .transition()
-        .duration(200)
-        .call(zoom.transform, t);
-    }
-
-
-    /*
      *Panning Controls
      */
     $('.button').on('click', (e) => {
     });
     
+
     let leftButton = d3.select('#left-button')
       .on('click', function() {
         d3.event.stopPropagation();
@@ -280,8 +222,16 @@ window.onload = function() {
         }
       });
 
+    function centerOn(base) {
+      panOffset = x(base); 
+      let t = d3.zoomIdentity.translate(-panOffset, 0);
+      zoomHandle
+        .transition()
+        .duration(200)
+        .call(zoom.transform, t);
+    }
+
     function panLeft() {
-      discrete_mode = true;
       if (current_x_min > 0) {
         TweenMax.fromTo('#left-button', 1, {
           backgroundColor: '#bada55'
@@ -295,7 +245,6 @@ window.onload = function() {
     }
 
     function panRight() {
-      discrete_mode = true;
       if (current_x_min + 10 < 24) {
         TweenMax.fromTo('#right-button', 1, {
           backgroundColor: '#bada55'
@@ -404,31 +353,5 @@ window.onload = function() {
       .ease(d3.easeLinear)
       .style('opacity', 0);
   }
-
-  /*
-   * Voronoi Support Code
-   */
-  function samplePath(pathNode, precision) {
-    let pathLength = pathNode.getTotalLength();
-    let samples = [];
-    for (let sample, sampleLength = 0; sampleLength <= pathLength; sampleLength += precision) {
-      sample = pathNode.getPointAtLength(sampleLength);
-      samples.push({
-        x: sample.x,
-        y: sample.y,
-        slug: pathNode.__data__.css_slug // there is surely a better way to get this
-      });
-    }
-    return samples;
-  } 
-
-  function generateVoronoiPoints(paths) {
-    let allPoints = [];
-    for (let path of paths) {
-      allPoints = allPoints.concat( samplePath(path, 15) );
-    }
-    return allPoints;
-  }
-
 
 };
