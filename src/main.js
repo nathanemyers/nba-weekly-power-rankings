@@ -6,42 +6,42 @@ import TweenMax from 'gsap';
 
 require('./sass/style.scss');
 
-var data;
+let data;
 
-var margin = {top: 0, right: 60, bottom: 50, left: 100};
-var width = 960 - margin.left - margin.right;
-var height = 600 - margin.top - margin.bottom;
+const margin = {top: 0, right: 60, bottom: 50, left: 100};
+const width = 960 - margin.left - margin.right;
+const height = 600 - margin.top - margin.bottom;
 
-var dataMargin = {top: 10, right: 14, bottom: 5, left: 5};
-var dataWidth = width - dataMargin.left - dataMargin.right;
-var dataHeight = height - dataMargin.top - dataMargin.bottom;
+const dataMargin = {top: 10, right: 14, bottom: 5, left: 5};
+const dataWidth = width - dataMargin.left - dataMargin.right;
+const dataHeight = height - dataMargin.top - dataMargin.bottom;
 
-var zoomedOut = false;
-var current_x_min = 0;
-var panOffset = 0;
+let zoomedOut = false;
+let current_x_min = 0;
+let panOffset = 0;
 
-var discrete_mode = false; // this is a kludge to fix centerOn bug
-var pinned = false;
+let discrete_mode = false; // this is a kludge to fix centerOn bug
+let pinned = false;
 
-var x = d3.scaleLinear()
+let x = d3.scaleLinear()
   .domain([current_x_min, current_x_min + 10])
   .range([dataMargin.left, dataWidth]);
 
-var y = d3.scaleLinear()
+let y = d3.scaleLinear()
   .domain([1, 30])
   .range([dataMargin.top, dataHeight]);
 
-var line = d3.line()
+const line = d3.line()
   .curve(d3.curveMonotoneX)
   .x(d => x(d.week))
   .y(d => y(d.rank));
 
-var voronoi = d3.voronoi()
+const voronoi = d3.voronoi()
   .x(d => d.x)
   .y(d => d.y)
   .size([x(24), height]);
 
-var format = d3.format(".01f");
+const format = d3.format(".01f");
 
 window.onload = function() {
   d3.json('http://api.nathanemyers.com/nba/rankings/2016', function(error, json) {
@@ -52,7 +52,7 @@ window.onload = function() {
     $('#spinner-container').css('display', 'none');
 
     // find initial rankings for greensock
-    var start_rankings = new Array(30);
+    let start_rankings = new Array(30);
     data.forEach(function(team) {
       let rank = team.rankings[0].rank;
       start_rankings[rank - 1] = '.' + team.css_slug;
@@ -62,11 +62,11 @@ window.onload = function() {
     /*
      * D3.js Code
      */
-    var outer = d3.select(".chart").append("svg")
+    let outer = d3.select(".chart").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom);
 
-    var inner = outer
+    let inner = outer
       .append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`)
       .append("svg")
@@ -75,11 +75,11 @@ window.onload = function() {
       .append('g')
         .attr("transform", `translate(${dataMargin.left}, ${dataMargin.top})`);
 
-    var xAxis = d3.axisBottom(x);
-    var yAxis = d3.axisRight(y)
+    let xAxis = d3.axisBottom(x);
+    let yAxis = d3.axisRight(y)
                   .tickValues([1, 5, 10, 15, 20, 25, 30]);
 
-    var gX = outer.append('g')
+    let gX = outer.append('g')
       .attr('transform', `translate(${margin.left + dataMargin.left}, 
                                     ${dataHeight + margin.top + dataMargin.top + dataMargin.bottom})`)
       .call(xAxis);
@@ -91,11 +91,11 @@ window.onload = function() {
         .attr('transform', `translate(${width / 2}, 40)`);
 
 
-    var gY = outer.append('g')
+    let gY = outer.append('g')
       .attr('transform', `translate(${margin.left}, 
                                     ${margin.top + dataMargin.top})`);
 
-    var rankAxis = outer.append('g')
+    let rankAxis = outer.append('g')
       .attr('transform', `translate(${margin.left + dataMargin.left + width}, 
                                     ${margin.top + dataMargin.top})`)
       .call(yAxis)
@@ -106,7 +106,7 @@ window.onload = function() {
         .attr('transform', `translate(40, ${height / 2}) rotate(-90)`);
 
 
-    var labels = gY.selectAll('.team-label')
+    let labels = gY.selectAll('.team-label')
       .data(data)
       .enter().append('text')
         .attr('class', d => `${d.css_slug} team-label`)
@@ -125,7 +125,7 @@ window.onload = function() {
             }
           });
 
-    var team = inner.selectAll('.team')
+    let team = inner.selectAll('.team')
       .data(data)
       .enter().append('g')
         .attr('class', d => `${d.css_slug} team`);
@@ -147,9 +147,9 @@ window.onload = function() {
         .style('opacity', 0)
         .style('fill', d => d.color);
 
-    var playoffs = inner.append('g')
+    let playoffs = inner.append('g')
         .attr('class', 'playoffs-marker');
-    var playoffsElements = playoffs.append('g')
+    let playoffsElements = playoffs.append('g')
         .attr('transform', `translate(${x(24) + 10}, ${dataHeight + dataMargin.top}) rotate(-90)`);
     playoffsElements.append('path')
       .attr('stroke-width', 2.4)
@@ -165,13 +165,13 @@ window.onload = function() {
       .attr(`transform`, `translate(${dataHeight/2}, 5)`)
       .text('Playoffs Begin');
 
-    var zoom = d3.zoom()
+    let zoom = d3.zoom()
       .on('zoom', zoomed)
       .on('end', centerOnNearestBase)
       .translateExtent([[0,0], [3200, height + margin.top + margin.bottom]])
       .scaleExtent([1,1]);
 
-    var zoomHandle = inner.append('rect')
+    let zoomHandle = inner.append('rect')
       .attr('width', width)
       .attr('height', height)
       .attr('class', 'zoom-handle')
@@ -180,7 +180,7 @@ window.onload = function() {
     generateVoronoi();
 
     function generateVoronoi() {
-      var voronoiData = voronoi.polygons(generateVoronoiPoints($('.team path')));
+      let voronoiData = voronoi.polygons(generateVoronoiPoints($('.team path')));
       inner.selectAll('.voronoi').remove();
       inner.selectAll('.voronoi').data(voronoiData)
         .enter().append('g')
@@ -211,16 +211,16 @@ window.onload = function() {
       inner.selectAll('.voronoi').attr('transform', d3.event.transform);
       gX.call(xAxis.scale(d3.event.transform.rescaleX(x)));
 
-      var x_min = format(x.invert(-d3.event.transform.x));
-      var xFloor = Math.floor(x_min);
-      var xCeil = Math.ceil(x_min);
-      var percent = d3.easeCubic(x_min % 1);
+      let x_min = format(x.invert(-d3.event.transform.x));
+      let xFloor = Math.floor(x_min);
+      let xCeil = Math.ceil(x_min);
+      let percent = d3.easeCubic(x_min % 1);
 
       labels.attr('transform', function(d) {
-        var floor = y(d.rankings[xFloor].rank);
-        var ceil = y(d.rankings[xCeil].rank);
-        var travel = ceil - floor;
-        var newY = floor + ( travel * percent );
+        let floor = y(d.rankings[xFloor].rank);
+        let ceil = y(d.rankings[xCeil].rank);
+        let travel = ceil - floor;
+        let newY = floor + ( travel * percent );
         return `translate(0, ${newY})`;
       });
     }
@@ -235,8 +235,8 @@ window.onload = function() {
         // zoom event is happening
         return;
       }
-      var base = format(x.invert(-d3.event.transform.x)); // where the left hand of the axis lies
-      var roundedBase = format(Math.round(base));
+      let base = format(x.invert(-d3.event.transform.x)); // where the left hand of the axis lies
+      let roundedBase = format(Math.round(base));
       if (Math.abs(x(roundedBase - base)) > 1)  {
         // if we're more than 1 pixel off
         centerOn(roundedBase);
@@ -245,7 +245,7 @@ window.onload = function() {
 
     function centerOn(base) {
       panOffset = x(base); 
-      var t = d3.zoomIdentity.translate(-panOffset, 0);
+      let t = d3.zoomIdentity.translate(-panOffset, 0);
       zoomHandle
         .transition()
         .duration(200)
@@ -259,12 +259,12 @@ window.onload = function() {
     $('.button').on('click', (e) => {
     });
     
-    var leftButton = d3.select('#left-button')
+    let leftButton = d3.select('#left-button')
       .on('click', function() {
         d3.event.stopPropagation();
         panLeft();
       });
-    var rightButton = d3.select('#right-button')
+    let rightButton = d3.select('#right-button')
       .on('click', function() {
         d3.event.stopPropagation();
         panRight();
@@ -318,7 +318,7 @@ window.onload = function() {
      *dimension, but I don't belive that's an option.
      *Leaving this code in here for future reference.
      */
-    //var zoomButton = d3.select('#zoom')
+    //let zoomButton = d3.select('#zoom')
       //.on('click', function() {
         //d3.event.stopPropagation();
         //if (zoomedOut) {
@@ -409,8 +409,8 @@ window.onload = function() {
    * Voronoi Support Code
    */
   function samplePath(pathNode, precision) {
-    var pathLength = pathNode.getTotalLength();
-    var samples = [];
+    let pathLength = pathNode.getTotalLength();
+    let samples = [];
     for (let sample, sampleLength = 0; sampleLength <= pathLength; sampleLength += precision) {
       sample = pathNode.getPointAtLength(sampleLength);
       samples.push({
@@ -423,8 +423,8 @@ window.onload = function() {
   } 
 
   function generateVoronoiPoints(paths) {
-    var allPoints = [];
-    for (var path of paths) {
+    let allPoints = [];
+    for (let path of paths) {
       allPoints = allPoints.concat( samplePath(path, 15) );
     }
     return allPoints;

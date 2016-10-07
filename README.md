@@ -1,11 +1,1 @@
-## To Install
-
-```
-npm install
-```
-
-## To Build
-
-```
-gulp build
-```
+This is an interactive chart of the Weekly NBA Power Rankings
