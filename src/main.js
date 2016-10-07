@@ -1,6 +1,10 @@
 /* jshint esnext: true */
 
 import * as d3 from 'd3';
+import $ from 'jquery';
+import TweenMax from 'gsap';
+
+require('./sass/style.scss');
 
 var data;
 
@@ -44,7 +48,7 @@ window.onload = function() {
     if (error) {
       return console.warn(error);
     }
-    data = json.results;
+    data = json;
     $('#spinner-container').css('display', 'none');
 
     // find initial rankings for greensock

@@ -23,11 +23,17 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015-webpack": "^6.4.3",
     "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.25.0",
+    "node-sass": "^3.10.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.16.1"
   },
   "dependencies": {
     "d3": "^4.2.6",
+    "gsap": "^1.19.0",
+    "jquery": "^3.1.1",
     "react": "^15.3.2"
   }
 }
