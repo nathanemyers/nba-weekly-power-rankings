@@ -102,17 +102,7 @@ function createChart(data) {
       .attr('text-anchor', 'end')
       .attr('transform', d => `translate(0, ${y(d.rankings[current_x_min].rank) + 5})`)
       .text(d => d.name)
-      .on('click', team => pin(team.css_slug))
-      .on('mouseover', team => {
-          if (team && !pinned) {
-            highlightTeam(team.css_slug);
-          }
-        })
-      .on('mouseout', () => {
-          if (!pinned) {
-            highlightAll();
-          }
-        });
+      .call(attachHighlightHandle);
 
   const team = inner.selectAll('.team')
     .data(data)
@@ -146,18 +136,7 @@ function createChart(data) {
       .style('stroke-width', 13)
       .style('pointer-events', 'stroke')
       .attr('team', d => d.css_slug)
-      .on('click', team => pin(team.css_slug))
-      .on('mouseover', function(team) {
-        if (team && !pinned) {
-          highlightTeam(team.css_slug);
-          d3.select(`.${team.css_slug}.team-handle`).raise();
-        }
-      })
-      .on('mouseout', () => {
-        if (!pinned) {
-          highlightAll();
-        }
-      });
+      .call(attachHighlightHandle);
 
   const playoffs = inner.append('g')
       .attr('class', 'playoffs-marker');
@@ -282,10 +261,25 @@ function createChart(data) {
       .call(zoom.transform, t);
   }
 
-
   window.onclick = function () {
     highlightAll();
     pinned = false;
   };
+
+  function attachHighlightHandle(selection) {
+    return selection
+      .on('click', team => pin(team.css_slug))
+      .on('mouseover', team => {
+        if (team && !pinned) {
+          highlightTeam(team.css_slug);
+          d3.select(`.${team.css_slug}.team-handle`).raise();
+        }
+      })
+      .on('mouseout', () => {
+        if (!pinned) {
+          highlightAll();
+        }
+      });
+  }
 }
 

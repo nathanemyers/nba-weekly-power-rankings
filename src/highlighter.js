@@ -41,3 +41,4 @@ export function highlightAll() {
     .ease(d3.easeLinear)
     .style('opacity', 0);
 }
+
