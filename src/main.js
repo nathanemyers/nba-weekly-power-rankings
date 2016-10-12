@@ -119,8 +119,7 @@ function createChart(data) {
     .enter().append('g')
       .attr('class', d => `${d.css_slug} team`);
 
-  team
-    .append('path')
+  team.append('path')
       .attr('d', d => line(d.rankings))
       .style('fill', 'none')
       .style('stroke-width', 1.5)
@@ -135,6 +134,30 @@ function createChart(data) {
       .attr('r', '5px')
       .style('opacity', 0)
       .style('fill', d => d.color);
+
+  const teamHandles = inner.selectAll('.team-handle')
+    .data(data)
+    .enter().append('g')
+      .attr('class', d => `${d.css_slug} team-handle`)
+    .append('path')
+      .attr('d', d => line(d.rankings))
+      .style('stroke', 'none')
+      .style('fill', 'none')
+      .style('stroke-width', 13)
+      .style('pointer-events', 'stroke')
+      .attr('team', d => d.css_slug)
+      .on('click', team => pin(team.css_slug))
+      .on('mouseover', function(team) {
+        if (team && !pinned) {
+          highlightTeam(team.css_slug);
+          d3.select(`.${team.css_slug}.team-handle`).raise();
+        }
+      })
+      .on('mouseout', () => {
+        if (!pinned) {
+          highlightAll();
+        }
+      });
 
   const playoffs = inner.append('g')
       .attr('class', 'playoffs-marker');
@@ -159,6 +182,32 @@ function createChart(data) {
    *Panning Controls
    */
 
+  function panLeft() {
+    if (current_x_min > 0) {
+      TweenMax.fromTo('#left-button', 1, {
+        backgroundColor: '#bada55'
+      }, {
+        backgroundColor: '#fff',
+        ease: Power1.easeOut
+      });
+      current_x_min--;
+      centerOn(current_x_min);
+    }
+  }
+
+  function panRight() {
+    if (current_x_min + 10 < 24) {
+      TweenMax.fromTo('#right-button', 1, {
+        backgroundColor: '#bada55'
+      }, {
+        backgroundColor: '#fff',
+        ease: Power1.easeOut
+      });
+      current_x_min++;
+      centerOn(current_x_min);
+    }
+  }
+
   const leftButton = d3.select('#left-button')
     .on('click', function() {
       d3.event.stopPropagation();
@@ -182,6 +231,7 @@ function createChart(data) {
 
   function zoomed() {
     team.attr('transform', d3.event.transform);
+    teamHandles.attr('transform', d3.event.transform);
     playoffs.attr('transform', d3.event.transform);
     gX.call(xAxis.scale(d3.event.transform.rescaleX(x)));
 
@@ -232,31 +282,6 @@ function createChart(data) {
       .call(zoom.transform, t);
   }
 
-  function panLeft() {
-    if (current_x_min > 0) {
-      TweenMax.fromTo('#left-button', 1, {
-        backgroundColor: '#bada55'
-      }, {
-        backgroundColor: '#fff',
-        ease: Power1.easeOut
-      });
-      current_x_min--;
-      centerOn(current_x_min);
-    }
-  }
-
-  function panRight() {
-    if (current_x_min + 10 < 24) {
-      TweenMax.fromTo('#right-button', 1, {
-        backgroundColor: '#bada55'
-      }, {
-        backgroundColor: '#fff',
-        ease: Power1.easeOut
-      });
-      current_x_min++;
-      centerOn(current_x_min);
-    }
-  }
 
   window.onclick = function () {
     highlightAll();
