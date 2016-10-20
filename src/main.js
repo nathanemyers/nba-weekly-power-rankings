@@ -4,8 +4,10 @@ import * as d3 from 'd3';
 import $ from 'jquery';
 import TweenMax from 'gsap';
 import {highlightTeam, highlightAll} from './highlighter.js';
+import tip from 'd3-tip';
 
 require('./sass/style.scss');
+
 
 const margin = {top: 0, right: 60, bottom: 50, left: 100};
 const width = 960 - margin.left - margin.right;
@@ -49,10 +51,12 @@ function createChart(data) {
   /*
    * D3.js Code
    */
+
   const outer = d3.select(".chart").append("svg")
       .attr('id', 'outer')
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom);
+
 
   const inner = outer
     .append("g")
@@ -281,5 +285,19 @@ function createChart(data) {
         }
       });
   }
+
+  /*
+   *Tooltip time
+   */
+  const d3Tip = tip()
+    .attr('class', 'd3-tip')
+    .html(function(d) { 
+      return d;
+    });
+
+  outer.call(d3Tip);
+  outer.on('mouseover', d => {
+    return d;
+  });
 }
 
