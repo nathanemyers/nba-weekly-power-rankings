@@ -141,14 +141,14 @@ function createChart(data) {
       .style('stroke', d => d.color)
       .attr('team', d => d.css_slug);
 
-  team.selectAll('circle')
-    .data(d => d.rankings)
-    .enter().append('circle')
-      .attr('cx', d => x(d.week))
-      .attr('cy', d => y(d.rank))
-      .attr('r', '5px')
-      .style('opacity', 0)
-      .style('fill', d => d.color);
+  //team.selectAll('circle')
+    //.data(d => d.rankings)
+    //.enter().append('circle')
+      //.attr('cx', d => x(d.week))
+      //.attr('cy', d => y(d.rank))
+      //.attr('r', '5px')
+      //.style('opacity', 0)
+      //.style('fill', d => d.color);
 
   const teamHandles = inner.selectAll('.team-handle')
     .data(data)
@@ -171,11 +171,19 @@ function createChart(data) {
       .attr('r', '5px')
       .attr('class', 'bubble-handle')
       .style('opacity', 0)
-      .on('mouseenter', d => {
-        d3Tip.show(d);
+      .on('mouseenter', function(d) {
+        const slug = d3.select(this.parentNode).datum().css_slug;
+        d3Tip.show(d, this); // use 'this' as the target node to center the tooltip
+        if (!pinned) {
+          highlightTeam(slug);
+          d3.select(`.${slug}.team-handle`).raise();
+        }
       })
       .on('mouseout', d => {
         d3Tip.hide();
+        if (!pinned) {
+          highlightAll();
+        }
       });
 
   const playoffs = inner.append('g')

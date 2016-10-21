@@ -14,7 +14,7 @@ export function highlightTeam(slug) {
     .attr('fill', d => (slug === d.css_slug) ? 'black' : 'gray')
     .attr('font-weight', d => (slug === d.css_slug) ? 900 : 100);
 
-  d3.selectAll(`.${slug} > circle`)
+  d3.selectAll(`.${slug} > .bubble-handle`)
     .transition()
     .duration(200)
     .ease(d3.easeLinear)
@@ -35,7 +35,7 @@ export function highlightAll() {
     .attr('font-weight', 100)
     .attr('fill', 'black');
 
-  d3.selectAll('.team circle')
+  d3.selectAll('.bubble-handle')
     .transition()
     .duration(15)
     .ease(d3.easeLinear)
