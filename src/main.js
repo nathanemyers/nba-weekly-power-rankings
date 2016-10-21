@@ -20,7 +20,7 @@ const dataHeight = height - dataMargin.top - dataMargin.bottom;
 let current_x_min = 0;
 let panOffset = 0;
 
-let pinned = false;
+let pinned = null;
 
 const x = d3.scaleLinear()
   .domain([current_x_min, current_x_min + 10])
@@ -173,8 +173,8 @@ function createChart(data) {
       .style('opacity', 0)
       .on('mouseenter', function(d) {
         const slug = d3.select(this.parentNode).datum().css_slug;
-        d3Tip.show(d, this); // use 'this' as the target node to center the tooltip
-        if (!pinned) {
+        if ((pinned === null) || (pinned === slug)) {
+          d3Tip.show(d, this); // use 'this' as the target node to center the tooltip
           highlightTeam(slug);
           d3.select(`.${slug}.team-handle`).raise();
         }
@@ -298,7 +298,7 @@ function createChart(data) {
     d3.event.stopPropagation();
     highlightAll();
     highlightTeam(slug);
-    pinned = true;
+    pinned = slug;
   }
 
   function centerOn(base) {
@@ -311,7 +311,7 @@ function createChart(data) {
 
   window.onclick = function () {
     highlightAll();
-    pinned = false;
+    pinned = null;
   };
 
   function attachHighlightHandle(selection) {
