@@ -57,6 +57,27 @@ function createChart(data) {
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom);
 
+  /*
+   *Tooltip time
+   */
+  const d3Tip = tip()
+    .attr('class', 'd3-tip')
+    .offset([0, 0])
+    .html(function(d) { 
+      return `<div class='d3-tip-header'>
+                #${d.rank} ${d.team} (${d.record})
+              </div>
+              ${d.summary}`
+    });
+
+  outer.call(d3Tip);
+  //outer.on('mouseover', d => {
+    //return d;
+  //});
+  
+  /*
+   *Tooltip time is over :(
+   */
 
   const inner = outer
     .append("g")
@@ -132,8 +153,8 @@ function createChart(data) {
   const teamHandles = inner.selectAll('.team-handle')
     .data(data)
     .enter().append('g')
-      .attr('class', d => `${d.css_slug} team-handle`)
-    .append('path')
+      .attr('class', d => `${d.css_slug} team-handle`);
+  teamHandles.append('path')
       .attr('d', d => line(d.rankings))
       .style('stroke', 'none')
       .style('fill', 'none')
@@ -141,6 +162,21 @@ function createChart(data) {
       .style('pointer-events', 'stroke')
       .attr('team', d => d.css_slug)
       .call(attachHighlightHandle);
+
+  const bubbleHandles = teamHandles.selectAll('.bubble-handle')
+    .data(d => d.rankings)
+    .enter().append('circle')
+      .attr('cx', d => x(d.week))
+      .attr('cy', d => y(d.rank))
+      .attr('r', '5px')
+      .attr('class', 'bubble-handle')
+      .style('opacity', 0)
+      .on('mouseenter', d => {
+        d3Tip.show(d);
+      })
+      .on('mouseout', d => {
+        d3Tip.hide();
+      });
 
   const playoffs = inner.append('g')
       .attr('class', 'playoffs-marker');
@@ -168,9 +204,9 @@ function createChart(data) {
   function panLeft() {
     if (current_x_min > 0) {
       TweenMax.fromTo('#left-button', 1, {
-        backgroundColor: '#bada55'
+        backgroundColor: '#BADA55'
       }, {
-        backgroundColor: '#fff',
+        backgroundColor: '#FFF',
         ease: Power1.easeOut
       });
       current_x_min--;
@@ -181,9 +217,9 @@ function createChart(data) {
   function panRight() {
     if (current_x_min + 10 < 24) {
       TweenMax.fromTo('#right-button', 1, {
-        backgroundColor: '#bada55'
+        backgroundColor: '#BADA55'
       }, {
-        backgroundColor: '#fff',
+        backgroundColor: '#FFF',
         ease: Power1.easeOut
       });
       current_x_min++;
@@ -286,18 +322,5 @@ function createChart(data) {
       });
   }
 
-  /*
-   *Tooltip time
-   */
-  const d3Tip = tip()
-    .attr('class', 'd3-tip')
-    .html(function(d) { 
-      return d;
-    });
-
-  outer.call(d3Tip);
-  outer.on('mouseover', d => {
-    return d;
-  });
 }
 
