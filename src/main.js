@@ -17,7 +17,7 @@ const dataMargin = {top: 10, right: 14, bottom: 5, left: 5};
 const dataWidth = width - dataMargin.left - dataMargin.right;
 const dataHeight = height - dataMargin.top - dataMargin.bottom;
 
-let current_x_min = 0;
+let current_x_min = 1;
 let panOffset = 0;
 
 let pinned = null;
@@ -210,7 +210,7 @@ function createChart(data) {
    */
 
   function panLeft() {
-    if (current_x_min > 0) {
+    if (current_x_min > 1) {
       TweenMax.fromTo('#left-button', 1, {
         backgroundColor: '#BADA55'
       }, {
@@ -329,6 +329,5 @@ function createChart(data) {
         }
       });
   }
-
 }
 
