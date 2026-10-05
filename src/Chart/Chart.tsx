@@ -21,7 +21,11 @@ const PLAYOFFS_WEEK = 24;
 
 const W = 960;
 const H = 600;
-const M = { top: 20, right: 60, bottom: 50, left: 190 };
+const M = { top: 30, right: 120, bottom: 60, left: 190 };
+// Room around the plot so dots on rank 1 and rank 30 aren't clipped
+const CLIP_PAD = 12;
+// Playoff column sits between the rank numbers and the "Rank" axis label
+const PLAYOFF_X = M.left + (W - M.left - M.right) + 60;
 const PLOT_W = W - M.left - M.right;
 const PLOT_H = H - M.top - M.bottom;
 
@@ -120,7 +124,12 @@ export default function RankingsChart({
         >
           <defs>
             <clipPath id="plot-clip">
-              <rect x={M.left} y={M.top} width={PLOT_W} height={PLOT_H} />
+              <rect
+                x={M.left - CLIP_PAD}
+                y={M.top - CLIP_PAD}
+                width={PLOT_W + CLIP_PAD * 2}
+                height={PLOT_H + CLIP_PAD * 2}
+              />
             </clipPath>
           </defs>
 
@@ -305,8 +314,8 @@ export default function RankingsChart({
             <g className="playoff-column">
               <text
                 className="axis-label"
-                x={W - 26}
-                y={M.top - 6}
+                x={PLAYOFF_X}
+                y={M.top - 8}
                 textAnchor="middle"
               >
                 Playoffs
@@ -319,7 +328,7 @@ export default function RankingsChart({
                   <text
                     key={`${team.slug}-playoff`}
                     className="playoff-medal"
-                    x={W - 26}
+                    x={PLAYOFF_X}
                     y={y(last.rank)}
                     fontSize={14}
                     textAnchor="middle"
