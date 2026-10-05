@@ -1,5 +1,3 @@
-/* jshint esnext: true */
-
 import * as d3 from 'd3';
 import $ from 'jquery';
 import TweenMax from 'gsap';
