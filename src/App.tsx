@@ -21,6 +21,7 @@ async function loadSeason(season: string) {
   const teams: TeamRankings[] = TEAMS.map((team) => ({
     ...team,
     rankings: data.rankings[team.slug] ?? [],
+    playoff: data.playoffs?.[team.slug],
   })).filter((team) => team.rankings.length > 0);
   return { teams, maxWeek: data.maxWeek };
 }

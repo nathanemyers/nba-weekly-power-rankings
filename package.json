@@ -8,7 +8,8 @@
     "build:rankings": "node scripts/build-rankings.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "scrape:playoffs": "node scripts/scrape-playoffs.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",

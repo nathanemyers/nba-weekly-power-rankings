@@ -22,6 +22,10 @@ const TEAM_SLUGS = {
 
 const MAX_BLURB_LENGTH = 260
 
+// Postseason results from scripts/scrape-playoffs.mjs. Teams are keyed by season and slug
+const PLAYOFFS = JSON.parse(readFileSync(join(dataDir, 'playoffs.json'), 'utf8'))
+
+
 // Summaries open with stat lines ("Record: 25-4", "OffRtg: ...") before the prose.
 // Keep only the first line of prose, cut to a sentence-ish length.
 function cleanSummary(summaryText) {
@@ -87,7 +91,22 @@ for (const [season, articles] of [...bySeason].sort()) {
     }
   }
 
-  const output = { season, maxWeek, rankings }
+  // Each team gets the furthest stage it reached
+  const STAGE_ORDER = ['first-round', 'semis', 'conf-finals', 'finals', 'champion']
+  const playoffs = {}
+  const reach = (slug, stage) => {
+    if (!playoffs[slug] || STAGE_ORDER.indexOf(stage) > STAGE_ORDER.indexOf(playoffs[slug]))
+      playoffs[slug] = stage
+  }
+  const bracket = PLAYOFFS[season]
+  if (bracket) {
+    for (const round of bracket.rounds) {
+      for (const series of round.series) for (const slug of series.teams) reach(slug, round.round)
+    }
+    reach(bracket.champion, 'champion')
+  }
+
+  const output = { season, maxWeek, rankings, ...(Object.keys(playoffs).length && { playoffs }) }
   const file = join(outDir, `${season}.json`)
   writeFileSync(file, JSON.stringify(output))
   console.log(`${season}: ${seenWeeks.size} weeks, ${Object.keys(rankings).length} teams -> ${file}`)

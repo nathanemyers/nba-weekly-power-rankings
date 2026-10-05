@@ -1,9 +1,20 @@
 import { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 import { type Team } from "./teams";
-import type { WeekRanking } from "./types";
+import type { PlayoffStage, WeekRanking } from "./types";
 
-export type TeamRankings = Team & { rankings: WeekRanking[] };
+export type TeamRankings = Team & {
+  rankings: WeekRanking[];
+  playoff?: PlayoffStage;
+};
+
+const PLAYOFF_MEDALS: Record<PlayoffStage, { icon: string; label: string }> = {
+  "first-round": { icon: "🥉", label: "Lost in the first round" },
+  semis: { icon: "🥈", label: "Lost in the second round" },
+  "conf-finals": { icon: "🥇", label: "Lost in the conference finals" },
+  finals: { icon: "🥇", label: "Runner-up in the Finals" },
+  champion: { icon: "👑", label: "NBA champion" },
+};
 
 const VISIBLE_WEEKS = 10;
 const PLAYOFFS_WEEK = 24;
@@ -267,6 +278,25 @@ export default function RankingsChart({
                 }}
               >
                 {team.name}
+              </text>
+            );
+          })}
+
+          {teams.map((team) => {
+            const first = team.rankings.find((r) => inWindow(r.week));
+            const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
+            if (!first || !medal) return null;
+            return (
+              <text
+                key={`${team.slug}-medal`}
+                className="playoff-medal"
+                x={4}
+                y={y(first.rank)}
+                fontSize={14}
+                dominantBaseline="middle"
+              >
+                <title>{medal.label}</title>
+                {medal.icon}
               </text>
             );
           })}
