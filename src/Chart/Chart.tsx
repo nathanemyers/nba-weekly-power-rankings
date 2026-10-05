@@ -12,7 +12,7 @@ const PLAYOFF_MEDALS: Record<PlayoffStage, { icon: string; label: string }> = {
   "first-round": { icon: "🥉", label: "Lost in the first round" },
   semis: { icon: "🥈", label: "Lost in the second round" },
   "conf-finals": { icon: "🥇", label: "Lost in the conference finals" },
-  finals: { icon: "🥇", label: "Runner-up in the Finals" },
+  finals: { icon: "🏆", label: "Runner-up in the Finals" },
   champion: { icon: "👑", label: "NBA champion" },
 };
 
