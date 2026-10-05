@@ -300,6 +300,38 @@ export default function RankingsChart({
               </text>
             );
           })}
+
+          {start === maxStart && (
+            <g className="playoff-column">
+              <text
+                className="axis-label"
+                x={W - 26}
+                y={M.top - 6}
+                textAnchor="middle"
+              >
+                Playoffs
+              </text>
+              {teams.map((team) => {
+                const last = [...team.rankings].reverse().find((r) => inWindow(r.week));
+                const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
+                if (!last || !medal) return null;
+                return (
+                  <text
+                    key={`${team.slug}-playoff`}
+                    className="playoff-medal"
+                    x={W - 26}
+                    y={y(last.rank)}
+                    fontSize={14}
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                  >
+                    <title>{medal.label}</title>
+                    {medal.icon}
+                  </text>
+                );
+              })}
+            </g>
+          )}
         </Svg>
 
         {tooltipRanking && hoverTeam && (
