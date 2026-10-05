@@ -1,47 +1,61 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
-import { TEAMS, type Team } from "./teams";
+import { type Team } from "./teams";
+import type { WeekRanking } from "./types";
 
-type WeekRanking = {
-  week: number;
-  rank: number;
-  record: string;
-  summary: string;
-};
-type TeamRankings = Team & { rankings: WeekRanking[] };
+export type TeamRankings = Team & { rankings: WeekRanking[] };
 
-const TOTAL_WEEKS = 24;
 const VISIBLE_WEEKS = 10;
 const PLAYOFFS_WEEK = 24;
 
 const W = 960;
 const H = 600;
-const M = { top: 20, right: 60, bottom: 50, left: 150 };
+const M = { top: 20, right: 60, bottom: 50, left: 190 };
 const PLOT_W = W - M.left - M.right;
 const PLOT_H = H - M.top - M.bottom;
 
 const x = (week: number, start: number) =>
   M.left + ((week - start) / VISIBLE_WEEKS) * PLOT_W;
-const y = (rank: number) => M.top + ((rank - 1) / (TEAMS.length - 1)) * PLOT_H;
+const y = (rank: number) => M.top + ((rank - 1) / 29) * PLOT_H;
 
 const RANK_TICKS = [1, 5, 10, 15, 20, 25, 30];
 
 type Hover = { slug: string; week?: number };
 
-export default function RankingsChart({ teams }: { teams: TeamRankings[] }) {
+export default function RankingsChart({
+  teams,
+  maxWeek,
+}: {
+  teams: TeamRankings[];
+  maxWeek: number;
+}) {
   const [start, setStart] = useState(1);
   const [pinned, setPinned] = useState<string | null>(null);
   const [hover, setHover] = useState<Hover | null>(null);
+
+  const maxStart = Math.max(1, maxWeek - VISIBLE_WEEKS);
+
+  // Lookup of slug -> week -> ranking. Weeks can be missing for a team, so don't index by position
+  const rankingsByWeek = useMemo(
+    () =>
+      new Map(
+        teams.map((team) => [
+          team.slug,
+          new Map(team.rankings.map((r) => [r.week, r])),
+        ]),
+      ),
+    [teams],
+  );
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") setStart((s) => Math.max(1, s - 1));
       if (e.key === "ArrowRight")
-        setStart((s) => Math.min(TOTAL_WEEKS - VISIBLE_WEEKS, s + 1));
+        setStart((s) => Math.min(maxStart, s + 1));
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [maxStart]);
 
   const end = start + VISIBLE_WEEKS;
   const weeks = Array.from({ length: VISIBLE_WEEKS + 1 }, (_, i) => start + i);
@@ -54,8 +68,8 @@ export default function RankingsChart({ teams }: { teams: TeamRankings[] }) {
     hover?.week !== undefined &&
     (pinned === null || pinned === hover.slug);
   const tooltipRanking = showTooltip
-    ? hoverTeam.rankings[hover.week! - 1]
-    : null;
+    ? rankingsByWeek.get(hoverTeam.slug)?.get(hover.week!)
+    : undefined;
 
   const togglePin = (slug: string) =>
     setPinned((p) => (p === slug ? null : slug));
@@ -73,14 +87,14 @@ export default function RankingsChart({ teams }: { teams: TeamRankings[] }) {
           ◀ Earlier
         </Button>
         <WeekRange>
-          Weeks {start}–{end}
+          Weeks {start}–{Math.min(end, maxWeek)}
         </WeekRange>
         <Button
           onClick={(e) => {
             e.stopPropagation();
-            setStart((s) => Math.min(TOTAL_WEEKS - VISIBLE_WEEKS, s + 1));
+            setStart((s) => Math.min(maxStart, s + 1));
           }}
-          disabled={end >= TOTAL_WEEKS}
+          disabled={start >= maxStart}
         >
           Later ▶
         </Button>
@@ -168,11 +182,13 @@ export default function RankingsChart({ teams }: { teams: TeamRankings[] }) {
             {teams.map((team) => {
               const active = activeSlug === team.slug;
               const dim = activeSlug !== null && !active;
+              // Start a new subpath after a missing week so the line doesn't bridge the gap
               const d = team.rankings
-                .map(
-                  (r, i) =>
-                    `${i === 0 ? "M" : "L"}${x(r.week, start)},${y(r.rank)}`,
-                )
+                .map((r, i) => {
+                  const prev = team.rankings[i - 1];
+                  const move = !prev || prev.week !== r.week - 1 ? "M" : "L";
+                  return `${move}${x(r.week, start)},${y(r.rank)}`;
+                })
                 .join(" ");
 
               return (
@@ -225,14 +241,16 @@ export default function RankingsChart({ teams }: { teams: TeamRankings[] }) {
           </g>
 
           {teams.map((team) => {
-            const rank = team.rankings[start - 1].rank;
+            // Label each team at its rank for the first visible week it was ranked
+            const first = team.rankings.find((r) => inWindow(r.week));
+            if (!first) return null;
             const active = activeSlug === team.slug;
             return (
               <text
                 key={team.slug}
                 className="team-label"
                 x={M.left - 10}
-                y={y(rank)}
+                y={y(first.rank)}
                 textAnchor="end"
                 dominantBaseline="middle"
                 fontWeight={active ? 700 : 400}
@@ -266,7 +284,8 @@ export default function RankingsChart({ teams }: { teams: TeamRankings[] }) {
             }}
           >
             <strong>
-              #{tooltipRanking.rank} {hoverTeam.name} ({tooltipRanking.record})
+              #{tooltipRanking.rank} {hoverTeam.name}
+              {tooltipRanking.record && ` (${tooltipRanking.record})`}
             </strong>
             <p>{tooltipRanking.summary}</p>
             <small>Week {tooltipRanking.week}</small>

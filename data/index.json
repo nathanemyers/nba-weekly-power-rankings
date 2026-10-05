@@ -1,0 +1,2992 @@
+[
+  {
+    "id": 2292467,
+    "slug": "offseason-power-rankings-west-2026",
+    "title": "Offseason Power Rankings: Spurs and Thunder rule the West",
+    "season": "2026-27",
+    "week": null,
+    "publishedAt": "2026-08-03T13:32:46Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2026-27/offseason-power-rankings-west-2026.json"
+  },
+  {
+    "id": 2287537,
+    "slug": "offseason-power-rankings-east-2026",
+    "title": "Offseason Power Rankings: Knicks lead the way in the East",
+    "season": "2025-26",
+    "week": null,
+    "publishedAt": "2026-07-27T13:18:13Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/offseason-power-rankings-east-2026.json"
+  },
+  {
+    "id": 2207717,
+    "slug": "power-rankings-2025-26-playoffs-conference-finals",
+    "title": "Playoff Power Rankings: How the 4 conference finalists stack up",
+    "season": "2025-26",
+    "week": null,
+    "publishedAt": "2026-05-18T15:37:00Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-playoffs-conference-finals.json"
+  },
+  {
+    "id": 2191351,
+    "slug": "power-rankings-2025-26-playoffs-conference-semifinals",
+    "title": "Playoff Power Rankings: Where all 8 teams stand after first round",
+    "season": "2025-26",
+    "week": null,
+    "publishedAt": "2026-05-04T13:30:10Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-playoffs-conference-semifinals.json"
+  },
+  {
+    "id": 2140995,
+    "slug": "power-rankings-2025-26-week-25",
+    "title": "Power Rankings, Week 25: Where every team stands 1 week before the postseason",
+    "season": "2025-26",
+    "week": 25,
+    "publishedAt": "2026-04-06T15:25:34Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-25.json"
+  },
+  {
+    "id": 2126770,
+    "slug": "power-rankings-2025-26-week-24",
+    "title": "Power Rankings, Week 24: Celtics, Wolves rising as season nears its end",
+    "season": "2025-26",
+    "week": 24,
+    "publishedAt": "2026-03-30T14:59:24Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-24.json"
+  },
+  {
+    "id": 2117141,
+    "slug": "power-rankings-2025-26-week-23",
+    "title": "Power Rankings, Week 23: Pistons, Knicks and Celtics jostle in Top 5",
+    "season": "2025-26",
+    "week": 23,
+    "publishedAt": "2026-03-23T14:48:29Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-23.json"
+  },
+  {
+    "id": 2106439,
+    "slug": "power-rankings-2025-26-week-22",
+    "title": "Power Rankings, Week 22: Sizzling Thunder head back to No. 1",
+    "season": "2025-26",
+    "week": 22,
+    "publishedAt": "2026-03-16T14:46:50Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-22.json"
+  },
+  {
+    "id": 2087818,
+    "slug": "power-rankings-2025-26-week-21",
+    "title": "Power Rankings, Week 21: Thunder, Celtics and Lakers rise in Top 10",
+    "season": "2025-26",
+    "week": 21,
+    "publishedAt": "2026-03-09T14:36:08Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-21.json"
+  },
+  {
+    "id": 2079146,
+    "slug": "power-rankings-2025-26-week-20",
+    "title": "Power Rankings, Week 20: Timberwolves, Magic rising",
+    "season": "2025-26",
+    "week": 20,
+    "publishedAt": "2026-03-02T17:59:57Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-20.json"
+  },
+  {
+    "id": 2071452,
+    "slug": "power-rankings-2025-26-week-19",
+    "title": "Power Rankings, Week 19: Celtics move back into Top 5",
+    "season": "2025-26",
+    "week": 19,
+    "publishedAt": "2026-02-23T16:06:07Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-19.json"
+  },
+  {
+    "id": 2057769,
+    "slug": "power-rankings-2025-26-week-18",
+    "title": "Power Rankings, Week 18: The home stretch begins",
+    "season": "2025-26",
+    "week": 18,
+    "publishedAt": "2026-02-17T15:57:12Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-18.json"
+  },
+  {
+    "id": 2042920,
+    "slug": "power-rankings-2025-26-week-17",
+    "title": "Power Rankings, Week 17: Knicks, Celtics and Cavs on the move",
+    "season": "2025-26",
+    "week": 17,
+    "publishedAt": "2026-02-09T16:31:57Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-17.json"
+  },
+  {
+    "id": 2047822,
+    "slug": "nba-fantasy-power-rankings-entering-week-17-feb-2026",
+    "title": "NBA Fantasy: Power Rankings entering Week 17",
+    "season": "2025-26",
+    "week": 17,
+    "publishedAt": "2026-02-09T16:19:49Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2025-26/nba-fantasy-power-rankings-entering-week-17-feb-2026.json"
+  },
+  {
+    "id": 2025654,
+    "slug": "power-rankings-2025-26-week-16",
+    "title": "Power Rankings, Week 16: Knicks, Spurs take step forward",
+    "season": "2025-26",
+    "week": 16,
+    "publishedAt": "2026-02-02T15:09:25Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-16.json"
+  },
+  {
+    "id": 2016987,
+    "slug": "power-rankings-2025-26-week-15",
+    "title": "Power Rankings, Week 15: Pistons power past Thunder for No. 1",
+    "season": "2025-26",
+    "week": 15,
+    "publishedAt": "2026-01-26T15:27:21Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-15.json"
+  },
+  {
+    "id": 2000937,
+    "slug": "power-rankings-2025-26-week-14",
+    "title": "Power Rankings, Week 14: Spurs, Cavs among teams rising",
+    "season": "2025-26",
+    "week": 14,
+    "publishedAt": "2026-01-19T15:34:44Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-14.json"
+  },
+  {
+    "id": 1989800,
+    "slug": "power-rankings-2025-26-week-13",
+    "title": "Power Rankings, Week 13: Thunder back at top amid changed Top 5",
+    "season": "2025-26",
+    "week": 13,
+    "publishedAt": "2026-01-12T16:24:53Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-13.json"
+  },
+  {
+    "id": 1989314,
+    "slug": "power-rankings-2025-26-week-12-v2",
+    "title": "Power Rankings, Week 12: Spurs stay in lead; Rockets, Pistons in Top 5",
+    "season": "2025-26",
+    "week": 12,
+    "publishedAt": "2026-01-05T17:52:44Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-12-v2.json"
+  },
+  {
+    "id": 1972643,
+    "slug": "power-rankings-2025-26-week-11",
+    "title": "Power Rankings, Week 11: Spurs power past Thunder for No. 1",
+    "season": "2025-26",
+    "week": 11,
+    "publishedAt": "2025-12-29T15:24:13Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-11.json"
+  },
+  {
+    "id": 1963683,
+    "slug": "power-rankings-2025-26-week-10",
+    "title": "Power Rankings, Week 10: Where things stand as Christmas games loom",
+    "season": "2025-26",
+    "week": 10,
+    "publishedAt": "2025-12-22T16:06:50Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-10.json"
+  },
+  {
+    "id": 1955729,
+    "slug": "power-rankings-2025-26-week-9",
+    "title": "Power Rankings, Week 9: Rockets, Pistons and Knicks move up",
+    "season": "2025-26",
+    "week": 9,
+    "publishedAt": "2025-12-15T15:10:59Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-9.json"
+  },
+  {
+    "id": 1945699,
+    "slug": "power-rankings-2025-26-week-8",
+    "title": "Power Rankings, Week 8: Lakers, Celtics make their presence felt",
+    "season": "2025-26",
+    "week": 8,
+    "publishedAt": "2025-12-08T15:30:47Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-8.json"
+  },
+  {
+    "id": 1925462,
+    "slug": "power-rankings-2025-26-week-7",
+    "title": "Power Rankings Week 7: Quartet of teams rising in Top 10",
+    "season": "2025-26",
+    "week": 7,
+    "publishedAt": "2025-12-01T14:58:16Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-7.json"
+  },
+  {
+    "id": 1925445,
+    "slug": "power-rankings-2025-26-week-6_v2",
+    "title": "Power Rankings, Week 6: Raptors, Suns enter Top 10 fray",
+    "season": "2025-26",
+    "week": 6,
+    "publishedAt": "2025-11-24T19:48:59Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-6_v2.json"
+  },
+  {
+    "id": 1925445,
+    "slug": "power-rankings-2025-26-week-6_v2",
+    "title": "Power Rankings, Week 6: Raptors, Suns enter Top 10 fray",
+    "season": "2025-26",
+    "week": 6,
+    "publishedAt": "2025-11-24T19:48:59Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-6_v2.json"
+  },
+  {
+    "id": 1925183,
+    "slug": "nba-fantasy-power-rankings-week-5-nikola-jokic-reigns",
+    "title": "NBA Fantasy Power Rankings Week 5: Nikola Jokić reigns",
+    "season": "2025-26",
+    "week": 5,
+    "publishedAt": "2025-11-24T18:08:47Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2025-26/nba-fantasy-power-rankings-week-5-nikola-jokic-reigns.json"
+  },
+  {
+    "id": 1913687,
+    "slug": "power-rankings-2025-26-week-5",
+    "title": "Power Rankings, Week 5: Pistons, Warriors take step forward in Top 10",
+    "season": "2025-26",
+    "week": 5,
+    "publishedAt": "2025-11-17T15:28:40Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-5.json"
+  },
+  {
+    "id": 1902946,
+    "slug": "power-rankings-2025-26-week-4",
+    "title": "Power Rankings, Week 4: Cavs, Knicks surge; Pistons crack Top 10",
+    "season": "2025-26",
+    "week": 4,
+    "publishedAt": "2025-11-10T15:26:00Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-4.json"
+  },
+  {
+    "id": 1893068,
+    "slug": "power-rankings-2025-26-week-3",
+    "title": "Power Rankings, Week 3: Rockets, Bucks soar; OKC still leads way",
+    "season": "2025-26",
+    "week": 3,
+    "publishedAt": "2025-11-03T15:47:13Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-3.json"
+  },
+  {
+    "id": 1882299,
+    "slug": "power-rankings-2025-26-week-2",
+    "title": "Power Rankings, Week 2: Warriors, Spurs, Lakers rise up",
+    "season": "2025-26",
+    "week": 2,
+    "publishedAt": "2025-10-27T14:58:17Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-2.json"
+  },
+  {
+    "id": 1871345,
+    "slug": "power-rankings-2025-26-week-1",
+    "title": "Power Rankings, Week 1: Thunder reign as 2025-26 season begins",
+    "season": "2025-26",
+    "week": 1,
+    "publishedAt": "2025-10-20T14:13:21Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/power-rankings-2025-26-week-1.json"
+  },
+  {
+    "id": 1822270,
+    "slug": "offseason-power-rankings-west-2025",
+    "title": "Offseason Power Rankings: Thunder clear favorites to repeat in West",
+    "season": "2025-26",
+    "week": null,
+    "publishedAt": "2025-08-04T11:29:57Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2025-26/offseason-power-rankings-west-2025.json"
+  },
+  {
+    "id": 1819300,
+    "slug": "offseason-power-rankings-east-2025",
+    "title": "Offseason Power Rankings: Cavs, Knicks leading the way in East",
+    "season": "2024-25",
+    "week": null,
+    "publishedAt": "2025-07-28T13:07:10Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/offseason-power-rankings-east-2025.json"
+  },
+  {
+    "id": 1758978,
+    "slug": "nba-fantasy-power-rankings-playoff-edition-shai-gilgeous-alexander-ascends",
+    "title": "NBA Fantasy Power Rankings, playoff edition: Shai Gilgeous-Alexander ascends",
+    "season": "2024-25",
+    "week": null,
+    "publishedAt": "2025-05-26T18:27:35Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2024-25/nba-fantasy-power-rankings-playoff-edition-shai-gilgeous-alexander-ascends.json"
+  },
+  {
+    "id": 1751418,
+    "slug": "power-rankings-2024-25-playoffs-conference-finals",
+    "title": "Playoff Power Rankings: How the 4 conference finalists stack up",
+    "season": "2024-25",
+    "week": null,
+    "publishedAt": "2025-05-20T12:17:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-playoffs-conference-finals.json"
+  },
+  {
+    "id": 1733352,
+    "slug": "power-rankings-2024-25-playoffs-conference-semifinals",
+    "title": "Playoff Power Rankings: Where all 8 teams stand as conference semifinals begin",
+    "season": "2024-25",
+    "week": null,
+    "publishedAt": "2025-05-05T14:30:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-playoffs-conference-semifinals.json"
+  },
+  {
+    "id": 1711596,
+    "slug": "power-rankings-2024-25-playoffs-first-round",
+    "title": "Playoff Power Rankings: Where all 16 teams stand at top of first round",
+    "season": "2024-25",
+    "week": null,
+    "publishedAt": "2025-04-21T14:10:24Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-playoffs-first-round.json"
+  },
+  {
+    "id": 1692248,
+    "slug": "power-rankings-2024-25-week-25",
+    "title": "Power Rankings, Week 25: 1 thing to watch for every team with 1 week left",
+    "season": "2024-25",
+    "week": 25,
+    "publishedAt": "2025-04-07T14:24:23Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-25.json"
+  },
+  {
+    "id": 1682117,
+    "slug": "power-rankings-2024-25-week-24",
+    "title": "Power Rankings, Week 24: Rockets on the rise with 2 weeks left",
+    "season": "2024-25",
+    "week": 24,
+    "publishedAt": "2025-03-31T15:31:39Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-24.json"
+  },
+  {
+    "id": 1672409,
+    "slug": "power-rankings-2024-25-week-23",
+    "title": "Power Rankings, Week 23: Thunder at No. 1; Rockets, Clippers rise in Top 10",
+    "season": "2024-25",
+    "week": 23,
+    "publishedAt": "2025-03-24T15:16:31Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-23.json"
+  },
+  {
+    "id": 1662604,
+    "slug": "power-rankings-2024-25-week-22",
+    "title": "Power Rankings, Week 22: Warriors, Wolves, Grizzlies and Rockets rise in Top 10",
+    "season": "2024-25",
+    "week": 22,
+    "publishedAt": "2025-03-17T15:10:27Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-22.json"
+  },
+  {
+    "id": 1641609,
+    "slug": "power-rankings-2024-25-week-21",
+    "title": "Power Rankings, Week 21: Warriors enter Top 5, Wolves move up in Top 10",
+    "season": "2024-25",
+    "week": 21,
+    "publishedAt": "2025-03-10T14:54:02Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-21.json"
+  },
+  {
+    "id": 1641502,
+    "slug": "power-rankings-2024-25-week-20",
+    "title": "Power Rankings, Week 20: Cavs back at No. 1; West and East tiers start to get clearer",
+    "season": "2024-25",
+    "week": 20,
+    "publishedAt": "2025-03-03T15:52:23Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-20.json"
+  },
+  {
+    "id": 1631644,
+    "slug": "power-rankings-2024-25-week-19",
+    "title": "Power Rankings, Week 19: Pacers, Lakers making their presence felt",
+    "season": "2024-25",
+    "week": 19,
+    "publishedAt": "2025-02-24T15:47:13Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-19.json"
+  },
+  {
+    "id": 1624165,
+    "slug": "power-rankings-2024-25-week-18",
+    "title": "Power Rankings, Week 18: Thunder lead, Clippers enter Top 10 after All-Star Weekend",
+    "season": "2024-25",
+    "week": 18,
+    "publishedAt": "2025-02-17T15:15:10Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-18.json"
+  },
+  {
+    "id": 1613778,
+    "slug": "power-rankings-2024-25-week-17",
+    "title": "Power Rankings, Week 17: Celtics, Nuggets take a step forward",
+    "season": "2024-25",
+    "week": 17,
+    "publishedAt": "2025-02-10T15:40:34Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-17.json"
+  },
+  {
+    "id": 1602206,
+    "slug": "power-rankings-2024-25-week-16",
+    "title": "Power Rankings, Week 16: Top 10 holds tight as trade deadline approaches",
+    "season": "2024-25",
+    "week": 16,
+    "publishedAt": "2025-02-03T16:24:27Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-16.json"
+  },
+  {
+    "id": 1591559,
+    "slug": "power-rankings-2024-25-week-15",
+    "title": "Power Rankings, Week 15: Thunder reign as Rockets bump Cavs for No. 2 spot",
+    "season": "2024-25",
+    "week": 15,
+    "publishedAt": "2025-01-27T15:33:36Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-15.json"
+  },
+  {
+    "id": 1581402,
+    "slug": "power-rankings-2024-25-week-14",
+    "title": "Power Rankings, Week 14: Rockets rise to No. 3; Bucks on cusp of Top 10",
+    "season": "2024-25",
+    "week": 14,
+    "publishedAt": "2025-01-20T16:26:59Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-14.json"
+  },
+  {
+    "id": 1572469,
+    "slug": "power-rankings-2024-25-week-13",
+    "title": "Power Rankings, Week 13: Cavs, Thunder a step above the rest as season nears halfway point",
+    "season": "2024-25",
+    "week": 13,
+    "publishedAt": "2025-01-13T15:59:09Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-13.json"
+  },
+  {
+    "id": 1562835,
+    "slug": "power-rankings-2024-25-week-12",
+    "title": "Power Rankings, Week 12: Thunder & Cavs swap as 3 new teams enter Top 10",
+    "season": "2024-25",
+    "week": 12,
+    "publishedAt": "2025-01-06T16:48:21Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-12.json"
+  },
+  {
+    "id": 1553827,
+    "slug": "power-rankings-2024-25-week-11",
+    "title": "Power Rankings, Week 11: Knicks enter Top 5; Cavs hold No. 1 spot",
+    "season": "2024-25",
+    "week": 11,
+    "publishedAt": "2024-12-30T16:14:16Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-11.json"
+  },
+  {
+    "id": 1543981,
+    "slug": "power-rankings-2024-25-week-10",
+    "title": "Power Rankings, Week 10: Cavaliers, Thunder swap spots at top",
+    "season": "2024-25",
+    "week": 10,
+    "publishedAt": "2024-12-23T16:09:00Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-10.json"
+  },
+  {
+    "id": 1534947,
+    "slug": "power-rankings-2024-25-week-9",
+    "title": "Power Rankings, Week 9: Thunder take over No. 1; Bucks move into Top 10",
+    "season": "2024-25",
+    "week": 9,
+    "publishedAt": "2024-12-16T15:50:10Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-9.json"
+  },
+  {
+    "id": 1527220,
+    "slug": "power-rankings-2024-25-week-8",
+    "title": "Power Rankings, Week 8: Cavs maintain lead; Grizzlies enter Top 5",
+    "season": "2024-25",
+    "week": 8,
+    "publishedAt": "2024-12-09T15:31:35Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-8.json"
+  },
+  {
+    "id": 1516702,
+    "slug": "power-rankings-2024-25-week-7",
+    "title": "Power Rankings, Week 7: Cavs back at No. 1; Rockets surge into Top 5",
+    "season": "2024-25",
+    "week": 7,
+    "publishedAt": "2024-12-02T16:47:06Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-7.json"
+  },
+  {
+    "id": 1506111,
+    "slug": "power-rankings-2024-25-week-6",
+    "title": "Power Rankings, Week 6: Celtics take over No. 1 spot; Magic, Clippers enter Top 10",
+    "season": "2024-25",
+    "week": 6,
+    "publishedAt": "2024-11-25T16:25:06Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-6.json"
+  },
+  {
+    "id": 1495277,
+    "slug": "power-rankings-2024-25-week-5",
+    "title": "Power Rankings, Week 5: Rockets, Mavs and Lakers rise; Cavs stay at No. 1",
+    "season": "2024-25",
+    "week": 5,
+    "publishedAt": "2024-11-18T16:24:14Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-5.json"
+  },
+  {
+    "id": 1483220,
+    "slug": "power-rankings-2024-25-week-4",
+    "title": "Power Rankings, Week 4: Cavs keep sizzling, take over at No. 1",
+    "season": "2024-25",
+    "week": 4,
+    "publishedAt": "2024-11-11T15:45:03Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-4.json"
+  },
+  {
+    "id": 1472830,
+    "slug": "power-rankings-2024-25-week-3",
+    "title": "Power Rankings, Week 3: Undefeated Cavs, Thunder keep climbing",
+    "season": "2024-25",
+    "week": 3,
+    "publishedAt": "2024-11-04T15:27:38Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-3.json"
+  },
+  {
+    "id": 1461759,
+    "slug": "power-rankings-2024-25-week-2",
+    "title": "Power Rankings, Week 2: Surging Lakers, Cavs climb into Top 5",
+    "season": "2024-25",
+    "week": 2,
+    "publishedAt": "2024-10-28T14:20:25Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-2.json"
+  },
+  {
+    "id": 1451002,
+    "slug": "power-rankings-2024-25-week-1",
+    "title": "Power Rankings, Week 1: Celtics lead the way as 2024-25 begins",
+    "season": "2024-25",
+    "week": 1,
+    "publishedAt": "2024-10-21T14:31:55Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/power-rankings-2024-25-week-1.json"
+  },
+  {
+    "id": 1401747,
+    "slug": "offseason-power-rankings-west-2024",
+    "title": "Offseason Power Rankings: Thunder, Nuggets earn top spots in deep West",
+    "season": "2024-25",
+    "week": null,
+    "publishedAt": "2024-08-05T19:18:46Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2024-25/offseason-power-rankings-west-2024.json"
+  },
+  {
+    "id": 1398522,
+    "slug": "offseason-power-rankings-east-2024",
+    "title": "Offseason Power Rankings: Celtics continue to lead the way in East",
+    "season": "2023-24",
+    "week": null,
+    "publishedAt": "2024-07-29T14:34:18Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/offseason-power-rankings-east-2024.json"
+  },
+  {
+    "id": 1366787,
+    "slug": "power-rankings-2023-24-playoffs-conference-finals",
+    "title": "Playoff Power Rankings: How the 4 conference finalists stack up",
+    "season": "2023-24",
+    "week": null,
+    "publishedAt": "2024-05-20T16:30:07Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-playoffs-conference-finals.json"
+  },
+  {
+    "id": 1358005,
+    "slug": "power-rankings-2023-24-playoffs-conf-semis",
+    "title": "Playoff Power Rankings: Where all 8 teams stand as conference semifinals begin",
+    "season": "2023-24",
+    "week": null,
+    "publishedAt": "2024-05-06T15:30:31Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-playoffs-conf-semis.json"
+  },
+  {
+    "id": 1347593,
+    "slug": "power-rankings-2023-24-playoffs-first-round",
+    "title": "Playoff Power Rankings: Where all 16 teams stand at top of first round",
+    "season": "2023-24",
+    "week": null,
+    "publishedAt": "2024-04-22T15:29:59Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-playoffs-first-round.json"
+  },
+  {
+    "id": 1333920,
+    "slug": "power-rankings-2023-24-week-25",
+    "title": "Power Rankings, Week 25: 1 thing to watch for every team as season nears end",
+    "season": "2023-24",
+    "week": 25,
+    "publishedAt": "2024-04-08T15:47:31Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-25.json"
+  },
+  {
+    "id": 1331223,
+    "slug": "power-rankings-2023-24-week-24",
+    "title": "Power Rankings, Week 24: Thunder, Wolves and Mavs on the move",
+    "season": "2023-24",
+    "week": 24,
+    "publishedAt": "2024-04-01T15:40:40Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-24.json"
+  },
+  {
+    "id": 1325087,
+    "slug": "power-rankings-2023-24-week-23",
+    "title": "Power Rankings, Week 23: Bucks, Mavs and Suns rise; Nuggets stay at No. 1",
+    "season": "2023-24",
+    "week": 23,
+    "publishedAt": "2024-03-25T16:00:40Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-23.json"
+  },
+  {
+    "id": 1319331,
+    "slug": "power-rankings-2023-24-week-22",
+    "title": "Power Rankings, Week 22: Nuggets hold No. 1 spot, Wolves enter Top 5",
+    "season": "2023-24",
+    "week": 22,
+    "publishedAt": "2024-03-18T16:05:46Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-22.json"
+  },
+  {
+    "id": 1310078,
+    "slug": "power-rankings-2023-24-week-21",
+    "title": "Power Rankings, Week 21: Nuggets jump past Celtics for No. 1 spot",
+    "season": "2023-24",
+    "week": 21,
+    "publishedAt": "2024-03-11T15:49:13Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-21.json"
+  },
+  {
+    "id": 1307411,
+    "slug": "power-rankings-2023-24-week-20",
+    "title": "Power Rankings, Week 20: Nuggets rise to No. 2 as Celtics roll along",
+    "season": "2023-24",
+    "week": 20,
+    "publishedAt": "2024-03-04T16:42:09Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-20.json"
+  },
+  {
+    "id": 1300878,
+    "slug": "power-rankings-2023-24-week-19",
+    "title": "Power Rankings, Week 19: Nuggets, Bucks starting to make their move",
+    "season": "2023-24",
+    "week": 19,
+    "publishedAt": "2024-02-26T16:38:15Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-19.json"
+  },
+  {
+    "id": 1296802,
+    "slug": "power-rankings-2023-24-week-18",
+    "title": "Power Rankings, Week 18: Celtics lead, Wolves surge after All-Star weekend",
+    "season": "2023-24",
+    "week": 18,
+    "publishedAt": "2024-02-19T15:40:34Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-18.json"
+  },
+  {
+    "id": 1290551,
+    "slug": "power-rankings-2023-24-week-17",
+    "title": "Power Rankings, Week 17: Celtics on top, Cavs enter Top 5 before All-Star break",
+    "season": "2023-24",
+    "week": 17,
+    "publishedAt": "2024-02-12T16:37:18Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-17.json"
+  },
+  {
+    "id": 1284293,
+    "slug": "power-rankings-2023-24-week-16",
+    "title": "Power Rankings, Week 16: Clippers leading way to start trade deadline week",
+    "season": "2023-24",
+    "week": 16,
+    "publishedAt": "2024-02-05T16:17:30Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-16.json"
+  },
+  {
+    "id": 1279091,
+    "slug": "power-rankings-2023-24-week-15",
+    "title": "Power Rankings, Week 15: Clippers reign as new No. 1 team",
+    "season": "2023-24",
+    "week": 15,
+    "publishedAt": "2024-01-29T16:29:56Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-15.json"
+  },
+  {
+    "id": 1272947,
+    "slug": "power-rankings-2023-24-week-14",
+    "title": "Power Rankings, Week 14: Top 10 sees shake-up; Celtics return to No. 1",
+    "season": "2023-24",
+    "week": 14,
+    "publishedAt": "2024-01-22T16:46:39Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-14.json"
+  },
+  {
+    "id": 1267589,
+    "slug": "power-rankings-2023-24-week-13",
+    "title": "Power Rankings, Week 13: Thunder hold No. 1 spot as season nears halfway point",
+    "season": "2023-24",
+    "week": 13,
+    "publishedAt": "2024-01-15T16:25:59Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-13.json"
+  },
+  {
+    "id": 1261650,
+    "slug": "power-rankings-2023-24-week-12",
+    "title": "Power Rankings, Week 12: Thunder overtake Celtics for No. 1 spot",
+    "season": "2023-24",
+    "week": 12,
+    "publishedAt": "2024-01-08T16:41:34Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-12.json"
+  },
+  {
+    "id": 1256805,
+    "slug": "power-rankings-2023-24-week-11",
+    "title": "Power Rankings, Week 11: Thunder, Clippers land in Top 5",
+    "season": "2023-24",
+    "week": 11,
+    "publishedAt": "2024-01-02T16:41:31Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-11.json"
+  },
+  {
+    "id": 1251683,
+    "slug": "power-rankings-2023-24-week-10",
+    "title": "Power Rankings, Week 10: Nuggets, Heat on rise in Top 10",
+    "season": "2023-24",
+    "week": 10,
+    "publishedAt": "2023-12-26T16:54:03Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-10.json"
+  },
+  {
+    "id": 1244538,
+    "slug": "power-rankings-2023-24-week-9",
+    "title": "Power Rankings, Week 9: Clippers rise as Celtics reclaim No. 1 spot",
+    "season": "2023-24",
+    "week": 9,
+    "publishedAt": "2023-12-18T16:37:26Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-9.json"
+  },
+  {
+    "id": 1237262,
+    "slug": "power-rankings-2023-24-week-8",
+    "title": "Power Rankings, Week 8: Wolves take control of No. 1 spot",
+    "season": "2023-24",
+    "week": 8,
+    "publishedAt": "2023-12-11T16:23:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-8.json"
+  },
+  {
+    "id": 1232717,
+    "slug": "power-rankings-2023-24-week-7",
+    "title": "Power Rankings, Week 7: Thunder, Nuggets on the rise in Top 5",
+    "season": "2023-24",
+    "week": 7,
+    "publishedAt": "2023-12-04T16:14:54Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-7.json"
+  },
+  {
+    "id": 1227236,
+    "slug": "power-rankings-2023-24-week-6",
+    "title": "Power Rankings, Week 6: Surging Magic, Suns enter the Top 10",
+    "season": "2023-24",
+    "week": 6,
+    "publishedAt": "2023-11-27T16:27:30Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-6.json"
+  },
+  {
+    "id": 1221872,
+    "slug": "power-rankings-2023-24-week-5",
+    "title": "Power Rankings, Week 5: Celtics regain control of No. 1 spot",
+    "season": "2023-24",
+    "week": 5,
+    "publishedAt": "2023-11-20T16:32:38Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-5.json"
+  },
+  {
+    "id": 1215216,
+    "slug": "power-rankings-2023-24-week-4",
+    "title": "Power Rankings, Week 4: Sizzling Sixers rise to the top",
+    "season": "2023-24",
+    "week": 4,
+    "publishedAt": "2023-11-13T17:07:16Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-4.json"
+  },
+  {
+    "id": 1210476,
+    "slug": "power-rankings-2023-24-week-3",
+    "title": "Power Rankings, Week 3: Celtics take hold of top spot",
+    "season": "2023-24",
+    "week": 3,
+    "publishedAt": "2023-11-06T16:26:58Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-3.json"
+  },
+  {
+    "id": 1201191,
+    "slug": "power-rankings-2023-24-week-2",
+    "title": "Power Rankings, Week 2: Nuggets maintain grip on No. 1",
+    "season": "2023-24",
+    "week": 2,
+    "publishedAt": "2023-10-30T16:18:31Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-2.json"
+  },
+  {
+    "id": 1197077,
+    "slug": "power-rankings-2023-24-week-1",
+    "title": "Power Rankings, Week 1: Nuggets, Bucks lead the way as 2023-24 begins",
+    "season": "2023-24",
+    "week": 1,
+    "publishedAt": "2023-10-23T15:21:47Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/power-rankings-2023-24-week-1.json"
+  },
+  {
+    "id": 1173940,
+    "slug": "offseason-power-rankings-west-2023",
+    "title": "Offseason Power Rankings: Nuggets rank No. 1 in deep West",
+    "season": "2023-24",
+    "week": null,
+    "publishedAt": "2023-08-07T15:55:15Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2023-24/offseason-power-rankings-west-2023.json"
+  },
+  {
+    "id": 1172883,
+    "slug": "offseason-power-rankings-east-2023",
+    "title": "Offseason Power Rankings: Bucks return to the top of the East",
+    "season": "2022-23",
+    "week": null,
+    "publishedAt": "2023-07-31T15:59:06Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/offseason-power-rankings-east-2023.json"
+  },
+  {
+    "id": 1081390,
+    "slug": "power-rankings-2022-23-week-25",
+    "title": "Power Rankings, Week 25: Celtics vault to No. 1 as season's final week begins",
+    "season": "2022-23",
+    "week": 25,
+    "publishedAt": "2023-04-03T16:15:36Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-25.json"
+  },
+  {
+    "id": 1073551,
+    "slug": "power-rankings-2022-23-week-24",
+    "title": "Power Rankings, Week 24: Bucks return to No. 1 with 2 weeks left",
+    "season": "2022-23",
+    "week": 24,
+    "publishedAt": "2023-03-27T16:29:25Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-24.json"
+  },
+  {
+    "id": 1067152,
+    "slug": "power-rankings-2022-23-week-23",
+    "title": "Power Rankings, Week 23: Joel Embiid powers Sixers to No. 1 spot",
+    "season": "2022-23",
+    "week": 23,
+    "publishedAt": "2023-03-20T16:35:13Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-23.json"
+  },
+  {
+    "id": 1063235,
+    "slug": "film-study-anthony-davis-lakers-stretch-run",
+    "title": "Film Study: How Anthony Davis is playing big to keep the Lakers afloat",
+    "season": "2022-23",
+    "week": null,
+    "publishedAt": "2023-03-16T16:16:38Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/film-study-anthony-davis-lakers-stretch-run.json"
+  },
+  {
+    "id": 1059908,
+    "slug": "power-rankings-2022-23-week-22",
+    "title": "Power Rankings, Week 22: Bucks hold No. 1 spot as Sixers & Kings rise",
+    "season": "2022-23",
+    "week": 22,
+    "publishedAt": "2023-03-13T16:10:22Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-22.json"
+  },
+  {
+    "id": 1056355,
+    "slug": "power-rankings-notebook-week-21-2022-23",
+    "title": "Power Rankings Notebook: How trade deadline additions are performing",
+    "season": "2022-23",
+    "week": 21,
+    "publishedAt": "2023-03-09T17:50:04Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-week-21-2022-23.json"
+  },
+  {
+    "id": 1053038,
+    "slug": "power-rankings-2022-23-week-21",
+    "title": "Power Rankings, Week 21: Knicks, Nuggets rise as Bucks stay at top",
+    "season": "2022-23",
+    "week": 21,
+    "publishedAt": "2023-03-06T17:56:12Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-21.json"
+  },
+  {
+    "id": 1046050,
+    "slug": "power-rankings-2022-23-week-20",
+    "title": "Power Rankings, Week 20: Grizzlies enter Top 5 as season nears 4th quarter",
+    "season": "2022-23",
+    "week": 20,
+    "publishedAt": "2023-02-27T17:22:09Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-20.json"
+  },
+  {
+    "id": 1041656,
+    "slug": "power-rankings-2022-23-week-19",
+    "title": "Power Rankings, Week 19: Streaking Bucks rise to No. 1 after All-Star break",
+    "season": "2022-23",
+    "week": 19,
+    "publishedAt": "2023-02-21T15:28:13Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-19.json"
+  },
+  {
+    "id": 1034816,
+    "slug": "power-rankings-2022-23-week-18",
+    "title": "Power Rankings, Week 18: Top 5 holds steady after active trade deadline",
+    "season": "2022-23",
+    "week": 18,
+    "publishedAt": "2023-02-13T16:53:04Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-18.json"
+  },
+  {
+    "id": 1027831,
+    "slug": "power-rankings-2022-23-week-17",
+    "title": "Power Rankings, Week 17: Movement in Top 5 as trade deadline nears",
+    "season": "2022-23",
+    "week": 17,
+    "publishedAt": "2023-02-06T16:51:14Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-17.json"
+  },
+  {
+    "id": 1021150,
+    "slug": "power-rankings-2022-23-week-16",
+    "title": "Power Rankings, Week 16: Sixers take over No. 1 spot",
+    "season": "2022-23",
+    "week": 16,
+    "publishedAt": "2023-01-30T16:15:56Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-16.json"
+  },
+  {
+    "id": 1017662,
+    "slug": "power-rankings-notebook-week-15-2022-23",
+    "title": "Power Rankings Notebook: Historic efficiency + most improved players",
+    "season": "2022-23",
+    "week": 15,
+    "publishedAt": "2023-01-26T17:07:54Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-week-15-2022-23.json"
+  },
+  {
+    "id": 1014204,
+    "slug": "power-rankings-2022-23-week-15",
+    "title": "Power Rankings, Week 15: Sixers climb higher in Top 5; Celtics take No. 1",
+    "season": "2022-23",
+    "week": 15,
+    "publishedAt": "2023-01-23T17:37:39Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-15.json"
+  },
+  {
+    "id": 1010545,
+    "slug": "power-rankings-notebook-week-14-2022-23",
+    "title": "Power Rankings Notebook: Jaren Jackson Jr.'s DPOY case + LeBron's scoring",
+    "season": "2022-23",
+    "week": 14,
+    "publishedAt": "2023-01-19T17:17:52Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-week-14-2022-23.json"
+  },
+  {
+    "id": 1007525,
+    "slug": "power-rankings-2022-23-week-14",
+    "title": "Power Rankings, Week 14: Grizzlies, Sixers both on rise; Nuggets stay at No. 1",
+    "season": "2022-23",
+    "week": 14,
+    "publishedAt": "2023-01-16T17:29:18Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-14.json"
+  },
+  {
+    "id": 1003598,
+    "slug": "power-rankings-notebook-week-13-2022-23",
+    "title": "Power Rankings Notebook: Clippers' struggles + Nets without Kevin Durant",
+    "season": "2022-23",
+    "week": 13,
+    "publishedAt": "2023-01-12T17:40:27Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-week-13-2022-23.json"
+  },
+  {
+    "id": 1000405,
+    "slug": "power-rankings-2022-23-week-13",
+    "title": "Power Rankings, Week 13: Cavs enter Top 5 as season reaches midpoint",
+    "season": "2022-23",
+    "week": 13,
+    "publishedAt": "2023-01-09T17:16:24Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-13.json"
+  },
+  {
+    "id": 996446,
+    "slug": "power-rankings-notebook-week-12-2022-23",
+    "title": "Power Rankings Notebook: Historic pace for 40-point games",
+    "season": "2022-23",
+    "week": 12,
+    "publishedAt": "2023-01-05T17:11:37Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-week-12-2022-23.json"
+  },
+  {
+    "id": 992888,
+    "slug": "power-rankings-2022-23-week-12",
+    "title": "Power Rankings, Week 12: Nuggets climb to No. 1 to begin new year",
+    "season": "2022-23",
+    "week": 12,
+    "publishedAt": "2023-01-02T16:54:26Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-12.json"
+  },
+  {
+    "id": 986347,
+    "slug": "power-rankings-2022-23-week-11",
+    "title": "Power Rankings, Week 11: Celtics reclaim top spot as Nuggets, Nets climb",
+    "season": "2022-23",
+    "week": 11,
+    "publishedAt": "2022-12-26T17:15:35Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-11.json"
+  },
+  {
+    "id": 983349,
+    "slug": "power-rankings-notebook-week-10-2022",
+    "title": "Power Rankings Notebook: Warriors' defense, Nets' offense & league-wide comeback stats",
+    "season": "2022-23",
+    "week": 10,
+    "publishedAt": "2022-12-22T17:22:03Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-week-10-2022.json"
+  },
+  {
+    "id": 979214,
+    "slug": "power-rankings-2022-23-week-10",
+    "title": "Power Rankings, Week 10: Grizzlies move into No. 1 spot",
+    "season": "2022-23",
+    "week": 10,
+    "publishedAt": "2022-12-19T16:34:50Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-10.json"
+  },
+  {
+    "id": 974939,
+    "slug": "power-rankings-notebook-week-9-2022",
+    "title": "Power Rankings Notebook: 5 most improved defenses",
+    "season": "2022-23",
+    "week": 9,
+    "publishedAt": "2022-12-15T17:22:33Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-week-9-2022.json"
+  },
+  {
+    "id": 971419,
+    "slug": "power-rankings-2022-23-week-9",
+    "title": "Power Rankings, Week 9: Pelicans keep soaring, reach No. 2",
+    "season": "2022-23",
+    "week": 9,
+    "publishedAt": "2022-12-12T16:24:22Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-9.json"
+  },
+  {
+    "id": 967657,
+    "slug": "power-rankings-notebook-week-8-2022",
+    "title": "Power Rankings Notebook: 5 most improved offenses",
+    "season": "2022-23",
+    "week": 8,
+    "publishedAt": "2022-12-08T17:31:26Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-week-8-2022.json"
+  },
+  {
+    "id": 964329,
+    "slug": "power-rankings-2022-23-week-8",
+    "title": "Power Rankings, Week 8: Pelicans, Kings jump into Top 10",
+    "season": "2022-23",
+    "week": 8,
+    "publishedAt": "2022-12-05T16:36:45Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-8.json"
+  },
+  {
+    "id": 960688,
+    "slug": "power-rankings-notebook-week-7-2022",
+    "title": "Power Rankings Notebook: December schedule analysis",
+    "season": "2022-23",
+    "week": 7,
+    "publishedAt": "2022-12-01T17:10:54Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-week-7-2022.json"
+  },
+  {
+    "id": 957037,
+    "slug": "power-rankings-2022-23-week-7",
+    "title": "Power Rankings, Week 7: Warriors return to Top 10 as season nears quarter-mark",
+    "season": "2022-23",
+    "week": 7,
+    "publishedAt": "2022-11-28T16:36:16Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-7.json"
+  },
+  {
+    "id": 950478,
+    "slug": "power-rankings-2022-23-week-6",
+    "title": "Power Rankings, Week 6: Jazz, Suns rise as Celtics hold No. 1 spot",
+    "season": "2022-23",
+    "week": 6,
+    "publishedAt": "2022-11-21T16:48:27Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-6.json"
+  },
+  {
+    "id": 946720,
+    "slug": "power-rankings-notebook-2022-23-week-5",
+    "title": "Power Rankings Notebook: Scoring & efficiency at historic levels to begin '22-23",
+    "season": "2022-23",
+    "week": 5,
+    "publishedAt": "2022-11-17T17:24:49Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-2022-23-week-5.json"
+  },
+  {
+    "id": 943364,
+    "slug": "power-rankings-2022-23-week-5",
+    "title": "Power Rankings, Week 5: Celtics power past Bucks for No. 1 spot",
+    "season": "2022-23",
+    "week": 5,
+    "publishedAt": "2022-11-14T16:43:34Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-5.json"
+  },
+  {
+    "id": 939619,
+    "slug": "power-rankings-notebook-2022-23-week-4",
+    "title": "Power Rankings Notebook: Inside slow starts for Wolves, Lakers",
+    "season": "2022-23",
+    "week": 4,
+    "publishedAt": "2022-11-10T17:23:01Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-2022-23-week-4.json"
+  },
+  {
+    "id": 935883,
+    "slug": "power-rankings-2022-23-week-4",
+    "title": "Power Rankings, Week 4: Cavaliers rise to No. 2 with undefeated Bucks on top",
+    "season": "2022-23",
+    "week": 4,
+    "publishedAt": "2022-11-07T16:44:56Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-4.json"
+  },
+  {
+    "id": 932596,
+    "slug": "power-rankings-notebook-2022-23-week-3",
+    "title": "Power Rankings Notebook: Increased workloads & impact of 2 new coaches",
+    "season": "2022-23",
+    "week": 3,
+    "publishedAt": "2022-11-03T16:29:42Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2022-23/power-rankings-notebook-2022-23-week-3.json"
+  },
+  {
+    "id": 929302,
+    "slug": "power-rankings-2022-23-week-3",
+    "title": "Power Rankings, Week 3: Undefeated Bucks climb to No. 1",
+    "season": "2022-23",
+    "week": 3,
+    "publishedAt": "2022-10-31T15:33:25Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-3.json"
+  },
+  {
+    "id": 921895,
+    "slug": "power-rankings-2022-23-week-2",
+    "title": "Power Rankings, Week 2: Undefeated Celtics take over No. 1 spot",
+    "season": "2022-23",
+    "week": 2,
+    "publishedAt": "2022-10-24T15:10:59Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-2.json"
+  },
+  {
+    "id": 914828,
+    "slug": "power-rankings-2022-23-week-1",
+    "title": "Power Rankings, Week 1: Warriors, Bucks lead the way to begin 2022-23",
+    "season": "2022-23",
+    "week": 1,
+    "publishedAt": "2022-10-17T14:22:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/power-rankings-2022-23-week-1.json"
+  },
+  {
+    "id": 813436,
+    "slug": "offseason-power-rankings-west-2022",
+    "title": "Offseason Power Rankings: Warriors, Suns lead wide-open Western Conference",
+    "season": "2022-23",
+    "week": null,
+    "publishedAt": "2022-08-08T16:20:56Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/offseason-power-rankings-west-2022.json"
+  },
+  {
+    "id": 812143,
+    "slug": "offseason-power-rankings-east-2022",
+    "title": "Offseason Power Rankings: Celtics, Bucks keep top spots in Eastern Conference",
+    "season": "2022-23",
+    "week": null,
+    "publishedAt": "2022-08-01T16:53:16Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2022-23/offseason-power-rankings-east-2022.json"
+  },
+  {
+    "id": 746531,
+    "slug": "power-rankings-2021-22-week-25",
+    "title": "Power Rankings, Week 25: Suns, Bucks hold top spots before final week",
+    "season": "2021-22",
+    "week": 25,
+    "publishedAt": "2022-04-04T16:56:03Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-25.json"
+  },
+  {
+    "id": 739965,
+    "slug": "power-rankings-2021-22-week-24",
+    "title": "Power Rankings, Week 24: East leaders set to clash with 2 weeks left",
+    "season": "2021-22",
+    "week": 24,
+    "publishedAt": "2022-03-28T16:43:10Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-24.json"
+  },
+  {
+    "id": 736844,
+    "slug": "power-rankings-notebook-march-24-2022",
+    "title": "Power Rankings Notebook: Sixers' offense with James Harden + best teams since All-Star",
+    "season": "2021-22",
+    "week": null,
+    "publishedAt": "2022-03-24T17:16:09Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2021-22/power-rankings-notebook-march-24-2022.json"
+  },
+  {
+    "id": 733709,
+    "slug": "power-rankings-2021-22-week-23",
+    "title": "Power Rankings, Week 23: Playoff races heating up with 3 weeks left",
+    "season": "2021-22",
+    "week": 23,
+    "publishedAt": "2022-03-21T16:48:35Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-23.json"
+  },
+  {
+    "id": 728061,
+    "slug": "power-rankings-2021-22-week-22",
+    "title": "Power Rankings, Week 22: Several key East-West matchups await",
+    "season": "2021-22",
+    "week": 22,
+    "publishedAt": "2022-03-14T16:33:41Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-22.json"
+  },
+  {
+    "id": 722024,
+    "slug": "power-rankings-2021-22-week-21",
+    "title": "Power Rankings, Week 21: Playoff races take shape as Celtics, Heat rise",
+    "season": "2021-22",
+    "week": 21,
+    "publishedAt": "2022-03-07T17:52:47Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-21.json"
+  },
+  {
+    "id": 716401,
+    "slug": "power-rankings-2021-22-week-20",
+    "title": "Power Rankings, Week 20: Heat face critical week while West chase tightens",
+    "season": "2021-22",
+    "week": 20,
+    "publishedAt": "2022-02-28T17:04:48Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-20.json"
+  },
+  {
+    "id": 712756,
+    "slug": "power-rankings-2021-22-week-19",
+    "title": "Power Rankings, Week 19: Top 10 sees shake-up as season resumes after break",
+    "season": "2021-22",
+    "week": 19,
+    "publishedAt": "2022-02-21T15:35:32Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-19.json"
+  },
+  {
+    "id": 705270,
+    "slug": "power-rankings-2021-22-week-18",
+    "title": "Power Rankings, Week 18: Sixers, Nets switch gears as Suns, Grizzlies hold top spots",
+    "season": "2021-22",
+    "week": 18,
+    "publishedAt": "2022-02-14T16:50:56Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-18.json"
+  },
+  {
+    "id": 698967,
+    "slug": "power-rankings-2021-22-week-17",
+    "title": "Power Rankings, Week 17: Suns hold No. 1 spot before Finals rematch this week",
+    "season": "2021-22",
+    "week": 17,
+    "publishedAt": "2022-02-07T17:13:09Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-17.json"
+  },
+  {
+    "id": 694059,
+    "slug": "power-rankings-2021-22-week-16",
+    "title": "Power Rankings, Week 16: Suns hold top spot as East standings tighten",
+    "season": "2021-22",
+    "week": 16,
+    "publishedAt": "2022-01-31T17:44:34Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-16.json"
+  },
+  {
+    "id": 687421,
+    "slug": "power-rankings-2021-22-week-15",
+    "title": "Power Rankings, Week 15: Suns, Bucks on the rise in Top 5",
+    "season": "2021-22",
+    "week": 15,
+    "publishedAt": "2022-01-24T17:31:14Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-15.json"
+  },
+  {
+    "id": 681809,
+    "slug": "power-rankings-2021-22-week-14",
+    "title": "Power Rankings, Week 14: Grizzlies climb to No. 1 as other contenders stumble",
+    "season": "2021-22",
+    "week": 14,
+    "publishedAt": "2022-01-17T17:06:33Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-14.json"
+  },
+  {
+    "id": 680124,
+    "slug": "power-rankings-notebook-2021-22-week-13",
+    "title": "Power Rankings Notebook: Grizzlies' defensive turnaround, plus Giannis thriving at center",
+    "season": "2021-22",
+    "week": 13,
+    "publishedAt": "2022-01-13T16:21:04Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2021-22/power-rankings-notebook-2021-22-week-13.json"
+  },
+  {
+    "id": 677693,
+    "slug": "power-rankings-2021-22-week-13",
+    "title": "Power Rankings, Week 13: Grizzlies take flight as Warriors stay at No. 1",
+    "season": "2021-22",
+    "week": 13,
+    "publishedAt": "2022-01-10T17:23:30Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-13.json"
+  },
+  {
+    "id": 674552,
+    "slug": "power-rankings-notebook-2021-22-week-12",
+    "title": "Power Rankings Notebook: Best records vs. best teams",
+    "season": "2021-22",
+    "week": 12,
+    "publishedAt": "2022-01-06T17:15:45Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2021-22/power-rankings-notebook-2021-22-week-12.json"
+  },
+  {
+    "id": 671641,
+    "slug": "power-rankings-2021-22-week-12",
+    "title": "Power Rankings, Week 12: Warriors hold No. 1 spot as Bulls return to Top 5",
+    "season": "2021-22",
+    "week": 12,
+    "publishedAt": "2022-01-03T17:10:11Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-12.json"
+  },
+  {
+    "id": 666050,
+    "slug": "power-rankings-2021-22-week-11",
+    "title": "Power Rankings, Week 11: Warriors grab No. 1 spot from Suns",
+    "season": "2021-22",
+    "week": 11,
+    "publishedAt": "2021-12-27T17:22:56Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-11.json"
+  },
+  {
+    "id": 663787,
+    "slug": "power-rankings-notebook-2021-22-week-10",
+    "title": "Power Rankings Notebook: Utah's historic offense, LeBron at the five and Boston in the clutch",
+    "season": "2021-22",
+    "week": 10,
+    "publishedAt": "2021-12-23T17:20:24Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2021-22/power-rankings-notebook-2021-22-week-10.json"
+  },
+  {
+    "id": 661807,
+    "slug": "power-rankings-2021-22-week-10",
+    "title": "Power Rankings, Week 10: Suns hold No. 1 spot, Cavs enter Top 5",
+    "season": "2021-22",
+    "week": 10,
+    "publishedAt": "2021-12-20T17:02:29Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-10.json"
+  },
+  {
+    "id": 659528,
+    "slug": "power-rankings-notebook-2021-22-week-9",
+    "title": "Power Rankings Notebook: 5 most improved defenses this season",
+    "season": "2021-22",
+    "week": 9,
+    "publishedAt": "2021-12-16T17:10:11Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2021-22/power-rankings-notebook-2021-22-week-9.json"
+  },
+  {
+    "id": 656934,
+    "slug": "power-rankings-2021-22-week-9",
+    "title": "Power Rankings, Week 9: Suns overtake Warriors for No. 1 spot",
+    "season": "2021-22",
+    "week": 9,
+    "publishedAt": "2021-12-13T17:10:44Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-9.json"
+  },
+  {
+    "id": 654201,
+    "slug": "power-rankings-notebook-2021-22-week-7",
+    "title": "Power Rankings Notebook: 5 most improved offenses this season",
+    "season": "2021-22",
+    "week": 7,
+    "publishedAt": "2021-12-09T16:54:54Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2021-22/power-rankings-notebook-2021-22-week-7.json"
+  },
+  {
+    "id": 651343,
+    "slug": "power-rankings-2021-22-week-8",
+    "title": "Power Rankings, Week 8: Warriors hold No. 1 spot as Top 10 shifts",
+    "season": "2021-22",
+    "week": 8,
+    "publishedAt": "2021-12-06T17:18:55Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-8.json"
+  },
+  {
+    "id": 646742,
+    "slug": "power-rankings-2021-22-week-7",
+    "title": "Power Rankings, Week 7: Warriors, Suns on top before 2 matchups this week",
+    "season": "2021-22",
+    "week": 7,
+    "publishedAt": "2021-11-29T17:24:02Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-7.json"
+  },
+  {
+    "id": 642134,
+    "slug": "power-rankings-2021-22-week-6",
+    "title": "Power Rankings, Week 6: Suns, Heat rise but Warriors stay at No. 1",
+    "season": "2021-22",
+    "week": 6,
+    "publishedAt": "2021-11-22T17:17:15Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-6.json"
+  },
+  {
+    "id": 639723,
+    "slug": "power-rankings-notebook-2021-22-week-5",
+    "title": "Power Rankings Notebook: Suns' early offense, plus on-off leaders",
+    "season": "2021-22",
+    "week": 5,
+    "publishedAt": "2021-11-18T16:49:29Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2021-22/power-rankings-notebook-2021-22-week-5.json"
+  },
+  {
+    "id": 637330,
+    "slug": "power-rankings-2021-22-week-5",
+    "title": "Power Rankings, Week 5: Warriors on top as Bulls, Suns ascend",
+    "season": "2021-22",
+    "week": 5,
+    "publishedAt": "2021-11-15T17:46:52Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-5.json"
+  },
+  {
+    "id": 634765,
+    "slug": "power-rankings-notebook-2021-22-week-4",
+    "title": "Power Rankings Notebook: Defensive changes, plus early look at team records",
+    "season": "2021-22",
+    "week": 4,
+    "publishedAt": "2021-11-11T17:15:32Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2021-22/power-rankings-notebook-2021-22-week-4.json"
+  },
+  {
+    "id": 632286,
+    "slug": "power-rankings-2021-22-week-4",
+    "title": "Power Rankings, Week 4: Warriors, Nets and Cavs rise up",
+    "season": "2021-22",
+    "week": 4,
+    "publishedAt": "2021-11-08T16:48:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-4.json"
+  },
+  {
+    "id": 629646,
+    "slug": "power-rankings-notebook-early-changes-week-3",
+    "title": "Power Rankings Notebook: Early-season trends, changes around NBA",
+    "season": "2021-22",
+    "week": 3,
+    "publishedAt": "2021-11-04T15:25:21Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2021-22/power-rankings-notebook-early-changes-week-3.json"
+  },
+  {
+    "id": 626863,
+    "slug": "power-rankings-2021-22-week-3",
+    "title": "Power Rankings, Week 3: Heat, Knicks and Bulls surge into Top 5",
+    "season": "2021-22",
+    "week": 3,
+    "publishedAt": "2021-11-01T15:54:33Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-3.json"
+  },
+  {
+    "id": 621223,
+    "slug": "power-rankings-2021-22-week-2",
+    "title": "Power Rankings, Week 2: Jazz take control of No. 1 spot",
+    "season": "2021-22",
+    "week": 2,
+    "publishedAt": "2021-10-25T14:19:55Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-2.json"
+  },
+  {
+    "id": 613395,
+    "slug": "power-rankings-2021-22-week-1",
+    "title": "Power Rankings, Week 1: Bucks, Nets and Suns start season on top",
+    "season": "2021-22",
+    "week": 1,
+    "publishedAt": "2021-10-18T14:39:04Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/power-rankings-2021-22-week-1.json"
+  },
+  {
+    "id": 598705,
+    "slug": "offseason-power-rankings-west-2021",
+    "title": "Offseason Power Rankings: Suns, Lakers emerge in West",
+    "season": "2021-22",
+    "week": null,
+    "publishedAt": "2021-08-30T12:44:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/offseason-power-rankings-west-2021.json"
+  },
+  {
+    "id": 597989,
+    "slug": "offseason-power-rankings-east-2021",
+    "title": "Offseason Power Rankings: Nets, Bucks stand tall in the East",
+    "season": "2021-22",
+    "week": null,
+    "publishedAt": "2021-08-26T12:53:10Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2021-22/offseason-power-rankings-east-2021.json"
+  },
+  {
+    "id": 548040,
+    "slug": "power-rankings-2020-21-week-21",
+    "title": "Power Rankings, Week 21: Sixers finish at No. 1 as season wraps up",
+    "season": "2020-21",
+    "week": 21,
+    "publishedAt": "2021-05-10T16:13:28Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-21.json"
+  },
+  {
+    "id": 545621,
+    "slug": "power-rankings-notebook-best-offenses-most-improved-player",
+    "title": "Power Rankings Notebook: Best offenses ever, key Most Improved Player stats and more",
+    "season": "2020-21",
+    "week": null,
+    "publishedAt": "2021-05-06T16:33:15Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-best-offenses-most-improved-player.json"
+  },
+  {
+    "id": 543633,
+    "slug": "power-rankings-2020-21-week-20",
+    "title": "Power Rankings, Week 20: Suns, Sixers on rise in season's final 2 weeks",
+    "season": "2020-21",
+    "week": 20,
+    "publishedAt": "2021-05-03T16:14:45Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-20.json"
+  },
+  {
+    "id": 539339,
+    "slug": "power-rankings-2020-21-week-19",
+    "title": "Power Rankings, Week 19: Clippers climb to No. 1 with 3 weeks left in regular season",
+    "season": "2020-21",
+    "week": 19,
+    "publishedAt": "2021-04-26T16:47:08Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-19.json"
+  },
+  {
+    "id": 537155,
+    "slug": "power-rankings-notebook-how-16-trade-deadline-additions-are-performing-with-new-teams",
+    "title": "Power Rankings Notebook: How 16 trade-deadline additions are performing with new teams",
+    "season": "2020-21",
+    "week": null,
+    "publishedAt": "2021-04-22T16:32:42Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-how-16-trade-deadline-additions-are-performing-with-new-teams.json"
+  },
+  {
+    "id": 535137,
+    "slug": "power-rankings-2020-21-week-18",
+    "title": "Power Rankings, Week 18: Sixers surge to No. 1 spot as season enters final month",
+    "season": "2020-21",
+    "week": 18,
+    "publishedAt": "2021-04-19T16:04:25Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-18.json"
+  },
+  {
+    "id": 530663,
+    "slug": "power-rankings-2020-21-week-17",
+    "title": "Power Rankings, Week 17: Suns rise to No. 1 as regular season enters crucial stretch",
+    "season": "2020-21",
+    "week": 17,
+    "publishedAt": "2021-04-12T16:43:40Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-17.json"
+  },
+  {
+    "id": 528145,
+    "slug": "power-rankings-notebook-defense-film-study",
+    "title": "Power Rankings Notebook: Suns' defense, Kawhi Leonard in the pick-and-roll and Nets' switching",
+    "season": "2020-21",
+    "week": null,
+    "publishedAt": "2021-04-08T16:28:13Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-defense-film-study.json"
+  },
+  {
+    "id": 526092,
+    "slug": "power-rankings-2020-21-week-16",
+    "title": "Power Rankings, Week 16: Play-In races heating up in East, West",
+    "season": "2020-21",
+    "week": 16,
+    "publishedAt": "2021-04-05T16:56:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-16.json"
+  },
+  {
+    "id": 523618,
+    "slug": "power-rankings-notebook-week-15",
+    "title": "Power Rankings Notebook: Zion Williamson with the ball, plus most improved offenses and defenses",
+    "season": "2020-21",
+    "week": 15,
+    "publishedAt": "2021-04-01T16:07:14Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-week-15.json"
+  },
+  {
+    "id": 521717,
+    "slug": "power-rankings-2020-21-week-15",
+    "title": "Power Rankings, Week 15: Jazz climb to No. 1 after NBA's active trade deadline",
+    "season": "2020-21",
+    "week": 15,
+    "publishedAt": "2021-03-29T16:33:37Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-15.json"
+  },
+  {
+    "id": 516955,
+    "slug": "power-rankings-2020-21-week-14",
+    "title": "Power Rankings, Week 14: Bucks climb to No. 2 as trade deadline looms",
+    "season": "2020-21",
+    "week": 14,
+    "publishedAt": "2021-03-22T16:33:47Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-14.json"
+  },
+  {
+    "id": 514443,
+    "slug": "power-rankings-notebook-week-13",
+    "title": "Power Rankings Notebook: Trae Young's bag of tricks, Gordon Hayward in the post and Lakers' defense still No. 1",
+    "season": "2020-21",
+    "week": 13,
+    "publishedAt": "2021-03-18T16:34:53Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-week-13.json"
+  },
+  {
+    "id": 512315,
+    "slug": "power-rankings-2020-21-week-13",
+    "title": "Power Rankings, Week 13: Nets, Sixers and Lakers hold Top 5 spots despite key injuries",
+    "season": "2020-21",
+    "week": 13,
+    "publishedAt": "2021-03-15T16:39:01Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-13.json"
+  },
+  {
+    "id": 508766,
+    "slug": "power-rankings-2020-21-week-12",
+    "title": "Power Rankings, Week 12: Nets climb to No. 1; Lakers, Bucks exit Top 5",
+    "season": "2020-21",
+    "week": 12,
+    "publishedAt": "2021-03-08T17:05:52Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-12.json"
+  },
+  {
+    "id": 504095,
+    "slug": "power-rankings-2020-21-week-11",
+    "title": "Power Rankings, Week 11: Streaking Bucks back in Top 5",
+    "season": "2020-21",
+    "week": 11,
+    "publishedAt": "2021-03-01T17:26:09Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-11.json"
+  },
+  {
+    "id": 501389,
+    "slug": "power-rankings-notebook-week-10",
+    "title": "Power Rankings Notebook: Luka Doncic's 3-point attempts and Pelicans' defense",
+    "season": "2020-21",
+    "week": 10,
+    "publishedAt": "2021-02-25T17:12:29Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-week-10.json"
+  },
+  {
+    "id": 499215,
+    "slug": "power-rankings-2020-21-week-10",
+    "title": "Power Rankings, Week 10: Jazz stay at No. 1, but Nets closing in fast",
+    "season": "2020-21",
+    "week": 10,
+    "publishedAt": "2021-02-22T17:46:55Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-10.json"
+  },
+  {
+    "id": 496488,
+    "slug": "power-rankings-notebook-week-9",
+    "title": "Power Rankings Notebook: The value of rim protection, 'Dame Time' and double-digit leads",
+    "season": "2020-21",
+    "week": 9,
+    "publishedAt": "2021-02-18T17:58:27Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-week-9.json"
+  },
+  {
+    "id": 494515,
+    "slug": "power-rankings-2020-21-week-9",
+    "title": "Power Rankings, Week 9: Jazz jump Lakers for No. 1 spot; Suns enter Top 5",
+    "season": "2020-21",
+    "week": 9,
+    "publishedAt": "2021-02-15T17:46:57Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-9.json"
+  },
+  {
+    "id": 491975,
+    "slug": "power-rankings-notebook-week-8",
+    "title": "Power Rankings Notebook: 3 teams better than they seem, Sixers' strong shooting and LaMelo's vision",
+    "season": "2020-21",
+    "week": 8,
+    "publishedAt": "2021-02-11T17:11:47Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-week-8.json"
+  },
+  {
+    "id": 490039,
+    "slug": "power-rankings-2020-21-week-8",
+    "title": "Power Rankings, Week 8: Lakers return to No. 1; Jazz continue to rise",
+    "season": "2020-21",
+    "week": 8,
+    "publishedAt": "2021-02-08T17:50:31Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-8.json"
+  },
+  {
+    "id": 487680,
+    "slug": "power-rankings-notebook-week-7",
+    "title": "Power Rankings Notebook: Warriors' creativity, Nets' inconsistency and this season's most improved shooters",
+    "season": "2020-21",
+    "week": 7,
+    "publishedAt": "2021-02-04T17:17:53Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-week-7.json"
+  },
+  {
+    "id": 485704,
+    "slug": "power-rankings-2020-21-week-7",
+    "title": "Power Rankings, Week 7: Clippers jump Lakers for No. 1 spot; Nuggets enter Top 5",
+    "season": "2020-21",
+    "week": 7,
+    "publishedAt": "2021-02-01T17:25:19Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-7.json"
+  },
+  {
+    "id": 481304,
+    "slug": "power-rankings-2020-21-week-6",
+    "title": "Power Rankings, Week 6: Jazz, Sixers enter Top 5 as first quarter of the season comes to a close",
+    "season": "2020-21",
+    "week": 6,
+    "publishedAt": "2021-01-25T17:20:39Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-6.json"
+  },
+  {
+    "id": 479006,
+    "slug": "power-rankings-notebook-week-5",
+    "title": "Power Rankings Notebook: Bucks tweak offense, Nets' Big 3 debuts and early on-off court leaders",
+    "season": "2020-21",
+    "week": 5,
+    "publishedAt": "2021-01-21T17:22:28Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-week-5.json"
+  },
+  {
+    "id": 477296,
+    "slug": "power-rankings-2020-21-week-5",
+    "title": "Power Rankings, Week 5: Lakers, Bucks hold top spots before matchup this week",
+    "season": "2020-21",
+    "week": 5,
+    "publishedAt": "2021-01-18T17:02:06Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-5.json"
+  },
+  {
+    "id": 475180,
+    "slug": "power-rankings-notebook-week-4",
+    "title": "Power Rankings Notebook: How James Harden trade impacts all 4 teams",
+    "season": "2020-21",
+    "week": 4,
+    "publishedAt": "2021-01-14T17:18:34Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-week-4.json"
+  },
+  {
+    "id": 473423,
+    "slug": "power-rankings-2020-21-week-4",
+    "title": "Power Rankings, Week 4: Suns rise to No. 2; Warriors move into Top 10",
+    "season": "2020-21",
+    "week": 4,
+    "publishedAt": "2021-01-11T16:54:28Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/power-rankings-2020-21-week-4.json"
+  },
+  {
+    "id": 471276,
+    "slug": "power-rankings-notebook-week-3",
+    "title": "Power Rankings Notebook: Sixers' defense powers their hot start",
+    "season": "2020-21",
+    "week": 3,
+    "publishedAt": "2021-01-07T17:16:21Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2020-21/power-rankings-notebook-week-3.json"
+  },
+  {
+    "id": 469342,
+    "slug": "powerrankings-2020-21-week-3",
+    "title": "Power Rankings, Week 3: Sixers, Suns and Jazz climb into the Top 5",
+    "season": "2020-21",
+    "week": 3,
+    "publishedAt": "2021-01-04T17:14:52Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/powerrankings-2020-21-week-3.json"
+  },
+  {
+    "id": 460698,
+    "slug": "powerrankings-2020-21-week-2",
+    "title": "Power Rankings, Week 2: Lakers hold No. 1; Nets climb to No. 2",
+    "season": "2020-21",
+    "week": 2,
+    "publishedAt": "2020-12-28T17:29:42Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/powerrankings-2020-21-week-2.json"
+  },
+  {
+    "id": 449710,
+    "slug": "powerrankings-2020-21-week-1",
+    "title": "Power Rankings, Week 1: Lakers, Bucks and Nuggets start season on top",
+    "season": "2020-21",
+    "week": 1,
+    "publishedAt": "2020-12-21T16:09:21Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/powerrankings-2020-21-week-1.json"
+  },
+  {
+    "id": 428930,
+    "slug": "offseason-power-rankings-western-conference",
+    "title": "Offseason Power Rankings: Western Conference",
+    "season": "2020-21",
+    "week": null,
+    "publishedAt": "2020-11-28T17:49:56Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/offseason-power-rankings-western-conference.json"
+  },
+  {
+    "id": 424666,
+    "slug": "offseason-power-rankings-eastern-conference",
+    "title": "Offseason Power Rankings: Eastern Conference",
+    "season": "2020-21",
+    "week": null,
+    "publishedAt": "2020-11-24T19:22:17Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2020-21/offseason-power-rankings-eastern-conference.json"
+  },
+  {
+    "id": 26570,
+    "slug": "powerrankings-2019-20-week-24",
+    "title": "Power Rankings, Week 24: West play-in race highlights final week before playoffs",
+    "season": "2019-20",
+    "week": 24,
+    "publishedAt": "2020-08-10T15:45:21Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-24.json"
+  },
+  {
+    "id": 26660,
+    "slug": "powerrankings-2019-20-week-23",
+    "title": "Power Rankings, Week 23: Raptors rise, Lakers hold top spot",
+    "season": "2019-20",
+    "week": 23,
+    "publishedAt": "2020-08-03T16:31:12Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-23.json"
+  },
+  {
+    "id": 27514,
+    "slug": "powerrankings-2019-20-restart-edition",
+    "title": "Power Rankings, Comeback Edition: Lakers, Bucks still stand tall",
+    "season": "2019-20",
+    "week": null,
+    "publishedAt": "2020-06-08T16:30:57Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-restart-edition.json"
+  },
+  {
+    "id": 28279,
+    "slug": "powerrankings-2019-20-week-21",
+    "title": "Power Rankings, Week 21: Lakers end Bucks' 14-week run at top; Raptors, Thunder enter Top 5",
+    "season": "2019-20",
+    "week": 21,
+    "publishedAt": "2020-03-09T17:54:44Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-21.json"
+  },
+  {
+    "id": 28418,
+    "slug": "powerrankings-2019-20-week-20",
+    "title": "Power Rankings, Week 20: Clippers climb back into Top 5; big week lies ahead for Lakers",
+    "season": "2019-20",
+    "week": 20,
+    "publishedAt": "2020-03-02T17:07:15Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-20.json"
+  },
+  {
+    "id": 28508,
+    "slug": "powerrankings-2019-20-week-19",
+    "title": "Power Rankings, Week 19: Rockets surge into Top 5; Pelicans continue to rise as standings tighten",
+    "season": "2019-20",
+    "week": 19,
+    "publishedAt": "2020-02-24T17:08:36Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-19.json"
+  },
+  {
+    "id": 28604,
+    "slug": "powerrankings-2019-20-week-18",
+    "title": "Power Rankings, Week 18: Lakers return to No. 2 as regular season enters stretch run",
+    "season": "2019-20",
+    "week": 18,
+    "publishedAt": "2020-02-18T17:34:40Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-18.json"
+  },
+  {
+    "id": 28816,
+    "slug": "powerrankings-2019-20-week-17",
+    "title": "Power Rankings, Week 17: Minor moves could have major impact on playoff races",
+    "season": "2019-20",
+    "week": 17,
+    "publishedAt": "2020-02-10T17:36:06Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-17.json"
+  },
+  {
+    "id": 28974,
+    "slug": "powerrankings-2019-20-week-16",
+    "title": "Power Rankings, Week 16: Celtics, Raptors climb into Top 5; Jazz, Sixers tumble",
+    "season": "2019-20",
+    "week": 16,
+    "publishedAt": "2020-02-03T16:59:29Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-16.json"
+  },
+  {
+    "id": 29152,
+    "slug": "power-rankings-week-15",
+    "title": "Power Rankings, Week 15: Thunder, Sixers on the rise as NBA world mourns the loss of Kobe Bryant",
+    "season": "2019-20",
+    "week": 15,
+    "publishedAt": "2020-01-27T17:18:53Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/power-rankings-week-15.json"
+  },
+  {
+    "id": 29322,
+    "slug": "powerrankings-2019-20-week-14",
+    "title": "Power Rankings, Week 14: Clippers, Nuggets move into Top 5; Celtics, Rockets tumble",
+    "season": "2019-20",
+    "week": 14,
+    "publishedAt": "2020-01-20T14:48:55Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-14.json"
+  },
+  {
+    "id": 29442,
+    "slug": "powerrankings-2019-20-week-13",
+    "title": "Power Rankings, Week 13: Jazz, Rockets enter Top 5; Nets prepare for difficult stretch",
+    "season": "2019-20",
+    "week": 13,
+    "publishedAt": "2020-01-13T17:07:09Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-13.json"
+  },
+  {
+    "id": 29621,
+    "slug": "powerrankings-2019-20-week-12",
+    "title": "Power Rankings, Week 12: West playoff races heating up as Celtics rise to No. 2, Sixers tumble",
+    "season": "2019-20",
+    "week": 12,
+    "publishedAt": "2020-01-06T17:12:22Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-12.json"
+  },
+  {
+    "id": 29774,
+    "slug": "powerrankings-2019-20-week-11",
+    "title": "Power Rankings, Week 11: Clippers move past Lakers, Heat rise to No. 2 and Bucks hold top spot",
+    "season": "2019-20",
+    "week": 11,
+    "publishedAt": "2019-12-30T17:22:35Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-11.json"
+  },
+  {
+    "id": 29890,
+    "slug": "powerrankings-2019-20-week-10",
+    "title": "Power Rankings, Week 10: Bucks make statement; Heat enter Top 5",
+    "season": "2019-20",
+    "week": 10,
+    "publishedAt": "2019-12-23T17:45:51Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-10.json"
+  },
+  {
+    "id": 29979,
+    "slug": "powerrankings-2019-20-week-9",
+    "title": "Power Rankings, Week 9: Top teams continue to dominate as Lakers-Bucks matchup nears",
+    "season": "2019-20",
+    "week": 9,
+    "publishedAt": "2019-12-16T17:00:21Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-9.json"
+  },
+  {
+    "id": 30148,
+    "slug": "powerrankings-2019-20-week-8",
+    "title": "Power Rankings, Week 8: East passes West as season enters second quarter",
+    "season": "2019-20",
+    "week": 8,
+    "publishedAt": "2019-12-09T17:11:51Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-8.json"
+  },
+  {
+    "id": 30260,
+    "slug": "powerrankings-2019-20-week-7",
+    "title": "Power Rankings, Week 7: Raptors rise to No. 3; Blazers climb 7 spots after Carmelo Anthony addition",
+    "season": "2019-20",
+    "week": 7,
+    "publishedAt": "2019-12-02T17:18:28Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-7.json"
+  },
+  {
+    "id": 30386,
+    "slug": "powerrankings-2019-20-week-6",
+    "title": "Power Rankings, Week 6: Mavs rise to No. 5, Lakers hold top spot",
+    "season": "2019-20",
+    "week": 6,
+    "publishedAt": "2019-11-25T17:21:28Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-6.json"
+  },
+  {
+    "id": 30609,
+    "slug": "powerrankings-2019-20-week-5",
+    "title": "Power Rankings, Week 5: Lakers jump to No. 1, Rockets enter top 5 and Clippers face big week",
+    "season": "2019-20",
+    "week": 5,
+    "publishedAt": "2019-11-18T17:21:10Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-5.json"
+  },
+  {
+    "id": 30786,
+    "slug": "powerrankings-2019-20-week-4",
+    "title": "Power Rankings, Week 4: Celtics grab No. 1 spot, Lakers rise and Sixers fall",
+    "season": "2019-20",
+    "week": 4,
+    "publishedAt": "2019-11-11T17:00:49Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-4.json"
+  },
+  {
+    "id": 30969,
+    "slug": "powerrankings-2019-20-week-3",
+    "title": "Power Rankings, Week 3: Heat enter Top 5, Sixers still undefeated and Warriors look done",
+    "season": "2019-20",
+    "week": 3,
+    "publishedAt": "2019-11-04T17:12:03Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-3.json"
+  },
+  {
+    "id": 31135,
+    "slug": "powerrankings-2019-20-week-2",
+    "title": "Power Rankings, Week 2: Sixers on top after week full of surprises",
+    "season": "2019-20",
+    "week": 2,
+    "publishedAt": "2019-10-28T16:12:11Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-2.json"
+  },
+  {
+    "id": 31295,
+    "slug": "powerrankings-2019-20-week-1",
+    "title": "Power Rankings, Week 1: Bucks, Clippers lead wide-open field",
+    "season": "2019-20",
+    "week": 1,
+    "publishedAt": "2019-10-21T16:06:04Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-week-1.json"
+  },
+  {
+    "id": 32391,
+    "slug": "western-conference-power-rankings-mid-summer-edition",
+    "title": "Mid-Summer Power Rankings: Clippers sit atop new-look Western Conference",
+    "season": "2018-19",
+    "week": null,
+    "publishedAt": "2019-07-29T16:16:05Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/western-conference-power-rankings-mid-summer-edition.json"
+  },
+  {
+    "id": 32503,
+    "slug": "powerrankings-2019-20-summer-east",
+    "title": "Mid-Summer Power Rankings: Milwaukee Bucks and Philadelphia 76ers at the top of the East",
+    "season": "2019-20",
+    "week": null,
+    "publishedAt": "2019-07-22T16:03:53Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2019-20/powerrankings-2019-20-summer-east.json"
+  },
+  {
+    "id": 34538,
+    "slug": "powerrankings-2018-19-week-26",
+    "title": "Power Rankings, Week 26: Warriors remain favorites ... and East remains wide open",
+    "season": "2018-19",
+    "week": 26,
+    "publishedAt": "2019-04-08T16:11:04Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-26.json"
+  },
+  {
+    "id": 34696,
+    "slug": "powerrankings-2018-19-week-25",
+    "title": "Power Rankings, Week 25: East race gets even tighter as playoffs near",
+    "season": "2018-19",
+    "week": 25,
+    "publishedAt": "2019-04-01T16:12:00Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-25.json"
+  },
+  {
+    "id": 34829,
+    "slug": "powerrankings-2018-19-week-24",
+    "title": "Power Rankings, Week 24: Playoff chase gets a little clearer",
+    "season": "2018-19",
+    "week": 24,
+    "publishedAt": "2019-03-25T16:11:09Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-24.json"
+  },
+  {
+    "id": 34933,
+    "slug": "powerrankings-2018-19-week-23",
+    "title": "Power Rankings, Week 23: Statement wins propel Warriors to top",
+    "season": "2018-19",
+    "week": 23,
+    "publishedAt": "2019-03-18T15:40:11Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-23.json"
+  },
+  {
+    "id": 35108,
+    "slug": "powerrankings-2018-19-week-22",
+    "title": "Power Rankings, Week 22: Spoiler season is here",
+    "season": "2018-19",
+    "week": 22,
+    "publishedAt": "2019-03-11T15:43:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-22.json"
+  },
+  {
+    "id": 35194,
+    "slug": "powerrankings-2018-19-week-21",
+    "title": "Power Rankings, Week 21: Handful of West teams keep rising",
+    "season": "2018-19",
+    "week": 21,
+    "publishedAt": "2019-03-04T17:06:36Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-21.json"
+  },
+  {
+    "id": 35358,
+    "slug": "powerrankings-2018-19-week-20",
+    "title": "Power Rankings, Week 20: Blazers, Nuggets make their move",
+    "season": "2018-19",
+    "week": 20,
+    "publishedAt": "2019-02-25T17:18:56Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-20.json"
+  },
+  {
+    "id": 35463,
+    "slug": "powerrankings-2018-19-week-19",
+    "title": "Power Rankings, Week 19: Urgency rises for Lakers, others after All-Star break",
+    "season": "2018-19",
+    "week": 19,
+    "publishedAt": "2019-02-19T16:53:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-19.json"
+  },
+  {
+    "id": 35631,
+    "slug": "powerrankings-2018-19-week-18",
+    "title": "Power Rankings, Week 18: Sixers surging in wake of deadline-day deals",
+    "season": "2018-19",
+    "week": 18,
+    "publishedAt": "2019-02-11T16:51:01Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-18.json"
+  },
+  {
+    "id": 35887,
+    "slug": "powerrankings-2018-19-week-17",
+    "title": "Power Rankings, Week 17: Bucks rise up as trade deadline looms",
+    "season": "2018-19",
+    "week": 17,
+    "publishedAt": "2019-02-04T16:41:40Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-17.json"
+  },
+  {
+    "id": 46530,
+    "slug": "powerrankings-2018-19-week-16",
+    "title": "Power Rankings, Week 16: Davis helps push trade season into full gear",
+    "season": "2018-19",
+    "week": 16,
+    "publishedAt": "2019-01-28T17:00:16Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-16.json"
+  },
+  {
+    "id": 46733,
+    "slug": "powerrankings-2018-19-week-15",
+    "title": "Power Rankings, Week 15: One star returns, but another goes down",
+    "season": "2018-19",
+    "week": 15,
+    "publishedAt": "2019-01-21T17:19:37Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-15.json"
+  },
+  {
+    "id": 36333,
+    "slug": "powerrankings-2018-19-week-14",
+    "title": "Power Rankings, Week 14: Playoff chase intensifies as second half begins",
+    "season": "2018-19",
+    "week": 14,
+    "publishedAt": "2019-01-14T16:37:31Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-14.json"
+  },
+  {
+    "id": 36486,
+    "slug": "powerrankings-2018-19-week-13",
+    "title": "Power Rankings, Week 13: Spurs surging at midway point",
+    "season": "2018-19",
+    "week": 13,
+    "publishedAt": "2019-01-07T15:54:03Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-13.json"
+  },
+  {
+    "id": 36675,
+    "slug": "powerrankings-2018-19-week-12",
+    "title": "Power Rankings, Week 12: Bucks are No. 1 as start of 2019 looms",
+    "season": "2018-19",
+    "week": 12,
+    "publishedAt": "2018-12-31T16:05:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-12.json"
+  },
+  {
+    "id": 36776,
+    "slug": "powerrankings-2018-19-week-11",
+    "title": "Power Rankings, Week 11: Parity keeps Nuggets at No. 1",
+    "season": "2018-19",
+    "week": 11,
+    "publishedAt": "2018-12-24T16:39:38Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-11.json"
+  },
+  {
+    "id": 36875,
+    "slug": "powerrankings-2018-19-week-10",
+    "title": "Power Rankings, Week 10: Three big wins help Nuggets rise to No. 1",
+    "season": "2018-19",
+    "week": 10,
+    "publishedAt": "2018-12-17T16:52:54Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-10.json"
+  },
+  {
+    "id": 36996,
+    "slug": "powerrankings-2018-19-week-9",
+    "title": "Power Rankings, Week 9: Big win in Toronto gets Bucks back to No. 1",
+    "season": "2018-19",
+    "week": 9,
+    "publishedAt": "2018-12-10T17:07:44Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-9.json"
+  },
+  {
+    "id": 37144,
+    "slug": "powerrankings-2018-19-week-8",
+    "title": "Power Rankings, Week 8: Raptors drop champs, ascend to No. 1 again",
+    "season": "2018-19",
+    "week": 8,
+    "publishedAt": "2018-12-03T16:49:04Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-8.json"
+  },
+  {
+    "id": 46665,
+    "slug": "powerrankings-2018-19-week-7",
+    "title": "Power Rankings, Week 7: Quarter pole a good time to assess playoff chances",
+    "season": "2018-19",
+    "week": 7,
+    "publishedAt": "2018-11-26T17:04:05Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-7.json"
+  },
+  {
+    "id": 37360,
+    "slug": "powerrankings-2018-19-week-6",
+    "title": "Power Rankings, Week 6: Quality wins help Clippers take over top spot",
+    "season": "2018-19",
+    "week": 6,
+    "publishedAt": "2018-11-19T15:12:52Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-6.json"
+  },
+  {
+    "id": 37487,
+    "slug": "powerrankings-2018-19-week-5",
+    "title": "Power Rankings, Week 5: Raptors reclaim No. 1 spot as Butler heads East",
+    "season": "2018-19",
+    "week": 5,
+    "publishedAt": "2018-11-12T16:48:08Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-5.json"
+  },
+  {
+    "id": 37665,
+    "slug": "powerrankings-2018-19-week-4",
+    "title": "Power Rankings, Week 4: Tough tests await No. 1-ranked Warriors",
+    "season": "2018-19",
+    "week": 4,
+    "publishedAt": "2018-11-05T16:52:29Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-4.json"
+  },
+  {
+    "id": 37820,
+    "slug": "powerrankings-2018-19-week-3",
+    "title": "Power Rankings, Week 3: Raptors still tops, but Bucks and Warriors gain ground",
+    "season": "2018-19",
+    "week": 3,
+    "publishedAt": "2018-10-29T15:05:11Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-3.json"
+  },
+  {
+    "id": 37953,
+    "slug": "power-rankings-week-2",
+    "title": "Power Rankings, Week 2: Raptors claim No. 1 spot, while Pelicans lead an offensive surge",
+    "season": "2018-19",
+    "week": 2,
+    "publishedAt": "2018-10-22T15:32:03Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/power-rankings-week-2.json"
+  },
+  {
+    "id": 38192,
+    "slug": "powerrankings-2018-19-week-1",
+    "title": "Power Rankings, Week 1: From Butler to LeBron and beyond, storylines abound in 2018-19",
+    "season": "2018-19",
+    "week": 1,
+    "publishedAt": "2018-10-15T14:44:07Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-week-1.json"
+  },
+  {
+    "id": 39045,
+    "slug": "powerrankings-2018-19-summer-west",
+    "title": "Mid-Summer Power Rankings: LeBron James' arrival adds intrigue to Western Conference",
+    "season": "2018-19",
+    "week": null,
+    "publishedAt": "2018-08-06T18:31:19Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-summer-west.json"
+  },
+  {
+    "id": 39143,
+    "slug": "powerrankings-2018-19-summer-east",
+    "title": "Mid-Summer Power Rankings: Boston Celtics set to rule Eastern Conference for years",
+    "season": "2018-19",
+    "week": null,
+    "publishedAt": "2018-07-30T14:37:39Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2018-19/powerrankings-2018-19-summer-east.json"
+  },
+  {
+    "id": 40999,
+    "slug": "powerrankings-2017-18-week-26",
+    "title": "Week 26 Power Rankings: Cleveland Cavaliers and Golden State Warriors look vulnerable as regular season closes",
+    "season": "2017-18",
+    "week": 26,
+    "publishedAt": "2018-04-09T16:01:00Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-26.json"
+  },
+  {
+    "id": 41093,
+    "slug": "powerrankings-2017-18-week-25",
+    "title": "Week 25 Power Rankings: Boston Celtics make things interesting atop Eastern Conference",
+    "season": "2017-18",
+    "week": 25,
+    "publishedAt": "2018-04-02T16:10:29Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-25.json"
+  },
+  {
+    "id": 47847,
+    "slug": "powerrankings-2017-18-week-24",
+    "title": "Week 24 Power Rankings: Boston Celtics, Golden State Warriors dealing with poorly timed injuries",
+    "season": "2017-18",
+    "week": 24,
+    "publishedAt": "2018-03-26T15:49:58Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-24.json"
+  },
+  {
+    "id": 41262,
+    "slug": "powerrankings-2017-18-week-23",
+    "title": "Week 23 Power Rankings: Teams at top gain separation as season winds down",
+    "season": "2017-18",
+    "week": 23,
+    "publishedAt": "2018-03-19T15:52:22Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-23.json"
+  },
+  {
+    "id": 47237,
+    "slug": "powerrankings-2017-18-week-22",
+    "title": "Week 22 Power Rankings: Toronto Raptors rise to No. 1 with big win over Houston Rockets",
+    "season": "2017-18",
+    "week": 22,
+    "publishedAt": "2018-03-12T15:41:38Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-22.json"
+  },
+  {
+    "id": 47872,
+    "slug": "powerrankings-2017-18-week-21",
+    "title": "Week 21 Power Rankings: Western Conference races heat up on both ends of playoff picture",
+    "season": "2017-18",
+    "week": 21,
+    "publishedAt": "2018-03-05T16:58:48Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-21.json"
+  },
+  {
+    "id": 41600,
+    "slug": "powerrankings-2017-18-week-20",
+    "title": "Week 20 Power Rankings: Houston Rockets remain at top with big week ahead for those below",
+    "season": "2017-18",
+    "week": 20,
+    "publishedAt": "2018-02-26T16:52:03Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-20.json"
+  },
+  {
+    "id": 41692,
+    "slug": "powerrankings-2017-18-week-19",
+    "title": "Week 19 Power Rankings: Spotlight remains on Cleveland Cavaliers, Golden State Warriors",
+    "season": "2017-18",
+    "week": 19,
+    "publishedAt": "2018-02-19T14:53:21Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-19.json"
+  },
+  {
+    "id": 47867,
+    "slug": "powerrankings-2017-18-week-18",
+    "title": "Week 18 Power Rankings: Utah Jazz streak up rankings and into playoff race",
+    "season": "2017-18",
+    "week": 18,
+    "publishedAt": "2018-02-12T17:13:42Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-18.json"
+  },
+  {
+    "id": 41932,
+    "slug": "powerrankings-2017-18-week-17",
+    "title": "Week 17 Power Rankings: Cleveland Cavaliers desperate for a shake-up at trade deadline",
+    "season": "2017-18",
+    "week": 17,
+    "publishedAt": "2018-02-05T16:43:03Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-17.json"
+  },
+  {
+    "id": 47863,
+    "slug": "powerrankings-2017-18-week-16",
+    "title": "Week 16 Power Rankings: Season-ending injuries shake up Western Conference",
+    "season": "2017-18",
+    "week": 16,
+    "publishedAt": "2018-01-29T17:29:08Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-16.json"
+  },
+  {
+    "id": 42216,
+    "slug": "powerrankings-2017-18-week-15",
+    "title": "Week 15 Power Rankings: Houston Rockets beat Golden State Warriors again, but champs still No. 1",
+    "season": "2017-18",
+    "week": 15,
+    "publishedAt": "2018-01-22T16:38:41Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-15.json"
+  },
+  {
+    "id": 42337,
+    "slug": "powerrankings-2017-18-week-14",
+    "title": "Week 14 Power Rankings: Changes afoot outside of top four spots",
+    "season": "2017-18",
+    "week": 14,
+    "publishedAt": "2018-01-15T16:26:55Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-14.json"
+  },
+  {
+    "id": 42437,
+    "slug": "powerrankings-2017-18-week-13",
+    "title": "Week 13 Power Rankings: Golden State Warriors lead steady top 10 at season's midway point",
+    "season": "2017-18",
+    "week": 13,
+    "publishedAt": "2018-01-08T16:53:31Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-13.json"
+  },
+  {
+    "id": 42521,
+    "slug": "powerrankings-2017-18-week-12",
+    "title": "Week 12 Power Rankings: Golden State Warriors face league's toughest January schedule",
+    "season": "2017-18",
+    "week": 12,
+    "publishedAt": "2018-01-01T17:30:48Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-12.json"
+  },
+  {
+    "id": 42625,
+    "slug": "powerrankings-2017-18-week-11",
+    "title": "Week 11 Power Rankings: Golden State Warriors reclaim top spot with Christmas win",
+    "season": "2017-18",
+    "week": 11,
+    "publishedAt": "2017-12-26T15:57:12Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-11.json"
+  },
+  {
+    "id": 48247,
+    "slug": "powerrankings-2017-18-week-10",
+    "title": "Week 10 Power Rankings: Houston Rockets still No. 1 entering big week for Western Conference",
+    "season": "2017-18",
+    "week": 10,
+    "publishedAt": "2017-12-18T17:54:46Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-10.json"
+  },
+  {
+    "id": 48307,
+    "slug": "powerrankings-2017-18-week-9",
+    "title": "Week 9 Power Rankings: Kawhi Leonard returning soon to already-elite San Antonio Spurs",
+    "season": "2017-18",
+    "week": 9,
+    "publishedAt": "2017-12-11T16:54:48Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-9.json"
+  },
+  {
+    "id": 48339,
+    "slug": "powerrankings-2017-18-week-8",
+    "title": "Power Rankings: Houston Rockets ride seven-game winning streak to No. 1",
+    "season": "2017-18",
+    "week": 8,
+    "publishedAt": "2017-12-04T17:32:37Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-8.json"
+  },
+  {
+    "id": 42991,
+    "slug": "powerrankings-2017-18-week-7",
+    "title": "Power Rankings: Cleveland Cavaliers surging at the quarter mark",
+    "season": "2017-18",
+    "week": 7,
+    "publishedAt": "2017-11-27T17:24:41Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-7.json"
+  },
+  {
+    "id": 48479,
+    "slug": "power-rankings-week-6",
+    "title": "Power Rankings: Boston Celtics climb to No. 1 with comeback win over Golden State Warriors",
+    "season": "2017-18",
+    "week": 6,
+    "publishedAt": "2017-11-20T17:01:38Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/power-rankings-week-6.json"
+  },
+  {
+    "id": 43203,
+    "slug": "power-rankings-week-5",
+    "title": "Power Rankings: Boston Celtics aren't the only team streaking",
+    "season": "2017-18",
+    "week": 5,
+    "publishedAt": "2017-11-13T17:05:43Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/power-rankings-week-5.json"
+  },
+  {
+    "id": 48588,
+    "slug": "powerrankings-2017-18-week-4",
+    "title": "Power Rankings: Quality wins push Detroit Pistons into top five",
+    "season": "2017-18",
+    "week": 4,
+    "publishedAt": "2017-11-06T16:21:07Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-4.json"
+  },
+  {
+    "id": 43455,
+    "slug": "powerrankings-2017-18-week-3",
+    "title": "Power Rankings: Memphis Grizzlies rise above early-season parity",
+    "season": "2017-18",
+    "week": 3,
+    "publishedAt": "2017-10-30T15:51:27Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-3.json"
+  },
+  {
+    "id": 43585,
+    "slug": "powerrankings-2017-18-week-2",
+    "title": "Power Rankings: Injuries already forcing change of plans for several teams",
+    "season": "2017-18",
+    "week": 2,
+    "publishedAt": "2017-10-23T15:43:30Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-2.json"
+  },
+  {
+    "id": 48842,
+    "slug": "powerrankings-2017-18-week-1",
+    "title": "Power Rankings: In 2017-18, some All-Star combinations will work -- and some won't",
+    "season": "2017-18",
+    "week": 1,
+    "publishedAt": "2017-10-16T15:54:40Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/powerrankings-2017-18-week-1.json"
+  },
+  {
+    "id": 44543,
+    "slug": "mid-summer-power-rankings",
+    "title": "Power Rankings: West makes power moves to increase conference imbalance",
+    "season": "2017-18",
+    "week": null,
+    "publishedAt": "2017-08-08T17:27:31Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2017-18/mid-summer-power-rankings.json"
+  },
+  {
+    "id": 52970,
+    "slug": "power-rankings-week-12-san-antonio-spurs-houston-rockets",
+    "title": "Power Rankings: As trade season begins, Cavs get Korver, drop in rankings",
+    "season": "2016-17",
+    "week": 12,
+    "publishedAt": "2017-01-09T16:51:07Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-12-san-antonio-spurs-houston-rockets.json"
+  },
+  {
+    "id": 53168,
+    "slug": "power-rankings-week-11-cleveland-cavaliers-golden-state-warriors",
+    "title": "Power Rankings: Rockets rolling after hot December; Clippers continue to tumble",
+    "season": "2016-17",
+    "week": 11,
+    "publishedAt": "2017-01-02T17:37:50Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-11-cleveland-cavaliers-golden-state-warriors.json"
+  },
+  {
+    "id": 55203,
+    "slug": "power-rankings-week-10-cleveland-cavaliers-golden-state-warriors",
+    "title": "Power Rankings: Cavs rally to beat Warriors again",
+    "season": "2016-17",
+    "week": 10,
+    "publishedAt": "2016-12-26T17:54:14Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-10-cleveland-cavaliers-golden-state-warriors.json"
+  },
+  {
+    "id": 53491,
+    "slug": "power-rankings-week-9-houston-rockets-utah-jazz",
+    "title": "Power Rankings: Rockets, Jazz continue runs toward the top",
+    "season": "2016-17",
+    "week": 9,
+    "publishedAt": "2016-12-19T17:04:00Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-9-houston-rockets-utah-jazz.json"
+  },
+  {
+    "id": 46117,
+    "slug": "power-rankings-week-8-golden-state-warriors-cleveland-cavaliers",
+    "title": "Power Rankings: Warriors, Cavs keep conference challengers at bay",
+    "season": "2016-17",
+    "week": 8,
+    "publishedAt": "2016-12-12T16:45:29Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-8-golden-state-warriors-cleveland-cavaliers.json"
+  },
+  {
+    "id": 54894,
+    "slug": "power-rankings-week-7-golden-state-warriors-san-antonio-spurs",
+    "title": "Power Rankings: Warriors on top at the quarter pole",
+    "season": "2016-17",
+    "week": 7,
+    "publishedAt": "2016-12-05T16:55:06Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-7-golden-state-warriors-san-antonio-spurs.json"
+  },
+  {
+    "id": 45783,
+    "slug": "power-rankings-week-6-golden-state-warriors-cleveland-cavaliers",
+    "title": "Power Rankings: Warriors streak to the top",
+    "season": "2016-17",
+    "week": 6,
+    "publishedAt": "2016-11-28T17:21:36Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-6-golden-state-warriors-cleveland-cavaliers.json"
+  },
+  {
+    "id": 54958,
+    "slug": "power-rankings-week-5-la-clippers",
+    "title": "Power Rankings: Clippers stay above the parity",
+    "season": "2016-17",
+    "week": 5,
+    "publishedAt": "2016-11-21T16:42:40Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-5-la-clippers.json"
+  },
+  {
+    "id": 54995,
+    "slug": "power-rankings-week-4-la-clippers",
+    "title": "Power Rankings: Clippers climb to No. 1",
+    "season": "2016-17",
+    "week": 4,
+    "publishedAt": "2016-11-14T16:25:07Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-4-la-clippers.json"
+  },
+  {
+    "id": 53702,
+    "slug": "power-rankings-week-3",
+    "title": "Power Rankings: Cavs survive and advance",
+    "season": "2016-17",
+    "week": 3,
+    "publishedAt": "2016-11-07T16:24:48Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-3.json"
+  },
+  {
+    "id": 53939,
+    "slug": "power-rankings-week-2-2",
+    "title": "Power Rankings: Spurs thump Warriors and don't stop there",
+    "season": "2016-17",
+    "week": 2,
+    "publishedAt": "2016-10-31T15:02:52Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-2-2.json"
+  },
+  {
+    "id": 45846,
+    "slug": "power-rankings-week-1",
+    "title": "Power Rankings: Warriors, Cavs poised for third straight Finals meeting",
+    "season": "2016-17",
+    "week": 1,
+    "publishedAt": "2016-10-24T14:52:47Z",
+    "hasStructuredRankings": false,
+    "file": "articles/2016-17/power-rankings-week-1.json"
+  }
+]
