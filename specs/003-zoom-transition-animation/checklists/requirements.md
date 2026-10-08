@@ -1,4 +1,4 @@
-# Specification Quality Checklist: Animated Zoom Transition
+# Specification Quality Checklist: Animated Chart Transitions (Zoom and Pan)
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
 **Created**: 2026-10-08
@@ -31,8 +31,11 @@
 
 ## Notes
 
-- This feature is a pure animation/polish layer on top of the zoom toggle specified in
-  `002-view-full-season`; it assumes that feature's toggle, hidden-control logic, and
-  tooltip-clearing behavior are already in place and does not re-specify them.
+- This feature is a pure animation/polish layer on top of the zoom toggle and paging controls
+  specified in `002-view-full-season`; it assumes that feature's toggle, disabled-control logic,
+  and tooltip-clearing behavior are already in place and does not re-specify them.
+- Scope was amended after initial drafting to also cover panning (Earlier/Later and arrow-key
+  navigation) within windowed view, including team-name label repositioning — re-validated
+  against this checklist after that addition; all items still pass.
 - No Key Entities section: this feature introduces no new data, only a transition effect on
   already-rendered chart state.

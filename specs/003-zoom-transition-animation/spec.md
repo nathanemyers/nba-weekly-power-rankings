@@ -1,4 +1,4 @@
-# Feature Specification: Animated Zoom Transition
+# Feature Specification: Animated Chart Transitions (Zoom and Pan)
 
 **Feature Branch**: `003-zoom-transition-animation`
 
@@ -9,9 +9,14 @@
 **Input**: User description: "the transition between zoomed in and zoomed out should animate to
 give the user a sense of where they were"
 
-**Depends on**: `002-view-full-season` (the windowed/full-season zoom toggle this feature
-animates must already exist). This spec only concerns the transition's motion, not the toggle
-itself.
+**Depends on**: `002-view-full-season` (the windowed/full-season zoom toggle, and the
+Earlier/Later paging and arrow-key panning this feature animates, must already exist). This spec
+only concerns the motion of those existing transitions, not the toggle or paging controls
+themselves.
+
+**Amendment**: Scope extended to also animate panning (Earlier/Later and arrow-key navigation)
+within the windowed view, including the team-name labels whose vertical position shifts as a
+result — not just the zoom in/out toggle the feature originally covered.
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -66,6 +71,37 @@ chart visibly animates back down to the windowed view rather than updating in a 
 
 ---
 
+### User Story 3 - Panning animates like zooming does (Priority: P3)
+
+A visitor in the windowed (zoomed-in) view clicks Earlier or Later, or presses an arrow key, to
+page to an adjacent range of weeks. Instead of the lines and team-name labels snapping instantly
+to the new window, the chart slides smoothly to the new range, and any label whose vertical
+position changes — because the rank used for its new first-visible-week differs from its old
+one — animates to its new position in step with the slide, rather than jumping.
+
+**Why this priority**: Builds on the same animation mechanism as the zoom transition (Stories 1
+and 2) to remove the one remaining instant snap left in the chart. Lower priority than the zoom
+animation because paging already works correctly today, just without motion — this is a
+polish extension, not a new capability.
+
+**Independent Test**: From the windowed view, click Later (or press the Right arrow key) and
+confirm the chart visibly slides to the new week range rather than updating in a single frame,
+with any repositioned team-name label moving smoothly rather than jumping.
+
+**Acceptance Scenarios**:
+
+1. **Given** the windowed view is showing some range of weeks, **When** the visitor clicks
+   Earlier or Later, or presses the matching arrow key, **Then** the chart animates sliding from
+   the old range to the new one, rather than redrawing instantly.
+2. **Given** a pan animation is playing, **When** the visitor watches a team-name label whose
+   rank at its new first-visible-week differs from its old one, **Then** that label animates
+   smoothly to its new vertical position rather than jumping there instantly.
+3. **Given** the pan animation has finished, **When** the visitor examines the chart, **Then**
+   it matches exactly what the windowed view looks like at the new position without any
+   animation.
+
+---
+
 ### Edge Cases
 
 - A visitor has motion-reduction turned on at the OS/browser level: the transition MUST be
@@ -80,6 +116,12 @@ chart visibly animates back down to the windowed view rather than updating in a 
   trigger a zoom transition animation of its own.
 - A visitor had a tooltip open when the transition starts: per `002-view-full-season`'s existing
   requirement, the tooltip still closes rather than tracking a data point that is now moving.
+- A visitor pages again (clicks Earlier/Later or presses an arrow key) while a pan animation is
+  still playing: the system MUST respond smoothly by retargeting from the current in-progress
+  position, the same way the zoom toggle handles being triggered again mid-animation.
+- A visitor pages at a boundary (already at week 1, or already at the last page): the
+  Earlier/Later buttons are disabled and arrow keys are a no-op at that boundary per
+  `002-view-full-season`, so no pan animation starts — there is nothing to animate toward.
 
 ## Requirements *(mandatory)*
 
@@ -101,6 +143,17 @@ chart visibly animates back down to the windowed view rather than updating in a 
 - **FR-006**: If the visitor triggers the zoom toggle again before the current transition
   finishes, the system MUST handle it smoothly (continuing or reversing from the current
   in-progress state) rather than stacking up animations, freezing, or dropping the new input.
+- **FR-007**: The system MUST animate panning (via the Earlier/Later buttons or arrow-key
+  panning) while in windowed view, sliding the visible week range from its previous position to
+  its new one rather than updating instantly.
+- **FR-008**: Any team-name label whose vertical position changes as a result of a pan (because
+  the rank used for its first-visible-week changed) MUST animate smoothly to its new position in
+  sync with the horizontal pan, rather than jumping there immediately.
+- **FR-009**: The pan animation MUST honor the same reduced-motion preference (FR-005) and the
+  same short, bounded duration (FR-003) as the zoom animation.
+- **FR-010**: If the visitor pans again before the current pan animation finishes, the system
+  MUST retarget smoothly from the current in-progress position, the same way FR-006 requires for
+  the zoom toggle.
 
 ## Success Criteria *(mandatory)*
 
@@ -116,6 +169,10 @@ chart visibly animates back down to the windowed view rather than updating in a 
 - **SC-004**: The chart's end state after any transition is indistinguishable from the
   corresponding target view reached without animation (same week range, same rank positions, same
   visible teams).
+- **SC-005**: In a recording of a pan, both the plotted lines and any team-name label that
+  changes rank can be visually traced in continuous motion, with no single-frame jump.
+- **SC-006**: A pan animation completes in under 1 second under typical conditions, the same
+  responsiveness bar as the zoom transition (SC-002).
 
 ## Assumptions
 
@@ -128,6 +185,10 @@ chart visibly animates back down to the windowed view rather than updating in a 
 - No new data, persisted state, or playback controls (e.g., pause/replay) are introduced; this is
   purely a visual transition layered on top of the existing zoom toggle from
   `002-view-full-season`.
-- Keyboard panning and paging controls remain hidden/inactive during full-season view exactly as
-  `002-view-full-season` already specifies; this feature does not change when those controls
-  appear, only how the chart looks while moving between the two states.
+- Keyboard panning and paging controls remain disabled during full-season view, and enabled in
+  windowed view, exactly as `002-view-full-season` already specifies; this feature does not
+  change *when* those controls are active, only adds motion to the chart (and, per User Story 3,
+  to paging itself) when they're used.
+- Panning's animation reuses the same mechanism and constraints as the zoom animation (duration,
+  reduced-motion handling, interruptibility) rather than introducing a second, differently-tuned
+  motion system — the two should feel like the same chart, not two different ones.
