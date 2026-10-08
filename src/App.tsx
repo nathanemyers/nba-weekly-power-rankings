@@ -77,6 +77,9 @@ const Status = styled.p`
 
 function App() {
   const [season, setSeason] = useState(seasons[0]);
+  // Lives here, not in RankingsChart, so it survives that component's per-season remount
+  // (key={season} below) — switching seasons keeps the current zoom mode (see spec FR-010).
+  const [zoomedOut, setZoomedOut] = useState(false);
   // Tagged with its season so a stale load can't show under the newly selected year
   const [loaded, setLoaded] = useState<{
     season: string;
@@ -116,6 +119,8 @@ function App() {
           key={season}
           teams={data.teams}
           maxWeek={data.maxWeek}
+          zoomedOut={zoomedOut}
+          onToggleZoom={() => setZoomedOut((z) => !z)}
         />
       ) : (
         <Status>Loading {season}…</Status>

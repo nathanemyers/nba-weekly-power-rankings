@@ -16,7 +16,7 @@ const PLAYOFF_MEDALS: Record<PlayoffStage, { icon: string; label: string }> = {
   champion: { icon: "👑", label: "NBA champion" },
 };
 
-const VISIBLE_WEEKS = 10;
+export const DEFAULT_WINDOW_WEEKS = 10;
 const PLAYOFFS_WEEK = 24;
 
 const W = 960;
@@ -29,8 +29,8 @@ const PLAYOFF_X = M.left + (W - M.left - M.right) + 60;
 const PLOT_W = W - M.left - M.right;
 const PLOT_H = H - M.top - M.bottom;
 
-const x = (week: number, start: number) =>
-  M.left + ((week - start) / VISIBLE_WEEKS) * PLOT_W;
+const x = (week: number, start: number, span: number) =>
+  M.left + ((week - start) / span) * PLOT_W;
 const y = (rank: number) => M.top + ((rank - 1) / 29) * PLOT_H;
 
 const RANK_TICKS = [1, 5, 10, 15, 20, 25, 30];
@@ -40,15 +40,33 @@ type Hover = { slug: string; week?: number };
 export default function RankingsChart({
   teams,
   maxWeek,
+  zoomedOut,
+  onToggleZoom,
+  windowWeeks = DEFAULT_WINDOW_WEEKS,
 }: {
   teams: TeamRankings[];
   maxWeek: number;
+  zoomedOut: boolean;
+  onToggleZoom: () => void;
+  windowWeeks?: number;
 }) {
   const [start, setStart] = useState(1);
   const [pinned, setPinned] = useState<string | null>(null);
   const [hover, setHover] = useState<Hover | null>(null);
+  // Tracks the zoomedOut value as of the last render so we can clear a stale tooltip the
+  // moment it changes, without a setState-in-effect cascading render (React's "adjusting state
+  // when a prop changes during render" pattern).
+  const [prevZoomedOut, setPrevZoomedOut] = useState(zoomedOut);
+  if (prevZoomedOut !== zoomedOut) {
+    setPrevZoomedOut(zoomedOut);
+    setHover(null);
+  }
 
-  const maxStart = Math.max(1, maxWeek - VISIBLE_WEEKS);
+  // Recomputed from props every render so it reflects a season's current week count live
+  // (e.g. a future in-progress season growing week over week), never cached.
+  const canZoomOut = maxWeek > windowWeeks;
+
+  const maxStart = Math.max(1, maxWeek - windowWeeks);
 
   // Lookup of slug -> week -> ranking. Weeks can be missing for a team, so don't index by position
   const rankingsByWeek = useMemo(
@@ -63,6 +81,7 @@ export default function RankingsChart({
   );
 
   useEffect(() => {
+    if (zoomedOut) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") setStart((s) => Math.max(1, s - 1));
       if (e.key === "ArrowRight")
@@ -70,11 +89,17 @@ export default function RankingsChart({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [maxStart]);
+  }, [maxStart, zoomedOut]);
 
-  const end = start + VISIBLE_WEEKS;
-  const weeks = Array.from({ length: VISIBLE_WEEKS + 1 }, (_, i) => start + i);
-  const inWindow = (week: number) => week >= start && week <= end;
+  // `start` itself is never mutated by zooming — only its effective value at render time —
+  // so zooming back in restores exactly the windowed position the visitor left.
+  const effectiveStart = zoomedOut ? 1 : start;
+  const effectiveSpan = zoomedOut ? Math.max(1, maxWeek - 1) : windowWeeks;
+  const effectiveEnd = zoomedOut ? maxWeek : start + windowWeeks;
+  const weeks = zoomedOut
+    ? Array.from({ length: maxWeek }, (_, i) => i + 1)
+    : Array.from({ length: windowWeeks + 1 }, (_, i) => start + i);
+  const inWindow = (week: number) => week >= effectiveStart && week <= effectiveEnd;
 
   const activeSlug = pinned ?? hover?.slug ?? null;
   const hoverTeam = hover && teams.find((t) => t.slug === hover.slug);
@@ -97,19 +122,21 @@ export default function RankingsChart({
             e.stopPropagation();
             setStart((s) => Math.max(1, s - 1));
           }}
-          disabled={start === 1}
+          disabled={zoomedOut || start === 1}
         >
           ◀ Earlier
         </Button>
         <WeekRange>
-          Weeks {start}–{Math.min(end, maxWeek)}
+          {zoomedOut
+            ? `Full season (Weeks 1–${maxWeek})`
+            : `Weeks ${start}–${Math.min(effectiveEnd, maxWeek)}`}
         </WeekRange>
         <Button
           onClick={(e) => {
             e.stopPropagation();
             setStart((s) => Math.min(maxStart, s + 1));
           }}
-          disabled={start >= maxStart}
+          disabled={zoomedOut || start >= maxStart}
         >
           Later ▶
         </Button>
@@ -157,7 +184,7 @@ export default function RankingsChart({
             <text
               key={w}
               className="tick"
-              x={x(w, start)}
+              x={x(w, effectiveStart, effectiveSpan)}
               y={M.top + PLOT_H + 22}
               textAnchor="middle"
             >
@@ -183,13 +210,13 @@ export default function RankingsChart({
           {inWindow(PLAYOFFS_WEEK) && (
             <g className="playoffs">
               <line
-                x1={x(PLAYOFFS_WEEK, start)}
-                x2={x(PLAYOFFS_WEEK, start)}
+                x1={x(PLAYOFFS_WEEK, effectiveStart, effectiveSpan)}
+                x2={x(PLAYOFFS_WEEK, effectiveStart, effectiveSpan)}
                 y1={M.top}
                 y2={M.top + PLOT_H}
               />
               <text
-                x={x(PLAYOFFS_WEEK, start) - 6}
+                x={x(PLAYOFFS_WEEK, effectiveStart, effectiveSpan) - 6}
                 y={M.top + 14}
                 textAnchor="end"
               >
@@ -207,7 +234,7 @@ export default function RankingsChart({
                 .map((r, i) => {
                   const prev = team.rankings[i - 1];
                   const move = !prev || prev.week !== r.week - 1 ? "M" : "L";
-                  return `${move}${x(r.week, start)},${y(r.rank)}`;
+                  return `${move}${x(r.week, effectiveStart, effectiveSpan)},${y(r.rank)}`;
                 })
                 .join(" ");
 
@@ -243,7 +270,7 @@ export default function RankingsChart({
                       .map((r) => (
                         <circle
                           key={r.week}
-                          cx={x(r.week, start)}
+                          cx={x(r.week, effectiveStart, effectiveSpan)}
                           cy={y(r.rank)}
                           r={5}
                           fill={team.color}
@@ -310,7 +337,7 @@ export default function RankingsChart({
             );
           })}
 
-          {start === maxStart && (
+          {(zoomedOut || start === maxStart) && (
             <g className="playoff-column">
               <text
                 className="axis-label"
@@ -346,10 +373,10 @@ export default function RankingsChart({
         {tooltipRanking && hoverTeam && (
           <Tooltip
             style={{
-              left: `${(x(tooltipRanking.week, start) / W) * 100}%`,
+              left: `${(x(tooltipRanking.week, effectiveStart, effectiveSpan) / W) * 100}%`,
               top: `${(y(tooltipRanking.rank) / H) * 100}%`,
               transform:
-                x(tooltipRanking.week, start) > W * 0.6
+                x(tooltipRanking.week, effectiveStart, effectiveSpan) > W * 0.6
                   ? "translate(calc(-100% - 14px), -50%)"
                   : "translate(14px, -50%)",
             }}
@@ -363,6 +390,19 @@ export default function RankingsChart({
           </Tooltip>
         )}
       </Relative>
+
+      {canZoomOut && (
+        <ZoomRow>
+          <Button
+            onClick={(e) => {
+              e.stopPropagation();
+              onToggleZoom();
+            }}
+          >
+            {zoomedOut ? "Zoom in" : "Zoom out"}
+          </Button>
+        </ZoomRow>
+      )}
     </ChartWrap>
   );
 }
@@ -401,6 +441,12 @@ const Button = styled.button`
 const WeekRange = styled.span`
   color: #a1a1a6;
   font-size: 0.95rem;
+`;
+
+const ZoomRow = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
 `;
 
 const Relative = styled.div`

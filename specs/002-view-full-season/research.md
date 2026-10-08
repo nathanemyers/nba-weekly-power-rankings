@@ -54,12 +54,18 @@ implementation approach the plan depends on.
 
 ## 5. Disabling paging while zoomed out
 
-- **Decision**: Hide the Earlier/Later buttons (rather than disabling them) when `zoomedOut` is
-  true, and make the keyboard-arrow `useEffect` handler a no-op when `zoomedOut` is true.
+- **Decision**: Keep the Earlier/Later buttons rendered at all times, but `disabled` whenever
+  `zoomedOut` is true (in addition to their existing `start === 1`/`start >= maxStart` bounds
+  checks); the keyboard-arrow `useEffect` handler stays a no-op when `zoomedOut` is true.
 - **Rationale**: FR-009 requires paging to be inactive with no partial window to page through.
-  Hiding beats disabling here because a disabled-but-visible Earlier/Later pair would imply a
-  paged position that no longer exists in full-season mode; removing them avoids that false
-  signal. This matches FR-002's requirement to clearly indicate the active mode.
+  The original design hid the buttons instead of disabling them, but that made the `Controls`
+  row's width — and therefore the layout — change on every zoom toggle. Keeping the buttons
+  mounted and merely disabled avoids that layout shift, at the cost of a slightly less explicit
+  mode signal; FR-002's "clearly indicate the active mode" requirement is still met by the
+  `WeekRange` label switching to "Full season" and the zoom button's own label.
+- **Alternatives considered**: Hiding the buttons (the original decision) — reverted because it
+  caused the controls row to visibly jump width on toggle, which is worse UX than a disabled
+  button that simply does nothing.
 
 ## 6. Tooltip handling across a mode switch
 

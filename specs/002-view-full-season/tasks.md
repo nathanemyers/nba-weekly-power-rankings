@@ -131,11 +131,14 @@ full picture.
       which view mode is currently active"), and its `onClick` calls `onToggleZoom`. This single
       control serves both directions — US2 re-verifies its "Zoom in" behavior rather than adding
       a second control. (depends on T009, T011)
-- [x] T013 [US1] In `src/Chart/Chart.tsx`, hide the Earlier/Later buttons and make the
-      keyboard-arrow `useEffect` handler a no-op while `zoomedOut` is `true` (research.md §5;
-      FR-009: "Earlier/Later paging controls and arrow-key panning MUST be inactive while in
-      full-season view"). The same conditional re-enables them when `zoomedOut` is `false`,
-      which is what US2 relies on for the return trip — no separate code path. (depends on T012)
+- [x] T013 [US1] In `src/Chart/Chart.tsx`, keep the Earlier/Later buttons always rendered but
+      `disabled` while `zoomedOut` is `true` (revised from research.md §5's original "hide them"
+      decision — hiding caused the controls row to change width/jump on every toggle; disabling
+      keeps the layout stable), and make the keyboard-arrow `useEffect` handler a no-op while
+      `zoomedOut` is `true` (FR-009: "Earlier/Later paging controls and arrow-key panning MUST be
+      inactive while in full-season view"). The same `disabled` condition re-enables them when
+      `zoomedOut` is `false`, which is what US2 relies on for the return trip — no separate code
+      path. (depends on T012)
 - [x] T014 [US1] In `src/Chart/Chart.tsx`, change the existing `start === maxStart` condition
       that reveals the end-of-season playoff-medal column to `zoomedOut || start === maxStart`
       (research.md §4; FR-006) (depends on T009)
@@ -308,3 +311,34 @@ With two contributors, once Foundational is done:
   duplicate "implementation" tasks that would just re-touch the same lines
 - Commit after each task or logical group
 - Stop at any checkpoint to validate story independently
+
+---
+
+## Phase 7: Convergence
+
+**Purpose**: Close verification gaps found by `/speckit-converge` between the implemented
+behavior and the spec/plan's stated intent. Both items below are test-coverage gaps — the
+underlying behavior already appears correct by code inspection, but nothing in
+`Chart.test.tsx` locks it in.
+
+- [x] T023 [P] Add a `src/Chart/Chart.test.tsx` case that zooms out first (`zoomedOut: true`),
+      then hovers a team's line to make it active, hovers one of its specific-week dots, and
+      asserts the tooltip shows that team's correct rank/record/summary for that week — and
+      separately that clicking a team's label pins it while already in full-season view. Every
+      existing test either hovers/pins *before* toggling (and checks it survives the round trip)
+      or checks that a stale tooltip closes *during* the toggle; none verifies interactions
+      *while already* in full-season view per FR-005 ("all per-team interactions ... MUST
+      continue to work identically") / SC-003 ("100% of the hover, pin, and tooltip behaviors
+      ... remain available and accurate in full-season view") (partial) — passing; tooltip
+      content ("#10 Miami Heat", "Week 25 summary") and pin-while-zoomed-out both verified
+- [x] T024 [P] Add a `src/Chart/Chart.test.tsx` case using the existing `Harness` component:
+      render with `maxWeek` just below `windowWeeks` (no zoom control present), then rerender
+      the *same instance* with a `maxWeek` prop that now exceeds `windowWeeks`, and assert the
+      zoom-out control appears without remounting. This locks in research.md §7's decision that
+      `canZoomOut` is "recomputed from the current season's `maxWeek` on every render ... never
+      cached," which SC-005 and the in-progress-season edge case ("re-evaluated against the
+      current recorded week count each time the season's data loads, not fixed at the season's
+      first load") require but no current test exercises via a prop change on a live instance —
+      the existing US3 test only compares two separately mounted instances (partial) — passing;
+      rendered at `maxWeek=9` (no control), rerendered the same instance at `maxWeek=11` (control
+      appears), confirming `canZoomOut` is derived live, not cached
