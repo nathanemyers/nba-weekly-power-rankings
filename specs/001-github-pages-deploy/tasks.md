@@ -82,7 +82,8 @@ assets.
       T005; same file)
 - [ ] T007 [US1] One-time repository setting: Settings → Pages → Build and deployment → Source:
       **GitHub Actions**; then run the workflow once via **Run workflow** (`workflow_dispatch`)
-      (depends on T006)
+      (depends on T006) — Pages source already confirmed set to "GitHub Actions" via
+      `gh api repos/.../pages`; first run still pending merge of PR #2
 - [ ] T008 [US1] Validate in a fresh browser: open
       `https://nathanemyers.github.io/nba-weekly-power-rankings/`, confirm the chart renders
       with the most recent season, switching seasons works, and the Network tab shows zero
