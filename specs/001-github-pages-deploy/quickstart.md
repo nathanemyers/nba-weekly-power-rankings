@@ -21,7 +21,8 @@ Expected:
 - Opening it shows the chart; switching through every season loads data.
 - Browser devtools Network tab shows no failed requests.
 - `grep -o 'src="[^"]*"\|href="[^"]*"' dist/index.html` lists only URLs beginning with
-  `/nba-weekly-power-rankings/`.
+  `/nba-weekly-power-rankings/` or `data:` (the inline 🏀 favicon needs no file, so it never
+  causes a failed request).
 
 ## Scenario 2: First publish (User Story 1)
 

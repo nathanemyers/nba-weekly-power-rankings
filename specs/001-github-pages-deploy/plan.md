@@ -9,9 +9,12 @@
 Publish the existing Vite + React rankings chart as a GitHub Pages project site at
 `https://nathanemyers.github.io/nba-weekly-power-rankings/`. The approach: set Vite's `base` to
 the repository sub-path so every emitted asset and code-split season chunk resolves under it,
-remove the root-absolute favicon reference that has no backing file, and add a GitHub Actions
-workflow that lints, builds, and deploys `dist/` via the official Pages actions on every push to
-`master` (plus manual dispatch). README gets the new live link and preview instructions.
+replace the root-absolute favicon reference that has no backing file with an inline 🏀 emoji
+data-URI favicon, and replace the repo's
+default "upload whole repo" Pages workflow (`.github/workflows/static.yml`, which has no build or
+lint gate) with one that lints, builds, and deploys `dist/` via the official Pages actions on
+every push to `master` (plus manual dispatch). README gets the new live link and preview
+instructions.
 
 ## Technical Context
 
@@ -72,9 +75,10 @@ specs/001-github-pages-deploy/
 ```text
 .github/
 └── workflows/
+    ├── static.yml       # DELETE: default template uploads whole repo, no build/lint gate
     └── deploy.yml       # NEW: lint → build → upload artifact → deploy to Pages
 
-index.html               # EDIT: remove broken root-absolute /favicon.svg link
+index.html               # EDIT: swap broken root-absolute /favicon.svg link for inline 🏀 data URI
 vite.config.ts           # EDIT: base: '/nba-weekly-power-rankings/'
 README.md                # EDIT: live GitHub Pages link + local preview instructions
 

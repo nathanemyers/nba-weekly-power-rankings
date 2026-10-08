@@ -30,12 +30,16 @@ technology choices and integration patterns the plan depends on.
 
 ## 3. Favicon reference
 
-- **Decision**: Remove `<link rel="icon" href="/favicon.svg">` from `index.html`.
-- **Rationale**: No `public/favicon.svg` exists, so it is already a 404; under a sub-path it would
-  also point outside the site. Removing it satisfies SC-001 (zero failed requests from the page's
-  own references). Adding a real favicon is out of scope.
-- **Alternatives considered**: Add a `public/favicon.svg` (Vite rewrites public-dir URLs with
-  `base`) — deferred as a design task, not deployment.
+- **Decision**: Replace `<link rel="icon" href="/favicon.svg">` in `index.html` with an inline
+  `data:image/svg+xml` URI containing a 🏀 emoji (`<svg><text>🏀</text></svg>`).
+- **Rationale**: No `public/favicon.svg` exists, so the root-absolute reference is already a 404,
+  and under a sub-path it would also point outside the site. An inline data URI needs no file at
+  all, so it is base-path-safe by construction and satisfies SC-001 (zero failed requests from
+  the page's own references) while still giving the tab a themed icon.
+- **Alternatives considered**: Add a real `public/favicon.svg` (Vite rewrites public-dir URLs
+  with `base`) — an extra asset file for no benefit over an inline data URI; plain removal — would
+  satisfy SC-001 but leaves no tab icon, which the maintainer asked to avoid in favor of a 🏀
+  emoji.
 
 ## 4. Workflow triggers and concurrency
 
