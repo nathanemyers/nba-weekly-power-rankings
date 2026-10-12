@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 import { type Team } from "./teams";
 import type { PlayoffStage, WeekRanking } from "./types";
+import { interpolate, useChartTransition } from "./useChartTransition";
 
 export type TeamRankings = Team & {
   rankings: WeekRanking[];
@@ -92,14 +93,61 @@ export default function RankingsChart({
   }, [maxStart, zoomedOut]);
 
   // `start` itself is never mutated by zooming — only its effective value at render time —
-  // so zooming back in restores exactly the windowed position the visitor left.
-  const effectiveStart = zoomedOut ? 1 : start;
-  const effectiveSpan = zoomedOut ? Math.max(1, maxWeek - 1) : windowWeeks;
-  const effectiveEnd = zoomedOut ? maxWeek : start + windowWeeks;
-  const weeks = zoomedOut
-    ? Array.from({ length: maxWeek }, (_, i) => i + 1)
-    : Array.from({ length: windowWeeks + 1 }, (_, i) => start + i);
+  // so zooming back in restores exactly the windowed position the visitor left. This same
+  // target pair is what changes whenever either the zoom toggle flips OR `start` is paged, so
+  // one animation mechanism (useChartTransition) handles both triggers identically.
+  const target = useMemo(
+    () => ({
+      start: zoomedOut ? 1 : start,
+      span: zoomedOut ? Math.max(1, maxWeek - 1) : windowWeeks,
+    }),
+    [zoomedOut, start, maxWeek, windowWeeks],
+  );
+  const transition = useChartTransition(target);
+  const effectiveStart = transition.start;
+  const effectiveSpan = transition.span;
+  // True for both modes: windowed settles to start + windowWeeks; full-season settles to
+  // 1 + (maxWeek - 1) = maxWeek. Using the animated values lets week ticks slide in/out smoothly
+  // during a transition instead of snapping to the target set instantly.
+  const effectiveEnd = effectiveStart + effectiveSpan;
+  const weeks = Array.from(
+    { length: Math.ceil(effectiveEnd) - Math.floor(effectiveStart) + 1 },
+    (_, i) => Math.floor(effectiveStart) + i,
+  ).filter((w) => w >= 1 && w <= maxWeek);
   const inWindow = (week: number) => week >= effectiveStart && week <= effectiveEnd;
+  const inRange = (week: number, rangeStart: number, rangeSpan: number) =>
+    week >= rangeStart && week <= rangeStart + rangeSpan;
+
+  // Team-name labels use the team's first ranked week *currently in view* for their vertical
+  // position — a discrete lookup, not a continuous function of the scale like x() is. Sweeping
+  // effectiveStart/effectiveSpan smoothly does not make this lookup's result change smoothly; it
+  // would jump once, abruptly, whenever the swept boundary crosses an integer week. So label
+  // motion is its own interpolation: frozen "from"/"to" endpoints computed from the transition's
+  // (non-animated) start/end bounds, lerped using the same progress the scale uses (research.md
+  // §8; data-model.md "Team Label Position").
+  const labelPositions = useMemo(() => {
+    const positions = new Map<string, number>();
+    for (const team of teams) {
+      const fromFirst = team.rankings.find((r) =>
+        inRange(r.week, transition.fromStart, transition.fromSpan),
+      );
+      const toFirst = team.rankings.find((r) =>
+        inRange(r.week, transition.toStart, transition.toSpan),
+      );
+      const fromRank = fromFirst?.rank ?? toFirst?.rank;
+      const toRank = toFirst?.rank ?? fromFirst?.rank;
+      if (fromRank === undefined || toRank === undefined) continue;
+      positions.set(team.slug, interpolate(y(fromRank), y(toRank), transition.progress));
+    }
+    return positions;
+  }, [
+    teams,
+    transition.fromStart,
+    transition.fromSpan,
+    transition.toStart,
+    transition.toSpan,
+    transition.progress,
+  ]);
 
   const activeSlug = pinned ?? hover?.slug ?? null;
   const hoverTeam = hover && teams.find((t) => t.slug === hover.slug);
@@ -129,7 +177,10 @@ export default function RankingsChart({
         <WeekRange>
           {zoomedOut
             ? `Full season (Weeks 1–${maxWeek})`
-            : `Weeks ${start}–${Math.min(effectiveEnd, maxWeek)}`}
+            : /* Reads the raw (non-animated) target, not effectiveEnd — this readout should
+                 snap to the new range instantly like the buttons' disabled state does, not
+                 flash through fractional in-between values while the chart animates. */
+              `Weeks ${start}–${Math.min(start + windowWeeks, maxWeek)}`}
         </WeekRange>
         <Button
           onClick={(e) => {
@@ -288,16 +339,18 @@ export default function RankingsChart({
           </g>
 
           {teams.map((team) => {
-            // Label each team at its rank for the first visible week it was ranked
-            const first = team.rankings.find((r) => inWindow(r.week));
-            if (!first) return null;
+            // Label each team at its rank for the first visible week it was ranked — animated
+            // via labelPositions rather than the live (sweeping) inWindow lookup, so it glides
+            // to a new row instead of jumping when a transition changes which week is "first".
+            const labelY = labelPositions.get(team.slug);
+            if (labelY === undefined) return null;
             const active = activeSlug === team.slug;
             return (
               <text
                 key={team.slug}
                 className="team-label"
                 x={M.left - 10}
-                y={y(first.rank)}
+                y={labelY}
                 textAnchor="end"
                 dominantBaseline="middle"
                 fontWeight={active ? 700 : 400}
@@ -319,15 +372,17 @@ export default function RankingsChart({
           })}
 
           {teams.map((team) => {
-            const first = team.rankings.find((r) => inWindow(r.week));
+            // Shares labelY with the name label above so the medal never visually detaches
+            // from it mid-transition.
+            const labelY = labelPositions.get(team.slug);
             const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
-            if (!first || !medal) return null;
+            if (labelY === undefined || !medal) return null;
             return (
               <text
                 key={`${team.slug}-medal`}
                 className="playoff-medal"
                 x={4}
-                y={y(first.rank)}
+                y={labelY}
                 fontSize={14}
                 dominantBaseline="middle"
               >

@@ -1,25 +1,37 @@
-# Implementation Plan: Animated Zoom Transition
+# Implementation Plan: Animated Chart Transitions (Zoom and Pan)
 
 **Branch**: `003-zoom-transition-animation` | **Date**: 2026-10-08 | **Spec**: [spec.md](./spec.md)
 
 **Input**: Feature specification from `specs/003-zoom-transition-animation/spec.md`
 
-**Depends on**: `002-view-full-season` must be implemented first — this feature animates the
-zoom toggle that spec introduces (`zoomedOut` prop, windowed ↔ full-season rendering). As of
-this plan, `002`'s code changes have not yet landed in `src/Chart/Chart.tsx`/`src/App.tsx` (only
-its spec/plan artifacts exist); implementation of `003` is blocked on `002`'s implementation.
+**Depends on**: `002-view-full-season` — this feature animates the zoom toggle and the
+Earlier/Later/arrow-key panning that spec introduces (`zoomedOut`/`start`, windowed ↔
+full-season rendering). `002` is fully implemented and merged into this branch
+(`src/Chart/Chart.tsx` has `zoomedOut`/`onToggleZoom`/`windowWeeks` props, and the generalized
+scale already computes `effectiveStart`/`effectiveSpan` exactly as anticipated below), so `003`
+is unblocked and can proceed straight to implementation.
+
+**Amendment**: This plan originally covered only the zoom toggle. It's now revised to also cover
+panning and team-label repositioning, per the spec's own amendment — see research.md §1 and §8
+for the resulting design, which turned out to unify both triggers under one mechanism rather than
+needing two.
 
 ## Summary
 
-Animate the chart's existing (per `002-view-full-season`) toggle between windowed and
-full-season view by tweening the x-scale's own parameters — the visible week range (`start` and
-`span`) — over a short duration using `requestAnimationFrame`, instead of snapping to the new
-values instantly. Because every frame of the animation calls the exact same coordinate functions
-already used for static rendering, the animated end state is guaranteed identical to the
-non-animated target state (FR-004) with no separate code path to keep in sync. No animation
-library or new runtime dependency is introduced — only the browser's native `requestAnimationFrame`
-and `prefers-reduced-motion` media query. This is purely internal to `Chart.tsx`; it does not
-change the `App.tsx` ↔ `Chart.tsx` prop contract `002` defined.
+Animate the chart's visible week window — whether it changes because the visitor toggled zoom
+or paged with Earlier/Later/arrow keys — by tweening the x-scale's own parameters, `Chart.tsx`'s
+`effectiveStart` and `effectiveSpan`, over a short duration using `requestAnimationFrame`,
+instead of snapping to the new values instantly. Because every frame of the animation calls the
+exact same `x()`/`y()` coordinate functions already used for static rendering, the animated end
+state is guaranteed identical to the non-animated target state (FR-004) with no separate code
+path to keep in sync. Team-name labels, whose position is a discrete "first visible ranked week"
+lookup rather than a continuous function of the scale, get their own from/to/progress
+interpolation using the same timing (research.md §8), so they glide to their new position
+instead of jumping. No animation library or new runtime dependency is introduced — only the
+browser's native `requestAnimationFrame` and `prefers-reduced-motion` media query. This is purely
+internal to `Chart.tsx`; it does not change the `App.tsx` ↔ `Chart.tsx` prop contract `002`
+defined, and the Earlier/Later `onClick`/keyboard handlers need no changes at all — only how
+`Chart.tsx` renders the resulting target changes, from instant to tweened.
 
 ## Technical Context
 
@@ -36,7 +48,9 @@ component state
 `002-view-full-season`). The tween's pure math (progress → interpolated `start`/`span`) is
 extracted into a plain function so it can be unit-tested without faking timers; a small number of
 component tests fake `requestAnimationFrame`/time to assert the animation reaches the correct
-end state and that `prefers-reduced-motion` skips it
+end state (for both the zoom toggle and panning) and that `prefers-reduced-motion` skips it; a
+separate test fixture with a team whose first-visible-ranked-week changes across a pan verifies
+its label animates rather than jumps
 
 **Target Platform**: Modern desktop and mobile browsers, served statically via GitHub Pages
 (unchanged)
@@ -44,18 +58,20 @@ end state and that `prefers-reduced-motion` skips it
 **Project Type**: Single-page static web application (unchanged)
 
 **Performance Goals**: Sustain a visually smooth transition (no dropped-frame stutter perceptible
-to a visitor) for ~30 teams' lines over a sub-second duration — well within `requestAnimationFrame`
-+ SVG capability at this data scale; this is the one genuinely new performance concern this
-feature introduces, since prior features never re-rendered on every animation frame
+to a visitor) for ~30 teams' lines plus up to 30 labels over a sub-second duration — well within
+`requestAnimationFrame` + SVG capability at this data scale; this is the one genuinely new
+performance concern this feature introduces, since prior features never re-rendered on every
+animation frame
 
 **Constraints**: No new runtime dependency (constitution V) — animation uses only native
 browser APIs, not a charting/animation library; must not alter the final rendered state defined
-by `002-view-full-season` (FR-004); must honor `prefers-reduced-motion` (FR-005); must not
-change the `App.tsx` ↔ `Chart.tsx` prop contract from `002-view-full-season`'s
-`contracts/view-mode-interface.md`
+by `002-view-full-season` (FR-004); must honor `prefers-reduced-motion` (FR-005, FR-009); must
+not change the `App.tsx` ↔ `Chart.tsx` prop contract from `002-view-full-season`'s
+`contracts/view-mode-interface.md`; must not require any change to the Earlier/Later `onClick`
+handlers or the keyboard-arrow effect (research.md §1)
 
-**Scale/Scope**: Entirely within `src/Chart/Chart.tsx` (plus its test file); no changes to
-`App.tsx`, no new data entities, no new cross-component contract
+**Scale/Scope**: Entirely within `src/Chart/Chart.tsx` and a new co-located hook (plus their test
+file); no changes to `App.tsx`, no new data entities, no new cross-component contract
 
 ## Constitution Check
 
@@ -67,8 +83,8 @@ change the `App.tsx` ↔ `Chart.tsx` prop contract from `002-view-full-season`'s
 | II. Data Prepared at Build Time | No new or changed data | PASS |
 | III. Base-Path-Safe Navigation | Animation is in-memory render state, not a route; no server rewrites needed | PASS |
 | IV. Respectful, Offline Collection | Not implicated | PASS |
-| V. Simplicity | No new dependency of any kind — explicitly rejected an animation library in favor of native `requestAnimationFrame`/`matchMedia` (research.md §1, §3) | PASS |
-| Quality gates | `npm run lint`, `npm run build`, and `npm test` (constitution v1.1.0) must pass; this feature adds tests for the new tween logic and reduced-motion branch | PASS |
+| V. Simplicity | No new dependency of any kind — explicitly rejected an animation library in favor of native `requestAnimationFrame`/`matchMedia` (research.md §3); unifying zoom and pan under one tween mechanism (§1) and deriving label motion from that same hook's output (§8) avoids a second, parallel animation system | PASS |
+| Quality gates | `npm run lint`, `npm run build`, and `npm test` (constitution v1.1.0) must pass; this feature adds tests for the tween logic (zoom and pan), the reduced-motion branch, and label-position interpolation | PASS |
 
 **Post-design re-check (after Phase 1)**: All gates still PASS. No complexity tracking needed.
 
@@ -86,32 +102,40 @@ specs/003-zoom-transition-animation/
 
 No `contracts/` directory: this feature introduces no new interface crossing the `App.tsx` ↔
 `Chart.tsx` boundary (or any other component boundary) — it's an internal rendering behavior
-change within `Chart.tsx`, reusing `002-view-full-season`'s existing `zoomedOut` prop as its
-trigger. `002`'s `contracts/view-mode-interface.md` still fully describes that boundary and
+change within `Chart.tsx`, reusing `002-view-full-season`'s existing `zoomedOut`/`start` state as
+its trigger. `002`'s `contracts/view-mode-interface.md` still fully describes that boundary and
 needs no amendment.
 
 ### Source Code (repository root)
 
 ```text
 src/Chart/
-├── Chart.tsx             # EDIT: on `zoomedOut` prop change, tween the x-scale's `start`/`span`
-│                         #       from their current values to the new mode's target values over
-│                         #       a short duration via requestAnimationFrame, re-rendering each
-│                         #       frame with the existing x()/y() functions; skip the tween (jump
-│                         #       straight to target) when prefers-reduced-motion is set
-├── Chart.test.tsx        # EDIT: add animation-specific tests (reaches correct end state,
-│                         #       reduced-motion skips it, re-toggling mid-animation retargets
-│                         #       smoothly) alongside the `002` interaction tests already there
-└── useZoomTransition.ts  # NEW: small hook/pure-function pair — progress→interpolated params
-                          #       math (unit-testable in isolation) plus the rAF loop that drives
-                          #       it, extracted out of Chart.tsx to keep the tween logic testable
-                          #       without rendering the whole component for every test
+├── Chart.tsx              # EDIT: feed the target (effectiveStart, effectiveSpan) pair — which
+│                          #       changes from either the zoomedOut prop or the start state —
+│                          #       into useChartTransition; render each frame using its
+│                          #       interpolated start/span via the existing x()/y() functions;
+│                          #       compute each team-label's fromY/toY once per transition and
+│                          #       render lerp(fromY, toY, progress) (research.md §8); skip to the
+│                          #       target immediately when prefers-reduced-motion is set
+├── Chart.test.tsx         # EDIT: add animation-specific tests (reaches correct end state for
+│                          #       both zoom and pan, reduced-motion skips it, re-triggering
+│                          #       mid-animation retargets smoothly, a label with a changing
+│                          #       first-visible-week animates rather than jumps) alongside the
+│                          #       `002` interaction tests already there
+└── useChartTransition.ts  # NEW: small hook/pure-function pair — progress→interpolated
+                           #       start/span math (unit-testable in isolation) plus the rAF loop
+                           #       that drives it, extracted out of Chart.tsx to keep the tween
+                           #       logic testable without rendering the whole component for every
+                           #       test. Renamed from the originally-planned
+                           #       `useZoomTransition.ts` now that it also drives pan animation.
 ```
 
 **Structure Decision**: Keep the existing single-project Vite/React layout. The only new file is
-a small, co-located hook (`useZoomTransition.ts`) extracting the interpolation math and
+a small, co-located hook (`useChartTransition.ts`) extracting the interpolation math and
 animation-frame loop out of `Chart.tsx`, so the math can be unit-tested directly and `Chart.tsx`
-stays focused on rendering. No new top-level directories, no changes outside `src/Chart/`.
+stays focused on rendering (including the label-position math, which depends on `teams` data the
+hook itself doesn't need to know about). No new top-level directories, no changes outside
+`src/Chart/`.
 
 ## Complexity Tracking
 
