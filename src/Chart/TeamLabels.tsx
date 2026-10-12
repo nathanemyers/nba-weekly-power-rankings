@@ -1,5 +1,6 @@
 import { PlayoffStage } from "../types";
-import type { Team, TeamRankings } from "../types";
+import type { Margin, Team, TeamRankings } from "../types";
+import { getYforRank } from "./utils";
 import styled from "styled-components";
 
 export const PLAYOFF_MEDALS: Record<
@@ -32,20 +33,22 @@ interface TeamLabelsProps {
   teams: TeamRankings[];
   week: number;
   pinnedTeams: Team[];
-  marginLeft: number;
+  margin: Margin;
+  height: number;
   onHover: (slug: string) => void;
   onClick: (slug: string) => void;
 }
 
 export default function TeamLabels(props: TeamLabelsProps) {
   const teamNames = props.teams.map((team) => {
-    const labelY = props.labelPositions.get(team.teamId);
+    const weekRanking = team.rankings[props.week];
+    const labelY = getYforRank(weekRanking.rank, props.height, props.margin);
     if (labelY === undefined) return null;
     const pinned = props.pinnedTeams.includes(team.teamId);
     return (
       <TeamLabel
         key={team.teamId}
-        x={props.marginLeft - 10}
+        x={props.margin.left - 10}
         y={labelY}
         textAnchor="end"
         dominantBaseline="middle"
@@ -63,9 +66,8 @@ export default function TeamLabels(props: TeamLabelsProps) {
   });
 
   const playoffMedals = props.teams.map((team) => {
-    // Shares labelY with the name label above so the medal never visually detaches
-    // from it mid-transition.
-    const labelY = props.labelPositions.get(team.teamId);
+    const weekRanking = team.rankings[props.week];
+    const labelY = getYforRank(weekRanking.rank, props.height, props.margin);
     const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
     if (labelY === undefined || !medal) return null;
     return (

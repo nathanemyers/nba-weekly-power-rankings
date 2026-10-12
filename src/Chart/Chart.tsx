@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { type Team, type TeamRankings } from "../types";
-import { interpolate } from "./useChartTransition";
-import TeamLabels, { PLAYOFF_MEDALS } from "./TeamLabels";
+import { type Margin, type Team, type TeamRankings } from "../types";
+import TeamLabels from "./TeamLabels";
+import { getYforRank } from "./utils";
 
 export const DEFAULT_WINDOW_WEEKS = 10;
 const PLAYOFFS_WEEK = 24;
@@ -15,13 +15,72 @@ const RANK_TICKS = [1, 5, 10, 15, 20, 25, 30];
 
 type Hover = { teamId: Team; week?: number };
 
+const ChartWrap = styled.div`
+  width: 100%;
+`;
+
+const Relative = styled.div`
+  position: relative;
+`;
+
+const Svg = styled.svg`
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+
+  .grid {
+    stroke: #333336;
+    stroke-width: 1;
+  }
+
+  .tick {
+    fill: #a1a1a6;
+    font-size: 13px;
+  }
+
+  .axis-label {
+    fill: #a1a1a6;
+    font-size: 15px;
+  }
+
+  .playoffs line {
+    stroke: #ff4d4f;
+    stroke-width: 2;
+    stroke-dasharray: 6 4;
+  }
+
+  .playoffs text {
+    fill: #ff4d4f;
+    font-size: 13px;
+  }
+`;
+
+const Tooltip = styled.div`
+  position: absolute;
+  pointer-events: none;
+  max-width: 320px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.35;
+
+  p {
+    margin: 4px 0;
+  }
+
+  small {
+    color: #a1a1a6;
+  }
+`;
 interface ChartProps {
   teams: TeamRankings[];
   startWeek: number;
   endWeek: number;
   width: number;
   height: number;
-  margin: { top: number; right: number; bottom: number; left: number };
+  margin: Margin;
   pinnedTeams: Team[];
 }
 
@@ -52,25 +111,6 @@ export default function RankingsChart(props: ChartProps) {
   ).filter((w) => w >= 1 && w <= props.maxWeek);
   const inWindow = (week: number) =>
     week >= effectiveStart && week <= effectiveEnd;
-  const inRange = (week: number, rangeStart: number, rangeSpan: number) =>
-    week >= rangeStart && week <= rangeStart + rangeSpan;
-
-  const labelPositions = new Map<string, number>();
-  for (const team of props.teams) {
-    const fromFirst = team.rankings.find((r) =>
-      inRange(r.week, transition.fromStart, transition.fromSpan),
-    );
-    const toFirst = team.rankings.find((r) =>
-      inRange(r.week, transition.toStart, transition.toSpan),
-    );
-    const fromRank = fromFirst?.rank ?? toFirst?.rank;
-    const toRank = toFirst?.rank ?? fromFirst?.rank;
-    if (fromRank === undefined || toRank === undefined) continue;
-    labelPositions.set(
-      team.teamId,
-      interpolate(y(fromRank), y(toRank), transition.progress),
-    );
-  }
 
   const activeSlug = pinned ?? hover?.teamId ?? null;
   const hoverTeam = hover && props.teams.find((t) => t.teamId === hover.teamId);
@@ -234,9 +274,7 @@ export default function RankingsChart(props: ChartProps) {
 
           <TeamLabels
             teams={props.teams}
-            labelPositions={labelPositions}
-            activeSlug={activeSlug}
-            marginLeft={props.margin.left}
+            margin={props.margin}
             onHover={(teamId) =>
               setHover((h) => ({
                 teamId,
@@ -244,6 +282,9 @@ export default function RankingsChart(props: ChartProps) {
               }))
             }
             onClick={togglePin}
+            week={props.startWeek}
+            pinnedTeams={[]}
+            height={props.height}
           />
 
           {(props.zoomedOut || start === maxStart) && (
@@ -256,27 +297,6 @@ export default function RankingsChart(props: ChartProps) {
               >
                 Playoffs
               </text>
-              {props.teams.map((team) => {
-                const last = [...team.rankings]
-                  .reverse()
-                  .find((r) => inWindow(r.week));
-                const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
-                if (!last || !medal) return null;
-                return (
-                  <text
-                    key={`${team.teamId}-playoff`}
-                    className="playoff-medal"
-                    x={PLAYOFF_X}
-                    y={y(last.rank)}
-                    fontSize={14}
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                  >
-                    <title>{medal.label}</title>
-                    {medal.icon}
-                  </text>
-                );
-              })}
             </g>
           )}
         </Svg>
@@ -304,63 +324,3 @@ export default function RankingsChart(props: ChartProps) {
     </ChartWrap>
   );
 }
-
-const ChartWrap = styled.div`
-  width: 100%;
-`;
-
-const Relative = styled.div`
-  position: relative;
-`;
-
-const Svg = styled.svg`
-  display: block;
-  width: 100%;
-  height: auto;
-  user-select: none;
-
-  .grid {
-    stroke: #333336;
-    stroke-width: 1;
-  }
-
-  .tick {
-    fill: #a1a1a6;
-    font-size: 13px;
-  }
-
-  .axis-label {
-    fill: #a1a1a6;
-    font-size: 15px;
-  }
-
-  .playoffs line {
-    stroke: #ff4d4f;
-    stroke-width: 2;
-    stroke-dasharray: 6 4;
-  }
-
-  .playoffs text {
-    fill: #ff4d4f;
-    font-size: 13px;
-  }
-`;
-
-const Tooltip = styled.div`
-  position: absolute;
-  pointer-events: none;
-  max-width: 320px;
-  padding: 10px 12px;
-  background: rgba(0, 0, 0, 0.85);
-  border-radius: 6px;
-  font-size: 0.9rem;
-  line-height: 1.35;
-
-  p {
-    margin: 4px 0;
-  }
-
-  small {
-    color: #a1a1a6;
-  }
-`;
