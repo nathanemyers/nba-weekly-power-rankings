@@ -1,8 +1,9 @@
-// Reduces the scraped articles in /data into one compact JSON file per season
+// Reduces the scraped articles in /data into one compact TypeScript module per season
 // under src/data/seasons. Run with `npm run build:rankings` after new scrapes.
 import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import PLAYOFFS from '../data/playoffs.js'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = join(root, 'data')
@@ -21,10 +22,6 @@ const TEAM_SLUGS = {
 }
 
 const MAX_BLURB_LENGTH = 260
-
-// Postseason results from scripts/scrape-playoffs.mjs. Teams are keyed by season and slug
-const PLAYOFFS = JSON.parse(readFileSync(join(dataDir, 'playoffs.json'), 'utf8'))
-
 
 // Summaries open with stat lines ("Record: 25-4", "OffRtg: ...") before the prose.
 // Keep only the first line of prose, cut to a sentence-ish length.
@@ -107,7 +104,28 @@ for (const [season, articles] of [...bySeason].sort()) {
   }
 
   const output = { season, maxWeek, rankings, ...(Object.keys(playoffs).length && { playoffs }) }
-  const file = join(outDir, `${season}.json`)
-  writeFileSync(file, JSON.stringify(output))
+  const file = join(outDir, `${season}.ts`)
+  writeFileSync(
+    file,
+    `import type { SeasonData } from '../../Chart/types';\n\nexport default ${JSON.stringify(output)} satisfies SeasonData;\n`,
+  )
   console.log(`${season}: ${seenWeeks.size} weeks, ${Object.keys(rankings).length} teams -> ${file}`)
 }
+
+const seasons = [...bySeason.keys()].sort().reverse()
+const indexFile = join(outDir, 'index.ts')
+writeFileSync(
+  indexFile,
+  [
+    `import type { SeasonData } from '../../Chart/types';`,
+    ...seasons.map((season) => `import season_${season.replace('-', '_')} from './${season}';`),
+    '',
+    `export const seasonData: Record<string, SeasonData> = {`,
+    ...seasons.map((season) => `  '${season}': season_${season.replace('-', '_')},`),
+    `};`,
+    '',
+    `export const seasons: string[] = Object.keys(seasonData).sort().reverse();`,
+    '',
+  ].join('\n'),
+)
+console.log(`index: ${seasons.length} seasons -> ${indexFile}`)

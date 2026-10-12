@@ -1,23 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import RankingsChart, { type TeamRankings } from "./Chart/Chart";
 import { TEAMS } from "./Chart/teams";
-import type { SeasonData } from "./Chart/types";
+import { seasonData, seasons } from "./data/seasons";
 
-// Each season file is code-split and only fetched when that season is selected
-const seasonLoaders = import.meta.glob<{ default: SeasonData }>(
-  "./data/seasons/*.json",
-);
-
-const seasons = Object.keys(seasonLoaders)
-  .map((path) => path.match(/(\d{4}-\d{2})\.json$/)![1])
-  .sort()
-  .reverse();
-
-async function loadSeason(season: string) {
-  const { default: data } = await seasonLoaders[
-    `./data/seasons/${season}.json`
-  ]();
+function loadSeason(season: string) {
+  const data = seasonData[season];
   const teams: TeamRankings[] = TEAMS.map((team) => ({
     ...team,
     rankings: data.rankings[team.slug] ?? [],
@@ -70,33 +58,12 @@ const Select = styled.select`
   cursor: pointer;
 `;
 
-const Status = styled.p`
-  color: #a1a1a6;
-  margin: 3rem 0;
-`;
-
 function App() {
   const [season, setSeason] = useState(seasons[0]);
   // Lives here, not in RankingsChart, so it survives that component's per-season remount
   // (key={season} below) — switching seasons keeps the current zoom mode (see spec FR-010).
   const [zoomedOut, setZoomedOut] = useState(false);
-  // Tagged with its season so a stale load can't show under the newly selected year
-  const [loaded, setLoaded] = useState<{
-    season: string;
-    data: Awaited<ReturnType<typeof loadSeason>>;
-  } | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    loadSeason(season).then((data) => {
-      if (!cancelled) setLoaded({ season, data });
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [season]);
-
-  const data = loaded?.season === season ? loaded.data : null;
+  const data = loadSeason(season);
 
   return (
     <Container>
@@ -114,17 +81,13 @@ function App() {
           ))}
         </Select>
       </SeasonRow>
-      {data ? (
-        <RankingsChart
-          key={season}
-          teams={data.teams}
-          maxWeek={data.maxWeek}
-          zoomedOut={zoomedOut}
-          onToggleZoom={() => setZoomedOut((z) => !z)}
-        />
-      ) : (
-        <Status>Loading {season}…</Status>
-      )}
+      <RankingsChart
+        key={season}
+        teams={data.teams}
+        maxWeek={data.maxWeek}
+        zoomedOut={zoomedOut}
+        onToggleZoom={() => setZoomedOut((z) => !z)}
+      />
     </Container>
   );
 }
