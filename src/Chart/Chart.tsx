@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { type Team } from "./teams";
 import { PlayoffStage, type WeekRanking } from "./types";
@@ -69,15 +69,11 @@ export default function RankingsChart(props: ChartProps) {
   const maxStart = Math.max(1, props.maxWeek - props.windowWeeks);
 
   // Lookup of slug -> week -> ranking. Weeks can be missing for a team, so don't index by position
-  const rankingsByWeek = useMemo(
-    () =>
-      new Map(
-        props.teams.map((team) => [
-          team.slug,
-          new Map(team.rankings.map((r) => [r.week, r])),
-        ]),
-      ),
-    [props.teams],
+  const rankingsByWeek = new Map(
+    props.teams.map((team) => [
+      team.slug,
+      new Map(team.rankings.map((r) => [r.week, r])),
+    ]),
   );
 
   useEffect(() => {
@@ -90,19 +86,11 @@ export default function RankingsChart(props: ChartProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [maxStart, props.zoomedOut]);
 
-  // `start` itself is never mutated by zooming — only its effective value at render time —
-  // so zooming back in restores exactly the windowed position the visitor left. This same
-  // target pair is what changes whenever either the zoom toggle flips OR `start` is paged, so
-  // one animation mechanism (useChartTransition) handles both triggers identically.
-  const target = useMemo(
-    () => ({
-      start: props.zoomedOut ? 1 : start,
-      span: props.zoomedOut
-        ? Math.max(1, props.maxWeek - 1)
-        : props.windowWeeks,
-    }),
-    [props.zoomedOut, start, props.maxWeek, props.windowWeeks],
-  );
+  const target = {
+    start: props.zoomedOut ? 1 : start,
+    span: props.zoomedOut ? Math.max(1, props.maxWeek - 1) : props.windowWeeks,
+  };
+
   const transition = useChartTransition(target);
   const effectiveStart = transition.start;
   const effectiveSpan = transition.span;
@@ -119,39 +107,22 @@ export default function RankingsChart(props: ChartProps) {
   const inRange = (week: number, rangeStart: number, rangeSpan: number) =>
     week >= rangeStart && week <= rangeStart + rangeSpan;
 
-  // Team-name labels use the team's first ranked week *currently in view* for their vertical
-  // position — a discrete lookup, not a continuous function of the scale like x() is. Sweeping
-  // effectiveStart/effectiveSpan smoothly does not make this lookup's result change smoothly; it
-  // would jump once, abruptly, whenever the swept boundary crosses an integer week. So label
-  // motion is its own interpolation: frozen "from"/"to" endpoints computed from the transition's
-  // (non-animated) start/end bounds, lerped using the same progress the scale uses (research.md
-  // §8; data-model.md "Team Label Position").
-  const labelPositions = useMemo(() => {
-    const positions = new Map<string, number>();
-    for (const team of props.teams) {
-      const fromFirst = team.rankings.find((r) =>
-        inRange(r.week, transition.fromStart, transition.fromSpan),
-      );
-      const toFirst = team.rankings.find((r) =>
-        inRange(r.week, transition.toStart, transition.toSpan),
-      );
-      const fromRank = fromFirst?.rank ?? toFirst?.rank;
-      const toRank = toFirst?.rank ?? fromFirst?.rank;
-      if (fromRank === undefined || toRank === undefined) continue;
-      positions.set(
-        team.slug,
-        interpolate(y(fromRank), y(toRank), transition.progress),
-      );
-    }
-    return positions;
-  }, [
-    props.teams,
-    transition.fromStart,
-    transition.fromSpan,
-    transition.toStart,
-    transition.toSpan,
-    transition.progress,
-  ]);
+  const labelPositions = new Map<string, number>();
+  for (const team of props.teams) {
+    const fromFirst = team.rankings.find((r) =>
+      inRange(r.week, transition.fromStart, transition.fromSpan),
+    );
+    const toFirst = team.rankings.find((r) =>
+      inRange(r.week, transition.toStart, transition.toSpan),
+    );
+    const fromRank = fromFirst?.rank ?? toFirst?.rank;
+    const toRank = toFirst?.rank ?? fromFirst?.rank;
+    if (fromRank === undefined || toRank === undefined) continue;
+    labelPositions.set(
+      team.slug,
+      interpolate(y(fromRank), y(toRank), transition.progress),
+    );
+  }
 
   const activeSlug = pinned ?? hover?.slug ?? null;
   const hoverTeam = hover && props.teams.find((t) => t.slug === hover.slug);
