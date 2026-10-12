@@ -35,8 +35,8 @@ interface TeamLabelsProps {
   pinnedTeams: Team[];
   margin: Margin;
   height: number;
-  onHover: (slug: string) => void;
-  onClick: (slug: string) => void;
+  onHover: (teamId: Team) => void;
+  onClick: (teamId: Team) => void;
 }
 
 export default function TeamLabels(props: TeamLabelsProps) {

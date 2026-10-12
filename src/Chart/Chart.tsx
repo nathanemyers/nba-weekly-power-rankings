@@ -28,32 +28,34 @@ const Svg = styled.svg`
   width: 100%;
   height: auto;
   user-select: none;
+`;
 
-  .grid {
-    stroke: #333336;
-    stroke-width: 1;
-  }
-
-  .tick {
-    fill: #a1a1a6;
-    font-size: 13px;
-  }
-
-  .axis-label {
-    fill: #a1a1a6;
-    font-size: 15px;
-  }
-
-  .playoffs line {
+const Playoffs = styled.g`
+  line {
     stroke: #ff4d4f;
     stroke-width: 2;
     stroke-dasharray: 6 4;
   }
 
-  .playoffs text {
+  text {
     fill: #ff4d4f;
     font-size: 13px;
   }
+`;
+
+const GridLine = styled.line`
+  stroke: #333336;
+  stroke-width: 1;
+`;
+
+const Tick = styled.text`
+  fill: #a1a1a6;
+  font-size: 13px;
+`;
+
+const AxisLabel = styled.text`
+  fill: #a1a1a6;
+  font-size: 15px;
 `;
 
 const Tooltip = styled.div`
@@ -82,6 +84,7 @@ interface ChartProps {
   height: number;
   margin: Margin;
   pinnedTeams: Team[];
+  onClick: (team?: Team) => {};
 }
 
 export default function RankingsChart(props: ChartProps) {
@@ -122,14 +125,11 @@ export default function RankingsChart(props: ChartProps) {
     ? rankingsByWeek.get(hoverTeam.teamId)?.get(hover.week!)
     : undefined;
 
-  const togglePin = (teamId: string) =>
-    setPinned((p) => (p === teamId ? null : teamId));
-
   return (
-    <ChartWrap onClick={() => setPinned(null)}>
+    <ChartWrap onClick={() => props.onClick(undefined)}>
       <Relative>
         <Svg
-          viewBox={`0 0 ${W} ${H}`}
+          viewBox={`0 0 ${props.width} ${props.height}`}
           role="img"
           aria-label="Weekly NBA power rankings line chart"
           onMouseLeave={() => setHover(null)}
@@ -147,53 +147,48 @@ export default function RankingsChart(props: ChartProps) {
 
           {RANK_TICKS.map((r) => (
             <g key={r}>
-              <line
-                className="grid"
+              <GridLine
                 x1={props.margin.left}
                 x2={props.margin.left + PLOT_W}
                 y1={y(r)}
                 y2={y(r)}
               />
-              <text
-                className="tick"
+              <Tick
                 x={props.margin.left + PLOT_W + 10}
                 y={y(r)}
                 dominantBaseline="middle"
               >
                 {r}
-              </text>
+              </Tick>
             </g>
           ))}
 
           {weeks.map((w) => (
-            <text
+            <Tick
               key={w}
-              className="tick"
               x={x(w, effectiveStart, effectiveSpan)}
               y={props.margin.top + PLOT_H + 22}
               textAnchor="middle"
             >
               {w}
-            </text>
+            </Tick>
           ))}
-          <text
-            className="axis-label"
+          <AxisLabel
             x={props.margin.left + PLOT_W / 2}
             y={props.height - 8}
             textAnchor="middle"
           >
             Week
-          </text>
-          <text
-            className="axis-label"
+          </AxisLabel>
+          <AxisLabel
             transform={`translate(${props.width - 14}, ${props.margin.top + PLOT_H / 2}) rotate(-90)`}
             textAnchor="middle"
           >
             Rank
-          </text>
+          </AxisLabel>
 
           {inWindow(PLAYOFFS_WEEK) && (
-            <g className="playoffs">
+            <Playoffs>
               <line
                 x1={x(PLAYOFFS_WEEK, effectiveStart, effectiveSpan)}
                 x2={x(PLAYOFFS_WEEK, effectiveStart, effectiveSpan)}
@@ -207,7 +202,7 @@ export default function RankingsChart(props: ChartProps) {
               >
                 Playoffs Begin
               </text>
-            </g>
+            </Playoffs>
           )}
 
           <g clipPath="url(#plot-clip)">
@@ -246,7 +241,7 @@ export default function RankingsChart(props: ChartProps) {
                     }
                     onClick={(e) => {
                       e.stopPropagation();
-                      togglePin(team.teamId);
+                      props.onClick(team.teamId);
                     }}
                   />
                   {active &&
@@ -281,7 +276,7 @@ export default function RankingsChart(props: ChartProps) {
                 week: h?.teamId === teamId ? h.week : undefined,
               }))
             }
-            onClick={togglePin}
+            onClick={(teamId) => props.onClick(teamId)}
             week={props.startWeek}
             pinnedTeams={[]}
             height={props.height}
@@ -289,14 +284,13 @@ export default function RankingsChart(props: ChartProps) {
 
           {(props.zoomedOut || start === maxStart) && (
             <g className="playoff-column">
-              <text
-                className="axis-label"
+              <AxisLabel
                 x={PLAYOFF_X}
                 y={props.margin.top - 8}
                 textAnchor="middle"
               >
                 Playoffs
-              </text>
+              </AxisLabel>
             </g>
           )}
         </Svg>
