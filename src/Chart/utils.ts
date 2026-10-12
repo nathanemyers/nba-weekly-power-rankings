@@ -5,8 +5,8 @@ export function getYforRank(
   height: number,
   margin: Margin,
 ): number {
+  const PLOT_H = height - margin.top - margin.bottom;
+
   const numTeams = Teams.length;
-  const plotHeight = height - margin.top - margin.bottom;
-  const perTeamHeight = plotHeight / numTeams;
-  return rank * perTeamHeight + margin.top + perTeamHeight / 2;
+  return margin.top + ((rank - 1) / (numTeams - 1)) * PLOT_H;
 }

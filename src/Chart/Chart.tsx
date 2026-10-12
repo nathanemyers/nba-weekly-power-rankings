@@ -89,8 +89,11 @@ interface ChartProps {
 }
 
 export default function RankingsChart(props: ChartProps) {
-  const [hover, setHover] = useState<Hover | null>(null);
-  const hoveredTeam = hover?.teamId;
+  const [hover, setHover] = useState<Hover | undefined>();
+  const hoveredTeam = props.teams.find((t) => t.teamId === hover?.teamId);
+  const hoveredTooltip = hover?.week
+    ? hoveredTeam?.rankings.find((r) => r.week === hover.week)
+    : undefined;
 
   const span = props.endWeek - props.startWeek;
 
@@ -103,29 +106,12 @@ export default function RankingsChart(props: ChartProps) {
 
   const x = (week: number, start: number) =>
     props.margin.left + ((week - start) / span) * PLOT_W;
-  const y = (rank: number) => props.margin.top + ((rank - 1) / 29) * PLOT_H;
-
-  // const rankingsByWeek = new Map(
-  //   props.teams.map((team) => [
-  //     team.teamId,
-  //     new Map(team.rankings.map((r) => [r.week, r])),
-  //   ]),
-  // );
+  const y = (rank: number) => getYforRank(rank, props.height, props.margin);
 
   const weeks = range(props.startWeek, props.endWeek);
 
   const inWindow = (week: number) =>
     week >= props.startWeek && week <= props.endWeek;
-
-  // const showTooltip =
-  //   hoverTeam &&
-  //   hover?.week !== undefined &&
-  //   (pinned === null || pinned === hover.teamId);
-  // const tooltipRanking = showTooltip
-  //   ? rankingsByWeek.get(hoverTeam.teamId)?.get(hover.week!)
-  //   : undefined;
-
-  const tooltipRanking = undefined;
 
   return (
     <ChartWrap onClick={() => props.onClick(undefined)}>
@@ -134,7 +120,7 @@ export default function RankingsChart(props: ChartProps) {
           viewBox={`0 0 ${props.width} ${props.height}`}
           role="img"
           aria-label="Weekly NBA power rankings line chart"
-          onMouseLeave={() => setHover(null)}
+          onMouseLeave={() => setHover(undefined)}
         >
           <defs>
             <clipPath id="plot-clip">
@@ -295,23 +281,23 @@ export default function RankingsChart(props: ChartProps) {
           </g>
         </Svg>
 
-        {tooltipRanking && hoveredTeam && (
+        {hoveredTooltip && (
           <Tooltip
             style={{
-              left: `${(x(tooltipRanking.week, props.startWeek) / props.width) * 100}%`,
-              top: `${(y(tooltipRanking.rank) / props.height) * 100}%`,
+              left: `${(x(hoveredTooltip.week, props.startWeek) / props.width) * 100}%`,
+              top: `${(y(hoveredTooltip.rank) / props.height) * 100}%`,
               transform:
-                x(tooltipRanking.week, props.startWeek) > props.width * 0.6
+                x(hoveredTooltip.week, props.startWeek) > props.width * 0.6
                   ? "translate(calc(-100% - 14px), -50%)"
                   : "translate(14px, -50%)",
             }}
           >
             <strong>
-              #{tooltipRanking.rank} {hover?.teamId}
-              {tooltipRanking.record && ` (${tooltipRanking.record})`}
+              #{hoveredTooltip.rank} {hover?.teamId}
+              {hoveredTooltip.record && ` (${hoveredTooltip.record})`}
             </strong>
-            <p>{tooltipRanking.summary}</p>
-            <small>Week {tooltipRanking.week}</small>
+            <p>{hoveredTooltip.summary}</p>
+            <small>Week {hoveredTooltip.week}</small>
           </Tooltip>
         )}
       </Relative>
