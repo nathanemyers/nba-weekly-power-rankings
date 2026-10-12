@@ -208,3 +208,21 @@ Task: "US3 — confirm tsc -b catches a deliberately broken season file (T016)"
 summary for full detail; this phase records only the actionable item.
 
 - [X] T021 Review `src/App.test.tsx` (added during implementation of T012 as a substitute for a manual browser check, since no browser-automation tool was available in-session) per T012 / FR-004 (unrequested): either keep it and add a line to this file's Notes section recording why it exists and what it covers, or remove it if an automated test for this behavior isn't wanted. **Resolved: removed** — the user chose not to keep it as a permanent test.
+
+---
+
+## Phase 8: Revision — storage format reverted from JS/TS modules to JSON
+
+**Purpose**: Direct user feedback after reviewing the implemented PR: "I don't like the way that
+we are outputting JS files in the scraper scripts. Can we instead configure vite to allow direct
+loading of JSON." This phase reverses FR-001/FR-002 (storage format) while keeping FR-003/FR-004
+(static, synchronous loading) intact. See `spec.md`'s Amendment note and `research.md` Decision 2
+(amended) for full rationale, including the SC-004 trade-off this costs.
+
+- [X] T022 Revert `scripts/scrape-playoffs.mjs` to write `data/playoffs.json` via `JSON.stringify(results, null, 2) + '\n'` (undoing T002); one-time reverse-migrate the existing `data/playoffs.js` back to `data/playoffs.json` with identical content, then delete `data/playoffs.js`.
+- [X] T023 Revert `scripts/build-rankings.mjs`'s postseason read to `const PLAYOFFS = JSON.parse(readFileSync(join(dataDir, 'playoffs.json'), 'utf8'))` (undoing T004) and its per-season output to `writeFileSync(join(outDir, \`${season}.json\`), JSON.stringify(output))` (undoing T005).
+- [X] T024 Update the `src/data/seasons/index.ts` barrel generation in `scripts/build-rankings.mjs` to import each season's `.json` file directly and cast each one `as SeasonData` (not a bare assignment), since TypeScript widens JSON string fields to `string` and a direct assignment to `SeasonData` would fail the `PlayoffStage` union check for every season, valid or not.
+- [X] T025 Add `"resolveJsonModule": true` to `tsconfig.app.json` so `tsc` accepts and types the barrel's JSON imports.
+- [X] T026 Run `npm run build:rankings` to regenerate `src/data/seasons/*.json` (deleting the stale `*.ts` files) and the updated barrel; verify byte-identical data against the pre-reversion `.ts` files for every season and against `data/playoffs.js`.
+- [X] T027 Run `npm run build`, `npm run lint`, `npm test`, and `npm run build && npm run preview`; confirm all pass and the production bundle still inlines all season data with no runtime JSON fetch paths.
+- [X] T028 Independently verify the new trade-off: confirm `tsc -b` still catches a missing required field (e.g. deleted `maxWeek`) but no longer catches an invalid `PlayoffStage` string value; revert both test edits afterward.

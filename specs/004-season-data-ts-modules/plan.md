@@ -6,12 +6,19 @@
 
 ## Summary
 
-Replace the JSON-based storage for per-season rankings (`src/data/seasons/*.json`) and postseason
-bracket results (`data/playoffs.json`) with plain JS/TS modules, and replace the app's dynamic
-`import.meta.glob`-based async loading with plain static ES module imports (via a generated
-barrel module), so selecting a season renders instantly with no loading state. The two generator
-scripts (`scripts/build-rankings.mjs`, `scripts/scrape-playoffs.mjs`) are updated to emit the new
-file formats; their maintainer-facing workflow is unchanged.
+Replace the app's dynamic `import.meta.glob`-based async loading of per-season rankings
+(`src/data/seasons/*.json`) and postseason bracket results (`data/playoffs.json`) with plain
+static ES module imports (via a generated barrel module), so selecting a season renders instantly
+with no loading state.
+
+**Amendment (2026-10-12)**: The initial implementation also converted the on-disk storage format
+from JSON to `.ts`/`.js` source modules (see `research.md` Decision 2, original). Per user
+feedback after that version was implemented and reviewed, the storage-format change was reverted
+— `scripts/scrape-playoffs.mjs` and `scripts/build-rankings.mjs` emit plain `.json` again. Only
+the *loading* mechanism changed: the generated barrel now statically `import`s each `.json` file
+(Vite and `tsc` support this natively with `resolveJsonModule`), which is just as synchronous as
+importing a `.ts` module. See `research.md` Decision 2 (amended) for why this trades away some of
+the compile-time validation the `.ts` approach provided.
 
 ## Technical Context
 
@@ -22,10 +29,10 @@ both already in use, unchanged by this feature.
 in favor of plain static imports), React 19, styled-components. No new runtime or dev dependency
 is introduced.
 
-**Storage**: Source-controlled files — one `.ts` module per season under `src/data/seasons/`, a
-generated `src/data/seasons/index.ts` barrel, and `data/playoffs.js` for postseason brackets. All
-committed to the repo (replacing the equivalent `.json` files 1:1), consistent with Constitution
-Principle II.
+**Storage**: Source-controlled files — one `.json` file per season under `src/data/seasons/`
+(unchanged format, per the amendment above), a generated `src/data/seasons/index.ts` barrel that
+statically imports each one, and `data/playoffs.json` for postseason brackets (also unchanged
+format). All committed to the repo, consistent with Constitution Principle II.
 
 **Testing**: Vitest (`npm test`), already configured. No new test tooling needed; existing/added
 tests verify data-shape parity (see `quickstart.md` §4).
@@ -55,9 +62,9 @@ spec Assumptions — bundle size is not a concern).
 | Principle | Check | Result |
 |---|---|---|
 | I. Static Hosting Only | No server, function, or runtime API is introduced; data continues to ship as static files bundled into `dist/`. | PASS |
-| II. Data Is Prepared at Build Time | Season/postseason data is still produced ahead of time by `scripts/*.mjs` and committed to the repo; only the file format (`.ts`/`.js` instead of `.json`) changes — the principle's `.json` reference is an example ("e.g."), not a requirement. | PASS |
+| II. Data Is Prepared at Build Time | Season/postseason data is still produced ahead of time by `scripts/*.mjs` and committed to the repo as `.json` (format unchanged, per the amendment above). | PASS |
 | III. Base-Path-Safe, Server-Free Navigation | No URL, routing, or asset-path behavior changes; season data moves from a fetched asset to a bundled module, which is strictly simpler for this principle. | PASS |
-| IV. Respectful, Offline Data Collection | Scraping scripts and their cadence are unchanged; raw bracket input continues to live under `data/` (now `data/playoffs.js` instead of `.json`). | PASS |
+| IV. Respectful, Offline Data Collection | Scraping scripts and their cadence are unchanged; raw bracket input continues to live under `data/` as `data/playoffs.json`. | PASS |
 | V. Simplicity | Removes a bundler-specific dynamic-loading mechanism (`import.meta.glob` + async state) in favor of plain static imports already native to the stack; no new dependency. | PASS |
 
 No violations — Complexity Tracking is not needed for this feature.
@@ -87,28 +94,30 @@ no new project). Only the files below are touched; everything else in the tree i
 
 ```text
 data/
-└── playoffs.js                  # was playoffs.json — raw postseason brackets, written by scrape-playoffs.mjs
+└── playoffs.json                # unchanged format — raw postseason brackets, written by scrape-playoffs.mjs
 
 src/
 ├── App.tsx                      # season picker + chart host — drops import.meta.glob/async loading
 ├── Chart/
-│   └── types.ts                 # SeasonData/WeekRanking/PlayoffStage — unchanged, now the type for each season module
+│   └── types.ts                 # SeasonData/WeekRanking/PlayoffStage — unchanged
 └── data/
     └── seasons/
-        ├── <season>.ts          # one per season, was <season>.json — e.g. 2024-25.ts
-        └── index.ts             # NEW — generated barrel: static imports + seasonData map + sorted seasons list
+        ├── <season>.json        # one per season — format unchanged, e.g. 2024-25.json
+        └── index.ts             # NEW — generated barrel: static JSON imports + seasonData map + sorted seasons list
 
 scripts/
-├── build-rankings.mjs           # emits src/data/seasons/*.ts + index.ts; reads data/playoffs.js via static import
-└── scrape-playoffs.mjs          # emits data/playoffs.js instead of data/playoffs.json
+├── build-rankings.mjs           # emits src/data/seasons/*.json (unchanged) + the new index.ts barrel
+└── scrape-playoffs.mjs          # emits data/playoffs.json (unchanged)
 ```
 
-**Structure Decision**: No new top-level areas. `src/data/seasons/` and `data/playoffs.*` keep
-their current locations; only their file extensions/export syntax change, plus the new generated
-`src/data/seasons/index.ts` barrel that lets `App.tsx` reach all season data through one static
-import (see `research.md` Decision 1). `scripts/build-rankings.mjs` and
-`scripts/scrape-playoffs.mjs` keep their current responsibilities and are invoked the same way
-(`npm run build:rankings`, `npm run scrape:playoffs`).
+**Structure Decision**: No new top-level areas, and (per the amendment above) no file-format
+change either. `src/data/seasons/` and `data/playoffs.json` keep their current locations and
+format; the only addition is the generated `src/data/seasons/index.ts` barrel that lets
+`App.tsx` reach all season data through one static import instead of a glob (see `research.md`
+Decision 1), importing `.json` files directly rather than `.ts` modules (Decision 2, amended).
+`scripts/build-rankings.mjs` and `scripts/scrape-playoffs.mjs` keep their current responsibilities
+and are invoked the same way (`npm run build:rankings`, `npm run scrape:playoffs`).
+`tsconfig.app.json` gained `"resolveJsonModule": true` so `tsc` can type JSON imports.
 
 ## Complexity Tracking
 

@@ -1,11 +1,11 @@
-// Scrapes postseason results from Basketball-Reference into data/playoffs.js.
+// Scrapes postseason results from Basketball-Reference into data/playoffs.json.
 // Run with `npm run scrape:playoffs`. Requests are spaced 3 seconds apart to match the site's Crawl-delay.
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-const outFile = join(root, 'data', 'playoffs.js')
+const outFile = join(root, 'data', 'playoffs.json')
 
 // Basketball-Reference names a season by the year it ends: 2017-18 is /playoffs/NBA_2018.html
 const FIRST_END_YEAR = 2018
@@ -89,7 +89,7 @@ for (let endYear = FIRST_END_YEAR; endYear <= LAST_END_YEAR; endYear++) {
   const url = `https://www.basketball-reference.com/playoffs/NBA_${endYear}.html`
   console.log(`Fetching ${season} ${url}`)
   results[season] = { source: url, ...parseSeason(await fetchPage(url)) }
-  writeFileSync(outFile, `export default ${JSON.stringify(results, null, 2)};\n`)
+  writeFileSync(outFile, JSON.stringify(results, null, 2) + '\n')
   if (endYear < LAST_END_YEAR) await sleep(CRAWL_DELAY_MS)
 }
 

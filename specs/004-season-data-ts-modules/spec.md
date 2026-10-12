@@ -8,6 +8,16 @@
 
 **Input**: User description: "change the way that data is being stored for the data/seasons and postseason results from JSON to plain js/ts files. We do not need to worry about the size of the binary and we do no need the added complexity of async loading"
 
+**Amendment (2026-10-12)**: After implementation, the storage-format decision in FR-001/FR-002 was
+reversed per user feedback ("I don't like the way that we are outputting JS files in the scraper
+scripts. Can we instead configure vite to allow direct loading of JSON"). The underlying goal —
+static, synchronous loading with no loading state — stands and is unchanged (FR-003/FR-004/FR-005
+below). Only the file *format* reverted: season and postseason data are plain `.json` again
+(Vite and `tsc` support static JSON imports natively), not `.ts`/`.js` source modules. FR-001 and
+FR-002 below are struck through to preserve the history of what was tried; see `research.md`
+Decision 2 (amended) for the mechanical detail and the type-safety trade-off this reversal costs
+against SC-004.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Instant season switching (Priority: P1)
@@ -64,9 +74,9 @@ A developer opens a season's data file to inspect or debug it and benefits from 
 
 ### Functional Requirements
 
-- **FR-001**: Per-season weekly ranking data (currently one JSON file per season) MUST be stored as plain JavaScript or TypeScript source modules, one per season, in place of JSON files.
-- **FR-002**: Postseason/playoff bracket results (currently a JSON file consumed when building each season's data) MUST likewise be stored as a plain JavaScript or TypeScript source module.
-- **FR-003**: The application MUST obtain all season and postseason data via static imports resolved at build time, not via dynamic imports, runtime `fetch`, or any other asynchronous loading mechanism.
+- ~~**FR-001**: Per-season weekly ranking data (currently one JSON file per season) MUST be stored as plain JavaScript or TypeScript source modules, one per season, in place of JSON files.~~ **Superseded by amendment above**: per-season data stays as JSON (`src/data/seasons/<season>.json`); only the loading mechanism (FR-003) changed.
+- ~~**FR-002**: Postseason/playoff bracket results (currently a JSON file consumed when building each season's data) MUST likewise be stored as a plain JavaScript or TypeScript source module.~~ **Superseded by amendment above**: postseason data stays as `data/playoffs.json`.
+- **FR-003**: The application MUST obtain all season and postseason data via static imports resolved at build time, not via dynamic imports, runtime `fetch`, or any other asynchronous loading mechanism. (JSON imports satisfy this the same way JS/TS module imports would — both resolve statically at build time.)
 - **FR-004**: The UI MUST NOT display a loading/placeholder state for season data, since the data is available synchronously once the app has loaded.
 - **FR-005**: The existing data-generation workflow (the script that turns scraped article data and postseason brackets into per-season data) MUST be updated to emit the new module format; the maintainer-facing workflow (run the build step after scraping) MUST otherwise remain unchanged.
 - **FR-006**: All data currently represented in the JSON files (every season's weekly rankings, records, summaries, and postseason stage per team) MUST be preserved exactly in the migrated modules — the migration MUST NOT lose or alter any existing information.
@@ -74,8 +84,8 @@ A developer opens a season's data file to inspect or debug it and benefits from 
 
 ### Key Entities
 
-- **Season Ranking Record**: One per season. Holds that season's maximum week number and, per team, the sequence of weekly entries (week number, rank, optional win-loss record, summary blurb). Replaces one `src/data/seasons/<season>.json` file per season.
-- **Postseason Result**: The bracket of playoff rounds and series for a season, used to determine the furthest stage each team reached (first round, semis, conference finals, finals, champion). Replaces the current `data/playoffs.json` file; its resolved per-team stage continues to be attached to the corresponding Season Ranking Record.
+- **Season Ranking Record**: One per season. Holds that season's maximum week number and, per team, the sequence of weekly entries (week number, rank, optional win-loss record, summary blurb). Stored as `src/data/seasons/<season>.json` (format unchanged by the amendment above — only how the app imports it changed).
+- **Postseason Result**: The bracket of playoff rounds and series for a season, used to determine the furthest stage each team reached (first round, semis, conference finals, finals, champion). Stored as `data/playoffs.json` (format unchanged); its resolved per-team stage continues to be attached to the corresponding Season Ranking Record.
 
 ## Success Criteria *(mandatory)*
 
@@ -84,7 +94,7 @@ A developer opens a season's data file to inspect or debug it and benefits from 
 - **SC-001**: Switching the selected season in the UI shows that season's full rankings with zero visible loading states, 100% of the time.
 - **SC-002**: Every season currently published (all existing years) renders identical rankings and postseason markers after the migration as it did before, with no discrepancies.
 - **SC-003**: Regenerating a season's data from its scraped source articles after the migration requires the same number of maintainer steps as before (no added manual steps).
-- **SC-004**: A malformed or incomplete season entry is caught before the site is published, rather than surfacing as a runtime error or silently missing data for site visitors.
+- **SC-004**: A malformed or incomplete season entry is caught before the site is published, rather than surfacing as a runtime error or silently missing data for site visitors. **Partially regressed by the amendment above**: missing/structurally-wrong fields (e.g. a season entry missing `maxWeek`) are still caught by `tsc -b`, but an invalid `PlayoffStage` string value is not — TypeScript widens JSON string fields to `string`, so the per-season `as SeasonData` cast in the generated barrel can no longer narrow that one field. See `research.md` Decision 2 (amended).
 
 ## Assumptions
 

@@ -1,4 +1,4 @@
-export default {
+{
   "2017-18": {
     "source": "https://www.basketball-reference.com/playoffs/NBA_2018.html",
     "champion": "gsw",
@@ -1322,4 +1322,4 @@ export default {
       }
     ]
   }
-};
+}

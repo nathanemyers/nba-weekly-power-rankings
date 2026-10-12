@@ -5,8 +5,8 @@ involved and `research.md` for why each mechanism was chosen).
 
 ## Prerequisites
 
-- Working tree includes the migrated `src/data/seasons/*.ts` files, the generated
-  `src/data/seasons/index.ts` barrel, and `data/playoffs.js`.
+- Working tree includes `src/data/seasons/*.json` (unchanged format), the generated
+  `src/data/seasons/index.ts` barrel, and `data/playoffs.json` (unchanged format).
 - `npm install` has been run.
 
 ## 1. Data regeneration still works end-to-end
@@ -15,19 +15,22 @@ involved and `research.md` for why each mechanism was chosen).
 npm run build:rankings
 ```
 
-**Expected**: the command regenerates every file in `src/data/seasons/` (now `.ts`) plus
-`src/data/seasons/index.ts`, with the same per-season week/team counts it used to log for the
-JSON output. No manual edits anywhere are required afterward for the app to pick up the new data.
+**Expected**: the command regenerates every file in `src/data/seasons/` (still `.json`) plus
+`src/data/seasons/index.ts`, with the same per-season week/team counts it used to log before this
+feature. No manual edits anywhere are required afterward for the app to pick up the new data.
 
-## 2. Type checking catches malformed season data
+## 2. Type checking catches structurally malformed season data
 
 ```bash
 npm run build
 ```
 
-**Expected**: `tsc -b` passes. To confirm it would actually catch a problem (spec edge case),
-temporarily introduce an invalid value in one season file (e.g. an out-of-range `PlayoffStage`
-string) and re-run — the build MUST fail with a type error, then revert the change.
+**Expected**: `tsc -b` passes. To confirm it would actually catch a problem, temporarily delete a
+required field (e.g. `maxWeek`) from one season's `.json` file and re-run — the build MUST fail
+with a type error, then revert the change. Note the amended trade-off (research.md Decision 2,
+amended): this only catches structurally missing/wrong-shaped fields, not an invalid
+`PlayoffStage` string value — that specific check was given up when the storage format reverted
+to JSON.
 
 ## 3. No async/loading state remains in the UI
 
