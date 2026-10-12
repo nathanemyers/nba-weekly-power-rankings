@@ -5,13 +5,13 @@ export type WeekRanking = {
   summary: string;
 };
 
-// Furthest postseason stage a team reached
-export type PlayoffStage =
-  | "first-round"
-  | "semis"
-  | "conf-finals"
-  | "finals"
-  | "champion";
+export enum PlayoffStage {
+  FirstRound = "first-round",
+  SecondRound = "second-round",
+  ConferenceFinals = "conf-finals",
+  Finals = "finals",
+  Champion = "champ",
+}
 
 // Output of scripts/build-rankings.mjs, one file per season
 export type SeasonData = {
