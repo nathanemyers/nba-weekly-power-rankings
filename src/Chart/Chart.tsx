@@ -85,7 +85,7 @@ interface ChartProps {
   height: number;
   margin: Margin;
   pinnedTeams: Team[];
-  onClick: (team?: Team) => {};
+  onClick: (team?: Team) => void;
 }
 
 export default function RankingsChart(props: ChartProps) {

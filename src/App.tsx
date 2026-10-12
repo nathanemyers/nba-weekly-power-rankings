@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import RankingsChart from "./Chart/Chart";
 import { seasonData, seasons } from "./data/seasons";
-import { Teams, type TeamRankings } from "./types";
+import { Team, Teams, type TeamRankings } from "./types";
 
 function loadSeason(season: string) {
   const data = seasonData[season];
@@ -82,6 +82,7 @@ function App() {
   const [zoomedOut, setZoomedOut] = useState(false);
   const [zoomedInstartWeek, setZoomedInstartWeek] = useState(1);
   const [zoomedInendWeek, setZoomedInendWeek] = useState(10);
+  const [pinnedTeams, setPinnedTeams] = useState<Team[]>([]);
   const data = loadSeason(season);
 
   const startWeek = zoomedOut ? 1 : zoomedInstartWeek;
@@ -112,7 +113,14 @@ function App() {
         width={960}
         height={600}
         margin={{ top: 30, right: 120, bottom: 60, left: 190 }}
-        pinnedTeams={[]}
+        pinnedTeams={pinnedTeams}
+        onClick={(team?: Team) => {
+          if (team) {
+            setPinnedTeams([team]);
+          } else {
+            setPinnedTeams([]);
+          }
+        }}
       />
 
       <Button onClick={() => setZoomedOut(!zoomedOut)}>
