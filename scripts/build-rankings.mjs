@@ -25,7 +25,6 @@ const MAX_BLURB_LENGTH = 260
 // Postseason results from scripts/scrape-playoffs.mjs. Teams are keyed by season and slug
 const PLAYOFFS = JSON.parse(readFileSync(join(dataDir, 'playoffs.json'), 'utf8'))
 
-
 // Summaries open with stat lines ("Record: 25-4", "OffRtg: ...") before the prose.
 // Keep only the first line of prose, cut to a sentence-ish length.
 function cleanSummary(summaryText) {
@@ -111,3 +110,26 @@ for (const [season, articles] of [...bySeason].sort()) {
   writeFileSync(file, JSON.stringify(output))
   console.log(`${season}: ${seenWeeks.size} weeks, ${Object.keys(rankings).length} teams -> ${file}`)
 }
+
+// Statically imports every season's JSON so the app can reach them all through one import,
+// with no import.meta.glob/async loading (tsconfig's resolveJsonModule types each import).
+// TS widens JSON string fields to `string`, so each import is cast to SeasonData rather than
+// assigned directly — a plain assignment would fail on the `playoffs` field's PlayoffStage
+// union even for valid data.
+const seasons = [...bySeason.keys()].sort().reverse()
+const indexFile = join(outDir, 'index.ts')
+writeFileSync(
+  indexFile,
+  [
+    `import type { SeasonData } from '../../Chart/types';`,
+    ...seasons.map((season) => `import season_${season.replace('-', '_')} from './${season}.json';`),
+    '',
+    `export const seasonData: Record<string, SeasonData> = {`,
+    ...seasons.map((season) => `  '${season}': season_${season.replace('-', '_')} as SeasonData,`),
+    `};`,
+    '',
+    `export const seasons: string[] = Object.keys(seasonData).sort().reverse();`,
+    '',
+  ].join('\n'),
+)
+console.log(`index: ${seasons.length} seasons -> ${indexFile}`)
