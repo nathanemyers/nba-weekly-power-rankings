@@ -1,103 +1,51 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
-import { type Team } from "./teams";
-import { PlayoffStage, type WeekRanking } from "./types";
-import { interpolate, useChartTransition } from "./useChartTransition";
-
-export type TeamRankings = Team & {
-  rankings: WeekRanking[];
-  playoff?: PlayoffStage;
-};
-
-const PLAYOFF_MEDALS: Record<PlayoffStage, { icon: string; label: string }> = {
-  [PlayoffStage.FirstRound]: { icon: "🥉", label: "Lost in the first round" },
-  [PlayoffStage.SecondRound]: { icon: "🥈", label: "Lost in the second round" },
-  [PlayoffStage.ConferenceFinals]: {
-    icon: "🥇",
-    label: "Lost in the conference finals",
-  },
-  [PlayoffStage.Finals]: { icon: "🏆", label: "Runner-up in the Finals" },
-  [PlayoffStage.Champion]: { icon: "👑", label: "NBA champion" },
-};
+import { type Team, type TeamRankings } from "../types";
+import { interpolate } from "./useChartTransition";
+import TeamLabels, { PLAYOFF_MEDALS } from "./TeamLabels";
 
 export const DEFAULT_WINDOW_WEEKS = 10;
 const PLAYOFFS_WEEK = 24;
 
-const W = 960;
-const H = 600;
-const M = { top: 30, right: 120, bottom: 60, left: 190 };
 // Room around the plot so dots on rank 1 and rank 30 aren't clipped
 const CLIP_PAD = 12;
+
 // Playoff column sits between the rank numbers and the "Rank" axis label
-const PLAYOFF_X = M.left + (W - M.left - M.right) + 60;
-const PLOT_W = W - M.left - M.right;
-const PLOT_H = H - M.top - M.bottom;
-
-const x = (week: number, start: number, span: number) =>
-  M.left + ((week - start) / span) * PLOT_W;
-const y = (rank: number) => M.top + ((rank - 1) / 29) * PLOT_H;
-
 const RANK_TICKS = [1, 5, 10, 15, 20, 25, 30];
 
-type Hover = { slug: string; week?: number };
+type Hover = { teamId: Team; week?: number };
 
 interface ChartProps {
   teams: TeamRankings[];
-  maxWeek: number;
-  zoomedOut: boolean;
-  onToggleZoom: () => void;
-  windowWeeks?: number;
+  startWeek: number;
+  endWeek: number;
+  width: number;
+  height: number;
+  margin: { top: number; right: number; bottom: number; left: number };
+  pinnedTeams: Team[];
 }
 
 export default function RankingsChart(props: ChartProps) {
-  const [start, setStart] = useState(1);
-  const [pinned, setPinned] = useState<string | null>(null);
   const [hover, setHover] = useState<Hover | null>(null);
-  // Tracks the zoomedOut value as of the last render so we can clear a stale tooltip the
-  // moment it changes, without a setState-in-effect cascading render (React's "adjusting state
-  // when a prop changes during render" pattern).
-  const [prevZoomedOut, setPrevZoomedOut] = useState(props.zoomedOut);
-  if (prevZoomedOut !== props.zoomedOut) {
-    setPrevZoomedOut(props.zoomedOut);
-    setHover(null);
-  }
 
-  // Recomputed from props every render so it reflects a season's current week count live
-  // (e.g. a future in-progress season growing week over week), never cached.
-  const canZoomOut = props.maxWeek > props.windowWeeks;
+  const PLAYOFF_X =
+    props.margin.left +
+    (props.width - props.margin.left - props.margin.right) +
+    60;
+  const PLOT_W = props.width - props.margin.left - props.margin.right;
+  const PLOT_H = props.height - props.margin.top - props.margin.bottom;
 
-  const maxStart = Math.max(1, props.maxWeek - props.windowWeeks);
+  const x = (week: number, start: number, span: number) =>
+    props.margin.left + ((week - start) / span) * PLOT_W;
+  const y = (rank: number) => props.margin.top + ((rank - 1) / 29) * PLOT_H;
 
-  // Lookup of slug -> week -> ranking. Weeks can be missing for a team, so don't index by position
   const rankingsByWeek = new Map(
     props.teams.map((team) => [
-      team.slug,
+      team.teamId,
       new Map(team.rankings.map((r) => [r.week, r])),
     ]),
   );
 
-  useEffect(() => {
-    if (props.zoomedOut) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") setStart((s) => Math.max(1, s - 1));
-      if (e.key === "ArrowRight") setStart((s) => Math.min(maxStart, s + 1));
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [maxStart, props.zoomedOut]);
-
-  const target = {
-    start: props.zoomedOut ? 1 : start,
-    span: props.zoomedOut ? Math.max(1, props.maxWeek - 1) : props.windowWeeks,
-  };
-
-  const transition = useChartTransition(target);
-  const effectiveStart = transition.start;
-  const effectiveSpan = transition.span;
-  // True for both modes: windowed settles to start + windowWeeks; full-season settles to
-  // 1 + (maxWeek - 1) = maxWeek. Using the animated values lets week ticks slide in/out smoothly
-  // during a transition instead of snapping to the target set instantly.
-  const effectiveEnd = effectiveStart + effectiveSpan;
   const weeks = Array.from(
     { length: Math.ceil(effectiveEnd) - Math.floor(effectiveStart) + 1 },
     (_, i) => Math.floor(effectiveStart) + i,
@@ -119,55 +67,26 @@ export default function RankingsChart(props: ChartProps) {
     const toRank = toFirst?.rank ?? fromFirst?.rank;
     if (fromRank === undefined || toRank === undefined) continue;
     labelPositions.set(
-      team.slug,
+      team.teamId,
       interpolate(y(fromRank), y(toRank), transition.progress),
     );
   }
 
-  const activeSlug = pinned ?? hover?.slug ?? null;
-  const hoverTeam = hover && props.teams.find((t) => t.slug === hover.slug);
+  const activeSlug = pinned ?? hover?.teamId ?? null;
+  const hoverTeam = hover && props.teams.find((t) => t.teamId === hover.teamId);
   const showTooltip =
     hoverTeam &&
     hover?.week !== undefined &&
-    (pinned === null || pinned === hover.slug);
+    (pinned === null || pinned === hover.teamId);
   const tooltipRanking = showTooltip
-    ? rankingsByWeek.get(hoverTeam.slug)?.get(hover.week!)
+    ? rankingsByWeek.get(hoverTeam.teamId)?.get(hover.week!)
     : undefined;
 
-  const togglePin = (slug: string) =>
-    setPinned((p) => (p === slug ? null : slug));
+  const togglePin = (teamId: string) =>
+    setPinned((p) => (p === teamId ? null : teamId));
 
   return (
     <ChartWrap onClick={() => setPinned(null)}>
-      <Controls>
-        <Button
-          onClick={(e) => {
-            e.stopPropagation();
-            setStart((s) => Math.max(1, s - 1));
-          }}
-          disabled={props.zoomedOut || start === 1}
-        >
-          ◀ Earlier
-        </Button>
-        <WeekRange>
-          {props.zoomedOut
-            ? `Full season (Weeks 1–${props.maxWeek})`
-            : /* Reads the raw (non-animated) target, not effectiveEnd — this readout should
-                 snap to the new range instantly like the buttons' disabled state does, not
-                 flash through fractional in-between values while the chart animates. */
-              `Weeks ${start}–${Math.min(start + props.windowWeeks, props.maxWeek)}`}
-        </WeekRange>
-        <Button
-          onClick={(e) => {
-            e.stopPropagation();
-            setStart((s) => Math.min(maxStart, s + 1));
-          }}
-          disabled={props.zoomedOut || start >= maxStart}
-        >
-          Later ▶
-        </Button>
-      </Controls>
-
       <Relative>
         <Svg
           viewBox={`0 0 ${W} ${H}`}
@@ -178,8 +97,8 @@ export default function RankingsChart(props: ChartProps) {
           <defs>
             <clipPath id="plot-clip">
               <rect
-                x={M.left - CLIP_PAD}
-                y={M.top - CLIP_PAD}
+                x={props.margin.left - CLIP_PAD}
+                y={props.margin.top - CLIP_PAD}
                 width={PLOT_W + CLIP_PAD * 2}
                 height={PLOT_H + CLIP_PAD * 2}
               />
@@ -190,14 +109,14 @@ export default function RankingsChart(props: ChartProps) {
             <g key={r}>
               <line
                 className="grid"
-                x1={M.left}
-                x2={M.left + PLOT_W}
+                x1={props.margin.left}
+                x2={props.margin.left + PLOT_W}
                 y1={y(r)}
                 y2={y(r)}
               />
               <text
                 className="tick"
-                x={M.left + PLOT_W + 10}
+                x={props.margin.left + PLOT_W + 10}
                 y={y(r)}
                 dominantBaseline="middle"
               >
@@ -211,7 +130,7 @@ export default function RankingsChart(props: ChartProps) {
               key={w}
               className="tick"
               x={x(w, effectiveStart, effectiveSpan)}
-              y={M.top + PLOT_H + 22}
+              y={props.margin.top + PLOT_H + 22}
               textAnchor="middle"
             >
               {w}
@@ -219,15 +138,15 @@ export default function RankingsChart(props: ChartProps) {
           ))}
           <text
             className="axis-label"
-            x={M.left + PLOT_W / 2}
-            y={H - 8}
+            x={props.margin.left + PLOT_W / 2}
+            y={props.height - 8}
             textAnchor="middle"
           >
             Week
           </text>
           <text
             className="axis-label"
-            transform={`translate(${W - 14}, ${M.top + PLOT_H / 2}) rotate(-90)`}
+            transform={`translate(${props.width - 14}, ${props.margin.top + PLOT_H / 2}) rotate(-90)`}
             textAnchor="middle"
           >
             Rank
@@ -238,12 +157,12 @@ export default function RankingsChart(props: ChartProps) {
               <line
                 x1={x(PLAYOFFS_WEEK, effectiveStart, effectiveSpan)}
                 x2={x(PLAYOFFS_WEEK, effectiveStart, effectiveSpan)}
-                y1={M.top}
-                y2={M.top + PLOT_H}
+                y1={props.margin.top}
+                y2={props.margin.top + PLOT_H}
               />
               <text
                 x={x(PLAYOFFS_WEEK, effectiveStart, effectiveSpan) - 6}
-                y={M.top + 14}
+                y={props.margin.top + 14}
                 textAnchor="end"
               >
                 Playoffs Begin
@@ -253,7 +172,7 @@ export default function RankingsChart(props: ChartProps) {
 
           <g clipPath="url(#plot-clip)">
             {props.teams.map((team) => {
-              const active = activeSlug === team.slug;
+              const active = activeSlug === team.teamId;
               const dim = activeSlug !== null && !active;
               // Start a new subpath after a missing week so the line doesn't bridge the gap
               const d = team.rankings
@@ -265,7 +184,7 @@ export default function RankingsChart(props: ChartProps) {
                 .join(" ");
 
               return (
-                <g key={team.slug}>
+                <g key={team.teamId}>
                   <path
                     d={d}
                     fill="none"
@@ -281,13 +200,13 @@ export default function RankingsChart(props: ChartProps) {
                     style={{ cursor: "pointer" }}
                     onMouseEnter={() =>
                       setHover((h) => ({
-                        slug: team.slug,
-                        week: h?.slug === team.slug ? h.week : undefined,
+                        teamId: team.teamId,
+                        week: h?.teamId === team.teamId ? h.week : undefined,
                       }))
                     }
                     onClick={(e) => {
                       e.stopPropagation();
-                      togglePin(team.slug);
+                      togglePin(team.teamId);
                     }}
                   />
                   {active &&
@@ -304,7 +223,7 @@ export default function RankingsChart(props: ChartProps) {
                           strokeWidth={1.5}
                           style={{ cursor: "pointer" }}
                           onMouseEnter={() =>
-                            setHover({ slug: team.slug, week: r.week })
+                            setHover({ teamId: team.teamId, week: r.week })
                           }
                         />
                       ))}
@@ -313,66 +232,26 @@ export default function RankingsChart(props: ChartProps) {
             })}
           </g>
 
-          {props.teams.map((team) => {
-            // Label each team at its rank for the first visible week it was ranked — animated
-            // via labelPositions rather than the live (sweeping) inWindow lookup, so it glides
-            // to a new row instead of jumping when a transition changes which week is "first".
-            const labelY = labelPositions.get(team.slug);
-            if (labelY === undefined) return null;
-            const active = activeSlug === team.slug;
-            return (
-              <text
-                key={team.slug}
-                className="team-label"
-                x={M.left - 10}
-                y={labelY}
-                textAnchor="end"
-                dominantBaseline="middle"
-                fontWeight={active ? 700 : 400}
-                fill={active ? "#f5f5f7" : activeSlug ? "#5c5c63" : "#d1d1d6"}
-                onMouseEnter={() =>
-                  setHover((h) => ({
-                    slug: team.slug,
-                    week: h?.slug === team.slug ? h.week : undefined,
-                  }))
-                }
-                onClick={(e) => {
-                  e.stopPropagation();
-                  togglePin(team.slug);
-                }}
-              >
-                {team.name}
-              </text>
-            );
-          })}
-
-          {props.teams.map((team) => {
-            // Shares labelY with the name label above so the medal never visually detaches
-            // from it mid-transition.
-            const labelY = labelPositions.get(team.slug);
-            const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
-            if (labelY === undefined || !medal) return null;
-            return (
-              <text
-                key={`${team.slug}-medal`}
-                className="playoff-medal"
-                x={4}
-                y={labelY}
-                fontSize={14}
-                dominantBaseline="middle"
-              >
-                <title>{medal.label}</title>
-                {medal.icon}
-              </text>
-            );
-          })}
+          <TeamLabels
+            teams={props.teams}
+            labelPositions={labelPositions}
+            activeSlug={activeSlug}
+            marginLeft={props.margin.left}
+            onHover={(teamId) =>
+              setHover((h) => ({
+                teamId,
+                week: h?.teamId === teamId ? h.week : undefined,
+              }))
+            }
+            onClick={togglePin}
+          />
 
           {(props.zoomedOut || start === maxStart) && (
             <g className="playoff-column">
               <text
                 className="axis-label"
                 x={PLAYOFF_X}
-                y={M.top - 8}
+                y={props.margin.top - 8}
                 textAnchor="middle"
               >
                 Playoffs
@@ -385,7 +264,7 @@ export default function RankingsChart(props: ChartProps) {
                 if (!last || !medal) return null;
                 return (
                   <text
-                    key={`${team.slug}-playoff`}
+                    key={`${team.teamId}-playoff`}
                     className="playoff-medal"
                     x={PLAYOFF_X}
                     y={y(last.rank)}
@@ -422,63 +301,12 @@ export default function RankingsChart(props: ChartProps) {
           </Tooltip>
         )}
       </Relative>
-
-      {canZoomOut && (
-        <ZoomRow>
-          <Button
-            onClick={(e) => {
-              e.stopPropagation();
-              props.onToggleZoom();
-            }}
-          >
-            {props.zoomedOut ? "Zoom in" : "Zoom out"}
-          </Button>
-        </ZoomRow>
-      )}
     </ChartWrap>
   );
 }
 
 const ChartWrap = styled.div`
   width: 100%;
-  max-width: ${W}px;
-`;
-
-const Controls = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.75rem;
-`;
-
-const Button = styled.button`
-  background: #2c2c2e;
-  color: #f5f5f7;
-  border: 1px solid #3a3a3c;
-  border-radius: 6px;
-  padding: 0.4rem 0.9rem;
-  font: inherit;
-  cursor: pointer;
-
-  &:hover:not(:disabled) {
-    background: #3a3a3c;
-  }
-
-  &:disabled {
-    opacity: 0.35;
-    cursor: default;
-  }
-`;
-
-const WeekRange = styled.span`
-  color: #a1a1a6;
-  font-size: 0.95rem;
-`;
-
-const ZoomRow = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 0.75rem;
 `;
 
 const Relative = styled.div`
@@ -504,14 +332,6 @@ const Svg = styled.svg`
   .axis-label {
     fill: #a1a1a6;
     font-size: 15px;
-  }
-
-  .team-label {
-    cursor: pointer;
-    font-size: 13px;
-    transition:
-      fill 150ms,
-      font-weight 150ms;
   }
 
   .playoffs line {

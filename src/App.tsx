@@ -1,15 +1,15 @@
 import { useState } from "react";
 import styled from "styled-components";
-import RankingsChart, { type TeamRankings } from "./Chart/Chart";
-import { TEAMS } from "./Chart/teams";
+import RankingsChart from "./Chart/Chart";
 import { seasonData, seasons } from "./data/seasons";
+import { Teams, type TeamRankings } from "./types";
 
 function loadSeason(season: string) {
   const data = seasonData[season];
-  const teams: TeamRankings[] = TEAMS.map((team) => ({
+  const teams: TeamRankings[] = Teams.map((team) => ({
     ...team,
-    rankings: data.rankings[team.slug] ?? [],
-    playoff: data.playoffs?.[team.slug],
+    rankings: data.rankings[team.teamId] ?? [],
+    playoff: data.playoffs?.[team.teamId],
   })).filter((team) => team.rankings.length > 0);
   return { teams, maxWeek: data.maxWeek };
 }
@@ -58,12 +58,34 @@ const Select = styled.select`
   cursor: pointer;
 `;
 
+const Button = styled.button`
+  background: #2c2c2e;
+  color: #f5f5f7;
+  border: 1px solid #3a3a3c;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font: inherit;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: #3a3a3c;
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+`;
+
 function App() {
   const [season, setSeason] = useState(seasons[0]);
-  // Lives here, not in RankingsChart, so it survives that component's per-season remount
-  // (key={season} below) — switching seasons keeps the current zoom mode (see spec FR-010).
   const [zoomedOut, setZoomedOut] = useState(false);
+  const [zoomedInstartWeek, setZoomedInstartWeek] = useState(1);
+  const [zoomedInendWeek, setZoomedInendWeek] = useState(10);
   const data = loadSeason(season);
+
+  const startWeek = zoomedOut ? 1 : zoomedInstartWeek;
+  const endWeek = zoomedOut ? data.maxWeek : zoomedInendWeek;
 
   return (
     <Container>
@@ -81,13 +103,44 @@ function App() {
           ))}
         </Select>
       </SeasonRow>
+
       <RankingsChart
         key={season}
+        startWeek={startWeek}
+        endWeek={endWeek}
         teams={data.teams}
-        maxWeek={data.maxWeek}
-        zoomedOut={zoomedOut}
-        onToggleZoom={() => setZoomedOut((z) => !z)}
+        width={960}
+        height={600}
+        margin={{ top: 30, right: 120, bottom: 60, left: 190 }}
+        pinnedTeams={[]}
       />
+
+      <Button onClick={() => setZoomedOut(!zoomedOut)}>
+        {zoomedOut ? "Zoom in" : "Zoom out"}
+      </Button>
+      <Button
+        onClick={() => {
+          if (!zoomedOut) {
+            setZoomedInstartWeek((s) => Math.max(1, s - 1));
+            setZoomedInendWeek((e) => Math.max(1, e - 1));
+          }
+        }}
+        disabled={zoomedOut || zoomedInstartWeek <= 1}
+      >
+        Prev Week
+      </Button>
+
+      <Button
+        onClick={() => {
+          if (!zoomedOut) {
+            setZoomedInstartWeek((s) => Math.min(data.maxWeek, s + 1));
+            setZoomedInendWeek((e) => Math.min(data.maxWeek, e + 1));
+          }
+        }}
+        disabled={zoomedOut || zoomedInendWeek >= data.maxWeek}
+      >
+        Next Week
+      </Button>
     </Container>
   );
 }
