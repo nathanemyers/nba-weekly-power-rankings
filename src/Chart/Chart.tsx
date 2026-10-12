@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 import { type Team } from "./teams";
-import type { PlayoffStage, WeekRanking } from "./types";
+import { PlayoffStage, type WeekRanking } from "./types";
 import { interpolate, useChartTransition } from "./useChartTransition";
 
 export type TeamRankings = Team & {
@@ -10,11 +10,14 @@ export type TeamRankings = Team & {
 };
 
 const PLAYOFF_MEDALS: Record<PlayoffStage, { icon: string; label: string }> = {
-  "first-round": { icon: "🥉", label: "Lost in the first round" },
-  semis: { icon: "🥈", label: "Lost in the second round" },
-  "conf-finals": { icon: "🥇", label: "Lost in the conference finals" },
-  finals: { icon: "🏆", label: "Runner-up in the Finals" },
-  champion: { icon: "👑", label: "NBA champion" },
+  [PlayoffStage.FirstRound]: { icon: "🥉", label: "Lost in the first round" },
+  [PlayoffStage.SecondRound]: { icon: "🥈", label: "Lost in the second round" },
+  [PlayoffStage.ConferenceFinals]: {
+    icon: "🥇",
+    label: "Lost in the conference finals",
+  },
+  [PlayoffStage.Finals]: { icon: "🏆", label: "Runner-up in the Finals" },
+  [PlayoffStage.Champion]: { icon: "👑", label: "NBA champion" },
 };
 
 export const DEFAULT_WINDOW_WEEKS = 10;
@@ -38,59 +41,54 @@ const RANK_TICKS = [1, 5, 10, 15, 20, 25, 30];
 
 type Hover = { slug: string; week?: number };
 
-export default function RankingsChart({
-  teams,
-  maxWeek,
-  zoomedOut,
-  onToggleZoom,
-  windowWeeks = DEFAULT_WINDOW_WEEKS,
-}: {
+interface ChartProps {
   teams: TeamRankings[];
   maxWeek: number;
   zoomedOut: boolean;
   onToggleZoom: () => void;
   windowWeeks?: number;
-}) {
+}
+
+export default function RankingsChart(props: ChartProps) {
   const [start, setStart] = useState(1);
   const [pinned, setPinned] = useState<string | null>(null);
   const [hover, setHover] = useState<Hover | null>(null);
   // Tracks the zoomedOut value as of the last render so we can clear a stale tooltip the
   // moment it changes, without a setState-in-effect cascading render (React's "adjusting state
   // when a prop changes during render" pattern).
-  const [prevZoomedOut, setPrevZoomedOut] = useState(zoomedOut);
-  if (prevZoomedOut !== zoomedOut) {
-    setPrevZoomedOut(zoomedOut);
+  const [prevZoomedOut, setPrevZoomedOut] = useState(props.zoomedOut);
+  if (prevZoomedOut !== props.zoomedOut) {
+    setPrevZoomedOut(props.zoomedOut);
     setHover(null);
   }
 
   // Recomputed from props every render so it reflects a season's current week count live
   // (e.g. a future in-progress season growing week over week), never cached.
-  const canZoomOut = maxWeek > windowWeeks;
+  const canZoomOut = props.maxWeek > props.windowWeeks;
 
-  const maxStart = Math.max(1, maxWeek - windowWeeks);
+  const maxStart = Math.max(1, props.maxWeek - props.windowWeeks);
 
   // Lookup of slug -> week -> ranking. Weeks can be missing for a team, so don't index by position
   const rankingsByWeek = useMemo(
     () =>
       new Map(
-        teams.map((team) => [
+        props.teams.map((team) => [
           team.slug,
           new Map(team.rankings.map((r) => [r.week, r])),
         ]),
       ),
-    [teams],
+    [props.teams],
   );
 
   useEffect(() => {
-    if (zoomedOut) return;
+    if (props.zoomedOut) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") setStart((s) => Math.max(1, s - 1));
-      if (e.key === "ArrowRight")
-        setStart((s) => Math.min(maxStart, s + 1));
+      if (e.key === "ArrowRight") setStart((s) => Math.min(maxStart, s + 1));
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [maxStart, zoomedOut]);
+  }, [maxStart, props.zoomedOut]);
 
   // `start` itself is never mutated by zooming — only its effective value at render time —
   // so zooming back in restores exactly the windowed position the visitor left. This same
@@ -98,10 +96,12 @@ export default function RankingsChart({
   // one animation mechanism (useChartTransition) handles both triggers identically.
   const target = useMemo(
     () => ({
-      start: zoomedOut ? 1 : start,
-      span: zoomedOut ? Math.max(1, maxWeek - 1) : windowWeeks,
+      start: props.zoomedOut ? 1 : start,
+      span: props.zoomedOut
+        ? Math.max(1, props.maxWeek - 1)
+        : props.windowWeeks,
     }),
-    [zoomedOut, start, maxWeek, windowWeeks],
+    [props.zoomedOut, start, props.maxWeek, props.windowWeeks],
   );
   const transition = useChartTransition(target);
   const effectiveStart = transition.start;
@@ -113,8 +113,9 @@ export default function RankingsChart({
   const weeks = Array.from(
     { length: Math.ceil(effectiveEnd) - Math.floor(effectiveStart) + 1 },
     (_, i) => Math.floor(effectiveStart) + i,
-  ).filter((w) => w >= 1 && w <= maxWeek);
-  const inWindow = (week: number) => week >= effectiveStart && week <= effectiveEnd;
+  ).filter((w) => w >= 1 && w <= props.maxWeek);
+  const inWindow = (week: number) =>
+    week >= effectiveStart && week <= effectiveEnd;
   const inRange = (week: number, rangeStart: number, rangeSpan: number) =>
     week >= rangeStart && week <= rangeStart + rangeSpan;
 
@@ -127,7 +128,7 @@ export default function RankingsChart({
   // §8; data-model.md "Team Label Position").
   const labelPositions = useMemo(() => {
     const positions = new Map<string, number>();
-    for (const team of teams) {
+    for (const team of props.teams) {
       const fromFirst = team.rankings.find((r) =>
         inRange(r.week, transition.fromStart, transition.fromSpan),
       );
@@ -137,11 +138,14 @@ export default function RankingsChart({
       const fromRank = fromFirst?.rank ?? toFirst?.rank;
       const toRank = toFirst?.rank ?? fromFirst?.rank;
       if (fromRank === undefined || toRank === undefined) continue;
-      positions.set(team.slug, interpolate(y(fromRank), y(toRank), transition.progress));
+      positions.set(
+        team.slug,
+        interpolate(y(fromRank), y(toRank), transition.progress),
+      );
     }
     return positions;
   }, [
-    teams,
+    props.teams,
     transition.fromStart,
     transition.fromSpan,
     transition.toStart,
@@ -150,7 +154,7 @@ export default function RankingsChart({
   ]);
 
   const activeSlug = pinned ?? hover?.slug ?? null;
-  const hoverTeam = hover && teams.find((t) => t.slug === hover.slug);
+  const hoverTeam = hover && props.teams.find((t) => t.slug === hover.slug);
   const showTooltip =
     hoverTeam &&
     hover?.week !== undefined &&
@@ -170,24 +174,24 @@ export default function RankingsChart({
             e.stopPropagation();
             setStart((s) => Math.max(1, s - 1));
           }}
-          disabled={zoomedOut || start === 1}
+          disabled={props.zoomedOut || start === 1}
         >
           ◀ Earlier
         </Button>
         <WeekRange>
-          {zoomedOut
-            ? `Full season (Weeks 1–${maxWeek})`
+          {props.zoomedOut
+            ? `Full season (Weeks 1–${props.maxWeek})`
             : /* Reads the raw (non-animated) target, not effectiveEnd — this readout should
                  snap to the new range instantly like the buttons' disabled state does, not
                  flash through fractional in-between values while the chart animates. */
-              `Weeks ${start}–${Math.min(start + windowWeeks, maxWeek)}`}
+              `Weeks ${start}–${Math.min(start + props.windowWeeks, props.maxWeek)}`}
         </WeekRange>
         <Button
           onClick={(e) => {
             e.stopPropagation();
             setStart((s) => Math.min(maxStart, s + 1));
           }}
-          disabled={zoomedOut || start >= maxStart}
+          disabled={props.zoomedOut || start >= maxStart}
         >
           Later ▶
         </Button>
@@ -277,7 +281,7 @@ export default function RankingsChart({
           )}
 
           <g clipPath="url(#plot-clip)">
-            {teams.map((team) => {
+            {props.teams.map((team) => {
               const active = activeSlug === team.slug;
               const dim = activeSlug !== null && !active;
               // Start a new subpath after a missing week so the line doesn't bridge the gap
@@ -338,7 +342,7 @@ export default function RankingsChart({
             })}
           </g>
 
-          {teams.map((team) => {
+          {props.teams.map((team) => {
             // Label each team at its rank for the first visible week it was ranked — animated
             // via labelPositions rather than the live (sweeping) inWindow lookup, so it glides
             // to a new row instead of jumping when a transition changes which week is "first".
@@ -371,7 +375,7 @@ export default function RankingsChart({
             );
           })}
 
-          {teams.map((team) => {
+          {props.teams.map((team) => {
             // Shares labelY with the name label above so the medal never visually detaches
             // from it mid-transition.
             const labelY = labelPositions.get(team.slug);
@@ -392,7 +396,7 @@ export default function RankingsChart({
             );
           })}
 
-          {(zoomedOut || start === maxStart) && (
+          {(props.zoomedOut || start === maxStart) && (
             <g className="playoff-column">
               <text
                 className="axis-label"
@@ -402,8 +406,10 @@ export default function RankingsChart({
               >
                 Playoffs
               </text>
-              {teams.map((team) => {
-                const last = [...team.rankings].reverse().find((r) => inWindow(r.week));
+              {props.teams.map((team) => {
+                const last = [...team.rankings]
+                  .reverse()
+                  .find((r) => inWindow(r.week));
                 const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
                 if (!last || !medal) return null;
                 return (
@@ -451,10 +457,10 @@ export default function RankingsChart({
           <Button
             onClick={(e) => {
               e.stopPropagation();
-              onToggleZoom();
+              props.onToggleZoom();
             }}
           >
-            {zoomedOut ? "Zoom in" : "Zoom out"}
+            {props.zoomedOut ? "Zoom in" : "Zoom out"}
           </Button>
         </ZoomRow>
       )}
