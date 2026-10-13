@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { clamp } from "lodash";
 import RankingsChart, { DEFAULT_WINDOW_WEEKS } from "components/Chart/Chart";
 import { seasonData, seasons } from "./data/seasons";
+import GitHubBadge from "components/GitHubBadge";
 import RankSwings from "components/RankSwings/RankSwings";
 import TeamSummary from "components/TeamSummary";
-import { PlayoffStage, Team, Teams, type TeamRankings } from "types";
+import { PlayoffStage, Team, Teams, type TeamRankings } from "./types/nba";
 
 const CHART_WIDTH = 960;
 const CHART_HEIGHT = 600;
@@ -36,6 +37,10 @@ const Container = styled.main`
   font-family: system-ui, sans-serif;
   background: #1d1d1f;
   color: #f5f5f7;
+`;
+
+const StyledGitHubBadge = styled(GitHubBadge)`
+  align-self: flex-end;
 `;
 
 const Title = styled.h1`
@@ -159,6 +164,7 @@ function App() {
 
   return (
     <Container>
+      <StyledGitHubBadge />
       <Title>NBA Weekly Power Rankings</Title>
       <Subtitle>
         Hover a line or dot, click a team to pin it, use arrow keys to pan

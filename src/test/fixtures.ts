@@ -1,9 +1,4 @@
-import {
-  PlayoffStage,
-  Team,
-  type TeamRankings,
-  type WeekRanking,
-} from "../types";
+import { PlayoffStage, Team, type TeamRankings, type WeekRanking } from "types";
 
 export function weeklyRankings(maxWeek: number, rank: number): WeekRanking[] {
   return Array.from({ length: maxWeek }, (_, i) => ({

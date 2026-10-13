@@ -97,7 +97,7 @@ const indexFile = join(outDir, 'index.ts')
 writeFileSync(
   indexFile,
   [
-    `import type { SeasonData } from "../../types";`,
+    `import type { SeasonData } from "types";`,
     ...seasons.map((season) => `import season_${season.replace('-', '_')} from "./${season}.json";`),
     '',
     `export const seasonData: Record<string, SeasonData> = {`,

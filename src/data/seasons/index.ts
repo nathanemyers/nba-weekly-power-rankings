@@ -1,4 +1,4 @@
-import type { SeasonData } from "../../types";
+import type { SeasonData } from "types";
 import season_2025_26 from "./2025-26.json";
 import season_2024_25 from "./2024-25.json";
 import season_2023_24 from "./2023-24.json";

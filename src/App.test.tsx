@@ -298,10 +298,10 @@ describe("Rank swings pane", () => {
 
     expect(pane()).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Biggest risers" }),
+      screen.getByRole("heading", { name: "Biggest Improvements" }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Biggest fallers" }),
+      screen.getByRole("heading", { name: "Biggest Fall Offs" }),
     ).toBeInTheDocument();
     expect(indiana()).toHaveTextContent("26 → 9");
     expect(indiana()).toHaveTextContent("▲ 17");
@@ -332,7 +332,7 @@ describe("Rank swings pane", () => {
       }),
     ).toBeInTheDocument();
     expect(
-      screen.queryByRole("heading", { name: "Biggest risers" }),
+      screen.queryByRole("heading", { name: "Biggest Improvements" }),
     ).not.toBeInTheDocument();
   });
 
