@@ -10,3 +10,16 @@ To run locally:
 npm install
 npm run dev
 ```
+
+## Refreshing data
+
+After new weekly articles have been scraped into `data/`:
+
+```bash
+npm run build:summaries
+npm run build:rankings
+```
+
+`build:summaries` writes one AI-generated summary per team per season to `data/summaries/`, using the Anthropic API. It needs `ANTHROPIC_API_KEY` in the environment; `SUMMARY_MODEL` overrides the model (default `claude-opus-5-5`). Seasons that already have a champion in `data/playoffs.json` are generated once and never rewritten; the active season is regenerated only for teams whose weekly write-ups changed. Add `--dry-run` to see what would be generated without calling the API, or `--season 2024-25` to limit the run.
+
+`build:rankings` then rebuilds the app data under `src/data/seasons/`, including the summaries. Neither step runs during deploy, so commit the results.
