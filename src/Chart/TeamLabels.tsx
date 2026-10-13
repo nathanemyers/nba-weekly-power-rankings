@@ -1,38 +1,22 @@
-import { PlayoffStage } from "../types";
 import type { Margin, Team, TeamRankings } from "../types";
-import { getYforRank } from "./utils";
+import { interpolate, type ChartTransitionState } from "./useChartTransition";
+import { firstRankingInRange, getYforRank, PLAYOFF_MEDALS } from "./utils";
 import styled from "styled-components";
 
-export const PLAYOFF_MEDALS: Record<
-  PlayoffStage,
-  { icon: string; label: string }
-> = {
-  [PlayoffStage.FirstRound]: { icon: "🥉", label: "Lost in the first round" },
-  [PlayoffStage.SecondRound]: { icon: "🥈", label: "Lost in the second round" },
-  [PlayoffStage.ConferenceFinals]: {
-    icon: "🥇",
-    label: "Lost in the conference finals",
-  },
-  [PlayoffStage.Finals]: { icon: "🏆", label: "Runner-up in the Finals" },
-  [PlayoffStage.Champion]: { icon: "👑", label: "NBA champion" },
-};
-
-const TeamLabel = styled.text<{ pinned: boolean }>`
+const TeamLabel = styled.text`
   cursor: pointer;
   font-size: 13px;
   transition:
     fill 150ms,
     font-weight 150ms;
-
-  fill: ${(props) => (props.pinned ? "#f5f5f7" : "#d1d1d6")};
 `;
 
 const PlayoffMedal = styled.text``;
 
 interface TeamLabelsProps {
   teams: TeamRankings[];
-  week: number;
-  pinnedTeams: Team[];
+  transition: ChartTransitionState;
+  activeTeams: Team[];
   margin: Margin;
   height: number;
   onHover: (teamId: Team) => void;
@@ -40,20 +24,45 @@ interface TeamLabelsProps {
 }
 
 export default function TeamLabels(props: TeamLabelsProps) {
+  const { transition } = props;
+
+  // Labels glide between the first-visible-week rank of the old and new ranges
+  const labelY = (team: TeamRankings) => {
+    const from = firstRankingInRange(
+      team.rankings,
+      transition.fromStart,
+      transition.fromStart + transition.fromSpan,
+    );
+    const to = firstRankingInRange(
+      team.rankings,
+      transition.toStart,
+      transition.toStart + transition.toSpan,
+    );
+    const fromRank = from?.rank ?? to?.rank;
+    const toRank = to?.rank ?? from?.rank;
+    if (fromRank === undefined || toRank === undefined) return undefined;
+    return interpolate(
+      getYforRank(fromRank, props.height, props.margin),
+      getYforRank(toRank, props.height, props.margin),
+      transition.progress,
+    );
+  };
+
+  const anyActive = props.activeTeams.length > 0;
+
   const teamNames = props.teams.map((team) => {
-    const weekRanking = team.rankings[props.week];
-    const labelY = getYforRank(weekRanking.rank, props.height, props.margin);
-    if (labelY === undefined) return null;
-    const pinned = props.pinnedTeams.includes(team.teamId);
+    const y = labelY(team);
+    if (y === undefined) return null;
+    const active = props.activeTeams.includes(team.teamId);
     return (
       <TeamLabel
         key={team.teamId}
         x={props.margin.left - 10}
-        y={labelY}
+        y={y}
         textAnchor="end"
         dominantBaseline="middle"
-        fontWeight={pinned ? 700 : 400}
-        pinned={pinned}
+        fontWeight={active ? 700 : 400}
+        fill={active ? "#f5f5f7" : anyActive ? "#5c5c63" : "#d1d1d6"}
         onMouseEnter={() => props.onHover(team.teamId)}
         onClick={(e) => {
           e.stopPropagation();
@@ -66,15 +75,14 @@ export default function TeamLabels(props: TeamLabelsProps) {
   });
 
   const playoffMedals = props.teams.map((team) => {
-    const weekRanking = team.rankings[props.week];
-    const labelY = getYforRank(weekRanking.rank, props.height, props.margin);
+    const y = labelY(team);
     const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
-    if (labelY === undefined || !medal) return null;
+    if (y === undefined || !medal) return null;
     return (
       <PlayoffMedal
         key={`${team.teamId}-medal`}
         x={4}
-        y={labelY}
+        y={y}
         fontSize={14}
         dominantBaseline="middle"
       >
@@ -86,8 +94,8 @@ export default function TeamLabels(props: TeamLabelsProps) {
 
   return (
     <>
-      {teamNames}
-      {playoffMedals}
+      <g className="team-labels">{teamNames}</g>
+      <g className="team-medals">{playoffMedals}</g>
     </>
   );
 }

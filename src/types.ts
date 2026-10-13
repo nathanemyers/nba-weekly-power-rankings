@@ -12,10 +12,10 @@ export type WeekRanking = {
 
 export enum PlayoffStage {
   FirstRound = "first-round",
-  SecondRound = "second-round",
+  SecondRound = "semis",
   ConferenceFinals = "conf-finals",
   Finals = "finals",
-  Champion = "champ",
+  Champion = "champion",
 }
 
 // Output of scripts/build-rankings.mjs, one file per season
