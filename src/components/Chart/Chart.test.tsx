@@ -8,8 +8,8 @@ import {
   waitFor,
 } from "@testing-library/react";
 import RankingsChart from "./Chart";
-import { Team, type TeamRankings } from "../types";
-import { buildTeams, mockReducedMotion } from "../test/fixtures";
+import { Team, type TeamRankings } from "../../types";
+import { buildTeams, mockReducedMotion } from "test/fixtures";
 
 const WIDTH = 960;
 const HEIGHT = 600;
