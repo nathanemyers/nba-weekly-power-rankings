@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { type Margin, type Team, type TeamRankings } from "../../types";
+import { type Margin, type Team, type TeamRankings } from "types";
 import TeamLabels from "./TeamLabels";
 import { useChartTransition } from "./useChartTransition";
 import { getYforRank, PLAYOFF_MEDALS } from "./utils";

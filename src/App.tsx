@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { clamp } from "lodash";
-import RankingsChart, { DEFAULT_WINDOW_WEEKS } from "./components/Chart/Chart";
+import RankingsChart, { DEFAULT_WINDOW_WEEKS } from "components/Chart/Chart";
 import { seasonData, seasons } from "./data/seasons";
-import RankSwings from "./components/RankSwings/RankSwings";
-import TeamSummary from "./components/TeamSummary";
-import { PlayoffStage, Team, Teams, type TeamRankings } from "./types";
+import RankSwings from "components/RankSwings/RankSwings";
+import TeamSummary from "components/TeamSummary";
+import { PlayoffStage, Team, Teams, type TeamRankings } from "types";
 
 const CHART_WIDTH = 960;
 const CHART_HEIGHT = 600;

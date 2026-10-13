@@ -21,7 +21,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": false,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Aliases */
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "types": ["./src/types"],
+      "test/*": ["./src/test/*"]
+    }
   },
   "include": ["src"]
 }

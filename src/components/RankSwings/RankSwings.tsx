@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import TrendMinimap from "../TrendMinimap/TrendMinimap";
-import { PLAYOFF_MEDALS } from "../Chart/utils";
-import type { Team, TeamRankings } from "../../types";
+import TrendMinimap from "components/TrendMinimap/TrendMinimap";
+import { PLAYOFF_MEDALS } from "components/Chart/utils";
+import type { Team, TeamRankings } from "types";
 import { biggestSwings, type RankSwing } from "./utils";
 
 const Panel = styled.section`

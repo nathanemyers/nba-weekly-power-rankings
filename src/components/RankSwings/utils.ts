@@ -1,4 +1,4 @@
-import type { TeamRankings } from "../../types";
+import type { TeamRankings } from "types";
 
 export type RankSwing = {
   team: TeamRankings;

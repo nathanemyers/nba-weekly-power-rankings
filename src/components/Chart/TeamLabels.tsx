@@ -1,4 +1,4 @@
-import type { Margin, Team, TeamRankings } from "../types";
+import type { Margin, Team, TeamRankings } from "types";
 import { interpolate, type ChartTransitionState } from "./useChartTransition";
 import { firstRankingInRange, getYforRank, PLAYOFF_MEDALS } from "./utils";
 import styled from "styled-components";

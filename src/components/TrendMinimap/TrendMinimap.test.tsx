@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it } from "vitest";
 import { cleanup, render } from "@testing-library/react";
 import TrendMinimap from "./TrendMinimap";
-import { weeklyRankings } from "../../test/fixtures";
+import { weeklyRankings } from "test/fixtures";
 
 afterEach(cleanup);
 

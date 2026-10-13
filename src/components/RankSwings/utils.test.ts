@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { biggestSwings, getRankSwing } from "./utils";
-import { Team, Teams, type TeamRankings } from "../../types";
+import { Team, Teams, type TeamRankings } from "types";
 
 // One ranking per listed rank, on consecutive weeks from startWeek
 function team(teamId: Team, ranks: number[], startWeek = 1): TeamRankings {

@@ -1,6 +1,6 @@
 import { useId } from "react";
-import { Teams, type WeekRanking } from "../../types";
-import { getYforRank } from "../Chart/utils";
+import { Teams, type WeekRanking } from "types";
+import { getYforRank } from "components/Chart/utils";
 
 const PADDING = 3;
 const MARGIN = { top: PADDING, right: PADDING, bottom: PADDING, left: PADDING };
