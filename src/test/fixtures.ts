@@ -26,6 +26,24 @@ export function buildRankings(maxWeek: number): Record<string, WeekRanking[]> {
   };
 }
 
+// After week 1 Indiana rises 17 places, Miami rises 10 and Memphis falls 13
+export function buildSwingRankings(
+  maxWeek: number,
+): Record<string, WeekRanking[]> {
+  return {
+    [Team.Boston]: weeklyRankings(maxWeek, 1),
+    [Team.Indiana]: weeklyRankings(maxWeek, 9).map((r) =>
+      r.week === 1 ? { ...r, rank: 26 } : r,
+    ),
+    [Team.Miami]: weeklyRankings(maxWeek, 10).map((r) =>
+      r.week === 1 ? { ...r, rank: 20 } : r,
+    ),
+    [Team.Memphis]: weeklyRankings(maxWeek, 29).map((r) =>
+      r.week === 1 ? { ...r, rank: 16 } : r,
+    ),
+  };
+}
+
 export const PLAYOFFS = {
   [Team.Boston]: PlayoffStage.Champion,
   [Team.Miami]: PlayoffStage.SecondRound,

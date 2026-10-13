@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { clamp } from "lodash";
 import RankingsChart, { DEFAULT_WINDOW_WEEKS } from "./Chart/Chart";
 import { seasonData, seasons } from "./data/seasons";
+import RankSwings from "./RankSwings/RankSwings";
 import TeamSummary from "./TeamSummary";
-import { Team, Teams, type TeamRankings } from "./types";
+import { PlayoffStage, Team, Teams, type TeamRankings } from "./types";
 
 const CHART_WIDTH = 960;
 const CHART_HEIGHT = 600;
@@ -18,7 +19,10 @@ function loadSeason(season: string) {
     playoff: data.playoffs?.[team.teamId],
     aiSummary: data.summaries?.[team.teamId],
   })).filter((team) => team.rankings.length > 0);
-  return { teams, maxWeek: data.maxWeek };
+  const completed = Object.values(data.playoffs ?? {}).includes(
+    PlayoffStage.Champion,
+  );
+  return { teams, maxWeek: data.maxWeek, completed };
 }
 
 const Container = styled.main`
@@ -109,7 +113,7 @@ const ZoomRow = styled.div`
 
 function App() {
   const [season, setSeason] = useState(seasons[0]);
-  const [zoomedOut, setZoomedOut] = useState(false);
+  const [zoomedOut, setZoomedOut] = useState(true);
   const [zoomedInStartWeek, setZoomedInStartWeek] = useState(1);
   const [zoomedInEndWeek, setZoomedInEndWeek] = useState(
     1 + DEFAULT_WINDOW_WEEKS,
@@ -132,6 +136,9 @@ function App() {
       ? data.teams.find((team) => team.teamId === pinnedTeams[0])
       : undefined;
   const canZoom = windowStart > 1 || windowEnd < data.maxWeek;
+
+  const togglePin = (team?: Team) =>
+    setPinnedTeams(team && !pinnedTeams.includes(team) ? [team] : []);
 
   const page = (delta: number) => {
     const weeks = clamp(delta, 1 - windowStart, data.maxWeek - windowEnd);
@@ -158,7 +165,13 @@ function App() {
       </Subtitle>
       <SeasonRow>
         Season
-        <Select value={season} onChange={(e) => setSeason(e.target.value)}>
+        <Select
+          value={season}
+          onChange={(e) => {
+            setSeason(e.target.value);
+            setPinnedTeams([]);
+          }}
+        >
           {seasons.map((s) => (
             <option key={s} value={s}>
               {s}
@@ -191,9 +204,7 @@ function App() {
           height={CHART_HEIGHT}
           margin={CHART_MARGIN}
           pinnedTeams={pinnedTeams}
-          onClick={(team?: Team) =>
-            setPinnedTeams(team && !pinnedTeams.includes(team) ? [team] : [])
-          }
+          onClick={togglePin}
         />
 
         {canZoom && (
@@ -202,6 +213,15 @@ function App() {
               {zoomedOut ? "Zoom in" : "Zoom out"}
             </Button>
           </ZoomRow>
+        )}
+
+        {data.completed && (
+          <RankSwings
+            teams={data.teams}
+            maxWeek={data.maxWeek}
+            pinnedTeams={pinnedTeams}
+            onClick={togglePin}
+          />
         )}
 
         {pinnedTeam?.aiSummary && (
