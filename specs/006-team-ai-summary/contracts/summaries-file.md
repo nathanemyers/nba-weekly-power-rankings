@@ -6,7 +6,7 @@
     "summary": "Boston opened the season at No. 1 and ...",
     "sourceHash": "9f2c...e1",
     "weeks": 25,
-    "model": "claude-opus-5-5",
+    "model": "claude-sonnet-5-5",
     "generatedAt": "2026-10-12T19:30:00Z"
   }
 }

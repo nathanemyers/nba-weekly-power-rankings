@@ -41,8 +41,8 @@
 
 ## 7. Model and prompt
 
-- **Decision**: Anthropic Messages API via `@anthropic-ai/sdk`; model from `SUMMARY_MODEL`, default `claude-opus-5-5`; one request per team-season; fixed system prompt asking for one neutral paragraph of 80–120 words, past tense for complete seasons and present for the active one, using only the supplied text, no preamble.
-- **Rationale**: The default follows Anthropic's guidance to use the current Opus unless a cheaper model is chosen deliberately; `SUMMARY_MODEL=claude-sonnet-5-5` or `claude-haiku-5-5` is a reasonable cost choice for this small summarizing task. Effort is set to `low`, and the server-side refusal fallback is enabled on models that support it. The model that actually answered is recorded in provenance.
+- **Decision**: Anthropic Messages API via `@anthropic-ai/sdk`; model from `SUMMARY_MODEL`, default `claude-sonnet-5-5`; one request per team-season; fixed system prompt asking for one neutral paragraph of 80–120 words, past tense for complete seasons and present for the active one, using only the supplied text, no preamble.
+- **Rationale**: Sonnet is a deliberate cost choice for this small summarizing task, and the full nine-season backfill was generated with it; `SUMMARY_MODEL=claude-opus-5-5` or `claude-haiku-5-5` overrides it. Effort is set to `low`, and the server-side refusal fallback is enabled on models that support it. The model that actually answered is recorded in provenance.
 - **Failure handling**: Each season file is rewritten after every successful team, so an interrupted run resumes where it stopped. A team whose request fails or whose summary is rejected makes the script exit non-zero after attempting the rest; missing or rejected credentials stop the run at once, leaving earlier stored summaries intact. An empty or over-long response counts as a failure.
 
 ## 8. UI placement

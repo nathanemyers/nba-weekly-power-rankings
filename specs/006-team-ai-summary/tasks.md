@@ -33,7 +33,7 @@
 ### Implementation for User Story 1
 
 - [X] T008 [US1] Create scripts/lib/summary-plan.mjs exporting pure functions `buildPromptInput(entries)`, `hashInput(text)` (SHA-256 hex via `node:crypto`), and `decide({ entries, stored, complete })` returning `generate` when there are entries and no stored entry and `skip-no-data` when there are none (other cases added in US2 and US3)
-- [X] T009 [US1] Create scripts/build-summaries.mjs: for each season from `loadSeasonEntries()`, read data/summaries/<season>.json if present, call `decide` per team, and for `generate` call the Anthropic Messages API (`SUMMARY_MODEL`, default `claude-opus-5-5`) with the fixed system prompt from research.md §7 and the `buildPromptInput` text as the user message
+- [X] T009 [US1] Create scripts/build-summaries.mjs: for each season from `loadSeasonEntries()`, read data/summaries/<season>.json if present, call `decide` per team, and for `generate` call the Anthropic Messages API (`SUMMARY_MODEL`, default `claude-sonnet-5-5`) with the fixed system prompt from research.md §7 and the `buildPromptInput` text as the user message
 - [X] T010 [US1] In scripts/build-summaries.mjs validate each response and store it per data-model.md: `summary` "Non-empty, one paragraph, at most 1,200 characters" (trim; reject otherwise as a failure), `sourceHash` "SHA-256 hex of the exact prompt input", `weeks` "at least 1", `model`, `generatedAt` ISO-8601 UTC; write the season file with sorted keys after every successful team
 - [X] T011 [US1] In scripts/build-summaries.mjs implement the CLI contract in contracts/build-summaries-cli.md: `--dry-run`, repeatable `--season <id>`, one result line per season (generated / skipped-locked / skipped-unchanged / skipped-no-data / failed), continue past a failed team, exit 1 if any failed or the key is missing while work is pending, exit 0 with no key when nothing needs generating
 - [X] T012 [US1] In scripts/build-rankings.mjs read data/summaries/<season>.json when it exists and emit `summaries: { [teamId]: summary }` in src/data/seasons/<season>.json, omitting the field when there are none
@@ -110,3 +110,7 @@ T013 src/TeamSummary.tsx
 - **MVP**: Phases 1–3. One generated season is enough to demo and to judge summary quality before paying for the full backfill.
 - **Then** US2 so re-runs are incremental, and US3 before the backfill in T023, so the 240 remaining summaries are locked from the moment they are written.
 - Review a handful of generated summaries after T015 and adjust the prompt before T023; a prompt change after the backfill cannot reach locked seasons without deleting entries by hand.
+
+## Phase 8: Convergence
+
+- [X] T029 Reconcile the default summary model: scripts/build-summaries.mjs falls back to `claude-sonnet-5-5` (and all 270 stored summaries record that model) while README.md states the default is `claude-opus-5-5`; update README.md to name the actual default, or restore `claude-opus-5-5` in scripts/build-summaries.mjs if the change was unintended, per plan: research §7 model decision (contradicts)
