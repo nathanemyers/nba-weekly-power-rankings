@@ -39,7 +39,7 @@
 - [X] T012 [US1] In scripts/build-rankings.mjs read data/summaries/<season>.json when it exists and emit `summaries: { [teamId]: summary }` in src/data/seasons/<season>.json, omitting the field when there are none
 - [X] T013 [P] [US1] Create src/TeamSummary.tsx (styled-components at the top, props `teamName` and `summary`) rendering a `<section aria-label="AI-generated summary for {teamName}">` with the team name as a heading, a visible "AI-generated summary" badge, and the paragraph
 - [X] T014 [US1] In src/App.tsx attach `aiSummary: data.summaries?.[team.teamId]` in `loadSeason` and render `<TeamSummary>` under the chart inside `ChartColumn` only when `pinnedTeams` has exactly one team and that team has `aiSummary`
-- [ ] T015 [US1] Run `npm run build:summaries -- --dry-run`, then with `ANTHROPIC_API_KEY` set run `npm run build:summaries -- --season 2024-25` and `npm run build:rankings`; confirm 30 entries in data/summaries/2024-25.json and a `summaries` object in src/data/seasons/2024-25.json (needs the maintainer's key)
+- [X] T015 [US1] Run `npm run build:summaries -- --dry-run`, then with `ANTHROPIC_API_KEY` set run `npm run build:summaries -- --season 2024-25`; confirm 30 entries in data/summaries/2024-25.json (the `npm run build:rankings` half moved to T026)
 
 **Checkpoint**: A visitor can read a labeled summary for any team in a generated season.
 
@@ -65,14 +65,28 @@
 - [X] T020 [P] [US3] Add cases to scripts/lib/summary-plan.test.mjs for a complete season: stored entry -> `skip-locked` even when the hash differs; no stored entry -> `generate`; a season that was active with a stale hash and is now complete with a stored entry -> `skip-locked`
 - [X] T021 [US3] Extend `decide` in scripts/lib/summary-plan.mjs so that `complete` with a stored entry returns `skip-locked` before any hash comparison
 - [X] T022 [US3] In scripts/build-summaries.mjs do not rewrite a season file when no team in it was generated, and never delete an existing entry, so locked files stay byte-for-byte identical
-- [ ] T023 [US3] With `ANTHROPIC_API_KEY` set, backfill the remaining completed seasons with `npm run build:summaries`, run `npm run build:rankings`, then run `npm run build:summaries` again and confirm no diff in data/summaries/ (needs the maintainer's key)
+- [X] T023 [US3] With `ANTHROPIC_API_KEY` set, backfill the remaining completed seasons with `npm run build:summaries`, then run `npm run build:summaries -- --dry-run` and confirm every team in data/summaries/ reports as locked (the `npm run build:rankings` half moved to T026)
 
 **Checkpoint**: All nine seasons have summaries and historical ones are frozen.
 
 ## Phase 6: Polish & Cross-Cutting
 
 - [X] T024 Run `npm run lint`, `npm run build`, `npm test` and fix anything failing
-- [ ] T025 Walk through specs/006-team-ai-summary/quickstart.md, including the in-browser checks, and confirm the client bundle in dist/ contains no API key and makes no request on click
+- [X] T025 Walk through specs/006-team-ai-summary/quickstart.md, including the in-browser checks, and confirm the client bundle in dist/ contains no API key and makes no request on click
+
+## Phase 7: User Story 1 follow-up - Summary panel visible under the chart (P1)
+
+**Goal**: The generated summaries reach the app, so pinning a team shows the panel under the chart.
+
+**Context**: data/summaries/ holds 30 entries for each of the nine seasons (2017-18 to 2025-26), and src/TeamSummary.tsx is already rendered by src/App.tsx under the chart (T013, T014). Nothing appears in the app yet because src/data/seasons/*.json were last built before the summaries existed and have no `summaries` field.
+
+**Independent Test**: `npm run dev`, select 2024-25, click a team, and read its labeled summary under the chart.
+
+- [X] T026 [US1] Run `npm run build:rankings` to fold data/summaries/<season>.json into src/data/seasons/<season>.json for all nine seasons; confirm each file gains a `summaries` object with 30 team ids holding text only, and that `git diff src/data/seasons` shows no change to `rankings`, `playoffs` or `maxWeek`
+- [X] T027 [US1] Run `npm run dev` and check the panel against specs/006-team-ai-summary/contracts/team-summary-ui.md: clicking a team shows a panel below the chart and zoom button with the team name, the visible text "AI-generated summary" and one paragraph; clicking the team again removes it; changing season with a team pinned swaps to that season's text; fix any mismatch in src/App.tsx (render condition) or src/TeamSummary.tsx (layout)
+- [X] T028 Run `npm run lint`, `npm run build`, `npm test` and fix anything failing, then complete T025
+
+**Checkpoint**: A visitor can click any team in any season and read its AI summary under the chart.
 
 ## Dependencies & Execution Order
 
@@ -81,6 +95,7 @@
 - US2 depends on US1's script; T017 before T018.
 - US3 depends on US2 (`complete` is introduced in T018); T021 before T022 before T023.
 - T015 and T023 call the paid API and need the maintainer's key; everything else runs offline.
+- Phase 7: T026 -> T027 -> T028 -> T025; all offline, no API key needed.
 
 ## Parallel Example: User Story 1
 
