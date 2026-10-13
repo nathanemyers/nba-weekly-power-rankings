@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
-import { mockReducedMotion } from "./test/fixtures";
+import { mockReducedMotion } from "test/fixtures";
 
 // Fixture seasons: 26 weeks, 21 weeks, one short enough to fit the window, and two with rank swings
 vi.mock("./data/seasons", async () => {
@@ -75,10 +75,9 @@ describe("User Story 2 — move around the season", () => {
 
     await user.click(later());
     expect(screen.getByText("Weeks 2–12")).toBeInTheDocument();
-    expect(screen.getByText("Detroit Pistons", { selector: "text" })).toHaveAttribute(
-      "y",
-      String(30 + (19 / 29) * 510),
-    );
+    expect(
+      screen.getByText("Detroit Pistons", { selector: "text" }),
+    ).toHaveAttribute("y", String(30 + (19 / 29) * 510));
 
     await user.click(earlier());
     expect(screen.getByText("Weeks 1–11")).toBeInTheDocument();
