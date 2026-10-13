@@ -1,4 +1,9 @@
-import { type Margin, PlayoffStage, Teams, type WeekRanking } from "../types";
+import {
+  type Margin,
+  PlayoffStage,
+  Teams,
+  type WeekRanking,
+} from "../../types";
 
 export const PLAYOFF_MEDALS: Record<
   PlayoffStage,

@@ -1,4 +1,4 @@
-import type { TeamRankings } from "../types";
+import type { TeamRankings } from "../../types";
 
 export type RankSwing = {
   team: TeamRankings;
@@ -29,9 +29,7 @@ export function biggestSwings(
   teams: TeamRankings[],
   count = 3,
 ): { risers: RankSwing[]; fallers: RankSwing[] } {
-  const swings = teams
-    .map(getRankSwing)
-    .filter((swing) => swing !== undefined);
+  const swings = teams.map(getRankSwing).filter((swing) => swing !== undefined);
   return {
     risers: largest(
       swings.filter((swing) => swing.change > 0),
