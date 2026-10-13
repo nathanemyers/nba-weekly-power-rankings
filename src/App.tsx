@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-import RankingsChart from "./Chart/Chart";
+import { clamp } from "lodash";
+import RankingsChart, { DEFAULT_WINDOW_WEEKS } from "./Chart/Chart";
 import { seasonData, seasons } from "./data/seasons";
 import { Team, Teams, type TeamRankings } from "./types";
+
+const CHART_WIDTH = 960;
+const CHART_HEIGHT = 600;
+const CHART_MARGIN = { top: 30, right: 120, bottom: 60, left: 190 };
 
 function loadSeason(season: string) {
   const data = seasonData[season];
@@ -77,16 +82,67 @@ const Button = styled.button`
   }
 `;
 
+const ChartColumn = styled.div`
+  width: 100%;
+  max-width: ${CHART_WIDTH}px;
+`;
+
+const Controls = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+`;
+
+const WeekRange = styled.span`
+  color: #a1a1a6;
+  font-size: 0.95rem;
+`;
+
+const ZoomRow = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+`;
+
 function App() {
   const [season, setSeason] = useState(seasons[0]);
   const [zoomedOut, setZoomedOut] = useState(false);
-  const [zoomedInstartWeek, setZoomedInstartWeek] = useState(1);
-  const [zoomedInendWeek, setZoomedInendWeek] = useState(10);
+  const [zoomedInStartWeek, setZoomedInStartWeek] = useState(1);
+  const [zoomedInEndWeek, setZoomedInEndWeek] = useState(
+    1 + DEFAULT_WINDOW_WEEKS,
+  );
   const [pinnedTeams, setPinnedTeams] = useState<Team[]>([]);
   const data = loadSeason(season);
 
-  const startWeek = zoomedOut ? 1 : zoomedInstartWeek;
-  const endWeek = zoomedOut ? data.maxWeek : zoomedInendWeek;
+  // Slid back inside the season on read, so a shorter season can't leave the window past its end
+  const windowEnd = Math.min(zoomedInEndWeek, data.maxWeek);
+  const windowStart = Math.max(
+    1,
+    windowEnd - (zoomedInEndWeek - zoomedInStartWeek),
+  );
+  const startWeek = zoomedOut ? 1 : windowStart;
+  const endWeek = zoomedOut ? data.maxWeek : windowEnd;
+  const canPageEarlier = !zoomedOut && windowStart > 1;
+  const canPageLater = !zoomedOut && windowEnd < data.maxWeek;
+  const canZoom = windowStart > 1 || windowEnd < data.maxWeek;
+
+  const page = (delta: number) => {
+    const weeks = clamp(delta, 1 - windowStart, data.maxWeek - windowEnd);
+    if (weeks === 0) return;
+    setZoomedInStartWeek(windowStart + weeks);
+    setZoomedInEndWeek(windowEnd + weeks);
+  };
+
+  useEffect(() => {
+    if (zoomedOut) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") page(-1);
+      if (e.key === "ArrowRight") page(1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  });
 
   return (
     <Container>
@@ -105,50 +161,43 @@ function App() {
         </Select>
       </SeasonRow>
 
-      <RankingsChart
-        key={season}
-        startWeek={startWeek}
-        endWeek={endWeek}
-        teams={data.teams}
-        width={960}
-        height={600}
-        margin={{ top: 30, right: 120, bottom: 60, left: 190 }}
-        pinnedTeams={pinnedTeams}
-        onClick={(team?: Team) => {
-          if (team) {
-            setPinnedTeams([team]);
-          } else {
-            setPinnedTeams([]);
-          }
-        }}
-      />
+      <ChartColumn>
+        <Controls>
+          <Button onClick={() => page(-1)} disabled={!canPageEarlier}>
+            ◀ Earlier
+          </Button>
+          <WeekRange>
+            {zoomedOut
+              ? `Full season (Weeks 1–${data.maxWeek})`
+              : `Weeks ${startWeek}–${endWeek}`}
+          </WeekRange>
+          <Button onClick={() => page(1)} disabled={!canPageLater}>
+            Later ▶
+          </Button>
+        </Controls>
 
-      <Button onClick={() => setZoomedOut(!zoomedOut)}>
-        {zoomedOut ? "Zoom in" : "Zoom out"}
-      </Button>
-      <Button
-        onClick={() => {
-          if (!zoomedOut) {
-            setZoomedInstartWeek((s) => Math.max(1, s - 1));
-            setZoomedInendWeek((e) => Math.max(1, e - 1));
+        <RankingsChart
+          key={season}
+          startWeek={startWeek}
+          endWeek={endWeek}
+          teams={data.teams}
+          width={CHART_WIDTH}
+          height={CHART_HEIGHT}
+          margin={CHART_MARGIN}
+          pinnedTeams={pinnedTeams}
+          onClick={(team?: Team) =>
+            setPinnedTeams(team && !pinnedTeams.includes(team) ? [team] : [])
           }
-        }}
-        disabled={zoomedOut || zoomedInstartWeek <= 1}
-      >
-        Prev Week
-      </Button>
+        />
 
-      <Button
-        onClick={() => {
-          if (!zoomedOut) {
-            setZoomedInstartWeek((s) => Math.min(data.maxWeek, s + 1));
-            setZoomedInendWeek((e) => Math.min(data.maxWeek, e + 1));
-          }
-        }}
-        disabled={zoomedOut || zoomedInendWeek >= data.maxWeek}
-      >
-        Next Week
-      </Button>
+        {canZoom && (
+          <ZoomRow>
+            <Button onClick={() => setZoomedOut(!zoomedOut)}>
+              {zoomedOut ? "Zoom in" : "Zoom out"}
+            </Button>
+          </ZoomRow>
+        )}
+      </ChartColumn>
     </Container>
   );
 }
