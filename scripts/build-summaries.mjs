@@ -11,10 +11,10 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = join(root, 'data')
 const outDir = join(dataDir, 'summaries')
 
-const MODEL = process.env.SUMMARY_MODEL || 'claude-opus-5-5'
+const MODEL = process.env.SUMMARY_MODEL || 'claude-sonnet-5-5'
 const MAX_SUMMARY_LENGTH = 1200
 // Models that accept the server-side refusal fallback; others are sent without it
-const FALLBACK_MODELS = ['claude-opus-5-5', 'claude-opus-5', 'claude-fable-5-1', 'claude-sonnet-5-5']
+const FALLBACK_MODELS = ['claude-opus-5-5', 'claude-opus-5', 'claude-sonnet-5-5']
 
 const SYSTEM_PROMPT = [
   'You write short season recaps for a basketball power-rankings chart.',

@@ -1,0 +1,212 @@
+{
+  "atl": {
+    "summary": "The Hawks opened 2025-26 ranked 12th, expected to climb out of the Play-In, but a slow start and injuries, including Trae Young's knee injury, pushed them to 19th by Week 4. They recovered to 14th with a 9-5 record, then slid again, losing seven straight and falling to .500 and below. Young was traded for CJ McCollum and Corey Kispert in Week 13, and Jonathan Kuminga arrived at the deadline. After the All-Star break, Atlanta won 11 straight and 17 of 19, rising to 11th at 45-33 and fifth in the East.",
+    "sourceHash": "aa40b6d6c6ce82b7d10d0cad6ead8f2d6b645272f966fdbf6550900f21d6340f",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:51:41.849Z"
+  },
+  "bkn": {
+    "summary": "The Nets opened 2025-26 ranked 29th, relying on five rookie first-round picks, and started 0-6 with the league's worst defense. They sank to 1-9 before climbing to 21st in Week 11 after a December surge that included the league's top defense and a 7-3 stretch. That faded in January and February, as they lost 16 of 19 and took two losses of 50-plus points. Cam Thomas was waived after the deadline, while Michael Porter Jr. stayed. A 10-game skid ended in March and April, and Brooklyn finished 19-59, ranked 28th, last in offense, with development of its rookies the focus.",
+    "sourceHash": "c90ed577421805ef2caa4a81b36f029f1c59099ddfb83c55eee066ad886505a8",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:51:45.858Z"
+  },
+  "bos": {
+    "summary": "The Celtics opened the season ranked 19th, with Jayson Tatum out and three of last year's top six players gone, and started 0-3 after blowing two double-digit leads. They recovered to reach .500 by Week 5 and climbed behind a league-best offense and Jaylen Brown's career-best scoring. The ranking reached sixth in Week 8 and held in the top ten through the winter. A Simons-for-Vučević deadline swap preceded Tatum's return after a 10-month absence. Boston reached 53-25, ranked third, and was positioned for second in the East, despite poor records in close games and against top teams.",
+    "sourceHash": "41b0022ab568aeb86ed33df3dcec98db736bbedb12a2a60277a21696547b9434",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:51:49.930Z"
+  },
+  "cha": {
+    "summary": "The Hornets opened 2025-26 ranked 27th, needing to end a nine-season playoff drought, and sank to 4-13 amid injuries, a six-game losing streak and poor close-game results. Their offense improved sharply, but defense decided most outcomes. Rankings rose gradually from the low 20s as they won 14 of 18 around midseason, including a nine-game winning streak that lifted them to 15th. Coby White's arrival strengthened the bench. By the final write-up they were ranked 12th at 43-36, eighth in the East, with a winning record clinched, a top-four offense and the biggest year-to-year improvement in the play-by-play era.",
+    "sourceHash": "0c548f831b0761c17fd6ed0921125988fd9bc275d340aa4a053e8c3a09b96e1a",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:51:53.703Z"
+  },
+  "chi": {
+    "summary": "The Bulls opened 2025-26 ranked 23rd, then started 5-0 and climbed to 13th by Week 3. Close losses and a five-game skid dropped them to 19th, and a seven-game losing streak in late November and December sent them to 28th. A winning run brought them back to .500, and they reached 23-22 and 19th in the rankings in mid-season. After a 1-7 slide, a deadline sell-off of Nikola Vučević, Coby White and Ayo Dosunmu, and a winless February, they finished 29-49 and ranked 24th, missing the Play-In for the first time in four years. Matas Buzelis and Josh Giddey remained the foundation.",
+    "sourceHash": "bf156d05f82c293ca023c1e704340b1eec8b155da2cc2c40f82b28b06b61aa1e",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:51:57.067Z"
+  },
+  "cle": {
+    "summary": "The Cavaliers opened the 2025-26 season ranked third, but they never matched last year's form. They lost on opening night in New York, and injuries kept them from having their core four together. They hovered in the top ten until a slump dropped them to 15th and 17th by December, when their record fell to 15-14. A turnaround began after Christmas and carried them to 30-21 and the league's best record over several weeks. They traded for Keon Ellis and Dennis Schröder, then added James Harden, and climbed back to sixth and seventh. They finished ranked ninth at 49-29, one game behind the Knicks for third in the East, with the Hawks a likely first-round opponent.",
+    "sourceHash": "d19416ac4cad5fcedff06da5a10c4b2d54fd8a6094bb07f7270c414090b4c5ac",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:00.988Z"
+  },
+  "dal": {
+    "summary": "The Mavericks opened the 2025-26 season ranked 13th, built around rookie Cooper Flagg with Kyrie Irving out, but fell to 19th after a 1-2 start and bottomed out at 26th in Week 11. Anthony Davis's repeated absences, Dereck Lively II's season-ending foot surgery, and constant close losses held them back. A late-December rise came from improved offense and Flagg's scoring, but a nine-game skid into the All-Star break and a 10-game slide followed. Davis was traded, and they sank to 23-48 by Week 23. Flagg's huge scoring games and a late win over the Lakers lifted them to 21st at 25-53.",
+    "sourceHash": "5cf7e7fd9a49c4fd3d048374db0457cf00ed9eae0c58128d724a125d775f8324",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:03.855Z"
+  },
+  "den": {
+    "summary": "The Nuggets opened ranked No. 2, with Nikola Jokić anchoring a deep rotation, and held that spot through Week 10 behind the league's top offense. Injuries to Christian Braun, Aaron Gordon and Cam Johnson dragged the defense down, and they fell to No. 3 in Week 11. Jokić's knee injury sent them to No. 9 in Week 12, though they went 10-6 without him and climbed back to No. 5. February's slide and poor clutch defense pushed them to No. 8 by Weeks 20 and 21. A late push brought eight straight wins, a fifth-place ranking, and 50 victories in Week 25.",
+    "sourceHash": "bcfd10e65c8c4bf0a1f9897f4f642860aa8b3966d41fbf2e4094adb28a0ac3ea",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:07.764Z"
+  },
+  "det": {
+    "summary": "The Pistons opened 2025-26 ranked 11th, hoping to build on a big statistical leap from the previous year, with Cade Cunningham and Ausar Thompson as budding stars. They won nine straight early, climbed into the top five by Week 5, and ran the streak to 13 games. Interior dominance and comebacks defined them. They reached No. 1 in Week 15 and held it through the All-Star break, then slid after a four-game losing streak. Cunningham's collapsed lung brought more absences, yet Detroit kept winning. In the final write-up they were ranked fourth at 57-21, having clinched the East's top seed for the first time in 19 years.",
+    "sourceHash": "002d4a77c6cb155d51e55f8cb43c7fac88ee765910650be3af8d5f7336f3836e",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:12.107Z"
+  },
+  "gsw": {
+    "summary": "The Warriors opened ranked eighth, then jumped to second after a strong start, but they slid to 16th by Week 6 as the offense leaned on Stephen Curry and the bench struggled. They hovered around .500 through December and January, climbing to 24-19 before Jimmy Butler's season-ending ACL tear. Curry then missed extended time, including 27 games, and the team fell to 10th in the West, ranked 20th after a 1-8 stretch. Gui Santos and De'Anthony Melton gave them lifts, and a three-game winning streak briefly helped. They finished 36-42 and ranked 20th, with Curry back and the Play-In ahead.",
+    "sourceHash": "7848179af26c42088626d15b88ab96c9c893df6fbd369a162c087e51231fd852",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:14.864Z"
+  },
+  "hou": {
+    "summary": "The Rockets opened the season ranked seventh, with Kevin Durant added but Fred VanVleet out for the year. They started 0-2, then won nine of ten and rose to third, powered by the league's top offense and record offensive rebounding. A December slide of overtime losses dropped them to sixth, and a January slump left them between eighth and ninth at times. They climbed as high as third again by mid-January before the offense faded, and Steven Adams was lost for the season after ankle surgery. They stayed in the top five of the West, collapsed late in several close games, then won six straight to finish eighth at 49-29, likely fifth in the West.",
+    "sourceHash": "95854d9bfbb51b0dc34180b94d47212ac2f60ca060f72174ffa61467a8f9621f",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:17.467Z"
+  },
+  "ind": {
+    "summary": "The Pacers began 2025-26 ranked 17th after a 2-2 preseason, with Tyrese Haliburton out for the year and injuries mounting. They fell to 25th by Week 2, started 1-12, and reached 30th by Week 10. A 13-game losing streak ended in Week 13, and a win at Oklahoma City followed. The team acquired Ivica Zubac at the deadline, but he played only five games. Indiana lost its first 16 games after the All-Star break, then won three late. The final write-up ranked the Pacers 29th at 18-60, the worst record in franchise history, with Haliburton expected back next season.",
+    "sourceHash": "416406ee544421909b2015324425cfd426bb07767dbeba4b594b5c0335c79334",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:21.575Z"
+  },
+  "lac": {
+    "summary": "The Clippers opened the season ranked sixth as the league's oldest but deepest team, then stumbled to a 3-6 start and fell to 21st amid defensive problems and injuries to Kawhi Leonard, Bradley Beal and Derrick Jones Jr. They bottomed out at 27th with a 7-21 record. A turnaround followed, with Leonard's scoring surge powering a long winning run and a rise to 11th by Week 16. They traded James Harden and Ivica Zubac at the deadline, added Darius Garland, and stayed around 14th. They finished at 40-38, ranked 14th, heading to the Play-In.",
+    "sourceHash": "02b581219509816d946c71c2f1c4f44f6d6d7247949008dc809afd77f2ea0b2b",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:25.812Z"
+  },
+  "lal": {
+    "summary": "The Lakers opened at No. 10 in the preseason rankings, with LeBron James out and Luka Dončić healthy. They climbed to No. 3 by Week 3 and again by Week 8, then slid to No. 13 by Week 16 as their defense struggled, Austin Reaves missed 19 games, and their point differential stayed near zero despite an extraordinary clutch record. A nine-game winning streak, built on better defense and a strong trio, lifted them to No. 6 and the 3 seed. They finished at No. 7 with 50 wins, after Dončić and Reaves were hurt in a 43-point loss in Oklahoma City.",
+    "sourceHash": "ddff2b845e83aa82676671e0ed3b2a139887761e33cfb418893cf7db00adcb76",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:29.323Z"
+  },
+  "mem": {
+    "summary": "The Grizzlies opened 2025-26 ranked 16th, in a possible transition year after trading Desmond Bane, with rookie Cedric Coward an early bright spot. Ja Morant's struggles and a suspension dropped them to 21st by Week 3, and injuries piled up. A run of wins over losing teams lifted them to 18th, but they lost nearly every game against winning teams and blew many double-digit leads. Jaren Jackson Jr. was traded in February for three first-round picks, and the team slid to 25th. They finished 25-53, ranked 26th, with Morant's future unresolved and the rebuild centered on Coward and Zach Edey.",
+    "sourceHash": "3317d4a65e0de27c0bd71e1cca976cca22b9eaa5fb70ae084e3f192685b15aed",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:32.085Z"
+  },
+  "mia": {
+    "summary": "The Heat opened 2025-26 ranked 21st after an 0-6 preseason and Tyler Herro's injury, then climbed to 11th during an early surge fueled by a league-leading pace and a strong bench. They hovered near .500 through a December slump and a rough stretch against good teams, rose to a 7-game win streak in March (Bam Adebayo scoring 83 points against Washington), and reached 14th. A four-game skid and a 2-8 run followed, and the final write-up ranked them 17th at 41-37, in 10th place in the East, facing a possible Play-In matchup with the Magic, who had beaten them five times, and a defense that had slipped.",
+    "sourceHash": "8ed11433ab12dfaa1573a710726ffc32595dde08588acfb37edfe7ba57d043cd",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:35.815Z"
+  },
+  "mil": {
+    "summary": "The Bucks began 2025-26 ranked 14th, with Giannis Antetokounmpo's future uncertain and a thin backcourt. A strong start lifted them to fifth in Week 3, but injuries, including Antetokounmpo's groin and calf strains, and poor defense and offensive rebounding sent them below .500 and down to 26th by Week 10. A brief rise in the middle of the season came with some wins, including an 8-2 stretch, but the team never reached the Play-In picture. Their nine-year playoff streak ended, and they were ranked 23rd at 31-47, with a likely worst record since Antetokounmpo's rookie season and his contract extension still unresolved.",
+    "sourceHash": "627f9e158808d80e5df446158ae7ba5445598f18c057e1f74c66b439eba42cb5",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:40.004Z"
+  },
+  "min": {
+    "summary": "The Timberwolves opened 2025-26 ranked fifth after two straight conference finals, then slipped to the low teens while going 8-0 against sub-.500 teams and 0-6 against winning ones. A defensive turnaround and a five-game winning streak lifted them to ninth and then as high as third by Week 13, at 26-14. Then came a five-game losing streak, a deadline trade for Ayo Dosunmu, and a post-All-Star drop-off. Edwards missed games with hamstring and knee problems. The write-ups ended at 46-32, ranked tenth, nearly locked into the sixth seed, with Edwards and McDaniels both injured.",
+    "sourceHash": "b2239924e865f0c109d4129c7e9409eb5c55844ff5806e8642303702b13472f6",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:43.721Z"
+  },
+  "nop": {
+    "summary": "The Pelicans opened 2025-26 ranked 24th, started 0-6 and fell to 30th before firing coach Willie Green, with James Borrego taking over as interim coach. Injuries and defensive problems kept them near the bottom, and they were 3-21 at one low point. A four-game winning streak in January lifted them to 23rd, though losing streaks followed. Dejounte Murray's return and a better offense after the All-Star break pushed them to 21st, and they went 10-4 in a spoiler stretch. An eight-game skid ended the season, leaving them 25-54 and ranked 22nd, with questions about the coach and the frontline.",
+    "sourceHash": "cfeb5c24a40cdf98b6a3049ba5766a456cde1c5b2e6e3f11c86799e88ddc1fba",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:47.944Z"
+  },
+  "nyk": {
+    "summary": "The Knicks opened 2025-26 ranked fourth under new coach Mike Brown, winning their first two games, and slipped to seventh and tenth during road struggles and an injury-hit stretch. They rebounded to win the Emirates NBA Cup and climbed to third, then fell to ninth after losing eight of ten while Jalen Brunson was hurt. A 2-9 slump gave way to an eight-game winning streak, and a seven-game run later followed. Detroit beat them three times by wide margins. By Week 25 they were ranked sixth at 50-28, one loss-column game ahead of fourth-place Cleveland, with defensive slippage and a weak starting lineup noted.",
+    "sourceHash": "da1d0356ff862fb34064a37c1ea2837c1350e1d2bfd9b7973e900cb0dfab5726",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:51.611Z"
+  },
+  "okc": {
+    "summary": "The Thunder opened 2025-26 ranked first as defending champions with their core intact, and they started 24-1 while missing Jalen Williams, building a historic point differential and a 16-game winning streak. After losing to the Spurs in the Emirates NBA Cup, they slipped, going 16-12 over one stretch amid injuries, rebounding trouble and blown leads, and fell to third in the rankings. They recovered after the All-Star break, returned to first, and won 12 straight as Williams came back. At the end of the write-ups they were 62-16, three games clear of San Antonio in the West.",
+    "sourceHash": "82311b6df8568684df70cf2707dbe3d7611db449982d06860a2780349dca6c98",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:54.481Z"
+  },
+  "orl": {
+    "summary": "The Magic opened 2025-26 ranked ninth after a 4-0 preseason and GM predictions that they would be the league's most improved team, but a 1-2 start and a four-game losing streak dropped them to 19th by Week 3. They recovered with a 6-1 stretch, reached the NBA Cup semifinals, and climbed to ninth in Week 7. Injuries to Paolo Banchero, Franz Wagner and Jalen Suggs, plus alternating wins and losses, kept them around .500 and between 11th and 18th. A seven-game winning streak in March lifted them to fifth in the East, followed by a collapse that left them ninth at 42-36, chasing a Play-In spot.",
+    "sourceHash": "eb1f2f82a0cebd844fef8ef7e1c7337f043180156b998a9c8ca6b3f4b81ab619",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:52:58.149Z"
+  },
+  "phi": {
+    "summary": "The 76ers began 2025-26 ranked 18th, with a 1-3 preseason, a team whose success seemed hard to predict because of health questions. They opened 4-0 on fourth-quarter comebacks, rose to 15th and stayed there through a 7-5 mark and a stretch in which Joel Embiid and Paul George missed games. Rankings ranged from 12th to 14th during a December-to-February climb to 30-22, then slid to 18th after a rough March stretch with Embiid, George and Tyrese Maxey out. They finished 43-35 in sixth place, ranked 16th, only a game ahead of ninth-place Orlando, despite a negative point differential and weak third quarters.",
+    "sourceHash": "f23c2f1f3d2929feea2736c493e78ae152619ebc371d114dbb1c90778a54c122",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:53:01.906Z"
+  },
+  "phx": {
+    "summary": "The Suns opened 2025-26 ranked 25th, with low expectations after Kevin Durant and Bradley Beal departed. They went 1-2 in Week 2 and sat 26th, then climbed on a soft schedule, reaching 7th by Week 6 at 11-6 behind a defense that forced many turnovers. Injuries to Devin Booker and Jalen Green and a tougher slate slowed them, and they hovered around 5th to 10th. Booker's and Dillon Brooks's absences hurt the offense late, and a five-game losing streak followed. They ended the write-ups ranked 13th at 43-35, nearly locked into seventh in the West.",
+    "sourceHash": "799bc99278e4531eda2e4941544a944e34940c749c0494f0f578f595f9880fbe",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:53:05.841Z"
+  },
+  "por": {
+    "summary": "Portland opened 2025-26 ranked 22nd, with the focus on its young core and new addition Jrue Holiday. Coach Chauncey Billups was lost to a federal indictment in Week 2, and Tiago Splitter took over as interim coach. A 5-3 start lifted the Blazers to 14th, but injuries, including Holiday's long absence, and a porous defense dropped them to 20th and a 7-10 record. They stayed around 20th through January, reaching .500 at 22-22 and rising to 17th before a six-game losing streak. They then recovered, got back to .500 at 38-38, and won eight of ten. The write-ups ended with the Blazers 40-38, ranked 19th, and facing the Clippers for the 8 seed.",
+    "sourceHash": "3ec92604c5a6de723cd91059337fa5ce22e543bc081d167642251db8b88c7c15",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:53:10.225Z"
+  },
+  "sac": {
+    "summary": "The Kings opened 2025-26 ranked 26th, with the write-ups doubting they could improve in a deep West. Early losses, a tough schedule and constant lineup shuffling pushed them to 3-11 and 4-13. Domantas Sabonis, Keegan Murray and Zach LaVine all missed time, and the Kings reached 30th as losing streaks of seven, nine and 16 games piled up. They traded Dennis Schröder and Keon Ellis for De'Andre Hunter. After the All-Star break they won some games, with rookies Maxime Raynaud, Nique Clifford and Dylan Cardwell standing out. They were eliminated from the Play-In, then ended the write-ups ranked 25th at 21-58, with the league's biggest drop in point differential.",
+    "sourceHash": "04781407bdefb12d698be4436fad83efe4b6d9e99308538e98d35581f7df6ea3",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:53:13.957Z"
+  },
+  "sas": {
+    "summary": "San Antonio opened 2025-26 ranked 15th, with Victor Wembanyama playing bigger and stronger, and climbed to eighth after a 3-0 start. Rankings hovered between seventh and ninth through injuries to Wembanyama, Stephon Castle and Dylan Harper, then rose to first by Week 11 following wins over the Thunder, despite an Emirates Cup final loss to the Knicks. A post-Christmas offensive slump dropped them to fourth, but a February run of 11 straight wins restored them to first. They finished ranked second at 59-19, three games behind Oklahoma City, after an overtime loss to Denver, with the West's No. 2 seed nearly secured.",
+    "sourceHash": "9b20ebdb2496f1a036775606b36e9016768f57171d2b9b65f77770b2cbd0a187",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:53:17.171Z"
+  },
+  "tor": {
+    "summary": "The Raptors opened 2025-26 ranked 20th, with a big proof-of-concept year ahead for a costly core, and stayed there through three weeks at 3-4. A defense-driven surge lifted them to 9th by Week 6, when they stood 12-5 and second in the East, and they reached the Cup quarterfinals. Losses piled up after Thanksgiving, with RJ Barrett out, and they fell back to the 11-15 range of rankings. They hovered around 12th, strong against weaker teams and winless against the East's top three until a Week 22 win over Detroit. By the final write-up they were 43-35 and ranked 15th, back in Play-In position.",
+    "sourceHash": "13d4482e89cf77eb6be9ce9241fba5c3e4cbc983c89c21c4b955e438aab69a4a",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:53:20.695Z"
+  },
+  "uta": {
+    "summary": "The Jazz opened 2025-26 ranked 30th after a young offseason overhaul, then won on opening night and climbed to 28th before sliding into the mid-20s. They hovered between 19th and 25th through December and January, peaking at 19th in Week 11 after back-to-back wins over the Pistons and Spurs. Walker Kessler was lost for the season in Week 4, and Lauri Markkanen's absences hurt badly. After trading three first-round picks for Jaren Jackson Jr., who was soon shelved, they fell to 26th-27th. They finished 21-58 in the final write-up, last in defense again, with Keyonte George's growth and Ace Bailey's development as positives.",
+    "sourceHash": "67a7cefa3d88792383292daea7d2565b2304fbd4f2491401cd866e73b2fa2b7b",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:53:23.689Z"
+  },
+  "was": {
+    "summary": "The Wizards opened 2025-26 ranked 28th and fell to 30th by Week 4 after a 1-9 start, then lost 14 straight games and sat at 1-15. They climbed slightly with wins over the Hawks, Bucks, Pacers and Grizzlies, reaching 9-25 and 27th, but slid again after a nine-game skid. They traded for Trae Young and later Anthony Davis, sending CJ McCollum to Atlanta. Another long losing streak followed, and they finished the write-ups ranked 30th at 17-61, on pace for a third straight season under 20 wins. Kyshawn George, Bub Carrington and Alex Sarr showed improvement, and the offense improved on last season.",
+    "sourceHash": "197f939a20f465a1f7171ebb471f3a8f34d768fd57b59659120af4bf5f39d91a",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:53:27.333Z"
+  }
+}

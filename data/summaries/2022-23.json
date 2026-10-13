@@ -1,0 +1,212 @@
+{
+  "atl": {
+    "summary": "The Hawks opened 2022-23 ranked 15th, coming off a 43-39 season and building around Trae Young and new arrival Dejounte Murray. They took advantage of a soft early schedule, and by Week 6 they were 10-6 and ranked 11th. A slump followed, with injuries and defensive problems dropping them to 17-19 and 20th in Week 12. They recovered with a five-game winning streak, then hovered near .500. Nate McMillan was replaced by Joe Prunty, and then by Quin Snyder, but the defense stayed poor. At the end of the write-ups, Atlanta was 39-39, ranked 20th, within one game of .500 for 32 straight games, and headed for the play-in race.",
+    "sourceHash": "d16f1b025ddbe2aa0b572102fde61fdc28cd07c4a70dea1bae370010d20a9345",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:28.236Z"
+  },
+  "bkn": {
+    "summary": "The Nets opened 2022-23 ranked tenth, then lost five of their first six amid a collapsing defense and off-court turmoil, falling to 24th. A coach change and Kyrie Irving's suspension preceded a recovery, and by Week 12 Brooklyn was third after an 11-game winning streak led by Kevin Durant, Irving and Nic Claxton. Durant's knee injury slowed the team, and Irving's trade request led to deals that sent out both stars and brought in Mikal Bridges and others. The Nets slid to the mid-teens, with rankings of 12th to 16th, losing often in close games, but finished 13th at 43-35, holding the sixth seed and facing the Sixers.",
+    "sourceHash": "767376873969a4dd3ac1c962f5f0ac658019a92758c41cae427ab0ff06793f67",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:32.190Z"
+  },
+  "bos": {
+    "summary": "The Celtics opened 2022-23 ranked third and quickly rose to first after a 3-0 start powered by a historically efficient offense. Defensive lapses brought early losses to Chicago and Cleveland, but long winning streaks kept them atop the rankings through January. Their offense cooled after November, and a December slump, then losses in overtime and after big leads, dropped them to second or third at times. Injuries to Marcus Smart, Robert Williams III and Jaylen Brown disrupted the rotation. Boston finished at 54-24 after beating Milwaukee, ranked first again, the only team in the top five on both ends, and still chasing the Bucks for the East's top seed.",
+    "sourceHash": "412865478054719e66372ce4e2bf51e62435664d7afe86351f3686247acd5cbd",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:35.115Z"
+  },
+  "cha": {
+    "summary": "The Hornets opened 2022-23 ranked 26th after an 0-5 preseason, then won their opener over the Spurs by a wide margin. Injuries to LaMelo Ball, Gordon Hayward and others soon sank the offense, which ranked last or near last for most of the year, and the team fell to 3-11 and then 7-23 amid two eight-game losing streaks. Rankings hovered between 26th and 30th. After the All-Star break they won four straight and posted the league's best defense for a stretch, though Ball fractured an ankle in March. They finished ranked 27th at 26-53, with a seven-year playoff drought and the league's fourth-worst record.",
+    "sourceHash": "43d1c497ce4715f409576e7d9542d19bfc74fcb869a2978dd38aff57a0e7ffb7",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:39.635Z"
+  },
+  "chi": {
+    "summary": "The Bulls opened 2022-23 ranked 17th and slipped to 21st after a 1-2 start. They bounced between 13th and 25th through a frustrating autumn and winter marked by clutch losses, weak three-point shooting and inconsistent defense, and they were 11-18 in Week 10. A recovery brought them back to 16th in Week 13, but they fell to 26th by Week 19 after a six-game losing streak into the All-Star break. They stood pat at the trade deadline. After the break, with Patrick Beverley and Alex Caruso starting, they improved sharply, climbing to 15th in Week 24 and finishing 18th at 38-40, in 10th place and chasing a Play-In spot.",
+    "sourceHash": "ca2b952188333f7598f50e260801047b1c3c149caa5297b3b44a184ec264728f",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:42.340Z"
+  },
+  "cle": {
+    "summary": "The Cavaliers opened the 2022-23 season ranked 11th, coming off a 44-38 year, with new guard Donovan Mitchell paired with Darius Garland. A strong start lifted them to No. 2 after an 8-1 run, but a four-game slide dropped them to eighth. They climbed back to the top five, Mitchell scored 71 points against Chicago in January, and they held the league's top defense for much of the year. Close losses and struggles against quality opponents kept them between fourth and seventh. They ended a four-year playoff drought in Week 24 and finished ranked sixth at 49-30, with a top-ranked defense and the second-best net rating.",
+    "sourceHash": "e22fd1a6c88e6eb6892ecab1fde8e1fc9e601c88894c9a886bddc8f49cf9328a",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:45.520Z"
+  },
+  "dal": {
+    "summary": "The Mavericks opened 2022-23 ranked 13th, rose to sixth after a 9-7 start powered by Luka Doncic's heavy workload, then slid to 14th during a road slump that exposed their defense. A six-game winning streak in late December lifted them to ninth, but the defense stayed poor, and they were ranked 15th when they acquired Kyrie Irving. They climbed to ninth briefly, but went just 4-11 with Doncic and Irving together, mostly in close games. They fell to 21st, with a 37-42 record and a game behind 10th-place Oklahoma City, in the final write-up.",
+    "sourceHash": "26b5c6c48c90a3c37e356455aacdc87a23f0978775e880fd09d3a5b41011cb9a",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:49.017Z"
+  },
+  "den": {
+    "summary": "The Nuggets opened the 2022-23 season ranked seventh and stayed between fourth and eighth through December, powered by a top-ranked offense and Nikola Jokic's historic efficiency, while a bottom-ten defense and shaky bench minutes held them back. A 7-1 run lifted them to second in Week 11, then first for three weeks. They slipped to third and fourth after a late-season rough patch, including a 1-5 stretch, but recovered and kept control of the West's top seed. The final write-up ranked them third at 52-26, praising their offense and record but questioning their 14th-ranked defense and mediocre road form.",
+    "sourceHash": "b88e0cd2f3de8beb6a102b2b42231cea8b4d9f0740ac8509d079bce3f25634f0",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:53.098Z"
+  },
+  "det": {
+    "summary": "The Pistons opened 2022-23 ranked 25th, hoping to compete after the Bogdanovic trade, but their defense was poor from the start and they sank to 27th by Week 2. Cade Cunningham's absence, further injuries and double-digit deficits kept them in the high 20s. Brief lifts came with a Denver-Utah sweep and Bogdanovic's strong scoring. They reached 30th in Week 11 and spent most of the late season there, with an 11-game losing streak and elimination from the playoffs. They ended 16-62 with the league's worst record, a bottom-three team on both ends, and a long way from competing.",
+    "sourceHash": "a1feb8ad8082ffb53ad883806c66cb3e576577237307b0f5c74ab5964368bf28",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:57.313Z"
+  },
+  "gsw": {
+    "summary": "The Warriors opened the 2022-23 write-ups ranked first as defending champions, but a weak bench and a poor road record sent them tumbling to 3-7 and as low as 19th by Week 5. Stephen Curry's scoring and Klay Thompson's hot games helped steady them, and they climbed back to around .500 despite Curry's injuries and Andrew Wiggins' long absence. They were dominant at home and struggled on the road, and they spent most of the second half hovering near .500. By the final write-up they were ranked 10th at 41-38, with a 9-30 road record and doubts that they were still the champions of old.",
+    "sourceHash": "76b9789908d09485d5f58778c1a099704e9a7c3d255b55a97d38799c1bee58a6",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:46:59.910Z"
+  },
+  "hou": {
+    "summary": "The Rockets opened 2022-23 ranked 24th, coming off a 20-62 season, with preseason optimism around Jalen Green, but they started 0-3 and sat 30th by Week 3. They held that spot through most of December and January, sinking to 10-36 amid a 13-game losing streak. They ended it in Week 16 and traded Eric Gordon in February. A nine-game skid followed, but three straight wins and a better post-All-Star offense lifted them to 27th. They finished ranked 28th at 19-60, still bottom-five on both ends, with the league's worst transition defense, though Alperen Sengun progressed and another top-six pick was coming.",
+    "sourceHash": "8a597f5397ff874d1e39ec00c256433b7d399215e321be0979ff187734e4889f",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:03.758Z"
+  },
+  "ind": {
+    "summary": "The Pacers opened 2022-23 ranked 29th after a 25-57 season, then climbed quickly behind Tyrese Haliburton, rookie Bennedict Mathurin and a hot three-point offense. They reached a high of 10th in Week 13, sitting sixth in the East with a 23-18 record. Haliburton's knee and elbow injuries in New York began a slide, and the Pacers fell to 24th and then 26th. Myles Turner had a career year, and Haliburton became an All-Star, but first-quarter and defensive problems persisted. They fell out of Play-In contention, were 34-45 at the end, and ranked 25th, headed for the lottery.",
+    "sourceHash": "086b567d94f0d4e921408452b4b9988074e15479354b9ad50ec079329640ff4d",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:06.770Z"
+  },
+  "lac": {
+    "summary": "The Clippers opened the 2022-23 write-ups ranked fifth, with a deep shooting roster and Kawhi Leonard returning, but they sank to 25th by Week 3 as Leonard's knee and a poor offense cost them four straight games. They recovered to the low teens, and injuries to Leonard, Paul George and others kept them uneven. They climbed to 10th in Week 11, fell to 18th during a six-game skid, then rose to seventh in Week 19 after midseason trades and the Russell Westbrook addition. Late on, George's knee sprain clouded their outlook. They finished ranked 11th at 41-38, still chasing a top-four seed but at risk of the Play-In.",
+    "sourceHash": "971eec1a4c1bd7294e572dd71b46d6e42ce9a0974f885cf4e24714208e2c188d",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:09.866Z"
+  },
+  "lal": {
+    "summary": "The Lakers opened 2022-23 ranked 19th, then fell to 25th and 27th after a 0-3 start with the league's worst offense, though the defense held up. A win streak lifted them to 19th by Week 8, powered by Anthony Davis, but his foot injury sent them down to 25th at 13-20. LeBron James's scoring and a five-game winning streak revived them. Rui Hachimura, D'Angelo Russell, Malik Beasley and Jarred Vanderbilt arrived, and James became the all-time scoring leader. Austin Reaves emerged, and the Lakers reached .500, then finished the write-ups ranked 12th at 40-38, with a real chance at a top-six West spot.",
+    "sourceHash": "c4c8b3811fe25d8d7a507780a73c4c5bf89366afb47a0475761e02265dd92895",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:14.157Z"
+  },
+  "mem": {
+    "summary": "The Grizzlies opened the 2022-23 season ranked eighth, then slipped to 12th as a defense that ranked near the bottom dragged them down. A strong run behind Jaren Jackson Jr.'s return lifted them to No. 1 in Week 10. They stayed in the top five through mid-January, riding an 11-game winning streak. Then came a 1-8 slide, and they fell to seventh. Morant's absence for non-basketball reasons and Brandon Clarke's season-ending injury dropped them to ninth. They then won nine of 10 with the league's top offense over that stretch. In the final write-up they ranked seventh at 49-29, still chasing the West's 2 seed and facing a closing three-game road trip.",
+    "sourceHash": "dbba45ed9abba1b7042fd78edabdefa7f380cd290204702ca2e32983fcac0465",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:18.396Z"
+  },
+  "mia": {
+    "summary": "The Heat opened the 2022-23 season ranked ninth, coming off a 53-29 year, but a 1-2 start and defensive lapses dropped them to 13th and then 18th by Week 3. They bottomed out at 23rd in Week 6 at 7-10, hurt by injuries to Jimmy Butler, Bam Adebayo and Tyler Herro. A four-game win streak lifted them over .500 in Week 10, though they slipped again to 21st. A 12-5 run lifted them to 11th in Week 14 and ninth the following week, and they peaked at seventh in Week 18. Post-break defensive regression and close losses followed. They finished 14th at 41-37, headed for the Play-In Tournament.",
+    "sourceHash": "9e9f9356bc50f109d779a1a60ca531d3ef269539cb375304246c5ab8dcd18c26",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:22.010Z"
+  },
+  "mil": {
+    "summary": "The Bucks opened the season ranked second, with Khris Middleton out after wrist surgery, and started 9-0 to reach No. 1 on the strength of the league's top defense. A slide followed: they fell to third and then seventh as losses piled up, including a three-game skid at Christmas. They reached eighth after losing five of six while the offense sagged and Giannis Antetokounmpo missed games. A recovery began with Middleton's return, and Milwaukee climbed back to No. 1 during a 16-game winning streak. They closed at 56-22 and ranked second, still leaning on defense, with the offense a persistent concern and home court throughout the playoffs not yet clinched.",
+    "sourceHash": "1686328496c5daf428dd3f687e0d8ffaa3f7bc1dab30d936f24e402ae0a039e7",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:24.842Z"
+  },
+  "min": {
+    "summary": "The Timberwolves opened 2022-23 ranked 14th, with Rudy Gobert and Karl-Anthony Towns still unproven together, and they slid to 24th by Week 5 after a 6-8 start. Inconsistency defined the year: a six-game losing streak left them 16-21 through December, but a strong January lifted them to 15th and then 14th. Towns' calf injury cost him 52 games, and D'Angelo Russell was traded for Mike Conley. Rankings bounced between 11th and 19th, and the Wolves were 39-40 in Week 25, ranked 17th, fighting for Play-In seeding after a three-game losing streak.",
+    "sourceHash": "47d2e121ae0388f5ee3084e5381d20feaad8e478116a84ed4a168af4b87056ff",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:28.806Z"
+  },
+  "nop": {
+    "summary": "The Pelicans opened 2022-23 ranked 16th, then jumped to ninth after a 2-1 start and climbed as high as second in Week 9, when they led the West at 18-8 despite injuries to Brandon Ingram and others. A losing stretch followed, and Ingram missed two months. Zion Williamson was out after a hamstring strain in early January. By Week 16 they had fallen to 16th, losing 10 straight before recovering slightly. Late-season struggles in close games pushed them to 22nd in Week 23. A winning run then lifted them to 15th at 40-38, eighth in the West and in the Play-In race, with Williamson's return doubtful.",
+    "sourceHash": "f4744c6fccc9a839af9b17dca14fff38cf370cb1b1a41775a7533b02f082ffe6",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:32.321Z"
+  },
+  "nyk": {
+    "summary": "The Knicks opened the season ranked 18th and spent the early weeks in the high teens and low 20s, dropping to 23rd in Week 5 amid defensive trouble and a 6-7 record. They recovered with a seven-game winning streak that lifted them to 15th, then an eight-game run, though a five-game losing streak followed. A rise began in January, and after Josh Hart arrived in February they won nine straight and climbed to fifth by Week 21. Brunson's injury and a three-game skid slowed them, but they finished ranked ninth at 46-33, with a top-five offense, a weaker defense, and a Randle ankle sprain clouding the first round.",
+    "sourceHash": "c2c6905ba7d46e6a14acba04b5fddc99fa61bc684ab646fc4401fd72a316fe2b",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:35.404Z"
+  },
+  "okc": {
+    "summary": "The Thunder opened 2022-23 ranked 27th, coming off a 24-58 season, and fell to 30th after an 0-3 start marred by injuries to Jalen Williams, Josh Giddey and Shai Gilgeous-Alexander's early absence. A hot stretch lifted them to 21st by Week 3 and to the high teens by Week 6, but defensive slippage and close losses pushed them back to 24th by Week 10. Gilgeous-Alexander led the offense, while Williams, Giddey and Isaiah Joe grew. A strong January moved them to 13th in Week 15, and they matched last season's win total. They finished Week 25 ranked 16th at 38-41, in 10th place in the West and fighting for a Play-In spot.",
+    "sourceHash": "db55ba9c609512c06d925a11c87ea3baac3307c2aed0c6cdac070548329a0ffe",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:39.263Z"
+  },
+  "orl": {
+    "summary": "The Magic opened 2022-23 ranked 23rd and slid to 29th by Week 7, losing close games and going 5-20 early with few healthy guards. A nine-game losing streak ended with six straight wins, including a sweep in Boston, and the team climbed back to 23rd. A rough stretch of lopsided losses and suspensions followed, and they settled around 26th. They improved to 24-35 by the All-Star break but could not string wins together, and a loss in San Antonio effectively ended their Play-In hopes. They finished ranked 23rd at 34-44, with the offense much improved, the defense around sixth since the slow start, and Paolo Banchero the likely Rookie of the Year.",
+    "sourceHash": "0d20fec36604d0cb6dd56961c144dbabfd44bce07bc459c4ee88703e8b691f3f",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:41.869Z"
+  },
+  "phi": {
+    "summary": "The 76ers opened at No. 6 but fell to 19th after an 0-3 start marked by poor defense and Joel Embiid's conditioning issues. They recovered to 14th, then climbed back to the top ten even as James Harden and Tyrese Maxey missed time. Depth carried them through injuries, and by Week 11 they were fifth. After reaching No. 1 in Weeks 16 and 23, they spent the late weeks third or fourth. Embiid led the league in scoring, and the Sixers finished at No. 4 with a 51-27 record, third in the East and 0-3 against Boston.",
+    "sourceHash": "8f0568ec0745e3799338d6a20afffcc8c923d6e4e10fa8ec54ea967859f85aaf",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:45.572Z"
+  },
+  "phx": {
+    "summary": "The Suns opened 2022-23 ranked fourth, coming off a 64-18 season, and climbed to second in Week 3 after a 5-1 start. Injuries, including Cam Johnson's knee surgery and Chris Paul's absence, plus Jae Crowder's dispute with the team, helped drag them down. Clutch losses and Devin Booker's groin injury followed, and a six-game losing streak sent them to 20th, then 23rd, with a 21-23 record. They recovered with a run of wins, and the Kevin Durant trade, which also sent out Mikal Bridges and Cam Johnson, lifted them to fifth by the final write-up. They were 43-35, undefeated with Durant, and looking at the fourth seed.",
+    "sourceHash": "04f080b3af0663250b04d41e6793dd6780bc8db73a3360182cf9301f92ee39d4",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:49.352Z"
+  },
+  "por": {
+    "summary": "Portland opened 2022-23 ranked 21st after a rough preseason, then started 3-0 and climbed to fourth by Week 3 on the strength of clutch wins and an improved defense. Damian Lillard's calf injuries and a slide on defense dropped the Blazers to 13-11 by Week 8, and they hovered near .500 into December. Weak road play, a run of clutch losses and repeated blown double-digit leads pushed them down the rankings, to 22nd by Week 13. Lillard had a historic scoring season, including a 71-point game, but a deadline trade of Josh Hart and Gary Payton II and a poor post-break defense sank them. They finished ranked 26th at 33-45, effectively out of Play-In contention.",
+    "sourceHash": "a3c8ff9d579b7d03d0245d4fdc96f1934b81726dce7ee7ee79028e098b4de2a7",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:53.547Z"
+  },
+  "sac": {
+    "summary": "The Kings opened 2022-23 ranked 20th, coming off a dominant preseason, but lost their first three games and sank to 28th after a 1-4 start. Close wins, led by De'Aaron Fox's clutch scoring, lifted them to .500 and a seven-game winning streak, and they rose to 8th by Week 8. A rough December and January stretch kept them around 9th to 12th, though Fox became an All-Star and the offense ranked first. After the break they won most of their games, reached second in the West, and ended ranked 8th at 47-31, with the league's top offense, a 25th-ranked defense, and a playoff spot nearly clinched.",
+    "sourceHash": "b31725fd88309a845423d4bcaf1953a490e5d20fe47db1cb3050034908767314",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:47:56.510Z"
+  },
+  "sas": {
+    "summary": "The Spurs opened the 2022-23 season ranked 30th, expected to be a lottery team after trading Dejounte Murray. A hot, 3-point-heavy start made them 5-2 and lifted them to 12th, but a negative point differential caught up with them. They lost 10 of 11, then 11 straight, and fell back to last, ending with the league's worst defense. Injuries to Devin Vassell, Tre Jones and others, plus the Jakob Poeltl trade, deepened the slide, including a 16-game losing streak. Jeremy Sochan and Malaki Branham were bright spots. At 20-58 and ranked 29th, they faced a four-year playoff drought and a near-record-low win total.",
+    "sourceHash": "f9c9b3649f61a50f2791fe38c9fce7a9cb9303a8f893eeaa1811f506c62ab85e",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:48:00.028Z"
+  },
+  "tor": {
+    "summary": "The Raptors opened 2022-23 ranked 12th, and their funky, turnover-forcing, offensive-rebounding style kept them near the middle at first. They climbed to 11th after a 6-4 start, then slid to 22nd as Pascal Siakam's groin injury, other absences and poor road form took hold. A six-game losing streak and weak shooting left them as low as 24th around Week 13. After the trade deadline, with Jakob Poeltl back, they improved defensively, won nine of 12 and reached 16th by Week 23. They finished the write-ups 19th at 39-39, fighting for a Play-In spot.",
+    "sourceHash": "bd472d46213cc93eb5b8b897b5749687cb6aed67b4340196e4f2d52d00ee55de",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:48:03.827Z"
+  },
+  "uta": {
+    "summary": "The Utah Jazz opened 2022-23 ranked 28th, with a new coach and a roster rebuilt through trades, but started 3-0 and climbed to as high as second by Week 6 at 12-6. A four-game losing streak and weak defense then dropped them to the middle of the West. They hovered around .500, with Lauri Markkanen emerging as the standout and many games decided in the clutch. After trading three rotation players at the deadline, they stayed competitive despite injuries to Collin Sexton and Jordan Clarkson. At the end of the write-ups they were 36-42, ranked 22nd, and 1.5 games out of a Play-In spot.",
+    "sourceHash": "e68e1722c31c22fb2546c75cb6ad08c88047b68d47bc6237fb4a153b23a923ec",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:48:06.338Z"
+  },
+  "was": {
+    "summary": "The Wizards opened 2022-23 ranked 22nd, coming off a 35-47 season, with defense the main concern. They climbed to 15th by Week 5 and Week 6 on a defensive surge, reaching 10-7. A slide followed, including a 10-game losing streak that dropped them to 11-20 and 26th. A five-game winning streak lifted them to 21st, and another in late January brought them to 23-26 and 20th. Lineup continuity and inconsistent defense persisted. A poor March, including a 3-10 stretch, ended their Play-In hopes. They finished 34-44, ranked 24th, officially eliminated, with Bradley Beal, Kristaps Porzingis and Kyle Kuzma expected back.",
+    "sourceHash": "a16c91c468f050eb84a1f8b189486d5d5178a654e9c762b49f1b4c2344aeb64d",
+    "weeks": 25,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:48:09.064Z"
+  }
+}

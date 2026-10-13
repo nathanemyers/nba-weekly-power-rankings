@@ -1,0 +1,212 @@
+{
+  "atl": {
+    "summary": "The Hawks opened 2017-18 ranked 29th, relying on guards for offense, and quickly fell to 1-6 and 30th. They stayed between 28th and 30th for most of the first half, sitting at 6-23 with the league's worst record at one point. Defense was the main problem, though the offense improved somewhat and Taurean Prince and rookie John Collins stood out. Ranked 24th by February, the Hawks reached 22nd after a defensive uptick, then slipped again as Kent Bazemore was lost for the season. They finished 24-57, ranked 23rd, ending a 10-year playoff streak, with Prince's growth and Collins' rookie play as positives.",
+    "sourceHash": "56535e4d5966119d0c475303d8e99ca00d50c168b7d79d48f87b27c5798bb5ef",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:01.076Z"
+  },
+  "bkn": {
+    "summary": "The Nets opened 2017-18 ranked 24th, coming off a 20-62 season, and were hopeful that fewer turnovers and better shooting could help. Jeremy Lin's season-ending injury and D'Angelo Russell's knee injury hurt, though Spencer Dinwiddie stepped up and rookie Jarrett Allen emerged. A 3-6 start and defensive problems kept them between 21st and 26th through the winter, and a late-season slump included an eight-game losing streak. They ended at 27-53 and ranked 22nd. The write-ups praised their shot-location defense and player development, while Russell's efficiency remained the main project going forward.",
+    "sourceHash": "489cb5e7cfcd075c977d498b35fd11a5637b057ab8eeda07482480a7db67b693",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:05.030Z"
+  },
+  "bos": {
+    "summary": "The Celtics opened the 2017-18 season ranked fifth, dropped to 14th after a 1-2 start, then climbed to No. 1 by Week 6 behind the league's top defense and a 16-game winning streak. They stayed near the top through December, but offensive inconsistency, rebounding problems and a three-game home losing streak pushed them down to fifth and sixth in January. A slump around the All-Star break dropped them to 10th, before a strong post-break offense revived them. Injuries to Kyrie Irving, Jaylen Brown, Marcus Smart and Daniel Theis followed, though a six-game winning streak lifted them to second in Week 25. They finished eighth, limping into the playoffs without Irving.",
+    "sourceHash": "ee2f4e7706497a71de21c53d0ffad27d86de4069372e219b3e650c06e7be738f",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:08.466Z"
+  },
+  "cha": {
+    "summary": "The Hornets opened 2017-18 ranked 18th, facing a tough early schedule while Nicolas Batum recovered from an elbow injury. Bench problems and close losses left them 8-13 and ranked 20th by Week 8, and they fell to 24th amid injuries and weak offense. A West trip and a three-game winning streak lifted them to 19th and 20th at times, but a four-game losing streak in February all but ended playoff hopes. They won four straight in March and finished 35-46, ranked 21st. The write-ups called them the league's most disappointing team and noted Mitch Kupchak's hiring as general manager.",
+    "sourceHash": "8327930ae87547684c39c7d1a6bf75ec7c7b101ecf4d056836d7a85e7f4b6a21",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:12.481Z"
+  },
+  "chi": {
+    "summary": "The Bulls opened the 2017-18 season ranked 30th, coming off a 41-41 year, and the write-ups expected an ugly season after the preseason fight that put Nikola Mirotic in the hospital and got Bobby Portis suspended. They stayed near the bottom through a 3-18 start, then won seven straight with Mirotic back and climbed to 17th by mid-January. Zach LaVine's debut came during that stretch. A long losing streak, followed by injuries to Kris Dunn, LaVine and Lauri Markkanen, pushed them back to 23rd–27th. They finished 27-53 and ranked 27th, with the league's biggest NetRtg drop.",
+    "sourceHash": "88aad5c944f08f17cf7bee6562b7317bc19f764ccf05ba087cb8186ebea6da7d",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:15.235Z"
+  },
+  "cle": {
+    "summary": "The Cavaliers opened 2017-18 ranked fourth, but the new roster struggled early, and the defense ranked at or near the bottom of the league. A 4-6 start dropped them to 24th. An 11-game winning streak lifted them back to fourth, and LeBron James' triple-double stretch kept them near the top into late December. A 3-9 slide and a brutal road trip followed, sending them down to 10th and then 18th. The deadline brought four new players, but results stayed uneven. A late winning run, with Kevin Love back, moved them to seventh at 49-31, still with a bottom-three defense.",
+    "sourceHash": "e48f6ac81d9330f4f1546d284e8d5fc8f07e8be725b6a547232a59d22429132e",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:19.081Z"
+  },
+  "dal": {
+    "summary": "The Mavericks opened the 2017-18 season ranked 21st, coming off a 33-49 year, and slid to 29th after a 1-10 start in which they lost close games repeatedly. A defensive turnaround and a few wins lifted them to 22nd by Week 9, but they fell back to 27th at 9-25. Four December wins pushed them up to 22nd, with the bench lineup built around Dirk Nowitzki praised, yet a late-season slump dropped them to 29th. Devin Harris was traded for Doug McDermott. They finished 24-57 and ranked 26th, with Nowitzki having ankle surgery and Dennis Smith Jr. seen as the key to the future.",
+    "sourceHash": "f003fe2ab2387fc4a8c7cb48f3af3877ecd9c2591bcf1240a84028635281d5da",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:22.634Z"
+  },
+  "den": {
+    "summary": "Denver opened 2017-18 ranked 11th, coming off a 40-42 season, with Gary Harris extended and Paul Millsap added. The Nuggets slipped to 19th by Week 4, rebounded after a 5-1 homestand, then lost Millsap to wrist surgery. Poor defense and bench play kept them hovering between 9th and 19th, and a 2-6 slide in January dropped them out of playoff position. They rebounded with a strong offense, a deadline deal that sent Emmanuel Mudiay out and brought Devin Harris in, and Millsap's return. Late road losses threatened their postseason hopes, but five straight wins, including one over Minnesota, left them 45-35 and ranked 13th, needing to win their final two games.",
+    "sourceHash": "9d455ecd80ebd716be6b199edce7883c11373656aacaa2848955f1c40f7e696f",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:26.949Z"
+  },
+  "det": {
+    "summary": "The Pistons opened 2017-18 ranked 19th and climbed to fourth by Week 5 behind a 10-3 start, with Tobias Harris, Reggie Jackson and Andre Drummond playing well despite a poor starting lineup. A six-game losing streak in December began the slide, and a 2-8 January left them 22-23 and ranked 19th. After an eight-game skid they fell to 23rd. The Blake Griffin trade brought a brief lift, but they never beat a rested opponent with him early on. Jackson missed 12 weeks. A late 7-1 stretch revived the defense, but the Pistons were eliminated in Week 26, ranked 19th at 38-42.",
+    "sourceHash": "f0af8a1a03564251e74b88c4e0b6106ba0c941d82837d2afaf331fe453a89b97",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:30.953Z"
+  },
+  "gsw": {
+    "summary": "The Warriors opened 2017-18 ranked No. 1 as defending champions, then slipped to No. 3 after a 1-2 start with defensive struggles. They climbed back to the top spot by Week 4 on a dominant offense, and a late-December surge in defense kept them near the top through a stretch without Stephen Curry. Fatigue and a decline in defense after Dec. 30 pushed them to No. 2 and No. 3 by February, though JaVale McGee's move into the starting lineup helped early-game defense. Curry's re-injury in March, along with injuries to Klay Thompson and Kevin Durant, left them at No. 3 and then No. 4. They finished ranked No. 3 at 58-23, with a worse regular season than the previous three.",
+    "sourceHash": "6fbcf83c96acb3e6da336d9625cb98165666ecfd2a599c50678d9abf69f953ab",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:33.791Z"
+  },
+  "hou": {
+    "summary": "The Rockets opened the 2017-18 season ranked second, with write-ups focused on their heavy 3-point shooting, and reached No. 1 in Week 2. Injuries to Chris Paul and others slowed the offense, and the team slipped to third before a strong November. They returned to No. 1 in Week 8 and went 13-0 in one stretch, then fell to third and fourth during a five-game losing streak and James Harden's hamstring injury. A 17-game winning streak restored them to No. 1, and they clinched the top overall seed with a 64-16 record. The final write-up noted a late offensive slump but a 41-3 mark with Paul, Harden and Clint Capela together.",
+    "sourceHash": "59a456f599dbdbe3d0fac9addda8911e0be6bce19457372b363c0a82c16fefd7",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:37.845Z"
+  },
+  "ind": {
+    "summary": "The Pacers opened 2017-18 ranked 26th, with Glenn Robinson III hurt and little expected on offense. They rose quickly as Victor Oladipo, acquired from Oklahoma City, starred, reaching seventh by Week 9 after a 4-0 start to a six-game homestand. A four-game losing streak without Oladipo dropped them to 15th, and Myles Turner's injuries and absences complicated the middle months. They climbed again, reaching fifth by Weeks 19 and 20, then slipped to 10th as the offense struggled after the All-Star break and Turner and Domantas Sabonis were hurt. A five-game winning streak followed. They finished ranked ninth at 48-33, guaranteed no worse than the fifth seed, having clinched a playoff berth.",
+    "sourceHash": "408e20cd1dcfde18364fad408d7b5b20f71d52e6300d7e8e81b80442d0bbdd4d",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:41.725Z"
+  },
+  "lac": {
+    "summary": "The Clippers opened the 2017-18 season ranked 10th, after preseason injuries to three starters, and climbed to fourth after a 4-1 start. A five-game homestand slump began a long losing streak, dropping them to 24th by Week 6. Blake Griffin's knee injury deepened the trouble, though Lou Williams and Austin Rivers kept the offense going. A recovery lifted them to 16th, and Griffin was then traded to Detroit. Tobias Harris arrived, and the team stayed in the playoff race. Late defensive collapses and more injuries, including Milos Teodosic's, followed. They finished 18th at 42-38, with their playoff hopes ended.",
+    "sourceHash": "2821d31eec5fe8d191b0ca98f9168506a64fb9a128952b08077c84ad46bf7ec9",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:44.401Z"
+  },
+  "lal": {
+    "summary": "The Lakers opened 2017-18 ranked 22nd, with rookies Kyle Kuzma and Lonzo Ball drawing early attention. They climbed to 15th at 5-5, then slid to 26th by January during a nine-game losing streak and several injuries. A four-game winning streak revived them, and the Lakers reached 18th after posting a strong 30-day record. They acquired Isaiah Thomas in a deal with the Cavs. A 5-0 start after the All-Star break lifted them to 16th, driven by a much-improved offense and more three-point shooting. They finished 34-46 and ranked 20th, the league's most improved defense, with young players to build on.",
+    "sourceHash": "a20410e888110b76f1437700ad09e768f4d5066b224e323e9dcac8ca13cc885e",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:46.833Z"
+  },
+  "mem": {
+    "summary": "The Grizzlies opened 2017-18 ranked 16th, then climbed to first in Week 3 after a 5-1 start powered by defense and a strong bench. Losses followed, and Mike Conley's Achilles injury sent the team to 17th by Week 6. An eight-game skid, then an 11-game one, dropped them to the high 20s. David Fizdale was replaced by interim coach Bernie Bickerstaff. Marc Gasol shot poorly, and the offense ranked among the league's worst. Conley was done for the season, and the team moved toward developing young players. Memphis lost 19 straight at one stretch and finished ranked 29th at 22-58, with the biggest winning-percentage drop in the league.",
+    "sourceHash": "e182836c5b6f992b7e3435cb82d69e3763df7e42612b3823e2159c55703fbbfa",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:51.266Z"
+  },
+  "mia": {
+    "summary": "The Heat opened 2017-18 ranked 15th, with lineup questions at small forward and backup point guard. They slid to 21st by Week 3 and bottomed out at 23rd in Week 4, hurt by poor third quarters, free throw differentials and a road-heavy schedule. A win over Boston and improved three-point shooting lifted them to 16th, but injuries kept them near 19th through December. A run of close wins pushed them to 7th in Week 14, helped by rookie Bam Adebayo and clutch shooting. A six-game losing streak, the return of Dwyane Wade and road struggles followed. They finished 17th, then 15th at 43-37, with a good defense and an improved post-break offense, but they had lost to Brooklyn and New York.",
+    "sourceHash": "f812f83d02c49d84897e6564061785c7a127405474e5a5889658551d3026e10e",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:55.479Z"
+  },
+  "mil": {
+    "summary": "The Bucks opened the 2017-18 season ranked 14th, rose to 12th, then slid to 22nd after a three-game losing streak. They climbed back after acquiring Eric Bledsoe, reaching 8th in Week 9 and 7th in Weeks 12 and 13. Form then faded, and Jason Kidd was fired in January, with Joe Prunty taking over as interim coach. The team went 8-2 under Prunty early on, though against a soft schedule, and later fell to 19th amid defensive problems and losses to winning teams. The write-ups ended with Milwaukee ranked 16th at 43-37, praised for its offense and Giannis Antetokounmpo but still unable to solve its defense.",
+    "sourceHash": "6966bab5768ee241c439cae5ffdd72f871706691b38be618914cdeac25ba6b3e",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:38:59.058Z"
+  },
+  "min": {
+    "summary": "The Timberwolves opened 2017-18 ranked ninth, with questions about their defense and spacing, and moved between 3rd and 15th over the season. They climbed to third in January, helped by a top-three offense, Jimmy Butler's late-game scoring and an improved defense. Their record on the road was poor in 2018, and they fell back after Butler tore his meniscus in February, going 4-5 over the next nine games. Karl-Anthony Towns scored a franchise-record 56 points in March. Butler returned in the final week, and at 45-35 and ranked 14th, Minnesota still needed to hold off Denver to end a 13-year playoff drought.",
+    "sourceHash": "4fce6f26a4b3b994751f6174ce8c2703da10ea6e715fec34f565506b98d0994b",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:01.652Z"
+  },
+  "nop": {
+    "summary": "The Pelicans opened the season ranked 17th, dealing with injuries and the move of Jrue Holiday back to point guard. They slipped to 20th during an uneven start, then climbed to the 10-13 range by December on the strength of DeMarcus Cousins and Anthony Davis, despite poor defense. Cousins' Achilles tear dropped them to 17th and 18th, but Davis carried the team and they won 10 straight, rising to seventh. They slumped to 12th late amid a four-game skid. By the final write-up they were ranked 11th at 46-34, one win from the playoffs.",
+    "sourceHash": "1d8197c656748fe0dc8e876374e9241b7d5aae14069a38fb41c5e8c2403e6a13",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:05.714Z"
+  },
+  "nyk": {
+    "summary": "The Knicks began 2017-18 ranked 28th, coming off a 31-51 season, with questions about their defense and Frank Ntilikina's playing time. Early wins on defense and the emergence of Kristaps Porzingis and Ntilikina lifted them to 13th by Week 5, and a strong home record kept them around .500 through December, when they peaked at 16-13. Road woes, Tim Hardaway Jr.'s absence and Porzingis's shooting slump then dragged them down. Porzingis tore his ACL in Week 18, and the team lost 15 of 16 games, falling to 27th. They finished 28-52 and ranked 25th, with a lottery pick in hand and Jeff Hornacek's future uncertain.",
+    "sourceHash": "90bd0fb714a1d1afe49faf138416872ec5d9f1227c60ccf5c31c190492c4dd8d",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:08.270Z"
+  },
+  "okc": {
+    "summary": "The Thunder opened 2017-18 ranked sixth, with Russell Westbrook, Paul George and Carmelo Anthony still working out how to share the offense. The team slipped to 12th and then 14th as it struggled in close games and on the road, reaching 8-11 and later hovering around .500 with a weak offense. A hot December lifted them to seventh, and an eight-game win streak took them to fifth after Andre Roberson was lost for the season. Late-season slumps followed, but a six-game win streak in March revived them. They finished ranked tenth at 46-34, called the most dangerous potential low seed.",
+    "sourceHash": "8beb14e13cc6799237aa73c7ac2ab9cdecdd59776d7cc8e75b7659398856963f",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:11.675Z"
+  },
+  "orl": {
+    "summary": "The Magic opened 2017-18 ranked 23rd, coming off a 29-53 season, and climbed to ninth by Week 3 on the strength of hot shooting and a 4-2 start. Injuries to point guards and a fading offense then dragged them down. They went from 8-5 to an eight-game losing streak, and later a nine-game one, and reached 30th in Week 11 with Nikola Vucevic out with a broken hand. They stayed at or near the bottom through January. After trading Elfrid Payton, they hovered around 27th and 28th, hurt by injuries to Evan Fournier and Aaron Gordon. They finished ranked 28th at 24-56, still searching for direction.",
+    "sourceHash": "88f6f60b3c0376f266064c8b0bf001592a31c5a7b3bb50c4343c30259b768b4c",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:15.957Z"
+  },
+  "phi": {
+    "summary": "The 76ers began 2017-18 ranked 20th, coming off a 28-54 season, and dropped to 24th after an 0-3 start. They climbed to 17th by Week 4 and reached 8th by Week 7 with Ben Simmons and Joel Embiid leading the way. Injuries and turnovers brought a slide to .500 and a five-game losing streak, leaving them 15-18 and 15th. A strong defense and a January surge lifted them back into the top 10. After a late-season push, they won 14 straight games and finished 50-30, ranked fifth and in position for the third seed in the East.",
+    "sourceHash": "fe5c356bb821e99465145eb40ad7d9a95f3f43e8c2cf95be4bee0bd53492519a",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:18.700Z"
+  },
+  "phx": {
+    "summary": "The Suns opened the 2017-18 season ranked 27th, coming off a 24-58 year, then fell to 30th after an 0-3 start that got coach Earl Watson fired and put Jay Triano in charge. They climbed to 25th in November and again in late December, helped by closer games and better ball movement, but never rose higher. A losing skid from February sent them back to 30th, where they stayed through the final weeks. Josh Jackson and Devin Booker were bright spots, but the Suns finished 20-61 in the write-ups, last in both offensive and defensive efficiency, with no worse than the fourth pick.",
+    "sourceHash": "2f743d55f70b1fc2828d6c6b05121b24a557aceca4ebb9070d1677110d9114db",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:22.393Z"
+  },
+  "por": {
+    "summary": "Portland opened 2017-18 ranked 13th and stayed near there through a 6-6 start, a home-heavy stretch that produced little offense and an 0-4 homestand that left them at 13-12. A Damian Lillard hamstring strain and weak offense kept them around .500 until January, when the offense revived while the defense slipped. After the All-Star break, the Blazers' defense recovered and they won 13 straight, climbing to fourth in the rankings and into third place in the West. Late losses, including an 0-3 Texas trip and injuries to Maurice Harkless and Ed Davis, left them 48-32 and ranked sixth, still needing one win to secure first-round home court.",
+    "sourceHash": "72621319292f127e95721e5eb836897de6eee8df54607b7f5ad85a0b8519b9ad",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:25.151Z"
+  },
+  "sac": {
+    "summary": "The Kings opened 2017-18 ranked 25th, coming off a 32-50 season, with rookie De'Aaron Fox and a veteran-heavy roster that Dave Joerger kept reshuffling. An 1-8 start sent them to 30th by Week 4, and they hovered between 25th and 30th through December, ranking last in offense and defense at times. Their record in close games kept them from the bottom. After a rough January and the George Hill trade fallout, they climbed to 24th in Week 21 and as high as 21st in Week 23, helped by Fox's late-game shooting. They finished 24th at 26-54, with the write-ups urging a more modern offense.",
+    "sourceHash": "a9a2da5ceb2c818c5c5339b0cee4f1bcca3ee9c7b398951cdc108cf86e39ec34",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:29.210Z"
+  },
+  "sas": {
+    "summary": "The Spurs began 2017-18 ranked third, with Kawhi Leonard sidelined by a quad issue and LaMarcus Aldridge carrying the offense. They climbed to second after a 2-0 start, then settled between fifth and seventh as the offense struggled and Leonard's absence dragged on. He debuted in December, played sparingly, and was lost again to a shoulder problem. A 9-10 stretch from Dec. 30 and a late slump, including a four-game losing streak, dropped them to 15th by Week 22. Aldridge's play and a 6-0 homestand revived them, but road losses continued. They finished ranked 12th at 46-34, needing one more win to extend their playoff streak to 21 seasons.",
+    "sourceHash": "c6226a4aff1a8187e0384df01a0e5c20844dd3fd7876c55075b65d233b06ecd9",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:31.959Z"
+  },
+  "tor": {
+    "summary": "The Raptors opened 2017-18 ranked eighth, shooting many more threes under a new offense and leaning on a deep young bench. They slipped to 11th after a mixed early road trip, then climbed to fourth by Week 6 as the offense adapted and DeMar DeRozan became more efficient. A soft December schedule pushed them to second, and they held the top three through January, though shooting slumps raised concerns. They took the East's top seed in Week 18 and reached first in Week 22 after beating Houston. Late defensive slippage and clutch-offense worries followed, but they finished second at 58-22, with the league's best bench.",
+    "sourceHash": "4e52fde5796843cc2e25de19121f4c93df86d591e85e46a6c121cbda860d6b9c",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:34.815Z"
+  },
+  "uta": {
+    "summary": "Utah opened 2017-18 ranked 12th, rose to ninth, then slid as the offense stalled, rookie Donovan Mitchell struggled early and Rudy Gobert went down. Losing streaks dropped the Jazz to 24th by Week 13, at 16-24, and they bottomed out at 25th a week later. Gobert's return in mid-January sparked a turnaround, with a defense-led five-game streak that grew to 11 straight wins and lifted the team to eighth. A nine-game run in March carried the ranking to fifth. The Jazz finished 47-33, ranked fourth, with a second straight playoff berth clinched and a chance to catch Portland for the 3 seed.",
+    "sourceHash": "1fa5101a72ff66fd05a530edcde0f17288eb54abef53ad4c9014c7ef96945efa",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:39.045Z"
+  },
+  "was": {
+    "summary": "The Wizards opened the 2017-18 season ranked seventh after a 49-33 campaign, with Markieff Morris's sports hernia and bench problems early concerns. They held that spot through a 4-2 start, then slid to the 9-11 range amid blown leads and John Wall's knee trouble. They stayed around .500 without him, rising as high as eighth, and Bradley Beal and Tomas Satoransky carried the offense. After Wall had knee surgery, they went 4-0 but later fell back, sliding to 16th as losses piled up. Wall returned late, but they lost four straight, finishing 42-38 and ranked 17th, with Scott Brooks calling the group \"selfish.\"",
+    "sourceHash": "b2c049fbf2f9ca424eea1d9e94bbd93e6bcd1d4252bf333019ec911f5ed5db7b",
+    "weeks": 26,
+    "model": "claude-sonnet-5-5",
+    "generatedAt": "2026-10-13T15:39:41.687Z"
+  }
+}
