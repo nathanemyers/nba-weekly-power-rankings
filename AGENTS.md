@@ -27,3 +27,10 @@ specify init --here --script py --integration claude --force
 - Place `styled-component` definitions at the top of component files.
 - Keep comments to a minimum. 1 sentence maximum.
 - Do not use estoteric JS contructs like `Map` or `Set`. Stick to objects and arrays.
+
+## Forbidden Actions
+
+The following actions spend API tokens, which cost money. Do **not** perform these actions.
+
+- Do not run `npm run build:summaries`
+- Do not run `scripts/build-summaries.mjs`

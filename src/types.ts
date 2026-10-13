@@ -1,6 +1,7 @@
 export type TeamRankings = TeamDisplay & {
   rankings: WeekRanking[];
   playoff?: PlayoffStage;
+  aiSummary?: string;
 };
 
 export type WeekRanking = {
@@ -24,6 +25,7 @@ export type SeasonData = {
   maxWeek: number;
   rankings: Record<string, WeekRanking[]>;
   playoffs?: Record<string, PlayoffStage>;
+  summaries?: Record<string, string>;
 };
 
 export enum Team {

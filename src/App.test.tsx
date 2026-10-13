@@ -7,16 +7,21 @@ import { mockReducedMotion } from "./test/fixtures";
 // Three fixture seasons: 26 weeks, 21 weeks, and one short enough to fit the window
 vi.mock("./data/seasons", async () => {
   const { buildRankings, PLAYOFFS } = await import("./test/fixtures");
-  const season = (name: string, maxWeek: number) => ({
+  const season = (
+    name: string,
+    maxWeek: number,
+    summaries?: Record<string, string>,
+  ) => ({
     season: name,
     maxWeek,
     rankings: buildRankings(maxWeek),
     playoffs: PLAYOFFS,
+    summaries,
   });
   return {
     seasons: ["long", "mid", "short"],
     seasonData: {
-      long: season("long", 26),
+      long: season("long", 26, { bos: "Boston led from the first week." }),
       mid: season("mid", 21),
       short: season("short", 8),
     },
@@ -165,6 +170,8 @@ describe("User Story 2 — move around the season", () => {
 describe("User Story 3 — pin a team", () => {
   it("pins on click and unpins when the same team is clicked again", async () => {
     const user = userEvent.setup();
+    const boston = () =>
+      screen.getByText("Boston Celtics", { selector: "text" });
     render(<App />);
 
     await user.click(screen.getByText("Miami Heat"));
@@ -174,22 +181,16 @@ describe("User Story 3 — pin a team", () => {
     );
 
     await user.unhover(screen.getByText("Miami Heat"));
-    await user.click(screen.getByText("Boston Celtics"));
-    expect(screen.getByText("Boston Celtics")).toHaveAttribute(
-      "font-weight",
-      "700",
-    );
+    await user.click(boston());
+    expect(boston()).toHaveAttribute("font-weight", "700");
     expect(screen.getByText("Miami Heat")).toHaveAttribute(
       "font-weight",
       "400",
     );
 
-    await user.click(screen.getByText("Boston Celtics"));
+    await user.click(boston());
     fireEvent.mouseLeave(screen.getByRole("img"));
-    expect(screen.getByText("Boston Celtics")).toHaveAttribute(
-      "font-weight",
-      "400",
-    );
+    expect(boston()).toHaveAttribute("font-weight", "400");
   });
 
   it("unpins when the chart background is clicked", async () => {
@@ -208,5 +209,49 @@ describe("User Story 3 — pin a team", () => {
       "font-weight",
       "400",
     );
+  });
+});
+
+describe("Team AI summary", () => {
+  const panel = (team: string) =>
+    screen.queryByRole("region", {
+      name: `AI-generated summary for ${team}`,
+    });
+
+  it("shows the pinned team's labeled summary and hides it on unpin", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    expect(panel("Boston Celtics")).not.toBeInTheDocument();
+
+    await user.click(screen.getByText("Boston Celtics"));
+
+    const region = panel("Boston Celtics");
+    expect(region).toBeInTheDocument();
+    expect(region).toHaveTextContent("AI-generated summary");
+    expect(region).toHaveTextContent("Boston led from the first week.");
+
+    await user.click(screen.getByText("Boston Celtics", { selector: "text" }));
+    expect(panel("Boston Celtics")).not.toBeInTheDocument();
+  });
+
+  it("shows nothing for a team without a summary", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(screen.getByText("Miami Heat"));
+
+    expect(screen.queryByRole("region")).not.toBeInTheDocument();
+    expect(screen.queryByText("AI-generated summary")).not.toBeInTheDocument();
+  });
+
+  it("drops the summary when switching to a season without one", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(screen.getByText("Boston Celtics"));
+    await user.selectOptions(screen.getByRole("combobox"), "mid");
+
+    expect(screen.queryByRole("region")).not.toBeInTheDocument();
+    expect(screen.getByText("Weeks 1–11")).toBeInTheDocument();
   });
 });

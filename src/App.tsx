@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { clamp } from "lodash";
 import RankingsChart, { DEFAULT_WINDOW_WEEKS } from "./Chart/Chart";
 import { seasonData, seasons } from "./data/seasons";
+import TeamSummary from "./TeamSummary";
 import { Team, Teams, type TeamRankings } from "./types";
 
 const CHART_WIDTH = 960;
@@ -15,6 +16,7 @@ function loadSeason(season: string) {
     ...team,
     rankings: data.rankings[team.teamId] ?? [],
     playoff: data.playoffs?.[team.teamId],
+    aiSummary: data.summaries?.[team.teamId],
   })).filter((team) => team.rankings.length > 0);
   return { teams, maxWeek: data.maxWeek };
 }
@@ -125,6 +127,10 @@ function App() {
   const endWeek = zoomedOut ? data.maxWeek : windowEnd;
   const canPageEarlier = !zoomedOut && windowStart > 1;
   const canPageLater = !zoomedOut && windowEnd < data.maxWeek;
+  const pinnedTeam =
+    pinnedTeams.length === 1
+      ? data.teams.find((team) => team.teamId === pinnedTeams[0])
+      : undefined;
   const canZoom = windowStart > 1 || windowEnd < data.maxWeek;
 
   const page = (delta: number) => {
@@ -196,6 +202,13 @@ function App() {
               {zoomedOut ? "Zoom in" : "Zoom out"}
             </Button>
           </ZoomRow>
+        )}
+
+        {pinnedTeam?.aiSummary && (
+          <TeamSummary
+            teamName={pinnedTeam.name}
+            summary={pinnedTeam.aiSummary}
+          />
         )}
       </ChartColumn>
     </Container>
