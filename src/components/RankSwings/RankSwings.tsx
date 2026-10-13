@@ -72,6 +72,7 @@ const Trend = styled.span`
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  margin: auto;
 `;
 
 const Ranks = styled.span`
@@ -142,8 +143,8 @@ export default function RankSwings(props: RankSwingsProps) {
 
   return (
     <Panel aria-label="Biggest rank swings">
-      {renderGroup("Biggest risers", risers)}
-      {renderGroup("Biggest fallers", fallers)}
+      {renderGroup("Biggest Improvements", risers)}
+      {renderGroup("Biggest Fall Offs", fallers)}
     </Panel>
   );
 }
