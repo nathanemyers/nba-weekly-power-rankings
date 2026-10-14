@@ -29,6 +29,7 @@
       "components/*": ["./src/components/*"],
       "types": ["./src/types"],
       "data/*": ["./data/processed/*"],
+      "schemas/*": ["./src/schemas/*"],
       "test/*": ["./src/test/*"],
       "store/*": ["./src/store/*"]
     }

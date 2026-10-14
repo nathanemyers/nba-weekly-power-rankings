@@ -1,6 +1,6 @@
-import type { WeekRanking } from "../schemas/season";
+import type { WeekRanking } from "schemas/season";
 
-export type { SeasonData, WeekRanking } from "../schemas/season";
+export type { SeasonData, WeekRanking } from "schemas/season";
 
 export type TeamRankings = TeamDisplay & {
   rankings: WeekRanking[];

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { SeasonDataSchema } from "../../../schemas/season";
+import { SeasonDataSchema } from "schemas/season";
 import { PlayoffStage, Teams, type TeamRankings } from "types";
 
 export type SeasonView = {
