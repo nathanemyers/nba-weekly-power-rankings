@@ -1,24 +1,3 @@
-<!--
-Sync Impact Report
-- Version change: 1.1.0 → 1.2.0
-- Modified principles:
-  - V. Simplicity: the named existing stack changes from "React, TypeScript, Vite,
-    styled-components" to "React, TypeScript, Vite, Tailwind CSS, shadcn/ui". Title and intent
-    unchanged.
-- Modified sections:
-  - Hosting & Technology Constraints: added a UI & Styling bullet naming Tailwind CSS and
-    shadcn/ui as the sole styling and UI-component approach, and stating that styled-components
-    is no longer part of the stack.
-- Added sections: none
-- Removed sections: none
-- Templates requiring updates: none (templates read the constitution at runtime)
-- Follow-up TODOs:
-  - AGENTS.md still says "Place `styled-component` definitions at the top of component files";
-    it is outside this command's scope and needs a manual edit.
-  - Application code still depends on styled-components until
-    specs/011-tailwind-shadcn-migration is implemented.
--->
-
 # NBA Weekly Power Rankings Constitution
 
 ## Core Principles
@@ -76,7 +55,8 @@ presentation.
 
 ### V. Simplicity
 
-- Prefer the existing stack (React, TypeScript, Vite, Tailwind CSS, shadcn/ui) and the platform over
+- Prefer the existing stack (React, TypeScript, Vite, Tailwind CSS, shadcn/ui,
+  Redux Toolkit, Zod) and the platform over
   new dependencies. Each new runtime dependency MUST be justified by a need the current stack
   cannot reasonably meet.
 - Do not introduce infrastructure (servers, databases, hosted services) to solve problems that
@@ -99,6 +79,22 @@ Rationale: a small, single-maintainer visualization project stays maintainable b
   stack and MUST NOT be introduced or reintroduced; other CSS-in-JS or component libraries
   require the same justification as any new runtime dependency under Principle V. Styles and
   fonts MUST be bundled with the build, consistent with Principles I and II.
+- State & Data Layer: Redux Toolkit (`@reduxjs/toolkit`) with React Redux bindings
+  (`react-redux`) is the project's dedicated data layer. Shared application state and loaded
+  ranking/playoff/team data MUST live in the Redux store, organized as slices created with
+  `createSlice` and read through selectors; plain Redux (`createStore`, hand-written action
+  types) and alternative state libraries (Zustand, MobX, Jotai, etc.) MUST NOT be introduced.
+  Purely local UI state (e.g., an open popover) MAY remain in component state. The store is
+  in-memory only: anything that must persist or be shareable still follows Principles I and III
+  (URL or browser storage). If RTK Query is used, it MUST only fetch same-origin static assets,
+  consistent with Principle II.
+- Data Validation: Zod is the project's schema and runtime-validation library. Data crossing a
+  trust boundary into the app (bundled or fetched JSON, URL parameters, browser storage) MUST be
+  parsed with a Zod schema before entering the Redux store or components, and invalid input MUST
+  fall back to a safe default rather than crash. TypeScript types for validated data SHOULD be
+  derived from schemas (`z.infer`) instead of duplicated by hand. Build scripts in `scripts/`
+  MAY use Zod to validate the JSON they emit. Other validation libraries (Yup, io-ts, Valibot,
+  etc.) MUST NOT be introduced.
 - Testing: Vitest is the project's test runner, invoked via `npm test`. Test-only dependencies
   (e.g., `@testing-library/*`, `jsdom`) MAY be added as devDependencies to support it; these are
   dev-only tooling, not runtime dependencies, and never reach the client bundle in `dist/`.
@@ -123,4 +119,4 @@ Rationale: a small, single-maintainer visualization project stays maintainable b
 - Every feature plan and code review MUST verify compliance with the Core Principles; any
   justified deviation MUST be documented in the plan's complexity tracking.
 
-**Version**: 1.2.0 | **Ratified**: 2026-10-08 | **Last Amended**: 2026-10-13
+**Version**: 1.3.0 | **Ratified**: 2026-10-08 | **Last Amended**: 2026-10-14
