@@ -29,6 +29,7 @@ describe('loadSeasons', () => {
     const view = state.bySeason.valid
     expect(view.maxWeek).toBe(4)
     expect(view.completed).toBe(true)
+    expect(view.champion).toBe(Team.Boston)
     expect(view.teams.map((t) => t.teamId).sort()).toEqual(
       [Team.Boston, Team.Detroit, Team.LALakers, Team.Miami].sort()
     )
@@ -36,9 +37,9 @@ describe('loadSeasons', () => {
 
   it('is not completed without a champion', () => {
     const noPlayoffs = omit(valid(), 'playoffs')
-    expect(loadSeasons(['s'], { s: noPlayoffs }).bySeason.s.completed).toBe(
-      false
-    )
+    const view = loadSeasons(['s'], { s: noPlayoffs }).bySeason.s
+    expect(view.completed).toBe(false)
+    expect(view.champion).toBeUndefined()
   })
 
   it('accepts a ranking without a record', () => {

@@ -14,6 +14,7 @@ const seasonsSlice = createSlice({
 export default seasonsSlice.reducer
 
 export const selectSeasonOrder = (state: RootState) => state.seasons.order
+export const selectSeasonsById = (state: RootState) => state.seasons.bySeason
 export const selectInvalidSeasons = (state: RootState) => state.seasons.invalid
 export const selectSeasonView = (state: RootState) =>
   state.navigation.season === undefined

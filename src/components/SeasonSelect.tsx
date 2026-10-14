@@ -10,11 +10,16 @@ import {
   seasonSelected,
   selectSeason,
 } from 'store/slices/navigation/navigation'
-import { selectSeasonOrder } from 'store/slices/seasons/seasons'
+import {
+  selectSeasonOrder,
+  selectSeasonsById,
+} from 'store/slices/seasons/seasons'
+import TeamLogo from './TeamLogo'
 
 export default function SeasonSelect() {
   const dispatch = useAppDispatch()
   const seasons = useAppSelector(selectSeasonOrder)
+  const bySeason = useAppSelector(selectSeasonsById)
   const season = useAppSelector(selectSeason)
 
   return (
@@ -23,14 +28,21 @@ export default function SeasonSelect() {
       onValueChange={(value) => dispatch(seasonSelected(value))}
     >
       <SelectTrigger className="w-[180px]">
-        <SelectValue placeholder="Season" />
+        {/* Explicit children keep the champion logo out of the closed trigger */}
+        <SelectValue placeholder="Season">{season}</SelectValue>
       </SelectTrigger>
       <SelectContent className="bg-muted">
-        {seasons.map((s) => (
-          <SelectItem className="" key={s} value={s}>
-            {s}
-          </SelectItem>
-        ))}
+        {seasons.map((s) => {
+          const champion = bySeason[s].champion
+          return (
+            <SelectItem key={s} value={s}>
+              {s}
+              {champion && (
+                <TeamLogo team={champion} className="size-5 object-contain" />
+              )}
+            </SelectItem>
+          )
+        })}
       </SelectContent>
     </Select>
   )

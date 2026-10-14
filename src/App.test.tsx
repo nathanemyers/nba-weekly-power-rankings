@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { cleanup, fireEvent, screen } from '@testing-library/react'
+import { cleanup, fireEvent, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from './App'
 import { mockReducedMotion } from 'test/fixtures'
@@ -43,6 +43,15 @@ const earlier = () => screen.getByRole('button', { name: /earlier/i })
 const later = () => screen.getByRole('button', { name: /later/i })
 const zoomOut = () => screen.getByRole('button', { name: /zoom out/i })
 const zoomIn = () => screen.getByRole('button', { name: /zoom in/i })
+const chooseSeason = async (
+  user: ReturnType<typeof userEvent.setup>,
+  season: string
+) => {
+  await user.click(screen.getByRole('combobox'))
+  await user.click(
+    screen.getByRole('option', { name: new RegExp(`^${season}`) })
+  )
+}
 const weekTickCount = (container: HTMLElement) =>
   container.querySelectorAll('.week-ticks text').length
 
@@ -139,12 +148,12 @@ describe('User Story 2 — move around the season', () => {
     const user = userEvent.setup()
     const { container } = renderWithStore(<App />)
 
-    await user.selectOptions(screen.getByRole('combobox'), 'mid')
+    await chooseSeason(user, 'mid')
     expect(screen.getByText('Full season (Weeks 1–21)')).toBeInTheDocument()
     expect(weekTickCount(container)).toBe(21)
 
     await user.click(zoomIn())
-    await user.selectOptions(screen.getByRole('combobox'), 'long')
+    await chooseSeason(user, 'long')
     expect(screen.getByText('Weeks 1–11')).toBeInTheDocument()
     expect(weekTickCount(container)).toBe(11)
   })
@@ -156,7 +165,7 @@ describe('User Story 2 — move around the season', () => {
 
     for (let i = 0; i < 40; i++)
       fireEvent.keyDown(window, { key: 'ArrowRight' })
-    await user.selectOptions(screen.getByRole('combobox'), 'mid')
+    await chooseSeason(user, 'mid')
 
     expect(screen.getByText('Weeks 11–21')).toBeInTheDocument()
     expect(later()).toBeDisabled()
@@ -169,7 +178,7 @@ describe('User Story 2 — move around the season', () => {
     const user = userEvent.setup()
     const { container } = renderWithStore(<App />)
 
-    await user.selectOptions(screen.getByRole('combobox'), 'short')
+    await chooseSeason(user, 'short')
 
     expect(
       screen.queryByRole('button', { name: /zoom (out|in)/i })
@@ -253,7 +262,7 @@ describe('Team AI summary', () => {
     renderWithStore(<App />)
 
     await user.click(screen.getByText('Boston Celtics'))
-    await user.selectOptions(screen.getByRole('combobox'), 'mid')
+    await chooseSeason(user, 'mid')
 
     expect(
       screen.queryByRole('region', { name: /AI-generated summary/ })
@@ -273,13 +282,11 @@ describe('Rank swings pane', () => {
     screen.getByRole('button', {
       name: 'Memphis Grizzlies: fell 13 places, from 16 to 29',
     })
-  const selectSeason = (user: ReturnType<typeof userEvent.setup>, s: string) =>
-    user.selectOptions(screen.getByRole('combobox'), s)
 
   it('lists the biggest risers and fallers of a completed season', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
-    await selectSeason(user, 'rising')
+    await chooseSeason(user, 'rising')
 
     expect(pane()).toBeInTheDocument()
     expect(
@@ -299,7 +306,7 @@ describe('Rank swings pane', () => {
   it("shows a post-season medal beside a playoff team's name", async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
-    await selectSeason(user, 'rising')
+    await chooseSeason(user, 'rising')
 
     const miami = screen.getByRole('button', {
       name: 'Miami Heat: rose 10 places, from 20 to 10. Lost in the second round',
@@ -324,7 +331,7 @@ describe('Rank swings pane', () => {
   it('is absent for a season that has not completed', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
-    await selectSeason(user, 'active')
+    await chooseSeason(user, 'active')
 
     expect(pane()).not.toBeInTheDocument()
   })
@@ -332,7 +339,7 @@ describe('Rank swings pane', () => {
   it('pins the clicked team, replacing or clearing an earlier pin', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
-    await selectSeason(user, 'rising')
+    await chooseSeason(user, 'rising')
 
     await user.click(indiana())
     expect(indiana()).toHaveAttribute('aria-pressed', 'true')
@@ -352,7 +359,7 @@ describe('Rank swings pane', () => {
   it('reflects a team pinned from the chart', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
-    await selectSeason(user, 'rising')
+    await chooseSeason(user, 'rising')
 
     await user.click(screen.getByText('Indiana Pacers', { selector: 'text' }))
 
@@ -362,10 +369,10 @@ describe('Rank swings pane', () => {
   it("clears the pin and shows the new season's teams on a season switch", async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
-    await selectSeason(user, 'rising')
+    await chooseSeason(user, 'rising')
     await user.click(indiana())
 
-    await selectSeason(user, 'long')
+    await chooseSeason(user, 'long')
 
     expect(
       screen.queryByRole('button', { pressed: true })
@@ -381,10 +388,10 @@ describe('Rank swings pane', () => {
   it('disappears when switching to a season that has not completed', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
-    await selectSeason(user, 'rising')
+    await chooseSeason(user, 'rising')
     await user.click(indiana())
 
-    await selectSeason(user, 'active')
+    await chooseSeason(user, 'active')
 
     expect(pane()).not.toBeInTheDocument()
     fireEvent.mouseLeave(screen.getByRole('img'))
@@ -398,9 +405,31 @@ describe('Rank swings pane', () => {
     renderWithStore(<App />)
     await user.click(screen.getByText('Miami Heat'))
 
-    await selectSeason(user, 'mid')
+    await chooseSeason(user, 'mid')
 
     fireEvent.mouseLeave(screen.getByRole('img'))
     expect(screen.getByText('Miami Heat')).toHaveAttribute('font-weight', '400')
+  })
+})
+
+describe('Season selector', () => {
+  it("shows each completed season's champion logo beside it", async () => {
+    const user = userEvent.setup()
+    renderWithStore(<App />)
+    await user.click(screen.getByRole('combobox'))
+
+    const option = (name: string) =>
+      screen.getByRole('option', { name: new RegExp(`^${name}`) })
+    expect(
+      within(option('long')).getByRole('img', { name: 'Boston Celtics logo' })
+    ).toBeInTheDocument()
+    expect(within(option('active')).queryByRole('img')).not.toBeInTheDocument()
+  })
+
+  it('keeps the logo out of the closed selector', () => {
+    renderWithStore(<App />)
+    const trigger = screen.getByRole('combobox')
+    expect(trigger).toHaveTextContent('long')
+    expect(within(trigger).queryByRole('img')).not.toBeInTheDocument()
   })
 })
