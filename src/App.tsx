@@ -2,16 +2,13 @@ import { useEffect } from "react";
 import RankingsChart from "components/Chart/Chart";
 import GitHubBadge from "components/GitHubBadge";
 import { Button } from "@/components/ui/button";
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/components/ui/native-select";
+import SeasonSelect from "components/SeasonSelect";
 import RankSwings from "components/RankSwings/RankSwings";
 import TeamSummary from "components/TeamSummary";
 import type { Team } from "./types/nba";
-import { useAppDispatch, useAppSelector } from "./store/hooks";
-import { seasonSelected, selectSeason } from "@/store/slices/navigation/navigation";
-import { selectSeasonOrder, selectSeasonView } from "./store/slices/seasons/seasons";
+import { useAppDispatch, useAppSelector } from "store/hooks";
+import { selectSeason } from "store/slices/navigation/navigation";
+import { selectSeasonView } from "store/slices/seasons/seasons";
 import {
   pageWindow,
   selectCanPageEarlier,
@@ -21,12 +18,12 @@ import {
   selectStartWeek,
   selectZoomedOut,
   zoomToggled,
-} from "@/store/slices/chartView/chartView";
+} from "store/slices/chartView/chartView";
 import {
   pinToggled,
   selectPinnedTeam,
   selectPinnedTeams,
-} from "./store/slices/selection/selection";
+} from "store/slices/selection/selection";
 
 const CHART_WIDTH = 960;
 const CHART_HEIGHT = 600;
@@ -34,7 +31,6 @@ const CHART_MARGIN = { top: 30, right: 120, bottom: 60, left: 190 };
 
 function App() {
   const dispatch = useAppDispatch();
-  const seasons = useAppSelector(selectSeasonOrder);
   const season = useAppSelector(selectSeason);
   const data = useAppSelector(selectSeasonView);
   const zoomedOut = useAppSelector(selectZoomedOut);
@@ -80,17 +76,7 @@ function App() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <label className="flex items-center gap-2.5 text-muted-foreground">
               Season
-              <NativeSelect
-                className="text-foreground"
-                value={season}
-                onChange={(e) => dispatch(seasonSelected(e.target.value))}
-              >
-                {seasons.map((s) => (
-                  <NativeSelectOption key={s} value={s}>
-                    {s}
-                  </NativeSelectOption>
-                ))}
-              </NativeSelect>
+              <SeasonSelect />
             </label>
 
             <div className="flex items-center gap-3">
