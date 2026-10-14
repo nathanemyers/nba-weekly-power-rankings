@@ -25,9 +25,9 @@ export default function SeasonSelect() {
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Season" />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="bg-muted">
         {seasons.map((s) => (
-          <SelectItem key={s} value={s}>
+          <SelectItem className="" key={s} value={s}>
             {s}
           </SelectItem>
         ))}
