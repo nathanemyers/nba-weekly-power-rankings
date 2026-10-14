@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import { clamp } from "lodash";
 import RankingsChart, { DEFAULT_WINDOW_WEEKS } from "components/Chart/Chart";
 import { seasonData, seasons } from "./data/seasons";
 import GitHubBadge from "components/GitHubBadge";
+import { Button } from "@/components/ui/button";
+import {
+  NativeSelect,
+  NativeSelectOption,
+} from "@/components/ui/native-select";
 import RankSwings from "components/RankSwings/RankSwings";
 import TeamSummary from "components/TeamSummary";
 import { PlayoffStage, Team, Teams, type TeamRankings } from "./types/nba";
@@ -25,96 +29,6 @@ function loadSeason(season: string) {
   );
   return { teams, maxWeek: data.maxWeek, completed };
 }
-
-const Container = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 2rem 16px;
-  font-family: system-ui, sans-serif;
-  background: #1d1d1f;
-  color: #f5f5f7;
-`;
-
-const StyledGitHubBadge = styled(GitHubBadge)`
-  align-self: flex-end;
-`;
-
-const Title = styled.h1`
-  font-size: 2.5rem;
-  margin: 0 0 0.5rem;
-  text-align: center;
-`;
-
-const Subtitle = styled.p`
-  font-size: 1.125rem;
-  color: #a1a1a6;
-  margin: 0 0 1.5rem;
-  text-align: center;
-`;
-
-const SeasonRow = styled.label`
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
-  color: #a1a1a6;
-`;
-
-const Select = styled.select`
-  background: #2c2c2e;
-  color: #f5f5f7;
-  border: 1px solid #3a3a3c;
-  border-radius: 6px;
-  padding: 0.4rem 0.7rem;
-  font: inherit;
-  cursor: pointer;
-`;
-
-const Button = styled.button`
-  background: #2c2c2e;
-  color: #f5f5f7;
-  border: 1px solid #3a3a3c;
-  border-radius: 6px;
-  padding: 0.4rem 0.9rem;
-  font: inherit;
-  cursor: pointer;
-
-  &:hover:not(:disabled) {
-    background: #3a3a3c;
-  }
-
-  &:disabled {
-    opacity: 0.35;
-    cursor: default;
-  }
-`;
-
-const ChartColumn = styled.div`
-  width: 100%;
-  max-width: ${CHART_WIDTH}px;
-`;
-
-const Controls = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.75rem;
-`;
-
-const WeekRange = styled.span`
-  color: #a1a1a6;
-  font-size: 0.95rem;
-`;
-
-const ZoomRow = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 0.75rem;
-`;
 
 function App() {
   const [season, setSeason] = useState(seasons[0]);
@@ -163,44 +77,71 @@ function App() {
   });
 
   return (
-    <Container>
-      <StyledGitHubBadge />
-      <Title>NBA Weekly Power Rankings</Title>
-      <Subtitle>
-        Hover a line or dot, click a team to pin it, use arrow keys to pan
-      </Subtitle>
-      <SeasonRow>
-        Season
-        <Select
-          value={season}
-          onChange={(e) => {
-            setSeason(e.target.value);
-            setPinnedTeams([]);
-          }}
-        >
-          {seasons.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
-          ))}
-        </Select>
-      </SeasonRow>
+    <main
+      className="mx-auto flex min-h-screen w-full flex-col gap-4 px-4 py-8"
+      style={{ maxWidth: CHART_WIDTH + 32 }}
+    >
+      <header className="flex items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl leading-tight font-bold sm:text-4xl">
+            NBA Weekly Power Rankings
+          </h1>
+          <p className="mt-1 text-muted-foreground sm:text-lg">
+            Hover a line or dot, click a team to pin it, use arrow keys to pan
+          </p>
+        </div>
+        <GitHubBadge className="mt-1" />
+      </header>
 
-      <ChartColumn>
-        <Controls>
-          <Button onClick={() => page(-1)} disabled={!canPageEarlier}>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <label className="flex items-center gap-2.5 text-muted-foreground">
+          Season
+          <NativeSelect
+            className="text-foreground"
+            value={season}
+            onChange={(e) => {
+              setSeason(e.target.value);
+              setPinnedTeams([]);
+            }}
+          >
+            {seasons.map((s) => (
+              <NativeSelectOption key={s} value={s}>
+                {s}
+              </NativeSelectOption>
+            ))}
+          </NativeSelect>
+        </label>
+
+        <div className="flex items-center gap-3">
+          <Button
+            variant="outline"
+            onClick={() => page(-1)}
+            disabled={!canPageEarlier}
+          >
             ◀ Earlier
           </Button>
-          <WeekRange>
+          <span className="text-[0.95rem] text-muted-foreground">
             {zoomedOut
               ? `Full season (Weeks 1–${data.maxWeek})`
               : `Weeks ${startWeek}–${endWeek}`}
-          </WeekRange>
-          <Button onClick={() => page(1)} disabled={!canPageLater}>
+          </span>
+          <Button
+            variant="outline"
+            onClick={() => page(1)}
+            disabled={!canPageLater}
+          >
             Later ▶
           </Button>
-        </Controls>
+        </div>
 
+        {canZoom && (
+          <Button variant="outline" onClick={() => setZoomedOut(!zoomedOut)}>
+            {zoomedOut ? "Zoom in" : "Zoom out"}
+          </Button>
+        )}
+      </div>
+
+      <div>
         <RankingsChart
           key={season}
           startWeek={startWeek}
@@ -212,14 +153,6 @@ function App() {
           pinnedTeams={pinnedTeams}
           onClick={togglePin}
         />
-
-        {canZoom && (
-          <ZoomRow>
-            <Button onClick={() => setZoomedOut(!zoomedOut)}>
-              {zoomedOut ? "Zoom in" : "Zoom out"}
-            </Button>
-          </ZoomRow>
-        )}
 
         {data.completed && (
           <RankSwings
@@ -236,8 +169,8 @@ function App() {
             summary={pinnedTeam.aiSummary}
           />
         )}
-      </ChartColumn>
-    </Container>
+      </div>
+    </main>
   );
 }
 

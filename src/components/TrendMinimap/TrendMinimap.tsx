@@ -5,9 +5,6 @@ import { getYforRank } from "components/Chart/utils";
 const PADDING = 3;
 const MARGIN = { top: PADDING, right: PADDING, bottom: PADDING, left: PADDING };
 const BAND_SIZE = Teams.length / 3;
-const TOP_COLOR = "#30D158";
-const MIDDLE_COLOR = "#FFD60A";
-const BOTTOM_COLOR = "#FF453A";
 
 interface TrendMinimapProps {
   rankings: WeekRanking[];
@@ -39,7 +36,9 @@ export default function TrendMinimap(props: TrendMinimapProps) {
   const bottomBoundary = y(BAND_SIZE * 2 + 0.5) / height;
 
   return (
+    // A size-* class opts out of the icon sizing library controls apply to nested SVGs
     <svg
+      className="size-auto shrink-0"
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
@@ -54,10 +53,26 @@ export default function TrendMinimap(props: TrendMinimapProps) {
           x2={0}
           y2={height}
         >
-          <stop offset={topBoundary} stopColor={TOP_COLOR} />
-          <stop offset={topBoundary} stopColor={MIDDLE_COLOR} />
-          <stop offset={bottomBoundary} stopColor={MIDDLE_COLOR} />
-          <stop offset={bottomBoundary} stopColor={BOTTOM_COLOR} />
+          <stop
+            offset={topBoundary}
+            data-band="top"
+            className="[stop-color:var(--color-rank-up)]"
+          />
+          <stop
+            offset={topBoundary}
+            data-band="middle"
+            className="[stop-color:var(--color-rank-mid)]"
+          />
+          <stop
+            offset={bottomBoundary}
+            data-band="middle"
+            className="[stop-color:var(--color-rank-mid)]"
+          />
+          <stop
+            offset={bottomBoundary}
+            data-band="bottom"
+            className="[stop-color:var(--color-rank-down)]"
+          />
         </linearGradient>
       </defs>
       <path

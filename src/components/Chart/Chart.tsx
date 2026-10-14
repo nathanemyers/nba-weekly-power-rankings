@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styled from "styled-components";
 import { type Margin, type Team, type TeamRankings } from "types";
 import TeamLabels from "./TeamLabels";
 import { useChartTransition } from "./useChartTransition";
@@ -17,68 +16,6 @@ const RANK_TICKS = [1, 5, 10, 15, 20, 25, 30];
 
 type Hover = { teamId: Team; week?: number };
 
-const ChartWrap = styled.div<{ $maxWidth: number }>`
-  width: 100%;
-  max-width: ${(props) => props.$maxWidth}px;
-`;
-
-const Relative = styled.div`
-  position: relative;
-`;
-
-const Svg = styled.svg`
-  display: block;
-  width: 100%;
-  height: auto;
-  user-select: none;
-`;
-
-const Playoffs = styled.g`
-  line {
-    stroke: #ff4d4f;
-    stroke-width: 2;
-    stroke-dasharray: 6 4;
-  }
-
-  text {
-    fill: #ff4d4f;
-    font-size: 13px;
-  }
-`;
-
-const GridLine = styled.line`
-  stroke: #333336;
-  stroke-width: 1;
-`;
-
-const Tick = styled.text`
-  fill: #a1a1a6;
-  font-size: 13px;
-`;
-
-const AxisLabel = styled.text`
-  fill: #a1a1a6;
-  font-size: 15px;
-`;
-
-const Tooltip = styled.div`
-  position: absolute;
-  pointer-events: none;
-  max-width: 320px;
-  padding: 10px 12px;
-  background: rgba(0, 0, 0, 0.85);
-  border-radius: 6px;
-  font-size: 0.9rem;
-  line-height: 1.35;
-
-  p {
-    margin: 4px 0;
-  }
-
-  small {
-    color: #a1a1a6;
-  }
-`;
 interface ChartProps {
   teams: TeamRankings[];
   startWeek: number;
@@ -145,9 +82,14 @@ export default function RankingsChart(props: ChartProps) {
     week >= props.startWeek && week <= props.endWeek;
 
   return (
-    <ChartWrap $maxWidth={props.width} onClick={() => props.onClick(undefined)}>
-      <Relative>
-        <Svg
+    <div
+      className="w-full"
+      style={{ maxWidth: props.width }}
+      onClick={() => props.onClick(undefined)}
+    >
+      <div className="relative">
+        <svg
+          className="block h-auto w-full select-none"
           viewBox={`0 0 ${props.width} ${props.height}`}
           role="img"
           aria-label="Weekly NBA power rankings line chart"
@@ -166,64 +108,71 @@ export default function RankingsChart(props: ChartProps) {
 
           {RANK_TICKS.map((r) => (
             <g key={r}>
-              <GridLine
+              <line
+                className="stroke-chart-grid stroke-1"
                 x1={props.margin.left}
                 x2={props.margin.left + PLOT_W}
                 y1={y(r)}
                 y2={y(r)}
               />
-              <Tick
+              <text
+                className="fill-muted-foreground text-[13px]"
                 x={props.margin.left + PLOT_W + 10}
                 y={y(r)}
                 dominantBaseline="middle"
               >
                 {r}
-              </Tick>
+              </text>
             </g>
           ))}
 
           <g className="week-ticks">
             {weeks.map((w) => (
-              <Tick
+              <text
+                className="fill-muted-foreground text-[13px]"
                 key={w}
                 x={x(w)}
                 y={props.margin.top + PLOT_H + 22}
                 textAnchor="middle"
               >
                 {w}
-              </Tick>
+              </text>
             ))}
           </g>
-          <AxisLabel
+          <text
+            className="fill-muted-foreground text-[15px]"
             x={props.margin.left + PLOT_W / 2}
             y={props.height - 8}
             textAnchor="middle"
           >
             Week
-          </AxisLabel>
-          <AxisLabel
+          </text>
+          <text
+            className="fill-muted-foreground text-[15px]"
             transform={`translate(${props.width - 14}, ${props.margin.top + PLOT_H / 2}) rotate(-90)`}
             textAnchor="middle"
           >
             Rank
-          </AxisLabel>
+          </text>
 
           {inWindow(PLAYOFFS_WEEK) && (
-            <Playoffs>
+            <g>
               <line
+                className="stroke-chart-playoffs stroke-2 [stroke-dasharray:6_4]"
                 x1={x(PLAYOFFS_WEEK)}
                 x2={x(PLAYOFFS_WEEK)}
                 y1={props.margin.top}
                 y2={props.margin.top + PLOT_H}
               />
               <text
+                className="fill-chart-playoffs text-[13px]"
                 x={x(PLAYOFFS_WEEK) - 6}
                 y={props.margin.top + 14}
                 textAnchor="end"
               >
                 Playoffs Begin
               </text>
-            </Playoffs>
+            </g>
           )}
 
           <g clipPath="url(#plot-clip)">
@@ -253,7 +202,7 @@ export default function RankingsChart(props: ChartProps) {
                     fill="none"
                     stroke="transparent"
                     strokeWidth={14}
-                    style={{ cursor: "pointer" }}
+                    className="cursor-pointer"
                     onMouseEnter={() =>
                       setHover((h) => ({
                         teamId: team.teamId,
@@ -275,9 +224,8 @@ export default function RankingsChart(props: ChartProps) {
                           cy={y(r.rank)}
                           r={5}
                           fill={team.color}
-                          stroke="#1d1d1f"
                           strokeWidth={1.5}
-                          style={{ cursor: "pointer" }}
+                          className="cursor-pointer stroke-background"
                           onMouseEnter={() =>
                             setHover({ teamId: team.teamId, week: r.week })
                           }
@@ -305,13 +253,14 @@ export default function RankingsChart(props: ChartProps) {
 
           {props.endWeek >= lastWeek && (
             <g className="playoff-column">
-              <AxisLabel
+              <text
+                className="fill-muted-foreground text-[15px]"
                 x={PLAYOFF_X}
                 y={props.margin.top - 8}
                 textAnchor="middle"
               >
                 Playoffs
-              </AxisLabel>
+              </text>
               {props.teams.map((team) => {
                 const last = findLast(team.rankings, (r) =>
                   inTargetWindow(r.week),
@@ -334,10 +283,11 @@ export default function RankingsChart(props: ChartProps) {
               })}
             </g>
           )}
-        </Svg>
+        </svg>
 
         {hoveredTooltip && (
-          <Tooltip
+          <div
+            className="pointer-events-none absolute max-w-80 rounded-md bg-popover/85 px-3 py-2.5 text-[0.9rem] leading-snug text-popover-foreground"
             style={{
               left: `${(x(hoveredTooltip.week) / props.width) * 100}%`,
               top: `${(y(hoveredTooltip.rank) / props.height) * 100}%`,
@@ -351,11 +301,13 @@ export default function RankingsChart(props: ChartProps) {
               #{hoveredTooltip.rank} {hoveredTeam?.name}
               {hoveredTooltip.record && ` (${hoveredTooltip.record})`}
             </strong>
-            <p>{hoveredTooltip.summary}</p>
-            <small>Week {hoveredTooltip.week}</small>
-          </Tooltip>
+            <p className="my-1">{hoveredTooltip.summary}</p>
+            <small className="text-muted-foreground">
+              Week {hoveredTooltip.week}
+            </small>
+          </div>
         )}
-      </Relative>
-    </ChartWrap>
+      </div>
+    </div>
   );
 }

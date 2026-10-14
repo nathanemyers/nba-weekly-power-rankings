@@ -101,3 +101,28 @@ npx shadcn@latest add separator
 ```
 
 Expected: both done in under 15 minutes; the new file appears under `src/components/ui/`. Remove the added component afterwards if it is not used.
+
+## Validation record (2026-10-13)
+
+Results from running this guide after implementation.
+
+| Step | Result |
+| --- | --- |
+| 1. Quality gates | Pass. 64 of 64 tests. Two assertions changed: one team-label `fill` in `Chart.test.tsx`, and the stop colors in `TrendMinimap.test.tsx`. `App.test.tsx` needed no change. |
+| 2. Old styling gone | Pass. |
+| 3. No stray colors | Pass. Only the three team-color constants in `Chart.test.tsx` remain. |
+| 4. Bundle size | Pass. 734.81 kB script + 7.07 kB stylesheet = 741.88 kB gzip, 1.8% over the 728.63 kB baseline. |
+| 5. Sub-path | Pass. Three same-origin requests under `/nba-weekly-power-rankings/`, all 200. |
+| 6. Parity | Pass in the browser on 2025-26 and 2024-25. Reduced-motion behavior was not re-checked; the animation hook is unchanged. |
+| 7. One-edit theme change | Pass for `--card`, `--rank-up`, and `--chart-grid`. |
+| 8. Keyboard and focus | Pass. Focus ring on the GitHub link, season picker, buttons, and swing cards; Space pins a swing card. |
+| 9. Narrow viewport | Pass at 375 px, no sideways scroll. |
+| 10. Newcomer guide | The steps were run as written (`add separator` worked, then removed). Not timed with a person new to the libraries. |
+
+Deviations from the plan:
+
+- `shadcn init` still prompted for a preset with the planned flags; `-p nova` was added. It installed the Geist font, which was removed.
+- The CLI now generates `src/lib/utils.ts` as a re-export from a `cn` package, and adds `shadcn` as a dependency for `shadcn/tailwind.css`, in place of `clsx` and `tailwind-merge`.
+- `--rank-down` was lightened from `#ff453a` to `#ff5a50`, and pressed or hovered swing cards use the `muted` surface instead of `accent`, so the falling-rank figure meets 4.5:1 in every state.
+- `TrendMinimap` carries `size-auto` because library toggles shrink nested SVGs that have no `size-` class.
+- Browser checks for US1 to US3 were run together after US3 rather than at each checkpoint; the automated gates were run at each.

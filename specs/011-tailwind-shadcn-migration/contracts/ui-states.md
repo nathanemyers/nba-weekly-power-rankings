@@ -11,7 +11,7 @@ Styling that depends on state is driven by attributes on the element. Tests asse
 | | | `idle` | No team is active | `foreground-soft` |
 | Rank change in a swing card | `data-direction` | `up` / `down` | Rose / fell over the season | `rank-up` / `rank-down` |
 | Trend minimap gradient `<stop>` | `data-band` | `top` / `middle` / `bottom` | Which third of the league the band covers | `rank-up` / `rank-mid` / `rank-down` |
-| Rank-swing card (library Toggle) | `data-state` | `on` / `off` | Team is pinned / not | `accent` surface when `on` |
+| Rank-swing card (library Toggle) | `data-state` | `on` / `off` | Team is pinned / not | `muted` surface and `muted-foreground` border when `on` |
 
 The minimap keeps four stops in the order top, middle, middle, bottom, at the same offsets as today.
 

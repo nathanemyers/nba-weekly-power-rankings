@@ -34,7 +34,7 @@ The theme is the `:root` block of `src/index.css`. Each color and radius variabl
 | `--dim` | De-emphasized team labels while another is active; quiet outlines | `#5c5c63` | `#5c5c63` |
 | `--rank-up` | Rising rank; top third of trend minimap | `#30d158` | `#30D158` |
 | `--rank-mid` | Middle third of trend minimap | `#ffd60a` | `#FFD60A` |
-| `--rank-down` | Falling rank; bottom third of trend minimap | `#ff453a` | `#FF453A` |
+| `--rank-down` | Falling rank; bottom third of trend minimap | `#ff5a50` (lightened from `#ff453a` to reach 4.5:1 on `muted`) | `#FF453A` |
 | `--chart-grid` | Chart grid lines | `#333336` | `#333336` |
 | `--chart-playoffs` | Playoffs divider line and label | `#ff4d4f` | `#ff4d4f` |
 
