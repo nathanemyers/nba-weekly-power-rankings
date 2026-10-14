@@ -4,7 +4,7 @@ import { seasonSelected, selectSeason } from "./navigation";
 import { selectSeasonOrder } from "store/slices/seasons";
 
 vi.mock(
-  "../data/seasons",
+  "../../../data/seasons",
   async () => (await import("test/mockSeasons")).mockSeasons,
 );
 
