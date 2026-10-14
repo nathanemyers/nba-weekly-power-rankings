@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { cn } from "@/lib/utils";
+import { cn } from "cn";
 import type { Props } from "types";
 
 const REPO_URL = "https://github.com/nathanemyers/nba-weekly-power-rankings";
