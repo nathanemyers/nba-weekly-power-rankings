@@ -74,10 +74,7 @@ function App() {
       {data ? (
         <>
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <label className="flex items-center gap-2.5 text-muted-foreground">
-              Season
-              <SeasonSelect />
-            </label>
+            <SeasonSelect />
 
             <div className="flex items-center gap-3">
               <Button

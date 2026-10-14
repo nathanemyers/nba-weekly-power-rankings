@@ -27,18 +27,17 @@ export default function SeasonSelect() {
       value={season}
       onValueChange={(value) => dispatch(seasonSelected(value))}
     >
-      <SelectTrigger className="w-[180px]">
-        {/* Explicit children keep the champion logo out of the closed trigger */}
-        <SelectValue placeholder="Season">{season}</SelectValue>
+      <SelectTrigger className="w-[180px] text-lg">
+        <SelectValue placeholder="Season">{`${season} Season`}</SelectValue>
       </SelectTrigger>
       <SelectContent className="bg-muted">
         {seasons.map((s) => {
           const champion = bySeason[s].champion
           return (
-            <SelectItem key={s} value={s}>
+            <SelectItem className="h-10 text-lg" key={s} value={s}>
               {s}
               {champion && (
-                <TeamLogo team={champion} className="size-5 object-contain" />
+                <TeamLogo team={champion} className="size-8 object-contain" />
               )}
             </SelectItem>
           )
