@@ -1,8 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { cleanup, fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
 import { mockReducedMotion } from "test/fixtures";
+import { renderWithStore } from "test/renderWithStore";
 
 // Fixture seasons: 26 weeks, 21 weeks, one short enough to fit the window, and two with rank swings
 vi.mock("./data/seasons", async () => {
@@ -58,7 +59,7 @@ afterEach(() => {
 
 describe("User Story 2 — move around the season", () => {
   it("starts on the full season and zooms in to a 10-week span", () => {
-    const { container } = render(<App />);
+    const { container } = renderWithStore(<App />);
     expect(screen.getByText("Full season (Weeks 1–26)")).toBeInTheDocument();
 
     fireEvent.click(zoomIn());
@@ -70,7 +71,7 @@ describe("User Story 2 — move around the season", () => {
 
   it("pages one week at a time with the on-screen controls", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     fireEvent.click(zoomIn());
 
     await user.click(later());
@@ -84,7 +85,7 @@ describe("User Story 2 — move around the season", () => {
   });
 
   it("travels the whole season with the arrow keys, stopping at its ends", () => {
-    render(<App />);
+    renderWithStore(<App />);
     fireEvent.click(zoomIn());
 
     fireEvent.keyDown(window, { key: "ArrowRight" });
@@ -103,7 +104,7 @@ describe("User Story 2 — move around the season", () => {
 
   it("shows the full season with paging disabled and arrow keys ignored", async () => {
     const user = userEvent.setup();
-    const { container } = render(<App />);
+    const { container } = renderWithStore(<App />);
 
     expect(screen.getByText("Full season (Weeks 1–26)")).toBeInTheDocument();
     expect(weekTickCount(container)).toBe(26);
@@ -118,7 +119,7 @@ describe("User Story 2 — move around the season", () => {
 
   it("restores the window position and pinned team after a zoom round trip", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     fireEvent.click(zoomIn());
 
     await user.click(later());
@@ -140,7 +141,7 @@ describe("User Story 2 — move around the season", () => {
 
   it("keeps the zoom mode across a season switch", async () => {
     const user = userEvent.setup();
-    const { container } = render(<App />);
+    const { container } = renderWithStore(<App />);
 
     await user.selectOptions(screen.getByRole("combobox"), "mid");
     expect(screen.getByText("Full season (Weeks 1–21)")).toBeInTheDocument();
@@ -154,7 +155,7 @@ describe("User Story 2 — move around the season", () => {
 
   it("keeps the window inside a shorter season after a switch", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     fireEvent.click(zoomIn());
 
     for (let i = 0; i < 40; i++)
@@ -170,7 +171,7 @@ describe("User Story 2 — move around the season", () => {
 
   it("hides the zoom control when the season fits the window", async () => {
     const user = userEvent.setup();
-    const { container } = render(<App />);
+    const { container } = renderWithStore(<App />);
 
     await user.selectOptions(screen.getByRole("combobox"), "short");
 
@@ -189,7 +190,7 @@ describe("User Story 3 — pin a team", () => {
     const user = userEvent.setup();
     const boston = () =>
       screen.getByText("Boston Celtics", { selector: "text" });
-    render(<App />);
+    renderWithStore(<App />);
 
     await user.click(screen.getByText("Miami Heat"));
     expect(screen.getByText("Miami Heat")).toHaveAttribute(
@@ -212,7 +213,7 @@ describe("User Story 3 — pin a team", () => {
 
   it("unpins when the chart background is clicked", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
 
     await user.click(screen.getByText("Miami Heat"));
     fireEvent.mouseLeave(screen.getByRole("img"));
@@ -237,7 +238,7 @@ describe("Team AI summary", () => {
 
   it("shows the pinned team's labeled summary and hides it on unpin", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     expect(panel("Boston Celtics")).not.toBeInTheDocument();
 
     await user.click(screen.getByText("Boston Celtics"));
@@ -253,7 +254,7 @@ describe("Team AI summary", () => {
 
   it("shows nothing for a team without a summary", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
 
     await user.click(screen.getByText("Miami Heat"));
 
@@ -265,7 +266,7 @@ describe("Team AI summary", () => {
 
   it("drops the summary when switching to a season without one", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
 
     await user.click(screen.getByText("Boston Celtics"));
     await user.selectOptions(screen.getByRole("combobox"), "mid");
@@ -293,7 +294,7 @@ describe("Rank swings pane", () => {
 
   it("lists the biggest risers and fallers of a completed season", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     await selectSeason(user, "rising");
 
     expect(pane()).toBeInTheDocument();
@@ -313,7 +314,7 @@ describe("Rank swings pane", () => {
 
   it("shows a post-season medal beside a playoff team's name", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     await selectSeason(user, "rising");
 
     const miami = screen.getByRole("button", {
@@ -324,7 +325,7 @@ describe("Rank swings pane", () => {
   });
 
   it("omits a direction with no teams", () => {
-    render(<App />);
+    renderWithStore(<App />);
 
     expect(
       screen.getByRole("button", {
@@ -338,7 +339,7 @@ describe("Rank swings pane", () => {
 
   it("is absent for a season that has not completed", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     await selectSeason(user, "active");
 
     expect(pane()).not.toBeInTheDocument();
@@ -346,7 +347,7 @@ describe("Rank swings pane", () => {
 
   it("pins the clicked team, replacing or clearing an earlier pin", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     await selectSeason(user, "rising");
 
     await user.click(indiana());
@@ -366,7 +367,7 @@ describe("Rank swings pane", () => {
 
   it("reflects a team pinned from the chart", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     await selectSeason(user, "rising");
 
     await user.click(screen.getByText("Indiana Pacers", { selector: "text" }));
@@ -376,7 +377,7 @@ describe("Rank swings pane", () => {
 
   it("clears the pin and shows the new season's teams on a season switch", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     await selectSeason(user, "rising");
     await user.click(indiana());
 
@@ -395,7 +396,7 @@ describe("Rank swings pane", () => {
 
   it("disappears when switching to a season that has not completed", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     await selectSeason(user, "rising");
     await user.click(indiana());
 
@@ -410,7 +411,7 @@ describe("Rank swings pane", () => {
 
   it("clears a pin made in the chart on a season switch", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithStore(<App />);
     await user.click(screen.getByText("Miami Heat"));
 
     await selectSeason(user, "mid");

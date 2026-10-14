@@ -1,14 +1,11 @@
+import type { WeekRanking } from "../schemas/season";
+
+export type { SeasonData, WeekRanking } from "../schemas/season";
+
 export type TeamRankings = TeamDisplay & {
   rankings: WeekRanking[];
   playoff?: PlayoffStage;
   aiSummary?: string;
-};
-
-export type WeekRanking = {
-  week: number;
-  rank: number;
-  record?: string;
-  summary: string;
 };
 
 export enum PlayoffStage {
@@ -18,15 +15,6 @@ export enum PlayoffStage {
   Finals = "finals",
   Champion = "champion",
 }
-
-// Output of scripts/build-rankings.mjs, one file per season
-export type SeasonData = {
-  season: string;
-  maxWeek: number;
-  rankings: Record<string, WeekRanking[]>;
-  playoffs?: Record<string, PlayoffStage>;
-  summaries?: Record<string, string>;
-};
 
 export enum Team {
   Atlanta = "atl",
