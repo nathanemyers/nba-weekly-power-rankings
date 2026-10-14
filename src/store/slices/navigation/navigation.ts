@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import { initialSeasons } from "./seasons";
+import { initialSeasons } from "@/store/slices/seasons/seasons";
 import type { RootState } from "store/redux";
 
 // Holds what the visitor is looking at; future routes and UI state belong here too

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { seasonData, seasons } from "../../data/seasons";
-import { loadSeasons } from "store/loadSeasons";
+import { seasonData, seasons } from "../../../data/seasons";
+import { loadSeasons } from "./loadSeasons";
 import type { RootState } from "store/redux";
 
 export const initialSeasons = loadSeasons(seasons, seasonData);

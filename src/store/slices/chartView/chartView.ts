@@ -1,8 +1,9 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { clamp } from "lodash";
-import { DEFAULT_WINDOW_WEEKS } from "components/Chart/Chart";
-import { selectSeasonView } from "./seasons";
+import { selectSeasonView } from "store/slices/seasons";
 import type { AppThunk, RootState } from "store/redux";
+
+const DEFAULT_WINDOW_WEEKS = 10;
 
 type ChartViewState = {
   zoomedOut: boolean;

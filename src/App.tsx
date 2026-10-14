@@ -10,8 +10,8 @@ import RankSwings from "components/RankSwings/RankSwings";
 import TeamSummary from "components/TeamSummary";
 import type { Team } from "./types/nba";
 import { useAppDispatch, useAppSelector } from "./store/hooks";
-import { seasonSelected, selectSeason } from "store/slices/navigation";
-import { selectSeasonOrder, selectSeasonView } from "./store/slices/seasons";
+import { seasonSelected, selectSeason } from "@/store/slices/navigation/navigation";
+import { selectSeasonOrder, selectSeasonView } from "./store/slices/seasons/seasons";
 import {
   pageWindow,
   selectCanPageEarlier,
@@ -21,12 +21,12 @@ import {
   selectStartWeek,
   selectZoomedOut,
   zoomToggled,
-} from "store/slices/chartView";
+} from "@/store/slices/chartView/chartView";
 import {
   pinToggled,
   selectPinnedTeam,
   selectPinnedTeams,
-} from "./store/slices/selection";
+} from "./store/slices/selection/selection";
 
 const CHART_WIDTH = 960;
 const CHART_HEIGHT = 600;

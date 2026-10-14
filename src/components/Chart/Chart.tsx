@@ -5,7 +5,6 @@ import { useChartTransition } from "./useChartTransition";
 import { getYforRank, PLAYOFF_MEDALS } from "./utils";
 import { findLast, max, range } from "lodash";
 
-export const DEFAULT_WINDOW_WEEKS = 10;
 const PLAYOFFS_WEEK = 24;
 
 // Room around the plot so dots on rank 1 and rank 30 aren't clipped
