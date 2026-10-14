@@ -1,18 +1,22 @@
 <!--
 Sync Impact Report
-- Version change: 1.0.0 → 1.1.0
-- Modified principles: none renamed or redefined
+- Version change: 1.1.0 → 1.2.0
+- Modified principles:
+  - V. Simplicity: the named existing stack changes from "React, TypeScript, Vite,
+    styled-components" to "React, TypeScript, Vite, Tailwind CSS, shadcn/ui". Title and intent
+    unchanged.
 - Modified sections:
-  - Hosting & Technology Constraints: added a Testing bullet naming Vitest as the project's test
-    runner and clarifying that dev-only test dependencies do not count as "new runtime
-    dependencies" under Principle V.
-  - Development Workflow & Quality Gates: `npm test` added alongside `npm run lint` and
-    `npm run build` as a required pre-merge gate.
+  - Hosting & Technology Constraints: added a UI & Styling bullet naming Tailwind CSS and
+    shadcn/ui as the sole styling and UI-component approach, and stating that styled-components
+    is no longer part of the stack.
 - Added sections: none
 - Removed sections: none
 - Templates requiring updates: none (templates read the constitution at runtime)
-- Follow-up TODOs: see Next Actions in the command output (CI workflow and actual Vitest
-  scaffolding are implementation work, out of scope for this command)
+- Follow-up TODOs:
+  - AGENTS.md still says "Place `styled-component` definitions at the top of component files";
+    it is outside this command's scope and needs a manual edit.
+  - Application code still depends on styled-components until
+    specs/011-tailwind-shadcn-migration is implemented.
 -->
 
 # NBA Weekly Power Rankings Constitution
@@ -72,7 +76,7 @@ presentation.
 
 ### V. Simplicity
 
-- Prefer the existing stack (React, TypeScript, Vite, styled-components) and the platform over
+- Prefer the existing stack (React, TypeScript, Vite, Tailwind CSS, shadcn/ui) and the platform over
   new dependencies. Each new runtime dependency MUST be justified by a need the current stack
   cannot reasonably meet.
 - Do not introduce infrastructure (servers, databases, hosted services) to solve problems that
@@ -90,6 +94,11 @@ Rationale: a small, single-maintainer visualization project stays maintainable b
   deployable as-is.
 - Data pipeline: `npm run scrape:*` scripts collect raw data into `data/`;
   `npm run build:rankings` reduces it into app-consumable JSON under `src/data/`.
+- UI & Styling: Tailwind CSS is the project's styling approach and shadcn/ui is its source of
+  UI components. New and modified UI MUST use them. styled-components is no longer part of the
+  stack and MUST NOT be introduced or reintroduced; other CSS-in-JS or component libraries
+  require the same justification as any new runtime dependency under Principle V. Styles and
+  fonts MUST be bundled with the build, consistent with Principles I and II.
 - Testing: Vitest is the project's test runner, invoked via `npm test`. Test-only dependencies
   (e.g., `@testing-library/*`, `jsdom`) MAY be added as devDependencies to support it; these are
   dev-only tooling, not runtime dependencies, and never reach the client bundle in `dist/`.
@@ -114,4 +123,4 @@ Rationale: a small, single-maintainer visualization project stays maintainable b
 - Every feature plan and code review MUST verify compliance with the Core Principles; any
   justified deviation MUST be documented in the plan's complexity tracking.
 
-**Version**: 1.1.0 | **Ratified**: 2026-10-08 | **Last Amended**: 2026-10-08
+**Version**: 1.2.0 | **Ratified**: 2026-10-08 | **Last Amended**: 2026-10-13
