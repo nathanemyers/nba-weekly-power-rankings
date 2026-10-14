@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { makeStore } from ".";
+import { makeStore } from "store/redux";
 import { seasonSelected } from "./navigation";
 import {
   pageWindow,

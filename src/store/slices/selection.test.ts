@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { Team } from "types";
-import { makeStore } from ".";
+import { makeStore } from "store/redux";
 import { seasonSelected } from "./navigation";
 import { pinToggled, selectPinnedTeam, selectPinnedTeams } from "./selection";
 

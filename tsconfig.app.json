@@ -28,7 +28,8 @@
       "@/*": ["./src/*"],
       "components/*": ["./src/components/*"],
       "types": ["./src/types"],
-      "test/*": ["./src/test/*"]
+      "test/*": ["./src/test/*"],
+      "store/*": ["./src/store/*"]
     }
   },
   "include": ["src"]

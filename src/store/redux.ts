@@ -3,10 +3,10 @@ import {
   type ThunkAction,
   type UnknownAction,
 } from "@reduxjs/toolkit";
-import seasons from "./seasons";
-import navigation from "./navigation";
-import chartView from "./chartView";
-import selection from "./selection";
+import seasons from "./slices/seasons";
+import navigation from "./slices/navigation";
+import chartView from "./slices/chartView";
+import selection from "./slices/selection";
 
 export function makeStore() {
   return configureStore({

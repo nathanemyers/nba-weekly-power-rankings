@@ -2,7 +2,7 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { Team } from "types";
 import { seasonSelected } from "./navigation";
 import { selectSeasonView } from "./seasons";
-import type { RootState } from ".";
+import type { RootState } from "store/redux";
 
 type SelectionState = { pinnedTeams: Team[] };
 
