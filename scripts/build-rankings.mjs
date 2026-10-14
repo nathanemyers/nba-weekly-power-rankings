@@ -1,5 +1,3 @@
-// Reduces the scraped articles in /data into one compact JSON file per season
-// under src/data/seasons. Run with `npm run build:rankings` after new scrapes.
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -7,7 +5,7 @@ import { loadSeasonEntries } from './lib/articles.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = join(root, 'data')
-const outDir = join(root, 'src', 'data', 'seasons')
+const outDir = join(root, 'data', 'seasons')
 
 const MAX_BLURB_LENGTH = 260
 

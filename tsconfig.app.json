@@ -28,9 +28,10 @@
       "@/*": ["./src/*"],
       "components/*": ["./src/components/*"],
       "types": ["./src/types"],
+      "data/*": ["./src/data/*"],
       "test/*": ["./src/test/*"],
       "store/*": ["./src/store/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "data/seasons"]
 }

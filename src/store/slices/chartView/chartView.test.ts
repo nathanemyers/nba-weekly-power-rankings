@@ -12,7 +12,7 @@ import {
 } from "./chartView";
 
 vi.mock(
-  "../../../data/seasons",
+  "data/seasons",
   async () => (await import("test/mockSeasons")).mockSeasons,
 );
 

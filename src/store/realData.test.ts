@@ -1,5 +1,5 @@
 import { expect, it } from "vitest";
-import { seasonData, seasons } from "../data/seasons";
+import { seasonData, seasons } from "data/seasons";
 import { loadSeasons } from "./slices/seasons/loadSeasons";
 
 it("validates every bundled season", () => {

@@ -5,7 +5,7 @@ import { seasonSelected } from "store/slices/navigation";
 import { pinToggled, selectPinnedTeam, selectPinnedTeams } from "./selection";
 
 vi.mock(
-  "../../../data/seasons",
+  "data/seasons",
   async () => (await import("test/mockSeasons")).mockSeasons,
 );
 

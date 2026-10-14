@@ -20,7 +20,8 @@
     "noFallthroughCasesInSwitch": true,
 
     "paths": {
-      "types": ["./src/types"]
+      "types": ["./src/types"],
+      "data/*": ["./src/data/*"]
     }
   },
   "include": ["vite.config.ts"]

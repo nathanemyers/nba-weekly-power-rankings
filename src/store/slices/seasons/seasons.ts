@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { seasonData, seasons } from "../../../data/seasons";
+import { seasonData, seasons } from "data/seasons";
 import { loadSeasons } from "./loadSeasons";
 import type { RootState } from "store/redux";
 
