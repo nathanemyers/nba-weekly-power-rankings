@@ -340,8 +340,8 @@ describe("User Story 3 — inspect and follow a team", () => {
       "700",
     );
     expect(screen.getByText("Boston Celtics")).toHaveAttribute(
-      "fill",
-      "#5c5c63",
+      "data-state",
+      "dimmed",
     );
 
     fireEvent.mouseEnter(hitPath(container, 0));

@@ -11,6 +11,10 @@ npm install
 npm run dev
 ```
 
+## Styling
+
+The site is styled with Tailwind CSS and shadcn/ui, and every color is defined in `src/index.css`. See [docs/styling.md](docs/styling.md) for how to change the look or add a component.
+
 ## Refreshing data
 
 After new weekly articles have been scraped into `data/`:

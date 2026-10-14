@@ -1,17 +1,6 @@
 import type { Margin, Team, TeamRankings } from "types";
 import { interpolate, type ChartTransitionState } from "./useChartTransition";
 import { firstRankingInRange, getYforRank, PLAYOFF_MEDALS } from "./utils";
-import styled from "styled-components";
-
-const TeamLabel = styled.text`
-  cursor: pointer;
-  font-size: 13px;
-  transition:
-    fill 150ms,
-    font-weight 150ms;
-`;
-
-const PlayoffMedal = styled.text``;
 
 interface TeamLabelsProps {
   teams: TeamRankings[];
@@ -55,14 +44,15 @@ export default function TeamLabels(props: TeamLabelsProps) {
     if (y === undefined) return null;
     const active = props.activeTeams.includes(team.teamId);
     return (
-      <TeamLabel
+      <text
         key={team.teamId}
+        className="cursor-pointer text-[13px] transition-[fill,font-weight] duration-150 data-[state=active]:fill-foreground data-[state=dimmed]:fill-dim data-[state=idle]:fill-foreground-soft"
+        data-state={active ? "active" : anyActive ? "dimmed" : "idle"}
         x={props.margin.left - 10}
         y={y}
         textAnchor="end"
         dominantBaseline="middle"
         fontWeight={active ? 700 : 400}
-        fill={active ? "#f5f5f7" : anyActive ? "#5c5c63" : "#d1d1d6"}
         onMouseEnter={() => props.onHover(team.teamId)}
         onClick={(e) => {
           e.stopPropagation();
@@ -70,7 +60,7 @@ export default function TeamLabels(props: TeamLabelsProps) {
         }}
       >
         {team.name}
-      </TeamLabel>
+      </text>
     );
   });
 
@@ -79,7 +69,7 @@ export default function TeamLabels(props: TeamLabelsProps) {
     const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
     if (y === undefined || !medal) return null;
     return (
-      <PlayoffMedal
+      <text
         key={`${team.teamId}-medal`}
         x={4}
         y={y}
@@ -88,7 +78,7 @@ export default function TeamLabels(props: TeamLabelsProps) {
       >
         <title>{medal.label}</title>
         {medal.icon}
-      </PlayoffMedal>
+      </text>
     );
   });
 

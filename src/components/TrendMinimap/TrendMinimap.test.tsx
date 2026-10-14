@@ -49,11 +49,11 @@ describe("TrendMinimap", () => {
       "stroke",
       `url(#${gradient?.getAttribute("id")})`,
     );
-    expect(stops.map((s) => s.getAttribute("stop-color"))).toEqual([
-      "#30D158",
-      "#FFD60A",
-      "#FFD60A",
-      "#FF453A",
+    expect(stops.map((s) => s.getAttribute("data-band"))).toEqual([
+      "top",
+      "middle",
+      "middle",
+      "bottom",
     ]);
     expect(stops[0].getAttribute("offset")).toBe(
       stops[1].getAttribute("offset"),

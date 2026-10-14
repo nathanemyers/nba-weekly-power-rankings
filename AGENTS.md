@@ -24,7 +24,10 @@ specify init --here --script py --integration claude --force
 - Keep usage of `useEffect` to a minimum.
 - Do not use `useRef` to store state unless it is absolutely necessary.
 - Use React `Suspense` for loading state.
-- Place `styled-component` definitions at the top of component files.
+- Style with Tailwind CSS utility classes. See `docs/styling.md`.
+- Define colors, fonts, and radii only in `src/index.css`. Do not put color values in components, except per-team colors.
+- Use shadcn/ui components from `src/components/ui/` rather than hand-rolling an equivalent. Add new ones with `npx shadcn@latest add <name>` and do not edit the generated files.
+- Never build Tailwind class names from variables. Run-time values go in `style` or SVG attributes.
 - Keep comments to a minimum. 1 sentence maximum.
 - Do not use estoteric JS contructs like `Map` or `Set`. Stick to objects and arrays.
 

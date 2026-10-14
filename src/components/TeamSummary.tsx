@@ -1,40 +1,5 @@
-import styled from "styled-components";
-
-const Panel = styled.section`
-  margin-top: 1.25rem;
-  padding: 1rem 1.25rem;
-  background: #2c2c2e;
-  border: 1px solid #3a3a3c;
-  border-radius: 8px;
-`;
-
-const Header = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-`;
-
-const TeamName = styled.h2`
-  margin: 0;
-  font-size: 1.125rem;
-`;
-
-const Badge = styled.span`
-  padding: 0.15rem 0.55rem;
-  border: 1px solid #5c5c63;
-  border-radius: 999px;
-  color: #a1a1a6;
-  font-size: 0.8rem;
-  white-space: nowrap;
-`;
-
-const Text = styled.p`
-  margin: 0;
-  color: #d1d1d6;
-  line-height: 1.5;
-`;
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface TeamSummaryProps {
   teamName: string;
@@ -43,12 +8,25 @@ interface TeamSummaryProps {
 
 export default function TeamSummary(props: TeamSummaryProps) {
   return (
-    <Panel aria-label={`AI-generated summary for ${props.teamName}`}>
-      <Header>
-        <TeamName>{props.teamName}</TeamName>
-        <Badge>AI-generated summary</Badge>
-      </Header>
-      <Text>{props.summary}</Text>
-    </Panel>
+    <Card
+      role="region"
+      aria-label={`AI-generated summary for ${props.teamName}`}
+      className="mt-5"
+    >
+      <CardContent>
+        <div className="mb-2 flex items-center justify-between gap-3">
+          <h2 className="text-lg font-semibold">{props.teamName}</h2>
+          <Badge
+            variant="outline"
+            className="whitespace-nowrap text-muted-foreground"
+          >
+            AI-generated summary
+          </Badge>
+        </div>
+        <p className="text-base leading-normal text-foreground-soft">
+          {props.summary}
+        </p>
+      </CardContent>
+    </Card>
   );
 }
