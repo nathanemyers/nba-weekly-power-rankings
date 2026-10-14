@@ -1,2 +1,2 @@
-export * from "./nba";
-export * from "./components";
+export * from './nba'
+export * from './components'

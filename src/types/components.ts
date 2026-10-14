@@ -1,10 +1,10 @@
 export interface Props {
-  className?: string;
+  className?: string
 }
 
 export type Margin = {
-  top: number;
-  right: number;
-  bottom: number;
-  left: number;
-};
+  top: number
+  right: number
+  bottom: number
+  left: number
+}

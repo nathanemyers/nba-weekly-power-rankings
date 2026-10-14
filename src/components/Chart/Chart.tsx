@@ -1,84 +1,84 @@
-import { useState } from "react";
-import { type Margin, type Team, type TeamRankings } from "types";
-import TeamLabels from "./TeamLabels";
-import { useChartTransition } from "./useChartTransition";
-import { getYforRank, PLAYOFF_MEDALS } from "./utils";
-import { findLast, max, range } from "lodash";
+import { useState } from 'react'
+import { type Margin, type Team, type TeamRankings } from 'types'
+import TeamLabels from './TeamLabels'
+import { useChartTransition } from './useChartTransition'
+import { getYforRank, PLAYOFF_MEDALS } from './utils'
+import { findLast, max, range } from 'lodash'
 
-const PLAYOFFS_WEEK = 24;
+const PLAYOFFS_WEEK = 24
 
 // Room around the plot so dots on rank 1 and rank 30 aren't clipped
-const CLIP_PAD = 12;
+const CLIP_PAD = 12
 
 // Playoff column sits between the rank numbers and the "Rank" axis label
-const RANK_TICKS = [1, 5, 10, 15, 20, 25, 30];
+const RANK_TICKS = [1, 5, 10, 15, 20, 25, 30]
 
-type Hover = { teamId: Team; week?: number };
+type Hover = { teamId: Team; week?: number }
 
 interface ChartProps {
-  teams: TeamRankings[];
-  startWeek: number;
-  endWeek: number;
-  width: number;
-  height: number;
-  margin: Margin;
-  pinnedTeams: Team[];
-  onClick: (team?: Team) => void;
+  teams: TeamRankings[]
+  startWeek: number
+  endWeek: number
+  width: number
+  height: number
+  margin: Margin
+  pinnedTeams: Team[]
+  onClick: (team?: Team) => void
 }
 
 export default function RankingsChart(props: ChartProps) {
-  const [hover, setHover] = useState<Hover | undefined>();
+  const [hover, setHover] = useState<Hover | undefined>()
 
-  const targetSpan = Math.max(1, props.endWeek - props.startWeek);
+  const targetSpan = Math.max(1, props.endWeek - props.startWeek)
   // The span only changes when the zoom mode does, which should close any open tooltip
-  const [prevSpan, setPrevSpan] = useState(targetSpan);
+  const [prevSpan, setPrevSpan] = useState(targetSpan)
   if (prevSpan !== targetSpan) {
-    setPrevSpan(targetSpan);
-    setHover(undefined);
+    setPrevSpan(targetSpan)
+    setHover(undefined)
   }
 
   const transition = useChartTransition({
     start: props.startWeek,
     span: targetSpan,
-  });
-  const start = transition.start;
-  const span = transition.span;
-  const end = start + span;
+  })
+  const start = transition.start
+  const span = transition.span
+  const end = start + span
 
   const activeTeams =
     props.pinnedTeams.length > 0
       ? props.pinnedTeams
       : hover
         ? [hover.teamId]
-        : [];
-  const hoveredTeam = props.teams.find((t) => t.teamId === hover?.teamId);
+        : []
+  const hoveredTeam = props.teams.find((t) => t.teamId === hover?.teamId)
   const hoveredTooltip =
     hover?.week !== undefined && activeTeams.includes(hover.teamId)
       ? hoveredTeam?.rankings.find((r) => r.week === hover.week)
-      : undefined;
+      : undefined
 
   const lastWeek =
     max(props.teams.flatMap((t) => t.rankings.map((r) => r.week))) ??
-    props.endWeek;
+    props.endWeek
 
   const PLAYOFF_X =
     props.margin.left +
     (props.width - props.margin.left - props.margin.right) +
-    60;
-  const PLOT_W = props.width - props.margin.left - props.margin.right;
-  const PLOT_H = props.height - props.margin.top - props.margin.bottom;
+    60
+  const PLOT_W = props.width - props.margin.left - props.margin.right
+  const PLOT_H = props.height - props.margin.top - props.margin.bottom
 
   const x = (week: number) =>
-    props.margin.left + ((week - start) / span) * PLOT_W;
-  const y = (rank: number) => getYforRank(rank, props.height, props.margin);
+    props.margin.left + ((week - start) / span) * PLOT_W
+  const y = (rank: number) => getYforRank(rank, props.height, props.margin)
 
   const weeks = range(Math.floor(start), Math.ceil(end) + 1).filter(
-    (w) => w >= 1 && w <= lastWeek,
-  );
+    (w) => w >= 1 && w <= lastWeek
+  )
 
-  const inWindow = (week: number) => week >= start && week <= end;
+  const inWindow = (week: number) => week >= start && week <= end
   const inTargetWindow = (week: number) =>
-    week >= props.startWeek && week <= props.endWeek;
+    week >= props.startWeek && week <= props.endWeek
 
   return (
     <div
@@ -176,16 +176,16 @@ export default function RankingsChart(props: ChartProps) {
 
           <g clipPath="url(#plot-clip)">
             {props.teams.map((team) => {
-              const active = activeTeams.includes(team.teamId);
-              const dim = activeTeams.length > 0 && !active;
+              const active = activeTeams.includes(team.teamId)
+              const dim = activeTeams.length > 0 && !active
               // Start a new subpath after a missing week so the line doesn't bridge the gap
               const d = team.rankings
                 .map((r, i) => {
-                  const prev = team.rankings[i - 1];
-                  const move = !prev || prev.week !== r.week - 1 ? "M" : "L";
-                  return `${move}${x(r.week)},${y(r.rank)}`;
+                  const prev = team.rankings[i - 1]
+                  const move = !prev || prev.week !== r.week - 1 ? 'M' : 'L'
+                  return `${move}${x(r.week)},${y(r.rank)}`
                 })
-                .join(" ");
+                .join(' ')
 
               return (
                 <g key={team.teamId}>
@@ -209,8 +209,8 @@ export default function RankingsChart(props: ChartProps) {
                       }))
                     }
                     onClick={(e) => {
-                      e.stopPropagation();
-                      props.onClick(team.teamId);
+                      e.stopPropagation()
+                      props.onClick(team.teamId)
                     }}
                   />
                   {active &&
@@ -231,7 +231,7 @@ export default function RankingsChart(props: ChartProps) {
                         />
                       ))}
                 </g>
-              );
+              )
             })}
           </g>
 
@@ -262,10 +262,10 @@ export default function RankingsChart(props: ChartProps) {
               </text>
               {props.teams.map((team) => {
                 const last = findLast(team.rankings, (r) =>
-                  inTargetWindow(r.week),
-                );
-                const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
-                if (!last || !medal) return null;
+                  inTargetWindow(r.week)
+                )
+                const medal = team.playoff && PLAYOFF_MEDALS[team.playoff]
+                if (!last || !medal) return null
                 return (
                   <text
                     key={team.teamId}
@@ -278,7 +278,7 @@ export default function RankingsChart(props: ChartProps) {
                     <title>{medal.label}</title>
                     {medal.icon}
                   </text>
-                );
+                )
               })}
             </g>
           )}
@@ -292,8 +292,8 @@ export default function RankingsChart(props: ChartProps) {
               top: `${(y(hoveredTooltip.rank) / props.height) * 100}%`,
               transform:
                 x(hoveredTooltip.week) > props.width * 0.6
-                  ? "translate(calc(-100% - 14px), -50%)"
-                  : "translate(14px, -50%)",
+                  ? 'translate(calc(-100% - 14px), -50%)'
+                  : 'translate(14px, -50%)',
             }}
           >
             <strong>
@@ -308,5 +308,5 @@ export default function RankingsChart(props: ChartProps) {
         )}
       </div>
     </div>
-  );
+  )
 }

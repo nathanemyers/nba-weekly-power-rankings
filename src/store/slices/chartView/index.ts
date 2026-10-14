@@ -1,1 +1,1 @@
-export * from "./chartView";
+export * from './chartView'
