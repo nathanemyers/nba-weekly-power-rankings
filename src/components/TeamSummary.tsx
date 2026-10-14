@@ -1,9 +1,9 @@
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent } from '@/components/ui/card'
 
 interface TeamSummaryProps {
-  teamName: string;
-  summary: string;
+  teamName: string
+  summary: string
 }
 
 export default function TeamSummary(props: TeamSummaryProps) {
@@ -28,5 +28,5 @@ export default function TeamSummary(props: TeamSummaryProps) {
         </p>
       </CardContent>
     </Card>
-  );
+  )
 }

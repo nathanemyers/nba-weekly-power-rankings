@@ -1,53 +1,53 @@
-import type { Margin, Team, TeamRankings } from "types";
-import { interpolate, type ChartTransitionState } from "./useChartTransition";
-import { firstRankingInRange, getYforRank, PLAYOFF_MEDALS } from "./utils";
+import type { Margin, Team, TeamRankings } from 'types'
+import { interpolate, type ChartTransitionState } from './useChartTransition'
+import { firstRankingInRange, getYforRank, PLAYOFF_MEDALS } from './utils'
 
 interface TeamLabelsProps {
-  teams: TeamRankings[];
-  transition: ChartTransitionState;
-  activeTeams: Team[];
-  margin: Margin;
-  height: number;
-  onHover: (teamId: Team) => void;
-  onClick: (teamId: Team) => void;
+  teams: TeamRankings[]
+  transition: ChartTransitionState
+  activeTeams: Team[]
+  margin: Margin
+  height: number
+  onHover: (teamId: Team) => void
+  onClick: (teamId: Team) => void
 }
 
 export default function TeamLabels(props: TeamLabelsProps) {
-  const { transition } = props;
+  const { transition } = props
 
   // Labels glide between the first-visible-week rank of the old and new ranges
   const labelY = (team: TeamRankings) => {
     const from = firstRankingInRange(
       team.rankings,
       transition.fromStart,
-      transition.fromStart + transition.fromSpan,
-    );
+      transition.fromStart + transition.fromSpan
+    )
     const to = firstRankingInRange(
       team.rankings,
       transition.toStart,
-      transition.toStart + transition.toSpan,
-    );
-    const fromRank = from?.rank ?? to?.rank;
-    const toRank = to?.rank ?? from?.rank;
-    if (fromRank === undefined || toRank === undefined) return undefined;
+      transition.toStart + transition.toSpan
+    )
+    const fromRank = from?.rank ?? to?.rank
+    const toRank = to?.rank ?? from?.rank
+    if (fromRank === undefined || toRank === undefined) return undefined
     return interpolate(
       getYforRank(fromRank, props.height, props.margin),
       getYforRank(toRank, props.height, props.margin),
-      transition.progress,
-    );
-  };
+      transition.progress
+    )
+  }
 
-  const anyActive = props.activeTeams.length > 0;
+  const anyActive = props.activeTeams.length > 0
 
   const teamNames = props.teams.map((team) => {
-    const y = labelY(team);
-    if (y === undefined) return null;
-    const active = props.activeTeams.includes(team.teamId);
+    const y = labelY(team)
+    if (y === undefined) return null
+    const active = props.activeTeams.includes(team.teamId)
     return (
       <text
         key={team.teamId}
         className="cursor-pointer text-[13px] transition-[fill,font-weight] duration-150 data-[state=active]:fill-foreground data-[state=dimmed]:fill-dim data-[state=idle]:fill-foreground-soft"
-        data-state={active ? "active" : anyActive ? "dimmed" : "idle"}
+        data-state={active ? 'active' : anyActive ? 'dimmed' : 'idle'}
         x={props.margin.left - 10}
         y={y}
         textAnchor="end"
@@ -55,19 +55,19 @@ export default function TeamLabels(props: TeamLabelsProps) {
         fontWeight={active ? 700 : 400}
         onMouseEnter={() => props.onHover(team.teamId)}
         onClick={(e) => {
-          e.stopPropagation();
-          props.onClick(team.teamId);
+          e.stopPropagation()
+          props.onClick(team.teamId)
         }}
       >
         {team.name}
       </text>
-    );
-  });
+    )
+  })
 
   const playoffMedals = props.teams.map((team) => {
-    const y = labelY(team);
-    const medal = team.playoff && PLAYOFF_MEDALS[team.playoff];
-    if (y === undefined || !medal) return null;
+    const y = labelY(team)
+    const medal = team.playoff && PLAYOFF_MEDALS[team.playoff]
+    if (y === undefined || !medal) return null
     return (
       <text
         key={`${team.teamId}-medal`}
@@ -79,13 +79,13 @@ export default function TeamLabels(props: TeamLabelsProps) {
         <title>{medal.label}</title>
         {medal.icon}
       </text>
-    );
-  });
+    )
+  })
 
   return (
     <>
       <g className="team-labels">{teamNames}</g>
       <g className="team-medals">{playoffMedals}</g>
     </>
-  );
+  )
 }

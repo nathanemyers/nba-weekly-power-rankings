@@ -1,14 +1,14 @@
-import { useEffect } from "react";
-import RankingsChart from "components/Chart/Chart";
-import GitHubBadge from "components/GitHubBadge";
-import { Button } from "@/components/ui/button";
-import SeasonSelect from "components/SeasonSelect";
-import RankSwings from "components/RankSwings/RankSwings";
-import TeamSummary from "components/TeamSummary";
-import type { Team } from "./types/nba";
-import { useAppDispatch, useAppSelector } from "store/hooks";
-import { selectSeason } from "store/slices/navigation/navigation";
-import { selectSeasonView } from "store/slices/seasons/seasons";
+import { useEffect } from 'react'
+import RankingsChart from 'components/Chart/Chart'
+import GitHubBadge from 'components/GitHubBadge'
+import { Button } from '@/components/ui/button'
+import SeasonSelect from 'components/SeasonSelect'
+import RankSwings from 'components/RankSwings/RankSwings'
+import TeamSummary from 'components/TeamSummary'
+import type { Team } from './types/nba'
+import { useAppDispatch, useAppSelector } from 'store/hooks'
+import { selectSeason } from 'store/slices/navigation/navigation'
+import { selectSeasonView } from 'store/slices/seasons/seasons'
 import {
   pageWindow,
   selectCanPageEarlier,
@@ -18,41 +18,41 @@ import {
   selectStartWeek,
   selectZoomedOut,
   zoomToggled,
-} from "store/slices/chartView/chartView";
+} from 'store/slices/chartView/chartView'
 import {
   pinToggled,
   selectPinnedTeam,
   selectPinnedTeams,
-} from "store/slices/selection/selection";
+} from 'store/slices/selection/selection'
 
-const CHART_WIDTH = 960;
-const CHART_HEIGHT = 600;
-const CHART_MARGIN = { top: 30, right: 120, bottom: 60, left: 190 };
+const CHART_WIDTH = 960
+const CHART_HEIGHT = 600
+const CHART_MARGIN = { top: 30, right: 120, bottom: 60, left: 190 }
 
 function App() {
-  const dispatch = useAppDispatch();
-  const season = useAppSelector(selectSeason);
-  const data = useAppSelector(selectSeasonView);
-  const zoomedOut = useAppSelector(selectZoomedOut);
-  const startWeek = useAppSelector(selectStartWeek);
-  const endWeek = useAppSelector(selectEndWeek);
-  const canPageEarlier = useAppSelector(selectCanPageEarlier);
-  const canPageLater = useAppSelector(selectCanPageLater);
-  const canZoom = useAppSelector(selectCanZoom);
-  const pinnedTeams = useAppSelector(selectPinnedTeams);
-  const pinnedTeam = useAppSelector(selectPinnedTeam);
+  const dispatch = useAppDispatch()
+  const season = useAppSelector(selectSeason)
+  const data = useAppSelector(selectSeasonView)
+  const zoomedOut = useAppSelector(selectZoomedOut)
+  const startWeek = useAppSelector(selectStartWeek)
+  const endWeek = useAppSelector(selectEndWeek)
+  const canPageEarlier = useAppSelector(selectCanPageEarlier)
+  const canPageLater = useAppSelector(selectCanPageLater)
+  const canZoom = useAppSelector(selectCanZoom)
+  const pinnedTeams = useAppSelector(selectPinnedTeams)
+  const pinnedTeam = useAppSelector(selectPinnedTeam)
 
-  const togglePin = (team?: Team) => dispatch(pinToggled(team));
+  const togglePin = (team?: Team) => dispatch(pinToggled(team))
 
   useEffect(() => {
-    if (zoomedOut) return;
+    if (zoomedOut) return
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") dispatch(pageWindow(-1));
-      if (e.key === "ArrowRight") dispatch(pageWindow(1));
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [zoomedOut, dispatch]);
+      if (e.key === 'ArrowLeft') dispatch(pageWindow(-1))
+      if (e.key === 'ArrowRight') dispatch(pageWindow(1))
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [zoomedOut, dispatch])
 
   return (
     <main
@@ -103,7 +103,7 @@ function App() {
 
             {canZoom && (
               <Button variant="outline" onClick={() => dispatch(zoomToggled())}>
-                {zoomedOut ? "Zoom in" : "Zoom out"}
+                {zoomedOut ? 'Zoom in' : 'Zoom out'}
               </Button>
             )}
           </div>
@@ -142,7 +142,7 @@ function App() {
         <p className="text-muted-foreground">No season data available</p>
       )}
     </main>
-  );
+  )
 }
 
-export default App;
+export default App

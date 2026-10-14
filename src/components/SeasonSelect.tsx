@@ -4,18 +4,18 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";
-import { useAppDispatch, useAppSelector } from "store/hooks";
+} from './ui/select'
+import { useAppDispatch, useAppSelector } from 'store/hooks'
 import {
   seasonSelected,
   selectSeason,
-} from "store/slices/navigation/navigation";
-import { selectSeasonOrder } from "store/slices/seasons/seasons";
+} from 'store/slices/navigation/navigation'
+import { selectSeasonOrder } from 'store/slices/seasons/seasons'
 
 export default function SeasonSelect() {
-  const dispatch = useAppDispatch();
-  const seasons = useAppSelector(selectSeasonOrder);
-  const season = useAppSelector(selectSeason);
+  const dispatch = useAppDispatch()
+  const seasons = useAppSelector(selectSeasonOrder)
+  const season = useAppSelector(selectSeason)
 
   return (
     <Select
@@ -33,5 +33,5 @@ export default function SeasonSelect() {
         ))}
       </SelectContent>
     </Select>
-  );
+  )
 }
