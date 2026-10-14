@@ -6,7 +6,7 @@ import { mockReducedMotion } from "test/fixtures";
 import { renderWithStore } from "test/renderWithStore";
 
 // Fixture seasons: 26 weeks, 21 weeks, one short enough to fit the window, and two with rank swings
-vi.mock("./data/seasons", async () => {
+vi.mock("data/seasons", async () => {
   const { buildRankings, buildSwingRankings, PLAYOFFS } =
     await import("./test/fixtures");
   const season = (

@@ -28,10 +28,10 @@
       "@/*": ["./src/*"],
       "components/*": ["./src/components/*"],
       "types": ["./src/types"],
-      "data/*": ["./src/data/*"],
+      "data/*": ["./data/processed/*"],
       "test/*": ["./src/test/*"],
       "store/*": ["./src/store/*"]
     }
   },
-  "include": ["src", "data/seasons"]
+  "include": ["src", "data/processed/seasons"]
 }

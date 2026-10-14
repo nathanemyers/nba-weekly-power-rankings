@@ -3,7 +3,7 @@ import { screen } from "@testing-library/react";
 import App from "./App";
 import { renderWithStore } from "test/renderWithStore";
 
-vi.mock("./data/seasons", () => ({
+vi.mock("data/seasons", () => ({
   seasons: ["bad"],
   seasonData: { bad: { season: "bad", rankings: {} } },
 }));

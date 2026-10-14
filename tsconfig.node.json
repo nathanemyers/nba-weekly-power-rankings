@@ -21,7 +21,7 @@
 
     "paths": {
       "types": ["./src/types"],
-      "data/*": ["./src/data/*"]
+      "data/*": ["./data/processed/*"]
     }
   },
   "include": ["vite.config.ts"]
