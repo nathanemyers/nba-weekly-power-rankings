@@ -52,6 +52,11 @@ const chooseSeason = async (
     screen.getByRole('option', { name: new RegExp(`^${season}`) })
   )
 }
+// The first and last visible week ticks, e.g. "2–12"
+const shownWeeks = () => {
+  const ticks = Array.from(document.querySelectorAll('.week-ticks text'))
+  return `${ticks[0]?.textContent}–${ticks[ticks.length - 1]?.textContent}`
+}
 const weekTickCount = (container: HTMLElement) =>
   container.querySelectorAll('.week-ticks text').length
 
@@ -69,10 +74,11 @@ afterEach(() => {
 describe('User Story 2 — move around the season', () => {
   it('starts on the full season and zooms in to a 10-week span', () => {
     const { container } = renderWithStore(<App />)
-    expect(screen.getByText('Full season (Weeks 1–26)')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('1–26')
+    expect(zoomIn()).toBeInTheDocument()
 
     fireEvent.click(zoomIn())
-    expect(screen.getByText('Weeks 1–11')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('1–11')
     expect(weekTickCount(container)).toBe(11)
     expect(earlier()).toBeDisabled()
     expect(later()).not.toBeDisabled()
@@ -84,13 +90,13 @@ describe('User Story 2 — move around the season', () => {
     fireEvent.click(zoomIn())
 
     await user.click(later())
-    expect(screen.getByText('Weeks 2–12')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('2–12')
     expect(
       screen.getByText('Detroit Pistons', { selector: 'text' })
     ).toHaveAttribute('y', String(30 + (19 / 29) * 510))
 
     await user.click(earlier())
-    expect(screen.getByText('Weeks 1–11')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('1–11')
   })
 
   it('travels the whole season with the arrow keys, stopping at its ends', () => {
@@ -98,15 +104,15 @@ describe('User Story 2 — move around the season', () => {
     fireEvent.click(zoomIn())
 
     fireEvent.keyDown(window, { key: 'ArrowRight' })
-    expect(screen.getByText('Weeks 2–12')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('2–12')
 
     for (let i = 0; i < 40; i++)
       fireEvent.keyDown(window, { key: 'ArrowRight' })
-    expect(screen.getByText('Weeks 16–26')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('16–26')
     expect(later()).toBeDisabled()
 
     for (let i = 0; i < 40; i++) fireEvent.keyDown(window, { key: 'ArrowLeft' })
-    expect(screen.getByText('Weeks 1–11')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('1–11')
     expect(earlier()).toBeDisabled()
   })
 
@@ -114,7 +120,8 @@ describe('User Story 2 — move around the season', () => {
     const user = userEvent.setup()
     const { container } = renderWithStore(<App />)
 
-    expect(screen.getByText('Full season (Weeks 1–26)')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('1–26')
+    expect(zoomIn()).toBeInTheDocument()
     expect(weekTickCount(container)).toBe(26)
     expect(earlier()).toBeDisabled()
     expect(later()).toBeDisabled()
@@ -122,7 +129,7 @@ describe('User Story 2 — move around the season', () => {
 
     fireEvent.keyDown(window, { key: 'ArrowRight' })
     await user.click(zoomIn())
-    expect(screen.getByText('Weeks 1–11')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('1–11')
   })
 
   it('restores the window position and pinned team after a zoom round trip', async () => {
@@ -135,13 +142,13 @@ describe('User Story 2 — move around the season', () => {
     await user.click(zoomOut())
     await user.click(zoomIn())
 
-    expect(screen.getByText('Weeks 2–12')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('2–12')
     expect(earlier()).not.toBeDisabled()
     expect(later()).not.toBeDisabled()
     expect(screen.getByText('Miami Heat')).toHaveAttribute('font-weight', '700')
 
     fireEvent.keyDown(window, { key: 'ArrowRight' })
-    expect(screen.getByText('Weeks 3–13')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('3–13')
   })
 
   it('keeps the zoom mode across a season switch', async () => {
@@ -149,12 +156,13 @@ describe('User Story 2 — move around the season', () => {
     const { container } = renderWithStore(<App />)
 
     await chooseSeason(user, 'mid')
-    expect(screen.getByText('Full season (Weeks 1–21)')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('1–21')
+    expect(zoomIn()).toBeInTheDocument()
     expect(weekTickCount(container)).toBe(21)
 
     await user.click(zoomIn())
     await chooseSeason(user, 'long')
-    expect(screen.getByText('Weeks 1–11')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('1–11')
     expect(weekTickCount(container)).toBe(11)
   })
 
@@ -167,23 +175,21 @@ describe('User Story 2 — move around the season', () => {
       fireEvent.keyDown(window, { key: 'ArrowRight' })
     await chooseSeason(user, 'mid')
 
-    expect(screen.getByText('Weeks 11–21')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('11–21')
     expect(later()).toBeDisabled()
 
     await user.click(earlier())
-    expect(screen.getByText('Weeks 10–20')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('10–20')
   })
 
-  it('hides the zoom control when the season fits the window', async () => {
+  it('disables the zoom control when the season fits the window', async () => {
     const user = userEvent.setup()
     const { container } = renderWithStore(<App />)
 
     await chooseSeason(user, 'short')
 
-    expect(
-      screen.queryByRole('button', { name: /zoom (out|in)/i })
-    ).not.toBeInTheDocument()
-    expect(screen.getByText('Full season (Weeks 1–8)')).toBeInTheDocument()
+    expect(zoomIn()).toBeDisabled()
+    expect(shownWeeks()).toBe('1–8')
     expect(weekTickCount(container)).toBe(8)
     expect(earlier()).toBeDisabled()
     expect(later()).toBeDisabled()
@@ -267,7 +273,8 @@ describe('Team AI summary', () => {
     expect(
       screen.queryByRole('region', { name: /AI-generated summary/ })
     ).not.toBeInTheDocument()
-    expect(screen.getByText('Full season (Weeks 1–21)')).toBeInTheDocument()
+    expect(shownWeeks()).toBe('1–21')
+    expect(zoomIn()).toBeInTheDocument()
   })
 })
 
