@@ -24,6 +24,7 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilter } from '@fortawesome/free-solid-svg-icons'
+import TeamLogo from './TeamLogo'
 
 function getPinGroup(pinnedTeams: Team[]) {
   if (pinnedTeams.length === 0) return 'All'
@@ -56,8 +57,15 @@ export default function ChartFilter() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="w-50 justify-end">
-          {pinGroup}
+        <Button variant="outline" className="w-60 justify-end">
+          {pinnedTeams.length === 1 ? (
+            <div className="flex w-full items-center justify-between">
+              <TeamLogo team={pinnedTeams[0]} className="h-6 mr-2" />
+              {pinGroup}
+            </div>
+          ) : (
+            pinGroup
+          )}
           <FontAwesomeIcon icon={faFilter} />
         </Button>
       </DropdownMenuTrigger>
