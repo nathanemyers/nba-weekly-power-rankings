@@ -55,8 +55,8 @@ function App() {
 
       {data ? (
         <>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="grid-col-1 ">
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid-col-1 md:justify-items-start justify-items-center">
               <SeasonSelect />
             </div>
             <div className="grid-col-2 justify-items-center">
