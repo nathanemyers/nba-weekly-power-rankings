@@ -1,7 +1,5 @@
-import { useEffect } from 'react'
 import RankingsChart from 'components/Chart/Chart'
 import GitHubBadge from 'components/GitHubBadge'
-import { Button } from '@/components/ui/button'
 import SeasonSelect from 'components/SeasonSelect'
 import RankSwings from 'components/RankSwings/RankSwings'
 import TeamSummary from 'components/TeamSummary'
@@ -10,20 +8,16 @@ import { useAppDispatch, useAppSelector } from 'store/hooks'
 import { selectSeason } from 'store/slices/navigation/navigation'
 import { selectSeasonView } from 'store/slices/seasons/seasons'
 import {
-  pageWindow,
-  selectCanPageEarlier,
-  selectCanPageLater,
-  selectCanZoom,
   selectEndWeek,
   selectStartWeek,
-  selectZoomedOut,
-  zoomToggled,
 } from 'store/slices/chartView/chartView'
 import {
   pinToggled,
   selectPinnedTeam,
   selectPinnedTeams,
 } from 'store/slices/selection/selection'
+import ChartControls from './components/ChartControls'
+import { useChartControls } from './components/Chart/useChartControls'
 
 const CHART_WIDTH = 960
 const CHART_HEIGHT = 600
@@ -33,26 +27,14 @@ function App() {
   const dispatch = useAppDispatch()
   const season = useAppSelector(selectSeason)
   const data = useAppSelector(selectSeasonView)
-  const zoomedOut = useAppSelector(selectZoomedOut)
   const startWeek = useAppSelector(selectStartWeek)
   const endWeek = useAppSelector(selectEndWeek)
-  const canPageEarlier = useAppSelector(selectCanPageEarlier)
-  const canPageLater = useAppSelector(selectCanPageLater)
-  const canZoom = useAppSelector(selectCanZoom)
   const pinnedTeams = useAppSelector(selectPinnedTeams)
   const pinnedTeam = useAppSelector(selectPinnedTeam)
 
   const togglePin = (team?: Team) => dispatch(pinToggled(team))
 
-  useEffect(() => {
-    if (zoomedOut) return
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') dispatch(pageWindow(-1))
-      if (e.key === 'ArrowRight') dispatch(pageWindow(1))
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [zoomedOut, dispatch])
+  useChartControls()
 
   return (
     <main
@@ -75,34 +57,7 @@ function App() {
         <>
           <div className="flex flex-wrap items-center justify-between gap-3">
             <SeasonSelect />
-
-            <div className="flex items-center gap-3">
-              <Button
-                variant="outline"
-                onClick={() => dispatch(pageWindow(-1))}
-                disabled={!canPageEarlier}
-              >
-                ◀ Earlier
-              </Button>
-              <span className="text-[0.95rem] text-muted-foreground">
-                {zoomedOut
-                  ? `Full season (Weeks 1–${data.maxWeek})`
-                  : `Weeks ${startWeek}–${endWeek}`}
-              </span>
-              <Button
-                variant="outline"
-                onClick={() => dispatch(pageWindow(1))}
-                disabled={!canPageLater}
-              >
-                Later ▶
-              </Button>
-            </div>
-
-            {canZoom && (
-              <Button variant="outline" onClick={() => dispatch(zoomToggled())}>
-                {zoomedOut ? 'Zoom in' : 'Zoom out'}
-              </Button>
-            )}
+            <ChartControls />
           </div>
 
           <div>
