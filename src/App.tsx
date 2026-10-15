@@ -6,12 +6,11 @@ import TeamSummary from 'components/TeamSummary'
 import type { Team } from './types/nba'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
 import { getSelectedSeason } from '@/store/slices/UI/UI'
-import { selectSeasonView } from 'store/slices/seasons/seasons'
-import { selectEndWeek, selectStartWeek } from '@/store/slices/chart/chart'
+import { getEndWeek, getStartWeek } from '@/store/slices/chart/chart'
 import {
   pinToggled,
   selectPinnedTeam,
-  selectPinnedTeams,
+  getPinnedTeams,
 } from 'store/slices/selection/selection'
 import ChartControls from './components/ChartControls'
 import { useChartControls } from './components/Chart/useChartControls'
@@ -23,10 +22,10 @@ const CHART_MARGIN = { top: 30, right: 120, bottom: 60, left: 190 }
 function App() {
   const dispatch = useAppDispatch()
   const season = useAppSelector(getSelectedSeason)
-  const data = useAppSelector(selectSeasonView)
-  const startWeek = useAppSelector(selectStartWeek)
-  const endWeek = useAppSelector(selectEndWeek)
-  const pinnedTeams = useAppSelector(selectPinnedTeams)
+  const data = useAppSelector(getSelectedSeason)
+  const startWeek = useAppSelector(getStartWeek)
+  const endWeek = useAppSelector(getEndWeek)
+  const pinnedTeams = useAppSelector(getPinnedTeams)
   const pinnedTeam = useAppSelector(selectPinnedTeam)
 
   const togglePin = (team?: Team) => dispatch(pinToggled(team))

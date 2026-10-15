@@ -1,7 +1,8 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { clamp } from 'lodash'
-import { selectSeasonView } from 'store/slices/seasons'
 import type { AppThunk, RootState } from 'store/redux'
+import type { Team } from 'types'
+import { getSelectedSeason } from '../UI'
 
 const DEFAULT_WINDOW_WEEKS = 10
 
@@ -9,12 +10,14 @@ type ChartViewState = {
   zoomedOut: boolean
   startWeek: number
   endWeek: number
+  pinnedTeams: Team[]
 }
 
 const initialState: ChartViewState = {
   zoomedOut: true,
   startWeek: 1,
   endWeek: 1 + DEFAULT_WINDOW_WEEKS,
+  pinnedTeams: [],
 }
 
 const chartViewSlice = createSlice({
@@ -31,51 +34,52 @@ const chartViewSlice = createSlice({
       state.startWeek = action.payload.start
       state.endWeek = action.payload.end
     },
+    setPinnedTeams(state, action: PayloadAction<Team[]>) {
+      state.pinnedTeams = action.payload
+    },
   },
 })
 
 const { setZoomedInWindow } = chartViewSlice.actions
-export const { setZoomedOut } = chartViewSlice.actions
+export const { setZoomedOut, setPinnedTeams } = chartViewSlice.actions
 export default chartViewSlice.reducer
 
-const selectMaxWeek = (state: RootState) =>
-  selectSeasonView(state)?.maxWeek ?? 1
+const getMaxWeek = (state: RootState) => getSelectedSeason(state)?.maxWeek ?? 1
 
-export const selectZoomedOut = (state: RootState) => state.chartView.zoomedOut
+export const getIsZoomedOut = (state: RootState) => state.chart.zoomedOut
 
-export const selectWindowEnd = (state: RootState) =>
-  Math.min(state.chartView.endWeek, selectMaxWeek(state))
+export const getWindowEnd = (state: RootState) =>
+  Math.min(state.chart.endWeek, getMaxWeek(state))
 
-export const selectWindowStart = (state: RootState) =>
+export const getWindowStart = (state: RootState) =>
   Math.max(
     1,
-    selectWindowEnd(state) -
-      (state.chartView.endWeek - state.chartView.startWeek)
+    getWindowEnd(state) - (state.chart.endWeek - state.chart.startWeek)
   )
 
-export const selectStartWeek = (state: RootState) =>
-  selectZoomedOut(state) ? 1 : selectWindowStart(state)
+export const getStartWeek = (state: RootState) =>
+  getIsZoomedOut(state) ? 1 : getWindowStart(state)
 
-export const selectEndWeek = (state: RootState) =>
-  selectZoomedOut(state) ? selectMaxWeek(state) : selectWindowEnd(state)
+export const getEndWeek = (state: RootState) =>
+  getIsZoomedOut(state) ? getMaxWeek(state) : getWindowEnd(state)
 
-export const selectCanPageEarlier = (state: RootState) =>
-  !selectZoomedOut(state) && selectWindowStart(state) > 1
+export const getCanPageEarlier = (state: RootState) =>
+  !getIsZoomedOut(state) && getWindowStart(state) > 1
 
-export const selectCanPageLater = (state: RootState) =>
-  !selectZoomedOut(state) && selectWindowEnd(state) < selectMaxWeek(state)
+export const getCanPageLater = (state: RootState) =>
+  !getIsZoomedOut(state) && getWindowEnd(state) < getMaxWeek(state)
 
-export const selectCanZoom = (state: RootState) =>
-  selectWindowStart(state) > 1 || selectWindowEnd(state) < selectMaxWeek(state)
+export const getCanZoom = (state: RootState) =>
+  getWindowStart(state) > 1 || getWindowEnd(state) < getMaxWeek(state)
 
 export const pageWindow =
   (delta: number): AppThunk =>
   (dispatch, getState) => {
     const state = getState()
-    if (selectZoomedOut(state)) return
-    const start = selectWindowStart(state)
-    const end = selectWindowEnd(state)
-    const weeks = clamp(delta, 1 - start, selectMaxWeek(state) - end)
+    if (getIsZoomedOut(state)) return
+    const start = getWindowStart(state)
+    const end = getWindowEnd(state)
+    const weeks = clamp(delta, 1 - start, getMaxWeek(state) - end)
     if (weeks === 0) return
     dispatch(setZoomedInWindow({ start: start + weeks, end: end + weeks }))
   }

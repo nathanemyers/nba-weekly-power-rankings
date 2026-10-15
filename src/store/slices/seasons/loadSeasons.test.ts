@@ -25,8 +25,8 @@ describe('loadSeasons', () => {
   it('builds a view of ranked teams for a valid season', () => {
     const state = loadSeasons(['valid'], { valid: valid() })
     expect(state.order).toEqual(['valid'])
-    expect(state.invalid).toEqual([])
-    const view = state.bySeason.valid
+    expect(state.invalidSeasons).toEqual([])
+    const view = state.seasons.valid
     expect(view.maxWeek).toBe(4)
     expect(view.completed).toBe(true)
     expect(view.champion).toBe(Team.Boston)
@@ -37,7 +37,7 @@ describe('loadSeasons', () => {
 
   it('is not completed without a champion', () => {
     const noPlayoffs = omit(valid(), 'playoffs')
-    const view = loadSeasons(['s'], { s: noPlayoffs }).bySeason.s
+    const view = loadSeasons(['s'], { s: noPlayoffs }).seasons.s
     expect(view.completed).toBe(false)
     expect(view.champion).toBeUndefined()
   })
@@ -74,10 +74,10 @@ describe('loadSeasons', () => {
   it.each(cases)('rejects %s and keeps valid seasons', (_, bad, field) => {
     const state = loadSeasons(['bad', 'good'], { bad, good: valid() })
     expect(state.order).toEqual(['good'])
-    expect(state.bySeason.bad).toBeUndefined()
-    expect(state.invalid).toHaveLength(1)
-    expect(state.invalid[0].season).toBe('bad')
-    expect(state.invalid[0].message).toContain(field)
+    expect(state.seasons.bad).toBeUndefined()
+    expect(state.invalidSeasons).toHaveLength(1)
+    expect(state.invalidSeasons[0].season).toBe('bad')
+    expect(state.invalidSeasons[0].message).toContain(field)
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('bad'))
   })
 })

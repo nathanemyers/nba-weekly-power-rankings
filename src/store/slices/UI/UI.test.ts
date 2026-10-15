@@ -1,7 +1,7 @@
 import { expect, it, vi } from 'vitest'
 import { makeStore } from 'store/redux'
 import { setSelectedSeason, getSelectedSeason } from './UI'
-import { selectSeasonOrder } from 'store/slices/seasons'
+import { getSeasons } from 'store/slices/seasons'
 
 vi.mock(
   'data/seasons',
@@ -10,7 +10,7 @@ vi.mock(
 
 it('starts on the first season and changes on selection', () => {
   const store = makeStore()
-  expect(selectSeasonOrder(store.getState())).toEqual(['long', 'short'])
+  expect(getSeasons(store.getState())).toEqual(['long', 'short'])
   expect(getSelectedSeason(store.getState())).toBe('long')
   store.dispatch(setSelectedSeason('short'))
   expect(getSelectedSeason(store.getState())).toBe('short')
