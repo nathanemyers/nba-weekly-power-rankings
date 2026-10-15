@@ -4,13 +4,12 @@ import {
   type UnknownAction,
 } from '@reduxjs/toolkit'
 import seasons from './slices/seasons/seasons'
-import navigation from './slices/navigation/navigation'
-import chartView from './slices/chartView/chartView'
-import selection from './slices/selection/selection'
+import UI from './slices/UI/UI'
+import chart from './slices/chart/chart'
 
 export function makeStore() {
   return configureStore({
-    reducer: { seasons, navigation, chartView, selection },
+    reducer: { seasons, UI, chart },
   })
 }
 

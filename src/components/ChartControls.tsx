@@ -4,20 +4,20 @@ import { Button } from '@/components/ui/button'
 import { ButtonGroup } from '@/components/ui/button-group'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import {
-  selectZoomedOut,
-  selectCanPageEarlier,
-  selectCanPageLater,
-  selectCanZoom,
+  getIsZoomedOut,
+  getCanPageEarlier,
+  getCanPageLater,
+  getCanZoom,
   pageWindow,
-  zoomToggled,
-} from '@/store/slices/chartView'
+  setZoomedOut,
+} from '@/store/slices/chart'
 
 export default function ChartControls() {
   const dispatch = useAppDispatch()
-  const zoomedOut = useAppSelector(selectZoomedOut)
-  const canPageEarlier = useAppSelector(selectCanPageEarlier)
-  const canPageLater = useAppSelector(selectCanPageLater)
-  const canZoom = useAppSelector(selectCanZoom)
+  const zoomedOut = useAppSelector(getIsZoomedOut)
+  const canPageEarlier = useAppSelector(getCanPageEarlier)
+  const canPageLater = useAppSelector(getCanPageLater)
+  const canZoom = useAppSelector(getCanZoom)
 
   return (
     <ButtonGroup>
@@ -32,7 +32,7 @@ export default function ChartControls() {
       <Button
         className="w-24"
         disabled={!canZoom}
-        onClick={() => dispatch(zoomToggled())}
+        onClick={() => dispatch(setZoomedOut(!zoomedOut))}
       >
         {zoomedOut ? `Zoom In` : `Zoom Out`}
       </Button>

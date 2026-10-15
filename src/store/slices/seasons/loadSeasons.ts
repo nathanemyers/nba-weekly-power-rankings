@@ -1,33 +1,19 @@
 import { z } from 'zod'
 import { SeasonDataSchema } from 'schemas/season'
-import { PlayoffStage, Teams, type Team, type TeamRankings } from 'types'
-
-export type SeasonView = {
-  teams: TeamRankings[]
-  maxWeek: number
-  completed: boolean
-  champion?: Team
-}
-
-export type InvalidSeason = { season: string; message: string }
-
-export type SeasonsState = {
-  order: string[]
-  bySeason: Record<string, SeasonView>
-  invalid: InvalidSeason[]
-}
+import { PlayoffStage, Teams, type TeamRankings } from 'types'
+import type { SeasonsState } from './seasons'
 
 export function loadSeasons(
   order: string[],
   raw: Record<string, unknown>
 ): SeasonsState {
-  const state: SeasonsState = { order: [], bySeason: {}, invalid: [] }
+  const state: SeasonsState = { order: [], seasons: {}, invalidSeasons: [] }
   for (const season of order) {
     const result = SeasonDataSchema.safeParse(raw[season])
     if (!result.success) {
       const message = z.prettifyError(result.error)
       console.error(`Season ${season} failed validation:\n${message}`)
-      state.invalid.push({ season, message })
+      state.invalidSeasons.push({ season, message })
       continue
     }
     const data = result.data
@@ -41,7 +27,8 @@ export function loadSeasons(
       (team) => team.playoff === PlayoffStage.Champion
     )?.teamId
     state.order.push(season)
-    state.bySeason[season] = {
+    state.seasons[season] = {
+      name: season,
       teams,
       maxWeek: data.maxWeek,
       completed: champion !== undefined,

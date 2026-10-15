@@ -87,3 +87,8 @@ export const Teams: TeamDisplay[] = [
   { teamId: Team.Utah, name: 'Utah Jazz', color: '#FACC15' },
   { teamId: Team.Washington, name: 'Washington Wizards', color: '#38BDF8' },
 ]
+
+export const getTeamName = (teamId: Team): string => {
+  const team = Teams.find((t) => t.teamId === teamId)
+  return team ? team.name : 'Unknown Team'
+}

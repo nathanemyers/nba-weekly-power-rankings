@@ -1,9 +1,26 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSelector, createSlice } from '@reduxjs/toolkit'
 import { seasonData, seasons } from 'data/seasons'
 import { loadSeasons } from './loadSeasons'
 import type { RootState } from 'store/redux'
+import type { Team, TeamRankings } from '@/types/nba'
 
 export const initialSeasons = loadSeasons(seasons, seasonData)
+
+export type Season = {
+  name: string
+  teams: TeamRankings[]
+  maxWeek: number
+  completed: boolean
+  champion?: Team
+}
+
+export type InvalidSeason = { season: string; message: string }
+
+export type SeasonsState = {
+  order: string[]
+  seasons: Record<string, Season>
+  invalidSeasons: InvalidSeason[]
+}
 
 const seasonsSlice = createSlice({
   name: 'seasons',
@@ -13,10 +30,29 @@ const seasonsSlice = createSlice({
 
 export default seasonsSlice.reducer
 
-export const selectSeasonOrder = (state: RootState) => state.seasons.order
-export const selectSeasonsById = (state: RootState) => state.seasons.bySeason
-export const selectInvalidSeasons = (state: RootState) => state.seasons.invalid
-export const selectSeasonView = (state: RootState) =>
-  state.navigation.season === undefined
-    ? undefined
-    : state.seasons.bySeason[state.navigation.season]
+// Memoized so the season list keeps one reference; season data never changes after load
+export const getSeasons = createSelector(
+  [
+    (state: RootState) => state.seasons.order,
+    (state: RootState) => state.seasons.seasons,
+  ],
+  (order, seasons) => order.map((season) => seasons[season])
+)
+export const getSeasonById = (state: RootState, season: string) =>
+  state.seasons.seasons[season]
+export const getInvalidSeasons = (state: RootState) =>
+  state.seasons.invalidSeasons
+
+export const getAISummaryForSeason = (
+  state: RootState,
+  teamId: Team,
+  seasonName: string
+) => {
+  const season = getSeasonById(state, seasonName)
+  if (!season) {
+    return undefined
+  }
+
+  const team = season.teams.find((t) => t.teamId === teamId)
+  return team?.aiSummary
+}

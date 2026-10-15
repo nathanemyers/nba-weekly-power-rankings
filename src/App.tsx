@@ -5,17 +5,13 @@ import RankSwings from 'components/RankSwings/RankSwings'
 import TeamSummary from 'components/TeamSummary'
 import type { Team } from './types/nba'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
-import { selectSeason } from 'store/slices/navigation/navigation'
-import { selectSeasonView } from 'store/slices/seasons/seasons'
+import { getSelectedSeason } from '@/store/slices/UI/UI'
 import {
-  selectEndWeek,
-  selectStartWeek,
-} from 'store/slices/chartView/chartView'
-import {
-  pinToggled,
-  selectPinnedTeam,
-  selectPinnedTeams,
-} from 'store/slices/selection/selection'
+  getEndWeek,
+  getStartWeek,
+  getPinnedTeams,
+  setPinnedTeams,
+} from '@/store/slices/chart/chart'
 import ChartControls from './components/ChartControls'
 import { useChartControls } from './components/Chart/useChartControls'
 
@@ -25,14 +21,14 @@ const CHART_MARGIN = { top: 30, right: 120, bottom: 60, left: 190 }
 
 function App() {
   const dispatch = useAppDispatch()
-  const season = useAppSelector(selectSeason)
-  const data = useAppSelector(selectSeasonView)
-  const startWeek = useAppSelector(selectStartWeek)
-  const endWeek = useAppSelector(selectEndWeek)
-  const pinnedTeams = useAppSelector(selectPinnedTeams)
-  const pinnedTeam = useAppSelector(selectPinnedTeam)
+  const season = useAppSelector(getSelectedSeason)
+  const data = useAppSelector(getSelectedSeason)
+  const startWeek = useAppSelector(getStartWeek)
+  const endWeek = useAppSelector(getEndWeek)
+  const pinnedTeams = useAppSelector(getPinnedTeams)
 
-  const togglePin = (team?: Team) => dispatch(pinToggled(team))
+  const togglePin = (team?: Team) =>
+    dispatch(setPinnedTeams(team && !pinnedTeams.includes(team) ? [team] : []))
 
   useChartControls()
 
@@ -66,7 +62,6 @@ function App() {
 
           <div>
             <RankingsChart
-              key={season}
               startWeek={startWeek}
               endWeek={endWeek}
               teams={data.teams}
@@ -86,11 +81,8 @@ function App() {
               />
             )}
 
-            {pinnedTeam?.aiSummary && (
-              <TeamSummary
-                teamName={pinnedTeam.name}
-                summary={pinnedTeam.aiSummary}
-              />
+            {pinnedTeams.length === 1 && (
+              <TeamSummary team={pinnedTeams[0]} season={season.name} />
             )}
           </div>
         </>

@@ -1,10 +1,10 @@
 import { useAppDispatch, useAppSelector } from 'store/hooks'
-import { pageWindow, selectZoomedOut } from 'store/slices/chartView'
+import { pageWindow, getIsZoomedOut } from '@/store/slices/chart'
 import { useEffect } from 'react'
 
 export const useChartControls = () => {
   const dispatch = useAppDispatch()
-  const zoomedOut = useAppSelector(selectZoomedOut)
+  const zoomedOut = useAppSelector(getIsZoomedOut)
 
   useEffect(() => {
     if (zoomedOut) return
