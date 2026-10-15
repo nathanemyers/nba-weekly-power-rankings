@@ -2,7 +2,7 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { clamp } from 'lodash'
 import type { AppThunk, RootState } from 'store/redux'
 import type { Team } from 'types'
-import { getSelectedSeason } from '../UI'
+import { getSelectedSeason, setSelectedSeason } from '../UI'
 
 const DEFAULT_WINDOW_WEEKS = 10
 
@@ -37,6 +37,12 @@ const chartViewSlice = createSlice({
     setPinnedTeams(state, action: PayloadAction<Team[]>) {
       state.pinnedTeams = action.payload
     },
+  },
+  extraReducers: (builder) => {
+    // A pin only makes sense within the season it was made in
+    builder.addCase(setSelectedSeason, (state) => {
+      state.pinnedTeams = []
+    })
   },
 })
 

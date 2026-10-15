@@ -16,6 +16,8 @@ export default function TeamSummary(props: TeamSummaryProps) {
 
   const teamName = getTeamName(props.team)
 
+  if (!summary) return null
+
   return (
     <Card
       role="region"

@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { makeStore } from 'store/redux'
 import { setSelectedSeason } from '@/store/slices/UI'
+import { Team } from 'types'
 import {
   pageWindow,
   getCanPageEarlier,
@@ -9,6 +10,8 @@ import {
   getEndWeek,
   getStartWeek,
   setZoomedOut,
+  getPinnedTeams,
+  setPinnedTeams,
 } from './chart'
 
 vi.mock(
@@ -53,5 +56,22 @@ describe('chartView', () => {
     expect(getCanZoom(store.getState())).toBe(false)
     store.dispatch(setSelectedSeason('long'))
     expect(weeks(store)).toEqual([16, 26])
+  })
+})
+
+describe('pinned teams', () => {
+  it('sets and clears the pinned teams', () => {
+    const store = makeStore()
+    store.dispatch(setPinnedTeams([Team.Boston]))
+    expect(getPinnedTeams(store.getState())).toEqual([Team.Boston])
+    store.dispatch(setPinnedTeams([]))
+    expect(getPinnedTeams(store.getState())).toEqual([])
+  })
+
+  it('clears the pin on a season change', () => {
+    const store = makeStore()
+    store.dispatch(setPinnedTeams([Team.Boston]))
+    store.dispatch(setSelectedSeason('short'))
+    expect(getPinnedTeams(store.getState())).toEqual([])
   })
 })

@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSelector, createSlice } from '@reduxjs/toolkit'
 import { seasonData, seasons } from 'data/seasons'
 import { loadSeasons } from './loadSeasons'
 import type { RootState } from 'store/redux'
@@ -30,9 +30,14 @@ const seasonsSlice = createSlice({
 
 export default seasonsSlice.reducer
 
-export const getSeasons = (state: RootState) => {
-  return state.seasons.order.map((season) => state.seasons.seasons[season])
-}
+// Memoized so the season list keeps one reference; season data never changes after load
+export const getSeasons = createSelector(
+  [
+    (state: RootState) => state.seasons.order,
+    (state: RootState) => state.seasons.seasons,
+  ],
+  (order, seasons) => order.map((season) => seasons[season])
+)
 export const getSeasonById = (state: RootState, season: string) =>
   state.seasons.seasons[season]
 export const getInvalidSeasons = (state: RootState) =>

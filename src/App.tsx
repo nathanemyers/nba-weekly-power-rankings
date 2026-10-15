@@ -27,13 +27,8 @@ function App() {
   const endWeek = useAppSelector(getEndWeek)
   const pinnedTeams = useAppSelector(getPinnedTeams)
 
-  const togglePin = (team?: Team) => {
-    if (!team) {
-      dispatch(setPinnedTeams([]))
-    } else {
-      dispatch(setPinnedTeams([team]))
-    }
-  }
+  const togglePin = (team?: Team) =>
+    dispatch(setPinnedTeams(team && !pinnedTeams.includes(team) ? [team] : []))
 
   useChartControls()
 
