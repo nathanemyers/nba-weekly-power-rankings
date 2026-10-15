@@ -3,7 +3,7 @@ import { type Margin, type Team, type TeamRankings } from 'types'
 import TeamLabels from './TeamLabels'
 import { useChartTransition } from './useChartTransition'
 import { getYforRank, PLAYOFF_MEDALS } from './utils'
-import { findLast, max, range } from 'lodash'
+import { findLast, max, range, sortBy } from 'lodash'
 
 const PLAYOFFS_WEEK = 24
 
@@ -71,6 +71,13 @@ export default function RankingsChart(props: ChartProps) {
   const x = (week: number) =>
     props.margin.left + ((week - start) / span) * PLOT_W
   const y = (rank: number) => getYforRank(rank, props.height, props.margin)
+
+  // Anchoring on the far edge keeps the full width available near the right side
+  const tipX = hoveredTooltip ? x(hoveredTooltip.week) / props.width : 0
+  const tipPosition =
+    tipX > 0.5
+      ? { right: `${(1 - tipX) * 100}%`, transform: 'translate(-14px, -50%)' }
+      : { left: `${tipX * 100}%`, transform: 'translate(14px, -50%)' }
 
   const weeks = range(Math.floor(start), Math.ceil(end) + 1).filter(
     (w) => w >= 1 && w <= lastWeek
@@ -175,7 +182,10 @@ export default function RankingsChart(props: ChartProps) {
           )}
 
           <g clipPath="url(#plot-clip)">
-            {props.teams.map((team) => {
+            {/* Pinned teams draw last so their line and dots sit above every other line */}
+            {sortBy(props.teams, (team) =>
+              props.pinnedTeams.includes(team.teamId)
+            ).map((team) => {
               const active = activeTeams.includes(team.teamId)
               const dim = activeTeams.length > 0 && !active
               // Start a new subpath after a missing week so the line doesn't bridge the gap
@@ -286,14 +296,10 @@ export default function RankingsChart(props: ChartProps) {
 
         {hoveredTooltip && (
           <div
-            className="pointer-events-none absolute max-w-80 rounded-md bg-popover/85 px-3 py-2.5 text-[0.9rem] leading-snug text-popover-foreground"
+            className="pointer-events-none absolute w-max max-w-[min(20rem,calc(50%-14px))] rounded-md bg-popover/85 px-3 py-2.5 text-[0.9rem] leading-snug text-popover-foreground"
             style={{
-              left: `${(x(hoveredTooltip.week) / props.width) * 100}%`,
+              ...tipPosition,
               top: `${(y(hoveredTooltip.rank) / props.height) * 100}%`,
-              transform:
-                x(hoveredTooltip.week) > props.width * 0.6
-                  ? 'translate(calc(-100% - 14px), -50%)'
-                  : 'translate(14px, -50%)',
             }}
           >
             <strong>

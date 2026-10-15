@@ -359,3 +359,70 @@ describe('User Story 3 — inspect and follow a team', () => {
     expect(onClick).toHaveBeenCalledTimes(3)
   })
 })
+
+describe('Pinned team layering', () => {
+  const teamGroups = (container: HTMLElement) =>
+    Array.from(container.querySelectorAll('g[clip-path="url(#plot-clip)"] > g'))
+  const lineIn = (group: Element, color: string) =>
+    group.querySelector(`path[stroke="${color}"]`)
+
+  it('draws the pinned team above the other teams', () => {
+    const { container } = render(chart({ pinnedTeams: [Team.Boston] }))
+    const groups = teamGroups(container)
+    expect(lineIn(groups[groups.length - 1], BOSTON)).not.toBeNull()
+    expect(lineIn(groups[0], LAKERS)).not.toBeNull()
+    expect(lineIn(groups[1], MIAMI)).not.toBeNull()
+  })
+
+  it('keeps the default team order when nothing is pinned', () => {
+    const { container } = render(chart())
+    const groups = teamGroups(container)
+    expect(lineIn(groups[0], BOSTON)).not.toBeNull()
+    expect(lineIn(groups[2], MIAMI)).not.toBeNull()
+  })
+
+  it("shows the pinned team's tooltip from a node drawn on top", () => {
+    const { container } = render(chart({ pinnedTeams: [Team.Boston] }))
+    fireEvent.mouseEnter(
+      container.querySelectorAll(`circle[fill="${BOSTON}"]`)[0]
+    )
+    expect(screen.getByText('#1 Boston Celtics (0-0)')).toBeInTheDocument()
+    expect(screen.getByText('Week 1 summary')).toBeInTheDocument()
+  })
+})
+
+describe('Tooltip placement', () => {
+  const openTooltip = (container: HTMLElement, index: number) => {
+    const dots = container.querySelectorAll(`circle[fill="${BOSTON}"]`)
+    fireEvent.mouseEnter(dots[index < 0 ? dots.length + index : index])
+    return screen.getByText(/^Week \d+$/).closest('div') as HTMLElement
+  }
+
+  it('opens a right-side tooltip leftward, anchored on its right edge', () => {
+    const { container } = render(chart({ pinnedTeams: [Team.Boston] }))
+    const tip = openTooltip(container, -1)
+    expect(parseFloat(tip.style.right)).toBeCloseTo(12.5, 5)
+    expect(tip.style.left).toBe('')
+    expect(tip.style.transform).toBe('translate(-14px, -50%)')
+  })
+
+  it('opens a left-side tooltip rightward, anchored on its left edge', () => {
+    const { container } = render(chart({ pinnedTeams: [Team.Boston] }))
+    const tip = openTooltip(container, 0)
+    expect(parseFloat(tip.style.left)).toBeCloseTo(19.79, 1)
+    expect(tip.style.right).toBe('')
+    expect(tip.style.transform).toBe('translate(14px, -50%)')
+  })
+
+  it('sizes every tooltip to its content with a shared cap', () => {
+    for (const index of [0, -1]) {
+      const { container, unmount } = render(
+        chart({ pinnedTeams: [Team.Boston] })
+      )
+      const tip = openTooltip(container, index)
+      expect(tip).toHaveClass('w-max', 'max-w-[min(20rem,calc(50%-14px))]')
+      expect(tip).not.toHaveClass('max-w-80')
+      unmount()
+    }
+  })
+})
