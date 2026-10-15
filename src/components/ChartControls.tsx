@@ -23,6 +23,7 @@ export default function ChartControls() {
     <ButtonGroup>
       <Button
         className="w-12"
+        aria-label="Earlier weeks"
         onClick={() => dispatch(pageWindow(-1))}
         disabled={!canPageEarlier}
       >
@@ -37,6 +38,7 @@ export default function ChartControls() {
       </Button>
       <Button
         className="w-12"
+        aria-label="Later weeks"
         onClick={() => dispatch(pageWindow(1))}
         disabled={!canPageLater}
       >
