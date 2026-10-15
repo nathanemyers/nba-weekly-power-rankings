@@ -6,7 +6,7 @@ import {
   SelectValue,
 } from './ui/select'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
-import { seasonSelected, selectSeason } from '@/store/slices/UI/UI'
+import { setSelectedSeason, getSelectedSeason } from '@/store/slices/UI/UI'
 import {
   selectSeasonOrder,
   selectSeasonsById,
@@ -17,12 +17,12 @@ export default function SeasonSelect() {
   const dispatch = useAppDispatch()
   const seasons = useAppSelector(selectSeasonOrder)
   const bySeason = useAppSelector(selectSeasonsById)
-  const season = useAppSelector(selectSeason)
+  const season = useAppSelector(getSelectedSeason)
 
   return (
     <Select
       value={season}
-      onValueChange={(value) => dispatch(seasonSelected(value))}
+      onValueChange={(value) => dispatch(setSelectedSeason(value))}
     >
       <SelectTrigger className="md:w-[180px] w-full text-lg">
         <SelectValue placeholder="Season">{`${season} Season`}</SelectValue>

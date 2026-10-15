@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import type { Team } from 'types'
-import { seasonSelected } from '@/store/slices/UI'
+import { setSelectedSeason } from '@/store/slices/UI'
 import { selectSeasonView } from 'store/slices/seasons'
 import type { RootState } from 'store/redux'
 
@@ -19,7 +19,7 @@ const selectionSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(seasonSelected, (state) => {
+    builder.addCase(setSelectedSeason, (state) => {
       state.pinnedTeams = []
     })
   },

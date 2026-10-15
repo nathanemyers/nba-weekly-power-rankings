@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { makeStore } from 'store/redux'
-import { seasonSelected } from '@/store/slices/UI'
+import { setSelectedSeason } from '@/store/slices/UI'
 import {
   pageWindow,
   selectCanPageEarlier,
@@ -48,10 +48,10 @@ describe('chartView', () => {
     const store = makeStore()
     store.dispatch(setZoomedOut(false))
     store.dispatch(pageWindow(100))
-    store.dispatch(seasonSelected('short'))
+    store.dispatch(setSelectedSeason('short'))
     expect(weeks(store)).toEqual([1, 8])
     expect(selectCanZoom(store.getState())).toBe(false)
-    store.dispatch(seasonSelected('long'))
+    store.dispatch(setSelectedSeason('long'))
     expect(weeks(store)).toEqual([16, 26])
   })
 })

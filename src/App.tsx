@@ -5,7 +5,7 @@ import RankSwings from 'components/RankSwings/RankSwings'
 import TeamSummary from 'components/TeamSummary'
 import type { Team } from './types/nba'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
-import { selectSeason } from '@/store/slices/UI/UI'
+import { getSelectedSeason } from '@/store/slices/UI/UI'
 import { selectSeasonView } from 'store/slices/seasons/seasons'
 import { selectEndWeek, selectStartWeek } from '@/store/slices/chart/chart'
 import {
@@ -22,7 +22,7 @@ const CHART_MARGIN = { top: 30, right: 120, bottom: 60, left: 190 }
 
 function App() {
   const dispatch = useAppDispatch()
-  const season = useAppSelector(selectSeason)
+  const season = useAppSelector(getSelectedSeason)
   const data = useAppSelector(selectSeasonView)
   const startWeek = useAppSelector(selectStartWeek)
   const endWeek = useAppSelector(selectEndWeek)

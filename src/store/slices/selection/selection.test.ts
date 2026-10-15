@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { Team } from 'types'
 import { makeStore } from 'store/redux'
-import { seasonSelected } from '@/store/slices/UI'
+import { setSelectedSeason } from '@/store/slices/UI'
 import { pinToggled, selectPinnedTeam, selectPinnedTeams } from './selection'
 
 vi.mock(
@@ -33,7 +33,7 @@ describe('selection', () => {
     expect(selectPinnedTeams(store.getState())).toEqual([])
 
     store.dispatch(pinToggled(Team.Boston))
-    store.dispatch(seasonSelected('short'))
+    store.dispatch(setSelectedSeason('short'))
     expect(selectPinnedTeams(store.getState())).toEqual([])
   })
 })

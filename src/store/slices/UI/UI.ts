@@ -3,21 +3,23 @@ import { initialSeasons } from '@/store/slices/seasons/seasons'
 import type { RootState } from 'store/redux'
 
 // Holds what the visitor is looking at; future routes and UI state belong here too
-type NavigationState = { season: string | undefined }
+type UIState = {
+  selectedSeason: string
+}
 
-const initialState: NavigationState = { season: initialSeasons.order[0] }
+const initialState: UIState = { selectedSeason: initialSeasons.order[0] }
 
 const navigationSlice = createSlice({
-  name: 'navigation',
+  name: 'UI',
   initialState,
   reducers: {
-    seasonSelected(state, action: PayloadAction<string>) {
-      state.season = action.payload
+    setSelectedSeason(state, action: PayloadAction<string>) {
+      state.selectedSeason = action.payload
     },
   },
 })
 
-export const { seasonSelected } = navigationSlice.actions
+export const { setSelectedSeason } = navigationSlice.actions
 export default navigationSlice.reducer
 
-export const selectSeason = (state: RootState) => state.navigation.season
+export const getSelectedSeason = (state: RootState) => state.UI.selectedSeason
