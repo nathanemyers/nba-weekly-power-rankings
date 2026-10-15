@@ -7,6 +7,7 @@ import type { Team, TeamRankings } from '@/types/nba'
 export const initialSeasons = loadSeasons(seasons, seasonData)
 
 export type Season = {
+  name: string
   teams: TeamRankings[]
   maxWeek: number
   completed: boolean
@@ -30,12 +31,23 @@ const seasonsSlice = createSlice({
 export default seasonsSlice.reducer
 
 export const getSeasons = (state: RootState) => {
-  return state.seasons.order.map((season) => ({
-    name: season,
-    ...state.seasons.seasons[season],
-  }))
+  return state.seasons.order.map((season) => state.seasons.seasons[season])
 }
 export const getSeasonById = (state: RootState, season: string) =>
   state.seasons.seasons[season]
 export const getInvalidSeasons = (state: RootState) =>
   state.seasons.invalidSeasons
+
+export const getAISummaryForSeason = (
+  state: RootState,
+  teamId: Team,
+  seasonName: string
+) => {
+  const season = getSeasonById(state, seasonName)
+  if (!season) {
+    return undefined
+  }
+
+  const team = season.teams.find((t) => t.teamId === teamId)
+  return team?.aiSummary
+}

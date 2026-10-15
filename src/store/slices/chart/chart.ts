@@ -44,6 +44,8 @@ const { setZoomedInWindow } = chartViewSlice.actions
 export const { setZoomedOut, setPinnedTeams } = chartViewSlice.actions
 export default chartViewSlice.reducer
 
+export const getPinnedTeams = (state: RootState) => state.chart.pinnedTeams
+
 const getMaxWeek = (state: RootState) => getSelectedSeason(state)?.maxWeek ?? 1
 
 export const getIsZoomedOut = (state: RootState) => state.chart.zoomedOut

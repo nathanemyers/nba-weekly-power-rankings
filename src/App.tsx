@@ -6,12 +6,12 @@ import TeamSummary from 'components/TeamSummary'
 import type { Team } from './types/nba'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
 import { getSelectedSeason } from '@/store/slices/UI/UI'
-import { getEndWeek, getStartWeek } from '@/store/slices/chart/chart'
 import {
-  pinToggled,
-  selectPinnedTeam,
+  getEndWeek,
+  getStartWeek,
   getPinnedTeams,
-} from 'store/slices/selection/selection'
+  setPinnedTeams,
+} from '@/store/slices/chart/chart'
 import ChartControls from './components/ChartControls'
 import { useChartControls } from './components/Chart/useChartControls'
 
@@ -26,9 +26,14 @@ function App() {
   const startWeek = useAppSelector(getStartWeek)
   const endWeek = useAppSelector(getEndWeek)
   const pinnedTeams = useAppSelector(getPinnedTeams)
-  const pinnedTeam = useAppSelector(selectPinnedTeam)
 
-  const togglePin = (team?: Team) => dispatch(pinToggled(team))
+  const togglePin = (team?: Team) => {
+    if (!team) {
+      dispatch(setPinnedTeams([]))
+    } else {
+      dispatch(setPinnedTeams([team]))
+    }
+  }
 
   useChartControls()
 
@@ -62,7 +67,6 @@ function App() {
 
           <div>
             <RankingsChart
-              key={season}
               startWeek={startWeek}
               endWeek={endWeek}
               teams={data.teams}
@@ -82,11 +86,8 @@ function App() {
               />
             )}
 
-            {pinnedTeam?.aiSummary && (
-              <TeamSummary
-                teamName={pinnedTeam.name}
-                summary={pinnedTeam.aiSummary}
-              />
+            {pinnedTeams.length === 1 && (
+              <TeamSummary team={pinnedTeams[0]} season={season.name} />
             )}
           </div>
         </>

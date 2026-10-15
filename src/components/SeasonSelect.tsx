@@ -17,11 +17,11 @@ export default function SeasonSelect() {
 
   return (
     <Select
-      value={selectedSeason}
+      value={selectedSeason.name}
       onValueChange={(value) => dispatch(setSelectedSeason(value))}
     >
       <SelectTrigger className="md:w-[180px] w-full text-lg">
-        <SelectValue placeholder="Season">{`${selectedSeason} Season`}</SelectValue>
+        <SelectValue placeholder="Season">{`${selectedSeason.name} Season`}</SelectValue>
       </SelectTrigger>
       <SelectContent className="bg-muted">
         {seasons.map((s) => {
