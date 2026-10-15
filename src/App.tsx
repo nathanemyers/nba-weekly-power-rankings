@@ -15,6 +15,7 @@ import {
 import ChartControls from './components/ChartControls'
 import { useChartControls } from './components/Chart/useChartControls'
 import ChartFilter from './components/ChartFilter'
+import ChartFilterClearButton from './components/ChartFilterClearButton'
 
 const CHART_WIDTH = 960
 const CHART_HEIGHT = 600
@@ -51,11 +52,15 @@ function App() {
       </header>
 
       <div className="grid md:grid-cols-3 gap-4">
-        <div className="grid-col-1 md:justify-items-start justify-items-center">
+        <div className="grid-col-1 md:justify-self-start justify-self-center">
           <SeasonSelect />
         </div>
-        <div className="grid-col-2 justify-items-center">
+        <div className="grid-col-2 justify-self-center">
           <ChartControls />
+        </div>
+        <div className="grid-col-3 md:justify-self-end justify-self-center align-items-center gap-2 flex flex-row">
+          {pinnedTeams.length > 0 && <ChartFilterClearButton />}
+          <ChartFilter />
         </div>
       </div>
 
@@ -70,8 +75,6 @@ function App() {
           pinnedTeams={pinnedTeams}
           onClick={togglePin}
         />
-
-        <ChartFilter />
 
         {data.completed && (
           <RankSwings
