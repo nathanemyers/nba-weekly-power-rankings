@@ -92,3 +92,63 @@ export const getTeamName = (teamId: Team): string => {
   const team = Teams.find((t) => t.teamId === teamId)
   return team ? team.name : 'Unknown Team'
 }
+
+export const atlanticDivisionTeams = [
+  Team.Boston,
+  Team.Brooklyn,
+  Team.NewYork,
+  Team.Philadelphia,
+  Team.Toronto,
+]
+
+export const centralDivisionTeams = [
+  Team.Chicago,
+  Team.Cleveland,
+  Team.Detroit,
+  Team.Indiana,
+  Team.Milwaukee,
+]
+
+export const southeastDivisionTeams = [
+  Team.Atlanta,
+  Team.Charlotte,
+  Team.Miami,
+  Team.Orlando,
+  Team.Washington,
+]
+
+export const northwestDivisionTeams = [
+  Team.Denver,
+  Team.Minnesota,
+  Team.OklahomaCity,
+  Team.Portland,
+  Team.Utah,
+]
+
+export const pacificDivisionTeams = [
+  Team.GoldenState,
+  Team.LAClippers,
+  Team.LALakers,
+  Team.Phoenix,
+  Team.Sacramento,
+]
+
+export const southwestDivisionTeams = [
+  Team.Houston,
+  Team.Memphis,
+  Team.Dallas,
+  Team.NewOrleans,
+  Team.SanAntonio,
+]
+
+export const westernConferenceTeams = [
+  ...northwestDivisionTeams,
+  ...pacificDivisionTeams,
+  ...southwestDivisionTeams,
+]
+
+export const easternConferenceTeams = [
+  ...atlanticDivisionTeams,
+  ...centralDivisionTeams,
+  ...southeastDivisionTeams,
+]
