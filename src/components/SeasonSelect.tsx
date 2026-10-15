@@ -6,10 +6,7 @@ import {
   SelectValue,
 } from './ui/select'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
-import {
-  seasonSelected,
-  selectSeason,
-} from 'store/slices/navigation/navigation'
+import { seasonSelected, selectSeason } from '@/store/slices/UI/UI'
 import {
   selectSeasonOrder,
   selectSeasonsById,

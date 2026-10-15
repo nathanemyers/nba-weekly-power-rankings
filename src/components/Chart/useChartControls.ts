@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from 'store/hooks'
-import { pageWindow, selectZoomedOut } from 'store/slices/chartView'
+import { pageWindow, selectZoomedOut } from '@/store/slices/chart'
 import { useEffect } from 'react'
 
 export const useChartControls = () => {

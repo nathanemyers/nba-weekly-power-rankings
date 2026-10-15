@@ -4,8 +4,8 @@ import {
   type UnknownAction,
 } from '@reduxjs/toolkit'
 import seasons from './slices/seasons/seasons'
-import navigation from './slices/navigation/navigation'
-import chartView from './slices/chartView/chartView'
+import navigation from './slices/UI/UI'
+import chartView from './slices/chart/chart'
 import selection from './slices/selection/selection'
 
 export function makeStore() {

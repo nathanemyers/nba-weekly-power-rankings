@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { makeStore } from 'store/redux'
-import { seasonSelected } from 'store/slices/navigation'
+import { seasonSelected } from '@/store/slices/UI'
 import {
   pageWindow,
   selectCanPageEarlier,
@@ -8,8 +8,8 @@ import {
   selectCanZoom,
   selectEndWeek,
   selectStartWeek,
-  zoomToggled,
-} from './chartView'
+  setZoomedOut,
+} from './chart'
 
 vi.mock(
   'data/seasons',
@@ -30,16 +30,9 @@ describe('chartView', () => {
     expect(selectCanZoom(store.getState())).toBe(true)
   })
 
-  it('does not page while zoomed out', () => {
-    const store = makeStore()
-    store.dispatch(pageWindow(1))
-    store.dispatch(zoomToggled())
-    expect(weeks(store)).toEqual([1, 11])
-  })
-
   it('zooms in to a 10-week window and pages within the season', () => {
     const store = makeStore()
-    store.dispatch(zoomToggled())
+    store.dispatch(setZoomedOut(false))
     expect(weeks(store)).toEqual([1, 11])
     store.dispatch(pageWindow(-1))
     expect(weeks(store)).toEqual([1, 11])
@@ -53,7 +46,7 @@ describe('chartView', () => {
 
   it('keeps the window inside a shorter season and restores it after', () => {
     const store = makeStore()
-    store.dispatch(zoomToggled())
+    store.dispatch(setZoomedOut(false))
     store.dispatch(pageWindow(100))
     store.dispatch(seasonSelected('short'))
     expect(weeks(store)).toEqual([1, 8])

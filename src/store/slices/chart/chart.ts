@@ -7,32 +7,35 @@ const DEFAULT_WINDOW_WEEKS = 10
 
 type ChartViewState = {
   zoomedOut: boolean
-  windowStart: number
-  windowEnd: number
+  startWeek: number
+  endWeek: number
 }
 
 const initialState: ChartViewState = {
   zoomedOut: true,
-  windowStart: 1,
-  windowEnd: 1 + DEFAULT_WINDOW_WEEKS,
+  startWeek: 1,
+  endWeek: 1 + DEFAULT_WINDOW_WEEKS,
 }
 
 const chartViewSlice = createSlice({
-  name: 'chartView',
+  name: 'chart',
   initialState,
   reducers: {
-    zoomToggled(state) {
-      state.zoomedOut = !state.zoomedOut
+    setZoomedOut(state, action: PayloadAction<boolean>) {
+      state.zoomedOut = action.payload
     },
-    windowSet(state, action: PayloadAction<{ start: number; end: number }>) {
-      state.windowStart = action.payload.start
-      state.windowEnd = action.payload.end
+    setZoomedInWindow(
+      state,
+      action: PayloadAction<{ start: number; end: number }>
+    ) {
+      state.startWeek = action.payload.start
+      state.endWeek = action.payload.end
     },
   },
 })
 
-const { windowSet } = chartViewSlice.actions
-export const { zoomToggled } = chartViewSlice.actions
+const { setZoomedInWindow } = chartViewSlice.actions
+export const { setZoomedOut } = chartViewSlice.actions
 export default chartViewSlice.reducer
 
 const selectMaxWeek = (state: RootState) =>
@@ -40,15 +43,14 @@ const selectMaxWeek = (state: RootState) =>
 
 export const selectZoomedOut = (state: RootState) => state.chartView.zoomedOut
 
-// Slid back inside the season on read, so a shorter season can't leave the window past its end
 export const selectWindowEnd = (state: RootState) =>
-  Math.min(state.chartView.windowEnd, selectMaxWeek(state))
+  Math.min(state.chartView.endWeek, selectMaxWeek(state))
 
 export const selectWindowStart = (state: RootState) =>
   Math.max(
     1,
     selectWindowEnd(state) -
-      (state.chartView.windowEnd - state.chartView.windowStart)
+      (state.chartView.endWeek - state.chartView.startWeek)
   )
 
 export const selectStartWeek = (state: RootState) =>
@@ -75,5 +77,5 @@ export const pageWindow =
     const end = selectWindowEnd(state)
     const weeks = clamp(delta, 1 - start, selectMaxWeek(state) - end)
     if (weeks === 0) return
-    dispatch(windowSet({ start: start + weeks, end: end + weeks }))
+    dispatch(setZoomedInWindow({ start: start + weeks, end: end + weeks }))
   }

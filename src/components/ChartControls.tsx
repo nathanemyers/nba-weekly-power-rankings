@@ -9,8 +9,8 @@ import {
   selectCanPageLater,
   selectCanZoom,
   pageWindow,
-  zoomToggled,
-} from '@/store/slices/chartView'
+  setZoomedOut,
+} from '@/store/slices/chart'
 
 export default function ChartControls() {
   const dispatch = useAppDispatch()
@@ -32,7 +32,7 @@ export default function ChartControls() {
       <Button
         className="w-24"
         disabled={!canZoom}
-        onClick={() => dispatch(zoomToggled())}
+        onClick={() => dispatch(setZoomedOut(!zoomedOut))}
       >
         {zoomedOut ? `Zoom In` : `Zoom Out`}
       </Button>

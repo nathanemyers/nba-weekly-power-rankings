@@ -5,12 +5,9 @@ import RankSwings from 'components/RankSwings/RankSwings'
 import TeamSummary from 'components/TeamSummary'
 import type { Team } from './types/nba'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
-import { selectSeason } from 'store/slices/navigation/navigation'
+import { selectSeason } from '@/store/slices/UI/UI'
 import { selectSeasonView } from 'store/slices/seasons/seasons'
-import {
-  selectEndWeek,
-  selectStartWeek,
-} from 'store/slices/chartView/chartView'
+import { selectEndWeek, selectStartWeek } from '@/store/slices/chart/chart'
 import {
   pinToggled,
   selectPinnedTeam,

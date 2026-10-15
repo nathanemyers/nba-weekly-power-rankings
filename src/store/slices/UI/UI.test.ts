@@ -1,6 +1,6 @@
 import { expect, it, vi } from 'vitest'
 import { makeStore } from 'store/redux'
-import { seasonSelected, selectSeason } from './navigation'
+import { seasonSelected, selectSeason } from './UI'
 import { selectSeasonOrder } from 'store/slices/seasons'
 
 vi.mock(

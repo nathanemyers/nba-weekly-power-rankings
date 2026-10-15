@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { Team } from 'types'
 import { makeStore } from 'store/redux'
-import { seasonSelected } from 'store/slices/navigation'
+import { seasonSelected } from '@/store/slices/UI'
 import { pinToggled, selectPinnedTeam, selectPinnedTeams } from './selection'
 
 vi.mock(
