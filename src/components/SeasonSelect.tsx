@@ -27,7 +27,7 @@ export default function SeasonSelect() {
       value={season}
       onValueChange={(value) => dispatch(seasonSelected(value))}
     >
-      <SelectTrigger className="w-[180px] text-lg">
+      <SelectTrigger className="md:w-[180px] w-full text-lg">
         <SelectValue placeholder="Season">{`${season} Season`}</SelectValue>
       </SelectTrigger>
       <SelectContent className="bg-muted">
