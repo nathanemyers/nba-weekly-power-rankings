@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { Button } from '@/components/ui/button'
+import { ButtonGroup } from '@/components/ui/button-group'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import {
   selectZoomedOut,
@@ -6,9 +10,7 @@ import {
   selectCanZoom,
   pageWindow,
   zoomToggled,
-} from 'store/slices/chartView'
-import { Button } from './ui/button'
-import { ButtonGroup } from './ui/button-group'
+} from '@/store/slices/chartView'
 
 export default function ChartControls() {
   const dispatch = useAppDispatch()
@@ -20,11 +22,11 @@ export default function ChartControls() {
   return (
     <ButtonGroup>
       <Button
-        className="w-24"
+        className="w-12"
         onClick={() => dispatch(pageWindow(-1))}
         disabled={!canPageEarlier}
       >
-        Earlier
+        <FontAwesomeIcon icon={faArrowLeft} />
       </Button>
       <Button
         className="w-24"
@@ -34,11 +36,11 @@ export default function ChartControls() {
         {zoomedOut ? `Zoom In` : `Zoom Out`}
       </Button>
       <Button
-        className="w-24"
+        className="w-12"
         onClick={() => dispatch(pageWindow(1))}
         disabled={!canPageLater}
       >
-        Later
+        <FontAwesomeIcon icon={faArrowRight} />
       </Button>
     </ButtonGroup>
   )

@@ -56,10 +56,10 @@ function App() {
       {data ? (
         <>
           <div className="grid grid-cols-3 gap-4">
-            <div className="grid-col-1 place-content-center">
+            <div className="grid-col-1 ">
               <SeasonSelect />
             </div>
-            <div className="grid-col-2 place-content-center text-center">
+            <div className="grid-col-2 justify-items-center">
               <ChartControls />
             </div>
           </div>
