@@ -55,9 +55,13 @@ function App() {
 
       {data ? (
         <>
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <SeasonSelect />
-            <ChartControls />
+          <div className="grid grid-cols-3 gap-4">
+            <div className="grid-col-1 place-content-center">
+              <SeasonSelect />
+            </div>
+            <div className="grid-col-2 place-content-center text-center">
+              <ChartControls />
+            </div>
           </div>
 
           <div>
