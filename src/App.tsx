@@ -2,7 +2,7 @@ import RankingsChart from 'components/Chart/Chart'
 import GitHubBadge from 'components/GitHubBadge'
 import SeasonSelect from 'components/SeasonSelect'
 import RankSwings from 'components/RankSwings/RankSwings'
-import TeamSummary from 'components/TeamSummary'
+import TeamSeasonSummary from '@/components/TeamSeasonSummary'
 import type { Team } from './types/nba'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
 import { getSelectedSeason } from '@/store/slices/UI/UI'
@@ -88,7 +88,7 @@ function App() {
             )}
 
             {pinnedTeams.length === 1 && (
-              <TeamSummary team={pinnedTeams[0]} season={season.name} />
+              <TeamSeasonSummary team={pinnedTeams[0]} season={season.name} />
             )}
           </div>
         </>
