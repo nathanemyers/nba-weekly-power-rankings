@@ -29,12 +29,16 @@ export default function TeamHistory(props: TeamHistoryProps) {
           >
             <CardContent>
               <div className="mb-2 flex items-center justify-between gap-3">
-                <h2 className="text-lg font-semibold">{season.name}</h2>
-                <div className="w-100 self-center">
-                  <TrendMinimap
-                    rankings={team.rankings}
-                    maxWeek={season.maxWeek}
-                  />
+                <div className="flex flex-row content-center">
+                  <h2 className="text-2xl font-semibold shrink mr-10">
+                    {season.name}
+                  </h2>
+                  <div className="w-100 content-center">
+                    <TrendMinimap
+                      rankings={team.rankings}
+                      maxWeek={season.maxWeek}
+                    />
+                  </div>
                 </div>
                 <Badge
                   variant="outline"
