@@ -5,7 +5,6 @@ import { getPinnedTeams } from '@/store/slices/chart'
 import { getTeamName } from '@/types'
 
 export default function TeamHistoryView() {
-  console.log('team history')
   const pinnedTeams = useAppSelector(getPinnedTeams)
   const team = pinnedTeams[0]
   const displayName = getTeamName(team)

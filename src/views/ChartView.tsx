@@ -72,7 +72,9 @@ export default function ChartView() {
               pinnedTeams={pinnedTeams}
               onClick={togglePin}
             />
-            <ChartControls />
+            <div className="flex flex-row place-content-center">
+              <ChartControls />
+            </div>
 
             {data.completed && (
               <RankSwings
