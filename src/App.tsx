@@ -51,44 +51,50 @@ function App() {
         <GitHubBadge className="mt-1" />
       </header>
 
-      <div className="grid md:grid-cols-3 gap-4">
-        <div className="grid-col-1 md:justify-self-start justify-self-center">
-          <SeasonSelect />
-        </div>
-        <div className="grid-col-2 justify-self-center">
-          <ChartControls />
-        </div>
-        <div className="grid-col-3 md:justify-self-end justify-self-center align-items-center gap-2 flex flex-row">
-          {pinnedTeams.length > 0 && <ChartFilterClearButton />}
-          <ChartFilter />
-        </div>
-      </div>
+      {data ? (
+        <>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid-col-1 md:justify-self-start justify-self-center">
+              <SeasonSelect />
+            </div>
+            <div className="grid-col-2 justify-self-center">
+              <ChartControls />
+            </div>
+            <div className="grid-col-3 md:justify-self-end justify-self-center align-items-center gap-2 flex flex-row">
+              {pinnedTeams.length > 0 && <ChartFilterClearButton />}
+              <ChartFilter />
+            </div>
+          </div>
 
-      <div>
-        <RankingsChart
-          startWeek={startWeek}
-          endWeek={endWeek}
-          teams={data.teams}
-          width={CHART_WIDTH}
-          height={CHART_HEIGHT}
-          margin={CHART_MARGIN}
-          pinnedTeams={pinnedTeams}
-          onClick={togglePin}
-        />
+          <div>
+            <RankingsChart
+              startWeek={startWeek}
+              endWeek={endWeek}
+              teams={data.teams}
+              width={CHART_WIDTH}
+              height={CHART_HEIGHT}
+              margin={CHART_MARGIN}
+              pinnedTeams={pinnedTeams}
+              onClick={togglePin}
+            />
 
-        {data.completed && (
-          <RankSwings
-            teams={data.teams}
-            maxWeek={data.maxWeek}
-            pinnedTeams={pinnedTeams}
-            onClick={togglePin}
-          />
-        )}
+            {data.completed && (
+              <RankSwings
+                teams={data.teams}
+                maxWeek={data.maxWeek}
+                pinnedTeams={pinnedTeams}
+                onClick={togglePin}
+              />
+            )}
 
-        {pinnedTeams.length === 1 && (
-          <TeamSummary team={pinnedTeams[0]} season={season.name} />
-        )}
-      </div>
+            {pinnedTeams.length === 1 && (
+              <TeamSummary team={pinnedTeams[0]} season={season.name} />
+            )}
+          </div>
+        </>
+      ) : (
+        <p className="text-muted-foreground">No season data available</p>
+      )}
     </main>
   )
 }
