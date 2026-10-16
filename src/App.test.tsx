@@ -43,6 +43,8 @@ const earlier = () => screen.getByRole('button', { name: /earlier/i })
 const later = () => screen.getByRole('button', { name: /later/i })
 const zoomOut = () => screen.getByRole('button', { name: /zoom out/i })
 const zoomIn = () => screen.getByRole('button', { name: /zoom in/i })
+const chart = () => screen.getByRole('img', { name: /line chart/i })
+const miamiLabel = () => screen.getByText('Miami Heat', { selector: 'text' })
 const chooseSeason = async (
   user: ReturnType<typeof userEvent.setup>,
   season: string
@@ -138,14 +140,14 @@ describe('User Story 2 — move around the season', () => {
     fireEvent.click(zoomIn())
 
     await user.click(later())
-    await user.click(screen.getByText('Miami Heat'))
+    await user.click(miamiLabel())
     await user.click(zoomOut())
     await user.click(zoomIn())
 
     expect(shownWeeks()).toBe('2–12')
     expect(earlier()).not.toBeDisabled()
     expect(later()).not.toBeDisabled()
-    expect(screen.getByText('Miami Heat')).toHaveAttribute('font-weight', '700')
+    expect(miamiLabel()).toHaveAttribute('font-weight', '700')
 
     fireEvent.keyDown(window, { key: 'ArrowRight' })
     expect(shownWeeks()).toBe('3–13')
@@ -203,16 +205,16 @@ describe('User Story 3 — pin a team', () => {
       screen.getByText('Boston Celtics', { selector: 'text' })
     renderWithStore(<App />)
 
-    await user.click(screen.getByText('Miami Heat'))
-    expect(screen.getByText('Miami Heat')).toHaveAttribute('font-weight', '700')
+    await user.click(miamiLabel())
+    expect(miamiLabel()).toHaveAttribute('font-weight', '700')
 
-    await user.unhover(screen.getByText('Miami Heat'))
+    await user.unhover(miamiLabel())
     await user.click(boston())
     expect(boston()).toHaveAttribute('font-weight', '700')
-    expect(screen.getByText('Miami Heat')).toHaveAttribute('font-weight', '400')
+    expect(miamiLabel()).toHaveAttribute('font-weight', '400')
 
     await user.click(boston())
-    fireEvent.mouseLeave(screen.getByRole('img'))
+    fireEvent.mouseLeave(chart())
     expect(boston()).toHaveAttribute('font-weight', '400')
   })
 
@@ -220,12 +222,12 @@ describe('User Story 3 — pin a team', () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
 
-    await user.click(screen.getByText('Miami Heat'))
-    fireEvent.mouseLeave(screen.getByRole('img'))
-    expect(screen.getByText('Miami Heat')).toHaveAttribute('font-weight', '700')
+    await user.click(miamiLabel())
+    fireEvent.mouseLeave(chart())
+    expect(miamiLabel()).toHaveAttribute('font-weight', '700')
 
-    fireEvent.click(screen.getByRole('img'))
-    expect(screen.getByText('Miami Heat')).toHaveAttribute('font-weight', '400')
+    fireEvent.click(chart())
+    expect(miamiLabel()).toHaveAttribute('font-weight', '400')
   })
 })
 
@@ -255,7 +257,7 @@ describe('Team AI summary', () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
 
-    await user.click(screen.getByText('Miami Heat'))
+    await user.click(miamiLabel())
 
     expect(
       screen.queryByRole('region', { name: /AI-generated summary/ })
@@ -401,7 +403,7 @@ describe('Rank swings pane', () => {
     await chooseSeason(user, 'active')
 
     expect(pane()).not.toBeInTheDocument()
-    fireEvent.mouseLeave(screen.getByRole('img'))
+    fireEvent.mouseLeave(chart())
     expect(
       screen.getByText('Indiana Pacers', { selector: 'text' })
     ).toHaveAttribute('font-weight', '400')
@@ -410,12 +412,12 @@ describe('Rank swings pane', () => {
   it('clears a pin made in the chart on a season switch', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
-    await user.click(screen.getByText('Miami Heat'))
+    await user.click(miamiLabel())
 
     await chooseSeason(user, 'mid')
 
-    fireEvent.mouseLeave(screen.getByRole('img'))
-    expect(screen.getByText('Miami Heat')).toHaveAttribute('font-weight', '400')
+    fireEvent.mouseLeave(chart())
+    expect(miamiLabel()).toHaveAttribute('font-weight', '400')
   })
 })
 
