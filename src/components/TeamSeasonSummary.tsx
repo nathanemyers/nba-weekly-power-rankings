@@ -4,12 +4,12 @@ import { useAppSelector } from '@/store/hooks'
 import { getAISummaryForSeason } from '@/store/slices/seasons/seasons'
 import { type Team, getTeamName } from 'types'
 
-interface TeamSummaryProps {
+interface TeamSeasonSummaryProps {
   season: string
   team: Team
 }
 
-export default function TeamSummary(props: TeamSummaryProps) {
+export default function TeamSeasonSummary(props: TeamSeasonSummaryProps) {
   const summary = useAppSelector((state) =>
     getAISummaryForSeason(state, props.team, props.season)
   )
