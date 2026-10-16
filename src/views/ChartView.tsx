@@ -17,10 +17,7 @@ import { useChartControls } from 'components/Chart/useChartControls'
 import ChartFilter from 'components/ChartFilter'
 import ChartFilterClearButton from 'components/ChartFilterClearButton'
 import TeamHistoryButton from 'components/TeamHistoryButton'
-
-const CHART_WIDTH = 960
-const CHART_HEIGHT = 600
-const CHART_MARGIN = { top: 30, right: 120, bottom: 60, left: 190 }
+import { CHART_HEIGHT, CHART_MARGIN, CHART_WIDTH } from '@/constants'
 
 export default function ChartView() {
   const dispatch = useAppDispatch()
@@ -36,10 +33,7 @@ export default function ChartView() {
   useChartControls()
 
   return (
-    <main
-      className="mx-auto flex min-h-screen w-full flex-col gap-4 px-4 py-8"
-      style={{ maxWidth: CHART_WIDTH + 32 }}
-    >
+    <div>
       <header className="flex items-start justify-between gap-4">
         <div>
           <h1 className="text-2xl leading-tight font-bold sm:text-4xl">
@@ -99,6 +93,6 @@ export default function ChartView() {
       ) : (
         <p className="text-muted-foreground">No season data available</p>
       )}
-    </main>
+    </div>
   )
 }

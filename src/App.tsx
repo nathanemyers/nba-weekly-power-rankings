@@ -2,17 +2,30 @@ import { useAppSelector } from 'store/hooks'
 import { getView, View } from 'store/slices/UI'
 import ChartView from './views/ChartView'
 import TeamHistoryView from './views/TeamHistoryView'
+import { CHART_WIDTH } from './constants'
 
 function App() {
-  // const dispatch = useAppDispatch()
   const view = useAppSelector(getView)
+
+  let body
 
   switch (view) {
     case View.Chart:
-      return <ChartView />
+      body = <ChartView />
+      break
     case View.TeamHistory:
-      return <TeamHistoryView />
+      body = <TeamHistoryView />
+      break
   }
+
+  return (
+    <main
+      className="mx-auto flex min-h-screen w-full flex-col gap-4 px-4 py-8"
+      style={{ maxWidth: CHART_WIDTH + 32 }}
+    >
+      {body}
+    </main>
+  )
 }
 
 export default App
