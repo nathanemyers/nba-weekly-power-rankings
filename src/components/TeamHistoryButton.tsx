@@ -6,6 +6,11 @@ export default function TeamHistoryButton() {
   const dispatch = useAppDispatch()
 
   return (
-    <Button onClick={() => dispatch(setView(View.TeamHistory))}>history</Button>
+    <Button
+      variant="outline"
+      onClick={() => dispatch(setView(View.TeamHistory))}
+    >
+      Team History
+    </Button>
   )
 }

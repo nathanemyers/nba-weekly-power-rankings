@@ -22,6 +22,7 @@ export default function TeamHistory(props: TeamHistoryProps) {
         return (
           <Card
             key={season.name}
+            className="cursor-pointer"
             onClick={() => {
               dispatch(setView(View.Chart))
               dispatch(setSelectedSeason(season.name))

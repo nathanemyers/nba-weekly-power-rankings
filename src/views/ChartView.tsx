@@ -48,15 +48,13 @@ export default function ChartView() {
 
       {data ? (
         <>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-4 mt-5">
             <div className="grid-col-1 md:justify-self-start justify-self-center">
               <SeasonSelect />
             </div>
-            {pinnedTeams.length === 1 && (
-              <div className="grid-col-2 justify-self-center">
-                <TeamHistoryButton />
-              </div>
-            )}
+            <div className="grid-col-2 justify-self-center">
+              {pinnedTeams.length === 1 && <TeamHistoryButton />}
+            </div>
             <div className="grid-col-3 md:justify-self-end justify-self-center align-items-center gap-2 flex flex-row">
               {pinnedTeams.length > 0 && <ChartFilterClearButton />}
               <ChartFilter />
