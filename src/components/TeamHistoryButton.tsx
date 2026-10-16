@@ -1,9 +1,11 @@
-import type { Team } from '@/types'
 import { Button } from './ui/button'
+import { useAppDispatch } from '@/store/hooks'
+import { setView, View } from '@/store/slices/UI'
 
-interface TeamHistoryButtonProps {
-  team: Team
-}
-export default function TeamHistoryButton(props: TeamHistoryButtonProps) {
-  return <Button>history</Button>
+export default function TeamHistoryButton() {
+  const dispatch = useAppDispatch()
+
+  return (
+    <Button onClick={() => dispatch(setView(View.TeamHistory))}>history</Button>
+  )
 }

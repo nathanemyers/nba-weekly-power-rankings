@@ -2,12 +2,20 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { initialSeasons, getSeasonById } from '@/store/slices/seasons/seasons'
 import type { RootState } from 'store/redux'
 
-// Holds what the visitor is looking at; future routes and UI state belong here too
-type UIState = {
-  selectedSeason: string
+export enum View {
+  Chart,
+  TeamHistory,
 }
 
-const initialState: UIState = { selectedSeason: initialSeasons.order[0] }
+type UIState = {
+  selectedSeason: string
+  view: View
+}
+
+const initialState: UIState = {
+  selectedSeason: initialSeasons.order[0],
+  view: View.Chart,
+}
 
 const navigationSlice = createSlice({
   name: 'UI',
@@ -16,12 +24,16 @@ const navigationSlice = createSlice({
     setSelectedSeason(state, action: PayloadAction<string>) {
       state.selectedSeason = action.payload
     },
+    setView(state, action: PayloadAction<View>) {
+      state.view = action.payload
+    },
   },
 })
 
-export const { setSelectedSeason } = navigationSlice.actions
+export const { setSelectedSeason, setView } = navigationSlice.actions
 export default navigationSlice.reducer
 
+export const getView = (state: RootState) => state.UI.view
 export const getSelectedSeasonName = (state: RootState) =>
   state.UI.selectedSeason
 export const getSelectedSeason = (state: RootState) =>
