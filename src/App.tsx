@@ -9,6 +9,7 @@ function App() {
 
   let body
 
+  // if we ever add a third view just use react-router
   switch (view) {
     case View.Chart:
       body = <ChartView />
