@@ -45,9 +45,10 @@ export const getInvalidSeasons = (state: RootState) =>
 
 export const getAISummaryForSeason = (
   state: RootState,
-  teamId: Team,
+  teamId: Team | undefined,
   seasonName: string
 ) => {
+  if (!teamId) return undefined
   const season = getSeasonById(state, seasonName)
   if (!season) {
     return undefined

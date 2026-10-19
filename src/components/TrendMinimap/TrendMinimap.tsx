@@ -1,32 +1,37 @@
 import { useId } from 'react'
-import { Teams, type WeekRanking } from 'types'
+import { Team, Teams } from 'types'
 import { getYforRank } from 'components/Chart/utils'
+import { useAppSelector } from '@/store/hooks'
+import { getSeasonById } from '@/store/slices/seasons'
 
 const PADDING = 3
 const MARGIN = { top: PADDING, right: PADDING, bottom: PADDING, left: PADDING }
 const BAND_SIZE = Teams.length / 3
 
 interface TrendMinimapProps {
-  rankings: WeekRanking[]
-  maxWeek: number
+  team: Team
+  seasonId: string
   width?: number
   height?: number
 }
 
 export default function TrendMinimap(props: TrendMinimapProps) {
+  const season = useAppSelector((state) => getSeasonById(state, props.seasonId))
+  const { rankings } = season.teams.find((t) => t.teamId === props.team)!
+
   const gradientId = useId()
   const width = props.width ?? 96
   const height = props.height ?? 40
   const plotWidth = width - MARGIN.left - MARGIN.right
-  const lastStep = Math.max(1, props.maxWeek - 1)
+  const lastStep = Math.max(1, season.maxWeek - 1)
 
   const x = (week: number) => MARGIN.left + ((week - 1) / lastStep) * plotWidth
   const y = (rank: number) => getYforRank(rank, height, MARGIN)
 
   // Start a new subpath after a missing week so the line doesn't bridge the gap
-  const d = props.rankings
+  const d = rankings
     .map((r, i) => {
-      const prev = props.rankings[i - 1]
+      const prev = rankings[i - 1]
       const move = !prev || prev.week !== r.week - 1 ? 'M' : 'L'
       return `${move}${x(r.week)},${y(r.rank)}`
     })

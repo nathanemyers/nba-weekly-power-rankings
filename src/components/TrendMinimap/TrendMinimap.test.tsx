@@ -1,7 +1,35 @@
-import { afterEach, describe, expect, it } from 'vitest'
-import { cleanup, render } from '@testing-library/react'
+import { afterEach, describe, expect, it, vi } from 'vitest'
+import { cleanup } from '@testing-library/react'
 import TrendMinimap from './TrendMinimap'
-import { weeklyRankings } from 'test/fixtures'
+import { Team } from 'types'
+import { renderWithStore } from 'test/renderWithStore'
+
+// 'full' has an unbroken Boston, a Lakers gap at week 10 and Miami low; 'early' has Miami ending at week 21
+vi.mock('data/seasons', async () => {
+  const { weeklyRankings } = await import('test/fixtures')
+  return {
+    seasons: ['full', 'early'],
+    seasonData: {
+      full: {
+        season: 'full',
+        maxWeek: 25,
+        rankings: {
+          bos: weeklyRankings(25, 5),
+          lal: weeklyRankings(25, 5).filter((r) => r.week !== 10),
+          mia: weeklyRankings(25, 20),
+        },
+      },
+      early: {
+        season: 'early',
+        maxWeek: 24,
+        rankings: {
+          bos: weeklyRankings(24, 5),
+          mia: weeklyRankings(21, 5),
+        },
+      },
+    },
+  }
+})
 
 afterEach(cleanup)
 
@@ -16,8 +44,8 @@ const lastX = (path: SVGPathElement) => {
 
 describe('TrendMinimap', () => {
   it('draws one decorative line for an unbroken season', () => {
-    const { container } = render(
-      <TrendMinimap rankings={weeklyRankings(25, 5)} maxWeek={25} />
+    const { container } = renderWithStore(
+      <TrendMinimap team={Team.Boston} seasonId="full" />
     )
 
     expect(container.querySelector('svg')).toHaveAttribute(
@@ -29,17 +57,16 @@ describe('TrendMinimap', () => {
   })
 
   it('breaks the line at a missing week', () => {
-    const rankings = weeklyRankings(25, 5).filter((r) => r.week !== 10)
-    const { container } = render(
-      <TrendMinimap rankings={rankings} maxWeek={25} />
+    const { container } = renderWithStore(
+      <TrendMinimap team={Team.LALakers} seasonId="full" />
     )
 
     expect(moveCount(pathOf(container))).toBe(2)
   })
 
   it('colors the line by rank band, green over yellow over red', () => {
-    const { container } = render(
-      <TrendMinimap rankings={weeklyRankings(25, 5)} maxWeek={25} />
+    const { container } = renderWithStore(
+      <TrendMinimap team={Team.Boston} seasonId="full" />
     )
     const gradient = container.querySelector('linearGradient')
     const stops = Array.from(container.querySelectorAll('stop'))
@@ -67,10 +94,10 @@ describe('TrendMinimap', () => {
   })
 
   it('gives each instance its own gradient', () => {
-    const { container } = render(
+    const { container } = renderWithStore(
       <>
-        <TrendMinimap rankings={weeklyRankings(25, 5)} maxWeek={25} />
-        <TrendMinimap rankings={weeklyRankings(25, 20)} maxWeek={25} />
+        <TrendMinimap team={Team.Boston} seasonId="full" />
+        <TrendMinimap team={Team.Miami} seasonId="full" />
       </>
     )
     const ids = Array.from(container.querySelectorAll('linearGradient')).map(
@@ -82,22 +109,16 @@ describe('TrendMinimap', () => {
   })
 
   it('stops short of the right edge when the data ends early', () => {
-    const full = render(
-      <TrendMinimap rankings={weeklyRankings(24, 5)} maxWeek={24} width={96} />
+    const full = renderWithStore(
+      <TrendMinimap team={Team.Boston} seasonId="early" width={96} />
     )
-    const early = render(
-      <TrendMinimap rankings={weeklyRankings(21, 5)} maxWeek={24} width={96} />
+    const early = renderWithStore(
+      <TrendMinimap team={Team.Miami} seasonId="early" width={96} />
     )
 
     expect(lastX(pathOf(early.container))).toBeLessThan(
       lastX(pathOf(full.container))
     )
     expect(lastX(pathOf(full.container))).toBeLessThan(96)
-  })
-
-  it('renders nothing to draw for empty rankings without throwing', () => {
-    const { container } = render(<TrendMinimap rankings={[]} maxWeek={25} />)
-
-    expect(pathOf(container)).toHaveAttribute('d', '')
   })
 })

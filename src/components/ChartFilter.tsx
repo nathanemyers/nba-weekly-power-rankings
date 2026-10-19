@@ -13,7 +13,11 @@ import {
 import { xor } from 'lodash'
 
 import { Button } from '@/components/ui/button'
-import { getPinnedTeams, setPinnedTeams } from 'store/slices/chart'
+import {
+  getPinnedTeams,
+  getSinglePinnedTeam,
+  setPinnedTeams,
+} from 'store/slices/chart'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import {
   DropdownMenu,
@@ -51,6 +55,7 @@ function getPinGroup(pinnedTeams: Team[]) {
 export default function ChartFilter() {
   const dispatch = useAppDispatch()
   const pinnedTeams = useAppSelector(getPinnedTeams)
+  const singlePinnedTeam = useAppSelector(getSinglePinnedTeam)
 
   const pinGroup = getPinGroup(pinnedTeams)
 
@@ -58,9 +63,9 @@ export default function ChartFilter() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className="w-60 justify-end">
-          {pinnedTeams.length === 1 ? (
+          {singlePinnedTeam ? (
             <div className="flex w-full items-center justify-between">
-              <TeamLogo team={pinnedTeams[0]} className="h-6 mr-2" />
+              <TeamLogo team={singlePinnedTeam} className="h-6 mr-2" />
               {pinGroup}
             </div>
           ) : (

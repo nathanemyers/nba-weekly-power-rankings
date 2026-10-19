@@ -1,12 +1,11 @@
 import TeamHistory from '@/components/TeamHistory'
 import TeamLogo from '@/components/TeamLogo'
 import { useAppSelector } from '@/store/hooks'
-import { getPinnedTeams } from '@/store/slices/chart'
+import { getSinglePinnedTeam } from '@/store/slices/chart'
 import { getTeamName } from '@/types'
 
 export default function TeamHistoryView() {
-  const pinnedTeams = useAppSelector(getPinnedTeams)
-  const team = pinnedTeams[0]
+  const team = useAppSelector(getSinglePinnedTeam)!
   const displayName = getTeamName(team)
 
   return (

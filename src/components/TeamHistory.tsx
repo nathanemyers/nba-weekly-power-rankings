@@ -35,10 +35,7 @@ export default function TeamHistory(props: TeamHistoryProps) {
                     {season.name}
                   </h2>
                   <div className="w-100 content-center">
-                    <TrendMinimap
-                      rankings={team.rankings}
-                      maxWeek={season.maxWeek}
-                    />
+                    <TrendMinimap team={team.teamId} seasonId={season.name} />
                   </div>
                 </div>
                 <Badge
