@@ -63,12 +63,12 @@ const LOGOS: Record<Team, string> = {
   [Team.Washington]: was,
 }
 
-interface TeamLogoProps {
+interface TeamLogoProps extends React.ComponentProps<'img'> {
   team: Team
-  className?: string
 }
 
-export default function TeamLogo({ team, className }: TeamLogoProps) {
+export default function TeamLogo(props: TeamLogoProps) {
+  const { team, ...rest } = props
   const name = Teams.find((t) => t.teamId === team)?.name
-  return <img src={LOGOS[team]} alt={`${name} logo`} className={className} />
+  return <img src={LOGOS[team]} alt={`${name} logo`} {...rest} />
 }
