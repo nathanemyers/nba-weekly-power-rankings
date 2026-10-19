@@ -11,6 +11,7 @@ import {
   getStartWeek,
   getPinnedTeams,
   setPinnedTeams,
+  getSinglePinnedTeam,
 } from '@/store/slices/chart/chart'
 import ChartControls from 'components/ChartControls'
 import { useChartControls } from 'components/Chart/useChartControls'
@@ -18,6 +19,7 @@ import ChartFilter from 'components/ChartFilter'
 import ChartFilterClearButton from 'components/ChartFilterClearButton'
 import TeamHistoryButton from 'components/TeamHistoryButton'
 import { CHART_HEIGHT, CHART_MARGIN, CHART_WIDTH } from '@/constants'
+import { ButtonGroup } from '@/components/ui/button-group'
 
 export default function ChartView() {
   const dispatch = useAppDispatch()
@@ -26,6 +28,7 @@ export default function ChartView() {
   const startWeek = useAppSelector(getStartWeek)
   const endWeek = useAppSelector(getEndWeek)
   const pinnedTeams = useAppSelector(getPinnedTeams)
+  const singlePinnedTeam = useAppSelector(getSinglePinnedTeam)
 
   const togglePin = (team?: Team) =>
     dispatch(setPinnedTeams(team && !pinnedTeams.includes(team) ? [team] : []))
@@ -53,7 +56,7 @@ export default function ChartView() {
               <SeasonSelect />
             </div>
             <div className="grid-col-2 justify-self-center">
-              {pinnedTeams.length === 1 && <TeamHistoryButton />}
+              {singlePinnedTeam && <TeamHistoryButton />}
             </div>
             <div className="grid-col-3 md:justify-self-end justify-self-center align-items-center gap-2 flex flex-row">
               {pinnedTeams.length > 0 && <ChartFilterClearButton />}
@@ -72,22 +75,15 @@ export default function ChartView() {
               pinnedTeams={pinnedTeams}
               onClick={togglePin}
             />
-            <div className="flex flex-row place-content-center">
+            <div className="flex flex-row place-content-center justify-between">
+              {data.completed && (
+                <ButtonGroup>
+                  <RankSwings />
+                  <TeamSeasonSummary />
+                </ButtonGroup>
+              )}
               <ChartControls />
             </div>
-
-            {data.completed && (
-              <RankSwings
-                teams={data.teams}
-                maxWeek={data.maxWeek}
-                pinnedTeams={pinnedTeams}
-                onClick={togglePin}
-              />
-            )}
-
-            {pinnedTeams.length === 1 && (
-              <TeamSeasonSummary team={pinnedTeams[0]} season={season.name} />
-            )}
           </div>
         </>
       ) : (

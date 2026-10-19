@@ -45,6 +45,14 @@ export const { setZoomedOut, setPinnedTeams } = chartViewSlice.actions
 export default chartViewSlice.reducer
 
 export const getPinnedTeams = (state: RootState) => state.chart.pinnedTeams
+export const getSinglePinnedTeam = (state: RootState) => {
+  const pinnedTeams = getPinnedTeams(state)
+  if (pinnedTeams.length !== 1) {
+    return undefined
+  } else {
+    return pinnedTeams[0]
+  }
+}
 
 const getMaxWeek = (state: RootState) => getSelectedSeason(state)?.maxWeek ?? 1
 

@@ -36,7 +36,7 @@ function TeamMinimapCard(props: {
   )
 }
 
-export default function RankSwings(props: RankSwingsProps) {
+export default function RankSwings() {
   const dispatch = useDispatch()
   const pinnedTeams = useAppSelector(getPinnedTeams)
   const season = useAppSelector(getSelectedSeason)
@@ -45,12 +45,12 @@ export default function RankSwings(props: RankSwingsProps) {
   const biggestFallers = useAppSelector(getMostDeclinedTeams)
 
   return (
-    <HoverCard openDelay={10} closeDelay={100}>
+    <HoverCard openDelay={100} closeDelay={100}>
       <HoverCardTrigger asChild>
         <Button variant="outline">Season Trends</Button>
       </HoverCardTrigger>
       <HoverCardContent
-        side={'top'}
+        side={'bottom'}
         className="flex w-auto h-auto flex-col gap-0.5"
       >
         <h1>Biggest Up</h1>
