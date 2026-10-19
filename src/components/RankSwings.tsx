@@ -12,6 +12,8 @@ import TeamLogo from './TeamLogo'
 import { useDispatch } from 'react-redux'
 import { getSelectedSeason } from '@/store/slices/UI'
 import type { Team } from '@/types'
+import { Button } from './ui/button'
+import { HoverCard, HoverCardTrigger, HoverCardContent } from './ui/hover-card'
 
 interface RankSwingsProps {}
 
@@ -23,7 +25,11 @@ function TeamMinimapCard(props: {
 }) {
   console.log('is pressed', props.isPressed)
   return (
-    <Toggle onClick={props.onClick} pressed={props.isPressed}>
+    <Toggle
+      className="w-auto h-auto p-3"
+      onClick={props.onClick}
+      pressed={props.isPressed}
+    >
       <TeamLogo team={props.team} />
       <TrendMinimap team={props.team} seasonId={props.seasonId} />
     </Toggle>
@@ -39,8 +45,14 @@ export default function RankSwings(props: RankSwingsProps) {
   const biggestFallers = useAppSelector(getMostDeclinedTeams)
 
   return (
-    <Card role="region" aria-label="Biggest rank swings" className="mt-5">
-      <CardContent className="space-y-4">
+    <HoverCard openDelay={10} closeDelay={100}>
+      <HoverCardTrigger asChild>
+        <Button variant="outline">Season Trends</Button>
+      </HoverCardTrigger>
+      <HoverCardContent
+        side={'top'}
+        className="flex w-auto h-auto flex-col gap-0.5"
+      >
         <h1>Biggest Up</h1>
         <div className="flex direction-row gap-5 justify-between">
           {biggestRisers.map(({ team }) => (
@@ -65,7 +77,7 @@ export default function RankSwings(props: RankSwingsProps) {
             />
           ))}
         </div>
-      </CardContent>
-    </Card>
+      </HoverCardContent>
+    </HoverCard>
   )
 }
