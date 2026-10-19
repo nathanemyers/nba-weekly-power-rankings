@@ -50,6 +50,7 @@ export default function RankSwings() {
         <Button variant="outline">Season Trends</Button>
       </HoverCardTrigger>
       <HoverCardContent
+        align="start"
         side={'bottom'}
         className="flex w-auto h-auto flex-col gap-0.5"
       >

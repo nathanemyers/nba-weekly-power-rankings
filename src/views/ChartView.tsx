@@ -78,8 +78,8 @@ export default function ChartView() {
             <div className="flex flex-row place-content-center justify-between">
               {data.completed && (
                 <ButtonGroup>
-                  <RankSwings />
                   <TeamSeasonSummary />
+                  <RankSwings />
                 </ButtonGroup>
               )}
               <ChartControls />

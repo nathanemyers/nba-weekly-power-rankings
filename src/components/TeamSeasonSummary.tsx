@@ -24,7 +24,7 @@ export default function TeamSeasonSummary() {
           AI Summary
         </Button>
       </HoverCardTrigger>
-      <HoverCardContent side="bottom" className="w-300">
+      <HoverCardContent align="start" side="bottom" className="w-200">
         <div className="mb-2 flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">{teamName}</h2>
           <Badge
