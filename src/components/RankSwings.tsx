@@ -1,7 +1,5 @@
-import { Card, CardContent } from '@/components/ui/card'
 import { Toggle } from '@/components/ui/toggle'
 import TrendMinimap from 'components/TrendMinimap/TrendMinimap'
-import { PLAYOFF_MEDALS } from 'components/Chart/utils'
 import { useAppSelector } from '@/store/hooks'
 import { getPinnedTeams, setPinnedTeams } from '@/store/slices/chart'
 import {
@@ -14,8 +12,6 @@ import { getSelectedSeason } from '@/store/slices/UI'
 import type { Team } from '@/types'
 import { Button } from './ui/button'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from './ui/hover-card'
-
-interface RankSwingsProps {}
 
 function TeamMinimapCard(props: {
   team: Team

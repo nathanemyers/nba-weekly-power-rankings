@@ -1,7 +1,7 @@
 import TeamHistory from '@/components/TeamHistory'
 import TeamLogo from '@/components/TeamLogo'
 import { useAppSelector } from '@/store/hooks'
-import { getPinnedTeams, getSinglePinnedTeam } from '@/store/slices/chart'
+import { getSinglePinnedTeam } from '@/store/slices/chart'
 import { getTeamName } from '@/types'
 
 export default function TeamHistoryView() {

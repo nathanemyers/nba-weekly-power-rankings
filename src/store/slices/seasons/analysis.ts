@@ -1,6 +1,6 @@
 import type { RootState } from '@/store/redux'
 import type { Team } from '@/types'
-import { getSeasonById, type Season } from './seasons'
+import { type Season } from './seasons'
 import { getSelectedSeason } from '../UI'
 
 function getSeasonDelta(team: Team, season: Season) {

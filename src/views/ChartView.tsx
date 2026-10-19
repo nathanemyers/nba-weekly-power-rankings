@@ -23,7 +23,6 @@ import { ButtonGroup } from '@/components/ui/button-group'
 
 export default function ChartView() {
   const dispatch = useAppDispatch()
-  const season = useAppSelector(getSelectedSeason)
   const data = useAppSelector(getSelectedSeason)
   const startWeek = useAppSelector(getStartWeek)
   const endWeek = useAppSelector(getEndWeek)

@@ -1,7 +1,7 @@
 import { Badge } from '@/components/ui/badge'
 import { useAppSelector } from '@/store/hooks'
 import { getAISummaryForSeason } from '@/store/slices/seasons/seasons'
-import { type Team, getTeamName } from 'types'
+import { getTeamName } from 'types'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from './ui/hover-card'
 import { Button } from './ui/button'
 import { getSinglePinnedTeam } from '@/store/slices/chart'
