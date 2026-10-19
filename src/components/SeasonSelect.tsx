@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from 'store/hooks'
 import { setSelectedSeason, getSelectedSeason } from '@/store/slices/UI/UI'
 import { getSeasons } from 'store/slices/seasons/seasons'
 import TeamLogo from './TeamLogo'
+import { setPinnedTeams } from '@/store/slices/chart'
 
 export default function SeasonSelect() {
   const dispatch = useAppDispatch()
@@ -18,7 +19,10 @@ export default function SeasonSelect() {
   return (
     <Select
       value={selectedSeason.name}
-      onValueChange={(value) => dispatch(setSelectedSeason(value))}
+      onValueChange={(value) => {
+        dispatch(setSelectedSeason(value))
+        dispatch(setPinnedTeams([]))
+      }}
     >
       <SelectTrigger className="md:w-[180px] w-full text-lg">
         <SelectValue placeholder="Season">{`${selectedSeason.name} Season`}</SelectValue>

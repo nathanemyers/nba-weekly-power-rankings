@@ -67,11 +67,4 @@ describe('pinned teams', () => {
     store.dispatch(setPinnedTeams([]))
     expect(getPinnedTeams(store.getState())).toEqual([])
   })
-
-  it('clears the pin on a season change', () => {
-    const store = makeStore()
-    store.dispatch(setPinnedTeams([Team.Boston]))
-    store.dispatch(setSelectedSeason('short'))
-    expect(getPinnedTeams(store.getState())).toEqual([])
-  })
 })
