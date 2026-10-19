@@ -232,109 +232,73 @@ describe('User Story 3 — pin a team', () => {
 })
 
 describe('Team AI summary', () => {
-  const panel = (team: string) =>
-    screen.queryByRole('region', {
-      name: `AI-generated summary for ${team}`,
-    })
+  const summaryButton = () => screen.getByRole('button', { name: 'AI Summary' })
 
-  it("shows the pinned team's labeled summary and hides it on unpin", async () => {
+  it("shows the pinned team's labeled summary on hover and disables on unpin", async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
-    expect(panel('Boston Celtics')).not.toBeInTheDocument()
-
-    await user.click(screen.getByText('Boston Celtics'))
-
-    const region = panel('Boston Celtics')
-    expect(region).toBeInTheDocument()
-    expect(region).toHaveTextContent('AI-generated summary')
-    expect(region).toHaveTextContent('Boston led from the first week.')
+    expect(summaryButton()).toBeDisabled()
 
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
-    expect(panel('Boston Celtics')).not.toBeInTheDocument()
-  })
+    expect(summaryButton()).not.toBeDisabled()
 
-  it('shows nothing for a team without a summary', async () => {
-    const user = userEvent.setup()
-    renderWithStore(<App />)
-
-    await user.click(miamiLabel())
-
+    await user.hover(summaryButton())
     expect(
-      screen.queryByRole('region', { name: /AI-generated summary/ })
-    ).not.toBeInTheDocument()
-    expect(screen.queryByText('AI-generated summary')).not.toBeInTheDocument()
+      await screen.findByText('Boston led from the first week.')
+    ).toBeInTheDocument()
+    expect(screen.getByText('AI-generated summary')).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: 'Boston Celtics' })
+    ).toBeInTheDocument()
+
+    await user.unhover(summaryButton())
+    await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
+    expect(summaryButton()).toBeDisabled()
   })
 
-  it('drops the summary when switching to a season without one', async () => {
+  it('disables the summary when switching seasons clears the pin', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
 
-    await user.click(screen.getByText('Boston Celtics'))
+    await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
     await chooseSeason(user, 'mid')
 
-    expect(
-      screen.queryByRole('region', { name: /AI-generated summary/ })
-    ).not.toBeInTheDocument()
+    expect(summaryButton()).toBeDisabled()
     expect(shownWeeks()).toBe('1–21')
-    expect(zoomIn()).toBeInTheDocument()
   })
 })
 
-describe('Rank swings pane', () => {
-  const pane = () =>
-    screen.queryByRole('region', { name: 'Biggest rank swings' })
-  const indiana = () =>
-    screen.getByRole('button', {
-      name: 'Indiana Pacers: rose 17 places, from 26 to 9',
-    })
-  const memphis = () =>
-    screen.getByRole('button', {
-      name: 'Memphis Grizzlies: fell 13 places, from 16 to 29',
-    })
+describe('Rank swings hover card', () => {
+  const trendsButton = () =>
+    screen.queryByRole('button', { name: 'Season Trends' })
+  const openTrends = async (user: ReturnType<typeof userEvent.setup>) => {
+    await user.hover(trendsButton()!)
+    await screen.findByRole('heading', { name: 'Biggest Up' })
+  }
+  // The team logos in a section, in display order
+  const sectionTeams = (heading: string) =>
+    within(
+      screen.getByRole('heading', { name: heading })
+        .nextElementSibling as HTMLElement
+    )
+      .getAllByRole('img')
+      .map((img) => img.getAttribute('alt'))
+  const toggle = (team: string) =>
+    screen.getAllByRole('button', { name: `${team} logo` })[0]
 
   it('lists the biggest risers and fallers of a completed season', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
     await chooseSeason(user, 'rising')
+    await openTrends(user)
 
-    expect(pane()).toBeInTheDocument()
-    expect(
-      screen.getByRole('heading', { name: 'Biggest Improvements' })
-    ).toBeInTheDocument()
-    expect(
-      screen.getByRole('heading', { name: 'Biggest Fall Offs' })
-    ).toBeInTheDocument()
-    expect(indiana()).toHaveTextContent('26 → 9')
-    expect(indiana()).toHaveTextContent('▲ 17')
-    expect(memphis()).toHaveTextContent('▼ 13')
-    expect(
-      screen.queryByRole('button', { name: /Boston Celtics/ })
-    ).not.toBeInTheDocument()
-  })
-
-  it("shows a post-season medal beside a playoff team's name", async () => {
-    const user = userEvent.setup()
-    renderWithStore(<App />)
-    await chooseSeason(user, 'rising')
-
-    const miami = screen.getByRole('button', {
-      name: 'Miami Heat: rose 10 places, from 20 to 10. Lost in the second round',
-    })
-    expect(miami).toHaveTextContent('Miami Heat🥈')
-    expect(indiana()).not.toHaveTextContent(/[🥉🥈🥇🏆👑]/u)
-  })
-
-  it('omits a direction with no teams', () => {
-    renderWithStore(<App />)
-
-    expect(
-      screen.getByRole('button', {
-        name: 'Detroit Pistons: fell 5 places, from 15 to 20',
-      })
-    ).toBeInTheDocument()
-    expect(
-      screen.queryByRole('heading', { name: 'Biggest Improvements' })
-    ).not.toBeInTheDocument()
+    expect(sectionTeams('Biggest Up').slice(0, 2)).toEqual([
+      'Indiana Pacers logo',
+      'Miami Heat logo',
+    ])
+    expect(sectionTeams('Biggest Up')).toHaveLength(3)
+    expect(sectionTeams('Biggest Down')[0]).toBe('Memphis Grizzlies logo')
+    expect(sectionTeams('Biggest Down')).toHaveLength(3)
   })
 
   it('is absent for a season that has not completed', async () => {
@@ -342,27 +306,28 @@ describe('Rank swings pane', () => {
     renderWithStore(<App />)
     await chooseSeason(user, 'active')
 
-    expect(pane()).not.toBeInTheDocument()
+    expect(trendsButton()).not.toBeInTheDocument()
+    expect(
+      screen.queryByRole('button', { name: 'AI Summary' })
+    ).not.toBeInTheDocument()
   })
 
-  it('pins the clicked team, replacing or clearing an earlier pin', async () => {
+  it('pins the clicked team, replacing an earlier pin', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
     await chooseSeason(user, 'rising')
+    await openTrends(user)
 
-    await user.click(indiana())
-    expect(indiana()).toHaveAttribute('aria-pressed', 'true')
-    expect(memphis()).toHaveAttribute('aria-pressed', 'false')
+    await user.click(toggle('Indiana Pacers'))
+    expect(toggle('Indiana Pacers')).toHaveAttribute('aria-pressed', 'true')
+    expect(toggle('Memphis Grizzlies')).toHaveAttribute('aria-pressed', 'false')
     expect(
       screen.getByText('Indiana Pacers', { selector: 'text' })
     ).toHaveAttribute('font-weight', '700')
 
-    await user.click(memphis())
-    expect(memphis()).toHaveAttribute('aria-pressed', 'true')
-    expect(indiana()).toHaveAttribute('aria-pressed', 'false')
-
-    await user.click(memphis())
-    expect(memphis()).toHaveAttribute('aria-pressed', 'false')
+    await user.click(toggle('Memphis Grizzlies'))
+    expect(toggle('Memphis Grizzlies')).toHaveAttribute('aria-pressed', 'true')
+    expect(toggle('Indiana Pacers')).toHaveAttribute('aria-pressed', 'false')
   })
 
   it('reflects a team pinned from the chart', async () => {
@@ -371,38 +336,39 @@ describe('Rank swings pane', () => {
     await chooseSeason(user, 'rising')
 
     await user.click(screen.getByText('Indiana Pacers', { selector: 'text' }))
+    await openTrends(user)
 
-    expect(indiana()).toHaveAttribute('aria-pressed', 'true')
+    expect(toggle('Indiana Pacers')).toHaveAttribute('aria-pressed', 'true')
   })
 
   it("clears the pin and shows the new season's teams on a season switch", async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
     await chooseSeason(user, 'rising')
-    await user.click(indiana())
+    await user.click(screen.getByText('Indiana Pacers', { selector: 'text' }))
 
     await chooseSeason(user, 'long')
+    await openTrends(user)
 
     expect(
       screen.queryByRole('button', { pressed: true })
     ).not.toBeInTheDocument()
     expect(
-      screen.getByRole('button', { name: /Detroit Pistons: fell/ })
-    ).toBeInTheDocument()
-    expect(
-      screen.queryByRole('button', { name: /Indiana Pacers/ })
+      screen.queryByRole('button', { name: 'Indiana Pacers logo' })
     ).not.toBeInTheDocument()
   })
 
-  it('disappears when switching to a season that has not completed', async () => {
+  it('disappears and drops the pin when switching to a season that has not completed', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
     await chooseSeason(user, 'rising')
-    await user.click(indiana())
+    await openTrends(user)
+    await user.click(toggle('Indiana Pacers'))
+    await user.unhover(trendsButton()!)
 
     await chooseSeason(user, 'active')
 
-    expect(pane()).not.toBeInTheDocument()
+    expect(trendsButton()).not.toBeInTheDocument()
     fireEvent.mouseLeave(chart())
     expect(
       screen.getByText('Indiana Pacers', { selector: 'text' })
