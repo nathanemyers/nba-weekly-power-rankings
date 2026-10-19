@@ -1,7 +1,7 @@
 import RankingsChart from 'components/Chart/Chart'
 import GitHubBadge from 'components/GitHubBadge'
 import SeasonSelect from 'components/SeasonSelect'
-import RankSwings from 'components/RankSwings/RankSwings'
+import RankSwings from '@/components/RankSwings'
 import TeamSeasonSummary from '@/components/TeamSeasonSummary'
 import type { Team } from 'types'
 import { useAppDispatch, useAppSelector } from 'store/hooks'

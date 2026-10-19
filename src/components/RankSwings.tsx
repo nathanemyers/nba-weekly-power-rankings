@@ -7,9 +7,8 @@ import { getPinnedTeams, setPinnedTeams } from '@/store/slices/chart'
 import {
   getMostImprovedTeams,
   getMostDeclinedTeams,
-  getMostChaoticTeams,
 } from '@/store/slices/seasons/analysis'
-import TeamLogo from '../TeamLogo'
+import TeamLogo from './TeamLogo'
 import { useDispatch } from 'react-redux'
 import { getSelectedSeason } from '@/store/slices/UI'
 import type { Team } from '@/types'
@@ -38,7 +37,6 @@ export default function RankSwings(props: RankSwingsProps) {
 
   const biggestRisers = useAppSelector(getMostImprovedTeams)
   const biggestFallers = useAppSelector(getMostDeclinedTeams)
-  const mostChaotic = useAppSelector(getMostChaoticTeams)
 
   return (
     <Card role="region" aria-label="Biggest rank swings" className="mt-5">
@@ -58,18 +56,6 @@ export default function RankSwings(props: RankSwingsProps) {
         <h1>Biggest Down</h1>
         <div className="flex direction-row gap-5 justify-between">
           {biggestFallers.map(({ team }) => (
-            <TeamMinimapCard
-              key={team}
-              isPressed={pinnedTeams.length === 1 && pinnedTeams[0] === team}
-              onClick={() => dispatch(setPinnedTeams([team]))}
-              team={team}
-              seasonId={season.name}
-            />
-          ))}
-        </div>
-        <h1>Most Chaotic Up</h1>
-        <div className="flex direction-row gap-5 justify-between">
-          {mostChaotic.map(({ team }) => (
             <TeamMinimapCard
               key={team}
               isPressed={pinnedTeams.length === 1 && pinnedTeams[0] === team}
