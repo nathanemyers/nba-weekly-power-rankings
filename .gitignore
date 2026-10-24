@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-.claude/
+# .claude/
 
 __pycache__/
 *.py[cod]
