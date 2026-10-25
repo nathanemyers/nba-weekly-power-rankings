@@ -27,7 +27,7 @@
 
 **Purpose**: Create the new scraper's folder and npm entry point.
 
-- [ ] T001 Create the folder `scripts/espn-power-rankings-scraper/`, and add `"scrape:espnPowerRankings": "node scripts/espn-power-rankings-scraper/cli.mjs"` to `scripts` in `package.json`, right after `"scrape:powerRankings"`.
+- [X] T001 Create the folder `scripts/espn-power-rankings-scraper/`, and add `"scrape:espnPowerRankings": "node scripts/espn-power-rankings-scraper/cli.mjs"` to `scripts` in `package.json`, right after `"scrape:powerRankings"`.
 
 ---
 
@@ -35,12 +35,12 @@
 
 **Purpose**: Move source-independent helpers to `scripts/lib/` so both scrapers share them ([research §6, §7, §9](research.md)). This blocks the ESPN work (US1).
 
-- [ ] T002 `git mv scripts/nba-power-rankings-scraper/http.mjs scripts/lib/http.mjs` and `git mv scripts/nba-power-rankings-scraper/htmlToText.mjs scripts/lib/htmlToText.mjs`. Update the imports in `scripts/nba-power-rankings-scraper/articlePage.mjs`, `contentApi.mjs` and `scrape.mjs` from `./http.mjs` / `./htmlToText.mjs` to `../lib/http.mjs` / `../lib/htmlToText.mjs`. Check with `node -e "import('./scripts/nba-power-rankings-scraper/scrape.mjs')"`.
-- [ ] T003 In `scripts/lib/http.mjs`:
+- [X] T002 `git mv scripts/nba-power-rankings-scraper/http.mjs scripts/lib/http.mjs` and `git mv scripts/nba-power-rankings-scraper/htmlToText.mjs scripts/lib/htmlToText.mjs`. Update the imports in `scripts/nba-power-rankings-scraper/articlePage.mjs`, `contentApi.mjs` and `scrape.mjs` from `./http.mjs` / `./htmlToText.mjs` to `../lib/http.mjs` / `../lib/htmlToText.mjs`. Check with `node -e "import('./scripts/nba-power-rankings-scraper/scrape.mjs')"`.
+- [X] T003 In `scripts/lib/http.mjs`:
   - Every `fetch` sends `headers: { 'User-Agent': 'nba-weekly-power-rankings (personal project)' }`, the same string as `USER_AGENT` in `scripts/scrape-playoffs.mjs`.
   - Add an `allowRedirect` option to `fetchTextWithRetry(url, { retries = 3, baseDelayMs = 1000, allowRedirect = true } = {})`. When it is `false`, call `fetch(url, { redirect: 'manual', headers })`. A response with status 300-399 resolves to `null` immediately and is never retried. `fetchJsonWithRetry` passes `opts` through unchanged.
-- [ ] T004 [P] In `scripts/lib/htmlToText.mjs`, decode numeric entities in the range 128-159 (`&#128;`-`&#159;`, decimal or hex) as Windows-1252, e.g. `&#133;` → `…`, `&#145;` → `‘`, `&#146;` → `’`, `&#147;` → `“`, `&#148;` → `”`, `&#150;` → `–`, `&#151;` → `—`. Use a plain object keyed by code point, covering the full Windows-1252 0x80-0x9F table. Leave all other behaviour unchanged.
-- [ ] T005 [P] Create `scripts/lib/htmlToText.test.mjs` (Vitest) covering:
+- [X] T004 [P] In `scripts/lib/htmlToText.mjs`, decode numeric entities in the range 128-159 (`&#128;`-`&#159;`, decimal or hex) as Windows-1252, e.g. `&#133;` → `…`, `&#145;` → `‘`, `&#146;` → `’`, `&#147;` → `“`, `&#148;` → `”`, `&#150;` → `–`, `&#151;` → `—`. Use a plain object keyed by code point, covering the full Windows-1252 0x80-0x9F table. Leave all other behaviour unchanged.
+- [X] T005 [P] Create `scripts/lib/htmlToText.test.mjs` (Vitest) covering:
   - `<p>`/`<br>`/`<li>` line breaks and `- ` bullets
   - named entities (`&amp;`, `&nbsp;`)
   - decimal and hex entities
@@ -56,13 +56,13 @@
 
 **Independent Test**: `npm run build:rankings && git status --short data/processed` prints nothing, and `ls data/raw` shows only source folders.
 
-- [ ] T006 [US4] Run `mkdir -p data/raw/nba data/raw/basketball-reference`, then `git mv data/raw/index.json data/raw/nba/index.json`, `git mv data/raw/articles data/raw/nba/articles` and `git mv data/raw/playoffs.json data/raw/basketball-reference/playoffs.json`. Don't change any file contents.
-- [ ] T007 [P] [US4] In `scripts/build-rankings.mjs`, replace `const rawDir = join(root, 'data', 'raw')` with `const nbaDir = join(root, 'data', 'raw', 'nba')` and `const playoffsFile = join(root, 'data', 'raw', 'basketball-reference', 'playoffs.json')`. Read `PLAYOFFS` from `playoffsFile` and call `loadSeasonEntries(nbaDir)`. Rename any other `rawDir` uses to match.
-- [ ] T008 [P] [US4] Make the same change in `scripts/build-summaries.mjs`: `nbaDir`, `playoffsFile`, `loadSeasonEntries(nbaDir)`, and `playoffs` read from `playoffsFile`. Change paths only. **Do not run this script.**
-- [ ] T009 [P] [US4] In `scripts/scrape-playoffs.mjs`, change `outFile` to `join(root, 'data', 'raw', 'basketball-reference', 'playoffs.json')`, add `mkdirSync(dirname(outFile), { recursive: true })` before the write if it isn't there, and change the header comment to say `data/raw/basketball-reference/playoffs.json`.
-- [ ] T010 [P] [US4] In `scripts/nba-power-rankings-scraper/cli.mjs`, change the default out folder to `path.join(root, 'data', 'raw', 'nba')` and the help line to `(default: data/raw/nba)`. In `scripts/nba-power-rankings-scraper/README.md`, change every `data/raw` to `data/raw/nba` (intro sentence, `--out` example, option list, output tree).
-- [ ] T011 [P] [US4] Change the comment on line 1 of `scripts/lib/articles.mjs` to say `/data/raw/nba`, and update the `data/raw/` and `data/raw/playoffs.json` references in the root `README.md` to `data/raw/nba/` and `data/raw/basketball-reference/playoffs.json`.
-- [ ] T012 [US4] Check the move:
+- [X] T006 [US4] Run `mkdir -p data/raw/nba data/raw/basketball-reference`, then `git mv data/raw/index.json data/raw/nba/index.json`, `git mv data/raw/articles data/raw/nba/articles` and `git mv data/raw/playoffs.json data/raw/basketball-reference/playoffs.json`. Don't change any file contents.
+- [X] T007 [P] [US4] In `scripts/build-rankings.mjs`, replace `const rawDir = join(root, 'data', 'raw')` with `const nbaDir = join(root, 'data', 'raw', 'nba')` and `const playoffsFile = join(root, 'data', 'raw', 'basketball-reference', 'playoffs.json')`. Read `PLAYOFFS` from `playoffsFile` and call `loadSeasonEntries(nbaDir)`. Rename any other `rawDir` uses to match.
+- [X] T008 [P] [US4] Make the same change in `scripts/build-summaries.mjs`: `nbaDir`, `playoffsFile`, `loadSeasonEntries(nbaDir)`, and `playoffs` read from `playoffsFile`. Change paths only. **Do not run this script.**
+- [X] T009 [P] [US4] In `scripts/scrape-playoffs.mjs`, change `outFile` to `join(root, 'data', 'raw', 'basketball-reference', 'playoffs.json')`, add `mkdirSync(dirname(outFile), { recursive: true })` before the write if it isn't there, and change the header comment to say `data/raw/basketball-reference/playoffs.json`.
+- [X] T010 [P] [US4] In `scripts/nba-power-rankings-scraper/cli.mjs`, change the default out folder to `path.join(root, 'data', 'raw', 'nba')` and the help line to `(default: data/raw/nba)`. In `scripts/nba-power-rankings-scraper/README.md`, change every `data/raw` to `data/raw/nba` (intro sentence, `--out` example, option list, output tree).
+- [X] T011 [P] [US4] Change the comment on line 1 of `scripts/lib/articles.mjs` to say `/data/raw/nba`, and update the `data/raw/` and `data/raw/playoffs.json` references in the root `README.md` to `data/raw/nba/` and `data/raw/basketball-reference/playoffs.json`.
+- [X] T012 [US4] Check the move:
   - `grep -rn "data', 'raw'\|data/raw" scripts README.md` lists only new-style paths
   - `ls data/raw` shows `basketball-reference  nba`
   - `npm run build:rankings && git status --short data/processed` prints nothing
@@ -82,7 +82,7 @@
 
 ### Tests for User Story 1
 
-- [ ] T013 [P] [US1] Create `scripts/espn-power-rankings-scraper/teams.test.mjs`:
+- [X] T013 [P] [US1] Create `scripts/espn-power-rankings-scraper/teams.test.mjs`:
   - `resolveTeamId({ espnAbbr: 'lal', teamName: 'Los Angeles' })` → `1610612747`
   - `{ espnAbbr: 'lac', teamName: 'LA' }` → `1610612746`
   - `{ espnAbbr: null, teamName: 'NO/Oklahoma City' }` → `1610612740`
@@ -91,7 +91,7 @@
   - `{ espnAbbr: null, teamName: 'Charlotte' }` → `1610612766`
   - `{ espnAbbr: 'utah', teamName: 'Utah' }` → `1610612762`
   - `{ espnAbbr: null, teamName: 'Nowhere' }` → `null`
-- [ ] T014 [P] [US1] Create `scripts/espn-power-rankings-scraper/editionPage.test.mjs` with a synthetic fixture string that follows the markup in [research §4](research.md#4-page-structure-stable-from-2003-04-to-2015-16):
+- [X] T014 [P] [US1] Create `scripts/espn-power-rankings-scraper/editionPage.test.mjs` with a synthetic fixture string that follows the markup in [research §4](research.md#4-page-structure-stable-from-2003-04-to-2015-16):
   - `<h1 class="h2">Headline</h1>`
   - `<div class="date"><span>Updated:</span> January 7, 2008, 11:52 AM ET</div>`
   - `<cite class="source"> By <a href="x"> Marc Stein</a> | ESPN.com</cite>`
@@ -113,11 +113,11 @@
   - `espnWeek` 0 → `week: null, editionType: 'preseason', slug: '2007-08-preseason'`
   - `espnWeek` -1 → `editionType: 'training-camp', slug: '2007-08-training-camp'`
   - an unmatched team name produces `teamId: null` and is listed in the returned `warnings` array
-- [ ] T015 [P] [US1] Create `scripts/espn-power-rankings-scraper/seasonPage.test.mjs` with a synthetic default page whose heading is `2007-08 Power Rankings: Week 24`. Its week `<select class="tablesm">` has options `value="#"`, then `//www.espn.com/nba/powerrankings/_/year/2008/week/0`, `/week/1` … `/week/23`, plus a repeated `/week/0`. Add a second `tablesm` select for teams (`/nba/teams/powerranking?team=atl`) that must be ignored. Assert that `parseSeasonPage(html, 2008)` returns `{ finalWeek: 24, otherWeeks: [0, 1, …, 23] }` with no duplicates and ascending order. Add a 2013-style case with options `-1, -1, 0, 1…23, 17` and heading `Week 17` → `otherWeeks` is `[-1, 0, 1…16, 18…23]`. Also check that `parseSeasonPage` maps "Training Camp" and "Preseason" headings to `-1` and `0`.
+- [X] T015 [P] [US1] Create `scripts/espn-power-rankings-scraper/seasonPage.test.mjs` with a synthetic default page whose heading is `2007-08 Power Rankings: Week 24`. Its week `<select class="tablesm">` has options `value="#"`, then `//www.espn.com/nba/powerrankings/_/year/2008/week/0`, `/week/1` … `/week/23`, plus a repeated `/week/0`. Add a second `tablesm` select for teams (`/nba/teams/powerranking?team=atl`) that must be ignored. Assert that `parseSeasonPage(html, 2008)` returns `{ finalWeek: 24, otherWeeks: [0, 1, …, 23] }` with no duplicates and ascending order. Add a 2013-style case with options `-1, -1, 0, 1…23, 17` and heading `Week 17` → `otherWeeks` is `[-1, 0, 1…16, 18…23]`. Also check that `parseSeasonPage` maps "Training Camp" and "Preseason" headings to `-1` and `0`.
 
 ### Implementation for User Story 1
 
-- [ ] T016 [P] [US1] Create `scripts/espn-power-rankings-scraper/teams.mjs` exporting `resolveTeamId({ espnAbbr, teamName })`, built on two plain objects:
+- [X] T016 [P] [US1] Create `scripts/espn-power-rankings-scraper/teams.mjs` exporting `resolveTeamId({ espnAbbr, teamName })`, built on two plain objects:
   - `TEAM_IDS_BY_ABBR`:
     - atl 1610612737, bos 1610612738, bkn 1610612751, cha 1610612766
     - chi 1610612741, cle 1610612739, dal 1610612742, den 1610612743
@@ -135,7 +135,7 @@
     - `'Charlotte'`: 1610612766
 
   Look up the abbreviation first, then the name, then return `null` (data-model "Team identity rules"). Makes T013 pass.
-- [ ] T017 [US1] Create `scripts/espn-power-rankings-scraper/editionPage.mjs`:
+- [X] T017 [US1] Create `scripts/espn-power-rankings-scraper/editionPage.mjs`:
   - Export `parseEdition(html, { season, espnWeek, url })`, returning `{ edition, warnings }`, where `edition` has exactly the EspnEdition fields from [data-model.md](data-model.md) (`slug, url, title, heading, author, updatedText, season, espnWeek, week, editionType, hasStructuredRankings, rankings`).
   - Scope row parsing to the `<table class="tablehead"` … `</table>` block.
   - Read the heading from `tr.stathead`. Parse `rank` from `td.pr-rank`.
@@ -150,14 +150,14 @@
   - Fill `slug`, `week` and `editionType` from `espnWeek`: `-1` → `training-camp`, `0` → `preseason`, `>=1` → `weekly` with `week = espnWeek`. Push `unmatched team "<name>" in <slug>` to `warnings` for each `teamId: null`.
 
   Makes T014 pass.
-- [ ] T018 [US1] Create `scripts/espn-power-rankings-scraper/seasonPage.mjs` exporting:
+- [X] T018 [US1] Create `scripts/espn-power-rankings-scraper/seasonPage.mjs` exporting:
   - `seasonLabel(endYear)` (2008 → `'2007-08'`)
   - `seasonUrl(endYear)` → `https://www.espn.com/nba/powerrankings/_/year/<endYear>`
   - `editionUrl(endYear, espnWeek)` → `https://www.espn.com/nba/powerrankings/_/year/<endYear>/week/<espnWeek>`
   - `parseSeasonPage(html, endYear)`, returning `{ finalWeek, otherWeeks }`. `finalWeek` comes from the `tr.stathead` heading: `Week N` → N, `Preseason` → 0, `Training Camp` → -1. `otherWeeks` is every `/year/<endYear>/week/<n>` option value, de-duplicated with a plain object, `finalWeek` removed, sorted ascending.
 
   Makes T015 pass.
-- [ ] T019 [US1] Create `scripts/espn-power-rankings-scraper/scrape.mjs` exporting `scrape({ fromEndYear, toEndYear, outDir, delayMs })`. For each season:
+- [X] T019 [US1] Create `scripts/espn-power-rankings-scraper/scrape.mjs` exporting `scrape({ fromEndYear, toEndYear, outDir, delayMs })`. For each season:
   - Log `Fetching <season> season page...`.
   - Fetch `seasonUrl` with `fetchTextWithRetry(url, { allowRedirect: false })` from `../lib/http.mjs`. If the result is `null`, count the season as missing and continue.
   - `parseSeasonPage`, then log `  <n> editions listed.`
@@ -171,12 +171,12 @@
   - Log `[i/n] <slug>` progress for each edition and a final `Done. Fetched X, skipped (already saved) Y, missing Z, failed W. Index written to <path>.`
 
   Follow the structure and logging style of `scripts/nba-power-rankings-scraper/scrape.mjs`. Caching comes in US2, so `skipped` stays 0 for now.
-- [ ] T020 [US1] Create `scripts/espn-power-rankings-scraper/cli.mjs`:
+- [X] T020 [US1] Create `scripts/espn-power-rankings-scraper/cli.mjs`:
   - Start with `#!/usr/bin/env node` and `chmod +x` the file.
   - Parse `--out <dir>` (default `path.join(root, 'data', 'raw', 'espn')`, with `root` two folders up from the file, as in the NBA.com `cli.mjs`), `--delay-ms <n>` (default `1000`) and `--help`. Unknown arguments print an error and help, then exit 1.
   - Call `scrape({ fromEndYear: 2004, toEndYear: 2016, outDir, delayMs })`. `main().catch` logs and exits 1.
   - Follow `scripts/nba-power-rankings-scraper/cli.mjs`, with help text in its style: `Usage: node scripts/espn-power-rankings-scraper/cli.mjs [options]`.
-- [ ] T021 [P] [US1] Create `scripts/espn-power-rankings-scraper/README.md`, modelled on `scripts/nba-power-rankings-scraper/README.md`. Cover:
+- [X] T021 [P] [US1] Create `scripts/espn-power-rankings-scraper/README.md`, modelled on `scripts/nba-power-rankings-scraper/README.md`. Cover:
   - how it works: season page = final edition, dropdown = other weeks, redirect = missing
   - coverage: 2003-04 to 2015-16, Marc Stein, 29 teams in 2003-04, the 2012-13 training camp edition, the 2011-12 lockout season ending at week 17
   - usage (`npm run scrape:espnPowerRankings` and the direct `node` command)
@@ -196,12 +196,12 @@
 
 **Independent Test**: Run on one season, delete one edition file, then run again. Exactly one edition request is made besides the season page, and the summary shows `Fetched 1`.
 
-- [ ] T022 [US2] In `scripts/espn-power-rankings-scraper/scrape.mjs`:
+- [X] T022 [US2] In `scripts/espn-power-rankings-scraper/scrape.mjs`:
   - Add a `force` option.
   - Before fetching a non-final edition, check whether `path.join(outDir, 'articles', season, slug + '.json')` exists, where `slug` comes from a small exported `editionSlug(season, espnWeek)` helper in `editionPage.mjs`. If it does and `force` is false, read it from disk, add it to the index, count it as skipped, and don't sleep.
   - The season page is always fetched, because it lists the weeks. Don't rewrite its final edition when that file already exists and `force` is false.
   - Refactor `parseEdition` to use `editionSlug`.
-- [ ] T023 [US2] In `scripts/espn-power-rankings-scraper/cli.mjs`, add `--force` (help line: `--force           Re-fetch editions even if already saved`) and pass it to `scrape`. Add `--force` and the re-run behaviour to the README.
+- [X] T023 [US2] In `scripts/espn-power-rankings-scraper/cli.mjs`, add `--force` (help line: `--force           Re-fetch editions even if already saved`) and pass it to `scrape`. Add `--force` and the re-run behaviour to the README.
 
 **Checkpoint**: Re-running after a complete run fetches only the 13 season pages.
 
@@ -213,13 +213,13 @@
 
 **Independent Test**: `--from 2007-08 --to 2007-08` fetches only that season, and `--from 2001-02` exits 1 with the supported range and makes no requests.
 
-- [ ] T024 [P] [US3] Create `scripts/espn-power-rankings-scraper/seasonRange.test.mjs` for an exported `parseSeasonRange(from, to)` in a new `scripts/espn-power-rankings-scraper/seasonRange.mjs`:
+- [X] T024 [P] [US3] Create `scripts/espn-power-rankings-scraper/seasonRange.test.mjs` for an exported `parseSeasonRange(from, to)` in a new `scripts/espn-power-rankings-scraper/seasonRange.mjs`:
   - defaults → `{ fromEndYear: 2004, toEndYear: 2016 }`
   - `'2007-08', '2007-08'` → `{ fromEndYear: 2008, toEndYear: 2008 }`
   - throws for `'2001-02'`, `'2016-17'`, `'2007-09'` (the second year isn't the first + 1), `'2007'`, and `from` later than `to`
   - error messages include `2003-04 to 2015-16`
-- [ ] T025 [US3] Create `scripts/espn-power-rankings-scraper/seasonRange.mjs`, exporting `FIRST_SEASON = '2003-04'`, `LAST_SEASON = '2015-16'` and `parseSeasonRange(from = FIRST_SEASON, to = LAST_SEASON)`. It validates `/^\d{4}-\d{2}$/` and that the second part equals `(startYear + 1) % 100`, converts each to an end year, checks the range and order, and throws `Error` with messages naming the supported range. Makes T024 pass.
-- [ ] T026 [US3] In `scripts/espn-power-rankings-scraper/cli.mjs`:
+- [X] T025 [US3] Create `scripts/espn-power-rankings-scraper/seasonRange.mjs`, exporting `FIRST_SEASON = '2003-04'`, `LAST_SEASON = '2015-16'` and `parseSeasonRange(from = FIRST_SEASON, to = LAST_SEASON)`. It validates `/^\d{4}-\d{2}$/` and that the second part equals `(startYear + 1) % 100`, converts each to an end year, checks the range and order, and throws `Error` with messages naming the supported range. Makes T024 pass.
+- [X] T026 [US3] In `scripts/espn-power-rankings-scraper/cli.mjs`:
   - Add `--from <season>` (default `2003-04`) and `--to <season>` (default `2015-16`). Call `parseSeasonRange` before `scrape`. On an error, print the message and exit 1 without any request.
   - Help lines: `--from <season>   First season to scrape (default: 2003-04)` and `--to <season>     Last season to scrape (default: 2015-16)`.
   - Add both options to the README.
@@ -230,24 +230,24 @@
 
 ## Phase 7: Polish and validation
 
-- [ ] T027 [P] Run `npm run lint` and fix any issues in `scripts/espn-power-rankings-scraper/` and `scripts/lib/`.
-- [ ] T028 [P] Run `npm test` and confirm every suite passes, old and new.
-- [ ] T029 Run `npm run build` and confirm it succeeds.
-- [ ] T030 Smoke test (makes about 25 ESPN requests): `node scripts/espn-power-rankings-scraper/cli.mjs --from 2007-08 --to 2007-08`. Expect about 25 files in `data/raw/espn/articles/2007-08/`, 30 teams each, no warnings and `failed 0`. Check `2007-08-week-10.json` against [quickstart §3](quickstart.md): Boston rank 1, record `29-3`, previousRank 2, then Detroit rank 2. Fix the parser if anything is off before going on.
-- [ ] T031 Validation checks (no requests for the first; one season page for the others):
+- [X] T027 [P] Run `npm run lint` and fix any issues in `scripts/espn-power-rankings-scraper/` and `scripts/lib/`.
+- [X] T028 [P] Run `npm test` and confirm every suite passes, old and new.
+- [X] T029 Run `npm run build` and confirm it succeeds.
+- [X] T030 Smoke test (makes about 25 ESPN requests): `node scripts/espn-power-rankings-scraper/cli.mjs --from 2007-08 --to 2007-08`. Expect about 25 files in `data/raw/espn/articles/2007-08/`, 30 teams each, no warnings and `failed 0`. Check `2007-08-week-10.json` against [quickstart §3](quickstart.md): Boston rank 1, record `29-3`, previousRank 2, then Detroit rank 2. Fix the parser if anything is off before going on.
+- [X] T031 Validation checks (no requests for the first; one season page for the others):
   - `node scripts/espn-power-rankings-scraper/cli.mjs --from 2001-02` exits 1.
   - Re-running the T030 command reports `Fetched 0` apart from the season page.
   - `--from 2007-08 --to 2007-08 --force` fetches all of them again.
-- [ ] T032 Run `node scripts/nba-power-rankings-scraper/cli.mjs --help` and confirm the `--out` default reads `data/raw/nba`. Confirm `ls data/raw` shows `basketball-reference  espn  nba`.
-- [ ] T033 Update any remaining docs: the root `README.md` data section mentions the ESPN scraper and `npm run scrape:espnPowerRankings` in one sentence next to the NBA.com scraper.
-- [ ] T034 **Ask the user before running.** This makes about 330 ESPN requests at 1 s spacing. Run `node scripts/espn-power-rankings-scraper/cli.mjs` and confirm:
+- [X] T032 Run `node scripts/nba-power-rankings-scraper/cli.mjs --help` and confirm the `--out` default reads `data/raw/nba`. Confirm `ls data/raw` shows `basketball-reference  espn  nba`.
+- [X] T033 Update any remaining docs: the root `README.md` data section mentions the ESPN scraper and `npm run scrape:espnPowerRankings` in one sentence next to the NBA.com scraper.
+- [X] T034 **Ask the user before running.** This makes about 330 ESPN requests at 1 s spacing. Run `node scripts/espn-power-rankings-scraper/cli.mjs` and confirm:
   - about 320 or more editions, `failed 0` and no unmatched-team warnings (SC-001, SC-002)
   - `2003-04-week-1.json` has 29 teams and `author: null`
   - `2012-13-training-camp.json` exists with all `previousRank: null`
   - 2011-12's last weekly edition is week 17
 
   Then re-run and confirm only the 13 season pages are requested (SC-003). Report counts and any warnings to the user.
-- [ ] T035 Commit the ESPN scraper code and the `data/raw/espn/` output as a second commit after the US4 move commit, with the message `Add ESPN power rankings scraper (2003-04 to 2015-16)`.
+- [X] T035 Commit the ESPN scraper code and the `data/raw/espn/` output as a second commit after the US4 move commit, with the message `Add ESPN power rankings scraper (2003-04 to 2015-16)`.
 
 ---
 

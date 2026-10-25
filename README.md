@@ -27,3 +27,5 @@ npm run build:rankings
 `build:summaries` writes one AI-generated summary per team per season to `data/processed/summaries/`, using the Anthropic API. It needs `ANTHROPIC_API_KEY` in the environment; `SUMMARY_MODEL` overrides the model (default `claude-sonnet-5-5`). Seasons that already have a champion in `data/raw/basketball-reference/playoffs.json` are generated once and never rewritten; the active season is regenerated only for teams whose weekly write-ups changed. Add `--dry-run` to see what would be generated without calling the API, or `--season 2024-25` to limit the run.
 
 `build:rankings` then rebuilds the app data under `data/processed/seasons/`, including the summaries. Neither step runs during deploy, so commit the results.
+
+Raw data lives in one folder per source. `npm run scrape:powerRankings` fills `data/raw/nba/` from NBA.com, `npm run scrape:playoffs` fills `data/raw/basketball-reference/`, and `npm run scrape:espnPowerRankings` fills `data/raw/espn/` with ESPN's 2003-04 to 2015-16 rankings, which the app doesn't use yet.

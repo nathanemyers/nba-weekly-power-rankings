@@ -38,8 +38,9 @@ The NBA.com and playoffs file *contents* are unchanged by the move.
 ### Validation
 
 - `season` matches `/^\d{4}-\d{2}$/` and lies between `2003-04` and `2015-16`.
-- `rankings[].rank` values are unique, run from 1 to `rankings.length`, and are in order.
 - The season in `heading` must equal `season`. If not, treat the edition as failed. This catches a redirect or a wrong page.
+- Ranks that don't run 1 to `rankings.length` (ties or gaps) are kept in ESPN's order and produce a warning. ESPN's 2005-06 week 18 has two No. 13s. *(Changed during implementation; this was originally a hard failure.)*
+- A table with no team rows is saved with `rankings: []` and `hasStructuredRankings: false`, with a warning. The 2010-11 training camp page is like this. *(Changed during implementation.)*
 
 ## EspnTeamEntry
 

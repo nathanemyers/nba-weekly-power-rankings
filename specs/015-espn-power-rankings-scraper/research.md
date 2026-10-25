@@ -6,6 +6,7 @@ All findings are from single ESPN pages fetched on 2026-10-25 with the project's
 
 - **Decision**: Fetch each season's default page, `https://www.espn.com/nba/powerrankings/_/year/<endYear>`. That page is the season's **final** edition, and its heading gives the week ("2007-08 Power Rankings: Week 24"). Its week dropdown lists every *other* edition as `//www.espn.com/nba/powerrankings/_/year/<endYear>/week/<n>`. Remove duplicate dropdown entries and the final week, then fetch the rest.
 - **Rationale**: The dropdown is ESPN's own list of what exists, so there's no guessing at week counts (the 2011-12 lockout season ends at week 17, normal seasons at 24). The dropdown leaves out the final week (2007-08 lists 0 to 23, and the default page is week 24), which is why the default page is read as the final edition.
+- **Implementation finding**: The dropdown never lists training camp editions (`-1`), but ten seasons have one. The scraper always tries week `-1`, and a redirect there is skipped quietly rather than counted as missing. It also turned out that ESPN redirects some weeks its dropdown lists (2003-04 preseason, 2004-05 preseason to week 18). Those are reported as missing.
 - **Alternatives considered**: Trying weeks -1 to 30 for every season costs about 400 requests, many of them pointless redirects. The Wayback Machine is slower and has gaps.
 
 ## 2. Weeks that don't exist
