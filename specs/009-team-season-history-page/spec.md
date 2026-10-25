@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-12
 
-**Status**: Draft
+**Status**: Implemented (#18, built without plan.md or tasks.md)
 
 **Input**: User description: "I want to create a page for each team that shows their performance for each season we have data on. For each season show a small overview infographic, the same one used in spec008. Also display the AI generated summary. When the user clicks on one of these seasons, update the chart to show that season with the given team highlighted."
 
