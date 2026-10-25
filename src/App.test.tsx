@@ -5,7 +5,7 @@ import App from './App'
 import { mockReducedMotion } from 'test/fixtures'
 import { renderWithStore } from 'test/renderWithStore'
 
-// Fixture seasons: 26 weeks, 21 weeks, one short enough to fit the window, and two with rank swings
+// Fixture seasons: 26 weeks, 21 weeks, one short enough to fit the window (from ESPN), and two with rank swings
 vi.mock('data/seasons', async () => {
   const { buildRankings, buildSwingRankings, PLAYOFFS } =
     await import('./test/fixtures')
@@ -15,6 +15,7 @@ vi.mock('data/seasons', async () => {
     summaries?: Record<string, string>
   ) => ({
     season: name,
+    source: 'nba',
     maxWeek,
     rankings: buildRankings(maxWeek),
     playoffs: PLAYOFFS,
@@ -25,13 +26,14 @@ vi.mock('data/seasons', async () => {
     seasonData: {
       long: season('long', 26, { bos: 'Boston led from the first week.' }),
       mid: season('mid', 21),
-      short: season('short', 8),
+      short: { ...season('short', 8), source: 'espn' },
       rising: {
         ...season('rising', 25),
         rankings: buildSwingRankings(25),
       },
       active: {
         season: 'active',
+        source: 'nba',
         maxWeek: 25,
         rankings: buildSwingRankings(25),
       },
@@ -406,5 +408,35 @@ describe('Season selector', () => {
     const trigger = screen.getByRole('combobox')
     expect(trigger).toHaveTextContent('long')
     expect(within(trigger).queryByRole('img')).not.toBeInTheDocument()
+  })
+})
+
+describe('Data source badges', () => {
+  const sourceBadge = () => screen.getByRole('link', { name: /rankings source/i })
+
+  it('names the source of the selected season beside the chart', async () => {
+    const user = userEvent.setup()
+    renderWithStore(<App />)
+    expect(sourceBadge()).toHaveTextContent('Source: NBA.com')
+
+    await chooseSeason(user, 'short')
+    expect(sourceBadge()).toHaveTextContent('Source: ESPN')
+  })
+
+  it("names each season's source in the team history", async () => {
+    const user = userEvent.setup()
+    renderWithStore(<App />)
+    await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
+    await user.click(screen.getByRole('button', { name: 'Team History' }))
+
+    const badges = screen.getAllByRole('link', { name: /rankings source/i })
+    expect(badges.map((badge) => badge.textContent)).toEqual([
+      'Source: NBA.com',
+      'Source: NBA.com',
+      'Source: ESPN',
+      'Source: NBA.com',
+      'Source: NBA.com',
+    ])
+    expect(screen.getAllByText('AI-generated summary')).toHaveLength(1)
   })
 })

@@ -29,6 +29,7 @@ export function loadSeasons(
     state.order.push(season)
     state.seasons[season] = {
       name: season,
+      source: data.source,
       teams,
       maxWeek: data.maxWeek,
       completed: champion !== undefined,

@@ -36,7 +36,8 @@ function currentRecord(summaryText) {
 }
 
 // ESPN covers 2003-04 to 2015-16 and NBA.com 2017-18 onward; NBA.com wins if they ever overlap
-const bySeason = { ...loadEspnSeasonEntries(espnDir), ...loadSeasonEntries(nbaDir) }
+const nbaSeasons = loadSeasonEntries(nbaDir)
+const bySeason = { ...loadEspnSeasonEntries(espnDir), ...nbaSeasons }
 const summariesDir = join(processedDir, 'summaries')
 
 rmSync(outDir, { recursive: true, force: true })
@@ -79,6 +80,7 @@ for (const season of Object.keys(bySeason).sort()) {
 
   const output = {
     season,
+    source: nbaSeasons[season] ? 'nba' : 'espn',
     maxWeek,
     rankings,
     ...(Object.keys(playoffs).length && { playoffs }),

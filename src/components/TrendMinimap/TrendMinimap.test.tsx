@@ -12,6 +12,7 @@ vi.mock('data/seasons', async () => {
     seasonData: {
       full: {
         season: 'full',
+        source: 'nba',
         maxWeek: 25,
         rankings: {
           bos: weeklyRankings(25, 5),
@@ -21,6 +22,7 @@ vi.mock('data/seasons', async () => {
       },
       early: {
         season: 'early',
+        source: 'nba',
         maxWeek: 24,
         rankings: {
           bos: weeklyRankings(24, 5),

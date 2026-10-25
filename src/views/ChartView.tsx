@@ -1,6 +1,7 @@
 import RankingsChart from 'components/Chart/Chart'
 import GitHubBadge from 'components/GitHubBadge'
 import SeasonSelect from 'components/SeasonSelect'
+import DataSourceBadge from 'components/DataSourceBadge'
 import RankSwings from '@/components/RankSwings'
 import TeamSeasonSummary from '@/components/TeamSeasonSummary'
 import type { Team } from 'types'
@@ -51,8 +52,9 @@ export default function ChartView() {
       {data ? (
         <>
           <div className="grid md:grid-cols-3 gap-4 mt-5">
-            <div className="grid-col-1 md:justify-self-start justify-self-center">
+            <div className="grid-col-1 md:justify-self-start justify-self-center flex flex-row items-center gap-3">
               <SeasonSelect />
+              <DataSourceBadge source={data.source} season={data.name} />
             </div>
             <div className="grid-col-2 justify-self-center">
               {singlePinnedTeam && <TeamHistoryButton />}

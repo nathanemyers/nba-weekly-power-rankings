@@ -8,6 +8,12 @@ export type TeamRankings = TeamDisplay & {
   aiSummary?: string
 }
 
+// Where a season's weekly rankings were scraped from
+export enum DataSource {
+  NBA = 'nba',
+  ESPN = 'espn',
+}
+
 export enum PlayoffStage {
   FirstRound = 'first-round',
   SecondRound = 'semis',
