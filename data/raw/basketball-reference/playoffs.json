@@ -1,4 +1,2062 @@
 {
+  "2003-04": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2004.html",
+    "champion": "det",
+    "runnerUp": "lal",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "mil",
+              "det"
+            ],
+            "winner": "det"
+          },
+          {
+            "teams": [
+              "bos",
+              "ind"
+            ],
+            "winner": "ind"
+          },
+          {
+            "teams": [
+              "nop",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "nyk",
+              "bkn"
+            ],
+            "winner": "bkn"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "hou",
+              "lal"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "den",
+              "min"
+            ],
+            "winner": "min"
+          },
+          {
+            "teams": [
+              "dal",
+              "sac"
+            ],
+            "winner": "sac"
+          },
+          {
+            "teams": [
+              "mem",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "bkn",
+              "det"
+            ],
+            "winner": "det"
+          },
+          {
+            "teams": [
+              "mia",
+              "ind"
+            ],
+            "winner": "ind"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "lal",
+              "sas"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "sac",
+              "min"
+            ],
+            "winner": "min"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "det",
+              "ind"
+            ],
+            "winner": "det"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "lal",
+              "min"
+            ],
+            "winner": "lal"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "det",
+              "lal"
+            ],
+            "winner": "det"
+          }
+        ]
+      }
+    ]
+  },
+  "2004-05": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2005.html",
+    "champion": "sas",
+    "runnerUp": "det",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "phi",
+              "det"
+            ],
+            "winner": "det"
+          },
+          {
+            "teams": [
+              "ind",
+              "bos"
+            ],
+            "winner": "ind"
+          },
+          {
+            "teams": [
+              "bkn",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "was",
+              "chi"
+            ],
+            "winner": "was"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "hou",
+              "dal"
+            ],
+            "winner": "dal"
+          },
+          {
+            "teams": [
+              "mem",
+              "phx"
+            ],
+            "winner": "phx"
+          },
+          {
+            "teams": [
+              "den",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "sac",
+              "okc"
+            ],
+            "winner": "okc"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "ind",
+              "det"
+            ],
+            "winner": "det"
+          },
+          {
+            "teams": [
+              "was",
+              "mia"
+            ],
+            "winner": "mia"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "dal",
+              "phx"
+            ],
+            "winner": "phx"
+          },
+          {
+            "teams": [
+              "okc",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "det",
+              "mia"
+            ],
+            "winner": "det"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "sas",
+              "phx"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "det",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      }
+    ]
+  },
+  "2005-06": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2006.html",
+    "champion": "mia",
+    "runnerUp": "dal",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "was",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "mil",
+              "det"
+            ],
+            "winner": "det"
+          },
+          {
+            "teams": [
+              "chi",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "ind",
+              "bkn"
+            ],
+            "winner": "bkn"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "mem",
+              "dal"
+            ],
+            "winner": "dal"
+          },
+          {
+            "teams": [
+              "den",
+              "lac"
+            ],
+            "winner": "lac"
+          },
+          {
+            "teams": [
+              "lal",
+              "phx"
+            ],
+            "winner": "phx"
+          },
+          {
+            "teams": [
+              "sac",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "cle",
+              "det"
+            ],
+            "winner": "det"
+          },
+          {
+            "teams": [
+              "bkn",
+              "mia"
+            ],
+            "winner": "mia"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "dal",
+              "sas"
+            ],
+            "winner": "dal"
+          },
+          {
+            "teams": [
+              "lac",
+              "phx"
+            ],
+            "winner": "phx"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "mia",
+              "det"
+            ],
+            "winner": "mia"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "phx",
+              "dal"
+            ],
+            "winner": "dal"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "mia",
+              "dal"
+            ],
+            "winner": "mia"
+          }
+        ]
+      }
+    ]
+  },
+  "2006-07": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2007.html",
+    "champion": "sas",
+    "runnerUp": "cle",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "mia",
+              "chi"
+            ],
+            "winner": "chi"
+          },
+          {
+            "teams": [
+              "was",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "orl",
+              "det"
+            ],
+            "winner": "det"
+          },
+          {
+            "teams": [
+              "bkn",
+              "tor"
+            ],
+            "winner": "bkn"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "gsw",
+              "dal"
+            ],
+            "winner": "gsw"
+          },
+          {
+            "teams": [
+              "lal",
+              "phx"
+            ],
+            "winner": "phx"
+          },
+          {
+            "teams": [
+              "den",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "uta",
+              "hou"
+            ],
+            "winner": "uta"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "bkn",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "chi",
+              "det"
+            ],
+            "winner": "det"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "sas",
+              "phx"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "gsw",
+              "uta"
+            ],
+            "winner": "uta"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "cle",
+              "det"
+            ],
+            "winner": "cle"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "uta",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "cle",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      }
+    ]
+  },
+  "2007-08": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2008.html",
+    "champion": "bos",
+    "runnerUp": "lal",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "atl",
+              "bos"
+            ],
+            "winner": "bos"
+          },
+          {
+            "teams": [
+              "phi",
+              "det"
+            ],
+            "winner": "det"
+          },
+          {
+            "teams": [
+              "tor",
+              "orl"
+            ],
+            "winner": "orl"
+          },
+          {
+            "teams": [
+              "was",
+              "cle"
+            ],
+            "winner": "cle"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "den",
+              "lal"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "dal",
+              "nop"
+            ],
+            "winner": "nop"
+          },
+          {
+            "teams": [
+              "phx",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "uta",
+              "hou"
+            ],
+            "winner": "uta"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "cle",
+              "bos"
+            ],
+            "winner": "bos"
+          },
+          {
+            "teams": [
+              "orl",
+              "det"
+            ],
+            "winner": "det"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "uta",
+              "lal"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "sas",
+              "nop"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "det",
+              "bos"
+            ],
+            "winner": "bos"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "sas",
+              "lal"
+            ],
+            "winner": "lal"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "lal",
+              "bos"
+            ],
+            "winner": "bos"
+          }
+        ]
+      }
+    ]
+  },
+  "2008-09": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2009.html",
+    "champion": "lal",
+    "runnerUp": "orl",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "det",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "chi",
+              "bos"
+            ],
+            "winner": "bos"
+          },
+          {
+            "teams": [
+              "phi",
+              "orl"
+            ],
+            "winner": "orl"
+          },
+          {
+            "teams": [
+              "mia",
+              "atl"
+            ],
+            "winner": "atl"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "uta",
+              "lal"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "nop",
+              "den"
+            ],
+            "winner": "den"
+          },
+          {
+            "teams": [
+              "dal",
+              "sas"
+            ],
+            "winner": "dal"
+          },
+          {
+            "teams": [
+              "hou",
+              "por"
+            ],
+            "winner": "hou"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "atl",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "orl",
+              "bos"
+            ],
+            "winner": "orl"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "hou",
+              "lal"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "dal",
+              "den"
+            ],
+            "winner": "den"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "orl",
+              "cle"
+            ],
+            "winner": "orl"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "den",
+              "lal"
+            ],
+            "winner": "lal"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "orl",
+              "lal"
+            ],
+            "winner": "lal"
+          }
+        ]
+      }
+    ]
+  },
+  "2009-10": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2010.html",
+    "champion": "lal",
+    "runnerUp": "bos",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "chi",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "cha",
+              "orl"
+            ],
+            "winner": "orl"
+          },
+          {
+            "teams": [
+              "mil",
+              "atl"
+            ],
+            "winner": "atl"
+          },
+          {
+            "teams": [
+              "mia",
+              "bos"
+            ],
+            "winner": "bos"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "okc",
+              "lal"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "sas",
+              "dal"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "por",
+              "phx"
+            ],
+            "winner": "phx"
+          },
+          {
+            "teams": [
+              "uta",
+              "den"
+            ],
+            "winner": "uta"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "bos",
+              "cle"
+            ],
+            "winner": "bos"
+          },
+          {
+            "teams": [
+              "atl",
+              "orl"
+            ],
+            "winner": "orl"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "uta",
+              "lal"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "sas",
+              "phx"
+            ],
+            "winner": "phx"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "bos",
+              "orl"
+            ],
+            "winner": "bos"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "phx",
+              "lal"
+            ],
+            "winner": "lal"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "bos",
+              "lal"
+            ],
+            "winner": "lal"
+          }
+        ]
+      }
+    ]
+  },
+  "2010-11": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2011.html",
+    "champion": "dal",
+    "runnerUp": "mia",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "ind",
+              "chi"
+            ],
+            "winner": "chi"
+          },
+          {
+            "teams": [
+              "phi",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "nyk",
+              "bos"
+            ],
+            "winner": "bos"
+          },
+          {
+            "teams": [
+              "atl",
+              "orl"
+            ],
+            "winner": "atl"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "mem",
+              "sas"
+            ],
+            "winner": "mem"
+          },
+          {
+            "teams": [
+              "nop",
+              "lal"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "por",
+              "dal"
+            ],
+            "winner": "dal"
+          },
+          {
+            "teams": [
+              "den",
+              "okc"
+            ],
+            "winner": "okc"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "atl",
+              "chi"
+            ],
+            "winner": "chi"
+          },
+          {
+            "teams": [
+              "bos",
+              "mia"
+            ],
+            "winner": "mia"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "dal",
+              "lal"
+            ],
+            "winner": "dal"
+          },
+          {
+            "teams": [
+              "mem",
+              "okc"
+            ],
+            "winner": "okc"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "mia",
+              "chi"
+            ],
+            "winner": "mia"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "okc",
+              "dal"
+            ],
+            "winner": "dal"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "dal",
+              "mia"
+            ],
+            "winner": "dal"
+          }
+        ]
+      }
+    ]
+  },
+  "2011-12": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2012.html",
+    "champion": "mia",
+    "runnerUp": "okc",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "phi",
+              "chi"
+            ],
+            "winner": "phi"
+          },
+          {
+            "teams": [
+              "nyk",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "orl",
+              "ind"
+            ],
+            "winner": "ind"
+          },
+          {
+            "teams": [
+              "bos",
+              "atl"
+            ],
+            "winner": "bos"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "uta",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "dal",
+              "okc"
+            ],
+            "winner": "okc"
+          },
+          {
+            "teams": [
+              "den",
+              "lal"
+            ],
+            "winner": "lal"
+          },
+          {
+            "teams": [
+              "lac",
+              "mem"
+            ],
+            "winner": "lac"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "ind",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "phi",
+              "bos"
+            ],
+            "winner": "bos"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "lac",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "lal",
+              "okc"
+            ],
+            "winner": "okc"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "bos",
+              "mia"
+            ],
+            "winner": "mia"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "okc",
+              "sas"
+            ],
+            "winner": "okc"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "mia",
+              "okc"
+            ],
+            "winner": "mia"
+          }
+        ]
+      }
+    ]
+  },
+  "2012-13": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2013.html",
+    "champion": "mia",
+    "runnerUp": "sas",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "mil",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "bos",
+              "nyk"
+            ],
+            "winner": "nyk"
+          },
+          {
+            "teams": [
+              "atl",
+              "ind"
+            ],
+            "winner": "ind"
+          },
+          {
+            "teams": [
+              "chi",
+              "bkn"
+            ],
+            "winner": "chi"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "hou",
+              "okc"
+            ],
+            "winner": "okc"
+          },
+          {
+            "teams": [
+              "lal",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "gsw",
+              "den"
+            ],
+            "winner": "gsw"
+          },
+          {
+            "teams": [
+              "mem",
+              "lac"
+            ],
+            "winner": "mem"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "chi",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "ind",
+              "nyk"
+            ],
+            "winner": "ind"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "mem",
+              "okc"
+            ],
+            "winner": "mem"
+          },
+          {
+            "teams": [
+              "gsw",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "ind",
+              "mia"
+            ],
+            "winner": "mia"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "mem",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "sas",
+              "mia"
+            ],
+            "winner": "mia"
+          }
+        ]
+      }
+    ]
+  },
+  "2013-14": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2014.html",
+    "champion": "sas",
+    "runnerUp": "mia",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "atl",
+              "ind"
+            ],
+            "winner": "ind"
+          },
+          {
+            "teams": [
+              "cha",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "bkn",
+              "tor"
+            ],
+            "winner": "bkn"
+          },
+          {
+            "teams": [
+              "was",
+              "chi"
+            ],
+            "winner": "was"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "dal",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "mem",
+              "okc"
+            ],
+            "winner": "okc"
+          },
+          {
+            "teams": [
+              "gsw",
+              "lac"
+            ],
+            "winner": "lac"
+          },
+          {
+            "teams": [
+              "por",
+              "hou"
+            ],
+            "winner": "por"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "was",
+              "ind"
+            ],
+            "winner": "ind"
+          },
+          {
+            "teams": [
+              "bkn",
+              "mia"
+            ],
+            "winner": "mia"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "por",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "lac",
+              "okc"
+            ],
+            "winner": "okc"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "mia",
+              "ind"
+            ],
+            "winner": "mia"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "okc",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "mia",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      }
+    ]
+  },
+  "2014-15": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2015.html",
+    "champion": "gsw",
+    "runnerUp": "cle",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "bkn",
+              "atl"
+            ],
+            "winner": "atl"
+          },
+          {
+            "teams": [
+              "bos",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "mil",
+              "chi"
+            ],
+            "winner": "chi"
+          },
+          {
+            "teams": [
+              "was",
+              "tor"
+            ],
+            "winner": "was"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "nop",
+              "gsw"
+            ],
+            "winner": "gsw"
+          },
+          {
+            "teams": [
+              "dal",
+              "hou"
+            ],
+            "winner": "hou"
+          },
+          {
+            "teams": [
+              "sas",
+              "lac"
+            ],
+            "winner": "lac"
+          },
+          {
+            "teams": [
+              "por",
+              "mem"
+            ],
+            "winner": "mem"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "chi",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "was",
+              "atl"
+            ],
+            "winner": "atl"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "lac",
+              "hou"
+            ],
+            "winner": "hou"
+          },
+          {
+            "teams": [
+              "mem",
+              "gsw"
+            ],
+            "winner": "gsw"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "cle",
+              "atl"
+            ],
+            "winner": "cle"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "hou",
+              "gsw"
+            ],
+            "winner": "gsw"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "cle",
+              "gsw"
+            ],
+            "winner": "gsw"
+          }
+        ]
+      }
+    ]
+  },
+  "2015-16": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2016.html",
+    "champion": "cle",
+    "runnerUp": "gsw",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "det",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "ind",
+              "tor"
+            ],
+            "winner": "tor"
+          },
+          {
+            "teams": [
+              "cha",
+              "mia"
+            ],
+            "winner": "mia"
+          },
+          {
+            "teams": [
+              "bos",
+              "atl"
+            ],
+            "winner": "atl"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "hou",
+              "gsw"
+            ],
+            "winner": "gsw"
+          },
+          {
+            "teams": [
+              "mem",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "dal",
+              "okc"
+            ],
+            "winner": "okc"
+          },
+          {
+            "teams": [
+              "por",
+              "lac"
+            ],
+            "winner": "por"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "atl",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "mia",
+              "tor"
+            ],
+            "winner": "tor"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "por",
+              "gsw"
+            ],
+            "winner": "gsw"
+          },
+          {
+            "teams": [
+              "okc",
+              "sas"
+            ],
+            "winner": "okc"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "tor",
+              "cle"
+            ],
+            "winner": "cle"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "okc",
+              "gsw"
+            ],
+            "winner": "gsw"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "cle",
+              "gsw"
+            ],
+            "winner": "cle"
+          }
+        ]
+      }
+    ]
+  },
+  "2016-17": {
+    "source": "https://www.basketball-reference.com/playoffs/NBA_2017.html",
+    "champion": "gsw",
+    "runnerUp": "cle",
+    "rounds": [
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "chi",
+              "bos"
+            ],
+            "winner": "bos"
+          },
+          {
+            "teams": [
+              "ind",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "mil",
+              "tor"
+            ],
+            "winner": "tor"
+          },
+          {
+            "teams": [
+              "atl",
+              "was"
+            ],
+            "winner": "was"
+          }
+        ]
+      },
+      {
+        "round": "first-round",
+        "series": [
+          {
+            "teams": [
+              "por",
+              "gsw"
+            ],
+            "winner": "gsw"
+          },
+          {
+            "teams": [
+              "mem",
+              "sas"
+            ],
+            "winner": "sas"
+          },
+          {
+            "teams": [
+              "okc",
+              "hou"
+            ],
+            "winner": "hou"
+          },
+          {
+            "teams": [
+              "uta",
+              "lac"
+            ],
+            "winner": "uta"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "tor",
+              "cle"
+            ],
+            "winner": "cle"
+          },
+          {
+            "teams": [
+              "was",
+              "bos"
+            ],
+            "winner": "bos"
+          }
+        ]
+      },
+      {
+        "round": "semis",
+        "series": [
+          {
+            "teams": [
+              "uta",
+              "gsw"
+            ],
+            "winner": "gsw"
+          },
+          {
+            "teams": [
+              "hou",
+              "sas"
+            ],
+            "winner": "sas"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "cle",
+              "bos"
+            ],
+            "winner": "cle"
+          }
+        ]
+      },
+      {
+        "round": "conf-finals",
+        "series": [
+          {
+            "teams": [
+              "sas",
+              "gsw"
+            ],
+            "winner": "gsw"
+          }
+        ]
+      },
+      {
+        "round": "finals",
+        "series": [
+          {
+            "teams": [
+              "cle",
+              "gsw"
+            ],
+            "winner": "gsw"
+          }
+        ]
+      }
+    ]
+  },
   "2017-18": {
     "source": "https://www.basketball-reference.com/playoffs/NBA_2018.html",
     "champion": "gsw",

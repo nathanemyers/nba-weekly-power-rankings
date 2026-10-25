@@ -20,7 +20,7 @@ export default function TeamSeasonSummary() {
   return (
     <HoverCard openDelay={100} closeDelay={100}>
       <HoverCardTrigger asChild>
-        <Button disabled={!singlePinnedTeam} variant="outline">
+        <Button disabled={!singlePinnedTeam || !summary} variant="outline">
           AI Summary
         </Button>
       </HoverCardTrigger>
