@@ -11,7 +11,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const rawDir = join(root, 'data', 'raw')
 const outDir = join(root, 'data', 'processed', 'summaries')
 
-const MODEL = process.env.SUMMARY_MODEL || 'claude-sonnet-5-5'
+const MODEL = process.env.SUMMARY_MODEL || 'claude-haiku-5-5'
 const MAX_SUMMARY_LENGTH = 1200
 // Models that accept the server-side refusal fallback; others are sent without it
 const FALLBACK_MODELS = ['claude-opus-5-5', 'claude-opus-5', 'claude-sonnet-5-5']
