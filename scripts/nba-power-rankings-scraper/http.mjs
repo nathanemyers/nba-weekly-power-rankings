@@ -1,16 +1,10 @@
-export function sleep(ms: number): Promise<void> {
+export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
 /** Fetches text with a few retries and exponential backoff for transient failures. */
-export async function fetchTextWithRetry(
-  url: string,
-  {
-    retries = 3,
-    baseDelayMs = 1000,
-  }: { retries?: number; baseDelayMs?: number } = {}
-): Promise<string> {
-  let lastError: unknown
+export async function fetchTextWithRetry(url, { retries = 3, baseDelayMs = 1000 } = {}) {
+  let lastError
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const res = await fetch(url)
@@ -30,10 +24,7 @@ export async function fetchTextWithRetry(
   )
 }
 
-export async function fetchJsonWithRetry<T>(
-  url: string,
-  opts?: { retries?: number; baseDelayMs?: number }
-): Promise<T> {
+export async function fetchJsonWithRetry(url, opts) {
   const text = await fetchTextWithRetry(url, opts)
-  return JSON.parse(text) as T
+  return JSON.parse(text)
 }

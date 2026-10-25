@@ -27,18 +27,19 @@ structured rankings.
 ## Usage
 
 ```bash
-npm install
-npm run scrape
+npm run scrape:powerRankings
+# or directly:
+node scripts/nba-power-rankings-scraper/cli.mjs
 ```
 
-By default this fetches the last 10 years of articles into `./data`. Options:
+By default this fetches the last 10 years of articles into `data/raw`. Options:
 
 ```
-npm run scrape -- --years 10 --out ./data --delay-ms 400
+node scripts/nba-power-rankings-scraper/cli.mjs --years 10 --out data/raw --delay-ms 400
 ```
 
 - `--years <n>` — how far back to go (default 10)
-- `--out <dir>` — output directory (default `./data`)
+- `--out <dir>` — output directory (default `data/raw`)
 - `--delay-ms <n>` — delay between requests to NBA.com, to be polite (default 400)
 - `--force` — re-fetch articles that were already saved by a previous run
 
@@ -50,7 +51,7 @@ you already have.
 ## Output
 
 ```
-data/
+data/raw/
   index.json                          # one row per article: id, slug, title,
                                        # season, week, date, whether it has
                                        # structured rankings, and its file path

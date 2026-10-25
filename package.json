@@ -12,7 +12,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "scrape:playoffs": "node scripts/scrape-playoffs.mjs",
-    "scrape:powerRankings": "tsx scripts/nba-power-rankings-scraper/cli.ts"
+    "scrape:powerRankings": "node scripts/nba-power-rankings-scraper/cli.mjs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.1",

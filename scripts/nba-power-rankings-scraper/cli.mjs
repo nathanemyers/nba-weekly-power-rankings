@@ -1,9 +1,10 @@
+#!/usr/bin/env node
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { scrape } from './scrape.js'
+import { scrape } from './scrape.mjs'
 
-function parseArgs(argv: string[]) {
+function parseArgs(argv) {
   const args = { years: 10, outDir: '', delayMs: 400, force: false }
 
   for (let i = 0; i < argv.length; i++) {
@@ -35,21 +36,21 @@ function parseArgs(argv: string[]) {
 }
 
 function printHelp() {
-  console.log(`Usage: npm run scrape -- [options]
+  console.log(`Usage: node scripts/nba-power-rankings-scraper/cli.mjs [options]
 
 Options:
   --years <n>      How many years back to scrape (default: 10)
-  --out <dir>       Output directory (default: ./data)
+  --out <dir>       Output directory (default: data/raw)
   --delay-ms <n>    Delay between requests to NBA.com, in ms (default: 400)
   --force           Re-fetch articles even if already saved
   --help            Show this help`)
 }
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..')
 
 async function main() {
   const args = parseArgs(process.argv.slice(2))
-  const outDir = args.outDir || path.join(__dirname, '..', 'data')
+  const outDir = args.outDir || path.join(root, 'data', 'raw')
 
   await scrape({
     years: args.years,

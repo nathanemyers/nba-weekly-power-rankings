@@ -1,4 +1,4 @@
-const NAMED_ENTITIES: Record<string, string> = {
+const NAMED_ENTITIES = {
   amp: '&',
   lt: '<',
   gt: '>',
@@ -7,7 +7,7 @@ const NAMED_ENTITIES: Record<string, string> = {
   nbsp: ' ',
 }
 
-function decodeEntities(input: string): string {
+function decodeEntities(input) {
   return input
     .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) =>
       String.fromCodePoint(parseInt(hex, 16))
@@ -17,7 +17,7 @@ function decodeEntities(input: string): string {
 }
 
 /** Converts NBA.com's article HTML (simple <p>/<ul>/<a>/<strong> markup) to readable plain text. */
-export function htmlToText(html: string): string {
+export function htmlToText(html) {
   const withBreaks = html
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/<\/(p|li|div|h[1-6])>/gi, '\n')
