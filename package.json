@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "scrape:playoffs": "node scripts/scrape-playoffs.mjs"
+    "scrape:playoffs": "node scripts/scrape-playoffs.mjs",
+    "scrape:powerRankings": "tsx scripts/nba-power-rankings-scraper/cli.ts"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.1",
