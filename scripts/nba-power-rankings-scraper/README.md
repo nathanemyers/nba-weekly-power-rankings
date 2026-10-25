@@ -32,14 +32,14 @@ npm run scrape:powerRankings
 node scripts/nba-power-rankings-scraper/cli.mjs
 ```
 
-By default this fetches the last 10 years of articles into `data/raw`. Options:
+By default this fetches the last 10 years of articles into `data/raw/nba`. Options:
 
 ```
-node scripts/nba-power-rankings-scraper/cli.mjs --years 10 --out data/raw --delay-ms 400
+node scripts/nba-power-rankings-scraper/cli.mjs --years 10 --out data/raw/nba --delay-ms 400
 ```
 
 - `--years <n>` — how far back to go (default 10)
-- `--out <dir>` — output directory (default `data/raw`)
+- `--out <dir>` — output directory (default `data/raw/nba`)
 - `--delay-ms <n>` — delay between requests to NBA.com, to be polite (default 400)
 - `--force` — re-fetch articles that were already saved by a previous run
 
@@ -51,7 +51,7 @@ you already have.
 ## Output
 
 ```
-data/raw/
+data/raw/nba/
   index.json                          # one row per article: id, slug, title,
                                        # season, week, date, whether it has
                                        # structured rankings, and its file path

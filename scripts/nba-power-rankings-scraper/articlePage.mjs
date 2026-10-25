@@ -1,5 +1,5 @@
-import { fetchTextWithRetry } from './http.mjs'
-import { htmlToText } from './htmlToText.mjs'
+import { fetchTextWithRetry } from '../lib/http.mjs'
+import { htmlToText } from '../lib/htmlToText.mjs'
 
 const NEXT_DATA_RE =
   /<script id="__NEXT_DATA__" type="application\/json">(.*?)<\/script>/s

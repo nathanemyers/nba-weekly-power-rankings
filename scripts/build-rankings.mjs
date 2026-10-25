@@ -4,14 +4,15 @@ import { fileURLToPath } from 'node:url'
 import { loadSeasonEntries } from './lib/articles.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-const rawDir = join(root, 'data', 'raw')
+const nbaDir = join(root, 'data', 'raw', 'nba')
+const playoffsFile = join(root, 'data', 'raw', 'basketball-reference', 'playoffs.json')
 const processedDir = join(root, 'data', 'processed')
 const outDir = join(processedDir, 'seasons')
 
 const MAX_BLURB_LENGTH = 260
 
 // Postseason results from scripts/scrape-playoffs.mjs. Teams are keyed by season and slug
-const PLAYOFFS = JSON.parse(readFileSync(join(rawDir, 'playoffs.json'), 'utf8'))
+const PLAYOFFS = JSON.parse(readFileSync(playoffsFile, 'utf8'))
 
 // Summaries open with stat lines ("Record: 25-4", "OffRtg: ...") before the prose.
 // Keep only the first line of prose, cut to a sentence-ish length.
@@ -33,7 +34,7 @@ function currentRecord(summaryText) {
   return match ? match[1] : undefined
 }
 
-const bySeason = loadSeasonEntries(rawDir)
+const bySeason = loadSeasonEntries(nbaDir)
 const summariesDir = join(processedDir, 'summaries')
 
 rmSync(outDir, { recursive: true, force: true })

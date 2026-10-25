@@ -1,4 +1,4 @@
-import { fetchJsonWithRetry, sleep } from './http.mjs'
+import { fetchJsonWithRetry, sleep } from '../lib/http.mjs'
 
 // Undocumented public API behind the "Load more" button on nba.com/news/category/power-rankings; category 3194 is "Power Rankings".
 const CONTENT_API_BASE =

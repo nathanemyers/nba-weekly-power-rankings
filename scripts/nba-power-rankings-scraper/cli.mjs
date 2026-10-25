@@ -40,7 +40,7 @@ function printHelp() {
 
 Options:
   --years <n>      How many years back to scrape (default: 10)
-  --out <dir>       Output directory (default: data/raw)
+  --out <dir>       Output directory (default: data/raw/nba)
   --delay-ms <n>    Delay between requests to NBA.com, in ms (default: 400)
   --force           Re-fetch articles even if already saved
   --help            Show this help`)
@@ -50,7 +50,7 @@ const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..')
 
 async function main() {
   const args = parseArgs(process.argv.slice(2))
-  const outDir = args.outDir || path.join(root, 'data', 'raw')
+  const outDir = args.outDir || path.join(root, 'data', 'raw', 'nba')
 
   await scrape({
     years: args.years,

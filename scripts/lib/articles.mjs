@@ -1,4 +1,4 @@
-// Reads the scraped articles in /data/raw into per-season, per-team weekly entries.
+// Reads the scraped articles in /data/raw/nba into per-season, per-team weekly entries.
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 

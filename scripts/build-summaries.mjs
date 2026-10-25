@@ -8,7 +8,8 @@ import { loadSeasonEntries } from './lib/articles.mjs'
 import { buildPromptInput, decide, hashInput } from './lib/summary-plan.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-const rawDir = join(root, 'data', 'raw')
+const nbaDir = join(root, 'data', 'raw', 'nba')
+const playoffsFile = join(root, 'data', 'raw', 'basketball-reference', 'playoffs.json')
 const outDir = join(root, 'data', 'processed', 'summaries')
 
 const MODEL = process.env.SUMMARY_MODEL || 'claude-sonnet-5-5'
@@ -29,8 +30,8 @@ const args = process.argv.slice(2)
 const dryRun = args.includes('--dry-run')
 const onlySeasons = args.flatMap((arg, i) => (arg === '--season' && args[i + 1] ? [args[i + 1]] : []))
 
-const playoffs = JSON.parse(readFileSync(join(rawDir, 'playoffs.json'), 'utf8'))
-const seasons = loadSeasonEntries(rawDir)
+const playoffs = JSON.parse(readFileSync(playoffsFile, 'utf8'))
+const seasons = loadSeasonEntries(nbaDir)
 const unknown = onlySeasons.filter((s) => !seasons[s])
 if (unknown.length) {
   console.error(`Unknown season(s): ${unknown.join(', ')}. Known: ${Object.keys(seasons).sort().join(', ')}`)

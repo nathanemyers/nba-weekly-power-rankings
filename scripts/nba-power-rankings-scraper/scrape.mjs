@@ -4,7 +4,7 @@ import path from 'node:path'
 
 import { listAllPowerRankingsArticles } from './contentApi.mjs'
 import { fetchPowerRankingsArticle } from './articlePage.mjs'
-import { sleep } from './http.mjs'
+import { sleep } from '../lib/http.mjs'
 
 function slugify(value) {
   return value.replace(/[^a-z0-9-]/gi, '_')
