@@ -1,10 +1,11 @@
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { loadSeasonEntries } from './lib/articles.mjs'
+import { loadEspnSeasonEntries, loadSeasonEntries } from './lib/articles.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const nbaDir = join(root, 'data', 'raw', 'nba')
+const espnDir = join(root, 'data', 'raw', 'espn')
 const playoffsFile = join(root, 'data', 'raw', 'basketball-reference', 'playoffs.json')
 const processedDir = join(root, 'data', 'processed')
 const outDir = join(processedDir, 'seasons')
@@ -34,7 +35,8 @@ function currentRecord(summaryText) {
   return match ? match[1] : undefined
 }
 
-const bySeason = loadSeasonEntries(nbaDir)
+// ESPN covers 2003-04 to 2015-16 and NBA.com 2017-18 onward; NBA.com wins if they ever overlap
+const bySeason = { ...loadEspnSeasonEntries(espnDir), ...loadSeasonEntries(nbaDir) }
 const summariesDir = join(processedDir, 'summaries')
 
 rmSync(outDir, { recursive: true, force: true })
@@ -45,7 +47,7 @@ for (const season of Object.keys(bySeason).sort()) {
   const rankings = {}
   for (const slug of Object.keys(teams)) {
     rankings[slug] = teams[slug].map((entry) => {
-      const record = currentRecord(entry.summaryText)
+      const record = entry.record ?? currentRecord(entry.summaryText)
       return {
         week: entry.week,
         rank: entry.rank,
