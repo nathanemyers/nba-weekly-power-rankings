@@ -28,4 +28,4 @@ npm run build:rankings
 
 `build:rankings` then rebuilds the app data under `data/processed/seasons/`, including the summaries. Neither step runs during deploy, so commit the results.
 
-Raw data lives in one folder per source. `npm run scrape:powerRankings` fills `data/raw/nba/` from NBA.com, `npm run scrape:playoffs` fills `data/raw/basketball-reference/`, and `npm run scrape:espnPowerRankings` fills `data/raw/espn/` with ESPN's 2003-04 to 2015-16 rankings, which the app doesn't use yet.
+Raw data lives in one folder per source. `npm run scrape:powerRankings` fills `data/raw/nba/` from NBA.com, `npm run scrape:playoffs` fills `data/raw/basketball-reference/`, and `npm run scrape:espnPowerRankings` fills `data/raw/espn/` with ESPN's 2003-04 to 2015-16 rankings. `scrape:playoffs` also stores each series' score, which the playoff series badges show, and re-fetches any saved season that doesn't have scores yet.

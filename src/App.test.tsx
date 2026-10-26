@@ -7,7 +7,7 @@ import { renderWithStore } from 'test/renderWithStore'
 
 // Fixture seasons: 26 weeks, 21 weeks, one short enough to fit the window (from ESPN), and two with rank swings
 vi.mock('data/seasons', async () => {
-  const { buildRankings, buildSwingRankings, PLAYOFFS } =
+  const { buildRankings, buildSwingRankings, PLAYOFF_SERIES, PLAYOFFS } =
     await import('./test/fixtures')
   const season = (
     name: string,
@@ -19,6 +19,7 @@ vi.mock('data/seasons', async () => {
     maxWeek,
     rankings: buildRankings(maxWeek),
     playoffs: PLAYOFFS,
+    playoffSeries: PLAYOFF_SERIES,
     summaries,
   })
   return {
@@ -438,5 +439,47 @@ describe('Data source badges', () => {
       'Source: NBA.com',
     ])
     expect(screen.getAllByText('AI-generated summary')).toHaveLength(1)
+  })
+})
+
+describe('Playoff series badges', () => {
+  const seriesList = () => screen.queryByRole('list', { name: 'Playoff series' })
+  const pin = (user: ReturnType<typeof userEvent.setup>, name: string) =>
+    user.click(screen.getByText(name, { selector: 'text' }))
+
+  it('appears in the chart view only while one playoff team is pinned', async () => {
+    const user = userEvent.setup()
+    renderWithStore(<App />)
+    expect(seriesList()).not.toBeInTheDocument()
+
+    await pin(user, 'Boston Celtics')
+    const items = within(seriesList()!).getAllByRole('listitem')
+    expect(items).toHaveLength(4)
+    expect(within(items[0]).getByRole('button')).toHaveAccessibleName(
+      'First round: beat Detroit Pistons 4-0'
+    )
+
+    await pin(user, 'Miami Heat')
+    const miami = within(seriesList()!).getAllByRole('button')
+    expect(miami).toHaveLength(2)
+    expect(miami[1]).toHaveAccessibleName('Second round: lost to Boston Celtics 2-4')
+
+    await pin(user, 'Detroit Pistons')
+    expect(seriesList()).not.toBeInTheDocument()
+  })
+
+  it('shows on team history cards without leaving the history when clicked', async () => {
+    const user = userEvent.setup()
+    renderWithStore(<App />)
+    await pin(user, 'Boston Celtics')
+    await user.click(screen.getByRole('button', { name: 'Team History' }))
+
+    // Every fixture season except 'active' has playoff results
+    const lists = screen.getAllByRole('list', { name: 'Playoff series' })
+    expect(lists).toHaveLength(4)
+    await user.click(within(lists[0]).getAllByRole('button')[0])
+    expect(
+      screen.getByRole('heading', { name: /Boston Celtics Team History/ })
+    ).toBeInTheDocument()
   })
 })

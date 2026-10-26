@@ -6,6 +6,7 @@ import { setSelectedSeason, setView, View } from '@/store/slices/UI'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 import DataSourceBadge from './DataSourceBadge'
+import PlayoffSeriesBadges from './PlayoffSeriesBadges'
 
 interface TeamHistoryProps {
   team: Team
@@ -30,16 +31,17 @@ export default function TeamHistory(props: TeamHistoryProps) {
             }}
           >
             <CardContent>
-              <div className="mb-2 flex items-center justify-between gap-3">
+              <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
                 <div className="flex flex-row content-center">
                   <h2 className="text-2xl font-semibold shrink mr-10">
                     {season.name}
                   </h2>
-                  <div className="w-100 content-center">
+                  <div className="content-center md:w-100">
                     <TrendMinimap team={team.teamId} seasonId={season.name} />
                   </div>
                 </div>
-                <div className="flex flex-row items-center gap-2">
+                <div className="flex flex-row flex-wrap items-center justify-end gap-2">
+                  <PlayoffSeriesBadges series={team.playoffSeries} />
                   <DataSourceBadge source={season.source} season={season.name} />
                   {team.aiSummary && (
                     <Badge
