@@ -15,6 +15,9 @@ This feature adds a second rankings scraper for ESPN's Marc Stein Power Rankings
    - **Teams:** mapped to NBA.com franchise IDs, using link abbreviations first and printed names for relocated franchises.
 2. **Shared helpers.** `http.mjs` and `htmlToText.mjs` move to `scripts/lib/`. Both scrapers then send a descriptive user agent, and `htmlToText` decodes Windows-1252 numeric entities.
 3. **Raw data move.** NBA.com data moves to `data/raw/nba/` and `playoffs.json` moves to `data/raw/basketball-reference/`. The NBA.com scraper, playoffs scraper and both build scripts point at the new paths, and the processed output stays byte-identical.
+4. **ESPN seasons in the app** (User Story 5). `build-rankings.mjs` merges ESPN weekly editions with the NBA.com articles and records each season's `source`. The app validates `source` with Zod, and `DataSourceBadge` shows it beside the season dropdown and on team-history cards. The AI Summary button and badge are hidden or disabled when a season has no summary.
+5. **Playoffs back to 2003-04** (User Story 6). `scrape-playoffs.mjs` gets its own franchise-name map (the `src/Chart/teams.ts` it read no longer exists), starts at 2003-04, and keeps saved seasons unless `--force` is passed.
+6. **Wayback recovery** (User Story 7). `wayback.mjs` and `legacyEditionPage.mjs` recover the 20 editions espn.com no longer serves from archive.org's copies of the 2003-05 site ([research §11](research.md#11-recovering-editions-espn-no-longer-serves-convergence-2026-10-25)). `scripts/lib/http.mjs` gains a lenient UTF-8 decoder for ESPN's stray Windows-1252 bytes ([research §12](research.md#12-character-encoding-of-live-espn-pages-convergence-2026-10-25)).
 
 ## Technical Context
 
@@ -36,7 +39,7 @@ This feature adds a second rankings scraper for ESPN's Marc Stein Power Rankings
 - Constitution IV: pace requests, send a descriptive user agent, don't re-fetch.
 - AGENTS.md: comments are 1 sentence at most, no `Map` or `Set`, and never run `build:summaries`.
 
-**Scale/Scope**: 13 seasons, about 320 editions, about 9,500 team entries. Ten files touched or moved outside the new folder.
+**Scale/Scope**: 13 seasons, 329 editions (20 recovered from the Wayback Machine), 9,815 team entries. App: one new component, schema and store field, and two view edits. 22 seasons in the app instead of 9.
 
 ## Constitution Check
 
@@ -44,16 +47,19 @@ This feature adds a second rankings scraper for ESPN's Marc Stein Power Rankings
 
 | Principle / Constraint | Status | Notes |
 |---|---|---|
-| I. Static hosting only | Pass | Scripts only. Nothing ships in `dist/`. |
-| II. Data prepared at build time | Pass | No app code changes. `data/processed/` is unchanged (SC-006). |
-| III. Base-path-safe navigation | N/A | No routing or asset changes. |
-| IV. Respectful, offline data collection | Pass | 1 s default delay, descriptive user agent (now on both scrapers), robots.txt allows `/nba/powerrankings` and sets no crawl delay, saved editions reused. Raw data stays under `data/raw/`, app code still imports only `data/processed/`. |
+| I. Static hosting only | Pass | Scrapers stay local. The app change is static: more bundled season JSON and a badge component. |
+| II. Data prepared at build time | Pass | ESPN seasons reach the app only through `build:rankings` → `data/processed/seasons/`, committed to the repo. The move alone left `data/processed/` unchanged (SC-006). |
+| III. Base-path-safe navigation | Pass | No routing changes. Badge links are absolute external URLs. Checked with `npm run preview` under `/nba-weekly-power-rankings/`. |
+| IV. Respectful, offline data collection | Pass | ESPN at 1 s, archive.org and Basketball-Reference at 3 s, all with the project user agent. Saved editions and playoff seasons are reused. Raw data stays under `data/raw/`, and app code still imports only `data/processed/`. |
 | V. Simplicity | Pass | No new dependencies. Regex parsing like the existing scrapers. Shared helpers go in the existing `scripts/lib/`. |
 | Data pipeline (`scrape:*` → `data/raw/`) | Pass | New `npm run scrape:espnPowerRankings`. All raw outputs stay inside `data/raw/`, so the constitution text needs no amendment. |
 | Testing (Vitest) | Pass | New unit tests run under `npm test`. |
-| No backend, no runtime third-party calls | Pass | Confirmed. ESPN is only contacted by a local script. |
+| No backend, no runtime third-party calls | Pass | ESPN and archive.org are only contacted by local scripts. The source badges are plain links, with no requests at runtime. |
+| Data validation (Zod) | Pass | The new `source` field is part of `SeasonDataSchema`. |
 
-**Post-design re-check (after Phase 1)**: still passes. The design adds no runtime dependencies, keeps every output under `data/raw/`, and leaves app code alone.
+**Post-design re-check (after Phase 1)**: still passes. The design adds no runtime dependencies and keeps every output under `data/raw/`.
+
+**Re-check after convergence (2026-10-25)**: still passes with the app integration, playoffs extension and Wayback recovery added (rows above updated).
 
 ## Project Structure
 
@@ -80,7 +86,8 @@ scripts/
 │   ├── articles.mjs                 # comment updated to data/raw/nba
 │   ├── http.mjs                     # MOVED from nba-power-rankings-scraper/, adds user agent + redirect detection
 │   ├── htmlToText.mjs               # MOVED from nba-power-rankings-scraper/, adds Windows-1252 entities
-│   └── htmlToText.test.mjs          # NEW
+│   ├── htmlToText.test.mjs          # NEW
+│   └── http.test.mjs                # NEW (lenient UTF-8 decoder)
 ├── nba-power-rankings-scraper/
 │   ├── cli.mjs                      # default --out → data/raw/nba
 │   ├── articlePage.mjs, contentApi.mjs, scrape.mjs   # imports → ../lib/
@@ -94,9 +101,12 @@ scripts/
 │   ├── editionPage.test.mjs         # NEW
 │   ├── seasonPage.test.mjs          # NEW
 │   ├── teams.test.mjs               # NEW
+│   ├── seasonRange.mjs + test       # NEW: --from/--to validation
+│   ├── wayback.mjs                  # NEW: recover missing editions from the Wayback Machine
+│   ├── legacyEditionPage.mjs + test # NEW: parser for the 2003-05 page layout
 │   └── README.md
-├── scrape-playoffs.mjs              # output → data/raw/basketball-reference/playoffs.json
-├── build-rankings.mjs               # read paths split: data/raw/nba + basketball-reference/playoffs.json
+├── scrape-playoffs.mjs              # output → data/raw/basketball-reference/playoffs.json; 2003-04 onward, own name map, --force
+├── build-rankings.mjs               # read paths split; merges ESPN seasons; writes `source`
 └── build-summaries.mjs              # same path change only; never run
 
 data/raw/
@@ -104,8 +114,20 @@ data/raw/
 ├── basketball-reference/playoffs.json   # git mv from data/raw/
 └── espn/{index.json,articles/}      # NEW, produced by the full run
 
+data/processed/seasons/               # 13 ESPN seasons added; `source` on every season
+
+src/
+├── types/nba.ts                      # DataSource enum
+├── schemas/season.ts                 # `source` validated
+├── store/slices/seasons/             # Season.source
+├── components/DataSourceBadge.tsx + test   # NEW
+├── components/TeamHistory.tsx        # source badge; AI badge only with a summary
+├── components/TeamSeasonSummary.tsx  # disabled without a summary
+└── views/ChartView.tsx               # source badge beside the season select
+
 package.json                          # add "scrape:espnPowerRankings"
 README.md                             # data/raw paths
+.claude/launch.json                   # `preview` entry for checking the production build
 ```
 
 **Structure Decision**: The ESPN scraper gets its own folder alongside `nba-power-rankings-scraper/`, with the same file roles: `cli.mjs` and `scrape.mjs`, plus `seasonPage.mjs` and `editionPage.mjs` in place of `contentApi.mjs` and `articlePage.mjs`. Only source-independent helpers move to `scripts/lib/`.

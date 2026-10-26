@@ -6,7 +6,7 @@ All findings are from single ESPN pages fetched on 2026-10-25 with the project's
 
 - **Decision**: Fetch each season's default page, `https://www.espn.com/nba/powerrankings/_/year/<endYear>`. That page is the season's **final** edition, and its heading gives the week ("2007-08 Power Rankings: Week 24"). Its week dropdown lists every *other* edition as `//www.espn.com/nba/powerrankings/_/year/<endYear>/week/<n>`. Remove duplicate dropdown entries and the final week, then fetch the rest.
 - **Rationale**: The dropdown is ESPN's own list of what exists, so there's no guessing at week counts (the 2011-12 lockout season ends at week 17, normal seasons at 24). The dropdown leaves out the final week (2007-08 lists 0 to 23, and the default page is week 24), which is why the default page is read as the final edition.
-- **Implementation finding**: The dropdown never lists training camp editions (`-1`), but ten seasons have one. The scraper always tries week `-1`, and a redirect there is skipped quietly rather than counted as missing. It also turned out that ESPN redirects some weeks its dropdown lists (2003-04 preseason, 2004-05 preseason to week 18). Those are reported as missing.
+- **Implementation finding**: The dropdown never lists training camp editions (`-1`), but eleven seasons have one. The scraper always tries week `-1`, and a redirect there is skipped quietly rather than counted as missing. It also turned out that ESPN redirects some weeks its dropdown lists (2003-04 preseason, 2004-05 preseason to week 18). Those are reported as missing, and recovered from the Wayback Machine (§11).
 - **Alternatives considered**: Trying weeks -1 to 30 for every season costs about 400 requests, many of them pointless redirects. The Wayback Machine is slower and has gaps.
 
 ## 2. Weeks that don't exist
@@ -74,3 +74,17 @@ All eras use the same markup:
 
 - **Decision**: `git mv data/raw/index.json data/raw/articles` → `data/raw/nba/`, and `git mv data/raw/playoffs.json` → `data/raw/basketball-reference/playoffs.json`. Split `rawDir` in `build-rankings.mjs` and `build-summaries.mjs` into an NBA.com folder (passed to `loadSeasonEntries`) and a playoffs file path. Update `scrape-playoffs.mjs`, the NBA.com scraper's default `--out`, the comment in `scripts/lib/articles.mjs` and the READMEs.
 - **Verification**: Run `npm run build:rankings` after the move and confirm `git status data/processed` shows no changes. `build:summaries` is **not** run (AGENTS.md forbids it). It hashes each team's input text (`scripts/lib/summary-plan.mjs`), so the move can't change what it would generate.
+
+## 11. Recovering editions ESPN no longer serves (convergence, 2026-10-25)
+
+- **Decision**: A separate `wayback.mjs` command fills gaps from the Wayback Machine. It reads archive.org's CDX index for `sports.espn.go.com/nba/powerranking*` captures within the season's dates. It tries captures of ESPN's own `?season=<endYear>&week=<n>` URLs first, then the undated "current week" page, sampled at least 5 days apart, and stops once every gap is filled. Requests are 3 seconds apart with the project user agent.
+- **Rationale**: ESPN's own `/year/<y>/week/<n>` pages redirect for these weeks, and archive.org never captured that URL format for 2003-05. In those years ESPN served rankings at `sports.espn.go.com/nba/powerranking`, which archive.org captured often. All 20 missing editions were found in 1 + 1 index queries and about 45 page fetches.
+- **Layout**: The 2003-05 pages have no `tablehead` table. The heading is `<b>2005 Power Rankings: Week 3</b>` (end year), rank and last week share a cell (`1 (3)`), teams are nicknames linked by old codes (`pho`, `uth`, `njn`, `nor`, `sea`), and pages are Windows-1252. `legacyEditionPage.mjs` parses these into the standard edition shape with a separate team-code map.
+- **Safety**: The heading's end year and week must match before a page is saved, since the undated captures could be any week.
+- **Alternatives considered**: Changing SC-001 to count only editions ESPN still serves would have left most of 2004-05 off the chart.
+
+## 12. Character encoding of live ESPN pages (convergence, 2026-10-25)
+
+- **Decision**: Decode ESPN pages with a lenient UTF-8 decoder (`decodeUtf8Lenient` in `scripts/lib/http.mjs`). A lone invalid byte is read as Windows-1252, and a truncated multi-byte sequence becomes U+FFFD.
+- **Rationale**: §6 found the ranking tables valid UTF-8, but the full scrape showed stray Windows-1252 bytes in older comments (`5\xbd games` for "5½ games"). Strict decoding turned them into U+FFFD. Two pages (2012-13 week 23, 2014-15 training camp) contain sequences ESPN itself broke, such as `e2 ac "` for an apostrophe. Those can't be recovered and stay as U+FFFD.
+
