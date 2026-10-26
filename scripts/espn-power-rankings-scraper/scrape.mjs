@@ -6,11 +6,19 @@ import { fetchTextWithRetry, sleep } from '../lib/http.mjs'
 import { editionSlug, parseEdition } from './editionPage.mjs'
 import { editionUrl, parseSeasonPage, seasonLabel, seasonUrl } from './seasonPage.mjs'
 
+<<<<<<< HEAD
 export function editionFile(season, espnWeek) {
   return path.join('articles', season, `${editionSlug(season, espnWeek)}.json`)
 }
 
 export function indexEntry(edition) {
+=======
+function editionFile(season, espnWeek) {
+  return path.join('articles', season, `${editionSlug(season, espnWeek)}.json`)
+}
+
+function indexEntry(edition) {
+>>>>>>> master
   return {
     slug: edition.slug,
     title: edition.title,
@@ -34,6 +42,7 @@ async function saveEdition(outDir, edition, warnings) {
   }
 }
 
+<<<<<<< HEAD
 export function sortIndex(entries) {
   return entries.sort((a, b) => b.season.localeCompare(a.season) || b.espnWeek - a.espnWeek)
 }
@@ -42,6 +51,8 @@ export async function writeIndex(indexPath, entries) {
   await writeFile(indexPath, JSON.stringify(sortIndex(entries), null, 2), 'utf8')
 }
 
+=======
+>>>>>>> master
 /** Scrapes ESPN's weekly editions for the given end years into `outDir`, reusing saved files unless `force` is set. */
 export async function scrape({ fromEndYear, toEndYear, outDir, delayMs, force = false }) {
   await mkdir(outDir, { recursive: true })
@@ -57,7 +68,11 @@ export async function scrape({ fromEndYear, toEndYear, outDir, delayMs, force = 
     let weeks
     let probedWeeks = []
     try {
+<<<<<<< HEAD
       seasonHtml = await fetchTextWithRetry(seasonUrl(endYear), { allowRedirect: false, encoding: 'utf-8-lenient' })
+=======
+      seasonHtml = await fetchTextWithRetry(seasonUrl(endYear), { allowRedirect: false })
+>>>>>>> master
       if (seasonHtml == null) {
         counts.missing++
         console.warn(`  missing: ${season} has no season page`)
@@ -91,17 +106,24 @@ export async function scrape({ fromEndYear, toEndYear, outDir, delayMs, force = 
         let html = seasonHtml
         if (espnWeek !== finalWeek) {
           await sleep(delayMs)
+<<<<<<< HEAD
           html = await fetchTextWithRetry(url, { allowRedirect: false, encoding: 'utf-8-lenient' })
+=======
+          html = await fetchTextWithRetry(url, { allowRedirect: false })
+>>>>>>> master
         }
         if (html == null && probedWeeks.includes(espnWeek)) {
           continue
         }
+<<<<<<< HEAD
         if (html == null && existsSync(savedPath)) {
           index.push(indexEntry(JSON.parse(await readFile(savedPath, 'utf8'))))
           counts.skipped++
           console.log(`  ${slug} is gone from ESPN, so the archived copy is kept`)
           continue
         }
+=======
+>>>>>>> master
         if (html == null) {
           counts.missing++
           console.warn(`  missing: ${slug} redirected, so ESPN never published it`)
@@ -132,7 +154,14 @@ export async function scrape({ fromEndYear, toEndYear, outDir, delayMs, force = 
   const kept = existsSync(indexPath)
     ? JSON.parse(await readFile(indexPath, 'utf8')).filter((entry) => !ranSeasons[entry.season])
     : []
+<<<<<<< HEAD
   await writeIndex(indexPath, [...kept, ...index])
+=======
+  const fullIndex = [...kept, ...index].sort(
+    (a, b) => b.season.localeCompare(a.season) || b.espnWeek - a.espnWeek
+  )
+  await writeFile(indexPath, JSON.stringify(fullIndex, null, 2), 'utf8')
+>>>>>>> master
 
   console.log(
     `\nDone. Fetched ${counts.fetched}, skipped (already saved) ${counts.skipped}, ` +

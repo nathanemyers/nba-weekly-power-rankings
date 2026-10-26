@@ -283,8 +283,13 @@
       "espnAbbr": "lac",
       "teamLink": "https://www.espn.com/nba/team/_/name/lac/la-clippers",
       "record": "5-20",
+<<<<<<< HEAD
       "summaryHtml": "A new low for a team that has seen a few: Never in the Clippers' 33 seasons -- or the preceding eight seasons in Buffalo, for that matter -- had they lost two in a row by one before last week's LÂ\u0019s to the Lakers and Griz.",
       "summaryText": "A new low for a team that has seen a few: Never in the Clippers' 33 seasons -- or the preceding eight seasons in Buffalo, for that matter -- had they lost two in a row by one before last week's LÂ\u0019s to the Lakers and Griz."
+=======
+      "summaryHtml": "A new low for a team that has seen a few: Never in the Clippers' 33 seasons -- or the preceding eight seasons in Buffalo, for that matter -- had they lost two in a row by one before last week's L�\u0019s to the Lakers and Griz.",
+      "summaryText": "A new low for a team that has seen a few: Never in the Clippers' 33 seasons -- or the preceding eight seasons in Buffalo, for that matter -- had they lost two in a row by one before last week's L�\u0019s to the Lakers and Griz."
+>>>>>>> master
     },
     {
       "rank": 26,

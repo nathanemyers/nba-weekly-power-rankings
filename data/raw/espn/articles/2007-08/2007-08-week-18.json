@@ -338,8 +338,13 @@
       "espnAbbr": "mem",
       "teamLink": "https://www.espn.com/nba/team/_/name/mem/memphis-grizzlies",
       "record": "14-45",
+<<<<<<< HEAD
       "summaryHtml": "The Grizz drop into the cellar after starting the new week 23½ games out of <i>fourth</i> place in the mighty Southwest Division ... while getting roughly zero sympathy after what was seen as a Pau donation to the Lakers.",
       "summaryText": "The Grizz drop into the cellar after starting the new week 23½ games out of fourth place in the mighty Southwest Division ... while getting roughly zero sympathy after what was seen as a Pau donation to the Lakers."
+=======
+      "summaryHtml": "The Grizz drop into the cellar after starting the new week 23� games out of <i>fourth</i> place in the mighty Southwest Division ... while getting roughly zero sympathy after what was seen as a Pau donation to the Lakers.",
+      "summaryText": "The Grizz drop into the cellar after starting the new week 23� games out of fourth place in the mighty Southwest Division ... while getting roughly zero sympathy after what was seen as a Pau donation to the Lakers."
+>>>>>>> master
     }
   ]
 }

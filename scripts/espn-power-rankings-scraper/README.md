@@ -31,6 +31,7 @@ because some old pages carry wrong "Updated" dates.
 
 - 2003-04 ranks 29 teams; later seasons rank 30. 2003-04 pages have no byline.
 - Training camp editions (week `-1`) have no previous ranks. ESPN has them for
+<<<<<<< HEAD
   every season except 2003-04 and 2011-12.
 - ESPN no longer serves 2003-04's preseason edition or 2004-05's preseason
   through week 18, even though the dropdowns list them. The scraper reports
@@ -44,6 +45,16 @@ because some old pages carry wrong "Updated" dates.
 - Pages are UTF-8 with stray Windows-1252 bytes (e.g. "5½ games"), which are
   decoded as Windows-1252. 2012-13 week 23 and the 2014-15 training camp
   edition contain bytes ESPN itself mangled; those come out as "�".
+=======
+  2004-05 to 2009-10 and 2012-13 to 2015-16.
+- ESPN no longer serves 2003-04's preseason edition or 2004-05's preseason
+  through week 18, even though the dropdowns list them. They're reported as
+  missing on every run.
+- Data is kept as ESPN published it, with a warning: 2005-06 week 18 has two
+  teams at No. 13 and none at No. 12, the 2005-06 training camp edition has
+  two blank comments, and the 2010-11 training camp table has no rows (saved
+  with `hasStructuredRankings: false` and empty `rankings`).
+>>>>>>> master
 - From 2016-17 on, ESPN publishes power rankings as regular articles in a
   different format, which this tool doesn't handle.
 
@@ -66,6 +77,7 @@ By default this fetches every season into `data/raw/espn`. Options:
 
 Re-running without `--force` reuses every edition already on disk. It still
 fetches each season's page, because that's how it learns which weeks exist,
+<<<<<<< HEAD
 and tries the training camp week of 2003-04 and 2011-12, but nothing else.
 Editions recovered from the Wayback Machine are kept even with `--force`,
 since ESPN redirects those weeks. The index keeps entries for seasons outside
@@ -88,6 +100,11 @@ saved. Those older pages use a different layout, parsed by
 
 It takes `--from`, `--to`, `--out` and `--delay-ms` (default 3000). With
 nothing missing it makes no requests.
+=======
+and re-checks the editions ESPN doesn't serve (the 20 missing weeks above and
+the 3 seasons with no training camp edition), but nothing else. The index keeps entries for seasons outside the current
+`--from`/`--to` range.
+>>>>>>> master
 
 ## Output
 
