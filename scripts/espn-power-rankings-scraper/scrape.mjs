@@ -10,7 +10,7 @@ export function editionFile(season, espnWeek) {
   return path.join('articles', season, `${editionSlug(season, espnWeek)}.json`)
 }
 
-function indexEntry(edition) {
+export function indexEntry(edition) {
   return {
     slug: edition.slug,
     title: edition.title,

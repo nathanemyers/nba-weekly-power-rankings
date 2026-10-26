@@ -28,7 +28,6 @@ Fetching 2007-08 season page...
 Done. Fetched 300, skipped (already saved) 20, missing 1, failed 0. Index written to data/raw/espn/index.json.
 ```
 
-<<<<<<< HEAD
 ## Wayback recovery: `scripts/espn-power-rankings-scraper/wayback.mjs`
 
 Runnable as `node scripts/espn-power-rankings-scraper/wayback.mjs [options]`.
@@ -42,25 +41,18 @@ Runnable as `node scripts/espn-power-rankings-scraper/wayback.mjs [options]`.
 
 A gap is any week from 0 (preseason) to a season's last saved week with no saved file. Seasons with no gaps make no requests. Prints `recovered <slug> from <timestamp>` for each edition, `not needed` for captures of other weeks, `not in the archive: …` for gaps it couldn't fill, and a final count. Exits 1 only for bad arguments or a crash.
 
-=======
->>>>>>> master
 ## NBA.com scraper: `scripts/nba-power-rankings-scraper/cli.mjs` (changed)
 
 Options are unchanged. The only change is the `--out` default, which goes from `data/raw` to `data/raw/nba`. The help text and README say so.
 
 ## Playoffs scraper: `scripts/scrape-playoffs.mjs` (changed)
 
-<<<<<<< HEAD
 Writes `data/raw/basketball-reference/playoffs.json` instead of `data/raw/playoffs.json`. Covers 2003-04 to 2025-26 and keeps saved seasons, fetching only new ones. `--force` fetches every season again.
-=======
-Writes `data/raw/basketball-reference/playoffs.json` instead of `data/raw/playoffs.json`.
->>>>>>> master
 
 ## Shared modules: `scripts/lib/` (moved)
 
 | Module | Exports | Change |
 |---|---|---|
-<<<<<<< HEAD
 | `http.mjs` | `sleep(ms)`, `fetchTextWithRetry(url, { retries, baseDelayMs, allowRedirect, encoding })`, `fetchJsonWithRetry(url, opts)`, `decodeUtf8Lenient(bytes)` | Moved from the NBA.com scraper. Every request sends the project user agent. With `allowRedirect: false`, a 3xx response resolves to `null` instead of being followed. 3xx responses are never retried. `encoding: 'utf-8-lenient'` (used for ESPN) reads stray single bytes as Windows-1252, and any other label goes to `TextDecoder` (`'windows-1252'` for archived pages). |
 | `htmlToText.mjs` | `htmlToText(html)` | Moved. Numeric entities 128-159 are decoded as Windows-1252. |
 
@@ -70,14 +62,3 @@ Writes `data/raw/basketball-reference/playoffs.json` instead of `data/raw/playof
 |---|---|---|
 | `scripts/build-rankings.mjs` | `data/raw/nba/` (via `loadSeasonEntries`), `data/raw/espn/` (via `loadEspnSeasonEntries`, weekly editions only) and `data/raw/basketball-reference/playoffs.json` | `data/processed/seasons/<season>.json` with a `source` field, and `index.ts` |
 | `scripts/build-summaries.mjs` | `data/raw/nba/` and the playoffs file (paths changed only) | unchanged |
-=======
-| `http.mjs` | `sleep(ms)`, `fetchTextWithRetry(url, { retries, baseDelayMs, allowRedirect })`, `fetchJsonWithRetry(url, opts)` | Moved from the NBA.com scraper. Every request sends the project user agent. With `allowRedirect: false`, a 3xx response resolves to `null` instead of being followed. 3xx responses are never retried. |
-| `htmlToText.mjs` | `htmlToText(html)` | Moved. Numeric entities 128-159 are decoded as Windows-1252. |
-
-## Build scripts (changed paths only)
-
-| Script | Reads |
-|---|---|
-| `scripts/build-rankings.mjs` | `data/raw/nba/` (via `loadSeasonEntries`) and `data/raw/basketball-reference/playoffs.json` |
-| `scripts/build-summaries.mjs` | same |
->>>>>>> master

@@ -14,11 +14,8 @@
 
 - Q: Where should the NBA.com scraper's data live once ESPN data is added? → A: The NBA.com scraper writes to `data/raw/nba/`, and the existing NBA.com data in `data/raw/` (`index.json` and `articles/`) is moved there as part of this feature.
 - Q: Should `data/raw/playoffs.json` move into `data/raw/nba/` along with the NBA.com articles, or stay where it is? → A: Neither. It moves to its own source folder, `data/raw/basketball-reference/playoffs.json`, and the playoffs scraper writes there.
-<<<<<<< HEAD
 - Q: Should the ESPN seasons be shown in the app, and the follow-up work recorded in this spec or a new one? → A: Show them in the app (User Stories 5 and 6), and record everything in this spec because it shipped in the same pull request.
 - Q: ESPN no longer serves 20 editions its week dropdowns list. Accept the gap or recover them? → A: Recover them from the Wayback Machine (User Story 7).
-=======
->>>>>>> master
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -87,7 +84,6 @@ With ESPN added, `data/raw/` holds data from three sources, so each gets its own
 
 ---
 
-<<<<<<< HEAD
 ### User Story 5 - Browse the ESPN seasons in the app, with each season's source shown (Priority: P2)
 
 A visitor opens the season dropdown and sees 2003-04 to 2015-16 listed under the NBA.com seasons, each with its champion's logo. Choosing one charts that season's weekly rankings just like an NBA.com season. A badge next to the season dropdown, and on each card of a team's history, says whether that season's rankings came from NBA.com or ESPN and links to the source.
@@ -137,8 +133,6 @@ ESPN's week dropdowns still list the 2003-04 preseason and the 2004-05 preseason
 
 ---
 
-=======
->>>>>>> master
 ### Edge Cases
 
 - **Weeks that don't exist.** Seasons have different numbers of weeks. The 2011-12 lockout season had about 17. Requesting a week ESPN never published should be recorded as missing, not as a failure, and should not stop the run.
@@ -147,16 +141,12 @@ ESPN's week dropdowns still list the 2003-04 preseason and the 2004-05 preseason
 - **Relocated and renamed franchises.** Seattle SuperSonics, New Jersey Nets, Charlotte Bobcats, New Orleans Hornets and the New Orleans/Oklahoma City Hornets (2005-07) each map to the franchise's current standard identifier. ESPN's short names (e.g. "LA Clippers", "Golden State") are matched as well.
 - **A team name that can't be matched.** The edition is still saved. The unmatched team is kept with an empty identifier and a warning is printed, so the problem is visible without losing data.
 - **Wrong date stamps.** Some old pages carry dates that don't match their season (the 2003-04 final week says it was updated in October 2005). The season and week come from the edition's place in the archive, not the page's date.
-<<<<<<< HEAD
 - **No previous rank.** Some editions have no "last week" value. Every training camp edition is like this, and so are 2003-04 week 1 rows for a few teams. Previous rank is left empty rather than guessed.
 - **Ties and skipped ranks.** ESPN occasionally printed two teams at the same rank and none at the next (2005-06 week 18 has two No. 13s, and 2004-05 week 3 has two No. 27s). The edition is kept as published, in ESPN's order, with a warning.
 - **Empty tables and blank comments.** The 2010-11 training camp page has a heading but no team rows. It is saved with `hasStructuredRankings: false` and no rankings, with a warning. Blank comment cells (two in the 2005-06 training camp edition) are saved as empty, with a warning.
 - **Hidden training camp editions.** The week dropdown never lists the training camp edition (week -1), though eleven seasons have one. The scraper always tries week -1, and a redirect there is skipped quietly rather than counted as missing.
 - **Editions ESPN no longer serves.** ESPN redirects some weeks its dropdowns still list. These are reported as missing by the scraper and can be recovered from the Wayback Machine (User Story 7).
 - **Mixed character encodings.** Pages are UTF-8 but contain stray Windows-1252 bytes (e.g. "5½ games out"). These are decoded as Windows-1252. A few ESPN pages contain genuinely broken byte sequences (2012-13 week 23 and the 2014-15 training camp edition), which are kept as U+FFFD.
-=======
-- **No previous rank.** Preseason editions (and the first edition of some seasons) have no "last week" value. Previous rank is left empty rather than guessed.
->>>>>>> master
 - **Temporary network or server errors.** These are retried with increasing waits. An edition that still fails is counted as failed and the run continues.
 
 ## Requirements *(mandatory)*
@@ -175,7 +165,6 @@ ESPN's week dropdowns still list the 2003-04 preseason and the 2004-05 preseason
 - **FR-010**: The scraper MUST wait between requests to ESPN (default at least as long as the NBA.com scraper's), allow the wait to be changed, and identify itself with a descriptive user agent.
 - **FR-011**: Editions ESPN never published MUST be recorded as missing, not saved and not counted as failures.
 - **FR-012**: The scraper MUST print progress for each edition and a final summary of fetched, skipped, missing and failed counts.
-<<<<<<< HEAD
 - **FR-013**: The scraper itself MUST NOT write app data. ESPN seasons reach the app only through `npm run build:rankings` (FR-019).
 - **FR-019**: `npm run build:rankings` MUST build a processed season for every ESPN season from its weekly editions, using ESPN's printed record. Where a season exists in both sources, NBA.com MUST be used.
 - **FR-020**: Every processed season MUST record its `source` (`nba` or `espn`), and the app MUST validate it like the rest of the season data.
@@ -185,9 +174,6 @@ ESPN's week dropdowns still list the 2003-04 preseason and the 2004-05 preseason
 - **FR-024**: A separate recovery command MUST fill gaps from the Wayback Machine. A gap is any week from the preseason to a season's last saved week that isn't saved. The command MUST verify each archived page's heading before saving it, record its `archiveUrl`, add it to the index, pace requests (default 3 seconds) with the project's user agent, and request only what it needs.
 - **FR-025**: The main scraper MUST keep a saved edition in the index when ESPN redirects that week, even with `--force`.
 - **FR-026**: ESPN pages MUST be decoded so stray Windows-1252 bytes come out as the intended characters.
-=======
-- **FR-013**: The scraper MUST NOT change the existing app data. Feeding ESPN data into the app is out of scope.
->>>>>>> master
 - **FR-015**: The NBA.com scraper's default output folder MUST be `data/raw/nba/`.
 - **FR-016**: The existing NBA.com `index.json` and `articles/` MUST be moved from `data/raw/` to `data/raw/nba/`, and `playoffs.json` MUST be moved to `data/raw/basketball-reference/`. Contents stay unchanged and git history is kept where possible.
 - **FR-017**: Every script and document that reads or writes this raw data MUST use the new locations. That covers the rankings build, the summaries build, their shared article loader, the NBA.com scraper, the playoffs scraper and both README files. No fallback to the old locations is kept. The constitution only requires raw data under `data/raw/`, so it needs no change.
@@ -196,22 +182,15 @@ ESPN's week dropdowns still list the 2003-04 preseason and the 2004-05 preseason
 
 ### Key Entities
 
-<<<<<<< HEAD
 - **ESPN edition**: One weekly, preseason or training camp ESPN Power Rankings page for a given season. Attributes: source URL, headline, author, date as shown, season, week, its team entries, and an archive URL when it was recovered from the Wayback Machine.
 - **Team entry**: One team's place in an edition. Attributes: rank, previous rank, team name as published, standard team identifier, record, and comment (markup and plain text).
 - **Edition index**: A list of all saved editions with season, week, headline, date, team count and file location. Ordered so the newest edition is first, like the NBA.com index.
 - **Processed season**: The app's data for one season (`data/processed/seasons/<season>.json`), now with a `source` of `nba` or `espn`.
-=======
-- **ESPN edition**: One weekly (or preseason) ESPN Power Rankings page for a given season. Attributes: source URL, headline, author, date as shown, season, week, and its team entries.
-- **Team entry**: One team's place in an edition. Attributes: rank, previous rank, team name as published, standard team identifier, record, and comment (markup and plain text).
-- **Edition index**: A list of all saved editions with season, week, headline, date, team count and file location. Ordered so the newest edition is first, like the NBA.com index.
->>>>>>> master
 
 ## Success Criteria *(mandatory)*
 
 ### Measurable Outcomes
 
-<<<<<<< HEAD
 - **SC-001**: The scraper plus the recovery command save at least 95% of the editions ESPN published between 2003-04 and 2015-16 (every edition its week dropdowns list, plus training camp editions), and each one lists every team ESPN ranked that week. Achieved: 329 editions, none missing.
 - **SC-002**: Every team in every saved edition is matched to a standard team identifier, apart from any that are flagged in the run's warnings. The goal is zero unmatched teams.
 - **SC-003**: Re-running after a complete run requests only the 13 season pages (which double as each season's final edition) and the training camp week of the 2 seasons that have none (2003-04 and 2011-12). It makes no other requests for editions.
@@ -219,14 +198,6 @@ ESPN's week dropdowns still list the 2003-04 preseason and the 2004-05 preseason
 - **SC-005**: Picking any saved edition at random, its ranks, records and comments match what the ESPN page shows.
 - **SC-006**: After the move, the contents of the raw data, the processed app data and the results of existing tests are unchanged. Only the raw files' locations differ.
 - **SC-007**: The built app lists all 22 seasons with champion logos, and every season shows the correct source badge beside the chart and in team history.
-=======
-- **SC-001**: A default run saves at least 95% of the editions ESPN published between 2003-04 and 2015-16 (about 300 or more), and each one lists every team ESPN ranked that week.
-- **SC-002**: Every team in every saved edition is matched to a standard team identifier, apart from any that are flagged in the run's warnings. The goal is zero unmatched teams.
-- **SC-003**: Re-running after a complete run makes no requests for editions, apart from any that previously failed or were missing.
-- **SC-004**: A full run finishes unattended in under an hour at the default request delay.
-- **SC-005**: Picking any saved edition at random, its ranks, records and comments match what the ESPN page shows.
-- **SC-006**: After the move, the contents of the raw data, the processed app data and the results of existing tests are unchanged. Only the raw files' locations differ.
->>>>>>> master
 
 ## Assumptions
 
@@ -237,10 +208,6 @@ ESPN's week dropdowns still list the 2003-04 preseason and the 2004-05 preseason
 - The summaries build decides what to regenerate by hashing each team's input text, not by file path. Moving the raw files won't trigger regeneration, and the summaries build doesn't need to run to verify the move.
 - Everything is by Marc Stein, but author is recorded per edition rather than assumed.
 - ESPN's comments are shorter than NBA.com's and have no ratings or stats lines. The scraper saves what ESPN published and doesn't fill in missing fields.
-<<<<<<< HEAD
 - ESPN seasons get no AI summaries: generating them would mean running `build:summaries`, which spends API tokens and is outside this feature.
 - The Wayback Machine sets no crawl delay. The recovery command waits 3 seconds between requests anyway, matching the playoffs scraper's Basketball-Reference pace.
 - Charts use today's team names (e.g. "New Orleans Pelicans" for the 2000s Hornets). Showing historical names is a separate change.
-=======
-- Feeding ESPN rankings into the chart, summaries or build scripts is a separate future feature.
->>>>>>> master

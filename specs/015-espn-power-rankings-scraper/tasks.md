@@ -303,7 +303,6 @@ Task: "T021 README.md"
 - `[P]` tasks touch different files and have no unfinished dependencies.
 - Don't copy ESPN text into test fixtures or the README. Use made-up comment text.
 - Keep `build:summaries` off-limits throughout. It only changes paths in T008.
-<<<<<<< HEAD
 
 ## Phase 8: Convergence
 
@@ -311,5 +310,3 @@ Task: "T021 README.md"
 - [X] T037 Close the SC-001 shortfall: 309 of 329 listed editions are saved, because ESPN redirects the 2003-04 preseason and the 2004-05 preseason through week 18. Either recover those 20 editions from the Wayback Machine into `data/raw/espn/` (paced, user agent set, only after the user approves), or change SC-001 to count only editions ESPN still serves, per SC-001 (partial)
 - [X] T038 Add to `spec.md`'s Edge Cases the behaviour that real data required. Rank ties or gaps are kept with a warning (2005-06 week 18). An edition with an empty table is saved with `hasStructuredRankings: false` (2010-11 training camp). Training camp editions are probed because the week dropdown hides them. Update SC-003 to match what a re-run really requests: 13 season pages, the 20 weeks ESPN doesn't serve, and 3 training camp weeks with no edition. Per plan: data-model validation and T017 (contradicts)
 - [X] T039 Review the changes that go beyond FR-018 and the plan's files. In `scripts/scrape-playoffs.mjs`: `FIRST_END_YEAR = 2004`, the old-franchise `SLUG_BY_NAME` map, `--force`, and the 14 added seasons in `data/raw/basketball-reference/playoffs.json`. Also the disabled AI Summary button in `src/components/TeamSeasonSummary.tsx` and the `preview` entry in `.claude/launch.json`. Record each one in the spec/plan, or move it into its own spec, per FR-018 (unrequested)
-=======
->>>>>>> master
