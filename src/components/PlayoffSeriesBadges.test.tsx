@@ -14,7 +14,9 @@ const renderBadges = (series: SeriesResult[] | undefined) =>
   )
 
 const badges = () =>
-  within(screen.getByRole('list', { name: 'Playoff series' })).getAllByRole('listitem')
+  within(screen.getByRole('list', { name: 'Playoff series' })).getAllByRole(
+    'listitem'
+  )
 
 afterEach(cleanup)
 
@@ -24,23 +26,39 @@ describe('PlayoffSeriesBadges', () => {
 
     const items = badges()
     expect(items).toHaveLength(4)
-    expect(items.map((item) => within(item).getByRole('button').getAttribute('aria-label'))).toEqual([
-      'First round: beat Detroit Pistons 4-0',
-      'Second round: beat Miami Heat 4-2',
-      'Conference finals: beat Toronto Raptors 4-3',
-      'Finals: beat Los Angeles Lakers 4-1',
+    expect(
+      items.map((item) =>
+        within(item).getByRole('button').getAttribute('aria-label')
+      )
+    ).toEqual([
+      'First round: defeated Detroit Pistons 4-0',
+      'Second round: defeated Miami Heat 4-2',
+      'Conference finals: defeated Toronto Raptors 4-3',
+      'Finals: defeated Los Angeles Lakers 4-1',
     ])
-    expect(items.map((item) => item.textContent)).toEqual(['4🥉', '6🥈', '7🥇', '5👑'])
-    expect(items[0].querySelector('img')).toHaveAttribute('src', expect.stringContaining('det'))
+    expect(items.map((item) => item.textContent)).toEqual([
+      '4🥉',
+      '6🥈',
+      '7🥇',
+      '5👑',
+    ])
+    expect(items[0].querySelector('img')).toHaveAttribute(
+      'src',
+      expect.stringContaining('det')
+    )
   })
 
   it('marks won series green and the lost series red', () => {
     renderBadges(PLAYOFF_SERIES[Team.Miami])
 
-    const [first, last] = badges().map((item) => within(item).getByRole('button'))
+    const [first, last] = badges().map((item) =>
+      within(item).getByRole('button')
+    )
     expect(first).toHaveClass('border-series-won')
     expect(last).toHaveClass('border-series-lost')
-    expect(last).toHaveAccessibleName('Second round: lost to Boston Celtics 2-4')
+    expect(last).toHaveAccessibleName(
+      'Second round: lost to Boston Celtics 2-4'
+    )
     expect(last).toHaveTextContent('6🥈')
   })
 
@@ -79,7 +97,10 @@ describe('PlayoffSeriesBadges', () => {
     const onTeamClick = vi.fn()
     render(
       <TooltipProvider>
-        <PlayoffSeriesBadges series={PLAYOFF_SERIES[Team.Boston]} onTeamClick={onTeamClick} />
+        <PlayoffSeriesBadges
+          series={PLAYOFF_SERIES[Team.Boston]}
+          onTeamClick={onTeamClick}
+        />
       </TooltipProvider>
     )
 
@@ -93,7 +114,7 @@ describe('PlayoffSeriesBadges', () => {
 
     await user.hover(screen.getByRole('button', { name: /first round/i }))
     expect(await screen.findByRole('tooltip')).toHaveTextContent(
-      'First round: beat Orlando Magic 4-3'
+      'First round: defeated Orlando Magic 4-3'
     )
 
     await user.unhover(screen.getByRole('button', { name: /first round/i }))

@@ -413,7 +413,8 @@ describe('Season selector', () => {
 })
 
 describe('Data source badges', () => {
-  const sourceBadge = () => screen.getByRole('link', { name: /rankings source/i })
+  const sourceBadge = () =>
+    screen.getByRole('link', { name: /rankings source/i })
 
   it('names the source of the selected season beside the chart', async () => {
     const user = userEvent.setup()
@@ -443,7 +444,8 @@ describe('Data source badges', () => {
 })
 
 describe('Playoff series badges', () => {
-  const seriesList = () => screen.queryByRole('list', { name: 'Playoff series' })
+  const seriesList = () =>
+    screen.queryByRole('list', { name: 'Playoff series' })
   const pin = (user: ReturnType<typeof userEvent.setup>, name: string) =>
     user.click(screen.getByText(name, { selector: 'text' }))
 
@@ -456,27 +458,35 @@ describe('Playoff series badges', () => {
     const items = within(seriesList()!).getAllByRole('listitem')
     expect(items).toHaveLength(4)
     expect(within(items[0]).getByRole('button')).toHaveAccessibleName(
-      'First round: beat Detroit Pistons 4-0'
+      'First round: defeated Detroit Pistons 4-0'
     )
 
     await pin(user, 'Miami Heat')
     const miami = within(seriesList()!).getAllByRole('button')
     expect(miami).toHaveLength(2)
-    expect(miami[1]).toHaveAccessibleName('Second round: lost to Boston Celtics 2-4')
+    expect(miami[1]).toHaveAccessibleName(
+      'Second round: lost to Boston Celtics 2-4'
+    )
 
     await pin(user, 'Detroit Pistons')
     expect(seriesList()).not.toBeInTheDocument()
   })
 
-  it("pins the opponent when a badge in the chart view is clicked", async () => {
+  it('pins the opponent when a badge in the chart view is clicked', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)
     await pin(user, 'Boston Celtics')
 
-    await user.click(screen.getByRole('button', { name: 'Second round: beat Miami Heat 4-2' }))
+    await user.click(
+      screen.getByRole('button', {
+        name: 'Second round: defeated Miami Heat 4-2',
+      })
+    )
     const miami = within(seriesList()!).getAllByRole('button')
     expect(miami).toHaveLength(2)
-    expect(miami[1]).toHaveAccessibleName('Second round: lost to Boston Celtics 2-4')
+    expect(miami[1]).toHaveAccessibleName(
+      'Second round: lost to Boston Celtics 2-4'
+    )
 
     await user.click(miami[1])
     expect(within(seriesList()!).getAllByRole('button')).toHaveLength(4)
