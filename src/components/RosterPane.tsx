@@ -1,4 +1,5 @@
 import { LogIn, LogOut } from 'lucide-react'
+import { cn } from 'cn'
 import { useAppSelector } from '@/store/hooks'
 import {
   getPinnedTeamCoaches,
@@ -12,6 +13,13 @@ import {
   type RosterEntry,
   type Team,
 } from 'types'
+import {
+  MIN_RATED_GAMES,
+  MIN_RATED_MINUTES,
+  statRating,
+  type RatedStat,
+  type StatRating,
+} from './statRating'
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
 import {
   Table,
@@ -26,6 +34,13 @@ type StatColumn = {
   label: string
   title: string
   value: (player: RosterEntry) => string
+  rated?: RatedStat
+}
+
+const RATING_CLASSES: Record<StatRating, string> = {
+  good: 'text-stat-good',
+  fair: 'text-stat-fair',
+  poor: 'text-stat-poor',
 }
 
 const decimal = (value: number | null) =>
@@ -39,15 +54,41 @@ const STAT_COLUMNS: StatColumn[] = [
     value: (p) => String(p.age),
   },
   { label: 'G', title: 'Games played', value: (p) => String(p.g) },
-  { label: 'PTS', title: 'Points per game', value: (p) => decimal(p.pts) },
-  { label: 'REB', title: 'Rebounds per game', value: (p) => decimal(p.trb) },
-  { label: 'AST', title: 'Assists per game', value: (p) => decimal(p.ast) },
-  { label: 'STL', title: 'Steals per game', value: (p) => decimal(p.stl) },
-  { label: 'TOV', title: 'Turnovers per game', value: (p) => decimal(p.tov) },
+  {
+    label: 'PTS',
+    title: 'Points per game',
+    value: (p) => decimal(p.pts),
+    rated: 'pts',
+  },
+  {
+    label: 'REB',
+    title: 'Rebounds per game',
+    value: (p) => decimal(p.trb),
+    rated: 'trb',
+  },
+  {
+    label: 'AST',
+    title: 'Assists per game',
+    value: (p) => decimal(p.ast),
+    rated: 'ast',
+  },
+  {
+    label: 'STL',
+    title: 'Steals per game',
+    value: (p) => decimal(p.stl),
+    rated: 'stl',
+  },
+  {
+    label: 'TOV',
+    title: 'Turnovers per game',
+    value: (p) => decimal(p.tov),
+    rated: 'tov',
+  },
   {
     label: 'PER',
     title: 'Player Efficiency Rating',
     value: (p) => decimal(p.per),
+    rated: 'per',
   },
 ]
 
@@ -139,18 +180,34 @@ export default function RosterPane() {
                   )}
                 </span>
               </TableCell>
-              {STAT_COLUMNS.map((column) => (
-                <TableCell
-                  key={column.label}
-                  className="text-right tabular-nums"
-                >
-                  {column.value(player)}
-                </TableCell>
-              ))}
+              {STAT_COLUMNS.map((column) => {
+                const rating = column.rated
+                  ? statRating(player, column.rated)
+                  : undefined
+                return (
+                  <TableCell
+                    key={column.label}
+                    data-rating={rating}
+                    className={cn(
+                      'text-right tabular-nums',
+                      rating && RATING_CLASSES[rating]
+                    )}
+                  >
+                    {column.value(player)}
+                  </TableCell>
+                )
+              })}
             </TableRow>
           ))}
         </TableBody>
       </Table>
+      <p className="mt-2 text-sm text-muted-foreground">
+        Stats are colored against every player since 2003-04 with{' '}
+        {MIN_RATED_GAMES}+ games and {MIN_RATED_MINUTES}+ minutes per game:{' '}
+        <span className="text-stat-good">green</span> is the top quarter,{' '}
+        <span className="text-stat-poor">red</span> the bottom quarter. Fewer
+        turnovers rate higher. Players below those minimums aren't colored.
+      </p>
     </section>
   )
 }

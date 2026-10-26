@@ -56,6 +56,7 @@ Names specific to this site:
 | `dim` | Team labels pushed back while another team is active |
 | `rank-up`, `rank-mid`, `rank-down` | Rising / middle / falling rank, in swing cards and trend minimaps |
 | `series-won`, `series-lost` | Won / lost playoff series badges |
+| `stat-good`, `stat-fair`, `stat-poor` | Top-quarter / middle / bottom-quarter player stats in the roster pane |
 | `chart-grid` | Chart grid lines |
 | `chart-playoffs` | "Playoffs Begin" line and label |
 

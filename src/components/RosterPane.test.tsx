@@ -123,6 +123,26 @@ describe('RosterPane', () => {
     )
   })
 
+  it('colors stats for regular players and leaves small samples plain', () => {
+    renderPane([Team.Boston])
+    const [pierce, , , scrub] = bodyRows()
+    const ratings = (row: HTMLElement) =>
+      within(row)
+        .getAllByRole('cell')
+        .slice(4)
+        .map((cell) => cell.getAttribute('data-rating'))
+    expect(ratings(pierce)).toEqual([
+      'good',
+      'fair',
+      'good',
+      'good',
+      'poor',
+      'good',
+    ])
+    expect(within(pierce).getAllByRole('cell')[4]).toHaveClass('text-stat-good')
+    expect(ratings(scrub)).toEqual([null, null, null, null, null, null])
+  })
+
   it('renders nothing without exactly one pinned team', () => {
     const { container } = renderPane([])
     expect(container).toBeEmptyDOMElement()

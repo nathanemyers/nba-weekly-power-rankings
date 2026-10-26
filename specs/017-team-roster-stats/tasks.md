@@ -11,14 +11,14 @@ description: "Task list for Team Roster Stats"
 
 **Tests**: Included. The plan and quickstart call for fixture-based parser tests, loader tests and a component test, matching how `scripts/lib/playoffs.test.mjs` and `src/components/PlayoffSeriesBadges.test.tsx` cover the previous feature.
 
-**Organization**: Tasks are grouped by user story. User Story 4 (the data) blocks the others, so its phase comes first after Foundational even though it is listed last in the spec.
+**Organization**: Tasks are grouped by user story. Phase 8 (US5, stat colors) was added after the first implementation. User Story 4 (the data) blocks the others, so its phase comes first after Foundational even though it is listed last in the spec.
 
 **Forbidden**: Never run `npm run build:summaries` or `scripts/build-summaries.mjs` (they spend API tokens). `npm run build:rankings` is fine.
 
 ## Format: `[ID] [P?] [Story] Description`
 
 - **[P]**: Can run in parallel (different files, no dependencies on incomplete tasks)
-- **[Story]**: US1 roster pane, US2 mid-season moves, US3 head coaches, US4 scraped data
+- **[Story]**: US1 roster pane, US2 mid-season moves, US3 head coaches, US4 scraped data, US5 stat colors
 
 ## Code rules that apply to every UI task (from AGENTS.md)
 
@@ -146,6 +146,20 @@ No `useMemo`, minimal `useEffect`, no `useRef` for state, Tailwind utility class
 
 ---
 
+## Phase 8: User Story 5 - See at a glance who stood out (Priority: P3)
+
+**Goal**: Color six stats red, yellow or green against fixed league-wide breakpoints. Spec: [contracts/roster-pane.md](contracts/roster-pane.md) "Stat colors", [research.md](research.md) R10
+
+**Independent Test**: 2015-16 Golden State: Curry's PTS, AST, STL and PER green, REB yellow, TOV red; Kevon Looney (5 games) uncolored.
+
+- [X] T039 [P] [US5] Add `--stat-good`, `--stat-fair`, `--stat-poor` to `:root` and `--color-stat-*` to `@theme inline` in src/index.css, and document them in docs/styling.md's site-specific table
+- [X] T040 [P] [US5] Write failing tests in src/components/statRating.test.ts: cut edges (5.9 poor, 6 fair, 13.4 fair, 13.5 good for points), reversed turnovers, negative PER, `per: null` unrated, and players under 10 games or 10 minutes per game unrated
+- [X] T041 [US5] Create src/components/statRating.ts with `STAT_BREAKPOINTS` (pts 6/13.5, trb 2.5/5.5, ast 1/3, stl 0.5/1, tov 0.9/1.8 with `lowerIsBetter`, per 11/17), `MIN_RATED_GAMES = 10`, `MIN_RATED_MINUTES = 10` and `statRating(player, stat)`. Make T040 pass
+- [X] T042 [US5] In src/components/RosterPane.tsx add `rated` to the six stat columns, apply `text-stat-good`/`text-stat-fair`/`text-stat-poor` through a fixed lookup with `data-rating` on each rated cell, and add the explanatory note under the table; add a test to src/components/RosterPane.test.tsx for a qualified and an unqualified player
+- [X] T043 [US5] Check the colors in the browser preview, then run `npm run lint`, `npm test` and `npm run build`
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase Dependencies
@@ -157,6 +171,7 @@ No `useMemo`, minimal `useEffect`, no `useRef` for state, Tailwind utility class
 - **US2 (Phase 5)**: after US1 (extends `teamRosters`, `RosterEntrySchema` and `RosterPane`)
 - **US3 (Phase 6)**: after US1 (adds to `RosterPane` and `build-rankings.mjs`); independent of US2, but both edit src/components/RosterPane.tsx, src/schemas/season.ts and scripts/lib/rosters.mjs, so run them one after the other
 - **Polish (Phase 7)**: after the stories you ship
+- **US5 (Phase 8)**: after US1; touches src/components/RosterPane.tsx, so not alongside US2 or US3
 
 ### Within Each Story
 

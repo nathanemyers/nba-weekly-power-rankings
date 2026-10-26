@@ -35,6 +35,9 @@
   --rank-down: #ff5a50;
   --series-won: #30d158;
   --series-lost: #ff5a50;
+  --stat-good: #30d158;
+  --stat-fair: #ffd60a;
+  --stat-poor: #ff5a50;
   --chart-grid: #333336;
   --chart-playoffs: #ff4d4f;
 }
@@ -69,6 +72,9 @@
   --color-rank-down: var(--rank-down);
   --color-series-won: var(--series-won);
   --color-series-lost: var(--series-lost);
+  --color-stat-good: var(--stat-good);
+  --color-stat-fair: var(--stat-fair);
+  --color-stat-poor: var(--stat-poor);
   --color-chart-grid: var(--chart-grid);
   --color-chart-playoffs: var(--chart-playoffs);
 

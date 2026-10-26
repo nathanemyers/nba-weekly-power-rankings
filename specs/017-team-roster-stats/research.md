@@ -64,3 +64,13 @@ Findings from fetching sample Basketball-Reference pages on 2026-10-26 (`/teams/
   - Other columns come along for free and are kept raw: playoff record this season (`cur_g_p`, `cur_w_p`, `cur_l_p`), seasons with the franchise and overall (`seas_franch`, `seas_overall`), and franchise and career totals (`fr_*`, `car_*`). Only name, id and this season's regular-season record ship to the app.
   - Coach ids end in `c` and differ from player ids, so a coach who also played is not confused with his player row.
 - **Alternatives considered**: The "Coach:" line on each team season page. Rejected; it needs 30 requests per season and is prose.
+
+## R10. Stat color breakpoints
+
+- **Decision**: Fixed breakpoints at the 25th and 75th percentiles of all 2003-04 to 2025-26 player-team seasons with 10+ games and 10+ minutes per game (9,388 rows): points 6 / 13.5, rebounds 2.5 / 5.5, assists 1 / 3, steals 0.5 / 1, turnovers 0.9 / 1.8 (reversed), PER 11 / 17. Players below 10 games or 10 minutes per game are not colored.
+- **Rationale**:
+  - The maintainer reviewed histograms of each stat with adjustable cuts (an interactive page built from the processed season data) and chose the percentile preset.
+  - Points, rebounds, assists, steals and turnovers are right-skewed, so mean ± 1 SD cuts land poorly (the low cut for assists falls near zero). Percentiles give each band a predictable share: across the qualified rows the red/yellow/green split is 29/47/24 for points, 26/52/22 rebounds, 26/49/25 assists, 25/50/25 steals, 32/44/24 turnovers (green/yellow/red), and 25/53/22 PER. Bands are uneven where many players share a rounded value at a cut.
+  - With every player included, PER runs from -54 to 134 because of tiny samples; the 10-game, 10-minute floor removes those, and the same floor decides who gets colored so the colors match the population they were drawn from.
+  - Fixed cuts rather than per-season percentiles keep a value's color the same across eras and keep the logic in one small table.
+- **Alternatives considered**: Thirds (more red and green, less signal per color), mean ± 1 SD (fits PER but not the skewed counting stats), per-season percentiles (colors shift between seasons, needs build-time data).

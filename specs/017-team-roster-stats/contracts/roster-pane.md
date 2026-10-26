@@ -34,6 +34,23 @@
 - Tooltip and accessible name: "Joined from {full team name} mid-season" / "Left for {full team name} mid-season". The mark is focusable so keyboard users get the tooltip.
 - Colors come from theme tokens in `src/index.css` only.
 
+## Stat colors
+
+- Columns PTS, REB, AST, STL, TOV and PER are rated by `statRating(player, stat)` in `src/components/statRating.ts`, which holds `STAT_BREAKPOINTS`, `MIN_RATED_GAMES = 10` and `MIN_RATED_MINUTES = 10`.
+
+| Stat | Low | High | Below low | Low to high | High and up |
+|---|---|---|---|---|---|
+| `pts` | 6 | 13.5 | poor | fair | good |
+| `trb` | 2.5 | 5.5 | poor | fair | good |
+| `ast` | 1 | 3 | poor | fair | good |
+| `stl` | 0.5 | 1 | poor | fair | good |
+| `tov` | 0.9 | 1.8 | good | fair | poor |
+| `per` | 11 | 17 | poor | fair | good |
+
+- `good`, `fair` and `poor` map to the text classes `text-stat-good`, `text-stat-fair` and `text-stat-poor` (theme tokens `--stat-good`, `--stat-fair`, `--stat-poor` in `src/index.css`) through a fixed lookup, never a built class name. Each rated cell carries `data-rating`.
+- Unrated: players under 10 games or 10 minutes per game, and `per: null`.
+- A note under the table explains the colors in words.
+
 ## Interactions
 
 - Changing the season or the pinned team re-renders the pane for the new pair; unpinning or pinning a second team hides it.
