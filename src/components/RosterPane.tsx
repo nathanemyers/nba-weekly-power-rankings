@@ -237,7 +237,7 @@ export default function RosterPane() {
         <TableBody>
           {roster.map((player) => (
             <TableRow key={player.id} className="group hover:bg-muted">
-              <TableCell className="sticky left-0 bg-background font-medium group-hover:bg-muted">
+              <TableCell className="sticky left-0 bg-background font-medium transition-colors group-hover:bg-muted">
                 <span className="flex items-center justify-between gap-3">
                   {player.name}
                   {(player.joinedFrom || player.leftFor) && (
