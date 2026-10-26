@@ -1,5 +1,11 @@
 import { cn } from 'cn'
-import { getTeamName, PlayoffStage, type SeriesResult, type SeriesRound } from 'types'
+import {
+  getTeamName,
+  PlayoffStage,
+  type SeriesResult,
+  type SeriesRound,
+  type Team,
+} from 'types'
 import { PLAYOFF_MEDALS } from './Chart/utils'
 import TeamLogo from './TeamLogo'
 import { Badge } from './ui/badge'
@@ -8,6 +14,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
 interface PlayoffSeriesBadgesProps {
   series?: SeriesResult[]
   className?: string
+  onTeamClick?: (team: Team) => void
 }
 
 const ROUND_LABELS: Record<SeriesRound, string> = {
@@ -42,7 +49,8 @@ export default function PlayoffSeriesBadges(props: PlayoffSeriesBadgesProps) {
                   asChild
                   variant="outline"
                   className={cn(
-                    'h-7 cursor-default gap-1 px-1.5 text-sm',
+                    'h-7 gap-1 px-1.5 text-sm',
+                    props.onTeamClick ? 'cursor-pointer' : 'cursor-default',
                     won
                       ? 'border-series-won bg-series-won/15 text-foreground'
                       : 'border-series-lost bg-series-lost/15 text-foreground'
@@ -51,7 +59,10 @@ export default function PlayoffSeriesBadges(props: PlayoffSeriesBadgesProps) {
                   <button
                     type="button"
                     aria-label={description}
-                    onClick={(event) => event.stopPropagation()}
+                    onClick={(event) => {
+                      event.stopPropagation()
+                      props.onTeamClick?.(result.opponent)
+                    }}
                   >
                     <TeamLogo
                       team={result.opponent}

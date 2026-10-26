@@ -63,7 +63,12 @@ export default function ChartView() {
             </div>
             <div className="grid-col-2 justify-self-center flex flex-row flex-wrap items-center justify-center gap-3">
               {singlePinnedTeam && <TeamHistoryButton />}
-              {singlePinnedTeam && <PlayoffSeriesBadges series={pinnedSeries} />}
+              {singlePinnedTeam && (
+                <PlayoffSeriesBadges
+                  series={pinnedSeries}
+                  onTeamClick={(team) => dispatch(setPinnedTeams([team]))}
+                />
+              )}
             </div>
             <div className="grid-col-3 md:justify-self-end justify-self-center align-items-center gap-2 flex flex-row">
               {pinnedTeams.length > 0 && <ChartFilterClearButton />}

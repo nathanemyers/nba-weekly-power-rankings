@@ -468,6 +468,20 @@ describe('Playoff series badges', () => {
     expect(seriesList()).not.toBeInTheDocument()
   })
 
+  it("pins the opponent when a badge in the chart view is clicked", async () => {
+    const user = userEvent.setup()
+    renderWithStore(<App />)
+    await pin(user, 'Boston Celtics')
+
+    await user.click(screen.getByRole('button', { name: 'Second round: beat Miami Heat 4-2' }))
+    const miami = within(seriesList()!).getAllByRole('button')
+    expect(miami).toHaveLength(2)
+    expect(miami[1]).toHaveAccessibleName('Second round: lost to Boston Celtics 2-4')
+
+    await user.click(miami[1])
+    expect(within(seriesList()!).getAllByRole('button')).toHaveLength(4)
+  })
+
   it('shows on team history cards without leaving the history when clicked', async () => {
     const user = userEvent.setup()
     renderWithStore(<App />)

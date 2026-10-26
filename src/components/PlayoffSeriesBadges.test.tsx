@@ -74,6 +74,19 @@ describe('PlayoffSeriesBadges', () => {
     expect(onParentClick).not.toHaveBeenCalled()
   })
 
+  it('passes the clicked opponent to onTeamClick', async () => {
+    const user = userEvent.setup()
+    const onTeamClick = vi.fn()
+    render(
+      <TooltipProvider>
+        <PlayoffSeriesBadges series={PLAYOFF_SERIES[Team.Boston]} onTeamClick={onTeamClick} />
+      </TooltipProvider>
+    )
+
+    await user.click(screen.getByRole('button', { name: /conference finals/i }))
+    expect(onTeamClick).toHaveBeenCalledWith(Team.Toronto)
+  })
+
   it('shows the result in a tooltip on hover and on keyboard focus', async () => {
     const user = userEvent.setup()
     renderBadges(PLAYOFF_SERIES[Team.Miami])
