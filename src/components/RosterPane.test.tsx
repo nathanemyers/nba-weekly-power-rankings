@@ -175,6 +175,26 @@ describe('RosterPane', () => {
     expect(ratings(scrub)).toEqual([null, null, null, null, null, null])
   })
 
+  it('shows a color key with each band labeled by its share', () => {
+    renderPane([Team.Boston])
+    const key = screen.getByRole('img', { name: /^Stat colors/ })
+    expect(key).toHaveAccessibleName(
+      'Stat colors, lowest to highest: red 25%, yellow 50%, green 15%, purple 10%. Fewer turnovers rate higher.'
+    )
+    expect(key.firstElementChild?.textContent).toBe('25%50%15%10%')
+    const segments = [...(key.lastElementChild?.children ?? [])]
+    expect(segments.map((segment) => segment.className)).toEqual([
+      expect.stringContaining('bg-stat-poor'),
+      expect.stringContaining('bg-stat-fair'),
+      expect.stringContaining('bg-stat-good'),
+      expect.stringContaining('bg-stat-elite'),
+    ])
+    expect(
+      segments.map((segment) => (segment as HTMLElement).style.flexGrow)
+    ).toEqual(['25', '50', '15', '10'])
+    expect(screen.queryByText(/Stats are colored/)).toBeNull()
+  })
+
   it('renders nothing without exactly one pinned team', () => {
     const { container } = renderPane([])
     expect(container).toBeEmptyDOMElement()

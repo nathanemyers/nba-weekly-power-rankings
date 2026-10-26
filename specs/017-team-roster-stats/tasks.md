@@ -181,6 +181,15 @@ No `useMemo`, minimal `useEffect`, no `useRef` for state, Tailwind utility class
 
 ---
 
+## Phase 11: User Story 5 revision - Color key bar
+
+**Goal**: Replace the note under the table with a segmented color key next to the coach line. Spec: FR-019, [contracts/roster-pane.md](contracts/roster-pane.md) "Stat colors"
+
+- [X] T051 [US5] Add `RATING_BANDS` (`poor` 25, `fair` 50, `good` 15, `elite` 10) to src/components/statRating.ts, with a test in src/components/statRating.test.ts that it covers each rating once and adds up to 100
+- [X] T052 [US5] In src/components/RosterPane.tsx remove the note under the table and add a `RatingKey` beside the coach line: a bar with one `bg-stat-*` block per band sized by `percent`, white (`border-foreground`) dividers, percentages above, and a `role="img"` label listing the bands; add a test to src/components/RosterPane.test.tsx, check in the browser preview, and run `npm run lint`, `npm test` and `npm run build`
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase Dependencies

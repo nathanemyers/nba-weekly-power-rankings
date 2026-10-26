@@ -1,13 +1,25 @@
 import { describe, expect, it } from 'vitest'
 import { ROSTERS } from 'test/fixtures'
 import { Team, type RosterEntry } from 'types'
-import { statRating } from './statRating'
+import { RATING_BANDS, statRating } from './statRating'
 
 const regular = (stats: Partial<RosterEntry>): RosterEntry => ({
   ...ROSTERS[Team.Boston]![0],
   g: 60,
   mpg: 25,
   ...stats,
+})
+
+describe('RATING_BANDS', () => {
+  it('covers every rating once and adds up to 100%', () => {
+    expect(RATING_BANDS.map((band) => band.rating).sort()).toEqual([
+      'elite',
+      'fair',
+      'good',
+      'poor',
+    ])
+    expect(RATING_BANDS.reduce((sum, band) => sum + band.percent, 0)).toBe(100)
+  })
 })
 
 describe('statRating', () => {

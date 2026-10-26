@@ -98,7 +98,7 @@ A visitor scanning a roster wants to spot the standout and struggling stat lines
 2. **Given** the same player's turnovers, **When** the pane is shown, **Then** they are purple below the elite breakpoint, green from there up to the low breakpoint, yellow up to the high one, and red from the high breakpoint up.
 3. **Given** a player with fewer than 10 games or fewer than 10 minutes per game, **When** the pane is shown, **Then** none of their stats are colored.
 4. **Given** a missing PER, **When** the pane is shown, **Then** the dash is not colored.
-5. **Given** the pane, **When** a visitor wonders what the colors mean, **Then** a short note under the table explains them, so the colors never stand alone.
+5. **Given** the pane, **When** a visitor wonders what the colors mean, **Then** a color key to the right of the coaching line shows a horizontal bar split into red 25%, yellow 50%, green 15% and purple 10%, with white dividers between the blocks and each block's percentage above it. Screen readers get the same key in words, including that fewer turnovers rate higher.
 
 ---
 
@@ -140,7 +140,7 @@ A visitor scanning a roster wants to spot the standout and struggling stat lines
 
 - **FR-017**: The pane MUST color points, rebounds, assists, steals, turnovers and PER using these breakpoints (low, high, elite): points 6, 13.5, 19; rebounds 2.5, 5.5, 7.5; assists 1, 3, 5; steals 0.5, 1, 1.4; turnovers 0.9, 1.8, 0.6; PER 11, 17, 20. A value below low is red, from low up to high is yellow, from high up to elite is green, and from elite up is purple. Turnovers run the other way: below elite is purple, from elite up to low is green, from low up to high is yellow, and from high up is red.
 - **FR-018**: Stats MUST NOT be colored for players with fewer than 10 games or fewer than 10 minutes per game for the team, or for a missing value.
-- **FR-019**: The pane MUST explain the colors in text under the table, including which players are colored and that fewer turnovers rate higher.
+- **FR-019**: The pane MUST show a color key to the right of the coaching line: a horizontal bar split into one block per color, sized by that color's share (red 25%, yellow 50%, green 15%, purple 10%), separated by white lines, with each share labeled above its block. The key MUST have an accessible text equivalent. The shares MUST be defined in one place alongside the breakpoints so changing the color coding means editing a single list.
 - **FR-020**: Colors MUST come from the site theme, and only the six listed stats are colored.
 
 ### Key Entities

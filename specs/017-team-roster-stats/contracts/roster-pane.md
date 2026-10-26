@@ -53,7 +53,9 @@
 
 - `elite`, `good`, `fair` and `poor` map to the text classes `text-stat-elite` (purple), `text-stat-good` (green), `text-stat-fair` (yellow) and `text-stat-poor` (red) (theme tokens `--stat-elite`, `--stat-good`, `--stat-fair`, `--stat-poor` in `src/index.css`) through a fixed lookup, never a built class name. Each rated cell carries `data-rating`.
 - Unrated: players under 10 games or 10 minutes per game, and `per: null`.
-- A note under the table explains the colors in words.
+- A color key sits to the right of the coach line (the two share a wrapping `justify-between` row; the key keeps its place on the right even with no coach data). It is a 16rem-wide horizontal bar built from `RATING_BANDS` in `src/components/statRating.ts`, lowest rating first (`poor` 25, `fair` 50, `good` 15, `elite` 10). Each block's width is its `percent` (as `flex-grow` in `style`), its fill is `bg-stat-*`, blocks after the first have a 2px `border-foreground` left divider, and each block's percentage is printed above it.
+- The key is `role="img"` with the label "Stat colors, lowest to highest: red 25%, yellow 50%, green 15%, purple 10%. Fewer turnovers rate higher."
+- To change the color coding, edit `STAT_BREAKPOINTS` and `RATING_BANDS` together; the key, its labels and its accessible name follow `RATING_BANDS`.
 
 ## Interactions
 

@@ -15,8 +15,7 @@ import {
   type Team,
 } from 'types'
 import {
-  MIN_RATED_GAMES,
-  MIN_RATED_MINUTES,
+  RATING_BANDS,
   statRating,
   type RatedStat,
   type StatRating,
@@ -45,6 +44,20 @@ const RATING_CLASSES: Record<StatRating, string> = {
   good: 'text-stat-good',
   fair: 'text-stat-fair',
   poor: 'text-stat-poor',
+}
+
+const RATING_FILLS: Record<StatRating, string> = {
+  elite: 'bg-stat-elite',
+  good: 'bg-stat-good',
+  fair: 'bg-stat-fair',
+  poor: 'bg-stat-poor',
+}
+
+const RATING_NAMES: Record<StatRating, string> = {
+  elite: 'purple',
+  good: 'green',
+  fair: 'yellow',
+  poor: 'red',
 }
 
 const decimal = (value: number | null) =>
@@ -153,6 +166,40 @@ function CoachLine(props: { coaches: CoachStint[] }) {
   )
 }
 
+function RatingKey() {
+  const description = `Stat colors, lowest to highest: ${RATING_BANDS.map(
+    (band) => `${RATING_NAMES[band.rating]} ${band.percent}%`
+  ).join(', ')}. Fewer turnovers rate higher.`
+
+  return (
+    <div role="img" aria-label={description} className="w-64 shrink-0">
+      <div aria-hidden className="flex text-xs text-muted-foreground">
+        {RATING_BANDS.map((band) => (
+          <span
+            key={band.rating}
+            className="text-center tabular-nums"
+            style={{ flexGrow: band.percent, flexBasis: 0 }}
+          >
+            {band.percent}%
+          </span>
+        ))}
+      </div>
+      <div aria-hidden className="mt-0.5 flex h-3 overflow-hidden rounded-sm">
+        {RATING_BANDS.map((band) => (
+          <span
+            key={band.rating}
+            className={cn(
+              'border-foreground not-first:border-l-2',
+              RATING_FILLS[band.rating]
+            )}
+            style={{ flexGrow: band.percent, flexBasis: 0 }}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function RosterPane() {
   const teamId = useAppSelector(getSinglePinnedTeam)
   const season = useAppSelector(getSelectedSeason)
@@ -166,7 +213,10 @@ export default function RosterPane() {
       <h2 id="roster-heading" className="text-lg font-semibold">
         {getTeamName(teamId)} roster, {season.name}
       </h2>
-      {coaches?.length ? <CoachLine coaches={coaches} /> : null}
+      <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
+        {coaches?.length ? <CoachLine coaches={coaches} /> : null}
+        <RatingKey />
+      </div>
       <Table className="mt-2">
         <TableHeader>
           <TableRow>
@@ -223,15 +273,6 @@ export default function RosterPane() {
           ))}
         </TableBody>
       </Table>
-      <p className="mt-2 text-sm text-muted-foreground">
-        Stats are colored against every player since 2003-04 with{' '}
-        {MIN_RATED_GAMES}+ games and {MIN_RATED_MINUTES}+ minutes per game:{' '}
-        <span className="text-stat-elite">purple</span> is the top 10%,{' '}
-        <span className="text-stat-good">green</span> the rest of the top
-        quarter, <span className="text-stat-poor">red</span> the bottom quarter.
-        Fewer turnovers rate higher. Players below those minimums aren't
-        colored.
-      </p>
     </section>
   )
 }
