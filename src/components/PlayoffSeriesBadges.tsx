@@ -39,7 +39,7 @@ export default function PlayoffSeriesBadges(props: PlayoffSeriesBadgesProps) {
           result.round === PlayoffStage.Finals && won
             ? PLAYOFF_MEDALS[PlayoffStage.Champion].icon
             : PLAYOFF_MEDALS[result.round].icon
-        const description = `${ROUND_LABELS[result.round]}: ${won ? 'beat' : 'lost to'} ${getTeamName(result.opponent)} ${result.wins}-${result.losses}`
+        const description = `${ROUND_LABELS[result.round]}: ${won ? 'defeated' : 'lost to'} ${getTeamName(result.opponent)} ${result.wins}-${result.losses}`
 
         return (
           <li key={result.round}>
