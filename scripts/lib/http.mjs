@@ -1,6 +1,5 @@
 const USER_AGENT = 'nba-weekly-power-rankings (personal project)'
 
-<<<<<<< HEAD
 const windows1252 = new TextDecoder('windows-1252')
 const utf8 = new TextDecoder('utf-8')
 
@@ -30,23 +29,14 @@ export function decodeUtf8Lenient(bytes) {
   return out
 }
 
-=======
->>>>>>> master
 export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
-<<<<<<< HEAD
 /** Fetches text with retries and backoff; `allowRedirect: false` turns a 3xx into null, `encoding` picks a decoder ('utf-8-lenient' or any TextDecoder label). */
 export async function fetchTextWithRetry(
   url,
   { retries = 3, baseDelayMs = 1000, allowRedirect = true, encoding } = {}
-=======
-/** Fetches text with retries and exponential backoff; with `allowRedirect: false` a 3xx response resolves to null. */
-export async function fetchTextWithRetry(
-  url,
-  { retries = 3, baseDelayMs = 1000, allowRedirect = true } = {}
->>>>>>> master
 ) {
   let lastError
   for (let attempt = 0; attempt <= retries; attempt++) {
@@ -61,13 +51,9 @@ export async function fetchTextWithRetry(
       if (!res.ok) {
         throw new Error(`HTTP ${res.status} ${res.statusText} for ${url}`)
       }
-<<<<<<< HEAD
       if (!encoding) return await res.text()
       const bytes = new Uint8Array(await res.arrayBuffer())
       return encoding === 'utf-8-lenient' ? decodeUtf8Lenient(bytes) : new TextDecoder(encoding).decode(bytes)
-=======
-      return await res.text()
->>>>>>> master
     } catch (err) {
       lastError = err
       if (attempt < retries) {
