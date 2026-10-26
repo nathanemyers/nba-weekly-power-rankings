@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { PlayoffStage, Team } from '../types/nba'
+import { DataSource, PlayoffStage, Team } from '../types/nba'
 
 export const WeekRankingSchema = z.object({
   week: z.int().min(1),
@@ -11,6 +11,7 @@ export const WeekRankingSchema = z.object({
 // Output of scripts/build-rankings.mjs, one file per season
 export const SeasonDataSchema = z.object({
   season: z.string().min(1),
+  source: z.enum(DataSource),
   maxWeek: z.int().min(1),
   rankings: z.partialRecord(z.enum(Team), z.array(WeekRankingSchema)),
   playoffs: z.partialRecord(z.enum(Team), z.enum(PlayoffStage)).optional(),

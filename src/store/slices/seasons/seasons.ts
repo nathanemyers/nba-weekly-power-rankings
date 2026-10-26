@@ -2,12 +2,13 @@ import { createSelector, createSlice } from '@reduxjs/toolkit'
 import { seasonData, seasons } from 'data/seasons'
 import { loadSeasons } from './loadSeasons'
 import type { RootState } from 'store/redux'
-import type { Team, TeamRankings } from '@/types/nba'
+import type { DataSource, Team, TeamRankings } from '@/types/nba'
 
 export const initialSeasons = loadSeasons(seasons, seasonData)
 
 export type Season = {
   name: string
+  source: DataSource
   teams: TeamRankings[]
   maxWeek: number
   completed: boolean

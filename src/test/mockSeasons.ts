@@ -6,11 +6,12 @@ export const mockSeasons = {
   seasonData: {
     long: {
       season: 'long',
+      source: 'nba',
       maxWeek: 26,
       rankings: buildRankings(26),
       playoffs: PLAYOFFS,
       summaries: { bos: 'Boston led from the first week.' },
     },
-    short: { season: 'short', maxWeek: 8, rankings: buildRankings(8) },
+    short: { season: 'short', source: 'espn', maxWeek: 8, rankings: buildRankings(8) },
   },
 }

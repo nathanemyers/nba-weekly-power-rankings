@@ -6,6 +6,7 @@ import { loadSeasons } from './loadSeasons'
 
 const valid = (maxWeek = 4) => ({
   season: 'valid',
+  source: 'nba',
   maxWeek,
   rankings: buildRankings(maxWeek),
   playoffs: PLAYOFFS,

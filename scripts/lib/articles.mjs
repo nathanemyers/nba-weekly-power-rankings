@@ -1,4 +1,4 @@
-// Reads the scraped articles in /data/raw into per-season, per-team weekly entries.
+// Reads the scraped articles in /data/raw/nba into per-season, per-team weekly entries.
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
@@ -44,6 +44,35 @@ export function loadSeasonEntries(dataDir) {
         rank: entry.rank,
         teamName: entry.teamName,
         summaryText: entry.summaryText,
+      })
+    }
+  }
+  return seasons
+}
+
+// Reads the ESPN editions in /data/raw/espn into the same shape as loadSeasonEntries, keeping weekly editions only
+export function loadEspnSeasonEntries(dataDir) {
+  const index = JSON.parse(readFileSync(join(dataDir, 'index.json'), 'utf8'))
+  const weeklyEditions = index
+    .filter((e) => e.week != null && e.hasStructuredRankings)
+    .sort((a, b) => a.week - b.week)
+
+  const seasons = {}
+  for (const edition of weeklyEditions) {
+    const season = (seasons[edition.season] ??= { maxWeek: 0, weekCount: 0, teams: {} })
+    season.weekCount += 1
+    season.maxWeek = Math.max(season.maxWeek, edition.week)
+
+    const editionJson = JSON.parse(readFileSync(join(dataDir, edition.file), 'utf8'))
+    for (const entry of editionJson.rankings) {
+      const slug = TEAM_SLUGS[entry.teamId]
+      if (!slug) continue
+      ;(season.teams[slug] ??= []).push({
+        week: edition.week,
+        rank: entry.rank,
+        teamName: entry.teamName,
+        summaryText: entry.summaryText,
+        record: entry.record,
       })
     }
   }

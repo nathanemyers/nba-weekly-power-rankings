@@ -5,6 +5,7 @@ import TrendMinimap from './TrendMinimap/TrendMinimap'
 import { setSelectedSeason, setView, View } from '@/store/slices/UI'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
+import DataSourceBadge from './DataSourceBadge'
 
 interface TeamHistoryProps {
   team: Team
@@ -38,12 +39,17 @@ export default function TeamHistory(props: TeamHistoryProps) {
                     <TrendMinimap team={team.teamId} seasonId={season.name} />
                   </div>
                 </div>
-                <Badge
-                  variant="outline"
-                  className="whitespace-nowrap text-muted-foreground"
-                >
-                  AI-generated summary
-                </Badge>
+                <div className="flex flex-row items-center gap-2">
+                  <DataSourceBadge source={season.source} season={season.name} />
+                  {team.aiSummary && (
+                    <Badge
+                      variant="outline"
+                      className="whitespace-nowrap text-muted-foreground"
+                    >
+                      AI-generated summary
+                    </Badge>
+                  )}
+                </div>
               </div>
               <p className="text-base leading-normal text-foreground-soft">
                 {team.aiSummary}

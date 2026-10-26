@@ -5,5 +5,5 @@ import { loadSeasons } from './slices/seasons/loadSeasons'
 it('validates every bundled season', () => {
   const state = loadSeasons(seasons, seasonData)
   expect(state.invalidSeasons).toEqual([])
-  expect(state.order).toHaveLength(9)
+  expect(state.order).toHaveLength(22)
 })
