@@ -7,3 +7,19 @@ it('validates every bundled season', () => {
   expect(state.invalidSeasons).toEqual([])
   expect(state.order).toHaveLength(22)
 })
+
+it('gives every team in every bundled season a roster and a head coach', () => {
+  const state = loadSeasons(seasons, seasonData)
+  for (const season of Object.values(state.seasons)) {
+    for (const team of season.teams) {
+      expect(
+        team.roster?.length,
+        `${season.name} ${team.teamId} roster`
+      ).toBeGreaterThan(0)
+      expect(
+        team.coaches?.length,
+        `${season.name} ${team.teamId} coaches`
+      ).toBeGreaterThan(0)
+    }
+  }
+})

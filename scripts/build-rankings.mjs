@@ -3,11 +3,13 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { loadEspnSeasonEntries, loadSeasonEntries } from './lib/articles.mjs'
 import { teamPlayoffRuns } from './lib/playoffs.mjs'
+import { teamCoaches, teamRosters } from './lib/rosters.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const nbaDir = join(root, 'data', 'raw', 'nba')
 const espnDir = join(root, 'data', 'raw', 'espn')
 const playoffsFile = join(root, 'data', 'raw', 'basketball-reference', 'playoffs.json')
+const rostersDir = join(root, 'data', 'raw', 'basketball-reference', 'rosters')
 const processedDir = join(root, 'data', 'processed')
 const outDir = join(processedDir, 'seasons')
 
@@ -80,6 +82,18 @@ for (const season of Object.keys(bySeason).sort()) {
   }
   const playoffSeries = bracket ? teamPlayoffRuns(bracket, season) : {}
 
+  // Regular-season rosters and head coaches from scripts/scrape-rosters.mjs; every ranked team needs both
+  const rosterFile = join(rostersDir, `${season}.json`)
+  const rosterRaw = existsSync(rosterFile) ? JSON.parse(readFileSync(rosterFile, 'utf8')) : undefined
+  const rosters = rosterRaw ? teamRosters(rosterRaw, season) : {}
+  const coaches = rosterRaw ? teamCoaches(rosterRaw, season) : {}
+  if (rosterRaw) {
+    for (const slug of Object.keys(rankings)) {
+      if (!rosters[slug]) throw new Error(`${season} ${slug}: no roster`)
+      if (!coaches[slug]) throw new Error(`${season} ${slug}: no head coach`)
+    }
+  }
+
   const output = {
     season,
     source: nbaSeasons[season] ? 'nba' : 'espn',
@@ -88,6 +102,8 @@ for (const season of Object.keys(bySeason).sort()) {
     ...(Object.keys(playoffs).length && { playoffs }),
     ...(Object.keys(playoffSeries).length && { playoffSeries }),
     ...(Object.keys(summaries).length && { summaries }),
+    ...(Object.keys(rosters).length && { rosters }),
+    ...(Object.keys(coaches).length && { coaches }),
   }
   const file = join(outDir, `${season}.json`)
   writeFileSync(file, JSON.stringify(output))

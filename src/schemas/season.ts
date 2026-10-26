@@ -21,6 +21,35 @@ export const SeriesResultSchema = z.object({
   losses: z.int().min(0).max(4),
 })
 
+// One player's regular season with one team, as written by scripts/lib/rosters.mjs teamRosters
+export const RosterEntrySchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  pos: z.string(),
+  age: z.int().min(15).max(50),
+  g: z.int().min(1),
+  gs: z.int().min(0),
+  mpg: z.number().min(0),
+  pts: z.number().min(0),
+  trb: z.number().min(0),
+  ast: z.number().min(0),
+  stl: z.number().min(0),
+  blk: z.number().min(0),
+  tov: z.number().min(0),
+  per: z.number().nullable(),
+  joinedFrom: z.enum(Team).optional(),
+  leftFor: z.enum(Team).optional(),
+})
+
+// One head coach's time with one team in a season, as written by scripts/lib/rosters.mjs teamCoaches
+export const CoachStintSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  g: z.int().min(1),
+  w: z.int().min(0),
+  l: z.int().min(0),
+})
+
 // Output of scripts/build-rankings.mjs, one file per season
 export const SeasonDataSchema = z.object({
   season: z.string().min(1),
@@ -32,8 +61,12 @@ export const SeasonDataSchema = z.object({
   playoffSeries: z
     .partialRecord(z.enum(Team), z.array(SeriesResultSchema))
     .optional(),
+  rosters: z.partialRecord(z.enum(Team), z.array(RosterEntrySchema)).optional(),
+  coaches: z.partialRecord(z.enum(Team), z.array(CoachStintSchema)).optional(),
 })
 
 export type WeekRanking = z.infer<typeof WeekRankingSchema>
 export type SeasonData = z.infer<typeof SeasonDataSchema>
 export type SeriesResult = z.infer<typeof SeriesResultSchema>
+export type RosterEntry = z.infer<typeof RosterEntrySchema>
+export type CoachStint = z.infer<typeof CoachStintSchema>

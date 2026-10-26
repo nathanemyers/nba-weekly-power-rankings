@@ -54,6 +54,19 @@ export const getSinglePinnedTeam = (state: RootState) => {
   }
 }
 
+const getSinglePinnedTeamRankings = (state: RootState) => {
+  const teamId = getSinglePinnedTeam(state)
+  return teamId
+    ? getSelectedSeason(state)?.teams.find((team) => team.teamId === teamId)
+    : undefined
+}
+
+export const getPinnedTeamRoster = (state: RootState) =>
+  getSinglePinnedTeamRankings(state)?.roster
+
+export const getPinnedTeamCoaches = (state: RootState) =>
+  getSinglePinnedTeamRankings(state)?.coaches
+
 const getMaxWeek = (state: RootState) => getSelectedSeason(state)?.maxWeek ?? 1
 
 export const getIsZoomedOut = (state: RootState) => state.chart.zoomedOut

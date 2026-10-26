@@ -30,6 +30,7 @@ specify init --here --script py --integration claude --force
 - Never build Tailwind class names from variables. Run-time values go in `style` or SVG attributes.
 - Keep comments to a minimum. 1 sentence maximum.
 - Do not use estoteric JS contructs like `Map` or `Set`. Stick to objects and arrays.
+- Clickable UI elements should use the `cursor-pointer` tailwind CSS class.
 
 ## Forbidden Actions
 
