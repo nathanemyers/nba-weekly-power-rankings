@@ -3,6 +3,7 @@ import { getView, View } from 'store/slices/UI'
 import ChartView from './views/ChartView'
 import TeamHistoryView from './views/TeamHistoryView'
 import { CHART_WIDTH } from './constants'
+import { TooltipProvider } from './components/ui/tooltip'
 
 function App() {
   const view = useAppSelector(getView)
@@ -24,7 +25,7 @@ function App() {
       className="mx-auto flex min-h-screen w-full flex-col gap-4 px-4 py-8"
       style={{ maxWidth: CHART_WIDTH + 32 }}
     >
-      {body}
+      <TooltipProvider>{body}</TooltipProvider>
     </main>
   )
 }

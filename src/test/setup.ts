@@ -21,3 +21,10 @@ Element.prototype.hasPointerCapture ??= () => false
 Element.prototype.setPointerCapture ??= () => {}
 Element.prototype.releasePointerCapture ??= () => {}
 Element.prototype.scrollIntoView ??= () => {}
+
+// Radix tooltips measure their trigger with ResizeObserver, which jsdom doesn't implement.
+globalThis.ResizeObserver ??= class {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}

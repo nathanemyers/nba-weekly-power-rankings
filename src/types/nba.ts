@@ -1,10 +1,11 @@
-import type { WeekRanking } from 'schemas/season'
+import type { SeriesResult, WeekRanking } from 'schemas/season'
 
-export type { SeasonData, WeekRanking } from 'schemas/season'
+export type { SeasonData, SeriesResult, WeekRanking } from 'schemas/season'
 
 export type TeamRankings = TeamDisplay & {
   rankings: WeekRanking[]
   playoff?: PlayoffStage
+  playoffSeries?: SeriesResult[]
   aiSummary?: string
 }
 
@@ -21,6 +22,8 @@ export enum PlayoffStage {
   Finals = 'finals',
   Champion = 'champion',
 }
+
+export type SeriesRound = Exclude<PlayoffStage, PlayoffStage.Champion>
 
 export enum Team {
   Atlanta = 'atl',

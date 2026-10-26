@@ -1,4 +1,10 @@
-import { PlayoffStage, Team, type TeamRankings, type WeekRanking } from 'types'
+import {
+  PlayoffStage,
+  Team,
+  type SeriesResult,
+  type TeamRankings,
+  type WeekRanking,
+} from 'types'
 
 export function weeklyRankings(maxWeek: number, rank: number): WeekRanking[] {
   return Array.from({ length: maxWeek }, (_, i) => ({
@@ -44,6 +50,20 @@ export const PLAYOFFS = {
   [Team.Miami]: PlayoffStage.SecondRound,
 }
 
+// Boston's title run and Miami's second-round exit, consistent with PLAYOFFS
+export const PLAYOFF_SERIES: Partial<Record<Team, SeriesResult[]>> = {
+  [Team.Boston]: [
+    { round: PlayoffStage.FirstRound, opponent: Team.Detroit, wins: 4, losses: 0 },
+    { round: PlayoffStage.SecondRound, opponent: Team.Miami, wins: 4, losses: 2 },
+    { round: PlayoffStage.ConferenceFinals, opponent: Team.Toronto, wins: 4, losses: 3 },
+    { round: PlayoffStage.Finals, opponent: Team.LALakers, wins: 4, losses: 1 },
+  ],
+  [Team.Miami]: [
+    { round: PlayoffStage.FirstRound, opponent: Team.Orlando, wins: 4, losses: 3 },
+    { round: PlayoffStage.SecondRound, opponent: Team.Boston, wins: 2, losses: 4 },
+  ],
+}
+
 const DISPLAY = [
   { teamId: Team.Boston, name: 'Boston Celtics', color: '#2EAD61' },
   { teamId: Team.LALakers, name: 'Los Angeles Lakers', color: '#B388FF' },
@@ -58,6 +78,7 @@ export function buildTeams(maxWeek = 25): TeamRankings[] {
     ...team,
     rankings: rankings[team.teamId],
     playoff: playoffs[team.teamId],
+    playoffSeries: PLAYOFF_SERIES[team.teamId],
   }))
 }
 

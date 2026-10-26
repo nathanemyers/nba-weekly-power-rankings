@@ -12,28 +12,36 @@
               "mil",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "bos",
               "ind"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "nop",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "nyk",
               "bkn"
             ],
-            "winner": "bkn"
+            "winner": "bkn",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -45,28 +53,36 @@
               "hou",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "den",
               "min"
             ],
-            "winner": "min"
+            "winner": "min",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "dal",
               "sac"
             ],
-            "winner": "sac"
+            "winner": "sac",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "mem",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -78,14 +94,18 @@
               "bkn",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "mia",
               "ind"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -97,14 +117,18 @@
               "lal",
               "sas"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "sac",
               "min"
             ],
-            "winner": "min"
+            "winner": "min",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -116,7 +140,9 @@
               "det",
               "ind"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -128,7 +154,9 @@
               "lal",
               "min"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -140,7 +168,9 @@
               "det",
               "lal"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       }
@@ -159,28 +189,36 @@
               "phi",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "ind",
               "bos"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "bkn",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "was",
               "chi"
             ],
-            "winner": "was"
+            "winner": "was",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -192,28 +230,36 @@
               "hou",
               "dal"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "mem",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "den",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "sac",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -225,14 +271,18 @@
               "ind",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "was",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -244,14 +294,18 @@
               "dal",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "okc",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -263,7 +317,9 @@
               "det",
               "mia"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -275,7 +331,9 @@
               "sas",
               "phx"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -287,7 +345,9 @@
               "det",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       }
@@ -306,28 +366,36 @@
               "was",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "mil",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "chi",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "ind",
               "bkn"
             ],
-            "winner": "bkn"
+            "winner": "bkn",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -339,28 +407,36 @@
               "mem",
               "dal"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "den",
               "lac"
             ],
-            "winner": "lac"
+            "winner": "lac",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "lal",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "sac",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -372,14 +448,18 @@
               "cle",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "bkn",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -391,14 +471,18 @@
               "dal",
               "sas"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "lac",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -410,7 +494,9 @@
               "mia",
               "det"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -422,7 +508,9 @@
               "phx",
               "dal"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -434,7 +522,9 @@
               "mia",
               "dal"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       }
@@ -453,28 +543,36 @@
               "mia",
               "chi"
             ],
-            "winner": "chi"
+            "winner": "chi",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "was",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "orl",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "bkn",
               "tor"
             ],
-            "winner": "bkn"
+            "winner": "bkn",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -486,28 +584,36 @@
               "gsw",
               "dal"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "lal",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "den",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "uta",
               "hou"
             ],
-            "winner": "uta"
+            "winner": "uta",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -519,14 +625,18 @@
               "bkn",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "chi",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -538,14 +648,18 @@
               "sas",
               "phx"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "gsw",
               "uta"
             ],
-            "winner": "uta"
+            "winner": "uta",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -557,7 +671,9 @@
               "cle",
               "det"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -569,7 +685,9 @@
               "uta",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -581,7 +699,9 @@
               "cle",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       }
@@ -600,28 +720,36 @@
               "atl",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "phi",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "tor",
               "orl"
             ],
-            "winner": "orl"
+            "winner": "orl",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "was",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -633,28 +761,36 @@
               "den",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "dal",
               "nop"
             ],
-            "winner": "nop"
+            "winner": "nop",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "phx",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "uta",
               "hou"
             ],
-            "winner": "uta"
+            "winner": "uta",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -666,14 +802,18 @@
               "cle",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "orl",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -685,14 +825,18 @@
               "uta",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "sas",
               "nop"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -704,7 +848,9 @@
               "det",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -716,7 +862,9 @@
               "sas",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -728,7 +876,9 @@
               "lal",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       }
@@ -747,28 +897,36 @@
               "det",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "chi",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "phi",
               "orl"
             ],
-            "winner": "orl"
+            "winner": "orl",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "mia",
               "atl"
             ],
-            "winner": "atl"
+            "winner": "atl",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -780,28 +938,36 @@
               "uta",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "nop",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "dal",
               "sas"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "hou",
               "por"
             ],
-            "winner": "hou"
+            "winner": "hou",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -813,14 +979,18 @@
               "atl",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "orl",
               "bos"
             ],
-            "winner": "orl"
+            "winner": "orl",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -832,14 +1002,18 @@
               "hou",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "dal",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -851,7 +1025,9 @@
               "orl",
               "cle"
             ],
-            "winner": "orl"
+            "winner": "orl",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -863,7 +1039,9 @@
               "den",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -875,7 +1053,9 @@
               "orl",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       }
@@ -894,28 +1074,36 @@
               "chi",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "cha",
               "orl"
             ],
-            "winner": "orl"
+            "winner": "orl",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "mil",
               "atl"
             ],
-            "winner": "atl"
+            "winner": "atl",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "mia",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -927,28 +1115,36 @@
               "okc",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "sas",
               "dal"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "por",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "uta",
               "den"
             ],
-            "winner": "uta"
+            "winner": "uta",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -960,14 +1156,18 @@
               "bos",
               "cle"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "atl",
               "orl"
             ],
-            "winner": "orl"
+            "winner": "orl",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -979,14 +1179,18 @@
               "uta",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "sas",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -998,7 +1202,9 @@
               "bos",
               "orl"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1010,7 +1216,9 @@
               "phx",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1022,7 +1230,9 @@
               "bos",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       }
@@ -1041,28 +1251,36 @@
               "ind",
               "chi"
             ],
-            "winner": "chi"
+            "winner": "chi",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "phi",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "nyk",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "atl",
               "orl"
             ],
-            "winner": "atl"
+            "winner": "atl",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1074,28 +1292,36 @@
               "mem",
               "sas"
             ],
-            "winner": "mem"
+            "winner": "mem",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "nop",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "por",
               "dal"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "den",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -1107,14 +1333,18 @@
               "atl",
               "chi"
             ],
-            "winner": "chi"
+            "winner": "chi",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "bos",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -1126,14 +1356,18 @@
               "dal",
               "lal"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "mem",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -1145,7 +1379,9 @@
               "mia",
               "chi"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -1157,7 +1393,9 @@
               "okc",
               "dal"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -1169,7 +1407,9 @@
               "dal",
               "mia"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       }
@@ -1188,28 +1428,36 @@
               "phi",
               "chi"
             ],
-            "winner": "phi"
+            "winner": "phi",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "nyk",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "orl",
               "ind"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "bos",
               "atl"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1221,28 +1469,36 @@
               "uta",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "dal",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "den",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "lac",
               "mem"
             ],
-            "winner": "lac"
+            "winner": "lac",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -1254,14 +1510,18 @@
               "ind",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "phi",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -1273,14 +1533,18 @@
               "lac",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "lal",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -1292,7 +1556,9 @@
               "bos",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -1304,7 +1570,9 @@
               "okc",
               "sas"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1316,7 +1584,9 @@
               "mia",
               "okc"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       }
@@ -1335,28 +1605,36 @@
               "mil",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "bos",
               "nyk"
             ],
-            "winner": "nyk"
+            "winner": "nyk",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "atl",
               "ind"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "chi",
               "bkn"
             ],
-            "winner": "chi"
+            "winner": "chi",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -1368,28 +1646,36 @@
               "hou",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "lal",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "gsw",
               "den"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "mem",
               "lac"
             ],
-            "winner": "mem"
+            "winner": "mem",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1401,14 +1687,18 @@
               "chi",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "ind",
               "nyk"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1420,14 +1710,18 @@
               "mem",
               "okc"
             ],
-            "winner": "mem"
+            "winner": "mem",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "gsw",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1439,7 +1733,9 @@
               "ind",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -1451,7 +1747,9 @@
               "mem",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -1463,7 +1761,9 @@
               "sas",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       }
@@ -1482,28 +1782,36 @@
               "atl",
               "ind"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "cha",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "bkn",
               "tor"
             ],
-            "winner": "bkn"
+            "winner": "bkn",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "was",
               "chi"
             ],
-            "winner": "was"
+            "winner": "was",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -1515,28 +1823,36 @@
               "dal",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "mem",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "gsw",
               "lac"
             ],
-            "winner": "lac"
+            "winner": "lac",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "por",
               "hou"
             ],
-            "winner": "por"
+            "winner": "por",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1548,14 +1864,18 @@
               "was",
               "ind"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "bkn",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -1567,14 +1887,18 @@
               "por",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "lac",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1586,7 +1910,9 @@
               "mia",
               "ind"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1598,7 +1924,9 @@
               "okc",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1610,7 +1938,9 @@
               "mia",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       }
@@ -1629,28 +1959,36 @@
               "bkn",
               "atl"
             ],
-            "winner": "atl"
+            "winner": "atl",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "bos",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "mil",
               "chi"
             ],
-            "winner": "chi"
+            "winner": "chi",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "was",
               "tor"
             ],
-            "winner": "was"
+            "winner": "was",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -1662,28 +2000,36 @@
               "nop",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "dal",
               "hou"
             ],
-            "winner": "hou"
+            "winner": "hou",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "sas",
               "lac"
             ],
-            "winner": "lac"
+            "winner": "lac",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "por",
               "mem"
             ],
-            "winner": "mem"
+            "winner": "mem",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -1695,14 +2041,18 @@
               "chi",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "was",
               "atl"
             ],
-            "winner": "atl"
+            "winner": "atl",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1714,14 +2064,18 @@
               "lac",
               "hou"
             ],
-            "winner": "hou"
+            "winner": "hou",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "mem",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1733,7 +2087,9 @@
               "cle",
               "atl"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -1745,7 +2101,9 @@
               "hou",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -1757,7 +2115,9 @@
               "cle",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       }
@@ -1776,28 +2136,36 @@
               "det",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "ind",
               "tor"
             ],
-            "winner": "tor"
+            "winner": "tor",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "cha",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "bos",
               "atl"
             ],
-            "winner": "atl"
+            "winner": "atl",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1809,28 +2177,36 @@
               "hou",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "mem",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "dal",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "por",
               "lac"
             ],
-            "winner": "por"
+            "winner": "por",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1842,14 +2218,18 @@
               "atl",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "mia",
               "tor"
             ],
-            "winner": "tor"
+            "winner": "tor",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -1861,14 +2241,18 @@
               "por",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "okc",
               "sas"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1880,7 +2264,9 @@
               "tor",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1892,7 +2278,9 @@
               "okc",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -1904,7 +2292,9 @@
               "cle",
               "gsw"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       }
@@ -1923,28 +2313,36 @@
               "chi",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "ind",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "mil",
               "tor"
             ],
-            "winner": "tor"
+            "winner": "tor",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "atl",
               "was"
             ],
-            "winner": "was"
+            "winner": "was",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -1956,28 +2354,36 @@
               "por",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "mem",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "okc",
               "hou"
             ],
-            "winner": "hou"
+            "winner": "hou",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "uta",
               "lac"
             ],
-            "winner": "uta"
+            "winner": "uta",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -1989,14 +2395,18 @@
               "tor",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "was",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2008,14 +2418,18 @@
               "uta",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "hou",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2027,7 +2441,9 @@
               "cle",
               "bos"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -2039,7 +2455,9 @@
               "sas",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -2051,7 +2469,9 @@
               "cle",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       }
@@ -2070,28 +2490,36 @@
               "was",
               "tor"
             ],
-            "winner": "tor"
+            "winner": "tor",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "mil",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "mia",
               "phi"
             ],
-            "winner": "phi"
+            "winner": "phi",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "ind",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2103,28 +2531,36 @@
               "min",
               "hou"
             ],
-            "winner": "hou"
+            "winner": "hou",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "sas",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "nop",
               "por"
             ],
-            "winner": "nop"
+            "winner": "nop",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "uta",
               "okc"
             ],
-            "winner": "uta"
+            "winner": "uta",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2136,14 +2572,18 @@
               "phi",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "cle",
               "tor"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -2155,14 +2595,18 @@
               "nop",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "uta",
               "hou"
             ],
-            "winner": "hou"
+            "winner": "hou",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -2174,7 +2618,9 @@
               "cle",
               "bos"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2186,7 +2632,9 @@
               "gsw",
               "hou"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2198,7 +2646,9 @@
               "cle",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       }
@@ -2217,28 +2667,36 @@
               "det",
               "mil"
             ],
-            "winner": "mil"
+            "winner": "mil",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "orl",
               "tor"
             ],
-            "winner": "tor"
+            "winner": "tor",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "bkn",
               "phi"
             ],
-            "winner": "phi"
+            "winner": "phi",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "ind",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -2250,28 +2708,36 @@
               "lac",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "sas",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "okc",
               "por"
             ],
-            "winner": "por"
+            "winner": "por",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "uta",
               "hou"
             ],
-            "winner": "hou"
+            "winner": "hou",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -2283,14 +2749,18 @@
               "bos",
               "mil"
             ],
-            "winner": "mil"
+            "winner": "mil",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "phi",
               "tor"
             ],
-            "winner": "tor"
+            "winner": "tor",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2302,14 +2772,18 @@
               "hou",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "por",
               "den"
             ],
-            "winner": "por"
+            "winner": "por",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2321,7 +2795,9 @@
               "tor",
               "mil"
             ],
-            "winner": "tor"
+            "winner": "tor",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2333,7 +2809,9 @@
               "por",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -2345,7 +2823,9 @@
               "gsw",
               "tor"
             ],
-            "winner": "tor"
+            "winner": "tor",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       }
@@ -2364,28 +2844,36 @@
               "orl",
               "mil"
             ],
-            "winner": "mil"
+            "winner": "mil",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "bkn",
               "tor"
             ],
-            "winner": "tor"
+            "winner": "tor",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "phi",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "mia",
               "ind"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -2397,28 +2885,36 @@
               "por",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "dal",
               "lac"
             ],
-            "winner": "lac"
+            "winner": "lac",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "uta",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "okc",
               "hou"
             ],
-            "winner": "hou"
+            "winner": "hou",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2430,14 +2926,18 @@
               "bos",
               "tor"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "mia",
               "mil"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -2449,14 +2949,18 @@
               "den",
               "lac"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "hou",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -2468,7 +2972,9 @@
               "mia",
               "bos"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2480,7 +2986,9 @@
               "den",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -2492,7 +3000,9 @@
               "mia",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       }
@@ -2511,28 +3021,36 @@
               "mia",
               "mil"
             ],
-            "winner": "mil"
+            "winner": "mil",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "bos",
               "bkn"
             ],
-            "winner": "bkn"
+            "winner": "bkn",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "was",
               "phi"
             ],
-            "winner": "phi"
+            "winner": "phi",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "atl",
               "nyk"
             ],
-            "winner": "atl"
+            "winner": "atl",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -2544,28 +3062,36 @@
               "dal",
               "lac"
             ],
-            "winner": "lac"
+            "winner": "lac",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "por",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "mem",
               "uta"
             ],
-            "winner": "uta"
+            "winner": "uta",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "lal",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2577,14 +3103,18 @@
               "mil",
               "bkn"
             ],
-            "winner": "mil"
+            "winner": "mil",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "atl",
               "phi"
             ],
-            "winner": "atl"
+            "winner": "atl",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2596,14 +3126,18 @@
               "den",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "lac",
               "uta"
             ],
-            "winner": "lac"
+            "winner": "lac",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2615,7 +3149,9 @@
               "atl",
               "mil"
             ],
-            "winner": "mil"
+            "winner": "mil",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2627,7 +3163,9 @@
               "lac",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2639,7 +3177,9 @@
               "mil",
               "phx"
             ],
-            "winner": "mil"
+            "winner": "mil",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       }
@@ -2658,28 +3198,36 @@
               "chi",
               "mil"
             ],
-            "winner": "mil"
+            "winner": "mil",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "bkn",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "tor",
               "phi"
             ],
-            "winner": "phi"
+            "winner": "phi",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "atl",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -2691,28 +3239,36 @@
               "min",
               "mem"
             ],
-            "winner": "mem"
+            "winner": "mem",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "den",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "uta",
               "dal"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "nop",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2724,14 +3280,18 @@
               "mil",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "phi",
               "mia"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2743,14 +3303,18 @@
               "dal",
               "phx"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "gsw",
               "mem"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2762,7 +3326,9 @@
               "bos",
               "mia"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2774,7 +3340,9 @@
               "dal",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -2786,7 +3354,9 @@
               "bos",
               "gsw"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       }
@@ -2805,28 +3375,36 @@
               "mia",
               "mil"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "nyk",
               "cle"
             ],
-            "winner": "nyk"
+            "winner": "nyk",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "bkn",
               "phi"
             ],
-            "winner": "phi"
+            "winner": "phi",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "atl",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2838,28 +3416,36 @@
               "min",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "lac",
               "phx"
             ],
-            "winner": "phx"
+            "winner": "phx",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "gsw",
               "sac"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "lal",
               "mem"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2871,14 +3457,18 @@
               "mia",
               "nyk"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "phi",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2890,14 +3480,18 @@
               "phx",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "lal",
               "gsw"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2909,7 +3503,9 @@
               "mia",
               "bos"
             ],
-            "winner": "mia"
+            "winner": "mia",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -2921,7 +3517,9 @@
               "lal",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -2933,7 +3531,9 @@
               "mia",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       }
@@ -2952,28 +3552,36 @@
               "mia",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "orl",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "ind",
               "mil"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "phi",
               "nyk"
             ],
-            "winner": "nyk"
+            "winner": "nyk",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -2985,28 +3593,36 @@
               "nop",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "dal",
               "lac"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "phx",
               "min"
             ],
-            "winner": "min"
+            "winner": "min",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "lal",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -3018,14 +3634,18 @@
               "ind",
               "nyk"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "cle",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -3037,14 +3657,18 @@
               "dal",
               "okc"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "min",
               "den"
             ],
-            "winner": "min"
+            "winner": "min",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -3056,7 +3680,9 @@
               "ind",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -3068,7 +3694,9 @@
               "dal",
               "min"
             ],
-            "winner": "dal"
+            "winner": "dal",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -3080,7 +3708,9 @@
               "dal",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       }
@@ -3099,28 +3729,36 @@
               "mia",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "mil",
               "ind"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "det",
               "nyk"
             ],
-            "winner": "nyk"
+            "winner": "nyk",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "orl",
               "bos"
             ],
-            "winner": "bos"
+            "winner": "bos",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -3132,28 +3770,36 @@
               "mem",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "lac",
               "den"
             ],
-            "winner": "den"
+            "winner": "den",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "min",
               "lal"
             ],
-            "winner": "min"
+            "winner": "min",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "gsw",
               "hou"
             ],
-            "winner": "gsw"
+            "winner": "gsw",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -3165,14 +3811,18 @@
               "ind",
               "cle"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 1
           },
           {
             "teams": [
               "nyk",
               "bos"
             ],
-            "winner": "nyk"
+            "winner": "nyk",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -3184,14 +3834,18 @@
               "den",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "gsw",
               "min"
             ],
-            "winner": "min"
+            "winner": "min",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -3203,7 +3857,9 @@
               "ind",
               "nyk"
             ],
-            "winner": "ind"
+            "winner": "ind",
+            "winnerWins": 4,
+            "loserWins": 2
           }
         ]
       },
@@ -3215,7 +3871,9 @@
               "min",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -3227,7 +3885,9 @@
               "ind",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       }
@@ -3246,28 +3906,36 @@
               "orl",
               "det"
             ],
-            "winner": "det"
+            "winner": "det",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "tor",
               "cle"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 3
           },
           {
             "teams": [
               "atl",
               "nyk"
             ],
-            "winner": "nyk"
+            "winner": "nyk",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "phi",
               "bos"
             ],
-            "winner": "phi"
+            "winner": "phi",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -3279,28 +3947,36 @@
               "phx",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "hou",
               "lal"
             ],
-            "winner": "lal"
+            "winner": "lal",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "min",
               "den"
             ],
-            "winner": "min"
+            "winner": "min",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "por",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       },
@@ -3312,14 +3988,18 @@
               "phi",
               "nyk"
             ],
-            "winner": "nyk"
+            "winner": "nyk",
+            "winnerWins": 4,
+            "loserWins": 0
           },
           {
             "teams": [
               "cle",
               "det"
             ],
-            "winner": "cle"
+            "winner": "cle",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -3331,14 +4011,18 @@
               "min",
               "sas"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 2
           },
           {
             "teams": [
               "lal",
               "okc"
             ],
-            "winner": "okc"
+            "winner": "okc",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -3350,7 +4034,9 @@
               "cle",
               "nyk"
             ],
-            "winner": "nyk"
+            "winner": "nyk",
+            "winnerWins": 4,
+            "loserWins": 0
           }
         ]
       },
@@ -3362,7 +4048,9 @@
               "sas",
               "okc"
             ],
-            "winner": "sas"
+            "winner": "sas",
+            "winnerWins": 4,
+            "loserWins": 3
           }
         ]
       },
@@ -3374,7 +4062,9 @@
               "nyk",
               "sas"
             ],
-            "winner": "nyk"
+            "winner": "nyk",
+            "winnerWins": 4,
+            "loserWins": 1
           }
         ]
       }

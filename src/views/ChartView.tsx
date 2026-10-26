@@ -19,6 +19,7 @@ import { useChartControls } from 'components/Chart/useChartControls'
 import ChartFilter from 'components/ChartFilter'
 import ChartFilterClearButton from 'components/ChartFilterClearButton'
 import TeamHistoryButton from 'components/TeamHistoryButton'
+import PlayoffSeriesBadges from 'components/PlayoffSeriesBadges'
 import { CHART_HEIGHT, CHART_MARGIN, CHART_WIDTH } from '@/constants'
 import { ButtonGroup } from '@/components/ui/button-group'
 
@@ -29,6 +30,10 @@ export default function ChartView() {
   const endWeek = useAppSelector(getEndWeek)
   const pinnedTeams = useAppSelector(getPinnedTeams)
   const singlePinnedTeam = useAppSelector(getSinglePinnedTeam)
+
+  const pinnedSeries = data?.teams.find(
+    (team) => team.teamId === singlePinnedTeam
+  )?.playoffSeries
 
   const togglePin = (team?: Team) =>
     dispatch(setPinnedTeams(team && !pinnedTeams.includes(team) ? [team] : []))
@@ -56,8 +61,13 @@ export default function ChartView() {
               <SeasonSelect />
               <DataSourceBadge source={data.source} season={data.name} />
             </div>
-            <div className="grid-col-2 justify-self-center">
-              {singlePinnedTeam && <TeamHistoryButton />}
+            <div className="grid-col-2 justify-self-center flex flex-row flex-wrap items-center justify-center gap-3">
+              {singlePinnedTeam && (
+                <PlayoffSeriesBadges
+                  series={pinnedSeries}
+                  onTeamClick={(team) => dispatch(setPinnedTeams([team]))}
+                />
+              )}
             </div>
             <div className="grid-col-3 md:justify-self-end justify-self-center align-items-center gap-2 flex flex-row">
               {pinnedTeams.length > 0 && <ChartFilterClearButton />}
@@ -76,14 +86,17 @@ export default function ChartView() {
               pinnedTeams={pinnedTeams}
               onClick={togglePin}
             />
+            <div className="flex direction-row place-content-center">
+              <ChartControls />
+            </div>
             <div className="flex flex-row place-content-center justify-between">
               {data.completed && (
                 <ButtonGroup>
                   <TeamSeasonSummary />
                   <RankSwings />
+                  <TeamHistoryButton disabled={!singlePinnedTeam} />
                 </ButtonGroup>
               )}
-              <ChartControls />
             </div>
           </div>
         </>

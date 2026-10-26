@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { loadEspnSeasonEntries, loadSeasonEntries } from './lib/articles.mjs'
+import { teamPlayoffRuns } from './lib/playoffs.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const nbaDir = join(root, 'data', 'raw', 'nba')
@@ -77,6 +78,7 @@ for (const season of Object.keys(bySeason).sort()) {
     }
     reach(bracket.champion, 'champion')
   }
+  const playoffSeries = bracket ? teamPlayoffRuns(bracket, season) : {}
 
   const output = {
     season,
@@ -84,6 +86,7 @@ for (const season of Object.keys(bySeason).sort()) {
     maxWeek,
     rankings,
     ...(Object.keys(playoffs).length && { playoffs }),
+    ...(Object.keys(playoffSeries).length && { playoffSeries }),
     ...(Object.keys(summaries).length && { summaries }),
   }
   const file = join(outDir, `${season}.json`)

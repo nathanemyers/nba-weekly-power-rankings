@@ -6,6 +6,7 @@ import { setSelectedSeason, setView, View } from '@/store/slices/UI'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 import DataSourceBadge from './DataSourceBadge'
+import PlayoffSeriesBadges from './PlayoffSeriesBadges'
 
 interface TeamHistoryProps {
   team: Team
@@ -30,30 +31,36 @@ export default function TeamHistory(props: TeamHistoryProps) {
             }}
           >
             <CardContent>
-              <div className="mb-2 flex items-center justify-between gap-3">
-                <div className="flex flex-row content-center">
-                  <h2 className="text-2xl font-semibold shrink mr-10">
-                    {season.name}
-                  </h2>
-                  <div className="w-100 content-center">
-                    <TrendMinimap team={team.teamId} seasonId={season.name} />
+              <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
+                <div className="grid grid-cols-2 content-center">
+                  <div className="flex direction-row">
+                    <h2 className="text-2xl font-semibold shrink mr-10">
+                      {season.name}
+                    </h2>
+                    <div className="content-center md:w-100">
+                      <TrendMinimap team={team.teamId} seasonId={season.name} />
+                    </div>
                   </div>
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <DataSourceBadge source={season.source} season={season.name} />
-                  {team.aiSummary && (
-                    <Badge
-                      variant="outline"
-                      className="whitespace-nowrap text-muted-foreground"
-                    >
-                      AI-generated summary
-                    </Badge>
-                  )}
+                  <PlayoffSeriesBadges
+                    className="justify-end justify-self-end"
+                    series={team.playoffSeries}
+                  />
                 </div>
               </div>
               <p className="text-base leading-normal text-foreground-soft">
                 {team.aiSummary}
               </p>
+              <div className="flex flex-row flex-wrap items-center justify-end gap-2 mt-2">
+                <DataSourceBadge source={season.source} season={season.name} />
+                {team.aiSummary && (
+                  <Badge
+                    variant="outline"
+                    className="whitespace-nowrap text-muted-foreground"
+                  >
+                    AI-generated summary
+                  </Badge>
+                )}
+              </div>
             </CardContent>
           </Card>
         )

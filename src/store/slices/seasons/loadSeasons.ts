@@ -21,6 +21,7 @@ export function loadSeasons(
       ...team,
       rankings: data.rankings[team.teamId] ?? [],
       playoff: data.playoffs?.[team.teamId],
+      playoffSeries: data.playoffSeries?.[team.teamId],
       aiSummary: data.summaries?.[team.teamId],
     })).filter((team) => team.rankings.length > 0)
     const champion = teams.find(
