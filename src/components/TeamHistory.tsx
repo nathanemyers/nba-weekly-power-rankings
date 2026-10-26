@@ -50,7 +50,7 @@ export default function TeamHistory(props: TeamHistoryProps) {
               <p className="text-base leading-normal text-foreground-soft">
                 {team.aiSummary}
               </p>
-              <div className="flex flex-row flex-wrap items-center justify-end gap-2">
+              <div className="flex flex-row flex-wrap items-center justify-end gap-2 mt-2">
                 <DataSourceBadge source={season.source} season={season.name} />
                 {team.aiSummary && (
                   <Badge
