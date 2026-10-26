@@ -162,14 +162,16 @@ describe('RosterPane', () => {
         .slice(4)
         .map((cell) => cell.getAttribute('data-rating'))
     expect(ratings(pierce)).toEqual([
-      'good',
+      'elite',
       'fair',
       'good',
       'good',
       'poor',
       'good',
     ])
-    expect(within(pierce).getAllByRole('cell')[4]).toHaveClass('text-stat-good')
+    expect(within(pierce).getAllByRole('cell')[4]).toHaveClass(
+      'text-stat-elite'
+    )
     expect(ratings(scrub)).toEqual([null, null, null, null, null, null])
   })
 

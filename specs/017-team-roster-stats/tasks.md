@@ -171,6 +171,16 @@ No `useMemo`, minimal `useEffect`, no `useRef` for state, Tailwind utility class
 
 ---
 
+## Phase 10: User Story 5 revision - Purple top 10%
+
+**Goal**: Add a purple tier for the top 10% of each colored stat. Spec: FR-017, [contracts/roster-pane.md](contracts/roster-pane.md) "Stat colors", [research.md](research.md) R10
+
+- [X] T048 [US5] Add `--stat-elite` (purple) to src/index.css and docs/styling.md
+- [X] T049 [US5] Add an `elite` breakpoint to each stat in src/components/statRating.ts (pts 19, trb 7.5, ast 5, stl 1.4, tov 0.6 with lower is better, per 20) and return `'elite'` from `statRating`; extend src/components/statRating.test.ts with the elite edges for points, steals, PER and turnovers
+- [X] T050 [US5] Map `elite` to `text-stat-elite` in src/components/RosterPane.tsx, add purple to the note under the table, update the rating test in src/components/RosterPane.test.tsx, then check in the browser preview and run `npm run lint`, `npm test` and `npm run build`
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase Dependencies

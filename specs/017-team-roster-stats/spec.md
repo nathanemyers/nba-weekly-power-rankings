@@ -86,16 +86,16 @@ The maintainer needs roster, stats and head coach data for every team in every s
 
 ### User Story 5 - See at a glance who stood out (Priority: P3)
 
-A visitor scanning a roster wants to spot the standout and struggling stat lines without comparing numbers in their head. Points, rebounds, assists, steals, turnovers and PER are colored green, yellow or red by how they compare with every regular rotation player since 2003-04: green for the top quarter, red for the bottom quarter, yellow in between. For turnovers fewer is better, so a low turnover rate is green.
+A visitor scanning a roster wants to spot the standout and struggling stat lines without comparing numbers in their head. Points, rebounds, assists, steals, turnovers and PER are colored purple, green, yellow or red by how they compare with every regular rotation player since 2003-04: purple for the top 10%, green for the rest of the top quarter, red for the bottom quarter, yellow in between. For turnovers fewer is better, so the lowest turnover rates are purple or green.
 
 **Why this priority**: It makes the pane faster to read but adds no new information; the numbers are already there.
 
-**Independent Test**: Select 2015-16, pin Golden State, and confirm Stephen Curry's points, assists, steals and PER are green, his rebounds yellow and his turnovers red. Confirm Kevon Looney (5 games) has no colors.
+**Independent Test**: Select 2015-16, pin Golden State, and confirm Stephen Curry's points, assists, steals and PER are purple, his rebounds yellow and his turnovers red. Confirm Kevon Looney (5 games) has no colors.
 
 **Acceptance Scenarios**:
 
-1. **Given** a player with at least 10 games and 10 minutes per game, **When** the pane is shown, **Then** each of points, rebounds, assists, steals and PER is red below its low breakpoint, yellow from the low breakpoint up to the high one, and green from the high breakpoint up.
-2. **Given** the same player's turnovers, **When** the pane is shown, **Then** they are green below the low breakpoint, yellow up to the high one, and red from the high breakpoint up.
+1. **Given** a player with at least 10 games and 10 minutes per game, **When** the pane is shown, **Then** each of points, rebounds, assists, steals and PER is red below its low breakpoint, yellow from the low breakpoint up to the high one, green from the high breakpoint up to the elite one, and purple from the elite breakpoint up.
+2. **Given** the same player's turnovers, **When** the pane is shown, **Then** they are purple below the elite breakpoint, green from there up to the low breakpoint, yellow up to the high one, and red from the high breakpoint up.
 3. **Given** a player with fewer than 10 games or fewer than 10 minutes per game, **When** the pane is shown, **Then** none of their stats are colored.
 4. **Given** a missing PER, **When** the pane is shown, **Then** the dash is not colored.
 5. **Given** the pane, **When** a visitor wonders what the colors mean, **Then** a short note under the table explains them, so the colors never stand alone.
@@ -138,7 +138,7 @@ A visitor scanning a roster wants to spot the standout and struggling stat lines
 - **FR-015**: The roster pane MUST show the team's head coach or coaches for the season, in order, each with their regular-season win-loss record with the team.
 - **FR-016**: Coaching data that fails sanity rules (a team-season with no head coach, or coaches whose games add up to more than an 82-game season, or a coach with zero games) MUST stop the data build with an error naming the team and season.
 
-- **FR-017**: The pane MUST color points, rebounds, assists, steals, turnovers and PER using these breakpoints (low, high): points 6, 13.5; rebounds 2.5, 5.5; assists 1, 3; steals 0.5, 1; turnovers 0.9, 1.8; PER 11, 17. A value below low is red (green for turnovers), from low up to high is yellow, and from high up is green (red for turnovers).
+- **FR-017**: The pane MUST color points, rebounds, assists, steals, turnovers and PER using these breakpoints (low, high, elite): points 6, 13.5, 19; rebounds 2.5, 5.5, 7.5; assists 1, 3, 5; steals 0.5, 1, 1.4; turnovers 0.9, 1.8, 0.6; PER 11, 17, 20. A value below low is red, from low up to high is yellow, from high up to elite is green, and from elite up is purple. Turnovers run the other way: below elite is purple, from elite up to low is green, from low up to high is yellow, and from high up is red.
 - **FR-018**: Stats MUST NOT be colored for players with fewer than 10 games or fewer than 10 minutes per game for the team, or for a missing value.
 - **FR-019**: The pane MUST explain the colors in text under the table, including which players are colored and that fewer turnovers rate higher.
 - **FR-020**: Colors MUST come from the site theme, and only the six listed stats are colored.
@@ -160,7 +160,7 @@ A visitor scanning a roster wants to spot the standout and struggling stat lines
 - **SC-003**: Spot checks of at least five well-known midseason trades show the correct arrival and departure marks on both teams involved.
 - **SC-004**: A visitor can see who a pinned team's main players and head coach were in a season, and who joined or left, without leaving the chart view.
 - **SC-006**: Spot checks of at least three mid-season coaching changes list the coaches in the right order with records matching the source.
-- **SC-007**: Among players with 10+ games and 10+ minutes per game, each colored stat splits roughly a quarter red, half yellow and a quarter green across all seasons (each band within 22% to 32% at the ends).
+- **SC-007**: Among players with 10+ games and 10+ minutes per game, each colored stat splits roughly a quarter red, half yellow and a quarter green or purple across all seasons (each end band within 22% to 32%), with purple alone between 8% and 12%.
 - **SC-005**: The roster pane fits a phone-width screen without making the page scroll horizontally.
 
 ## Assumptions
@@ -173,6 +173,6 @@ A visitor scanning a roster wants to spot the standout and struggling stat lines
 - Rebounds means total rebounds per game.
 - The pane is shown in the chart view only. Adding rosters to the team history view is out of scope.
 - Sorting by other columns is out of scope; games played is the only sort order.
-- Color breakpoints are the 25th and 75th percentiles of every 2003-04 to 2025-26 player-team season with 10+ games and 10+ minutes per game, chosen by the maintainer from the distributions on 2026-10-26. They are fixed values, not recalculated per season, so a 15-point scorer is green in any era. Recalculating them after new seasons are added is a manual step.
+- Color breakpoints are the 25th, 75th and 90th percentiles of every 2003-04 to 2025-26 player-team season with 10+ games and 10+ minutes per game, chosen by the maintainer from the distributions on 2026-10-26. They are fixed values, not recalculated per season, so a 15-point scorer is green in any era. Recalculating them after new seasons are added is a manual step.
 - Player headshots are out of scope, but the stored player identifier is what a future headshot feature will use.
 - Playoff stats are out of scope; only regular-season data is collected and shown.

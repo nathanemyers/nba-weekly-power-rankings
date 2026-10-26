@@ -41,6 +41,7 @@ type StatColumn = {
 }
 
 const RATING_CLASSES: Record<StatRating, string> = {
+  elite: 'text-stat-elite',
   good: 'text-stat-good',
   fair: 'text-stat-fair',
   poor: 'text-stat-poor',
@@ -225,9 +226,11 @@ export default function RosterPane() {
       <p className="mt-2 text-sm text-muted-foreground">
         Stats are colored against every player since 2003-04 with{' '}
         {MIN_RATED_GAMES}+ games and {MIN_RATED_MINUTES}+ minutes per game:{' '}
-        <span className="text-stat-good">green</span> is the top quarter,{' '}
-        <span className="text-stat-poor">red</span> the bottom quarter. Fewer
-        turnovers rate higher. Players below those minimums aren't colored.
+        <span className="text-stat-elite">purple</span> is the top 10%,{' '}
+        <span className="text-stat-good">green</span> the rest of the top
+        quarter, <span className="text-stat-poor">red</span> the bottom quarter.
+        Fewer turnovers rate higher. Players below those minimums aren't
+        colored.
       </p>
     </section>
   )

@@ -42,16 +42,16 @@
 
 - Columns PTS, REB, AST, STL, TOV and PER are rated by `statRating(player, stat)` in `src/components/statRating.ts`, which holds `STAT_BREAKPOINTS`, `MIN_RATED_GAMES = 10` and `MIN_RATED_MINUTES = 10`.
 
-| Stat | Low | High | Below low | Low to high | High and up |
-|---|---|---|---|---|---|
-| `pts` | 6 | 13.5 | poor | fair | good |
-| `trb` | 2.5 | 5.5 | poor | fair | good |
-| `ast` | 1 | 3 | poor | fair | good |
-| `stl` | 0.5 | 1 | poor | fair | good |
-| `tov` | 0.9 | 1.8 | good | fair | poor |
-| `per` | 11 | 17 | poor | fair | good |
+| Stat | Low | High | Elite | poor | fair | good | elite |
+|---|---|---|---|---|---|---|---|
+| `pts` | 6 | 13.5 | 19 | < 6 | 6 to < 13.5 | 13.5 to < 19 | ≥ 19 |
+| `trb` | 2.5 | 5.5 | 7.5 | < 2.5 | 2.5 to < 5.5 | 5.5 to < 7.5 | ≥ 7.5 |
+| `ast` | 1 | 3 | 5 | < 1 | 1 to < 3 | 3 to < 5 | ≥ 5 |
+| `stl` | 0.5 | 1 | 1.4 | < 0.5 | 0.5 to < 1 | 1 to < 1.4 | ≥ 1.4 |
+| `tov` (lower is better) | 0.9 | 1.8 | 0.6 | ≥ 1.8 | 0.9 to < 1.8 | 0.6 to < 0.9 | < 0.6 |
+| `per` | 11 | 17 | 20 | < 11 | 11 to < 17 | 17 to < 20 | ≥ 20 |
 
-- `good`, `fair` and `poor` map to the text classes `text-stat-good`, `text-stat-fair` and `text-stat-poor` (theme tokens `--stat-good`, `--stat-fair`, `--stat-poor` in `src/index.css`) through a fixed lookup, never a built class name. Each rated cell carries `data-rating`.
+- `elite`, `good`, `fair` and `poor` map to the text classes `text-stat-elite` (purple), `text-stat-good` (green), `text-stat-fair` (yellow) and `text-stat-poor` (red) (theme tokens `--stat-elite`, `--stat-good`, `--stat-fair`, `--stat-poor` in `src/index.css`) through a fixed lookup, never a built class name. Each rated cell carries `data-rating`.
 - Unrated: players under 10 games or 10 minutes per game, and `per: null`.
 - A note under the table explains the colors in words.
 

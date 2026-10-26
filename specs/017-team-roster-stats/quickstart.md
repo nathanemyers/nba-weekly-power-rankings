@@ -50,7 +50,7 @@ npm run dev
 | 2018-19 | Chicago | Head coaches: Fred Hoiberg (5-19) → Jim Boylen (17-41) |
 | 2018-19 | Cleveland | Head coaches: Tyronn Lue (0-6) → Larry Drew (19-57) |
 | 2018-19 | Toronto | Head coach: Nick Nurse (58-24) |
-| 2015-16 | Golden State | Curry: PTS, AST, STL, PER green; REB yellow; TOV red. Kevon Looney (5 G) uncolored |
+| 2015-16 | Golden State | Curry: PTS, AST, STL, PER purple; REB yellow; TOV red. Kevon Looney (5 G) uncolored |
 
 Also confirm: the list is ordered by G, most first; unpinning hides the pane; pinning two teams hides it; at 375 px wide the page does not scroll sideways.
 

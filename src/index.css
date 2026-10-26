@@ -35,6 +35,7 @@
   --rank-down: #ff5a50;
   --series-won: #30d158;
   --series-lost: #ff5a50;
+  --stat-elite: #bf5af2;
   --stat-good: #30d158;
   --stat-fair: #ffd60a;
   --stat-poor: #ff5a50;
@@ -74,6 +75,7 @@
   --color-rank-down: var(--rank-down);
   --color-series-won: var(--series-won);
   --color-series-lost: var(--series-lost);
+  --color-stat-elite: var(--stat-elite);
   --color-stat-good: var(--stat-good);
   --color-stat-fair: var(--stat-fair);
   --color-stat-poor: var(--stat-poor);
