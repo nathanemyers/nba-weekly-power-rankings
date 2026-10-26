@@ -1,6 +1,8 @@
 import {
   PlayoffStage,
   Team,
+  type CoachStint,
+  type RosterEntry,
   type SeriesResult,
   type TeamRankings,
   type WeekRanking,
@@ -62,6 +64,30 @@ export const PLAYOFF_SERIES: Partial<Record<Team, SeriesResult[]>> = {
     { round: PlayoffStage.FirstRound, opponent: Team.Orlando, wins: 4, losses: 3 },
     { round: PlayoffStage.SecondRound, opponent: Team.Boston, wins: 2, losses: 4 },
   ],
+}
+
+const player = (id: string, name: string, g: number, extra: Partial<RosterEntry> = {}): RosterEntry => ({
+  id, name, pos: 'SF', age: 27, g, gs: 0, mpg: 20, pts: 10, trb: 4, ast: 2, stl: 1, blk: 0.5, tov: 1.5, per: 15, ...extra,
+})
+
+// Boston's roster, already in games-played order the way the build writes it
+export const ROSTERS: Partial<Record<Team, RosterEntry[]>> = {
+  [Team.Boston]: [
+    player('piercpa01', 'Paul Pierce', 80, { pos: 'SF', age: 30, gs: 80, mpg: 35.9, pts: 19.6, trb: 5.1, ast: 4.5, stl: 1.3, tov: 2.9, per: 19.8 }),
+    player('garneke01', 'Kevin Garnett', 71, { pos: 'PF', age: 31, gs: 71, pts: 18.8, trb: 9.2, per: 25.3, joinedFrom: Team.Minnesota }),
+    player('movesjo01', 'Joe Moves', 20, { joinedFrom: Team.Detroit, leftFor: Team.Miami }),
+    player('scrubjo01', 'Joe Scrub', 3, { pos: 'C', per: null, leftFor: Team.Toronto }),
+  ],
+  [Team.Detroit]: [player('billuch01', 'Chauncey Billups', 78, { pos: 'PG' })],
+}
+
+// Boston changed coaches mid-season; Detroit kept one coach all season
+export const COACHES: Partial<Record<Team, CoachStint[]>> = {
+  [Team.Boston]: [
+    { id: 'riverdo01c', name: 'Doc Rivers', g: 20, w: 12, l: 8 },
+    { id: 'stevebr99c', name: 'Brad Stevens', g: 62, w: 50, l: 12 },
+  ],
+  [Team.Detroit]: [{ id: 'flipsa01c', name: 'Flip Saunders', g: 82, w: 59, l: 23 }],
 }
 
 const DISPLAY = [

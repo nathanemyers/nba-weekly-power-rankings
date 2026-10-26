@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { omit } from 'lodash'
-import { buildRankings, PLAYOFFS } from 'test/fixtures'
+import { buildRankings, COACHES, PLAYOFFS, ROSTERS } from 'test/fixtures'
 import { Team } from 'types'
 import { loadSeasons } from './loadSeasons'
 
@@ -49,6 +49,22 @@ describe('loadSeasons', () => {
     expect(loadSeasons(['s'], { s: season }).order).toEqual(['s'])
   })
 
+  it("puts each team's roster on the team", () => {
+    const view = loadSeasons(['s'], { s: { ...valid(), rosters: ROSTERS } })
+      .seasons.s
+    const boston = view.teams.find((t) => t.teamId === Team.Boston)
+    const miami = view.teams.find((t) => t.teamId === Team.Miami)
+    expect(boston?.roster).toEqual(ROSTERS[Team.Boston])
+    expect(miami?.roster).toBeUndefined()
+  })
+
+  it("puts each team's head coaches on the team", () => {
+    const view = loadSeasons(['s'], { s: { ...valid(), coaches: COACHES } })
+      .seasons.s
+    const boston = view.teams.find((t) => t.teamId === Team.Boston)
+    expect(boston?.coaches).toEqual(COACHES[Team.Boston])
+  })
+
   const noMaxWeek = omit(valid(), 'maxWeek')
   const cases: [string, unknown, string][] = [
     ['a missing maxWeek', noMaxWeek, 'maxWeek'],
@@ -64,6 +80,24 @@ describe('loadSeasons', () => {
       'an unknown team',
       { ...valid(), rankings: { ...buildRankings(4), xyz: [] } },
       'rankings',
+    ],
+    [
+      'a roster entry with no games',
+      {
+        ...valid(),
+        rosters: {
+          [Team.Boston]: [{ ...ROSTERS[Team.Boston]![0], g: 0 }],
+        },
+      },
+      'rosters',
+    ],
+    [
+      'a coach with no games',
+      {
+        ...valid(),
+        coaches: { [Team.Boston]: [{ id: 'x', name: 'X', g: 0, w: 0, l: 0 }] },
+      },
+      'coaches',
     ],
     [
       'an unknown playoff stage',

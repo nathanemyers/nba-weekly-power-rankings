@@ -12,6 +12,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "scrape:playoffs": "node scripts/scrape-playoffs.mjs",
+    "scrape:rosters": "node scripts/scrape-rosters.mjs",
     "scrape:powerRankings": "node scripts/nba-power-rankings-scraper/cli.mjs",
     "scrape:espnPowerRankings": "node scripts/espn-power-rankings-scraper/cli.mjs"
   },

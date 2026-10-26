@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { makeStore } from 'store/redux'
 import { setSelectedSeason } from '@/store/slices/UI'
 import { Team } from 'types'
+import { COACHES, ROSTERS } from 'test/fixtures'
 import {
   pageWindow,
   getCanPageEarlier,
@@ -12,6 +13,8 @@ import {
   setZoomedOut,
   getPinnedTeams,
   setPinnedTeams,
+  getPinnedTeamRoster,
+  getPinnedTeamCoaches,
 } from './chart'
 
 vi.mock(
@@ -66,5 +69,18 @@ describe('pinned teams', () => {
     expect(getPinnedTeams(store.getState())).toEqual([Team.Boston])
     store.dispatch(setPinnedTeams([]))
     expect(getPinnedTeams(store.getState())).toEqual([])
+  })
+
+  it("returns the single pinned team's roster for the selected season", () => {
+    const store = makeStore()
+    expect(getPinnedTeamRoster(store.getState())).toBeUndefined()
+    store.dispatch(setPinnedTeams([Team.Boston]))
+    expect(getPinnedTeamRoster(store.getState())).toEqual(ROSTERS[Team.Boston])
+    expect(getPinnedTeamCoaches(store.getState())).toEqual(COACHES[Team.Boston])
+    store.dispatch(setPinnedTeams([Team.Boston, Team.Miami]))
+    expect(getPinnedTeamRoster(store.getState())).toBeUndefined()
+    store.dispatch(setPinnedTeams([Team.Boston]))
+    store.dispatch(setSelectedSeason('short'))
+    expect(getPinnedTeamRoster(store.getState())).toBeUndefined()
   })
 })

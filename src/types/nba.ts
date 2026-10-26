@@ -1,12 +1,25 @@
-import type { SeriesResult, WeekRanking } from 'schemas/season'
+import type {
+  CoachStint,
+  RosterEntry,
+  SeriesResult,
+  WeekRanking,
+} from 'schemas/season'
 
-export type { SeasonData, SeriesResult, WeekRanking } from 'schemas/season'
+export type {
+  CoachStint,
+  RosterEntry,
+  SeasonData,
+  SeriesResult,
+  WeekRanking,
+} from 'schemas/season'
 
 export type TeamRankings = TeamDisplay & {
   rankings: WeekRanking[]
   playoff?: PlayoffStage
   playoffSeries?: SeriesResult[]
   aiSummary?: string
+  roster?: RosterEntry[]
+  coaches?: CoachStint[]
 }
 
 // Where a season's weekly rankings were scraped from
