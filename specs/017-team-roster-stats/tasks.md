@@ -160,6 +160,17 @@ No `useMemo`, minimal `useEffect`, no `useRef` for state, Tailwind utility class
 
 ---
 
+## Phase 9: User Story 2 revision - Move badges
+
+**Goal**: Replace the move icons (T024) with team logo badges right-aligned in the Player cell. Spec: FR-008, [contracts/roster-pane.md](contracts/roster-pane.md) "Move mark"
+
+- [X] T044 [US2] In src/components/RosterPane.tsx render each move as an outline shadcn `Badge` (`role="img"`, focusable, same `aria-label` and tooltip text) holding lucide `ArrowLeft` (joined) or `ArrowRight` (left) followed by `TeamLogo` for the other team; lay the Player cell out as a `justify-between` row so the badges sit at its right edge
+- [X] T045 [US2] Add a test to src/components/RosterPane.test.tsx for arrow direction, the other team's logo after the arrow, and the right-aligned layout; check in the browser preview and run `npm run lint`, `npm test` and `npm run build`
+- [X] T046 [US2] Add `--move-joined` (green) and `--move-left` (red) to src/index.css and docs/styling.md; color the badge arrow with `text-move-joined` / `text-move-left`
+- [X] T047 [US2] Render each move badge as a button (`Badge asChild`) that dispatches `setPinnedTeams([team])` on click; add tests to src/components/RosterPane.test.tsx for the arrow color classes and for clicking a badge pinning the other team
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase Dependencies

@@ -31,7 +31,7 @@ A visitor pins a single team on the chart and wants to know who was actually on 
 
 ### User Story 2 - See who joined or left mid-season (Priority: P2)
 
-A visitor wants to know which players were traded to or away from the team during the season, since a midseason trade often explains a jump or drop in the rankings. Players who joined the team partway through the season are marked as arrivals, and players who left partway through are marked as departures. Where known, the mark names the other team.
+A visitor wants to know which players were traded to or away from the team during the season, since a midseason trade often explains a jump or drop in the rankings. Players who joined the team partway through the season are marked as arrivals, and players who left partway through are marked as departures. Where known, the mark names the other team. Each mark is a badge at the right edge of the player's name cell showing an arrow and the other team's logo: a green arrow pointing left (in from that team) for a player who joined, and a red arrow pointing right (out to that team) for a player who left. Clicking a badge pins the other team, so the visitor can follow the player to where they came from or went.
 
 **Why this priority**: The user asked for it "if possible". It adds a lot of context but the roster is useful without it.
 
@@ -45,6 +45,7 @@ A visitor wants to know which players were traded to or away from the team durin
 4. **Given** a player who spent the whole season with the team, **When** the pane is shown, **Then** no mark appears.
 5. **Given** a mark, **When** a visitor hovers or focuses it, or uses a screen reader, **Then** it reads out what happened in words, for example "Joined from Memphis Grizzlies mid-season".
 6. **Given** a traded player, **When** their row is shown, **Then** their stats are only the games they played for this team, not their season totals across teams.
+7. **Given** a move badge, **When** a visitor clicks it or activates it with the keyboard, **Then** the other team becomes the single pinned team for the same season, and the chart and roster pane switch to it.
 
 ---
 
@@ -126,7 +127,8 @@ A visitor scanning a roster wants to spot the standout and struggling stat lines
 - **FR-005**: The roster pane MUST list players in order of games played for the team, most first, breaking ties by total minutes, most first.
 - **FR-006**: Each player row MUST show name, position, age, games played, per-game points, rebounds, assists, steals and turnovers, and PER.
 - **FR-007**: Each player's stats MUST be only those from games played for that team.
-- **FR-008**: A player who joined the team mid-season MUST be marked as an arrival, and a player who left mid-season MUST be marked as a departure, naming the other team when known. The mark MUST be readable as text by hover, keyboard focus and screen readers.
+- **FR-008**: A player who joined the team mid-season MUST be marked as an arrival, and a player who left mid-season MUST be marked as a departure, naming the other team when known. The mark MUST be a badge right-aligned in the player's name cell, with a green left-pointing arrow for an arrival or a red right-pointing arrow for a departure followed by the other team's logo, and MUST be readable as text by hover, keyboard focus and screen readers.
+- **FR-021**: Clicking or activating a move badge MUST make the other team the single pinned team, keeping the selected season.
 - **FR-009**: Missing stat values MUST be shown as a dash.
 - **FR-010**: The roster pane MUST NOT appear when zero or more than one team is pinned, or when the pinned team has no roster data for the season.
 - **FR-011**: Roster data that fails sanity rules (a team-season with no players, a player with zero games, a per-game value that is negative) MUST stop the data build with an error naming the team, season and player.

@@ -1,10 +1,11 @@
 import { act } from 'react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, screen, within } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import RosterPane from './RosterPane'
 import { TooltipProvider } from './ui/tooltip'
 import { renderWithStore } from 'test/renderWithStore'
-import { setPinnedTeams } from '@/store/slices/chart'
+import { getPinnedTeams, setPinnedTeams } from '@/store/slices/chart'
 import { setSelectedSeason } from '@/store/slices/UI'
 import { Team } from 'types'
 
@@ -86,25 +87,54 @@ describe('RosterPane', () => {
   it('marks players who joined or left mid-season', () => {
     renderPane([Team.Boston])
     const [pierce, garnett, moves, scrub] = bodyRows()
-    expect(within(pierce).queryAllByRole('img')).toEqual([])
+    expect(within(pierce).queryAllByRole('button')).toEqual([])
     expect(
-      within(garnett).getByRole('img', {
+      within(garnett).getByRole('button', {
         name: 'Joined from Minnesota Timberwolves mid-season',
       })
     ).toBeInTheDocument()
     expect(
       within(moves)
-        .getAllByRole('img')
+        .getAllByRole('button')
         .map((mark) => mark.getAttribute('aria-label'))
     ).toEqual([
       'Joined from Detroit Pistons mid-season',
       'Left for Miami Heat mid-season',
     ])
     expect(
-      within(scrub).getByRole('img', {
+      within(scrub).getByRole('button', {
         name: 'Left for Toronto Raptors mid-season',
       })
     ).toBeInTheDocument()
+  })
+
+  it("shows each move as a badge with an arrow and the other team's logo, after the name", () => {
+    renderPane([Team.Boston])
+    const moves = bodyRows()[2]
+    const [joined, left] = within(moves).getAllByRole('button')
+    expect(joined.querySelector('svg')).toHaveClass('lucide-arrow-left')
+    expect(joined.querySelector('img')).toHaveAttribute(
+      'src',
+      expect.stringContaining('det')
+    )
+    expect(left.querySelector('svg')).toHaveClass('lucide-arrow-right')
+    expect(left.querySelector('img')).toHaveAttribute(
+      'src',
+      expect.stringContaining('mia')
+    )
+    expect(joined.lastElementChild?.tagName).toBe('IMG')
+    const nameCell = within(moves).getAllByRole('cell')[0]
+    expect(nameCell.firstElementChild).toHaveClass('justify-between')
+    expect(joined).toHaveClass('text-move-joined')
+    expect(left).toHaveClass('text-move-left')
+  })
+
+  it('pins the other team when a move badge is clicked', async () => {
+    const { store } = renderPane([Team.Boston])
+    await userEvent.click(
+      screen.getByRole('button', { name: 'Left for Miami Heat mid-season' })
+    )
+    expect(getPinnedTeams(store.getState())).toEqual([Team.Miami])
   })
 
   it('names the head coaches in order with their records', () => {

@@ -13,7 +13,7 @@
 
 | Column | Header | Content |
 |---|---|---|
-| Player | Player | Name, plus a move mark when `joinedFrom` and/or `leftFor` is set |
+| Player | Player | Name on the left; move badges right-aligned in the same cell when `joinedFrom` and/or `leftFor` is set |
 | Pos | Pos | `pos` |
 | Age | Age | `age` |
 | G | G | `g` |
@@ -30,8 +30,12 @@
 
 ## Move mark
 
-- An arrow-in mark for `joinedFrom`, an arrow-out mark for `leftFor` (lucide icons), each wrapped in the existing shadcn `Tooltip`.
-- Tooltip and accessible name: "Joined from {full team name} mid-season" / "Left for {full team name} mid-season". The mark is focusable so keyboard users get the tooltip.
+- Each move is a shadcn `Badge` (outline) holding an arrow then the other team's logo (`TeamLogo`, decorative `alt=""`): lucide `ArrowLeft` for `joinedFrom` (came from that team), `ArrowRight` for `leftFor` (went to that team). A player with both shows the joined badge first.
+- Badges sit at the right edge of the Player cell (the cell's content is a `justify-between` row: name left, badges right).
+- The arrow is colored by the theme tokens `--move-joined` (green, `text-move-joined`) for `joinedFrom` and `--move-left` (red, `text-move-left`) for `leftFor`; the logo keeps its own colors.
+- The badge renders as a `<button>` (`Badge asChild`). Clicking it dispatches `setPinnedTeams([team])`, pinning the other team in the same season.
+- Each badge is wrapped in the existing shadcn `Tooltip`.
+- Tooltip and accessible name: "Joined from {full team name} mid-season" / "Left for {full team name} mid-season". The badge button carries that accessible name, so keyboard users get the tooltip on focus and can pin the team with Enter or Space.
 - Colors come from theme tokens in `src/index.css` only.
 
 ## Stat colors

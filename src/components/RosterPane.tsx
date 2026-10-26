@@ -1,10 +1,11 @@
-import { LogIn, LogOut } from 'lucide-react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { cn } from 'cn'
-import { useAppSelector } from '@/store/hooks'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import {
   getPinnedTeamCoaches,
   getPinnedTeamRoster,
   getSinglePinnedTeam,
+  setPinnedTeams,
 } from '@/store/slices/chart'
 import { getSelectedSeason } from '@/store/slices/UI'
 import {
@@ -20,6 +21,8 @@ import {
   type RatedStat,
   type StatRating,
 } from './statRating'
+import TeamLogo from './TeamLogo'
+import { Badge } from './ui/badge'
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
 import {
   Table,
@@ -93,22 +96,36 @@ const STAT_COLUMNS: StatColumn[] = [
 ]
 
 function MoveMark(props: { joined: boolean; team: Team }) {
+  const dispatch = useAppDispatch()
   const description = props.joined
     ? `Joined from ${getTeamName(props.team)} mid-season`
     : `Left for ${getTeamName(props.team)} mid-season`
-  const Icon = props.joined ? LogIn : LogOut
+  const Arrow = props.joined ? ArrowLeft : ArrowRight
 
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <span
-          role="img"
-          tabIndex={0}
-          aria-label={description}
-          className="inline-flex text-muted-foreground"
+        <Badge
+          asChild
+          variant="outline"
+          className={cn(
+            'h-6 cursor-pointer gap-1 px-1.5 hover:bg-muted',
+            props.joined ? 'text-move-joined' : 'text-move-left'
+          )}
         >
-          <Icon aria-hidden className="size-3.5" />
-        </span>
+          <button
+            type="button"
+            aria-label={description}
+            onClick={() => dispatch(setPinnedTeams([props.team]))}
+          >
+            <Arrow aria-hidden />
+            <TeamLogo
+              team={props.team}
+              alt=""
+              className="size-4 object-contain"
+            />
+          </button>
+        </Badge>
       </TooltipTrigger>
       <TooltipContent>{description}</TooltipContent>
     </Tooltip>
@@ -170,13 +187,17 @@ export default function RosterPane() {
           {roster.map((player) => (
             <TableRow key={player.id} className="group hover:bg-muted">
               <TableCell className="sticky left-0 bg-background font-medium group-hover:bg-muted">
-                <span className="inline-flex items-center gap-1.5">
+                <span className="flex items-center justify-between gap-3">
                   {player.name}
-                  {player.joinedFrom && (
-                    <MoveMark joined team={player.joinedFrom} />
-                  )}
-                  {player.leftFor && (
-                    <MoveMark joined={false} team={player.leftFor} />
+                  {(player.joinedFrom || player.leftFor) && (
+                    <span className="flex gap-1">
+                      {player.joinedFrom && (
+                        <MoveMark joined team={player.joinedFrom} />
+                      )}
+                      {player.leftFor && (
+                        <MoveMark joined={false} team={player.leftFor} />
+                      )}
+                    </span>
                   )}
                 </span>
               </TableCell>

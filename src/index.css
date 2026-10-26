@@ -38,6 +38,8 @@
   --stat-good: #30d158;
   --stat-fair: #ffd60a;
   --stat-poor: #ff5a50;
+  --move-joined: #30d158;
+  --move-left: #ff5a50;
   --chart-grid: #333336;
   --chart-playoffs: #ff4d4f;
 }
@@ -75,6 +77,8 @@
   --color-stat-good: var(--stat-good);
   --color-stat-fair: var(--stat-fair);
   --color-stat-poor: var(--stat-poor);
+  --color-move-joined: var(--move-joined);
+  --color-move-left: var(--move-left);
   --color-chart-grid: var(--chart-grid);
   --color-chart-playoffs: var(--chart-playoffs);
 

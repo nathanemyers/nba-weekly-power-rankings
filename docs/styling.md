@@ -57,6 +57,7 @@ Names specific to this site:
 | `rank-up`, `rank-mid`, `rank-down` | Rising / middle / falling rank, in swing cards and trend minimaps |
 | `series-won`, `series-lost` | Won / lost playoff series badges |
 | `stat-good`, `stat-fair`, `stat-poor` | Top-quarter / middle / bottom-quarter player stats in the roster pane |
+| `move-joined`, `move-left` | Arrows on roster badges for players who joined / left mid-season |
 | `chart-grid` | Chart grid lines |
 | `chart-playoffs` | "Playoffs Begin" line and label |
 
