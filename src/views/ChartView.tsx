@@ -62,7 +62,6 @@ export default function ChartView() {
               <DataSourceBadge source={data.source} season={data.name} />
             </div>
             <div className="grid-col-2 justify-self-center flex flex-row flex-wrap items-center justify-center gap-3">
-              {singlePinnedTeam && <TeamHistoryButton />}
               {singlePinnedTeam && (
                 <PlayoffSeriesBadges
                   series={pinnedSeries}
@@ -87,14 +86,17 @@ export default function ChartView() {
               pinnedTeams={pinnedTeams}
               onClick={togglePin}
             />
+            <div className="flex direction-row place-content-center">
+              <ChartControls />
+            </div>
             <div className="flex flex-row place-content-center justify-between">
               {data.completed && (
                 <ButtonGroup>
                   <TeamSeasonSummary />
                   <RankSwings />
+                  <TeamHistoryButton disabled={!singlePinnedTeam} />
                 </ButtonGroup>
               )}
-              <ChartControls />
             </div>
           </div>
         </>
