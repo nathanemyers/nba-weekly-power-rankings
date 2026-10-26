@@ -24,6 +24,7 @@ The NBA.com and playoffs file *contents* are unchanged by the move.
 |---|---|---|
 | `slug` | string | `<season>-week-<n>`, `<season>-preseason` or `<season>-training-camp`, e.g. `2007-08-week-10`. Unique across the archive. |
 | `url` | string | `https://www.espn.com/nba/powerrankings/_/year/<endYear>/week/<espnWeek>`. The final edition uses this form too, even though it was fetched from the default page. |
+| `archiveUrl` | string (optional) | Only on editions recovered from the Wayback Machine: the capture they were parsed from. `title` and `updatedText` are `null` on these, because the 2003-05 layout has neither. |
 | `title` | string \| null | The `<h1>` headline, e.g. "Power Rankings: Celtics overtake Pistons, regain top spot". |
 | `heading` | string | The table heading as printed, e.g. "2007-08 Power Rankings: Week 10". |
 | `author` | string \| null | From the byline. Null on 2003-04 pages, which have none. |
@@ -91,3 +92,14 @@ listed (season dropdown or default page)
        ├─ parse or validation error, or HTTP error after retries ─► failed (counted, run continues)
        └─ parsed ───────────────────────────► fetched (written, added to index)
 ```
+
+## Processed season (`data/processed/seasons/<season>.json`)
+
+Built by `scripts/build-rankings.mjs` from NBA.com articles (2017-18 onward) and ESPN weekly editions (2003-04 to 2015-16). Only weekly editions are charted, so preseason and training camp editions are left out, as with NBA.com. One field was added:
+
+| Field | Type | Notes |
+|---|---|---|
+| `source` | `"nba"` \| `"espn"` | Which scraper the season's rankings came from. NBA.com wins if a season exists in both. Validated by `SeasonDataSchema` (`src/schemas/season.ts`) as the `DataSource` enum (`src/types/nba.ts`) and passed to the season store as `Season.source`. |
+
+ESPN rows use the edition's printed `record`, and the cleaned comment as `summary`.
+
