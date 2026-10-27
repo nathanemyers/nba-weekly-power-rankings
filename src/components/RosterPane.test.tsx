@@ -13,10 +13,7 @@ vi.mock(
 )
 
 async function renderPane(pinned: Team[], season = 'long') {
-  const result = await renderInSeason(
-    <RosterPane />,
-    season
-  )
+  const result = await renderInSeason(<RosterPane />, season)
   act(() => {
     result.store.dispatch(setPinnedTeams(pinned))
   })
@@ -44,11 +41,12 @@ describe('RosterPane', () => {
       'SF',
       '30',
       '80',
+      '35.9',
       '19.6',
       '5.1',
       '4.5',
       '1.3',
-      '2.9',
+      '0.5',
       '19.8',
     ])
   })
@@ -60,11 +58,12 @@ describe('RosterPane', () => {
       'C',
       '27',
       '3',
+      '20.0',
       '10.0',
       '4.0',
       '2.0',
       '1.0',
-      '1.5',
+      '0.5',
       '–',
     ])
   })
@@ -79,6 +78,15 @@ describe('RosterPane', () => {
       'title',
       'Player Efficiency Rating'
     )
+    expect(screen.getByRole('columnheader', { name: 'MIN' })).toHaveAttribute(
+      'title',
+      'Minutes per game'
+    )
+    expect(screen.getByRole('columnheader', { name: 'BLK' })).toHaveAttribute(
+      'title',
+      'Blocks per game'
+    )
+    expect(screen.queryByRole('columnheader', { name: 'TOV' })).toBeNull()
   })
 
   it('marks players who joined or left mid-season', async () => {
@@ -150,33 +158,45 @@ describe('RosterPane', () => {
     )
   })
 
-  it('colors stats for regular players and leaves small samples plain', async () => {
+  it('colors stats for regular players and grays out small samples', async () => {
     await renderPane([Team.Boston])
     const [pierce, , , scrub] = bodyRows()
     const ratings = (row: HTMLElement) =>
       within(row)
         .getAllByRole('cell')
-        .slice(4)
+        .slice(5)
         .map((cell) => cell.getAttribute('data-rating'))
     expect(ratings(pierce)).toEqual([
       'elite',
       'fair',
       'good',
       'good',
-      'poor',
+      'fair',
       'good',
     ])
-    expect(within(pierce).getAllByRole('cell')[4]).toHaveClass(
+    expect(within(pierce).getAllByRole('cell')[5]).toHaveClass(
       'text-stat-elite'
     )
-    expect(ratings(scrub)).toEqual([null, null, null, null, null, null])
+    expect(ratings(scrub)).toEqual(Array(6).fill('unrated'))
+    const scrubCells = within(scrub).getAllByRole('cell')
+    scrubCells.slice(5).forEach((cell) => {
+      expect(cell).toHaveClass('text-muted-foreground')
+    })
+    scrubCells.slice(0, 5).forEach((cell) => {
+      expect(cell).not.toHaveClass('text-muted-foreground')
+    })
+    within(pierce)
+      .getAllByRole('cell')
+      .forEach((cell) => {
+        expect(cell).not.toHaveClass('text-muted-foreground')
+      })
   })
 
   it('shows a color key with each band labeled by its share', async () => {
     await renderPane([Team.Boston])
     const key = screen.getByRole('img', { name: /^Stat colors/ })
     expect(key).toHaveAccessibleName(
-      'Stat colors, lowest to highest: red 25%, yellow 50%, green 15%, purple 10%. Fewer turnovers rate higher.'
+      'Stat colors, lowest to highest: red 25%, yellow 50%, green 15%, purple 10%. Players under 10 games or 10 minutes per game are gray and not rated.'
     )
     expect(key.firstElementChild?.textContent).toBe('25%50%15%10%')
     const segments = [...(key.lastElementChild?.children ?? [])]
