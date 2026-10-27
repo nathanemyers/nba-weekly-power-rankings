@@ -46,6 +46,7 @@ export const mockSeasons = mockSeasonModule(
       source: 'espn',
       maxWeek: 8,
       rankings: buildRankings(8),
+      rosters: { det: [{ ...ROSTERS.bos![0], g: 70, pts: 21 }] },
     },
   },
   { long: 'bos' }
