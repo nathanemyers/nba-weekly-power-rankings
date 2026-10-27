@@ -20,7 +20,7 @@
 
 ## R4. Order of rows within a season
 
-- **Decision**: Within a season, start at the stint with no `joinedFrom` and follow `leftFor` to the next team. Seasons go oldest first, which is the reverse of `seasonIndex` order.
+- **Decision**: Within a season, start at the stint with no `joinedFrom` and follow `leftFor` to the next team. Then reverse it, so the latest team comes first. Seasons go most recent first, the same as `seasonIndex` order.
 - **Rationale**: `scripts/lib/rosters.mjs` sets `joinedFrom`/`leftFor` from the player's stint order. There are 99 three-team seasons in the data (for example `pargoja01` in 2003-04: lal → tor → chi), and the chain orders all of them correctly.
 - **Alternatives considered**: Sorting by team name. That hides the order of the trade, so this was rejected.
 

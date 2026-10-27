@@ -16,9 +16,7 @@ function PlayerHistoryContent(props: { history: Promise<PlayerStint[]> }) {
 
   return (
     <div className="flex flex-col">
-      <h1 className="mb-10 text-4xl">
-        {history[history.length - 1].player.name}
-      </h1>
+      <h1 className="mb-10 text-4xl">{history[0].player.name}</h1>
       <div className="flex justify-end">
         <RatingKey />
       </div>

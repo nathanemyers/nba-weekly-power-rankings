@@ -3,7 +3,7 @@ import type { RosterEntry, Team } from 'types'
 
 export type PlayerStint = { season: string; team: Team; player: RosterEntry }
 
-// Orders one season's stints by following each move from the first team to the last
+// Orders one season's stints by following each move, then lists the latest team first
 function chainStints(stints: PlayerStint[]): PlayerStint[] {
   const ordered: PlayerStint[] = []
   let next = stints.find((stint) => !stint.player.joinedFrom)
@@ -12,14 +12,17 @@ function chainStints(stints: PlayerStint[]): PlayerStint[] {
     const leftFor = next.player.leftFor
     next = leftFor ? stints.find((stint) => stint.team === leftFor) : undefined
   }
-  return [...ordered, ...stints.filter((stint) => !ordered.includes(stint))]
+  return [
+    ...ordered,
+    ...stints.filter((stint) => !ordered.includes(stint)),
+  ].reverse()
 }
 
 export function getPlayerHistory(
   seasons: Season[],
   playerId: string
 ): PlayerStint[] {
-  return [...seasons].reverse().flatMap((season) => {
+  return seasons.flatMap((season) => {
     const stints: PlayerStint[] = []
     for (const team of season.teams) {
       const player = team.roster?.find((entry) => entry.id === playerId)

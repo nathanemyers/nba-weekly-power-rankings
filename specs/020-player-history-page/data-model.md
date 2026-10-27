@@ -15,8 +15,8 @@ No new data files and no schema changes. Everything is derived in the browser fr
 ## getPlayerHistory(seasons: Season[], playerId: string): PlayerStint[]
 
 - Collects every roster entry with `id === playerId` across all teams of all seasons.
-- Orders seasons oldest first by reversing the input order (`loadAllSeasons` returns `seasonIndex` order, newest first), so test seasons with non-date names such as `long`/`short` order correctly too.
-- Within a season: starts at the entry with no `joinedFrom`, then follows `leftFor`. Any entry the chain doesn't reach is added at the end, so no row is dropped (SC-004).
+- Keeps the input season order (`loadAllSeasons` returns `seasonIndex` order, newest first), so the history is most recent first and test seasons with non-date names such as `long`/`short` order correctly too.
+- Within a season: starts at the entry with no `joinedFrom`, then follows `leftFor`, and reverses the result so the latest team comes first. Any entry the chain doesn’t reach is still kept, so no row is dropped (SC-004).
 - Returns `[]` for an unknown ID. The view shows "Player not found" for that.
 
 ## Player name

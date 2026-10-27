@@ -13,17 +13,17 @@ const summary = (seasons: Season[], id: string) =>
   getPlayerHistory(seasons, id).map((stint) => `${stint.season} ${stint.team}`)
 
 describe('getPlayerHistory', () => {
-  it('lists every season the player appears in, oldest first', async () => {
+  it('lists every season the player appears in, newest first', async () => {
     const seasons = await loadAllSeasons()
-    expect(summary(seasons, 'piercpa01')).toEqual(['short det', 'long bos'])
-    expect(getPlayerHistory(seasons, 'piercpa01')[0].player.pts).toBe(21)
+    expect(summary(seasons, 'piercpa01')).toEqual(['long bos', 'short det'])
+    expect(getPlayerHistory(seasons, 'piercpa01')[1].player.pts).toBe(21)
   })
 
   it('keeps a traded player to the stint with each team', async () => {
     expect(summary(await loadAllSeasons(), 'movesjo01')).toEqual(['long bos'])
   })
 
-  it('orders a three-team season in the order the player moved', () => {
+  it('lists a three-team season from the latest team back', () => {
     const base = ROSTERS.bos![0]
     const team = (teamId: Team, player: Partial<RosterEntry>) =>
       ({
@@ -42,9 +42,9 @@ describe('getPlayerHistory', () => {
       ],
     } as Season
     expect(summary([season], 'tripsjo01')).toEqual([
-      'trips lal',
-      'trips tor',
       'trips chi',
+      'trips tor',
+      'trips lal',
     ])
   })
 

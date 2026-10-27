@@ -44,11 +44,11 @@ describe('Player history', () => {
     expect(path(router)).toBe('/playerHistory/piercpa01')
     expect(
       bodyRows().map((row) => within(row).getAllByRole('cell')[0].textContent)
-    ).toEqual(['short', 'long'])
+    ).toEqual(['long', 'short'])
     expect(
-      within(bodyRows()[0]).getByText('Detroit Pistons')
+      within(bodyRows()[1]).getByText('Detroit Pistons')
     ).toBeInTheDocument()
-    expect(ratings(bodyRows()[1]).slice(2)).toEqual(rosterRatings)
+    expect(ratings(bodyRows()[0]).slice(2)).toEqual(rosterRatings)
   })
 
   it('opens a row as its season with only its team pinned', async () => {

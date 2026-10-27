@@ -23,8 +23,8 @@ A visitor reading a team's roster pane wants to see how one player's numbers cha
 1. **Given** the roster pane is showing, **When** the visitor clicks a player's name, **Then** the player history page for that player opens.
 2. **Given** the player history page, **When** it is shown, **Then** it has a heading with the player's name and a table with Season, Team, and the same stat columns as the roster pane (Pos, Age, G, MIN, PTS, REB, AST, STL, BLK, PER).
 3. **Given** the player history page, **When** it is shown, **Then** stats are color coded and unrated rows are grayed exactly as they would be for that row in the roster pane.
-4. **Given** the player history page, **When** it is shown, **Then** rows are ordered from oldest season to newest.
-5. **Given** a player who was traded mid-season, **When** their history is shown, **Then** that season has one row per team, ordered as the player moved (the team they left before the team they joined), each with only that team's stats.
+4. **Given** the player history page, **When** it is shown, **Then** rows are ordered from the most recent season to the oldest.
+5. **Given** a player who was traded mid-season, **When** their history is shown, **Then** that season has one row per team, ordered most recent first (the team they joined before the team they left), each with only that team's stats.
 6. **Given** the roster pane, **When** the visitor clicks a mid-season move badge next to a player's name, **Then** the badge keeps its current behavior (selecting that other team) and does not open the player history page.
 
 ---
@@ -79,7 +79,7 @@ A visitor wants to send someone a link to a player's history, or reload the page
 - **FR-005**: The table MUST show Season and Team columns followed by the same stat columns, labels, and tooltips as the roster pane.
 - **FR-006**: The Team column MUST show the team's logo and name.
 - **FR-007**: Stat color coding and gray for unrated rows MUST follow the same rules as the roster pane, and the page MUST show the same color key.
-- **FR-008**: Rows MUST be ordered by season, oldest first; within a season, in the order the player played for the teams.
+- **FR-008**: Rows MUST be ordered by season, most recent first; within a season, the latest team first.
 - **FR-009**: Clicking a row, or pressing Enter on a focused row, MUST open the main chart for that row's season with only that row's team selected.
 - **FR-010**: Rows MUST show a hover highlight and a pointer cursor.
 - **FR-011**: Opening a player history address directly MUST show the same page as navigating to it.
