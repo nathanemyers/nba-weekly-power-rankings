@@ -16,7 +16,9 @@ function Shell(props: { children: ReactNode }) {
 export function RootFallback() {
   return (
     <Shell>
-      <p className="text-muted-foreground">Loading…</p>
+      <p className="pt-[30vh] text-6xl text-center text-muted-foreground">
+        Loading…
+      </p>
     </Shell>
   )
 }
