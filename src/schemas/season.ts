@@ -39,6 +39,13 @@ export const RosterEntrySchema = z.object({
   per: z.number().nullable(),
   joinedFrom: z.enum(Team).optional(),
   leftFor: z.enum(Team).optional(),
+  awards: z
+    .array(
+      z
+        .string()
+        .regex(/^((MVP|DPOY|ROY|6MOY|MIP|CPOY)-\d+|AS|NBA[123]|DEF[12])$/)
+    )
+    .optional(),
 })
 
 // One head coach's time with one team in a season, as written by scripts/lib/rosters.mjs teamCoaches

@@ -14,6 +14,7 @@
 | Team | Team | — | `TeamLogo` (size-5) + `getTeamName(team)` | yes, after Season |
 | Playoffs | Playoffs | Best playoff finish with this team | `PLAYOFF_MEDALS` icon in a `role="img"` span with the medal label as name and `title`; empty when `playoff` is unset | — |
 | Pos … PER | as `specs/019-roster-blocks-minutes/contracts/roster-pane.md` | same | same | — |
+| Awards | Awards | — | `AwardBadges`: a `ul` named "Season awards" of shadcn `Badge`s, `default` for awards won, `secondary` for selections, `outline` + `text-muted-foreground` for voting finishes; each shows its short label with the full title in a tooltip and as screen-reader text | — |
 
 Stat cells come from the shared `StatCells`, so they have the same `data-rating`, color classes and gray as the roster pane.
 

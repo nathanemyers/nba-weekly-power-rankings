@@ -24,6 +24,13 @@ No new data files and no schema changes. Everything is derived in the browser fr
 
 The heading uses `player.name` from the newest stint. The name doesn't change across seasons in the data, so taking the newest one is a tie-break only.
 
+## Season awards (`RosterEntry.awards`)
+
+- Optional array of Basketball-Reference award codes, copied by `scripts/lib/rosters.mjs` from the per-game table's `awards` cell, for example `["MVP-1", "AS", "NBA1"]`.
+- Each code matches `^((MVP|DPOY|ROY|6MOY|MIP|CPOY)-\d+|AS|NBA[123]|DEF[12])$`. The build throws on any other code, and the Zod schema checks the same pattern.
+- A traded player's awards come from their summary row and go only on the team they finished the season with (the stint with no `leftFor`). The field is left out when a player earned none.
+- `seasonAwards(codes)` in `src/data/awards.ts` turns codes into `{ code, label, title, kind }`, with `kind` `won`, `selection` or `vote`, sorted won, then selections, then votes by place.
+
 ## Validation
 
 - URL param `:player` must match `^[a-z]+\d{2}$` (Zod), or the loader throws a 404 with `statusText: 'Player not found'`.

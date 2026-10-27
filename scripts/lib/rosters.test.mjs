@@ -278,3 +278,27 @@ describe('teamCoaches', () => {
     expect(() => teamCoaches(raw, '2018-19')).toThrow(/2018-19 chi.*90 games/)
   })
 })
+
+describe('teamRosters awards', () => {
+  it("keeps a player's season awards in Basketball-Reference order", () => {
+    const rosters = teamRosters(rawSeason([['curryst01', 'Stephen Curry', 'GSW', 79, { awards: 'MVP-1,AS,NBA1' }]]), '2015-16')
+    expect(rosters.gsw[0].awards).toEqual(['MVP-1', 'AS', 'NBA1'])
+  })
+
+  it('leaves awards off a player who earned none', () => {
+    expect(Object.keys(teamRosters(rawSeason([['x', 'Ex', 'DET', 3]]), '2003-04').det[0])).not.toContain('awards')
+  })
+
+  it("puts a traded player's awards from the summary row on the team they finished with", () => {
+    const raw = tradedPlayer('wallara01', 'Rasheed Wallace', [['POR', 45], ['ATL', 1], ['DET', 22]])
+    raw.perGame[0].awards = 'AS'
+    const rosters = teamRosters(raw, '2003-04')
+    expect(stint(rosters, 'det', 'wallara01').awards).toEqual(['AS'])
+    expect(stint(rosters, 'por', 'wallara01').awards).toBeUndefined()
+    expect(stint(rosters, 'atl', 'wallara01').awards).toBeUndefined()
+  })
+
+  it('rejects an unknown award code', () => {
+    expect(() => teamRosters(rawSeason([['x', 'Ex', 'DET', 3, { awards: 'AS,XYZ' }]]), '2003-04')).toThrow(/2003-04 det Ex.*XYZ/)
+  })
+})
