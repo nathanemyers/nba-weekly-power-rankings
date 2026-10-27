@@ -2,15 +2,15 @@ import { use, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { Search } from 'lucide-react'
 import { searchPlayers, type PlayerSummary } from '@/data/playerHistory'
-import { Button } from './ui/button'
+import { Button } from '../ui/button'
 import {
   Command,
   CommandEmpty,
   CommandInput,
   CommandItem,
   CommandList,
-} from './ui/command'
-import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
+} from '../ui/command'
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
 
 const MAX_RESULTS = 20
 

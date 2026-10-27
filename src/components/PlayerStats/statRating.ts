@@ -21,12 +21,6 @@ export const STAT_BREAKPOINTS: Record<RatedStat, Breakpoints> = {
 }
 
 // Share of qualified player-seasons in each rating, lowest first; update alongside STAT_BREAKPOINTS
-export const RATING_BANDS: { rating: StatRating; percent: number }[] = [
-  { rating: 'poor', percent: 25 },
-  { rating: 'fair', percent: 50 },
-  { rating: 'good', percent: 15 },
-  { rating: 'elite', percent: 10 },
-]
 
 export const MIN_RATED_GAMES = 10
 export const MIN_RATED_MINUTES = 10

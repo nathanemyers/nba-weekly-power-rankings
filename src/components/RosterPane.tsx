@@ -6,7 +6,7 @@ import { getSinglePinnedTeam, setPinnedTeams } from '@/store/slices/chart'
 import { getTeamRankings } from '@/data/seasonData'
 import { useSeason } from '@/hooks/useSeason'
 import { getTeamName, type CoachStint, type Team } from 'types'
-import { RatingKey, StatCells, StatHeads } from './statColumns'
+import { StatCells, StatHeads } from 'components/PlayerStats/statColumns'
 import TeamLogo from './TeamLogo'
 import { Badge } from './ui/badge'
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
@@ -18,6 +18,7 @@ import {
   TableHeader,
   TableRow,
 } from './ui/table'
+import RatingKey from 'components/PlayerStats/RatingKey'
 
 function MoveMark(props: { joined: boolean; team: Team }) {
   const dispatch = useAppDispatch()

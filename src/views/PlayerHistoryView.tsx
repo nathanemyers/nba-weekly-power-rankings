@@ -1,9 +1,9 @@
 import { Suspense, use } from 'react'
 import { useLoaderData } from 'react-router'
 import NotFoundCard from '@/components/NotFoundCard'
-import PlayerHistoryTable from '@/components/PlayerHistoryTable'
-import PlayerSearch from '@/components/PlayerSearch'
-import { RatingKey } from '@/components/statColumns'
+import PlayerHistoryTable from '@/components/PlayerStats/PlayerHistoryTable'
+import PlayerSearch from '@/components/PlayerStats/PlayerSearch'
+import RatingKey from 'components/PlayerStats/RatingKey'
 import type { PlayerStint, PlayerSummary } from '@/data/playerHistory'
 
 type PlayerHistoryLoaderData = {

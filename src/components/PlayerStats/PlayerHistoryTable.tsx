@@ -3,10 +3,10 @@ import { useAppDispatch } from '@/store/hooks'
 import { setPinnedTeams } from '@/store/slices/chart'
 import type { PlayerStint } from '@/data/playerHistory'
 import { getTeamName } from 'types'
-import AwardBadges from './Badges/AwardBadges'
-import { PLAYOFF_MEDALS } from './Chart/utils'
+import AwardBadges from '../Badges/AwardBadges'
+import { PLAYOFF_MEDALS } from '../Chart/utils'
 import { StatCells, StatHeads } from './statColumns'
-import TeamLogo from './TeamLogo'
+import TeamLogo from '../TeamLogo'
 import {
   Table,
   TableBody,
@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from './ui/table'
+} from '../ui/table'
 
 export default function PlayerHistoryTable(props: { history: PlayerStint[] }) {
   const dispatch = useAppDispatch()
