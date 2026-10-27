@@ -1,8 +1,6 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { makeStore } from 'store/redux'
-import { setSelectedSeason } from '@/store/slices/UI'
 import { Team } from 'types'
-import { COACHES, ROSTERS } from 'test/fixtures'
 import {
   pageWindow,
   getCanPageEarlier,
@@ -13,51 +11,45 @@ import {
   setZoomedOut,
   getPinnedTeams,
   setPinnedTeams,
-  getPinnedTeamRoster,
-  getPinnedTeamCoaches,
 } from './chart'
 
-vi.mock(
-  'data/seasons',
-  async () => (await import('test/mockSeasons')).mockSeasons
-)
+const LONG = 26
+const SHORT = 8
 
-const weeks = (store: ReturnType<typeof makeStore>) => [
-  getStartWeek(store.getState()),
-  getEndWeek(store.getState()),
+const weeks = (store: ReturnType<typeof makeStore>, maxWeek = LONG) => [
+  getStartWeek(store.getState(), maxWeek),
+  getEndWeek(store.getState(), maxWeek),
 ]
 
 describe('chartView', () => {
   it('starts zoomed out on the full season', () => {
     const store = makeStore()
     expect(weeks(store)).toEqual([1, 26])
-    expect(getCanPageEarlier(store.getState())).toBe(false)
-    expect(getCanPageLater(store.getState())).toBe(false)
-    expect(getCanZoom(store.getState())).toBe(true)
+    expect(getCanPageEarlier(store.getState(), LONG)).toBe(false)
+    expect(getCanPageLater(store.getState(), LONG)).toBe(false)
+    expect(getCanZoom(store.getState(), LONG)).toBe(true)
   })
 
   it('zooms in to a 10-week window and pages within the season', () => {
     const store = makeStore()
     store.dispatch(setZoomedOut(false))
     expect(weeks(store)).toEqual([1, 11])
-    store.dispatch(pageWindow(-1))
+    store.dispatch(pageWindow(-1, LONG))
     expect(weeks(store)).toEqual([1, 11])
-    store.dispatch(pageWindow(1))
+    store.dispatch(pageWindow(1, LONG))
     expect(weeks(store)).toEqual([2, 12])
-    expect(getCanPageEarlier(store.getState())).toBe(true)
-    store.dispatch(pageWindow(100))
+    expect(getCanPageEarlier(store.getState(), LONG)).toBe(true)
+    store.dispatch(pageWindow(100, LONG))
     expect(weeks(store)).toEqual([16, 26])
-    expect(getCanPageLater(store.getState())).toBe(false)
+    expect(getCanPageLater(store.getState(), LONG)).toBe(false)
   })
 
   it('keeps the window inside a shorter season and restores it after', () => {
     const store = makeStore()
     store.dispatch(setZoomedOut(false))
-    store.dispatch(pageWindow(100))
-    store.dispatch(setSelectedSeason('short'))
-    expect(weeks(store)).toEqual([1, 8])
-    expect(getCanZoom(store.getState())).toBe(false)
-    store.dispatch(setSelectedSeason('long'))
+    store.dispatch(pageWindow(100, LONG))
+    expect(weeks(store, SHORT)).toEqual([1, 8])
+    expect(getCanZoom(store.getState(), SHORT)).toBe(false)
     expect(weeks(store)).toEqual([16, 26])
   })
 })
@@ -69,18 +61,5 @@ describe('pinned teams', () => {
     expect(getPinnedTeams(store.getState())).toEqual([Team.Boston])
     store.dispatch(setPinnedTeams([]))
     expect(getPinnedTeams(store.getState())).toEqual([])
-  })
-
-  it("returns the single pinned team's roster for the selected season", () => {
-    const store = makeStore()
-    expect(getPinnedTeamRoster(store.getState())).toBeUndefined()
-    store.dispatch(setPinnedTeams([Team.Boston]))
-    expect(getPinnedTeamRoster(store.getState())).toEqual(ROSTERS[Team.Boston])
-    expect(getPinnedTeamCoaches(store.getState())).toEqual(COACHES[Team.Boston])
-    store.dispatch(setPinnedTeams([Team.Boston, Team.Miami]))
-    expect(getPinnedTeamRoster(store.getState())).toBeUndefined()
-    store.dispatch(setPinnedTeams([Team.Boston]))
-    store.dispatch(setSelectedSeason('short'))
-    expect(getPinnedTeamRoster(store.getState())).toBeUndefined()
   })
 })

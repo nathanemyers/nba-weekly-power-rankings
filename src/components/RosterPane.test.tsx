@@ -3,10 +3,8 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import RosterPane from './RosterPane'
-import { TooltipProvider } from './ui/tooltip'
-import { renderWithStore } from 'test/renderWithStore'
+import { renderInSeason } from 'test/renderWithRouter'
 import { getPinnedTeams, setPinnedTeams } from '@/store/slices/chart'
-import { setSelectedSeason } from '@/store/slices/UI'
 import { Team } from 'types'
 
 vi.mock(
@@ -14,11 +12,10 @@ vi.mock(
   async () => (await import('test/mockSeasons')).mockSeasons
 )
 
-function renderPane(pinned: Team[]) {
-  const result = renderWithStore(
-    <TooltipProvider>
-      <RosterPane />
-    </TooltipProvider>
+async function renderPane(pinned: Team[], season = 'long') {
+  const result = await renderInSeason(
+    <RosterPane />,
+    season
   )
   act(() => {
     result.store.dispatch(setPinnedTeams(pinned))
@@ -36,8 +33,8 @@ const cells = (row: HTMLElement) =>
 afterEach(cleanup)
 
 describe('RosterPane', () => {
-  it("lists the pinned team's players in roster order", () => {
-    renderPane([Team.Boston])
+  it("lists the pinned team's players in roster order", async () => {
+    await renderPane([Team.Boston])
     expect(
       screen.getByRole('heading', { name: 'Boston Celtics roster, long' })
     ).toBeInTheDocument()
@@ -56,8 +53,8 @@ describe('RosterPane', () => {
     ])
   })
 
-  it('formats every stat to one decimal and shows a dash for a missing PER', () => {
-    renderPane([Team.Boston])
+  it('formats every stat to one decimal and shows a dash for a missing PER', async () => {
+    await renderPane([Team.Boston])
     expect(cells(bodyRows()[3])).toEqual([
       'Joe Scrub',
       'C',
@@ -72,8 +69,8 @@ describe('RosterPane', () => {
     ])
   })
 
-  it('names each stat in full on its column header', () => {
-    renderPane([Team.Boston])
+  it('names each stat in full on its column header', async () => {
+    await renderPane([Team.Boston])
     expect(screen.getByRole('columnheader', { name: 'PTS' })).toHaveAttribute(
       'title',
       'Points per game'
@@ -84,8 +81,8 @@ describe('RosterPane', () => {
     )
   })
 
-  it('marks players who joined or left mid-season', () => {
-    renderPane([Team.Boston])
+  it('marks players who joined or left mid-season', async () => {
+    await renderPane([Team.Boston])
     const [pierce, garnett, moves, scrub] = bodyRows()
     expect(within(pierce).queryAllByRole('button')).toEqual([])
     expect(
@@ -108,8 +105,8 @@ describe('RosterPane', () => {
     ).toBeInTheDocument()
   })
 
-  it("shows each move as a badge with an arrow and the other team's logo, after the name", () => {
-    renderPane([Team.Boston])
+  it("shows each move as a badge with an arrow and the other team's logo, after the name", async () => {
+    await renderPane([Team.Boston])
     const moves = bodyRows()[2]
     const [joined, left] = within(moves).getAllByRole('button')
     expect(joined.querySelector('svg')).toHaveClass('lucide-arrow-left')
@@ -130,15 +127,15 @@ describe('RosterPane', () => {
   })
 
   it('pins the other team when a move badge is clicked', async () => {
-    const { store } = renderPane([Team.Boston])
+    const { store } = await renderPane([Team.Boston])
     await userEvent.click(
       screen.getByRole('button', { name: 'Left for Miami Heat mid-season' })
     )
     expect(getPinnedTeams(store.getState())).toEqual([Team.Miami])
   })
 
-  it('names the head coaches in order with their records', () => {
-    renderPane([Team.Boston])
+  it('names the head coaches in order with their records', async () => {
+    await renderPane([Team.Boston])
     const line = screen.getByText(/Head coaches:/)
     expect(line).toHaveTextContent(
       /^Head coaches: Doc Rivers \(12-8\) → then Brad Stevens \(50-12\)$/
@@ -146,15 +143,15 @@ describe('RosterPane', () => {
     expect(within(line).getByText('then')).toHaveClass('sr-only')
   })
 
-  it('names a single head coach', () => {
-    renderPane([Team.Detroit])
+  it('names a single head coach', async () => {
+    await renderPane([Team.Detroit])
     expect(screen.getByText(/Head coach:/)).toHaveTextContent(
       'Head coach: Flip Saunders (59-23)'
     )
   })
 
-  it('colors stats for regular players and leaves small samples plain', () => {
-    renderPane([Team.Boston])
+  it('colors stats for regular players and leaves small samples plain', async () => {
+    await renderPane([Team.Boston])
     const [pierce, , , scrub] = bodyRows()
     const ratings = (row: HTMLElement) =>
       within(row)
@@ -175,8 +172,8 @@ describe('RosterPane', () => {
     expect(ratings(scrub)).toEqual([null, null, null, null, null, null])
   })
 
-  it('shows a color key with each band labeled by its share', () => {
-    renderPane([Team.Boston])
+  it('shows a color key with each band labeled by its share', async () => {
+    await renderPane([Team.Boston])
     const key = screen.getByRole('img', { name: /^Stat colors/ })
     expect(key).toHaveAccessibleName(
       'Stat colors, lowest to highest: red 25%, yellow 50%, green 15%, purple 10%. Fewer turnovers rate higher.'
@@ -195,22 +192,19 @@ describe('RosterPane', () => {
     expect(screen.queryByText(/Stats are colored/)).toBeNull()
   })
 
-  it('renders nothing without exactly one pinned team', () => {
-    const { container } = renderPane([])
+  it('renders nothing without exactly one pinned team', async () => {
+    const { container } = await renderPane([])
     expect(container).toBeEmptyDOMElement()
     cleanup()
     expect(
-      renderPane([Team.Boston, Team.Miami]).container
+      (await renderPane([Team.Boston, Team.Miami])).container
     ).toBeEmptyDOMElement()
   })
 
-  it('renders nothing when the team has no roster', () => {
-    expect(renderPane([Team.Miami]).container).toBeEmptyDOMElement()
+  it('renders nothing when the team has no roster', async () => {
+    expect((await renderPane([Team.Miami])).container).toBeEmptyDOMElement()
     cleanup()
-    const { store, container } = renderPane([Team.Boston])
-    act(() => {
-      store.dispatch(setSelectedSeason('short'))
-    })
+    const { container } = await renderPane([Team.Boston], 'short')
     expect(container).toBeEmptyDOMElement()
   })
 })

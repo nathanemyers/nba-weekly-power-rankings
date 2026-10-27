@@ -1,36 +1,29 @@
-import { afterEach, describe, expect, it, vi } from 'vitest'
-import { cleanup } from '@testing-library/react'
+import { afterEach, describe, expect, it } from 'vitest'
+import { cleanup, render } from '@testing-library/react'
 import TrendMinimap from './TrendMinimap'
 import { Team } from 'types'
-import { renderWithStore } from 'test/renderWithStore'
+import { parseSeason } from '@/data/seasonData'
+import { weeklyRankings } from 'test/fixtures'
 
 // 'full' has an unbroken Boston, a Lakers gap at week 10 and Miami low; 'early' has Miami ending at week 21
-vi.mock('data/seasons', async () => {
-  const { weeklyRankings } = await import('test/fixtures')
-  return {
-    seasons: ['full', 'early'],
-    seasonData: {
-      full: {
-        season: 'full',
-        source: 'nba',
-        maxWeek: 25,
-        rankings: {
-          bos: weeklyRankings(25, 5),
-          lal: weeklyRankings(25, 5).filter((r) => r.week !== 10),
-          mia: weeklyRankings(25, 20),
-        },
-      },
-      early: {
-        season: 'early',
-        source: 'nba',
-        maxWeek: 24,
-        rankings: {
-          bos: weeklyRankings(24, 5),
-          mia: weeklyRankings(21, 5),
-        },
-      },
-    },
-  }
+const full = parseSeason('full', {
+  season: 'full',
+  source: 'nba',
+  maxWeek: 25,
+  rankings: {
+    bos: weeklyRankings(25, 5),
+    lal: weeklyRankings(25, 5).filter((r) => r.week !== 10),
+    mia: weeklyRankings(25, 20),
+  },
+})
+const early = parseSeason('early', {
+  season: 'early',
+  source: 'nba',
+  maxWeek: 24,
+  rankings: {
+    bos: weeklyRankings(24, 5),
+    mia: weeklyRankings(21, 5),
+  },
 })
 
 afterEach(cleanup)
@@ -46,8 +39,8 @@ const lastX = (path: SVGPathElement) => {
 
 describe('TrendMinimap', () => {
   it('draws one decorative line for an unbroken season', () => {
-    const { container } = renderWithStore(
-      <TrendMinimap team={Team.Boston} seasonId="full" />
+    const { container } = render(
+      <TrendMinimap team={Team.Boston} season={full} />
     )
 
     expect(container.querySelector('svg')).toHaveAttribute(
@@ -59,16 +52,16 @@ describe('TrendMinimap', () => {
   })
 
   it('breaks the line at a missing week', () => {
-    const { container } = renderWithStore(
-      <TrendMinimap team={Team.LALakers} seasonId="full" />
+    const { container } = render(
+      <TrendMinimap team={Team.LALakers} season={full} />
     )
 
     expect(moveCount(pathOf(container))).toBe(2)
   })
 
   it('colors the line by rank band, green over yellow over red', () => {
-    const { container } = renderWithStore(
-      <TrendMinimap team={Team.Boston} seasonId="full" />
+    const { container } = render(
+      <TrendMinimap team={Team.Boston} season={full} />
     )
     const gradient = container.querySelector('linearGradient')
     const stops = Array.from(container.querySelectorAll('stop'))
@@ -96,10 +89,10 @@ describe('TrendMinimap', () => {
   })
 
   it('gives each instance its own gradient', () => {
-    const { container } = renderWithStore(
+    const { container } = render(
       <>
-        <TrendMinimap team={Team.Boston} seasonId="full" />
-        <TrendMinimap team={Team.Miami} seasonId="full" />
+        <TrendMinimap team={Team.Boston} season={full} />
+        <TrendMinimap team={Team.Miami} season={full} />
       </>
     )
     const ids = Array.from(container.querySelectorAll('linearGradient')).map(
@@ -111,16 +104,16 @@ describe('TrendMinimap', () => {
   })
 
   it('stops short of the right edge when the data ends early', () => {
-    const full = renderWithStore(
-      <TrendMinimap team={Team.Boston} seasonId="early" width={96} />
+    const fullLine = render(
+      <TrendMinimap team={Team.Boston} season={early} width={96} />
     )
-    const early = renderWithStore(
-      <TrendMinimap team={Team.Miami} seasonId="early" width={96} />
+    const earlyLine = render(
+      <TrendMinimap team={Team.Miami} season={early} width={96} />
     )
 
-    expect(lastX(pathOf(early.container))).toBeLessThan(
-      lastX(pathOf(full.container))
+    expect(lastX(pathOf(earlyLine.container))).toBeLessThan(
+      lastX(pathOf(fullLine.container))
     )
-    expect(lastX(pathOf(full.container))).toBeLessThan(96)
+    expect(lastX(pathOf(fullLine.container))).toBeLessThan(96)
   })
 })

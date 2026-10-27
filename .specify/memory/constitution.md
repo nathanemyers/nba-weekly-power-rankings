@@ -1,22 +1,19 @@
 <!--
 Sync Impact Report
-- Version change: 1.3.0 → 1.4.0
+- Version change: 1.4.0 → 1.5.0
 - Modified principles:
-  - II. Data Is Prepared at Build Time: app data location changes from the example
-    `src/data/` to a required `data/processed/`. Title and intent unchanged.
-  - IV. Respectful, Offline Data Collection: raw scraped inputs move from `data/` to a required
-    `data/raw/`. AI-generated summaries are classified as processed data under
-    `data/processed/`. Adds a rule that app code imports only from `data/processed/`. Title
-    unchanged.
+  - V. Simplicity: React Router added to the named existing stack. Title unchanged.
 - Modified sections:
-  - Hosting & Technology Constraints: the Data pipeline bullet now names `data/raw/` as the
-    scrape target and `data/processed/` as the target for both `build:summaries` and
-    `build:rankings`.
+  - Hosting & Technology Constraints → State & Data Layer: loaded season data (ranking, playoff,
+    team) MAY be held by React Router route loaders instead of the Redux store, provided it is a
+    same-origin static asset validated with Zod. Redux remains the home for shared interaction
+    state. Navigation state (selected season, current view) lives in the URL.
+  - Hosting & Technology Constraints → Data Validation: Zod parsing now applies before data
+    enters route loader results as well as the Redux store or components.
 - Added sections: none
 - Removed sections: none
 - Templates requiring updates: none (templates read the constitution at runtime)
-- Follow-up TODOs: none. The data/ folder, scripts/, the `data/*` alias, and README were
-  reorganized to match in the same change.
+- Follow-up TODOs: none. Driven by spec 018-react-router-data-loading (FR-015).
 -->
 
 # NBA Weekly Power Rankings Constitution
@@ -81,7 +78,7 @@ presentation.
 ### V. Simplicity
 
 - Prefer the existing stack (React, TypeScript, Vite, Tailwind CSS, shadcn/ui,
-  Redux Toolkit, Zod) and the platform over
+  Redux Toolkit, React Router, Zod) and the platform over
   new dependencies. Each new runtime dependency MUST be justified by a need the current stack
   cannot reasonably meet.
 - Do not introduce infrastructure (servers, databases, hosted services) to solve problems that
@@ -106,17 +103,23 @@ Rationale: a small, single-maintainer visualization project stays maintainable b
   require the same justification as any new runtime dependency under Principle V. Styles and
   fonts MUST be bundled with the build, consistent with Principles I and II.
 - State & Data Layer: Redux Toolkit (`@reduxjs/toolkit`) with React Redux bindings
-  (`react-redux`) is the project's dedicated data layer. Shared application state and loaded
-  ranking/playoff/team data MUST live in the Redux store, organized as slices created with
-  `createSlice` and read through selectors; plain Redux (`createStore`, hand-written action
-  types) and alternative state libraries (Zustand, MobX, Jotai, etc.) MUST NOT be introduced.
-  Purely local UI state (e.g., an open popover) MAY remain in component state. The store is
+  (`react-redux`) is the project's dedicated store for shared application state (e.g., pinned
+  teams, chart zoom window), organized as slices created with `createSlice` and read through
+  selectors; plain Redux (`createStore`, hand-written action types) and alternative state
+  libraries (Zustand, MobX, Jotai, etc.) MUST NOT be introduced. React Router owns navigation
+  state: the selected season and current view MUST be derived from the URL, not duplicated in
+  the store. Loaded ranking/playoff/team data MAY be held by React Router route loaders (read
+  through the router's loader-data APIs) instead of the store, provided each loader fetches only
+  same-origin static assets (Principle II) and parses the result with Zod before returning it.
+  Loaded data MUST live in exactly one of the two places, never copied between them. Purely local
+  UI state (e.g., an open popover) MAY remain in component state. The store and loader data are
   in-memory only: anything that must persist or be shareable still follows Principles I and III
   (URL or browser storage). If RTK Query is used, it MUST only fetch same-origin static assets,
   consistent with Principle II.
 - Data Validation: Zod is the project's schema and runtime-validation library. Data crossing a
   trust boundary into the app (bundled or fetched JSON, URL parameters, browser storage) MUST be
-  parsed with a Zod schema before entering the Redux store or components, and invalid input MUST
+  parsed with a Zod schema before entering the Redux store, route loader results, or
+  components, and invalid input MUST
   fall back to a safe default rather than crash. TypeScript types for validated data SHOULD be
   derived from schemas (`z.infer`) instead of duplicated by hand. Build scripts in `scripts/`
   MAY use Zod to validate the JSON they emit. Other validation libraries (Yup, io-ts, Valibot,
@@ -145,4 +148,4 @@ Rationale: a small, single-maintainer visualization project stays maintainable b
 - Every feature plan and code review MUST verify compliance with the Core Principles; any
   justified deviation MUST be documented in the plan's complexity tracking.
 
-**Version**: 1.4.0 | **Ratified**: 2026-10-08 | **Last Amended**: 2026-10-14
+**Version**: 1.5.0 | **Ratified**: 2026-10-08 | **Last Amended**: 2026-10-26

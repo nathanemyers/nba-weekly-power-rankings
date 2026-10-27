@@ -6,10 +6,30 @@ import {
   ROSTERS,
 } from './fixtures'
 
-// Two fixture seasons for store tests: a 26-week season and one shorter than the zoom window
-export const mockSeasons = {
-  seasons: ['long', 'short'],
-  seasonData: {
+// Builds a data/seasons module mock from raw season fixtures, newest first
+export function mockSeasonModule(
+  seasonData: Record<string, Record<string, unknown>>,
+  champions: Record<string, string> = {}
+) {
+  const names = Object.keys(seasonData)
+  return {
+    seasonIndex: names.map((name) => ({
+      name,
+      source: seasonData[name].source,
+      ...(champions[name] && { champion: champions[name] }),
+    })),
+    seasonLoaders: Object.fromEntries(
+      names.map((name) => [
+        name,
+        () => Promise.resolve({ default: seasonData[name] }),
+      ])
+    ),
+  }
+}
+
+// Two fixture seasons: a 26-week season and one shorter than the zoom window
+export const mockSeasons = mockSeasonModule(
+  {
     long: {
       season: 'long',
       source: 'nba',
@@ -28,4 +48,5 @@ export const mockSeasons = {
       rankings: buildRankings(8),
     },
   },
-}
+  { long: 'bos' }
+)

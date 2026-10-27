@@ -5,30 +5,30 @@ import {
   SelectTrigger,
   SelectValue,
 } from './ui/select'
-import { useAppDispatch, useAppSelector } from 'store/hooks'
-import { setSelectedSeason, getSelectedSeason } from '@/store/slices/UI/UI'
-import { getSeasons } from 'store/slices/seasons/seasons'
+import { useNavigate, useParams } from 'react-router'
+import { useAppDispatch } from 'store/hooks'
+import { seasonIndex } from '@/data/seasonData'
 import TeamLogo from './TeamLogo'
 import { setPinnedTeams } from '@/store/slices/chart'
 
 export default function SeasonSelect() {
   const dispatch = useAppDispatch()
-  const seasons = useAppSelector(getSeasons)
-  const selectedSeason = useAppSelector(getSelectedSeason)
+  const navigate = useNavigate()
+  const selectedSeason = useParams().season ?? ''
 
   return (
     <Select
-      value={selectedSeason.name}
+      value={selectedSeason}
       onValueChange={(value) => {
-        dispatch(setSelectedSeason(value))
         dispatch(setPinnedTeams([]))
+        navigate('/' + value)
       }}
     >
       <SelectTrigger className="md:w-[180px] w-full text-lg">
-        <SelectValue placeholder="Season">{`${selectedSeason.name} Season`}</SelectValue>
+        <SelectValue placeholder="Season">{`${selectedSeason} Season`}</SelectValue>
       </SelectTrigger>
       <SelectContent className="bg-muted">
-        {seasons.map((s) => {
+        {seasonIndex.map((s) => {
           return (
             <SelectItem className="h-10 text-lg" key={s.name} value={s.name}>
               {s.name}

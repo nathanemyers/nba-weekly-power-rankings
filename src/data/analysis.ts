@@ -1,7 +1,5 @@
-import type { RootState } from '@/store/redux'
 import type { Team } from '@/types'
-import { type Season } from './seasons'
-import { getSelectedSeason } from '../UI'
+import type { Season } from './seasonData'
 
 function getSeasonDelta(team: Team, season: Season) {
   const teamRankings = season.teams.find((t) => t.teamId === team)
@@ -14,12 +12,7 @@ function getSeasonDelta(team: Team, season: Season) {
   return start.rank - end.rank
 }
 
-export function getMostImprovedTeams(
-  state: RootState,
-  returnAmount: number = 3
-) {
-  const season = getSelectedSeason(state)
-
+export function getMostImprovedTeams(season: Season, returnAmount = 3) {
   return season.teams
     .map((team) => {
       return {
@@ -33,12 +26,7 @@ export function getMostImprovedTeams(
     .slice(0, returnAmount)
 }
 
-export function getMostDeclinedTeams(
-  state: RootState,
-  returnAmount: number = 3
-) {
-  const season = getSelectedSeason(state)
-
+export function getMostDeclinedTeams(season: Season, returnAmount = 3) {
   return season.teams
     .map((team) => {
       return {

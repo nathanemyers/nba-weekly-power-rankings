@@ -1,8 +1,9 @@
 import type { Team } from '@/types'
-import { getSeasons } from '@/store/slices/seasons/seasons'
-import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import type { Season } from '@/data/seasonData'
+import { useAppDispatch } from '@/store/hooks'
+import { useNavigate } from 'react-router'
 import TrendMinimap from './TrendMinimap/TrendMinimap'
-import { setSelectedSeason, setView, View } from '@/store/slices/UI'
+import { setPinnedTeams } from '@/store/slices/chart'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 import DataSourceBadge from './DataSourceBadge'
@@ -10,14 +11,15 @@ import PlayoffSeriesBadges from './PlayoffSeriesBadges'
 
 interface TeamHistoryProps {
   team: Team
+  seasons: Season[]
 }
 export default function TeamHistory(props: TeamHistoryProps) {
-  const seasons = useAppSelector(getSeasons)
   const dispatch = useAppDispatch()
+  const navigate = useNavigate()
 
   return (
     <div className="flex flex-col gap-5">
-      {seasons.map((season) => {
+      {props.seasons.map((season) => {
         const team = season.teams.find((team) => team.teamId === props.team)
         if (!team) return null
 
@@ -26,8 +28,8 @@ export default function TeamHistory(props: TeamHistoryProps) {
             key={season.name}
             className="cursor-pointer"
             onClick={() => {
-              dispatch(setView(View.Chart))
-              dispatch(setSelectedSeason(season.name))
+              dispatch(setPinnedTeams([props.team]))
+              navigate('/' + season.name)
             }}
           >
             <CardContent>
@@ -38,7 +40,7 @@ export default function TeamHistory(props: TeamHistoryProps) {
                       {season.name}
                     </h2>
                     <div className="content-center md:w-100">
-                      <TrendMinimap team={team.teamId} seasonId={season.name} />
+                      <TrendMinimap team={team.teamId} season={season} />
                     </div>
                   </div>
                   <PlayoffSeriesBadges

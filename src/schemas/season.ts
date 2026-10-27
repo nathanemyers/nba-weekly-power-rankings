@@ -65,8 +65,16 @@ export const SeasonDataSchema = z.object({
   coaches: z.partialRecord(z.enum(Team), z.array(CoachStintSchema)).optional(),
 })
 
+// One entry of the generated season list in data/processed/seasons/index.ts
+export const SeasonIndexEntrySchema = z.object({
+  name: z.string().min(1),
+  source: z.enum(DataSource),
+  champion: z.enum(Team).optional(),
+})
+
 export type WeekRanking = z.infer<typeof WeekRankingSchema>
 export type SeasonData = z.infer<typeof SeasonDataSchema>
 export type SeriesResult = z.infer<typeof SeriesResultSchema>
 export type RosterEntry = z.infer<typeof RosterEntrySchema>
 export type CoachStint = z.infer<typeof CoachStintSchema>
+export type SeasonIndexEntry = z.infer<typeof SeasonIndexEntrySchema>

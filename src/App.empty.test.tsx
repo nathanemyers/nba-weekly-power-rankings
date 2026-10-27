@@ -1,11 +1,13 @@
 import { afterEach, beforeEach, expect, it, vi } from 'vitest'
 import { screen } from '@testing-library/react'
-import App from './App'
-import { renderWithStore } from 'test/renderWithStore'
+import { renderWithRouter } from 'test/renderWithRouter'
 
+// The only index entry lacks a source, so no season passes validation
 vi.mock('data/seasons', () => ({
-  seasons: ['bad'],
-  seasonData: { bad: { season: 'bad', rankings: {} } },
+  seasonIndex: [{ name: 'bad' }],
+  seasonLoaders: {
+    bad: () => Promise.resolve({ default: { season: 'bad', rankings: {} } }),
+  },
 }))
 
 let errorSpy: ReturnType<typeof vi.spyOn>
@@ -18,8 +20,8 @@ afterEach(() => {
   errorSpy.mockRestore()
 })
 
-it('shows a message when no season passes validation', () => {
-  renderWithStore(<App />)
+it('shows a message when no season passes validation', async () => {
+  await renderWithRouter()
   expect(screen.getByText('No season data available')).toBeInTheDocument()
   expect(screen.queryByRole('combobox')).not.toBeInTheDocument()
 })

@@ -1,19 +1,16 @@
 import { Badge } from '@/components/ui/badge'
 import { useAppSelector } from '@/store/hooks'
-import { getAISummaryForSeason } from '@/store/slices/seasons/seasons'
+import { getAISummary } from '@/data/seasonData'
+import { useSeason } from '@/hooks/useSeason'
 import { getTeamName } from 'types'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from './ui/hover-card'
 import { Button } from './ui/button'
 import { getSinglePinnedTeam } from '@/store/slices/chart'
-import { getSelectedSeason } from '@/store/slices/UI'
 
 export default function TeamSeasonSummary() {
   const singlePinnedTeam = useAppSelector(getSinglePinnedTeam)
-  const selectedSeason = useAppSelector(getSelectedSeason)
-
-  const summary = useAppSelector((state) =>
-    getAISummaryForSeason(state, singlePinnedTeam, selectedSeason.name)
-  )
+  const season = useSeason()
+  const summary = getAISummary(season, singlePinnedTeam)
 
   const teamName = singlePinnedTeam ? getTeamName(singlePinnedTeam) : undefined
 

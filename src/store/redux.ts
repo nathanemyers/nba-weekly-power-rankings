@@ -3,13 +3,11 @@ import {
   type ThunkAction,
   type UnknownAction,
 } from '@reduxjs/toolkit'
-import seasons from './slices/seasons/seasons'
-import UI from './slices/UI/UI'
 import chart from './slices/chart/chart'
 
 export function makeStore() {
   return configureStore({
-    reducer: { seasons, UI, chart },
+    reducer: { chart },
   })
 }
 

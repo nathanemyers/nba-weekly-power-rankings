@@ -2,24 +2,21 @@ import { Toggle } from '@/components/ui/toggle'
 import TrendMinimap from 'components/TrendMinimap/TrendMinimap'
 import { useAppSelector } from '@/store/hooks'
 import { getPinnedTeams, setPinnedTeams } from '@/store/slices/chart'
-import {
-  getMostImprovedTeams,
-  getMostDeclinedTeams,
-} from '@/store/slices/seasons/analysis'
+import { getMostImprovedTeams, getMostDeclinedTeams } from '@/data/analysis'
+import type { Season } from '@/data/seasonData'
+import { useSeason } from '@/hooks/useSeason'
 import TeamLogo from './TeamLogo'
 import { useDispatch } from 'react-redux'
-import { getSelectedSeason } from '@/store/slices/UI'
 import type { Team } from '@/types'
 import { Button } from './ui/button'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from './ui/hover-card'
 
 function TeamMinimapCard(props: {
   team: Team
-  seasonId: string
+  season: Season
   isPressed: boolean
   onClick: () => void
 }) {
-  console.log('is pressed', props.isPressed)
   return (
     <Toggle
       className="w-auto h-auto p-3"
@@ -27,7 +24,7 @@ function TeamMinimapCard(props: {
       pressed={props.isPressed}
     >
       <TeamLogo team={props.team} />
-      <TrendMinimap team={props.team} seasonId={props.seasonId} />
+      <TrendMinimap team={props.team} season={props.season} />
     </Toggle>
   )
 }
@@ -35,10 +32,10 @@ function TeamMinimapCard(props: {
 export default function RankSwings() {
   const dispatch = useDispatch()
   const pinnedTeams = useAppSelector(getPinnedTeams)
-  const season = useAppSelector(getSelectedSeason)
+  const season = useSeason()
 
-  const biggestRisers = useAppSelector(getMostImprovedTeams)
-  const biggestFallers = useAppSelector(getMostDeclinedTeams)
+  const biggestRisers = getMostImprovedTeams(season)
+  const biggestFallers = getMostDeclinedTeams(season)
 
   return (
     <HoverCard openDelay={100} closeDelay={100}>
@@ -58,7 +55,7 @@ export default function RankSwings() {
               isPressed={pinnedTeams.length === 1 && pinnedTeams[0] === team}
               onClick={() => dispatch(setPinnedTeams([team]))}
               team={team}
-              seasonId={season.name}
+              season={season}
             />
           ))}
         </div>
@@ -70,7 +67,7 @@ export default function RankSwings() {
               isPressed={pinnedTeams.length === 1 && pinnedTeams[0] === team}
               onClick={() => dispatch(setPinnedTeams([team]))}
               team={team}
-              seasonId={season.name}
+              season={season}
             />
           ))}
         </div>
