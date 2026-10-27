@@ -17,7 +17,6 @@ function TeamMinimapCard(props: {
   isPressed: boolean
   onClick: () => void
 }) {
-  console.log('is pressed', props.isPressed)
   return (
     <Toggle
       className="w-auto h-auto p-3"
