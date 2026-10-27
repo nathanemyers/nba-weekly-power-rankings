@@ -1,8 +1,42 @@
-import { describe, expect, it } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { omit } from 'lodash'
 import { buildRankings, COACHES, PLAYOFFS, ROSTERS } from 'test/fixtures'
 import { Team } from 'types'
-import { parseSeason } from './seasonData'
+import {
+  loadAllSeasons,
+  loadSeason,
+  parseSeason,
+  seasonIndex,
+} from './seasonData'
+
+// Each season name is used by one test only, because loaded seasons stay cached for the module's life
+const loaders = vi.hoisted(() => ({
+  cached: vi.fn(),
+  flaky: vi.fn(),
+  good: vi.fn(),
+  broken: vi.fn(),
+}))
+
+vi.mock('data/seasons', () => ({
+  seasonIndex: [
+    { name: 'good', source: 'nba' },
+    { name: 'broken', source: 'nba' },
+    { name: 'cached', source: 'nba' },
+    { name: 'flaky', source: 'nba' },
+    { name: '', source: 'nba' },
+  ],
+  seasonLoaders: loaders,
+}))
+
+let errorSpy: ReturnType<typeof vi.spyOn>
+
+beforeEach(() => {
+  errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
+})
+
+afterEach(() => {
+  errorSpy.mockRestore()
+})
 
 const valid = (maxWeek = 4) => ({
   season: 'valid',
@@ -93,5 +127,56 @@ describe('parseSeason', () => {
   it.each(cases)('rejects %s naming the season and field', (_, bad, field) => {
     expect(() => parseSeason('bad', bad)).toThrow(/Season bad/)
     expect(() => parseSeason('bad', bad)).toThrow(new RegExp(field))
+  })
+})
+
+describe('season index', () => {
+  it('drops entries that fail validation and keeps the order', () => {
+    expect(seasonIndex.map((e) => e.name)).toEqual([
+      'good',
+      'broken',
+      'cached',
+      'flaky',
+    ])
+  })
+})
+
+describe('loadSeason', () => {
+  const mod = (raw: unknown) => Promise.resolve({ default: raw })
+
+  it('downloads and parses a season once per visit', async () => {
+    loaders.cached.mockReturnValue(mod(valid()))
+    const first = await loadSeason('cached')
+    const second = await loadSeason('cached')
+    expect(second).toBe(first)
+    expect(loaders.cached).toHaveBeenCalledTimes(1)
+  })
+
+  it('rejects invalid data and retries on the next request', async () => {
+    loaders.flaky.mockReturnValueOnce(mod({ season: 'flaky' }))
+    await expect(loadSeason('flaky')).rejects.toThrow(/Season flaky/)
+
+    loaders.flaky.mockReturnValueOnce(mod(valid()))
+    await expect(loadSeason('flaky')).resolves.toMatchObject({ name: 'flaky' })
+    expect(loaders.flaky).toHaveBeenCalledTimes(2)
+  })
+
+  it('rejects a season that is not in the index', async () => {
+    await expect(loadSeason('nope')).rejects.toThrow(/Unknown season nope/)
+  })
+})
+
+describe('loadAllSeasons', () => {
+  it('skips seasons that fail and keeps index order', async () => {
+    loaders.good.mockReturnValue(Promise.resolve({ default: valid() }))
+    loaders.broken.mockReturnValue(Promise.reject(new Error('offline')))
+    loaders.cached.mockReturnValue(Promise.resolve({ default: valid() }))
+    loaders.flaky.mockReturnValue(Promise.resolve({ default: valid() }))
+
+    const seasons = await loadAllSeasons()
+    expect(seasons.map((s) => s.name)).toEqual(['good', 'cached', 'flaky'])
+    expect(errorSpy).toHaveBeenCalledWith(
+      expect.objectContaining({ message: 'offline' })
+    )
   })
 })

@@ -8,6 +8,7 @@ import type { Team } from 'types'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
 import { useSeason } from '@/hooks/useSeason'
 import { Suspense } from 'react'
+import { useParams } from 'react-router'
 import {
   getEndWeek,
   getStartWeek,
@@ -93,6 +94,8 @@ function ChartBody() {
 }
 
 export default function ChartView() {
+  const { season } = useParams()
+
   return (
     <div>
       <header className="flex items-start justify-between gap-4">
@@ -108,7 +111,15 @@ export default function ChartView() {
       </header>
 
       <Suspense
-        fallback={<p className="mt-5 text-muted-foreground">Loading…</p>}
+        key={season}
+        fallback={
+          <p
+            className="mt-5 flex items-center justify-center text-muted-foreground"
+            style={{ height: CHART_HEIGHT }}
+          >
+            Loading season…
+          </p>
+        }
       >
         <ChartBody />
       </Suspense>

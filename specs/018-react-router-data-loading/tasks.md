@@ -181,18 +181,18 @@ instant, and failures are scoped to one season (FR-010, FR-011, FR-013, FR-014; 
 
 ### Implementation for User Story 3
 
-- [ ] T032 [US3] In `src/views/ChartView.tsx`, key the Suspense boundary by season name (`key={useParams().season}`), so a fresh fallback shows on each switch to a not-yet-loaded season (research R5). Replace the plain fallback text with a chart-sized placeholder: a `div` with `style={{ height: CHART_HEIGHT }}` and the muted "Loading season…" text.
-- [ ] T033 [P] [US3] In `src/views/RouteError.tsx`, add `<SeasonSelect />` and the failed season name ("Couldn't load the 2010-11 season") for non-404 errors on the `season` route, so the visitor can pick another season (US3 scenario 4).
+- [X] T032 [US3] In `src/views/ChartView.tsx`, key the Suspense boundary by season name (`key={useParams().season}`), so a fresh fallback shows on each switch to a not-yet-loaded season (research R5). Replace the plain fallback text with a chart-sized placeholder: a `div` with `style={{ height: CHART_HEIGHT }}` and the muted "Loading season…" text.
+- [X] T033 [P] [US3] In `src/views/RouteError.tsx`, add `<SeasonSelect />` and the failed season name ("Couldn't load the 2010-11 season") for non-404 errors on the `season` route, so the visitor can pick another season (US3 scenario 4).
 
 ### Tests for User Story 3
 
-- [ ] T034 [P] [US3] Create `src/data/seasonData.test.ts`, moving the cases from `src/store/slices/seasons/loadSeasons.test.ts` to `parseSeason`. Mock `data/seasons` with `vi.fn` loaders, and test that:
+- [X] T034 [P] [US3] Create `src/data/seasonData.test.ts`, moving the cases from `src/store/slices/seasons/loadSeasons.test.ts` to `parseSeason`. Mock `data/seasons` with `vi.fn` loaders, and test that:
   - `loadSeason` calls a season's loader once across two calls;
   - invalid JSON rejects and logs, and a second call retries the loader;
   - `loadAllSeasons` skips a rejected season and keeps index order;
   - an index entry with a bad `name` is dropped.
 - [X] T035 [P] [US3] Rewrite `src/store/realData.test.ts` as `src/data/realData.test.ts`: parse the real `seasonIndex` (22 entries), `await loadAllSeasons()` (22 seasons, no `console.error`), and keep the roster/head-coach assertions over the loaded seasons.
-- [ ] T036 [US3] Add tests to `src/App.test.tsx`:
+- [X] T036 [US3] Add tests to `src/App.test.tsx`:
   - With a deferred loader for `mid`, switching to `mid` shows "Loading season…" until it resolves.
   - A rejecting loader for `short` shows "Couldn't load" with the season picker, and picking `long` from there renders the chart.
 
@@ -203,10 +203,10 @@ instant, and failures are scoped to one season (FR-010, FR-011, FR-013, FR-014; 
 ## Phase 6: Polish & Cross-Cutting Concerns
 
 - [X] T037 Delete the old store data layer: `src/store/slices/UI/` (all files), `src/store/slices/seasons/` (`seasons.ts`, `loadSeasons.ts`, `loadSeasons.test.ts`, `analysis.ts`, `index.ts`) and `src/test/renderWithStore.tsx`. Set `reducer: { chart }` in `src/store/redux.ts`. Then `grep -rn "slices/UI\|slices/seasons\|renderWithStore\|seasonData\b" src` must return nothing.
-- [ ] T038 [P] Check `src/store/redux.ts` exports and `src/store/hooks.ts` still type-check with the smaller `RootState`, and fix any remaining `state.seasons`/`state.UI` references the compiler reports.
-- [ ] T039 Run `npm run lint`, `npm test` and `npm run build`, and fix failures. Confirm `dist/assets/` has 22 per-season chunks and the main `index-*.js` contains no weekly summary text.
-- [ ] T040 Run the quickstart bundle check: main chunk gzip plus the largest season chunk gzip must be ≤ 1.08 MB (SC-002). Record the numbers in `specs/018-react-router-data-loading/quickstart.md` under a "Results" heading.
-- [ ] T041 Run `npm run preview` and walk quickstart rows 1–12 under `/nba-weekly-power-rankings/` in the browser (constitution quality gate for routing and loading changes). Note any failures in `specs/018-react-router-data-loading/quickstart.md` "Results".
+- [X] T038 [P] Check `src/store/redux.ts` exports and `src/store/hooks.ts` still type-check with the smaller `RootState`, and fix any remaining `state.seasons`/`state.UI` references the compiler reports.
+- [X] T039 Run `npm run lint`, `npm test` and `npm run build`, and fix failures. Confirm `dist/assets/` has 22 per-season chunks and the main `index-*.js` contains no weekly summary text.
+- [X] T040 Run the quickstart bundle check: main chunk gzip plus the largest season chunk gzip must be ≤ 1.08 MB (SC-002). Record the numbers in `specs/018-react-router-data-loading/quickstart.md` under a "Results" heading.
+- [X] T041 Run `npm run preview` and walk quickstart rows 1–12 under `/nba-weekly-power-rankings/` in the browser (constitution quality gate for routing and loading changes). Note any failures in `specs/018-react-router-data-loading/quickstart.md` "Results".
 
 ---
 
@@ -270,7 +270,7 @@ Then T016 ChartView, then T021 App tests.
 ## Implementation Log (MVP run, 2026-10-26)
 
 - T001–T031 are done. T035 and T037 were pulled forward, because the build and tests could not compile while the old slices and `realData.test.ts` still imported removed exports.
-- T034 is partly done. `parseSeason` cases moved to `src/data/seasonData.test.ts`. The cache, retry and `loadAllSeasons` tests are still open.
+- T034 was finished in the second run.
 - Deviation: `SeasonIndexEntrySchema.name` is `z.string().min(1)`, not the `^\d{4}-\d{2}$` regex, so fixture names like `long` stay valid (data-model.md updated).
 - Deviation: `NoSeasons` lives in `src/views/NoSeasons.tsx` (react-refresh lint rule). A `*` route renders "Page not found".
 - Results: `npm run lint`, `npm test` (198 passing) and `npm run build` pass. The main chunk is 259 KB gzip, down from ≈2.17 MB, and the largest season chunk is ≈102 KB gzip.
@@ -280,3 +280,12 @@ Then T016 ChartView, then T021 App tests.
   - the card click lands on `#/2007-08` with Boston pinned;
   - the bare base address becomes `#/2025-26`;
   - `#/teamHistory/xyz` shows "Team not found".
+
+## Implementation Log (US3 + Polish run, 2026-10-26)
+
+- T032: the Suspense boundary in `ChartView` is keyed by season, with a chart-height "Loading season…" fallback.
+- T033: `RouteError` shows "Couldn't load the X season" with `SeasonSelect` for failed season loads.
+- T034: added index, cache, retry and `loadAllSeasons` tests to `src/data/seasonData.test.ts`.
+- T036: the tests live in a new `src/App.loading.test.tsx` rather than `src/App.test.tsx`, because they need loaders that can be held pending or made to fail.
+- Fix: `loadSeason` attaches a no-op `catch` to the cached promise, so a failed download no longer causes an unhandled rejection before the view reads it.
+- T038–T041: no stale `state.seasons`/`state.UI` references remain, and lint, tests (205) and build pass. Size and preview results are in quickstart.md "Results".

@@ -85,6 +85,8 @@ export function loadSeason(name: string): Promise<Season> {
       delete cache[name]
       throw error
     })
+  // Marks the rejection handled until a view reads it with use()
+  promise.catch(() => {})
   cache[name] = promise
   return promise
 }

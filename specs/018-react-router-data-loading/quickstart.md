@@ -66,3 +66,25 @@ in a **fresh tab**:
 
 See [contracts/routes.md](contracts/routes.md) for addresses and
 [contracts/season-index.md](contracts/season-index.md) for the generated index module.
+
+## Results
+
+Run on 2026-10-26 with `npm run preview` at `http://localhost:4173/nba-weekly-power-rankings/`.
+
+- **Automated checks**: `npm run lint`, `npm test` (22 files, 205 tests) and `npm run build` pass. `dist/assets/` has 22 season chunks. A 2024-25 weekly summary string appears only in its season chunk, not in `index-*.js`.
+- **Bundle size (SC-002)**: the main chunk is 259,423 B gzip, the largest season chunk (2021-22) is 102,422 B gzip, and together they are ≈362 KB. That is ≈83% smaller than ≈2.17 MB. Pass.
+
+| # | Result |
+|---|--------|
+| 1 | Pass: base address → `#/2025-26`, only the 2025-26 chunk requested |
+| 2 | Pass: `#/2018-19` shows 2018-19, and a fresh reload requests only its chunk |
+| 3 | Pass: `#/1999-00` → `#/2025-26` |
+| 4 | Pass: `#/teamHistory/BOS` and `bos` show 22 Celtics cards |
+| 5 | Pass: `#/teamHistory/xyz` shows "Team not found" |
+| 6 | Covered by `src/App.test.tsx` "updates the address from the picker…". In the preview, Back returned to the previous season. |
+| 7 | Pass (MVP run): card click → `#/2007-08` with Boston pinned |
+| 8 | Pass: see rows 1 and 2 |
+| 9 | Pass: the "Loading season…" fallback appeared when switching to 2010-11 |
+| 10 | Pass: switching back to 2018-19 made 0 new requests and showed no fallback |
+| 11 | Pass: team history made 22 chunk requests, each file once |
+| 12 | Not run in the browser (the pane can't go offline). Covered by `src/App.loading.test.tsx`: a failing season shows "Couldn't load the … season" with a picker, and picking another season recovers. |
