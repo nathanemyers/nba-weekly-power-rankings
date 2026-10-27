@@ -100,6 +100,7 @@ A visitor on a player's history page wants to look up a different player without
 - **FR-010**: Rows MUST show a hover highlight and a pointer cursor.
 - **FR-011**: Opening a player history address directly MUST show the same page as navigating to it.
 - **FR-012**: An address for an unknown player MUST show a "player not found" error with a way back.
+- **FR-014**: The history table MUST have a Playoffs column, after Team, showing the same medal emoji and label the chart uses for that team's playoff finish that season. A stint the player left mid-season shows no medal, since the player wasn't with the team for its playoff run.
 - **FR-013**: The player history page MUST have a search box that suggests players from every season the site has data for, as described in User Story 4, and opens the chosen player's history.
 
 ### Key Entities

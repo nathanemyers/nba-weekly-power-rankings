@@ -3,6 +3,7 @@ import { useAppDispatch } from '@/store/hooks'
 import { setPinnedTeams } from '@/store/slices/chart'
 import type { PlayerStint } from '@/data/playerHistory'
 import { getTeamName } from 'types'
+import { PLAYOFF_MEDALS } from './Chart/utils'
 import { StatCells, StatHeads } from './statColumns'
 import TeamLogo from './TeamLogo'
 import {
@@ -31,6 +32,12 @@ export default function PlayerHistoryTable(props: { history: PlayerStint[] }) {
             Season
           </TableHead>
           <TableHead className="sticky left-20 bg-background">Team</TableHead>
+          <TableHead
+            title="Best playoff finish with this team"
+            className="text-center"
+          >
+            Playoffs
+          </TableHead>
           <StatHeads />
         </TableRow>
       </TableHeader>
@@ -58,6 +65,17 @@ export default function PlayerHistoryTable(props: { history: PlayerStint[] }) {
                 />
                 {getTeamName(stint.team)}
               </span>
+            </TableCell>
+            <TableCell className="text-center">
+              {stint.playoff && (
+                <span
+                  role="img"
+                  aria-label={PLAYOFF_MEDALS[stint.playoff].label}
+                  title={PLAYOFF_MEDALS[stint.playoff].label}
+                >
+                  {PLAYOFF_MEDALS[stint.playoff].icon}
+                </span>
+              )}
             </TableCell>
             <StatCells player={stint.player} />
           </TableRow>

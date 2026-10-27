@@ -12,6 +12,7 @@
 |---|---|---|---|---|
 | Season | Season | — | `2015-16` | `left-0` |
 | Team | Team | — | `TeamLogo` (size-5) + `getTeamName(team)` | yes, after Season |
+| Playoffs | Playoffs | Best playoff finish with this team | `PLAYOFF_MEDALS` icon in a `role="img"` span with the medal label as name and `title`; empty when `playoff` is unset | — |
 | Pos … PER | as `specs/019-roster-blocks-minutes/contracts/roster-pane.md` | same | same | — |
 
 Stat cells come from the shared `StatCells`, so they have the same `data-rating`, color classes and gray as the roster pane.

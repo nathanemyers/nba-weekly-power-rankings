@@ -48,7 +48,11 @@ describe('Player history', () => {
     expect(
       within(bodyRows()[1]).getByText('Detroit Pistons')
     ).toBeInTheDocument()
-    expect(ratings(bodyRows()[0]).slice(2)).toEqual(rosterRatings)
+    expect(ratings(bodyRows()[0]).slice(3)).toEqual(rosterRatings)
+    expect(
+      within(bodyRows()[0]).getByRole('img', { name: 'NBA champion' })
+    ).toHaveTextContent('💍')
+    expect(within(bodyRows()[1]).queryByRole('img')).toBeNull()
   })
 
   it('opens a row as its season with only its team pinned', async () => {

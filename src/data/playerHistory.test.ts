@@ -6,7 +6,7 @@ import {
   type PlayerSummary,
 } from './playerHistory'
 import { loadAllSeasons, type Season } from './seasonData'
-import { Team, type RosterEntry } from 'types'
+import { PlayoffStage, Team, type RosterEntry } from 'types'
 import { ROSTERS } from 'test/fixtures'
 
 vi.mock(
@@ -51,6 +51,14 @@ describe('getPlayerHistory', () => {
       'trips tor',
       'trips lal',
     ])
+  })
+
+  it("gives a stint its team's playoff finish unless the player left mid-season", async () => {
+    const seasons = await loadAllSeasons()
+    expect(
+      getPlayerHistory(seasons, 'piercpa01').map((stint) => stint.playoff)
+    ).toEqual([PlayoffStage.Champion, undefined])
+    expect(getPlayerHistory(seasons, 'scrubjo01')[0].playoff).toBeUndefined()
   })
 
   it('returns nothing for an unknown player', async () => {

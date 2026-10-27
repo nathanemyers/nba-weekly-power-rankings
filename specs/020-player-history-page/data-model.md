@@ -8,9 +8,10 @@ No new data files and no schema changes. Everything is derived in the browser fr
 |---|---|---|
 | `season` | `string` | `Season.name`, e.g. `2015-16` |
 | `team` | `Team` | key of `rosters` the entry was found under (`TeamRankings.teamId`) |
+| `playoff` | `PlayoffStage \| undefined` | the team's `playoff` finish that season, left empty when `player.leftFor` is set |
 | `player` | `RosterEntry` | the roster entry itself, unchanged, so the shared stat cells and `statRating`/`isRatable` work on it directly |
 
-`type PlayerStint = { season: string; team: Team; player: RosterEntry }`
+`type PlayerStint = { season: string; team: Team; player: RosterEntry; playoff?: PlayoffStage }`
 
 ## getPlayerHistory(seasons: Season[], playerId: string): PlayerStint[]
 

@@ -1,7 +1,12 @@
 import type { Season } from './seasonData'
-import type { RosterEntry, Team } from 'types'
+import type { PlayoffStage, RosterEntry, Team } from 'types'
 
-export type PlayerStint = { season: string; team: Team; player: RosterEntry }
+export type PlayerStint = {
+  season: string
+  team: Team
+  player: RosterEntry
+  playoff?: PlayoffStage
+}
 
 // Orders one season's stints by following each move, then lists the latest team first
 function chainStints(stints: PlayerStint[]): PlayerStint[] {
@@ -26,8 +31,10 @@ export function getPlayerHistory(
     const stints: PlayerStint[] = []
     for (const team of season.teams) {
       const player = team.roster?.find((entry) => entry.id === playerId)
-      if (player)
-        stints.push({ season: season.name, team: team.teamId, player })
+      if (!player) continue
+      // A player who left mid-season wasn't with the team for its playoff run
+      const playoff = player.leftFor ? undefined : team.playoff
+      stints.push({ season: season.name, team: team.teamId, player, playoff })
     }
     return chainStints(stints)
   })
