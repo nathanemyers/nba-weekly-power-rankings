@@ -141,17 +141,18 @@ describe('teamRosters', () => {
     })
   })
 
-  it('sorts by games, then season minutes, then name', () => {
+  it('sorts by minutes per game, then games, then name', () => {
     const rosters = teamRosters(
       rawSeason([
-        ['c', 'Cee', 'BOS', 10, { mp: 100 }],
-        ['a', 'Ay', 'BOS', 50, { mp: 900 }],
-        ['d', 'Dee', 'BOS', 10, { mp: 300 }],
-        ['b', 'Bee', 'BOS', 10, { mp: 100 }],
+        ['c', 'Cee', 'BOS', 10, { mp_per_g: 10 }],
+        ['a', 'Ay', 'BOS', 50, { mp_per_g: 18 }],
+        ['e', 'Eee', 'BOS', 30, { mp_per_g: 10 }],
+        ['d', 'Dee', 'BOS', 5, { mp_per_g: 32.5 }],
+        ['b', 'Bee', 'BOS', 10, { mp_per_g: 10 }],
       ]),
       '2010-11',
     )
-    expect(rosters.bos.map((p) => p.name)).toEqual(['Ay', 'Dee', 'Bee', 'Cee'])
+    expect(rosters.bos.map((p) => p.name)).toEqual(['Dee', 'Ay', 'Eee', 'Bee', 'Cee'])
   })
 
   it('leaves summary rows for multi-team players out of every roster', () => {

@@ -11,6 +11,9 @@ import {
   type Team,
 } from 'types'
 import {
+  isRatable,
+  MIN_RATED_GAMES,
+  MIN_RATED_MINUTES,
   RATING_BANDS,
   statRating,
   type RatedStat,
@@ -67,6 +70,7 @@ const STAT_COLUMNS: StatColumn[] = [
     value: (p) => String(p.age),
   },
   { label: 'G', title: 'Games played', value: (p) => String(p.g) },
+  { label: 'MIN', title: 'Minutes per game', value: (p) => decimal(p.mpg) },
   {
     label: 'PTS',
     title: 'Points per game',
@@ -92,10 +96,10 @@ const STAT_COLUMNS: StatColumn[] = [
     rated: 'stl',
   },
   {
-    label: 'TOV',
-    title: 'Turnovers per game',
-    value: (p) => decimal(p.tov),
-    rated: 'tov',
+    label: 'BLK',
+    title: 'Blocks per game',
+    value: (p) => decimal(p.blk),
+    rated: 'blk',
   },
   {
     label: 'PER',
@@ -165,7 +169,9 @@ function CoachLine(props: { coaches: CoachStint[] }) {
 function RatingKey() {
   const description = `Stat colors, lowest to highest: ${RATING_BANDS.map(
     (band) => `${RATING_NAMES[band.rating]} ${band.percent}%`
-  ).join(', ')}. Fewer turnovers rate higher.`
+  ).join(
+    ', '
+  )}. Players under ${MIN_RATED_GAMES} games or ${MIN_RATED_MINUTES} minutes per game are gray and not rated.`
 
   return (
     <div role="img" aria-label={description} className="w-64 shrink-0">
@@ -250,16 +256,18 @@ export default function RosterPane() {
                 </span>
               </TableCell>
               {STAT_COLUMNS.map((column) => {
+                const unrated = column.rated && !isRatable(player)
                 const rating = column.rated
                   ? statRating(player, column.rated)
                   : undefined
                 return (
                   <TableCell
                     key={column.label}
-                    data-rating={rating}
+                    data-rating={unrated ? 'unrated' : rating}
                     className={cn(
                       'text-right tabular-nums',
-                      rating && RATING_CLASSES[rating]
+                      rating && RATING_CLASSES[rating],
+                      unrated && 'text-muted-foreground'
                     )}
                   >
                     {column.value(player)}

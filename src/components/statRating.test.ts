@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { ROSTERS } from 'test/fixtures'
 import { Team, type RosterEntry } from 'types'
-import { RATING_BANDS, statRating } from './statRating'
+import { RATING_BANDS, isRatable, statRating } from './statRating'
 
 const regular = (stats: Partial<RosterEntry>): RosterEntry => ({
   ...ROSTERS[Team.Boston]![0],
@@ -37,12 +37,14 @@ describe('statRating', () => {
     expect(statRating(regular({ per: 20 }), 'per')).toBe('elite')
   })
 
-  it('treats fewer turnovers as better', () => {
-    expect(statRating(regular({ tov: 0.5 }), 'tov')).toBe('elite')
-    expect(statRating(regular({ tov: 0.6 }), 'tov')).toBe('good')
-    expect(statRating(regular({ tov: 0.8 }), 'tov')).toBe('good')
-    expect(statRating(regular({ tov: 1.2 }), 'tov')).toBe('fair')
-    expect(statRating(regular({ tov: 1.8 }), 'tov')).toBe('poor')
+  it('rates blocks', () => {
+    expect(statRating(regular({ blk: 0.1 }), 'blk')).toBe('poor')
+    expect(statRating(regular({ blk: 0.2 }), 'blk')).toBe('fair')
+    expect(statRating(regular({ blk: 0.5 }), 'blk')).toBe('fair')
+    expect(statRating(regular({ blk: 0.6 }), 'blk')).toBe('good')
+    expect(statRating(regular({ blk: 0.9 }), 'blk')).toBe('good')
+    expect(statRating(regular({ blk: 1.0 }), 'blk')).toBe('elite')
+    expect(statRating(regular({ blk: 1.6 }), 'blk')).toBe('elite')
   })
 
   it('rates PER, including a negative one', () => {
@@ -61,5 +63,14 @@ describe('statRating', () => {
     expect(statRating(regular({ g: 10, mpg: 10, pts: 20 }), 'pts')).toBe(
       'elite'
     )
+  })
+})
+
+describe('isRatable', () => {
+  it('requires at least 10 games and 10 minutes per game', () => {
+    expect(isRatable(regular({ g: 9 }))).toBe(false)
+    expect(isRatable(regular({ mpg: 9.9 }))).toBe(false)
+    expect(isRatable(regular({ mpg: 9.96 }))).toBe(false)
+    expect(isRatable(regular({ g: 10, mpg: 10 }))).toBe(true)
   })
 })

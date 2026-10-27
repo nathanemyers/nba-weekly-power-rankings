@@ -82,7 +82,7 @@ const PER_GAME_FIELDS = {
   mpg: 'mp_per_g', pts: 'pts_per_g', trb: 'trb_per_g', ast: 'ast_per_g', stl: 'stl_per_g', blk: 'blk_per_g', tov: 'tov_per_g',
 }
 
-/** Turns a raw season into each team's roster for the app, sorted by games, then season minutes, then name, and checks every entry. */
+/** Turns a raw season into each team's roster for the app, sorted by minutes per game, then games, then name, and checks every entry. */
 export function teamRosters(raw, season) {
   const advancedByStint = {}
   for (const row of raw.advanced) {
@@ -103,7 +103,6 @@ export function teamRosters(raw, season) {
   }
 
   const rosters = {}
-  const minutes = {}
   for (const row of raw.perGame) {
     if (isSummaryRow(row.team_name_abbr)) continue
     const slug = slugForAbbr(row.team_name_abbr)
@@ -130,13 +129,10 @@ export function teamRosters(raw, season) {
     if (index > 0) entry.joinedFrom = slugForAbbr(stints[index - 1])
     if (index < stints.length - 1) entry.leftFor = slugForAbbr(stints[index + 1])
     ;(rosters[slug] ??= []).push(entry)
-    minutes[`${slug}|${row.playerId}`] = advanced.mp ?? 0
   }
 
   for (const slug of Object.keys(rosters)) {
-    rosters[slug].sort(
-      (a, b) => b.g - a.g || minutes[`${slug}|${b.id}`] - minutes[`${slug}|${a.id}`] || a.name.localeCompare(b.name),
-    )
+    rosters[slug].sort((a, b) => b.mpg - a.mpg || b.g - a.g || a.name.localeCompare(b.name))
   }
   return rosters
 }
