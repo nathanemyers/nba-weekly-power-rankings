@@ -6,8 +6,8 @@ import TrendMinimap from './TrendMinimap/TrendMinimap'
 import { setPinnedTeams } from '@/store/slices/chart'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
-import DataSourceBadge from './DataSourceBadge'
-import PlayoffSeriesBadges from './PlayoffSeriesBadges'
+import DataSourceBadge from './Badges/DataSourceBadge'
+import PlayoffSeriesBadges from './Badges/PlayoffSeriesBadges'
 
 interface TeamHistoryProps {
   team: Team

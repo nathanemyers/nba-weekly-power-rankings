@@ -1,7 +1,7 @@
 import { cn } from 'cn'
 import { seasonAwards, type AwardKind } from '@/data/awards'
-import { Badge } from './ui/badge'
-import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
+import { Badge } from '../ui/badge'
+import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip'
 
 const VARIANTS: Record<AwardKind, 'default' | 'secondary' | 'outline'> = {
   won: 'default',

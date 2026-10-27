@@ -6,10 +6,10 @@ import {
   type SeriesRound,
   type Team,
 } from 'types'
-import { PLAYOFF_MEDALS } from './Chart/utils'
-import TeamLogo from './TeamLogo'
-import { Badge } from './ui/badge'
-import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
+import { PLAYOFF_MEDALS } from '../Chart/utils'
+import TeamLogo from '../TeamLogo'
+import { Badge } from '../ui/badge'
+import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip'
 
 interface PlayoffSeriesBadgesProps {
   series?: SeriesResult[]

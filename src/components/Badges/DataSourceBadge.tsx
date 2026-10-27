@@ -1,6 +1,6 @@
 import { cn } from 'cn'
 import { DataSource } from 'types'
-import { Badge } from './ui/badge'
+import { Badge } from '../ui/badge'
 
 interface DataSourceBadgeProps {
   source: DataSource
