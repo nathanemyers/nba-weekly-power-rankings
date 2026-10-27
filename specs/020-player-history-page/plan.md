@@ -38,7 +38,7 @@ Add a `playerHistory/:player` route that lists one player's season-by-team stint
 | II. Data prepared at build time | Pass. Uses existing `data/processed` season files. No runtime third-party calls. |
 | III. Base-path-safe navigation | Pass. A hash route, with a deep link that is verified under preview (quickstart). |
 | IV. Respectful data collection | N/A. No scraping changes. |
-| V. Simplicity | Pass. No new dependencies. A shared stat-column module removes duplication. |
+| V. Simplicity | Pass with one justified dependency: `cmdk`, pulled in by the shadcn `command` component for the player search (see Complexity Tracking). A shared stat-column module removes duplication. |
 | State & data layer | Pass. Seasons come from loader data (`loadAllSeasons`), pinned team is in Redux, and player ID is in the URL. Nothing is copied between them. |
 | Data validation | Pass. `:player` is parsed with Zod in the loader. |
 
@@ -73,6 +73,7 @@ src/
 │   ├── RosterPane.tsx               # use statColumns; player name becomes a Link
 │   ├── RosterPane.test.tsx          # + name link / badge still pins
 │   ├── PlayerHistoryTable.tsx       # new: Season + Team + StatCells, clickable rows
+│   ├── PlayerSearch.tsx             # new: player search box (shadcn Popover + Command)
 │   └── NotFoundCard.tsx             # new: card shared by RouteError and the empty history case
 └── views/
     ├── PlayerHistoryView.tsx        # new: heading, key, Suspense, table or NotFoundCard
@@ -84,4 +85,6 @@ src/
 
 ## Complexity Tracking
 
-No violations.
+| Addition | Why Needed | Simpler Alternative Rejected Because |
+|---|---|---|
+| `cmdk` runtime dependency (via shadcn `command`, with `popover`) | Search box with keyboard-navigable suggestions (FR-013); AGENTS.md requires shadcn components over hand-rolled ones | A native `<datalist>` can't show season ranges to tell same-named players apart and styles inconsistently; a hand-rolled listbox would duplicate what shadcn provides |

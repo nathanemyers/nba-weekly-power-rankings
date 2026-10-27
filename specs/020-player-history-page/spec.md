@@ -60,6 +60,22 @@ A visitor wants to send someone a link to a player's history, or reload the page
 2. **Given** an address for a player who does not exist in the site's data, **When** it is opened, **Then** a "player not found" error is shown in the site's existing error style, with a way back to the main chart.
 3. **Given** the player history page, **When** the visitor uses the browser's back button, **Then** they return to the page they came from.
 
+### User Story 4 - Jump straight to another player (Priority: P2)
+
+A visitor on a player's history page wants to look up a different player without going back through a team roster. A search box at the top of the page suggests players as they type, and choosing one opens that player's history.
+
+**Why this priority**: It makes the page easy to browse, but the roster link already gets visitors to any player.
+
+**Independent Test**: On Kevin Durant's page, open the search, type "vujac", and choose Sasha Vujačić. His history opens.
+
+**Acceptance Scenarios**:
+
+1. **Given** the player history page, **When** the visitor types part of a name, **Then** up to 20 players whose name has a word starting with each typed word are suggested, in alphabetical order, with each player's first and last season.
+2. **Given** a name with accents or an apostrophe, **When** the visitor types it without them (for example "vujacic" or "neal"), **Then** the player is still suggested.
+3. **Given** two players with the same name, **When** both are suggested, **Then** their season ranges tell them apart.
+4. **Given** suggestions, **When** the visitor clicks one or picks it with the arrow keys and Enter, **Then** that player's history opens and the search closes.
+5. **Given** typed text that matches no one, **When** suggestions are shown, **Then** the box says "No players found."
+
 ### Edge Cases
 
 - A player who appears in only one season shows a single row (or one row per team for that season) and the page still works.
@@ -84,6 +100,7 @@ A visitor wants to send someone a link to a player's history, or reload the page
 - **FR-010**: Rows MUST show a hover highlight and a pointer cursor.
 - **FR-011**: Opening a player history address directly MUST show the same page as navigating to it.
 - **FR-012**: An address for an unknown player MUST show a "player not found" error with a way back.
+- **FR-013**: The player history page MUST have a search box that suggests players from every season the site has data for, as described in User Story 4, and opens the chosen player's history.
 
 ### Key Entities
 

@@ -17,7 +17,7 @@ import {
   loadAllSeasons,
   loadSeason,
 } from '@/data/seasonData'
-import { getPlayerHistory } from '@/data/playerHistory'
+import { getAllPlayers, getPlayerHistory } from '@/data/playerHistory'
 import { Team } from 'types'
 
 function seasonLoader({ params }: LoaderFunctionArgs) {
@@ -43,11 +43,11 @@ function playerHistoryLoader({ params }: LoaderFunctionArgs) {
   if (!player.success)
     throw data(null, { status: 404, statusText: 'Player not found' })
   const playerId = player.data
+  const seasons = loadAllSeasons()
   return {
     playerId,
-    history: loadAllSeasons().then((seasons) =>
-      getPlayerHistory(seasons, playerId)
-    ),
+    history: seasons.then((all) => getPlayerHistory(all, playerId)),
+    players: seasons.then(getAllPlayers),
   }
 }
 

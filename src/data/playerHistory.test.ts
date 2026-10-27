@@ -1,5 +1,10 @@
 import { describe, expect, it, vi } from 'vitest'
-import { getPlayerHistory } from './playerHistory'
+import {
+  getAllPlayers,
+  getPlayerHistory,
+  searchPlayers,
+  type PlayerSummary,
+} from './playerHistory'
 import { loadAllSeasons, type Season } from './seasonData'
 import { Team, type RosterEntry } from 'types'
 import { ROSTERS } from 'test/fixtures'
@@ -50,5 +55,57 @@ describe('getPlayerHistory', () => {
 
   it('returns nothing for an unknown player', async () => {
     expect(getPlayerHistory(await loadAllSeasons(), 'zzzzzz99')).toEqual([])
+  })
+})
+
+describe('getAllPlayers', () => {
+  it('lists each player once by name with their first and last season', async () => {
+    const players = getAllPlayers(await loadAllSeasons())
+    expect(players.map((player) => player.name)).toEqual([
+      'Chauncey Billups',
+      'Joe Moves',
+      'Joe Scrub',
+      'Kevin Garnett',
+      'Paul Pierce',
+    ])
+    expect(players.find((player) => player.id === 'piercpa01')).toEqual({
+      id: 'piercpa01',
+      name: 'Paul Pierce',
+      firstSeason: 'short',
+      lastSeason: 'long',
+    })
+  })
+})
+
+describe('searchPlayers', () => {
+  const player = (id: string, name: string): PlayerSummary => ({
+    id,
+    name,
+    firstSeason: '2003-04',
+    lastSeason: '2003-04',
+  })
+  const players = [
+    player('curryst01', 'Stephen Curry'),
+    player('curryse01', 'Seth Curry'),
+    player('vujacsa01', 'Sasha Vujačić'),
+    player('onealsh01', "Shaquille O'Neal"),
+  ]
+  const ids = (query: string, limit = 20) =>
+    searchPlayers(players, query, limit).map((found) => found.id)
+
+  it('matches the start of any word, in any order, ignoring case', () => {
+    expect(ids('curry')).toEqual(['curryst01', 'curryse01'])
+    expect(ids('cur ste')).toEqual(['curryst01'])
+    expect(ids('URRY')).toEqual([])
+  })
+
+  it('ignores accents and splits on apostrophes', () => {
+    expect(ids('vujacic')).toEqual(['vujacsa01'])
+    expect(ids('neal')).toEqual(['onealsh01'])
+  })
+
+  it('returns nothing for a blank query and stops at the limit', () => {
+    expect(ids('  ')).toEqual([])
+    expect(ids('s', 2)).toEqual(['curryst01', 'curryse01'])
   })
 })

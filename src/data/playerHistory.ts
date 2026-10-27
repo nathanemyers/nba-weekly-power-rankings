@@ -32,3 +32,49 @@ export function getPlayerHistory(
     return chainStints(stints)
   })
 }
+
+export type PlayerSummary = {
+  id: string
+  name: string
+  firstSeason: string
+  lastSeason: string
+}
+
+export function getAllPlayers(seasons: Season[]): PlayerSummary[] {
+  const players: Record<string, PlayerSummary> = {}
+  for (const season of seasons) {
+    for (const team of season.teams) {
+      for (const entry of team.roster ?? []) {
+        const known = players[entry.id]
+        if (known) known.firstSeason = season.name
+        else
+          players[entry.id] = {
+            id: entry.id,
+            name: entry.name,
+            firstSeason: season.name,
+            lastSeason: season.name,
+          }
+      }
+    }
+  }
+  return Object.values(players).sort((a, b) => a.name.localeCompare(b.name))
+}
+
+const searchable = (text: string) =>
+  text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+
+// Matches players whose name has a word starting with each word of the query
+export function searchPlayers(
+  players: PlayerSummary[],
+  query: string,
+  limit: number
+): PlayerSummary[] {
+  const terms = searchable(query).split(/\s+/).filter(Boolean)
+  if (!terms.length) return []
+  return players
+    .filter((player) => {
+      const words = searchable(player.name).split(/[\s.'-]+/)
+      return terms.every((term) => words.some((word) => word.startsWith(term)))
+    })
+    .slice(0, limit)
+}

@@ -27,3 +27,11 @@ The heading uses `player.name` from the newest stint. The name doesn't change ac
 
 - URL param `:player` must match `^[a-z]+\d{2}$` (Zod), or the loader throws a 404 with `statusText: 'Player not found'`.
 - Season data is already Zod-parsed by `parseSeason`, so nothing new is validated there.
+
+## PlayerSummary (derived, `src/data/playerHistory.ts`)
+
+`type PlayerSummary = { id: string; name: string; firstSeason: string; lastSeason: string }`
+
+- `getAllPlayers(seasons)` lists each player ID once, sorted by name, with the name from their latest season and the names of their first and last seasons.
+- `searchPlayers(players, query, limit)` returns up to `limit` players whose name has a word starting with every word of the query. Matching ignores case and accents, and treats spaces, periods, apostrophes and hyphens as word breaks. A blank query returns `[]`.
+- The route loader returns `players: Promise<PlayerSummary[]>` alongside `history`, both from the same `loadAllSeasons()` call.
