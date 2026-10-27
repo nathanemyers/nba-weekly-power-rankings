@@ -34,7 +34,7 @@ export default function PlayoffSeriesBadges(props: PlayoffSeriesBadgesProps) {
     >
       {props.series.map((result) => {
         const won = result.wins === 4
-        // A won Finals is the title, so it gets the champion's crown rather than the Finals cup
+        // A won Finals is the title, so it gets the champion's ring rather than the Finals cup
         const medal =
           result.round === PlayoffStage.Finals && won
             ? PLAYOFF_MEDALS[PlayoffStage.Champion].icon

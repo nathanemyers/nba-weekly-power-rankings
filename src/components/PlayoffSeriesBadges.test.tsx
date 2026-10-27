@@ -40,7 +40,7 @@ describe('PlayoffSeriesBadges', () => {
       '4🥉',
       '6🥈',
       '7🥇',
-      '5👑',
+      '5💍',
     ])
     expect(items[0].querySelector('img')).toHaveAttribute(
       'src',
@@ -62,7 +62,7 @@ describe('PlayoffSeriesBadges', () => {
     expect(last).toHaveTextContent('6🥈')
   })
 
-  it('gives a lost Finals the cup instead of the crown', () => {
+  it('gives a lost Finals the cup instead of the ring', () => {
     renderBadges([
       { round: PlayoffStage.Finals, opponent: Team.Boston, wins: 1, losses: 4 },
     ])
