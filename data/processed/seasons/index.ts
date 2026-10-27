@@ -1,49 +1,137 @@
-import season_2025_26 from "./2025-26.json";
-import season_2024_25 from "./2024-25.json";
-import season_2023_24 from "./2023-24.json";
-import season_2022_23 from "./2022-23.json";
-import season_2021_22 from "./2021-22.json";
-import season_2020_21 from "./2020-21.json";
-import season_2019_20 from "./2019-20.json";
-import season_2018_19 from "./2018-19.json";
-import season_2017_18 from "./2017-18.json";
-import season_2015_16 from "./2015-16.json";
-import season_2014_15 from "./2014-15.json";
-import season_2013_14 from "./2013-14.json";
-import season_2012_13 from "./2012-13.json";
-import season_2011_12 from "./2011-12.json";
-import season_2010_11 from "./2010-11.json";
-import season_2009_10 from "./2009-10.json";
-import season_2008_09 from "./2008-09.json";
-import season_2007_08 from "./2007-08.json";
-import season_2006_07 from "./2006-07.json";
-import season_2005_06 from "./2005-06.json";
-import season_2004_05 from "./2004-05.json";
-import season_2003_04 from "./2003-04.json";
+export const seasonIndex: unknown = [
+  {
+    "name": "2025-26",
+    "source": "nba",
+    "champion": "nyk"
+  },
+  {
+    "name": "2024-25",
+    "source": "nba",
+    "champion": "okc"
+  },
+  {
+    "name": "2023-24",
+    "source": "nba",
+    "champion": "bos"
+  },
+  {
+    "name": "2022-23",
+    "source": "nba",
+    "champion": "den"
+  },
+  {
+    "name": "2021-22",
+    "source": "nba",
+    "champion": "gsw"
+  },
+  {
+    "name": "2020-21",
+    "source": "nba",
+    "champion": "mil"
+  },
+  {
+    "name": "2019-20",
+    "source": "nba",
+    "champion": "lal"
+  },
+  {
+    "name": "2018-19",
+    "source": "nba",
+    "champion": "tor"
+  },
+  {
+    "name": "2017-18",
+    "source": "nba",
+    "champion": "gsw"
+  },
+  {
+    "name": "2015-16",
+    "source": "espn",
+    "champion": "cle"
+  },
+  {
+    "name": "2014-15",
+    "source": "espn",
+    "champion": "gsw"
+  },
+  {
+    "name": "2013-14",
+    "source": "espn",
+    "champion": "sas"
+  },
+  {
+    "name": "2012-13",
+    "source": "espn",
+    "champion": "mia"
+  },
+  {
+    "name": "2011-12",
+    "source": "espn",
+    "champion": "mia"
+  },
+  {
+    "name": "2010-11",
+    "source": "espn",
+    "champion": "dal"
+  },
+  {
+    "name": "2009-10",
+    "source": "espn",
+    "champion": "lal"
+  },
+  {
+    "name": "2008-09",
+    "source": "espn",
+    "champion": "lal"
+  },
+  {
+    "name": "2007-08",
+    "source": "espn",
+    "champion": "bos"
+  },
+  {
+    "name": "2006-07",
+    "source": "espn",
+    "champion": "sas"
+  },
+  {
+    "name": "2005-06",
+    "source": "espn",
+    "champion": "mia"
+  },
+  {
+    "name": "2004-05",
+    "source": "espn",
+    "champion": "sas"
+  },
+  {
+    "name": "2003-04",
+    "source": "espn",
+    "champion": "det"
+  }
+];
 
-export const seasonData: Record<string, unknown> = {
-  "2025-26": season_2025_26,
-  "2024-25": season_2024_25,
-  "2023-24": season_2023_24,
-  "2022-23": season_2022_23,
-  "2021-22": season_2021_22,
-  "2020-21": season_2020_21,
-  "2019-20": season_2019_20,
-  "2018-19": season_2018_19,
-  "2017-18": season_2017_18,
-  "2015-16": season_2015_16,
-  "2014-15": season_2014_15,
-  "2013-14": season_2013_14,
-  "2012-13": season_2012_13,
-  "2011-12": season_2011_12,
-  "2010-11": season_2010_11,
-  "2009-10": season_2009_10,
-  "2008-09": season_2008_09,
-  "2007-08": season_2007_08,
-  "2006-07": season_2006_07,
-  "2005-06": season_2005_06,
-  "2004-05": season_2004_05,
-  "2003-04": season_2003_04,
+export const seasonLoaders: Record<string, () => Promise<{ default: unknown }>> = {
+  "2025-26": () => import("./2025-26.json"),
+  "2024-25": () => import("./2024-25.json"),
+  "2023-24": () => import("./2023-24.json"),
+  "2022-23": () => import("./2022-23.json"),
+  "2021-22": () => import("./2021-22.json"),
+  "2020-21": () => import("./2020-21.json"),
+  "2019-20": () => import("./2019-20.json"),
+  "2018-19": () => import("./2018-19.json"),
+  "2017-18": () => import("./2017-18.json"),
+  "2015-16": () => import("./2015-16.json"),
+  "2014-15": () => import("./2014-15.json"),
+  "2013-14": () => import("./2013-14.json"),
+  "2012-13": () => import("./2012-13.json"),
+  "2011-12": () => import("./2011-12.json"),
+  "2010-11": () => import("./2010-11.json"),
+  "2009-10": () => import("./2009-10.json"),
+  "2008-09": () => import("./2008-09.json"),
+  "2007-08": () => import("./2007-08.json"),
+  "2006-07": () => import("./2006-07.json"),
+  "2005-06": () => import("./2005-06.json"),
+  "2004-05": () => import("./2004-05.json"),
+  "2003-04": () => import("./2003-04.json"),
 };
-
-export const seasons: string[] = Object.keys(seasonData).sort().reverse();

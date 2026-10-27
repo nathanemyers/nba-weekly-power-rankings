@@ -1,22 +1,23 @@
 import { Button } from './ui/button'
-import { useAppDispatch } from '@/store/hooks'
-import { setView, View } from '@/store/slices/UI'
+import { useNavigate } from 'react-router'
 import { cn } from 'cn'
+import type { Team } from '@/types'
 
 interface ButtonProps {
   className?: string
-  disabled?: boolean
+  team?: Team
 }
 
 export default function TeamHistoryButton(props: ButtonProps) {
-  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
+  const disabled = !props.team
 
   return (
     <Button
       variant="outline"
-      onClick={() => dispatch(setView(View.TeamHistory))}
-      className={cn(props.disabled ? '' : 'cursor-pointer', props.className)}
-      disabled={props.disabled}
+      onClick={() => navigate('/teamHistory/' + props.team)}
+      className={cn(disabled ? '' : 'cursor-pointer', props.className)}
+      disabled={disabled}
     >
       Team History
     </Button>

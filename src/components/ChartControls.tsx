@@ -11,20 +11,22 @@ import {
   pageWindow,
   setZoomedOut,
 } from '@/store/slices/chart'
+import { useSeason } from '@/hooks/useSeason'
 
 export default function ChartControls() {
   const dispatch = useAppDispatch()
+  const { maxWeek } = useSeason()
   const zoomedOut = useAppSelector(getIsZoomedOut)
-  const canPageEarlier = useAppSelector(getCanPageEarlier)
-  const canPageLater = useAppSelector(getCanPageLater)
-  const canZoom = useAppSelector(getCanZoom)
+  const canPageEarlier = useAppSelector((s) => getCanPageEarlier(s, maxWeek))
+  const canPageLater = useAppSelector((s) => getCanPageLater(s, maxWeek))
+  const canZoom = useAppSelector((s) => getCanZoom(s, maxWeek))
 
   return (
     <ButtonGroup>
       <Button
         className="w-12"
         aria-label="Earlier weeks"
-        onClick={() => dispatch(pageWindow(-1))}
+        onClick={() => dispatch(pageWindow(-1, maxWeek))}
         disabled={!canPageEarlier}
       >
         <FontAwesomeIcon icon={faArrowLeft} />
@@ -39,7 +41,7 @@ export default function ChartControls() {
       <Button
         className="w-12"
         aria-label="Later weeks"
-        onClick={() => dispatch(pageWindow(1))}
+        onClick={() => dispatch(pageWindow(1, maxWeek))}
         disabled={!canPageLater}
       >
         <FontAwesomeIcon icon={faArrowRight} />

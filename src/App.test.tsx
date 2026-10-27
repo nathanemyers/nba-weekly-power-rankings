@@ -1,14 +1,21 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { cleanup, fireEvent, screen, within } from '@testing-library/react'
+import { act } from 'react'
+import {
+  cleanup,
+  fireEvent,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import App from './App'
 import { mockReducedMotion } from 'test/fixtures'
-import { renderWithStore } from 'test/renderWithStore'
+import { renderWithRouter } from 'test/renderWithRouter'
 
 // Fixture seasons: 26 weeks, 21 weeks, one short enough to fit the window (from ESPN), and two with rank swings
 vi.mock('data/seasons', async () => {
   const { buildRankings, buildSwingRankings, PLAYOFF_SERIES, PLAYOFFS } =
     await import('./test/fixtures')
+  const { mockSeasonModule } = await import('./test/mockSeasons')
   const season = (
     name: string,
     maxWeek: number,
@@ -22,9 +29,8 @@ vi.mock('data/seasons', async () => {
     playoffSeries: PLAYOFF_SERIES,
     summaries,
   })
-  return {
-    seasons: ['long', 'mid', 'short', 'rising', 'active'],
-    seasonData: {
+  return mockSeasonModule(
+    {
       long: season('long', 26, { bos: 'Boston led from the first week.' }),
       mid: season('mid', 21),
       short: { ...season('short', 8), source: 'espn' },
@@ -39,7 +45,8 @@ vi.mock('data/seasons', async () => {
         rankings: buildSwingRankings(25),
       },
     },
-  }
+    { long: 'bos', mid: 'bos', short: 'bos', rising: 'bos' }
+  )
 })
 
 const earlier = () => screen.getByRole('button', { name: /earlier/i })
@@ -56,6 +63,18 @@ const chooseSeason = async (
   await user.click(
     screen.getByRole('option', { name: new RegExp(`^${season}`) })
   )
+  await settle()
+  await waitFor(() =>
+    expect(screen.getByRole('combobox')).toHaveTextContent(`${season} Season`)
+  )
+}
+// Waits for any route or season loading state to finish
+const settle = () =>
+  waitFor(() => expect(screen.queryByText(/^Loading/)).not.toBeInTheDocument())
+const openTeamHistory = async (user: ReturnType<typeof userEvent.setup>) => {
+  await user.click(screen.getByRole('button', { name: 'Team History' }))
+  await screen.findByRole('heading', { name: /Team History/ })
+  await settle()
 }
 // The first and last visible week ticks, e.g. "2–12"
 const shownWeeks = () => {
@@ -77,8 +96,8 @@ afterEach(() => {
 })
 
 describe('User Story 2 — move around the season', () => {
-  it('starts on the full season and zooms in to a 10-week span', () => {
-    const { container } = renderWithStore(<App />)
+  it('starts on the full season and zooms in to a 10-week span', async () => {
+    const { container } = await renderWithRouter()
     expect(shownWeeks()).toBe('1–26')
     expect(zoomIn()).toBeInTheDocument()
 
@@ -91,7 +110,7 @@ describe('User Story 2 — move around the season', () => {
 
   it('pages one week at a time with the on-screen controls', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     fireEvent.click(zoomIn())
 
     await user.click(later())
@@ -104,8 +123,8 @@ describe('User Story 2 — move around the season', () => {
     expect(shownWeeks()).toBe('1–11')
   })
 
-  it('travels the whole season with the arrow keys, stopping at its ends', () => {
-    renderWithStore(<App />)
+  it('travels the whole season with the arrow keys, stopping at its ends', async () => {
+    await renderWithRouter()
     fireEvent.click(zoomIn())
 
     fireEvent.keyDown(window, { key: 'ArrowRight' })
@@ -123,7 +142,7 @@ describe('User Story 2 — move around the season', () => {
 
   it('shows the full season with paging disabled and arrow keys ignored', async () => {
     const user = userEvent.setup()
-    const { container } = renderWithStore(<App />)
+    const { container } = await renderWithRouter()
 
     expect(shownWeeks()).toBe('1–26')
     expect(zoomIn()).toBeInTheDocument()
@@ -139,7 +158,7 @@ describe('User Story 2 — move around the season', () => {
 
   it('restores the window position and pinned team after a zoom round trip', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     fireEvent.click(zoomIn())
 
     await user.click(later())
@@ -158,7 +177,7 @@ describe('User Story 2 — move around the season', () => {
 
   it('keeps the zoom mode across a season switch', async () => {
     const user = userEvent.setup()
-    const { container } = renderWithStore(<App />)
+    const { container } = await renderWithRouter()
 
     await chooseSeason(user, 'mid')
     expect(shownWeeks()).toBe('1–21')
@@ -173,7 +192,7 @@ describe('User Story 2 — move around the season', () => {
 
   it('keeps the window inside a shorter season after a switch', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     fireEvent.click(zoomIn())
 
     for (let i = 0; i < 40; i++)
@@ -189,7 +208,7 @@ describe('User Story 2 — move around the season', () => {
 
   it('disables the zoom control when the season fits the window', async () => {
     const user = userEvent.setup()
-    const { container } = renderWithStore(<App />)
+    const { container } = await renderWithRouter()
 
     await chooseSeason(user, 'short')
 
@@ -206,7 +225,7 @@ describe('User Story 3 — pin a team', () => {
     const user = userEvent.setup()
     const boston = () =>
       screen.getByText('Boston Celtics', { selector: 'text' })
-    renderWithStore(<App />)
+    await renderWithRouter()
 
     await user.click(miamiLabel())
     expect(miamiLabel()).toHaveAttribute('font-weight', '700')
@@ -223,7 +242,7 @@ describe('User Story 3 — pin a team', () => {
 
   it('unpins when the chart background is clicked', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
 
     await user.click(miamiLabel())
     fireEvent.mouseLeave(chart())
@@ -239,7 +258,7 @@ describe('Team AI summary', () => {
 
   it("shows the pinned team's labeled summary on hover and disables on unpin", async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     expect(summaryButton()).toBeDisabled()
 
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
@@ -261,7 +280,7 @@ describe('Team AI summary', () => {
 
   it('disables the summary when switching seasons clears the pin', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
 
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
     await chooseSeason(user, 'mid')
@@ -291,7 +310,7 @@ describe('Rank swings hover card', () => {
 
   it('lists the biggest risers and fallers of a completed season', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await chooseSeason(user, 'rising')
     await openTrends(user)
 
@@ -306,7 +325,7 @@ describe('Rank swings hover card', () => {
 
   it('is absent for a season that has not completed', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await chooseSeason(user, 'active')
 
     expect(trendsButton()).not.toBeInTheDocument()
@@ -317,7 +336,7 @@ describe('Rank swings hover card', () => {
 
   it('pins the clicked team, replacing an earlier pin', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await chooseSeason(user, 'rising')
     await openTrends(user)
 
@@ -335,7 +354,7 @@ describe('Rank swings hover card', () => {
 
   it('reflects a team pinned from the chart', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await chooseSeason(user, 'rising')
 
     await user.click(screen.getByText('Indiana Pacers', { selector: 'text' }))
@@ -346,7 +365,7 @@ describe('Rank swings hover card', () => {
 
   it("clears the pin and shows the new season's teams on a season switch", async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await chooseSeason(user, 'rising')
     await user.click(screen.getByText('Indiana Pacers', { selector: 'text' }))
 
@@ -363,7 +382,7 @@ describe('Rank swings hover card', () => {
 
   it('disappears and drops the pin when switching to a season that has not completed', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await chooseSeason(user, 'rising')
     await openTrends(user)
     await user.click(toggle('Indiana Pacers'))
@@ -380,7 +399,7 @@ describe('Rank swings hover card', () => {
 
   it('clears a pin made in the chart on a season switch', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await user.click(miamiLabel())
 
     await chooseSeason(user, 'mid')
@@ -393,7 +412,7 @@ describe('Rank swings hover card', () => {
 describe('Season selector', () => {
   it("shows each completed season's champion logo beside it", async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await user.click(screen.getByRole('combobox'))
 
     const option = (name: string) =>
@@ -404,8 +423,8 @@ describe('Season selector', () => {
     expect(within(option('active')).queryByRole('img')).not.toBeInTheDocument()
   })
 
-  it('keeps the logo out of the closed selector', () => {
-    renderWithStore(<App />)
+  it('keeps the logo out of the closed selector', async () => {
+    await renderWithRouter()
     const trigger = screen.getByRole('combobox')
     expect(trigger).toHaveTextContent('long')
     expect(within(trigger).queryByRole('img')).not.toBeInTheDocument()
@@ -418,7 +437,7 @@ describe('Data source badges', () => {
 
   it('names the source of the selected season beside the chart', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     expect(sourceBadge()).toHaveTextContent('Source: NBA.com')
 
     await chooseSeason(user, 'short')
@@ -427,9 +446,9 @@ describe('Data source badges', () => {
 
   it("names each season's source in the team history", async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
-    await user.click(screen.getByRole('button', { name: 'Team History' }))
+    await openTeamHistory(user)
 
     const badges = screen.getAllByRole('link', { name: /rankings source/i })
     expect(badges.map((badge) => badge.textContent)).toEqual([
@@ -451,7 +470,7 @@ describe('Playoff series badges', () => {
 
   it('appears in the chart view only while one playoff team is pinned', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     expect(seriesList()).not.toBeInTheDocument()
 
     await pin(user, 'Boston Celtics')
@@ -474,7 +493,7 @@ describe('Playoff series badges', () => {
 
   it('pins the opponent when a badge in the chart view is clicked', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await pin(user, 'Boston Celtics')
 
     await user.click(
@@ -494,9 +513,9 @@ describe('Playoff series badges', () => {
 
   it('shows on team history cards without leaving the history when clicked', async () => {
     const user = userEvent.setup()
-    renderWithStore(<App />)
+    await renderWithRouter()
     await pin(user, 'Boston Celtics')
-    await user.click(screen.getByRole('button', { name: 'Team History' }))
+    await openTeamHistory(user)
 
     // Every fixture season except 'active' has playoff results
     const lists = screen.getAllByRole('list', { name: 'Playoff series' })
@@ -505,5 +524,109 @@ describe('Playoff series badges', () => {
     expect(
       screen.getByRole('heading', { name: /Boston Celtics Team History/ })
     ).toBeInTheDocument()
+  })
+})
+
+describe('Season addresses', () => {
+  const path = (router: { state: { location: { pathname: string } } }) =>
+    router.state.location.pathname
+
+  it('lands on the latest season from the base address', async () => {
+    const { router } = await renderWithRouter(['/'])
+    expect(path(router)).toBe('/long')
+    expect(screen.getByRole('combobox')).toHaveTextContent('long Season')
+  })
+
+  it('opens a season straight from its address', async () => {
+    const { router } = await renderWithRouter(['/mid'])
+    expect(path(router)).toBe('/mid')
+    expect(shownWeeks()).toBe('1–21')
+  })
+
+  it('sends an unknown season to the latest season', async () => {
+    const { router } = await renderWithRouter(['/1999-00'])
+    expect(path(router)).toBe('/long')
+    expect(shownWeeks()).toBe('1–26')
+  })
+
+  it('updates the address from the picker and goes back with history', async () => {
+    const user = userEvent.setup()
+    const { router } = await renderWithRouter(['/long'])
+    await user.click(miamiLabel())
+
+    await chooseSeason(user, 'mid')
+    expect(path(router)).toBe('/mid')
+    fireEvent.mouseLeave(chart())
+    expect(miamiLabel()).toHaveAttribute('font-weight', '400')
+
+    await act(() => router.navigate(-1))
+    await settle()
+    expect(path(router)).toBe('/long')
+    expect(shownWeeks()).toBe('1–26')
+  })
+
+  it('shows a not-found page for an unknown address', async () => {
+    await renderWithRouter(['/long/extra'])
+    expect(screen.getByText('Page not found')).toBeInTheDocument()
+  })
+})
+
+describe('Team history addresses', () => {
+  const path = (router: { state: { location: { pathname: string } } }) =>
+    router.state.location.pathname
+  const cards = () => screen.getAllByRole('heading', { level: 2 })
+
+  it('opens a team history from its address, ignoring letter case', async () => {
+    await renderWithRouter(['/teamHistory/BOS'])
+    await settle()
+    expect(
+      screen.getByRole('heading', { name: /Boston Celtics Team History/ })
+    ).toBeInTheDocument()
+    expect(cards().map((h) => h.textContent)).toEqual([
+      'long',
+      'mid',
+      'short',
+      'rising',
+      'active',
+    ])
+  })
+
+  it('shows team not found for an unknown team', async () => {
+    await renderWithRouter(['/teamHistory/xyz'])
+    expect(screen.getByText('Team not found')).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', { name: /back to the rankings chart/i })
+    ).toBeInTheDocument()
+  })
+
+  it('goes from the chart to the history and back to a season with the team pinned', async () => {
+    const user = userEvent.setup()
+    const { router } = await renderWithRouter(['/long'])
+    await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
+    await openTeamHistory(user)
+    expect(path(router)).toBe('/teamHistory/bos')
+
+    await user.click(screen.getByRole('heading', { name: 'mid' }))
+    await settle()
+    expect(path(router)).toBe('/mid')
+    fireEvent.mouseLeave(chart())
+    expect(
+      screen.getByText('Boston Celtics', { selector: 'text' })
+    ).toHaveAttribute('font-weight', '700')
+
+    await act(() => router.navigate(-1))
+    await settle()
+    expect(path(router)).toBe('/teamHistory/bos')
+  })
+
+  it('pins the team when a card is opened from a shared history link', async () => {
+    const user = userEvent.setup()
+    await renderWithRouter(['/teamHistory/mia'])
+    await settle()
+
+    await user.click(screen.getByRole('heading', { name: 'long' }))
+    await settle()
+    fireEvent.mouseLeave(chart())
+    expect(miamiLabel()).toHaveAttribute('font-weight', '700')
   })
 })

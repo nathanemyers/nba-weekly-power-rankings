@@ -46,6 +46,8 @@ const summariesDir = join(processedDir, 'summaries')
 rmSync(outDir, { recursive: true, force: true })
 mkdirSync(outDir, { recursive: true })
 
+const seasonIndex = {}
+
 for (const season of Object.keys(bySeason).sort()) {
   const { maxWeek, weekCount, teams } = bySeason[season]
   const rankings = {}
@@ -105,26 +107,27 @@ for (const season of Object.keys(bySeason).sort()) {
     ...(Object.keys(rosters).length && { rosters }),
     ...(Object.keys(coaches).length && { coaches }),
   }
+  seasonIndex[season] = {
+    name: season,
+    source: output.source,
+    ...(bracket && { champion: bracket.champion }),
+  }
   const file = join(outDir, `${season}.json`)
   writeFileSync(file, JSON.stringify(output))
   console.log(`${season}: ${weekCount} weeks, ${Object.keys(rankings).length} teams -> ${file}`)
 }
 
-// Statically imports every season's JSON so the app can reach them all through one import,
-// with no import.meta.glob/async loading. Imports are typed `unknown` because the app validates
-// them with Zod (src/schemas/season.ts) before use.
+// The season list ships in the main bundle and each season's JSON loads as its own chunk on demand
 const seasons = Object.keys(bySeason).sort().reverse()
 const indexFile = join(outDir, 'index.ts')
 writeFileSync(
   indexFile,
   [
-    ...seasons.map((season) => `import season_${season.replace('-', '_')} from "./${season}.json";`),
+    `export const seasonIndex: unknown = ${JSON.stringify(seasons.map((season) => seasonIndex[season]), null, 2)};`,
     '',
-    `export const seasonData: Record<string, unknown> = {`,
-    ...seasons.map((season) => `  "${season}": season_${season.replace('-', '_')},`),
+    `export const seasonLoaders: Record<string, () => Promise<{ default: unknown }>> = {`,
+    ...seasons.map((season) => `  "${season}": () => import("./${season}.json"),`),
     `};`,
-    '',
-    `export const seasons: string[] = Object.keys(seasonData).sort().reverse();`,
     '',
   ].join('\n'),
 )

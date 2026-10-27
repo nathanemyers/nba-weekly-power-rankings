@@ -1,8 +1,7 @@
 import { useId } from 'react'
 import { Team, Teams } from 'types'
 import { getYforRank } from 'components/Chart/utils'
-import { useAppSelector } from '@/store/hooks'
-import { getSeasonById } from '@/store/slices/seasons'
+import type { Season } from '@/data/seasonData'
 
 const PADDING = 3
 const MARGIN = { top: PADDING, right: PADDING, bottom: PADDING, left: PADDING }
@@ -10,13 +9,13 @@ const BAND_SIZE = Teams.length / 3
 
 interface TrendMinimapProps {
   team: Team
-  seasonId: string
+  season: Season
   width?: number
   height?: number
 }
 
 export default function TrendMinimap(props: TrendMinimapProps) {
-  const season = useAppSelector((state) => getSeasonById(state, props.seasonId))
+  const { season } = props
   const { rankings } = season.teams.find((t) => t.teamId === props.team)!
 
   const gradientId = useId()

@@ -1,8 +1,8 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { omit } from 'lodash'
 import { buildRankings, COACHES, PLAYOFFS, ROSTERS } from 'test/fixtures'
 import { Team } from 'types'
-import { loadSeasons } from './loadSeasons'
+import { parseSeason } from './seasonData'
 
 const valid = (maxWeek = 4) => ({
   season: 'valid',
@@ -12,22 +12,10 @@ const valid = (maxWeek = 4) => ({
   playoffs: PLAYOFFS,
 })
 
-let errorSpy: ReturnType<typeof vi.spyOn>
-
-beforeEach(() => {
-  errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
-})
-
-afterEach(() => {
-  errorSpy.mockRestore()
-})
-
-describe('loadSeasons', () => {
+describe('parseSeason', () => {
   it('builds a view of ranked teams for a valid season', () => {
-    const state = loadSeasons(['valid'], { valid: valid() })
-    expect(state.order).toEqual(['valid'])
-    expect(state.invalidSeasons).toEqual([])
-    const view = state.seasons.valid
+    const view = parseSeason('valid', valid())
+    expect(view.name).toBe('valid')
     expect(view.maxWeek).toBe(4)
     expect(view.completed).toBe(true)
     expect(view.champion).toBe(Team.Boston)
@@ -37,8 +25,7 @@ describe('loadSeasons', () => {
   })
 
   it('is not completed without a champion', () => {
-    const noPlayoffs = omit(valid(), 'playoffs')
-    const view = loadSeasons(['s'], { s: noPlayoffs }).seasons.s
+    const view = parseSeason('s', omit(valid(), 'playoffs'))
     expect(view.completed).toBe(false)
     expect(view.champion).toBeUndefined()
   })
@@ -46,12 +33,11 @@ describe('loadSeasons', () => {
   it('accepts a ranking without a record', () => {
     const season = valid()
     season.rankings[Team.Boston] = [{ week: 1, rank: 1, summary: 'x' }]
-    expect(loadSeasons(['s'], { s: season }).order).toEqual(['s'])
+    expect(parseSeason('s', season).name).toBe('s')
   })
 
   it("puts each team's roster on the team", () => {
-    const view = loadSeasons(['s'], { s: { ...valid(), rosters: ROSTERS } })
-      .seasons.s
+    const view = parseSeason('s', { ...valid(), rosters: ROSTERS })
     const boston = view.teams.find((t) => t.teamId === Team.Boston)
     const miami = view.teams.find((t) => t.teamId === Team.Miami)
     expect(boston?.roster).toEqual(ROSTERS[Team.Boston])
@@ -59,15 +45,13 @@ describe('loadSeasons', () => {
   })
 
   it("puts each team's head coaches on the team", () => {
-    const view = loadSeasons(['s'], { s: { ...valid(), coaches: COACHES } })
-      .seasons.s
+    const view = parseSeason('s', { ...valid(), coaches: COACHES })
     const boston = view.teams.find((t) => t.teamId === Team.Boston)
     expect(boston?.coaches).toEqual(COACHES[Team.Boston])
   })
 
-  const noMaxWeek = omit(valid(), 'maxWeek')
   const cases: [string, unknown, string][] = [
-    ['a missing maxWeek', noMaxWeek, 'maxWeek'],
+    ['a missing maxWeek', omit(valid(), 'maxWeek'), 'maxWeek'],
     [
       'a string rank',
       {
@@ -106,13 +90,8 @@ describe('loadSeasons', () => {
     ],
   ]
 
-  it.each(cases)('rejects %s and keeps valid seasons', (_, bad, field) => {
-    const state = loadSeasons(['bad', 'good'], { bad, good: valid() })
-    expect(state.order).toEqual(['good'])
-    expect(state.seasons.bad).toBeUndefined()
-    expect(state.invalidSeasons).toHaveLength(1)
-    expect(state.invalidSeasons[0].season).toBe('bad')
-    expect(state.invalidSeasons[0].message).toContain(field)
-    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('bad'))
+  it.each(cases)('rejects %s naming the season and field', (_, bad, field) => {
+    expect(() => parseSeason('bad', bad)).toThrow(/Season bad/)
+    expect(() => parseSeason('bad', bad)).toThrow(new RegExp(field))
   })
 })

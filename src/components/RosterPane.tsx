@@ -1,13 +1,9 @@
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { cn } from 'cn'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
-import {
-  getPinnedTeamCoaches,
-  getPinnedTeamRoster,
-  getSinglePinnedTeam,
-  setPinnedTeams,
-} from '@/store/slices/chart'
-import { getSelectedSeason } from '@/store/slices/UI'
+import { getSinglePinnedTeam, setPinnedTeams } from '@/store/slices/chart'
+import { getTeamRankings } from '@/data/seasonData'
+import { useSeason } from '@/hooks/useSeason'
 import {
   getTeamName,
   type CoachStint,
@@ -202,9 +198,10 @@ function RatingKey() {
 
 export default function RosterPane() {
   const teamId = useAppSelector(getSinglePinnedTeam)
-  const season = useAppSelector(getSelectedSeason)
-  const roster = useAppSelector(getPinnedTeamRoster)
-  const coaches = useAppSelector(getPinnedTeamCoaches)
+  const season = useSeason()
+  const teamRankings = getTeamRankings(season, teamId)
+  const roster = teamRankings?.roster
+  const coaches = teamRankings?.coaches
 
   if (!teamId || !roster?.length) return null
 
