@@ -23,6 +23,7 @@ import ChartFilterClearButton from 'components/ChartFilterClearButton'
 import TeamHistoryButton from 'components/TeamHistoryButton'
 import PlayoffSeriesBadges from 'components/PlayoffSeriesBadges'
 import RosterPane from 'components/RosterPane'
+import SeasonAwardsPane from 'components/SeasonAwardsPane'
 import { CHART_HEIGHT, CHART_MARGIN, CHART_WIDTH } from '@/constants'
 import { ButtonGroup } from '@/components/ui/button-group'
 
@@ -88,6 +89,7 @@ function ChartBody() {
           )}
         </div>
         <RosterPane />
+        {pinnedTeams.length === 0 && <SeasonAwardsPane />}
       </div>
     </>
   )

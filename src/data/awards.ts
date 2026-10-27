@@ -1,3 +1,6 @@
+import type { Season } from './seasonData'
+import type { Team } from 'types'
+
 export type AwardKind = 'won' | 'selection' | 'vote'
 
 export type Award = {
@@ -62,4 +65,43 @@ export function seasonAwards(codes: string[] | undefined): Award[] {
     .map(parseAward)
     .filter((award) => award !== undefined)
     .sort((a, b) => rank(a) - rank(b))
+}
+
+export type AwardWinner = { id: string; name: string; team: Team }
+
+export type SeasonAwardGroup = {
+  code: string
+  title: string
+  players: AwardWinner[]
+}
+
+const GROUP_ORDER = [
+  ...Object.keys(VOTED_AWARDS).map((key) => `${key}-1`),
+  ...SELECTION_ORDER,
+]
+
+// Every award won and team selection in a season, with the players who earned each
+export function getSeasonAwardGroups(season: Season): SeasonAwardGroup[] {
+  const groups: Record<string, SeasonAwardGroup> = {}
+  for (const team of season.teams) {
+    for (const player of team.roster ?? []) {
+      for (const award of seasonAwards(player.awards)) {
+        if (award.kind === 'vote') continue
+        groups[award.code] ??= {
+          code: award.code,
+          title: award.title,
+          players: [],
+        }
+        groups[award.code].players.push({
+          id: player.id,
+          name: player.name,
+          team: team.teamId,
+        })
+      }
+    }
+  }
+  return GROUP_ORDER.filter((code) => groups[code]).map((code) => ({
+    ...groups[code],
+    players: groups[code].players.sort((a, b) => a.name.localeCompare(b.name)),
+  }))
 }

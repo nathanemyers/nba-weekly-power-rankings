@@ -23,6 +23,10 @@ const ratings = (row: HTMLElement) =>
     .getAllByRole('cell')
     .map((cell) => cell.getAttribute('data-rating'))
 
+// The chart view also links award winners, so look for the name in the roster table
+const rosterLink = (name: string) =>
+  within(screen.getByRole('table')).getByRole('link', { name })
+
 afterEach(cleanup)
 
 describe('Player history', () => {
@@ -34,10 +38,10 @@ describe('Player history', () => {
       store.dispatch(setPinnedTeams([Team.Boston]))
     })
     const rosterRatings = ratings(
-      screen.getByRole('link', { name: 'Paul Pierce' }).closest('tr')!
+      rosterLink('Paul Pierce').closest('tr')!
     ).slice(1)
 
-    await user.click(screen.getByRole('link', { name: 'Paul Pierce' }))
+    await user.click(rosterLink('Paul Pierce'))
     expect(
       await screen.findByRole('heading', { level: 1, name: 'Paul Pierce' })
     ).toBeInTheDocument()

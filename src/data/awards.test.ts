@@ -1,5 +1,11 @@
-import { describe, expect, it } from 'vitest'
-import { seasonAwards } from './awards'
+import { describe, expect, it, vi } from 'vitest'
+
+vi.mock(
+  'data/seasons',
+  async () => (await import('test/mockSeasons')).mockSeasons
+)
+import { getSeasonAwardGroups, seasonAwards } from './awards'
+import { loadSeason } from './seasonData'
 
 const labels = (codes: string[]) =>
   seasonAwards(codes).map((award) => award.label)
@@ -49,5 +55,29 @@ describe('seasonAwards', () => {
 
   it('returns nothing when there are no awards', () => {
     expect(seasonAwards(undefined)).toEqual([])
+  })
+})
+
+describe('getSeasonAwardGroups', () => {
+  it('lists each award won and team selection with its players, leaving out voting finishes', async () => {
+    const groups = getSeasonAwardGroups(await loadSeason('long'))
+    expect(
+      groups.map((group) => [
+        group.code,
+        group.title,
+        group.players.map((player) => `${player.name} ${player.team}`),
+      ])
+    ).toEqual([
+      ['MVP-1', 'Most Valuable Player', ['Kevin Garnett bos']],
+      ['DPOY-1', 'Defensive Player of the Year', ['Kevin Garnett bos']],
+      ['NBA1', 'All-NBA First Team', ['Kevin Garnett bos']],
+      ['NBA2', 'All-NBA Second Team', ['Paul Pierce bos']],
+      ['DEF1', 'All-Defensive First Team', ['Kevin Garnett bos']],
+      ['AS', 'All-Star', ['Kevin Garnett bos', 'Paul Pierce bos']],
+    ])
+  })
+
+  it('returns nothing for a season without awards', async () => {
+    expect(getSeasonAwardGroups(await loadSeason('short'))).toEqual([])
   })
 })

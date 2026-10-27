@@ -74,7 +74,7 @@ const player = (id: string, name: string, g: number, extra: Partial<RosterEntry>
 export const ROSTERS: Partial<Record<Team, RosterEntry[]>> = {
   [Team.Boston]: [
     player('piercpa01', 'Paul Pierce', 80, { pos: 'SF', age: 30, gs: 80, mpg: 35.9, pts: 19.6, trb: 5.1, ast: 4.5, stl: 1.3, tov: 2.9, per: 19.8, awards: ['MVP-3', 'AS', 'NBA2'] }),
-    player('garneke01', 'Kevin Garnett', 71, { pos: 'PF', age: 31, gs: 71, pts: 18.8, trb: 9.2, per: 25.3, joinedFrom: Team.Minnesota }),
+    player('garneke01', 'Kevin Garnett', 71, { pos: 'PF', age: 31, gs: 71, pts: 18.8, trb: 9.2, per: 25.3, joinedFrom: Team.Minnesota, awards: ['MVP-1', 'DPOY-1', 'NBA1', 'DEF1', 'AS'] }),
     player('movesjo01', 'Joe Moves', 20, { joinedFrom: Team.Detroit, leftFor: Team.Miami }),
     player('scrubjo01', 'Joe Scrub', 3, { pos: 'C', per: null, leftFor: Team.Toronto }),
   ],

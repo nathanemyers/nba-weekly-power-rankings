@@ -31,6 +31,12 @@ The heading uses `player.name` from the newest stint. The name doesn't change ac
 - A traded player's awards come from their summary row and go only on the team they finished the season with (the stint with no `leftFor`). The field is left out when a player earned none.
 - `seasonAwards(codes)` in `src/data/awards.ts` turns codes into `{ code, label, title, kind }`, with `kind` `won`, `selection` or `vote`, sorted won, then selections, then votes by place.
 
+## SeasonAwardGroup (derived, `src/data/awards.ts`)
+
+`type SeasonAwardGroup = { code: string; title: string; players: { id: string; name: string; team: Team }[] }`
+
+- `getSeasonAwardGroups(season)` collects every award won (`MVP-1` etc.) and team selection from the season's rosters, skipping voting finishes. Groups follow `MVP, DPOY, ROY, 6MOY, MIP, CPOY, NBA1, NBA2, NBA3, DEF1, DEF2, AS` order, with players sorted by name.
+
 ## Validation
 
 - URL param `:player` must match `^[a-z]+\d{2}$` (Zod), or the loader throws a 404 with `statusText: 'Player not found'`.
