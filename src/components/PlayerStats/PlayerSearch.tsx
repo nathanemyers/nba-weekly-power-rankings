@@ -9,6 +9,7 @@ import {
   AutocompleteItem,
   AutocompleteList,
 } from 'components/ui/autocomplete'
+import { getCareerAwardsHighlights } from '@/data/awards'
 
 const MAX_RESULTS = 20
 
@@ -50,7 +51,7 @@ export default function PlayerSearch(props: {
             >
               <span>{player.name}</span>
               <span className="text-xs text-muted-foreground">
-                {/* {seasonRange(player)} */}
+                {careerHighlight(player)}
               </span>
             </AutocompleteItem>
           )}
@@ -58,4 +59,9 @@ export default function PlayerSearch(props: {
       </AutocompleteContent>
     </Autocomplete>
   )
+}
+
+function careerHighlight(player: PlayerSummary) {
+  const highlightAwards = getCareerAwardsHighlights(player.awardSummary)
+  return highlightAwards.map((award) => `${award.award.label} x${award.times}`)
 }

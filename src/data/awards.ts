@@ -105,3 +105,35 @@ export function getSeasonAwardGroups(season: Season): SeasonAwardGroup[] {
     players: groups[code].players.sort((a, b) => a.name.localeCompare(b.name)),
   }))
 }
+
+// ranking of award values for career summary
+const awardRanks = [
+  'MVP',
+  'DPOY',
+  'NBA1',
+  'DEF1',
+  'AS',
+  'NBA2',
+  'DEF2',
+  'CPOY',
+  'ROY',
+  '6MOY',
+  'MIP',
+  'NBA3',
+]
+
+export function getCareerAwardsHighlights(
+  awards: Record<string, number>,
+  limit: number = 1
+) {
+  return awardRanks
+    .map((awardCode) => {
+      if (awards[awardCode]) {
+        return { award: parseAward(awardCode)!, times: awards[awardCode] }
+      } else {
+        return null
+      }
+    })
+    .filter((award) => award !== null)
+    .slice(0, limit)
+}

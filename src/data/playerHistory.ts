@@ -45,6 +45,22 @@ export type PlayerSummary = {
   name: string
   firstSeason: string
   lastSeason: string
+  awardSummary: Record<string, number>
+  totalSeasons: number
+}
+
+function updateAwards(
+  totalAwards: Record<string, number>,
+  newAwards: string[]
+): Record<string, number> {
+  newAwards.forEach((award) => {
+    if (totalAwards[award]) {
+      totalAwards[award] += 1
+    } else {
+      totalAwards[award] = 1
+    }
+  })
+  return totalAwards
 }
 
 export function getAllPlayers(seasons: Season[]): PlayerSummary[] {
@@ -53,13 +69,18 @@ export function getAllPlayers(seasons: Season[]): PlayerSummary[] {
     for (const team of season.teams) {
       for (const entry of team.roster ?? []) {
         const known = players[entry.id]
-        if (known) known.firstSeason = season.name
-        else
+        if (known) {
+          known.firstSeason = season.name
+          known.totalSeasons += 1
+          known.awardSummary = updateAwards(known.awardSummary, entry.awards)
+        } else
           players[entry.id] = {
             id: entry.id,
             name: entry.name,
             firstSeason: season.name,
             lastSeason: season.name,
+            totalSeasons: 1,
+            awardSummary: updateAwards({}, entry.awards),
           }
       }
     }
@@ -85,24 +106,24 @@ export function searchPlayers(
     .slice(0, limit)
 }
 
-export function getPlayerCareerAwards(
-  playerId: string,
-  seasons: Season[]
-): Record<string, number> {
-  const totalAwards: Record<string, number> = {}
-  seasons.forEach((season) => {
-    for (const team of season.teams) {
-      const player = team.roster?.find((entry) => entry.id === playerId)
-      if (!player) continue
-      const { awards } = player
-      awards.forEach((award) => {
-        if (totalAwards[award]) {
-          totalAwards[award] += 1
-        } else {
-          totalAwards[award] = 1
-        }
-      })
-    }
-  })
-  return totalAwards
-}
+// export function getPlayerCareerAwards(
+//   seasons: Season[],
+//   playerId: string
+// ): Record<string, number> {
+//   const totalAwards: Record<string, number> = {}
+//   seasons.forEach((season) => {
+//     for (const team of season.teams) {
+//       const player = team.roster?.find((entry) => entry.id === playerId)
+//       if (!player) continue
+//       const { awards } = player
+//       awards.forEach((award) => {
+//         if (totalAwards[award]) {
+//           totalAwards[award] += 1
+//         } else {
+//           totalAwards[award] = 1
+//         }
+//       })
+//     }
+//   })
+//   return totalAwards
+// }
