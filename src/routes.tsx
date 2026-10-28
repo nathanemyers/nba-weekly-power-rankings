@@ -46,8 +46,12 @@ function playerHistoryLoader({ params }: LoaderFunctionArgs) {
   const seasons = loadAllSeasons()
   return {
     playerId,
-    history: seasons.then((all) => getPlayerHistory(all, playerId)),
-    players: seasons.then(getAllPlayers),
+    playerHistory: seasons.then((all) => getPlayerHistory(all, playerId)),
+    allPlayers: seasons.then(getAllPlayers),
+    playerSummary: seasons.then((allSeasons) => {
+      const players = getAllPlayers(allSeasons)
+      return players.find((player) => player.id === playerId)
+    }),
   }
 }
 

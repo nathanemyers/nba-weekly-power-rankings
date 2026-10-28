@@ -9,8 +9,7 @@ import {
   AutocompleteItem,
   AutocompleteList,
 } from 'components/ui/autocomplete'
-import { getCareerAwardsHighlights } from '@/data/awards'
-import AwardBadge from '../Badges/AwardBadge'
+import CareerHighlights from './CareerHighlights'
 
 const MAX_RESULTS = 20
 
@@ -52,25 +51,12 @@ export default function PlayerSearch(props: {
             >
               <span>{player.name}</span>
               <span className="text-xs text-muted-foreground">
-                <CareerHighlight player={player} />
+                <CareerHighlights player={player} limit={1} />
               </span>
             </AutocompleteItem>
           )}
         </AutocompleteList>
       </AutocompleteContent>
     </Autocomplete>
-  )
-}
-
-function CareerHighlight({ player }: { player: PlayerSummary }) {
-  const highlightAwards = getCareerAwardsHighlights(player.awardSummary)
-  return (
-    <div className="flex flex-row gap-1">
-      {highlightAwards.map((award) => (
-        <div className="flex flex-row gap-1 items-center">
-          <AwardBadge award={award.award} /> x{award.times}
-        </div>
-      ))}
-    </div>
   )
 }

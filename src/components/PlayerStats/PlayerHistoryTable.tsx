@@ -4,9 +4,9 @@ import { setPinnedTeams } from '@/store/slices/chart'
 import type { PlayerStint } from '@/data/playerHistory'
 import { getTeamName } from 'types'
 import AwardBadges from './AwardBadges'
-import { PLAYOFF_MEDALS } from '../Chart/utils'
+import { PLAYOFF_MEDALS } from 'components/Chart/utils'
 import { StatCells, StatHeads } from './statColumns'
-import TeamLogo from '../TeamLogo'
+import TeamLogo from 'components/TeamLogo'
 import {
   Table,
   TableBody,
@@ -14,9 +14,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../ui/table'
+} from 'components/ui/table'
 
-export default function PlayerHistoryTable(props: { history: PlayerStint[] }) {
+export default function PlayerHistoryTable(props: {
+  playerHistory: PlayerStint[]
+}) {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
@@ -44,7 +46,7 @@ export default function PlayerHistoryTable(props: { history: PlayerStint[] }) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {props.history.map((stint) => (
+        {props.playerHistory.map((stint) => (
           <TableRow
             key={stint.season + stint.team}
             tabIndex={0}

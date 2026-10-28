@@ -105,25 +105,3 @@ export function searchPlayers(
     })
     .slice(0, limit)
 }
-
-// export function getPlayerCareerAwards(
-//   seasons: Season[],
-//   playerId: string
-// ): Record<string, number> {
-//   const totalAwards: Record<string, number> = {}
-//   seasons.forEach((season) => {
-//     for (const team of season.teams) {
-//       const player = team.roster?.find((entry) => entry.id === playerId)
-//       if (!player) continue
-//       const { awards } = player
-//       awards.forEach((award) => {
-//         if (totalAwards[award]) {
-//           totalAwards[award] += 1
-//         } else {
-//           totalAwards[award] = 1
-//         }
-//       })
-//     }
-//   })
-//   return totalAwards
-// }
