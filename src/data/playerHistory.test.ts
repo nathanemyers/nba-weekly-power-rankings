@@ -81,6 +81,8 @@ describe('getAllPlayers', () => {
       name: 'Paul Pierce',
       firstSeason: 'short',
       lastSeason: 'long',
+      awardSummary: { 'MVP-3': 1, AS: 1, NBA2: 1 },
+      totalSeasons: 2,
     })
   })
 })
@@ -91,6 +93,8 @@ describe('searchPlayers', () => {
     name,
     firstSeason: '2003-04',
     lastSeason: '2003-04',
+    awardSummary: {},
+    totalSeasons: 1,
   })
   const players = [
     player('curryst01', 'Stephen Curry'),

@@ -2,6 +2,7 @@ import { cn } from 'cn'
 import {
   MIN_RATED_GAMES,
   MIN_RATED_MINUTES,
+  RATING_BANDS,
   type StatRating,
 } from './statRating'
 
@@ -18,13 +19,6 @@ const RATING_NAMES: Record<StatRating, string> = {
   fair: 'yellow',
   poor: 'red',
 }
-
-const RATING_BANDS: { rating: StatRating; percent: number }[] = [
-  { rating: 'poor', percent: 25 },
-  { rating: 'fair', percent: 50 },
-  { rating: 'good', percent: 15 },
-  { rating: 'elite', percent: 10 },
-]
 
 export default function RatingKey() {
   const description = `Stat colors, lowest to highest: ${RATING_BANDS.map(

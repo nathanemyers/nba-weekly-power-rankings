@@ -67,7 +67,7 @@ export const PLAYOFF_SERIES: Partial<Record<Team, SeriesResult[]>> = {
 }
 
 const player = (id: string, name: string, g: number, extra: Partial<RosterEntry> = {}): RosterEntry => ({
-  id, name, pos: 'SF', age: 27, g, gs: 0, mpg: 20, pts: 10, trb: 4, ast: 2, stl: 1, blk: 0.5, tov: 1.5, per: 15, ...extra,
+  id, name, pos: 'SF', age: 27, g, gs: 0, mpg: 20, pts: 10, trb: 4, ast: 2, stl: 1, blk: 0.5, tov: 1.5, per: 15, awards: [], ...extra,
 })
 
 // Boston's roster, already in games-played order the way the build writes it

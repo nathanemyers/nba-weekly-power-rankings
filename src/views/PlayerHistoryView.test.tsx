@@ -122,7 +122,7 @@ describe('Player history', () => {
     await user.type(await screen.findByLabelText('Player name'), 'joe s')
     expect(
       screen.getAllByRole('option').map((option) => option.textContent)
-    ).toEqual(['Joe Scrublong'])
+    ).toEqual(['Joe Scrub'])
     await user.keyboard('{Enter}')
     expect(
       await screen.findByRole('heading', { level: 1, name: 'Joe Scrub' })
