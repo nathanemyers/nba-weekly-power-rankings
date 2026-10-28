@@ -38,6 +38,7 @@ function chart(overrides: Overrides = {}) {
       height={HEIGHT}
       margin={MARGIN}
       pinnedTeams={[]}
+      compact={false}
       onClick={() => {}}
       {...overrides}
     />

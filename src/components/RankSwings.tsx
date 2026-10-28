@@ -1,15 +1,12 @@
 import { Toggle } from '@/components/ui/toggle'
 import TrendMinimap from 'components/TrendMinimap/TrendMinimap'
-import { useAppSelector } from '@/store/hooks'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { getPinnedTeams, setPinnedTeams } from '@/store/slices/chart'
 import { getMostImprovedTeams, getMostDeclinedTeams } from '@/data/analysis'
 import type { Season } from '@/data/seasonData'
 import { useSeason } from '@/hooks/useSeason'
 import TeamLogo from './TeamLogo'
-import { useDispatch } from 'react-redux'
 import type { Team } from '@/types'
-import { Button } from './ui/button'
-import { HoverCard, HoverCardTrigger, HoverCardContent } from './ui/hover-card'
 
 function TeamMinimapCard(props: {
   team: Team
@@ -19,59 +16,51 @@ function TeamMinimapCard(props: {
 }) {
   return (
     <Toggle
-      className="w-auto h-auto p-3"
+      className="h-auto w-full cursor-pointer justify-start gap-3 p-3 sm:w-auto sm:justify-center"
       onClick={props.onClick}
       pressed={props.isPressed}
     >
-      <TeamLogo team={props.team} />
-      <TrendMinimap team={props.team} season={props.season} />
+      <TeamLogo
+        team={props.team}
+        className="size-12 shrink-0 object-contain sm:size-auto"
+      />
+      <TrendMinimap
+        team={props.team}
+        season={props.season}
+        className="h-10 w-auto min-w-0 flex-1 sm:size-auto sm:flex-none"
+      />
     </Toggle>
   )
 }
 
 export default function RankSwings() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const pinnedTeams = useAppSelector(getPinnedTeams)
   const season = useSeason()
 
   const biggestRisers = getMostImprovedTeams(season)
   const biggestFallers = getMostDeclinedTeams(season)
 
+  const row = (teams: typeof biggestRisers) => (
+    <div className="grid gap-2 sm:flex sm:flex-wrap sm:gap-3">
+      {teams.map(({ team }) => (
+        <TeamMinimapCard
+          key={team}
+          isPressed={pinnedTeams.length === 1 && pinnedTeams[0] === team}
+          onClick={() => dispatch(setPinnedTeams([team]))}
+          team={team}
+          season={season}
+        />
+      ))}
+    </div>
+  )
+
   return (
-    <HoverCard openDelay={100} closeDelay={100}>
-      <HoverCardTrigger asChild>
-        <Button variant="outline">Season Trends</Button>
-      </HoverCardTrigger>
-      <HoverCardContent
-        align="start"
-        side={'bottom'}
-        className="flex w-auto h-auto flex-col gap-0.5"
-      >
-        <h1>Biggest Up</h1>
-        <div className="flex direction-row gap-5 justify-between">
-          {biggestRisers.map(({ team }) => (
-            <TeamMinimapCard
-              key={team}
-              isPressed={pinnedTeams.length === 1 && pinnedTeams[0] === team}
-              onClick={() => dispatch(setPinnedTeams([team]))}
-              team={team}
-              season={season}
-            />
-          ))}
-        </div>
-        <h1>Biggest Down</h1>
-        <div className="flex direction-row gap-5 justify-between">
-          {biggestFallers.map(({ team }) => (
-            <TeamMinimapCard
-              key={team}
-              isPressed={pinnedTeams.length === 1 && pinnedTeams[0] === team}
-              onClick={() => dispatch(setPinnedTeams([team]))}
-              team={team}
-              season={season}
-            />
-          ))}
-        </div>
-      </HoverCardContent>
-    </HoverCard>
+    <div className="flex flex-col gap-2">
+      <h3 className="text-sm text-muted-foreground">Biggest Up</h3>
+      {row(biggestRisers)}
+      <h3 className="mt-2 text-sm text-muted-foreground">Biggest Down</h3>
+      {row(biggestFallers)}
+    </div>
   )
 }

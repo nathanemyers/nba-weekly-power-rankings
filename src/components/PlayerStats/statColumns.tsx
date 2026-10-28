@@ -13,6 +13,7 @@ export type StatColumn = {
   title: string
   value: (player: RosterEntry) => string
   rated?: RatedStat
+  compact?: true
 }
 
 const RATING_CLASSES: Record<StatRating, string> = {
@@ -39,18 +40,21 @@ const STAT_COLUMNS: StatColumn[] = [
     title: 'Points per game',
     value: (p) => decimal(p.pts),
     rated: 'pts',
+    compact: true,
   },
   {
     label: 'REB',
     title: 'Rebounds per game',
     value: (p) => decimal(p.trb),
     rated: 'trb',
+    compact: true,
   },
   {
     label: 'AST',
     title: 'Assists per game',
     value: (p) => decimal(p.ast),
     rated: 'ast',
+    compact: true,
   },
   {
     label: 'STL',
@@ -72,15 +76,23 @@ const STAT_COLUMNS: StatColumn[] = [
   },
 ]
 
-export function StatHeads() {
+// Compact tables show only the core box-score columns on phones
+const hideOnPhone = (compact: boolean | undefined, column: StatColumn) =>
+  compact && !column.compact && 'hidden sm:table-cell'
+
+export function StatHeads(props: { compact?: boolean }) {
   return STAT_COLUMNS.map((column) => (
-    <TableHead key={column.label} title={column.title} className="text-right">
+    <TableHead
+      key={column.label}
+      title={column.title}
+      className={cn('text-right', hideOnPhone(props.compact, column))}
+    >
       {column.label}
     </TableHead>
   ))
 }
 
-export function StatCells(props: { player: RosterEntry }) {
+export function StatCells(props: { player: RosterEntry; compact?: boolean }) {
   return STAT_COLUMNS.map((column) => {
     const unrated = column.rated && !isRatable(props.player)
     const rating = column.rated
@@ -92,6 +104,7 @@ export function StatCells(props: { player: RosterEntry }) {
         data-rating={unrated ? 'unrated' : rating}
         className={cn(
           'text-right tabular-nums',
+          hideOnPhone(props.compact, column),
           rating && RATING_CLASSES[rating],
           unrated && 'text-muted-foreground'
         )}

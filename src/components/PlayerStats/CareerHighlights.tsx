@@ -11,7 +11,7 @@ export default function CareerHighlights({
 }) {
   const highlightAwards = getCareerAwardsHighlights(player.awardSummary, limit)
   return (
-    <div className="flex flex-row gap-3">
+    <div className="flex flex-row flex-wrap gap-3">
       {highlightAwards.map((award) => (
         <div className="flex flex-row gap-1 items-center">
           <AwardBadge award={award.award} />{' '}
