@@ -119,10 +119,7 @@ describe('Player history', () => {
   it('jumps to another player from the search', async () => {
     const user = userEvent.setup()
     const { router } = await renderWithRouter(['/playerHistory/piercpa01'])
-    await user.click(
-      await screen.findByRole('button', { name: /find a player/i })
-    )
-    await user.type(screen.getByLabelText('Player name'), 'joe s')
+    await user.type(await screen.findByLabelText('Player name'), 'joe s')
     expect(
       screen.getAllByRole('option').map((option) => option.textContent)
     ).toEqual(['Joe Scrublong'])
@@ -136,10 +133,7 @@ describe('Player history', () => {
   it('says when no player matches', async () => {
     const user = userEvent.setup()
     await renderWithRouter(['/playerHistory/piercpa01'])
-    await user.click(
-      await screen.findByRole('button', { name: /find a player/i })
-    )
-    await user.type(screen.getByLabelText('Player name'), 'zzz')
-    expect(screen.getByText('No players found.')).toBeInTheDocument()
+    await user.type(await screen.findByLabelText('Player name'), 'zzz')
+    expect(await screen.findByText(/No players found\./)).toBeInTheDocument()
   })
 })

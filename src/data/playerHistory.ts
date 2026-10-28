@@ -70,7 +70,6 @@ export function getAllPlayers(seasons: Season[]): PlayerSummary[] {
 const searchable = (text: string) =>
   text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
-// Matches players whose name has a word starting with each word of the query
 export function searchPlayers(
   players: PlayerSummary[],
   query: string,
