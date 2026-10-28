@@ -44,6 +44,8 @@ export default function DetailTabs() {
   const shownTab = chosenTab && isAvailable[chosenTab] ? chosenTab : defaultTab
   if (!shownTab) return null
 
+  // Short tabs fill a screen so switching from a long tab doesn't shrink the page and jump the scroll
+
   return (
     <Tabs
       value={shownTab}
@@ -61,10 +63,10 @@ export default function DetailTabs() {
           </TabsTrigger>
         ))}
       </TabsList>
-      <TabsContent value="summary" className="pt-2">
+      <TabsContent value="summary" className="min-h-svh pt-2">
         <TeamSeasonSummary />
       </TabsContent>
-      <TabsContent value="trends" className="pt-2">
+      <TabsContent value="trends" className="min-h-svh pt-2">
         <RankSwings />
       </TabsContent>
       <TabsContent value="roster" className="pt-2">
