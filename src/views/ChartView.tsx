@@ -1,7 +1,7 @@
 import RankingsChart from 'components/Chart/Chart'
-import GitHubBadge from 'components/GitHubBadge'
+import GitHubBadge from '@/components/Badges/GitHubBadge'
 import SeasonSelect from 'components/SeasonSelect'
-import DataSourceBadge from 'components/DataSourceBadge'
+import DataSourceBadge from '@/components/Badges/DataSourceBadge'
 import RankSwings from '@/components/RankSwings'
 import TeamSeasonSummary from '@/components/TeamSeasonSummary'
 import type { Team } from 'types'
@@ -21,8 +21,9 @@ import { useChartControls } from 'components/Chart/useChartControls'
 import ChartFilter from 'components/ChartFilter'
 import ChartFilterClearButton from 'components/ChartFilterClearButton'
 import TeamHistoryButton from 'components/TeamHistoryButton'
-import PlayoffSeriesBadges from 'components/PlayoffSeriesBadges'
+import PlayoffSeriesBadges from '@/components/Badges/PlayoffSeriesBadges'
 import RosterPane from 'components/RosterPane'
+import SeasonAwardsPane from 'components/SeasonAwardsPane'
 import { CHART_HEIGHT, CHART_MARGIN, CHART_WIDTH } from '@/constants'
 import { ButtonGroup } from '@/components/ui/button-group'
 
@@ -88,6 +89,7 @@ function ChartBody() {
           )}
         </div>
         <RosterPane />
+        {pinnedTeams.length === 0 && <SeasonAwardsPane />}
       </div>
     </>
   )

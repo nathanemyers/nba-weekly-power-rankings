@@ -11,7 +11,7 @@ export const PLAYOFF_MEDALS: Record<
     label: 'Lost in the conference finals',
   },
   [PlayoffStage.Finals]: { icon: '🏆', label: 'Runner-up in the Finals' },
-  [PlayoffStage.Champion]: { icon: '👑', label: 'NBA champion' },
+  [PlayoffStage.Champion]: { icon: '💍', label: 'NBA champion' },
 }
 
 export function getYforRank(

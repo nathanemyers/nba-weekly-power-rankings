@@ -142,6 +142,22 @@ describe('RosterPane', () => {
     expect(getPinnedTeams(store.getState())).toEqual([Team.Miami])
   })
 
+  it("links each player's name to their history, apart from the move badges", async () => {
+    const { router } = await renderPane([Team.Boston])
+    expect(screen.getByRole('link', { name: 'Paul Pierce' })).toHaveAttribute(
+      'href',
+      '/playerHistory/piercpa01'
+    )
+    const moves = screen.getByRole('link', { name: 'Joe Moves' })
+    expect(
+      within(moves).queryByRole('button', { name: /mid-season/ })
+    ).toBeNull()
+    await userEvent.click(
+      screen.getByRole('button', { name: 'Left for Miami Heat mid-season' })
+    )
+    expect(router.state.location.pathname).toBe('/long')
+  })
+
   it('names the head coaches in order with their records', async () => {
     await renderPane([Team.Boston])
     const line = screen.getByText(/Head coaches:/)

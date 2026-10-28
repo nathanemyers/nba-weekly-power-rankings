@@ -1,11 +1,8 @@
-import {
-  isRouteErrorResponse,
-  Link,
-  useParams,
-  useRouteError,
-} from 'react-router'
-import { Card, CardContent } from '@/components/ui/card'
+import { isRouteErrorResponse, useParams, useRouteError } from 'react-router'
+import NotFoundCard from '@/components/NotFoundCard'
 import SeasonSelect from '@/components/SeasonSelect'
+
+const NOT_FOUND_MESSAGES = ['Team not found', 'Player not found']
 
 export default function RouteError() {
   const error = useRouteError()
@@ -16,28 +13,21 @@ export default function RouteError() {
     ? `Couldn't load the ${season} season`
     : "Couldn't load this page"
   if (notFound) {
-    message =
-      error.statusText === 'Team not found'
-        ? 'Team not found'
-        : 'Page not found'
+    message = NOT_FOUND_MESSAGES.includes(error.statusText)
+      ? error.statusText
+      : 'Page not found'
   } else {
     console.error(error)
   }
 
   return (
-    <Card>
-      <CardContent className="flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold">{message}</h1>
-        {!notFound && season && (
-          <div className="flex flex-row items-center gap-3">
-            <span className="text-muted-foreground">Try another season:</span>
-            <SeasonSelect />
-          </div>
-        )}
-        <Link to="/" className="cursor-pointer text-primary underline">
-          Back to the rankings chart
-        </Link>
-      </CardContent>
-    </Card>
+    <NotFoundCard message={message}>
+      {!notFound && season && (
+        <div className="flex flex-row items-center gap-3">
+          <span className="text-muted-foreground">Try another season:</span>
+          <SeasonSelect />
+        </div>
+      )}
+    </NotFoundCard>
   )
 }

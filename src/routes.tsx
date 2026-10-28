@@ -8,6 +8,7 @@ import { z } from 'zod'
 import Root, { RootFallback } from './Root'
 import ChartView from './views/ChartView'
 import TeamHistoryView from './views/TeamHistoryView'
+import PlayerHistoryView from './views/PlayerHistoryView'
 import RouteError from './views/RouteError'
 import NoSeasons from './views/NoSeasons'
 import {
@@ -16,6 +17,7 @@ import {
   loadAllSeasons,
   loadSeason,
 } from '@/data/seasonData'
+import { getAllPlayers, getPlayerHistory } from '@/data/playerHistory'
 import { Team } from 'types'
 
 function seasonLoader({ params }: LoaderFunctionArgs) {
@@ -31,6 +33,26 @@ function teamHistoryLoader({ params }: LoaderFunctionArgs) {
   if (!team.success)
     throw data(null, { status: 404, statusText: 'Team not found' })
   return { team: team.data, seasons: loadAllSeasons() }
+}
+
+function playerHistoryLoader({ params }: LoaderFunctionArgs) {
+  const player = z
+    .string()
+    .regex(/^[a-z]+\d{2}$/)
+    .safeParse(params.player)
+  if (!player.success)
+    throw data(null, { status: 404, statusText: 'Player not found' })
+  const playerId = player.data
+  const seasons = loadAllSeasons()
+  return {
+    playerId,
+    playerHistory: seasons.then((all) => getPlayerHistory(all, playerId)),
+    allPlayers: seasons.then(getAllPlayers),
+    playerSummary: seasons.then((allSeasons) => {
+      const players = getAllPlayers(allSeasons)
+      return players.find((player) => player.id === playerId)
+    }),
+  }
 }
 
 export const routes: RouteObject[] = [
@@ -53,6 +75,13 @@ export const routes: RouteObject[] = [
         Component: TeamHistoryView,
         ErrorBoundary: RouteError,
         loader: teamHistoryLoader,
+      },
+      {
+        id: 'playerHistory',
+        path: 'playerHistory/:player',
+        Component: PlayerHistoryView,
+        ErrorBoundary: RouteError,
+        loader: playerHistoryLoader,
       },
       {
         id: 'season',

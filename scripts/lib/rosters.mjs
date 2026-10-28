@@ -82,6 +82,18 @@ const PER_GAME_FIELDS = {
   mpg: 'mp_per_g', pts: 'pts_per_g', trb: 'trb_per_g', ast: 'ast_per_g', stl: 'stl_per_g', blk: 'blk_per_g', tov: 'tov_per_g',
 }
 
+// Basketball-Reference award codes: a voting finish such as MVP-1, or a selection such as AS or NBA1
+const AWARD_PATTERN = /^((MVP|DPOY|ROY|6MOY|MIP|CPOY)-\d+|AS|NBA[123]|DEF[12])$/
+
+function seasonAwards(text, name) {
+  if (!text) return []
+  const awards = text.split(',').map((award) => award.trim())
+  for (const award of awards) {
+    if (!AWARD_PATTERN.test(award)) throw new Error(`${name}: unknown award "${award}"`)
+  }
+  return awards
+}
+
 /** Turns a raw season into each team's roster for the app, sorted by minutes per game, then games, then name, and checks every entry. */
 export function teamRosters(raw, season) {
   const advancedByStint = {}
@@ -92,9 +104,13 @@ export function teamRosters(raw, season) {
   // Each player's team rows in page order, which is the order they played for them
   const stintsByPlayer = {}
   const summaryGames = {}
+  // A multi-team player's awards are only on their summary row
+  const summaryAwards = {}
   for (const row of raw.perGame) {
-    if (isSummaryRow(row.team_name_abbr)) summaryGames[row.playerId] = row.games
-    else (stintsByPlayer[row.playerId] ??= []).push(row.team_name_abbr)
+    if (isSummaryRow(row.team_name_abbr)) {
+      summaryGames[row.playerId] = row.games
+      summaryAwards[row.playerId] = row.awards
+    } else (stintsByPlayer[row.playerId] ??= []).push(row.team_name_abbr)
   }
   for (const [playerId, games] of Object.entries(summaryGames)) {
     const rows = raw.perGame.filter((row) => row.playerId === playerId && !isSummaryRow(row.team_name_abbr))
@@ -128,6 +144,11 @@ export function teamRosters(raw, season) {
     if (stints.lastIndexOf(row.team_name_abbr) !== index) throw new Error(`${name}: two rows for one team`)
     if (index > 0) entry.joinedFrom = slugForAbbr(stints[index - 1])
     if (index < stints.length - 1) entry.leftFor = slugForAbbr(stints[index + 1])
+    // Season awards go on the team the player finished the season with
+    else {
+      const awards = seasonAwards(row.playerId in summaryAwards ? summaryAwards[row.playerId] : row.awards, name)
+      if (awards.length) entry.awards = awards
+    }
     ;(rosters[slug] ??= []).push(entry)
   }
 

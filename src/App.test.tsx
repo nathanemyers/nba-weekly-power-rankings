@@ -54,6 +54,8 @@ const later = () => screen.getByRole('button', { name: /later/i })
 const zoomOut = () => screen.getByRole('button', { name: /zoom out/i })
 const zoomIn = () => screen.getByRole('button', { name: /zoom in/i })
 const chart = () => screen.getByRole('img', { name: /line chart/i })
+// Waits for a navigation to finish rendering the chart, since the old view stays up until then
+const findChart = () => screen.findByRole('img', { name: /line chart/i })
 const miamiLabel = () => screen.getByText('Miami Heat', { selector: 'text' })
 const chooseSeason = async (
   user: ReturnType<typeof userEvent.setup>,
@@ -607,7 +609,7 @@ describe('Team history addresses', () => {
     expect(path(router)).toBe('/teamHistory/bos')
 
     await user.click(screen.getByRole('heading', { name: 'mid' }))
-    await settle()
+    await findChart()
     expect(path(router)).toBe('/mid')
     fireEvent.mouseLeave(chart())
     expect(
@@ -625,7 +627,7 @@ describe('Team history addresses', () => {
     await settle()
 
     await user.click(screen.getByRole('heading', { name: 'long' }))
-    await settle()
+    await findChart()
     fireEvent.mouseLeave(chart())
     expect(miamiLabel()).toHaveAttribute('font-weight', '700')
   })
