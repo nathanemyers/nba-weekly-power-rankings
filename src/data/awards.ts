@@ -108,17 +108,17 @@ export function getSeasonAwardGroups(season: Season): SeasonAwardGroup[] {
 
 // ranking of award values for career summary
 const awardRanks = [
-  'MVP',
-  'DPOY',
+  'MVP-1',
+  'DPOY-1',
   'NBA1',
   'DEF1',
   'AS',
   'NBA2',
   'DEF2',
-  'CPOY',
-  'ROY',
-  '6MOY',
-  'MIP',
+  'CPOY-1',
+  'ROY-1',
+  '6MOY-1',
+  'MIP-1',
   'NBA3',
 ]
 

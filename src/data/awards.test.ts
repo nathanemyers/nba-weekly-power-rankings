@@ -4,7 +4,11 @@ vi.mock(
   'data/seasons',
   async () => (await import('test/mockSeasons')).mockSeasons
 )
-import { getSeasonAwardGroups, seasonAwards } from './awards'
+import {
+  getCareerAwardsHighlights,
+  getSeasonAwardGroups,
+  seasonAwards,
+} from './awards'
 import { loadSeason } from './seasonData'
 
 const labels = (codes: string[]) =>
@@ -79,5 +83,62 @@ describe('getSeasonAwardGroups', () => {
 
   it('returns nothing for a season without awards', async () => {
     expect(getSeasonAwardGroups(await loadSeason('short'))).toEqual([])
+  })
+})
+
+describe('getCareerAwardsHighlights', () => {
+  const highlights = (awards: Record<string, number>, limit?: number) =>
+    getCareerAwardsHighlights(awards, limit).map(
+      ({ award, times }) => `${award.label} x${times}`
+    )
+
+  it('returns the single most valuable award by default', () => {
+    expect(highlights({ AS: 10, NBA1: 4, DEF2: 1 })).toEqual(['All-NBA 1st x4'])
+  })
+
+  it('ranks awards by value rather than by count', () => {
+    expect(highlights({ NBA3: 5, DEF2: 3, AS: 1, NBA2: 2 }, 4)).toEqual([
+      'All-Star x1',
+      'All-NBA 2nd x2',
+      'All-Defensive 2nd x3',
+      'All-NBA 3rd x5',
+    ])
+  })
+
+  it('ranks voted awards won with the team selections', () => {
+    expect(
+      highlights({ AS: 15, 'MVP-1': 4, 'DPOY-1': 1, NBA1: 9, 'ROY-1': 1 }, 5)
+    ).toEqual(['MVP x4', 'DPOY x1', 'All-NBA 1st x9', 'All-Star x15', 'ROY x1'])
+  })
+
+  it('leaves out voting finishes', () => {
+    expect(highlights({ 'MVP-2': 3, 'DPOY-5': 1, AS: 2 }, 3)).toEqual([
+      'All-Star x2',
+    ])
+  })
+
+  it('returns every award when the limit is above the number earned', () => {
+    expect(highlights({ DEF1: 2, AS: 3 }, 10)).toEqual([
+      'All-Defensive 1st x2',
+      'All-Star x3',
+    ])
+  })
+
+  it('returns nothing for a player without awards', () => {
+    expect(highlights({})).toEqual([])
+  })
+
+  it('returns the award details with the count', () => {
+    expect(getCareerAwardsHighlights({ NBA1: 2 })).toEqual([
+      {
+        award: {
+          code: 'NBA1',
+          label: 'All-NBA 1st',
+          title: 'All-NBA First Team',
+          kind: 'selection',
+        },
+        times: 2,
+      },
+    ])
   })
 })
