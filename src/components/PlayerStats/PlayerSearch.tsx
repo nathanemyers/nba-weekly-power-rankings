@@ -33,11 +33,11 @@ export default function PlayerSearch(props: {
       itemToStringValue={(player: PlayerSummary) => player.name}
     >
       <AutocompleteInput
-        aria-label="Player name"
+        type={'search'}
         placeholder="Find a player…"
-        className="w-64"
+        className="w-full md:w-80"
       />
-      <AutocompleteContent align="end" className="w-72">
+      <AutocompleteContent align="end" className="w-full md:w-80">
         {query.trim() && (
           <AutocompleteEmpty>No players found.</AutocompleteEmpty>
         )}
