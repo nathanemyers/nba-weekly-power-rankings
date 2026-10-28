@@ -12,11 +12,6 @@ import {
 
 const MAX_RESULTS = 20
 
-const seasonRange = (player: PlayerSummary) =>
-  player.firstSeason === player.lastSeason
-    ? player.firstSeason
-    : `${player.firstSeason} to ${player.lastSeason}`
-
 export default function PlayerSearch(props: {
   players: Promise<PlayerSummary[]>
 }) {
@@ -55,7 +50,7 @@ export default function PlayerSearch(props: {
             >
               <span>{player.name}</span>
               <span className="text-xs text-muted-foreground">
-                {seasonRange(player)}
+                {/* {seasonRange(player)} */}
               </span>
             </AutocompleteItem>
           )}
