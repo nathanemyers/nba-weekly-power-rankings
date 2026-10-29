@@ -37,6 +37,7 @@ export default function PlayerSearch(props: {
       <div ref={setAnchor} className="w-full md:w-80">
         <AutocompleteInput
           type={'search'}
+          aria-label="Player name"
           placeholder="Find a player…"
           className="w-full"
         />
