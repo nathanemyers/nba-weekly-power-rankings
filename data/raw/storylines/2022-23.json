@@ -1,0 +1,3221 @@
+{
+  "season": "2022-23",
+  "updatedAt": "2026-10-29",
+  "guidance": [
+    {
+      "id": "retro-offseason-trades",
+      "summary": "Offseason blockbusters: Gobert to Minnesota, Mitchell to Cleveland, Murray to Atlanta, Brogdon to Boston, KCP to Denver",
+      "origin": "retrospective",
+      "teams": [
+        "uta",
+        "min",
+        "cle",
+        "atl",
+        "sas",
+        "bos",
+        "ind",
+        "den",
+        "was"
+      ]
+    },
+    {
+      "id": "retro-bill-russell",
+      "summary": "Bill Russell dies and his No. 6 is retired league-wide",
+      "origin": "retrospective",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "retro-warriors-decline",
+      "summary": "Defending champion Warriors start with the Draymond-Poole punch and go 11-30 on the road",
+      "origin": "retrospective",
+      "teams": [
+        "gsw"
+      ]
+    },
+    {
+      "id": "retro-scoring-boom",
+      "summary": "Record scoring season: Mitchell and Lillard score 71, league sets an efficiency record",
+      "origin": "retrospective",
+      "teams": [
+        "cle",
+        "por"
+      ]
+    },
+    {
+      "id": "retro-lebron-record",
+      "summary": "LeBron James passes Kareem Abdul-Jabbar as the all-time leading scorer",
+      "origin": "retrospective",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "retro-durant-trade",
+      "summary": "Nets trade Kevin Durant to the Suns at the deadline",
+      "origin": "retrospective",
+      "teams": [
+        "bkn",
+        "phx"
+      ]
+    },
+    {
+      "id": "retro-irving-trade",
+      "summary": "Nets trade Kyrie Irving to the Mavericks",
+      "origin": "retrospective",
+      "teams": [
+        "bkn",
+        "dal"
+      ]
+    },
+    {
+      "id": "retro-westbrook-trade",
+      "summary": "Lakers trade Russell Westbrook; he is bought out and joins the Clippers",
+      "origin": "retrospective",
+      "teams": [
+        "lal",
+        "uta",
+        "min",
+        "lac"
+      ]
+    },
+    {
+      "id": "retro-kings-drought",
+      "summary": "Kings end the longest playoff drought in NBA history",
+      "origin": "retrospective",
+      "teams": [
+        "sac"
+      ]
+    },
+    {
+      "id": "retro-heat-run",
+      "summary": "Heat become the second No. 8 seed to reach the Finals",
+      "origin": "retrospective",
+      "teams": [
+        "mia"
+      ]
+    },
+    {
+      "id": "retro-udoka-suspension",
+      "summary": "Celtics suspend Ime Udoka for the season; Joe Mazzulla takes over",
+      "origin": "retrospective",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "retro-murray-return",
+      "summary": "Jamal Murray returns from his ACL tear",
+      "origin": "retrospective",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "playoffs-mia",
+      "summary": "Heat survive the play-in as the No. 8 seed, beat the Bucks 4-1, Knicks 4-2 and Celtics 4-3, then lose the Finals to Denver 1-4",
+      "origin": "playoffs",
+      "teams": [
+        "mia"
+      ]
+    },
+    {
+      "id": "playoffs-mil",
+      "summary": "Top-seeded Bucks lose 1-4 to the No. 8 Heat in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "mil"
+      ]
+    },
+    {
+      "id": "playoffs-nyk",
+      "summary": "Knicks beat the Cavaliers 4-1, then lose to the Heat 2-4 in the second round",
+      "origin": "playoffs",
+      "teams": [
+        "nyk"
+      ]
+    },
+    {
+      "id": "playoffs-cle",
+      "summary": "Cavaliers lose 1-4 to the Knicks in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "cle"
+      ]
+    },
+    {
+      "id": "playoffs-bkn",
+      "summary": "Nets are swept 0-4 by the 76ers in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "bkn"
+      ]
+    },
+    {
+      "id": "playoffs-phi",
+      "summary": "76ers sweep the Nets, then lose 3-4 to the Celtics after leading 3-2",
+      "origin": "playoffs",
+      "teams": [
+        "phi"
+      ]
+    },
+    {
+      "id": "playoffs-atl",
+      "summary": "Hawks lose 2-4 to the Celtics in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "atl"
+      ]
+    },
+    {
+      "id": "playoffs-bos",
+      "summary": "Celtics beat the Hawks 4-2 and 76ers 4-3, then lose 3-4 to the Heat in the East finals",
+      "origin": "playoffs",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "playoffs-min",
+      "summary": "Timberwolves win the play-in, then lose 1-4 to the Nuggets",
+      "origin": "playoffs",
+      "teams": [
+        "min"
+      ]
+    },
+    {
+      "id": "playoffs-den",
+      "summary": "Nuggets beat the Timberwolves 4-1, Suns 4-2 and Lakers 4-0, then the Heat 4-1 for the title",
+      "origin": "playoffs",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "playoffs-lac",
+      "summary": "Clippers lose 1-4 to the Suns with Kawhi Leonard and Paul George injured",
+      "origin": "playoffs",
+      "teams": [
+        "lac"
+      ]
+    },
+    {
+      "id": "playoffs-phx",
+      "summary": "Suns beat the Clippers 4-1, then lose 2-4 to the Nuggets",
+      "origin": "playoffs",
+      "teams": [
+        "phx"
+      ]
+    },
+    {
+      "id": "playoffs-gsw",
+      "summary": "Warriors beat the Kings 4-3, then lose 2-4 to the Lakers",
+      "origin": "playoffs",
+      "teams": [
+        "gsw"
+      ]
+    },
+    {
+      "id": "playoffs-sac",
+      "summary": "Kings lose 3-4 to the Warriors in their first playoff series since 2006",
+      "origin": "playoffs",
+      "teams": [
+        "sac"
+      ]
+    },
+    {
+      "id": "playoffs-lal",
+      "summary": "Lakers win the play-in, beat the Grizzlies 4-2 and Warriors 4-2, then are swept by the Nuggets",
+      "origin": "playoffs",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "playoffs-mem",
+      "summary": "No. 2 Grizzlies lose 2-4 to the Lakers in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "mem"
+      ]
+    },
+    {
+      "id": "playoffs-finals",
+      "summary": "Nuggets beat the Heat 4-1 for their first title; Nikola Jokić is Finals MVP",
+      "origin": "playoffs",
+      "teams": [
+        "den",
+        "mia"
+      ]
+    },
+    {
+      "id": "awards-mvp",
+      "summary": "Joel Embiid wins MVP",
+      "origin": "awards",
+      "teams": [
+        "phi"
+      ]
+    },
+    {
+      "id": "awards-dpoy",
+      "summary": "Jaren Jackson Jr. wins Defensive Player of the Year",
+      "origin": "awards",
+      "teams": [
+        "mem"
+      ]
+    },
+    {
+      "id": "awards-mip",
+      "summary": "Lauri Markkanen wins Most Improved Player",
+      "origin": "awards",
+      "teams": [
+        "uta"
+      ]
+    },
+    {
+      "id": "awards-6moy",
+      "summary": "Malcolm Brogdon wins Sixth Man of the Year",
+      "origin": "awards",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "awards-cpoy",
+      "summary": "De'Aaron Fox wins the first Clutch Player of the Year",
+      "origin": "awards",
+      "teams": [
+        "sac"
+      ]
+    },
+    {
+      "id": "awards-roy",
+      "summary": "Paolo Banchero wins Rookie of the Year",
+      "origin": "awards",
+      "teams": [
+        "orl"
+      ]
+    },
+    {
+      "id": "awards-coy",
+      "summary": "Mike Brown wins Coach of the Year unanimously",
+      "origin": "awards",
+      "teams": [
+        "sac"
+      ]
+    },
+    {
+      "id": "weekly-bkn",
+      "summary": "Durant trade request, Nash out, Kyrie Irving suspension",
+      "origin": "weekly",
+      "teams": [
+        "bkn"
+      ],
+      "weeks": [
+        4
+      ]
+    },
+    {
+      "id": "weekly-mem",
+      "summary": "Ja Morant gun-video suspensions",
+      "origin": "weekly",
+      "teams": [
+        "mem"
+      ],
+      "weeks": [
+        23
+      ]
+    },
+    {
+      "id": "weekly-phx",
+      "summary": "Sarver sale and Mat Ishbia takeover",
+      "origin": "weekly",
+      "teams": [
+        "phx"
+      ],
+      "weeks": [
+        18
+      ]
+    },
+    {
+      "id": "weekly-cha",
+      "summary": "Miles Bridges arrest, LaMelo Ball ankle injuries, Michael Jordan sale",
+      "origin": "weekly",
+      "teams": [
+        "cha"
+      ],
+      "weeks": [
+        21
+      ]
+    },
+    {
+      "id": "weekly-chi",
+      "summary": "Lonzo Ball setbacks and LaVine-DeRozan tension",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": [
+        11,
+        20
+      ]
+    },
+    {
+      "id": "weekly-cle",
+      "summary": "Best defense in the league and first playoff berth since 2018",
+      "origin": "weekly",
+      "teams": [
+        "cle"
+      ],
+      "weeks": [
+        24,
+        25
+      ]
+    },
+    {
+      "id": "weekly-dal",
+      "summary": "Brunson departure, Luka 60-point triple-double, Kyrie fit, late-season tank",
+      "origin": "weekly",
+      "teams": [
+        "dal"
+      ],
+      "weeks": [
+        12,
+        25
+      ]
+    },
+    {
+      "id": "weekly-det",
+      "summary": "Cade Cunningham shin surgery",
+      "origin": "weekly",
+      "teams": [
+        "det"
+      ],
+      "weeks": [
+        10
+      ]
+    },
+    {
+      "id": "weekly-ind",
+      "summary": "Haliburton breakout and injury, Mathurin, Myles Turner extension",
+      "origin": "weekly",
+      "teams": [
+        "ind"
+      ],
+      "weeks": [
+        3,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "id": "weekly-lac",
+      "summary": "Kawhi Leonard return and Paul George knee injury",
+      "origin": "weekly",
+      "teams": [
+        "lac"
+      ],
+      "weeks": [
+        2,
+        24
+      ]
+    },
+    {
+      "id": "weekly-mil",
+      "summary": "Best record in the NBA",
+      "origin": "weekly",
+      "teams": [
+        "mil"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-nop",
+      "summary": "Zion and McCollum extensions, first place in the West, Zion hamstring injury",
+      "origin": "weekly",
+      "teams": [
+        "nop"
+      ],
+      "weeks": [
+        9,
+        13
+      ]
+    },
+    {
+      "id": "weekly-nyk",
+      "summary": "Jalen Brunson signing",
+      "origin": "weekly",
+      "teams": [
+        "nyk"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-okc",
+      "summary": "Chet Holmgren injury, Shai Gilgeous-Alexander breakout, Jalen Williams",
+      "origin": "weekly",
+      "teams": [
+        "okc"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-orl",
+      "summary": "Banchero debut, Magic-Pistons brawl, December win streak",
+      "origin": "weekly",
+      "teams": [
+        "orl"
+      ],
+      "weeks": [
+        2,
+        10,
+        12
+      ]
+    },
+    {
+      "id": "weekly-phi",
+      "summary": "Harden pay cut and Embiid 59-point game",
+      "origin": "weekly",
+      "teams": [
+        "phi"
+      ],
+      "weeks": [
+        5
+      ]
+    },
+    {
+      "id": "weekly-por",
+      "summary": "Lillard extension and late-season shutdown",
+      "origin": "weekly",
+      "teams": [
+        "por"
+      ],
+      "weeks": [
+        25
+      ]
+    },
+    {
+      "id": "weekly-sas",
+      "summary": "Alamodome attendance record",
+      "origin": "weekly",
+      "teams": [
+        "sas"
+      ],
+      "weeks": [
+        14
+      ]
+    },
+    {
+      "id": "weekly-uta",
+      "summary": "Will Hardy hire and surprising start",
+      "origin": "weekly",
+      "teams": [
+        "uta"
+      ],
+      "weeks": [
+        3
+      ]
+    },
+    {
+      "id": "weekly-was",
+      "summary": "Beal supermax and front-office change",
+      "origin": "weekly",
+      "teams": [
+        "was"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "coaching-changes",
+      "summary": "Coaching carousel: Nash, McMillan, Silas, Casey, Nurse, Budenholzer, Williams and Rivers out; Snyder, Udoka, Griffin, Nurse, Williams and Rajaković hired",
+      "origin": "theme",
+      "teams": [
+        "bkn",
+        "atl",
+        "hou",
+        "det",
+        "tor",
+        "mil",
+        "phx",
+        "phi"
+      ]
+    },
+    {
+      "id": "theme-trade-deadline",
+      "summary": "February trade deadline moves beyond the Durant and Irving deals",
+      "origin": "theme",
+      "teams": [
+        "tor",
+        "sas",
+        "por",
+        "nyk",
+        "hou",
+        "lac",
+        "mem"
+      ]
+    },
+    {
+      "id": "theme-play-in",
+      "summary": "Play-in tournament results",
+      "origin": "theme",
+      "teams": [
+        "lal",
+        "min",
+        "mia",
+        "chi",
+        "tor",
+        "okc",
+        "nop",
+        "atl"
+      ]
+    },
+    {
+      "id": "theme-cba",
+      "summary": "New seven-year collective bargaining agreement with an in-season tournament and 65-game award minimum",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "offseason-2023-trades",
+      "summary": "Pre-draft trades: Beal to Phoenix, Porziņģis to Boston, Chris Paul to Golden State",
+      "origin": "theme",
+      "teams": [
+        "phx",
+        "was",
+        "bos",
+        "mem",
+        "gsw"
+      ]
+    },
+    {
+      "id": "draft-lottery",
+      "summary": "Spurs win the lottery and the right to draft Victor Wembanyama",
+      "origin": "draft",
+      "teams": [
+        "sas",
+        "cha",
+        "por",
+        "hou",
+        "det"
+      ]
+    },
+    {
+      "id": "draft-night",
+      "summary": "2023 draft: Wembanyama, Miller, Henderson, the Thompson twins, Black",
+      "origin": "draft",
+      "teams": [
+        "sas",
+        "cha",
+        "por",
+        "hou",
+        "det",
+        "orl"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "dejounte-murray-traded-to-hawks",
+      "title": "Spurs trade Dejounte Murray to the Hawks",
+      "eventDate": "2022-06-29",
+      "teams": [
+        "atl",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Atlanta Hawks acquire guard Dejounte Murray from San Antonio Spurs for three first-round picks, Danilo Gallinari",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/34169244/sources-atlanta-hawks-acquire-guard-dejounte-murray-san-antonio-spurs-three-1st-round-picks-danilo-gallinari",
+        "publishedAt": "2022-06-29"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-offseason-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jazz-hire-will-hardy",
+      "title": "Jazz hire Will Hardy as the NBA's youngest head coach",
+      "eventDate": "2022-06-29",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz hire Celtics assistant Will Hardy to replace Quin Snyder",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/jazz-hire-celtics-assistant-will-hardy-to-replace-quin-snyder",
+        "publishedAt": "2022-06-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "miles-bridges-arrested",
+      "title": "Miles Bridges arrested on the eve of free agency",
+      "eventDate": "2022-06-29",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Charlotte Hornets' Miles Bridges arrested in Los Angeles on eve of free agency",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/34170624/charlotte-hornets-miles-bridges-arrested-los-angeles-eve-free-agency",
+        "publishedAt": "2022-06-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "nuggets-trade-for-kcp",
+      "title": "Nuggets trade for Kentavious Caldwell-Pope",
+      "eventDate": "2022-06-29",
+      "teams": [
+        "den",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets-Wizards trade: Denver acquires Kentavious Caldwell-Pope, Ish Smith in four-player deal, per report",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/nuggets-wizards-trade-denver-acquires-kentavious-caldwell-pope-ish-smith-in-four-player-deal-per-report/",
+        "publishedAt": "2022-06-29"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-offseason-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "beal-supermax-no-trade",
+      "title": "Bradley Beal re-signs with a supermax and a no-trade clause",
+      "eventDate": "2022-06-30",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Wizards Dropped the Ball on Bradley Beal’s Max Contract",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/07/08/bradley-beal-washington-wizards-contract",
+        "publishedAt": "2022-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "brunson-leaves-for-knicks",
+      "title": "Jalen Brunson leaves the Mavericks for the Knicks",
+      "eventDate": "2022-06-30",
+      "teams": [
+        "dal",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Agents: New York Knicks, Jalen Brunson agree to 4-year, $104M deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/34174978/sources-dallas-mavericks-informed-jalen-brunson-intends-sign-new-york-knicks",
+        "publishedAt": "2022-06-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "durant-requests-trade",
+      "title": "Kevin Durant requests a trade from the Nets",
+      "eventDate": "2022-06-30",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Reports: Kevin Durant requests trade from Nets",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/reports-kevin-durant-requests-trade-from-nets",
+        "publishedAt": "2022-06-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "brogdon-traded-to-celtics",
+      "title": "Pacers trade Malcolm Brogdon to the Celtics",
+      "eventDate": "2022-07-01",
+      "teams": [
+        "bos",
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Boston Celtics acquire Malcolm Brogdon in trade with Indiana Pacers, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/34180437/boston-celtics-acquire-malcolm-brogdon-trade-indiana-pacers-sources-say",
+        "publishedAt": "2022-07-01"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-offseason-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "gobert-traded-to-wolves",
+      "title": "Jazz trade Rudy Gobert to the Timberwolves",
+      "eventDate": "2022-07-01",
+      "teams": [
+        "uta",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Minnesota Timberwolves Acquire Center Rudy Gobert from Utah Jazz",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/timberwolves/news/minnesota-timberwolves-acquire-center-rudy-gobert-from-utah-jazz",
+        "publishedAt": "2022-07-06"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-offseason-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "zion-max-extension",
+      "title": "Zion Williamson signs a max extension with the Pelicans",
+      "eventDate": "2022-07-02",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Zion Williamson Agrees to Five-Year Max Deal With Pelicans, Agent Says",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/07/02/zion-williamson-maximum-contract-pelicans-recovery-injury",
+        "publishedAt": "2022-07-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "harden-pay-cut",
+      "title": "James Harden takes a pay cut to re-sign with the 76ers",
+      "eventDate": "2022-07-08",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "James Harden to Sign Team-Friendly Two-Year Deal With 76ers, per Report",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/07/08/james-harden-team-friendly-two-year-contract-76ers-pay-cut-player-option-report",
+        "publishedAt": "2022-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lillard-extension",
+      "title": "Damian Lillard signs a two-year extension with Portland",
+      "eventDate": "2022-07-08",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Damian Lillard agrees to two-year, $122 million extension with Trail Blazers, per report",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/nba-free-agency-damian-lillard-agrees-to-two-year-122-million-extension-with-trail-blazers-per-report/",
+        "publishedAt": "2022-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-por"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "bill-russell-number-retired",
+      "title": "NBA retires Bill Russell's No. 6 league-wide",
+      "eventDate": "2022-08-11",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "Bill Russell's No. 6 to be retired across NBA following legend's death last month",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/34384678/bill-russell-no-6-retired-nba-following-legend-death-last-month",
+        "publishedAt": "2022-08-11"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-bill-russell"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "chet-holmgren-out-for-season",
+      "title": "Chet Holmgren misses his rookie season with a foot injury",
+      "eventDate": "2022-08-25",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chet Holmgren to Miss 2022–23 Season With Lisfranc Injury, per Report",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/08/25/chet-holmgren-to-miss-2022-23-season-with-lisfranc-injury-per-report",
+        "publishedAt": "2022-08-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mitchell-traded-to-cavs",
+      "title": "Jazz trade Donovan Mitchell to the Cavaliers",
+      "eventDate": "2022-09-01",
+      "teams": [
+        "cle",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cleveland Cavaliers acquire Utah Jazz star Donovan Mitchell in blockbuster trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/34502825/sources-cleveland-cavaliers-trade-3-first-round-picks-two-swaps-utah-jazz-star-donovan-mitchell",
+        "publishedAt": "2022-09-01"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-offseason-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "udoka-suspended",
+      "title": "Celtics suspend Ime Udoka for the season",
+      "eventDate": "2022-09-22",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Boston Celtics suspend coach Ime Udoka for 2022-23 season, effective immediately",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/34646067/boston-celtics-suspend-coach-ime-udoka-2022-23-season-effective-immediately",
+        "publishedAt": "2022-09-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-udoka-suspension"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mccollum-extension",
+      "title": "CJ McCollum signs a two-year extension with the Pelicans",
+      "eventDate": "2022-09-24",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "New Orleans Pelicans, CJ McCollum agree to 2-year, $64 million extension",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/34656014/new-orleans-pelicans-cj-mccollum-agree-2-year-64-million-extension",
+        "publishedAt": "2022-09-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "jamal-murray-returns",
+      "title": "Jamal Murray returns from his ACL tear",
+      "eventDate": "2022-10-03",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ben Simmons, Kawhi Leonard, Jamal Murray make long-awaited returns",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/ben-simmons-kawhi-leonard-jamal-murray-make-long-awaited-returns",
+        "publishedAt": "2022-10-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-murray-return"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "draymond-punches-poole",
+      "title": "Draymond Green punches Jordan Poole at practice",
+      "eventDate": "2022-10-05",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Draymond Green, Jordan Poole Practice Altercation Video Leaked",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/10/07/draymond-green-jordan-poole-practice-fight-punch-video-leaked-golden-state-warriors",
+        "publishedAt": "2022-10-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-warriors-decline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "banchero-historic-debut",
+      "title": "Paolo Banchero's debut is the best by a No. 1 pick since LeBron James",
+      "eventDate": "2022-10-19",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic’s Paolo Banchero Evokes LeBron James in NBA Debut",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/10/20/magic-paolo-banchero-lebron-james-historic-nba-debut",
+        "publishedAt": "2022-10-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kawhi-returns-from-acl",
+      "title": "Kawhi Leonard returns from his ACL tear",
+      "eventDate": "2022-10-20",
+      "teams": [
+        "lac",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kawhi Leonard off bench in LA Clippers' win over Lakers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/34842291/kawhi-leonard-come-bench-la-clippers-opener",
+        "publishedAt": "2022-10-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "jazz-surprising-start",
+      "title": "Jazz open the season with a surprising hot start",
+      "eventDate": "2022-10-26",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Jazz Are Off to a Surprising Start",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/10/26/utah-jazz-surprising-start-jordan-clarkson-lauri-markkanen",
+        "publishedAt": "2022-10-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mathurin-hot-start",
+      "title": "Bennedict Mathurin's hot start as a rookie",
+      "eventDate": "2022-10-28",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bennedict Mathurin’s Hot Start Is No Fluke",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/nba/2022/10/28/23427479/bennedict-mathurin-indiana-pacers-rookie",
+        "publishedAt": "2022-10-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nets-part-ways-with-nash",
+      "title": "Nets part ways with Steve Nash after a 2-5 start",
+      "eventDate": "2022-11-01",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets Part Ways With Steve Nash After 2–5 Start to Season",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/11/01/nets-part-ways-steve-nash-after-2-5-start-to-season",
+        "publishedAt": "2022-11-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kyrie-suspended-antisemitic-film",
+      "title": "Nets suspend Kyrie Irving after he promotes an antisemitic film",
+      "eventDate": "2022-11-03",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets suspend Kyrie Irving for 5 games minimum: 'He is currently unfit to be associated with the Brooklyn Nets'",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/nets-suspend-kyrie-irving-for-5-games-minimum-he-is-currently-unfit-to-be-associated-with-the-brooklyn-nets/",
+        "publishedAt": "2022-11-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "embiid-career-high-59",
+      "title": "Joel Embiid scores a career-high 59 against the Jazz",
+      "eventDate": "2022-11-13",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Joel Embiid Drops Career-High 59 Points in 76ers’ Win Over Jazz",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/11/14/joel-embiid-drops-career-high-59-points-in-76ers-win-over-jazz",
+        "publishedAt": "2022-11-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pelicans-top-the-west",
+      "title": "Pelicans climb to first in the West behind Zion Williamson",
+      "eventDate": "2022-12-11",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans maintain top spot in West after beating Suns again",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35236002/pelicans-maintain-top-spot-west-beating-suns-again",
+        "publishedAt": "2022-12-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cade-cunningham-shin-surgery",
+      "title": "Cade Cunningham's season ends with shin surgery",
+      "eventDate": "2022-12-12",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Pistons' Cade Cunningham to have season-ending surgery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35240547/sources-pistons-cade-cunningham-season-ending-surgery",
+        "publishedAt": "2022-12-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "magic-sweep-celtics-in-boston",
+      "title": "Magic sweep the first-place Celtics in Boston for six straight wins",
+      "eventDate": "2022-12-18",
+      "teams": [
+        "orl",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Make It Six In A Row As Magic Once Again Beat First-Place Celtics",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/magic/news/orlando-magic-boston-celtics-postgame-report-20221218",
+        "publishedAt": "2022-12-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lavine-derozan-team-meetings",
+      "title": "Bulls hold team meetings as the LaVine-DeRozan fit struggles",
+      "eventDate": "2022-12-20",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Zach LaVine had 1-on-1 meeting with DeMar DeRozan as Bulls had halftime blowup in locker room, per reports",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/zach-lavine-not-seeing-eye-to-eye-with-bulls-met-one-on-one-with-demar-derozan-per-report/",
+        "publishedAt": "2022-12-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "luka-60-point-triple-double",
+      "title": "Luka Dončić posts a 60-point triple-double in a comeback over the Knicks",
+      "eventDate": "2022-12-27",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Luka Doncic Records Historic 60-Point Triple-Double in Epic Comeback",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/12/28/luka-doncic-historic-60-point-triple-double-comeback-win",
+        "publishedAt": "2022-12-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "magic-pistons-brawl",
+      "title": "Magic-Pistons brawl leads to 11 suspensions",
+      "eventDate": "2022-12-28",
+      "teams": [
+        "orl",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Slew of Pistons, Magic Players Suspended After Bench-Clearing Scuffle",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2022/12/30/slew-of-pistons-magic-players-suspended-after-bench-clearing-scuffle",
+        "publishedAt": "2022-12-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mitchell-scores-71",
+      "title": "Donovan Mitchell scores 71 against the Bulls",
+      "eventDate": "2023-01-02",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavs' Donovan Mitchell scores franchise-record 71 points in OT win",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35368827/cavs-donovan-mitchell-scores-franchise-record-71-points-ot-win",
+        "publishedAt": "2023-01-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-scoring-boom"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "zion-hamstring-injury",
+      "title": "Zion Williamson's hamstring injury derails the Pelicans' hot start",
+      "eventDate": "2023-01-02",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans Announce Update on Zion Williamson’s Injury Status",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/01/04/new-orleans-pelicans-zion-williamson-hamstring-injury-three-weeks",
+        "publishedAt": "2023-01-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "haliburton-elbow-knee-injury",
+      "title": "Tyrese Haliburton's elbow and knee injuries stall the Pacers",
+      "eventDate": "2023-01-11",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers' Tyrese Haliburton (elbow, knee) out at least 2 weeks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35433591/pacers-tyrese-haliburton-elbow-knee-least-2-weeks",
+        "publishedAt": "2023-01-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-alamodome-attendance-record",
+      "title": "Spurs set an NBA attendance record at the Alamodome",
+      "eventDate": "2023-01-13",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs set NBA attendance record with 68,323 at Alamodome",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35441585/spurs-set-attendance-record-65000-plus-alamodome",
+        "publishedAt": "2023-01-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sas"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "myles-turner-extension",
+      "title": "Myles Turner signs an extension instead of being traded",
+      "eventDate": "2023-01-28",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Myles Turner agrees to two-year contract extension with Pacers",
+        "publisher": "Indy Cornrows",
+        "url": "https://www.indycornrows.com/2023/1/28/23576147/myles-turner-agrees-to-two-year-contract-extension-with-pacers-turner-nba-haliburton",
+        "publishedAt": "2023-01-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "haliburton-first-all-star",
+      "title": "Tyrese Haliburton becomes an All-Star",
+      "eventDate": "2023-02-02",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Why Indiana Pacers guard Tyrese Haliburton is an NBA All-Star in 2023",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/why-indiana-pacers-guard-tyrese-214611161.html",
+        "publishedAt": "2023-02-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "irving-traded-to-mavs",
+      "title": "Nets trade Kyrie Irving to the Mavericks",
+      "eventDate": "2023-02-05",
+      "teams": [
+        "bkn",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets officially trade Kyrie Irving to Mavericks",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/nets-kyrie-irving-trade-dallas-mavericks",
+        "publishedAt": "2023-02-06"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-irving-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "ishbia-takes-over-suns",
+      "title": "Mat Ishbia takes over the Suns from Robert Sarver",
+      "eventDate": "2023-02-07",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "'We're going to win together': Ishbia formally takes over Suns",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35617620/set-think-big-mat-ishbia-welcomed-suns-majority-owner",
+        "publishedAt": "2023-02-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lebron-passes-kareem",
+      "title": "LeBron James becomes the NBA's all-time leading scorer",
+      "eventDate": "2023-02-07",
+      "teams": [
+        "lal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "LeBron James passes Kareem Abdul-Jabbar to become NBA's all-time leading scorer",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/lebron-james-passes-kareem-abdul-jabbar-to-become-nbas-all-time-leading-scorer/",
+        "publishedAt": "2023-02-07"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lebron-record"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "josh-hart-traded-to-knicks",
+      "title": "Blazers trade Josh Hart to the Knicks",
+      "eventDate": "2023-02-08",
+      "teams": [
+        "por",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Knicks to acquire Josh Hart, sending Cam Reddish, others to Blazers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35619409/sources-trail-blazers-sending-josh-hart-knicks-cam-reddish-pick",
+        "publishedAt": "2023-02-08"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "westbrook-traded-three-team",
+      "title": "Lakers trade Russell Westbrook in a three-team deal for D'Angelo Russell",
+      "eventDate": "2023-02-08",
+      "teams": [
+        "lal",
+        "uta",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers land D'Angelo Russell in three-team trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35618590/lakers-finalizing-3-team-trade-dangelo-russell",
+        "publishedAt": "2023-02-09"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-westbrook-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "durant-traded-to-suns",
+      "title": "Nets trade Kevin Durant to the Suns",
+      "eventDate": "2023-02-09",
+      "teams": [
+        "bkn",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns acquire Kevin Durant from Nets in blockbuster deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35620592/phoenix-suns-acquiring-kevin-durant-blockbuster-deal-brooklyn-nets",
+        "publishedAt": "2023-02-09"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-durant-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "gordon-traded-to-clippers",
+      "title": "Rockets trade Eric Gordon to the Clippers in a three-team deal",
+      "eventDate": "2023-02-09",
+      "teams": [
+        "hou",
+        "lac",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers get Eric Gordon, Bones Hyland, Mason Plumlee; send John Wall to Rockets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35623830/sources-clippers-boost-backcourt-eric-gordon-bones-hyland",
+        "publishedAt": "2023-02-09"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "raptors-quiet-deadline",
+      "title": "Raptors keep their core together at the trade deadline",
+      "eventDate": "2023-02-09",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Raptors missed a critical opportunity at trade deadline to retool their stale and expensive roster",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/the-raptors-missed-a-critical-opportunity-at-trade-deadline-to-retool-their-stale-and-expensive-roster/",
+        "publishedAt": "2023-02-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "raptors-trade-for-poeltl",
+      "title": "Raptors reacquire Jakob Poeltl from the Spurs",
+      "eventDate": "2023-02-09",
+      "teams": [
+        "tor",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Toronto Raptors get center Jakob Poeltl in trade with Spurs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35620520/toronto-raptors-get-center-jakob-poeltl-trade-spurs",
+        "publishedAt": "2023-02-09"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "westbrook-signs-with-clippers",
+      "title": "Russell Westbrook joins the Clippers after a buyout",
+      "eventDate": "2023-02-20",
+      "teams": [
+        "lac",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Russell Westbrook to Sign With Clippers After Buyout From Jazz, per Report",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/02/20/russell-westbrook-to-sign-with-clippers-per-report",
+        "publishedAt": "2023-02-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-westbrook-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hawks-fire-mcmillan",
+      "title": "Hawks fire Nate McMillan",
+      "eventDate": "2023-02-21",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks fire McMillan; Snyder in play, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35708090/hawks-fire-coach-nate-mcmillan-sources-say",
+        "publishedAt": "2023-02-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lonzo-ball-out-for-season",
+      "title": "Lonzo Ball ruled out for the season after knee setbacks",
+      "eventDate": "2023-02-21",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lonzo Ball Out for Season, Bulls Announce",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/02/21/lonzo-ball-out-for-season-knee-injury-chicago-bulls-announce-statement",
+        "publishedAt": "2023-02-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hawks-hire-quin-snyder",
+      "title": "Hawks hire Quin Snyder midseason",
+      "eventDate": "2023-02-26",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Quin Snyder gets 5-year deal to coach Hawks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35742035/sources-quin-snyder-gets-5-year-deal-coach-hawks",
+        "publishedAt": "2023-02-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lillard-scores-71",
+      "title": "Damian Lillard scores 71 against the Rockets",
+      "eventDate": "2023-02-26",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Damian Lillard scores career-best 71 points behind 13 3-pointers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35744969/damian-lillard-scores-career-best-71-points-13-3-pointers",
+        "publishedAt": "2023-02-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-scoring-boom"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lamelo-ball-fractured-ankle",
+      "title": "LaMelo Ball's season ends with a fractured ankle",
+      "eventDate": "2023-02-27",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Charlotte Hornets' LaMelo Ball suffers fracture in right ankle",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35750169/charlotte-hornets-lamelo-ball-suffers-fracture-right-ankle",
+        "publishedAt": "2023-02-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "morant-suspended-gun-video",
+      "title": "Ja Morant suspended over a gun video",
+      "eventDate": "2023-03-15",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ja Morant Suspended 8 Games, NBA Says Gun in Video Didn't Belong to Grizzlies Star",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10068147-ja-morant-suspended-8-games-nba-says-gun-in-video-didnt-belong-to-grizzlies-star",
+        "publishedAt": "2023-03-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "paul-george-knee-sprain",
+      "title": "Paul George's knee sprain sidelines him into the playoffs",
+      "eventDate": "2023-03-21",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers' Paul George to Be Reevaluated in 2-3 Weeks After Sprained Knee Injury",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10069734-clippers-paul-george-to-be-reevaluated-in-2-3-weeks-after-sprained-knee-injury",
+        "publishedAt": "2023-03-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cavs-clinch-first-playoffs-since-2018",
+      "title": "Cavaliers clinch their first playoff berth since 2018",
+      "eventDate": "2023-03-26",
+      "teams": [
+        "cle",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavaliers secure first playoff appearance without LeBron James since 1998, and this is only the beginning",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/cavaliers-secure-first-playoff-appearance-without-lebron-james-since-1998-and-this-is-only-the-beginning/",
+        "publishedAt": "2023-03-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "luka-kyrie-struggles",
+      "title": "Luka-Kyrie pairing struggles as Dallas slides",
+      "eventDate": "2023-03-27",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Luka-Kyrie Disaster May Force the Dallas Mavericks to Tank",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2023/03/27/nba/luka-doncic-kyrie-irving-dallas-mavericks",
+        "publishedAt": "2023-03-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "blazers-shut-down-lillard",
+      "title": "Blazers shut down Damian Lillard for the final stretch",
+      "eventDate": "2023-03-28",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Blazers reportedly shut down Damian Lillard for rest of season",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/blazers-reportedly-shut-down-damian-lillard-for-rest-of-season-205957349.html",
+        "publishedAt": "2023-03-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kings-end-playoff-drought",
+      "title": "Kings end a 16-year playoff drought",
+      "eventDate": "2023-03-29",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings claim 1st playoff berth since '06 with win over Blazers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/35999564/kings-clinch-first-playoff-berth-2006-win-blazers",
+        "publishedAt": "2023-03-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-kings-drought"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mobley-cavs-league-best-defense",
+      "title": "Evan Mobley anchors the league's best defense",
+      "eventDate": "2023-03-29",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Evan Mobley Is Putting It All Together",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2023/03/29/nba/evan-mobley-cleveland-cavaliers",
+        "publishedAt": "2023-03-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "new-cba-agreement",
+      "title": "NBA and players agree to a new seven-year CBA",
+      "eventDate": "2023-04-01",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "NBA, NBPA reach tentative deal for new 7-year collective bargaining agreement",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/nba-and-nbpa-reach-tentative-deal-on-new-collective-bargaining-agreement",
+        "publishedAt": "2023-04-01"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-cba"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-clinch-best-record",
+      "title": "Bucks clinch the NBA's best record",
+      "eventDate": "2023-04-05",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks clinch NBA's best record: 'Game 7s at home are gonna be big' for Milwaukee",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/bucks-clinch-nbas-best-record-game-7s-at-home-are-gonna-be-big-for-milwaukee/",
+        "publishedAt": "2023-04-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavericks-miss-postseason",
+      "title": "Mavericks miss the postseason after going all-in on Kyrie Irving",
+      "eventDate": "2023-04-07",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavericks eliminated from NBA playoffs, completing collapse after going all-in with Kyrie Irving",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/mavericks-eliminated-from-nba-playoffs-completing-collapse-after-going-all-in-with-kyrie-irving-025105269.html",
+        "publishedAt": "2023-04-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "casey-steps-down-pistons",
+      "title": "Dwane Casey steps down as Pistons coach after a league-worst season",
+      "eventDate": "2023-04-09",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons’ Dwane Casey Steps Down As Head Coach, to Join Front Office",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/04/09/pistons-dwane-casey-front-office-stepping-down-head-coach",
+        "publishedAt": "2023-04-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "league-offensive-record",
+      "title": "League sets a record for offensive efficiency",
+      "eventDate": "2023-04-09",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "10 numbers to know from the 2022-23 season",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/10-numbers-to-know-from-2022-23",
+        "publishedAt": "2023-06-15"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-scoring-boom"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "rockets-move-on-from-silas",
+      "title": "Rockets move on from Stephen Silas after a 22-60 season",
+      "eventDate": "2023-04-09",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Houston Rockets announce Stephen Silas is out as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/36135539/sources-stephen-silas-return-rockets-coach",
+        "publishedAt": "2023-04-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-win-play-in-over-wolves",
+      "title": "Lakers beat the Timberwolves in overtime to claim the No. 7 seed",
+      "eventDate": "2023-04-11",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers outlast Timberwolves in OT to claim 7-seed in West",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/36165916/lakers-outlast-timberwolves-ot-claim-7-seed-west",
+        "publishedAt": "2023-04-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "raptors-play-in-collapse",
+      "title": "Raptors blow a 19-point lead to the Bulls in the play-in",
+      "eventDate": "2023-04-12",
+      "teams": [
+        "tor",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors Season Ends With Free Throw Line Misery vs Bulls",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/raptors/news/toronto-raptors-fail-at-free-throw-line-in-play-in-collapse-to-chicago-bulls",
+        "publishedAt": "2023-04-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-knock-out-pelicans-play-in",
+      "title": "Thunder knock the Pelicans out of the play-in",
+      "eventDate": "2023-04-12",
+      "teams": [
+        "okc",
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder vs. Pelicans score, takeaways: Shai Gilgeous-Alexander leads OKC to upset victory in play-in game",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/thunder-vs-pelicans-score-takeaways-shai-gilgeous-alexander-leads-okc-to-upset-victory-in-play-in-game/live/",
+        "publishedAt": "2023-04-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-beat-bulls-play-in",
+      "title": "Heat end the Bulls' season in the play-in",
+      "eventDate": "2023-04-14",
+      "teams": [
+        "chi",
+        "mia",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Playoff Picture 2023: Final East Bracket After Heat Beat Bulls",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10072454-nba-playoff-picture-2023-final-east-bracket-after-heat-beat-bulls",
+        "publishedAt": "2023-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavericks-fined-for-tanking",
+      "title": "Mavericks fined $750,000 for resting players with the season on the line",
+      "eventDate": "2023-04-14",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavericks hit with $750K fine for resting players in key game",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/36188127/mavericks-hit-750k-fine-resting-players-key-game",
+        "publishedAt": "2023-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wolves-beat-thunder-for-8-seed",
+      "title": "Timberwolves beat the Thunder for the No. 8 seed",
+      "eventDate": "2023-04-14",
+      "teams": [
+        "min",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Towns, Gobert Dominate to Lead Timberwolves to No. 8 Seed",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/04/15/timberwolves-thunder-towns-gobert-no-8-seed",
+        "publishedAt": "2023-04-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "giannis-back-injury-game-1",
+      "title": "Giannis Antetokounmpo hurts his back in Game 1 against Miami",
+      "eventDate": "2023-04-16",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks Reveal Giannis Antetokounmpo’s Game 1 Status After Frightening Fall vs. Heat",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/04/16/giannis-antetokounmpo-out-bucks-heat-game-fall-lower-back",
+        "publishedAt": "2023-04-16"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "herro-breaks-hand",
+      "title": "Tyler Herro breaks his hand in Game 1 against Milwaukee",
+      "eventDate": "2023-04-16",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat’s Tyler Herro undergoing surgery, likely out until NBA Finals",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/heats-tyler-herro-undergoing-surgery-likely-out-until-nba-finals",
+        "publishedAt": "2023-04-17"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-mia"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "draymond-suspended-sabonis-stomp",
+      "title": "Draymond Green suspended for stomping on Domantas Sabonis",
+      "eventDate": "2023-04-18",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Did Draymond Green Stomp the Final Nail Into the Warriors’ Coffin?",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/nba/2023/4/19/23689316/draymond-green-suspensions-domantas-sabonis-playoffs",
+        "publishedAt": "2023-04-19"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-gsw",
+        "playoffs-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "fox-wins-clutch-player",
+      "title": "De'Aaron Fox wins the first Clutch Player of the Year award",
+      "eventDate": "2023-04-18",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings' De'Aaron Fox wins Clutch Player of the Year award",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/kings-deaaron-fox-wins-clutch-player-of-the-year-award/",
+        "publishedAt": "2023-04-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-cpoy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jaren-jackson-wins-dpoy",
+      "title": "Jaren Jackson Jr. wins Defensive Player of the Year",
+      "eventDate": "2023-04-19",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies' Jaren Jackson Jr. Named 2022-23 NBA Defensive Player of the Year",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10069555-grizzlies-jaren-jackson-jr-named-2022-23-nba-defensive-player-of-the-year",
+        "publishedAt": "2023-04-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-dpoy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mike-brown-unanimous-coy",
+      "title": "Mike Brown named unanimous Coach of the Year",
+      "eventDate": "2023-04-19",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings' Mike Brown named NBA's Coach of the Year",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/36238949/kings-mike-brown-named-nba-coach-year",
+        "publishedAt": "2023-04-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-coy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wizards-fire-sheppard",
+      "title": "Wizards fire GM Tommy Sheppard after another missed postseason",
+      "eventDate": "2023-04-19",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards fire GM Tommy Sheppard after missing playoffs again",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/36239070/wizards-fire-gm-tommy-sheppard-missing-playoffs-again",
+        "publishedAt": "2023-04-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "brogdon-wins-sixth-man",
+      "title": "Malcolm Brogdon wins Sixth Man of the Year",
+      "eventDate": "2023-04-20",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics’ Brogdon Becomes Second Player Ever to Win Sixth Man, Rookie of the Year",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/04/21/celtics-malcolm-brogdon-becomes-second-player-ever-win-sixth-man-rookie",
+        "publishedAt": "2023-04-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-6moy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "raptors-fire-nick-nurse",
+      "title": "Raptors fire Nick Nurse after a play-in exit",
+      "eventDate": "2023-04-21",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nick Nurse out as Raptors coach; Ime Udoka to be candidate, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/36253230/nick-nurse-raptors-coach-sources-say",
+        "publishedAt": "2023-04-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sixers-sweep-nets",
+      "title": "76ers sweep the Nets without Joel Embiid",
+      "eventDate": "2023-04-22",
+      "teams": [
+        "phi",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Without Joel Embiid, 76ers push Nets around in sweep: 'We got a bunch of guys that aren't scared of the fight'",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/without-joel-embiid-76ers-push-nets-around-in-sweep-we-got-a-bunch-of-guys-that-arent-scared-of-the-fight/",
+        "publishedAt": "2023-04-22"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-phi",
+        "playoffs-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "markkanen-wins-mip",
+      "title": "Lauri Markkanen wins Most Improved Player",
+      "eventDate": "2023-04-24",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz's Lauri Markkanen wins NBA's Most Improved Player award",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/jazzs-lauri-markkanen-wins-nbas-most-improved-player-award/",
+        "publishedAt": "2023-04-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-mip"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "rockets-hire-udoka",
+      "title": "Rockets replace Stephen Silas with Ime Udoka",
+      "eventDate": "2023-04-24",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Reports: Rockets hire former Celtics coach Ime Udoka as new head coach",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/reports-rockets-hire-former-celtics-coach-ime-udoka-as-new-head-coach",
+        "publishedAt": "2023-04-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "banchero-wins-roy",
+      "title": "Paolo Banchero wins Rookie of the Year",
+      "eventDate": "2023-04-25",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic's Paolo Banchero wins NBA Rookie of the Year award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/36291363/magic-paolo-banchero-wins-nba-rookie-year-award",
+        "publishedAt": "2023-04-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-roy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "booker-47-eliminates-clippers",
+      "title": "Devin Booker's 47 sends the Suns past the injured Clippers",
+      "eventDate": "2023-04-25",
+      "teams": [
+        "phx",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Suns survive starless Clippers in closeout game thanks to Devin Booker's 47 points",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba-playoffs-suns-survive-starless-clippers-in-closeout-game-thanks-to-devin-bookers-47-points-044042586.html",
+        "publishedAt": "2023-04-26"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-phx",
+        "playoffs-lac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nuggets-eliminate-wolves",
+      "title": "Nuggets eliminate the Timberwolves in five games",
+      "eventDate": "2023-04-25",
+      "teams": [
+        "den",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Nuggets Eliminate Wolves in Tense Game 5",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/04/26/nuggets-eliminate-wolves-game-5",
+        "publishedAt": "2023-04-26"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-den",
+        "playoffs-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "trae-young-game-5-dagger",
+      "title": "Trae Young's dagger extends the Hawks' series in Boston",
+      "eventDate": "2023-04-25",
+      "teams": [
+        "atl",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks-Celtics: Trae Young, an imperfect player built perfectly for big stage, stuns Boston with game-winner",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/hawks-celtics-trae-young-an-imperfect-player-built-perfectly-for-big-stage-stuns-boston-with-game-winner/live/",
+        "publishedAt": "2023-04-25"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-upset-bucks",
+      "title": "No. 8 Heat eliminate the top-seeded Bucks",
+      "eventDate": "2023-04-26",
+      "teams": [
+        "mia",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jimmy Butler, Heat eliminate top-seeded Bucks in OT stunner",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/36300795/jimmy-butler-heat-stun-bucks-ot-oust-top-seeded-milwaukee",
+        "publishedAt": "2023-04-26"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-mia",
+        "playoffs-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-oust-cavs",
+      "title": "Knicks beat the Cavaliers for their first series win since 2013",
+      "eventDate": "2023-04-26",
+      "teams": [
+        "nyk",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks Down Cavaliers in Cleveland, Clinch First Playoff Series Victory Since 2013",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/04/27/knicks-down-cavaliers-cleveland-clinch-first-playoff-series-victory-since-2013",
+        "publishedAt": "2023-04-27"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-nyk",
+        "playoffs-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "celtics-eliminate-hawks",
+      "title": "Celtics eliminate the Hawks in six games",
+      "eventDate": "2023-04-27",
+      "teams": [
+        "bos",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Celtics survive wild Game 6, eliminate Hawks",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba-playoffs-boston-celtics-survive-wild-game-6-eliminate-atlanta-hawks-025940979.html",
+        "publishedAt": "2023-04-28"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-bos",
+        "playoffs-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-rout-grizzlies-game-6",
+      "title": "Lakers knock out the No. 2 Grizzlies with a 40-point Game 6 rout",
+      "eventDate": "2023-04-28",
+      "teams": [
+        "lal",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Lakers look more dangerous as ever after finishing off Grizzlies in Game 6",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba-playoffs-lakers-look-more-dangerous-than-ever-finishing-off-grizzlies-in-game-6-050744431.html",
+        "publishedAt": "2023-04-29"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-lal",
+        "playoffs-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "curry-50-game-7-kings",
+      "title": "Stephen Curry's Game 7-record 50 eliminates the Kings",
+      "eventDate": "2023-04-30",
+      "teams": [
+        "gsw",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Steph Curry's 50 points in Game 7 saved the Warriors",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/05/01/warriors-kings-steph-curry-dynasty-save-playoffs",
+        "publishedAt": "2023-05-01"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-gsw",
+        "playoffs-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "embiid-wins-mvp",
+      "title": "Joel Embiid wins his first MVP",
+      "eventDate": "2023-05-02",
+      "teams": [
+        "phi"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Philadelphia 76ers center Joel Embiid wins first MVP",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37058151/philadelphia-76ers-center-joel-embiid-wins-first-mvp",
+        "publishedAt": "2023-05-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-mvp"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-fire-budenholzer",
+      "title": "Bucks fire Mike Budenholzer after the first-round upset",
+      "eventDate": "2023-05-04",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks Fire Coach Mike Budenholzer After Playoff Collapse",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/05/04/bucks-fire-coach-mike-budenholzer-playoff-collapse-report",
+        "publishedAt": "2023-05-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jalen-williams-all-rookie",
+      "title": "Jalen Williams makes the All-Rookie First Team",
+      "eventDate": "2023-05-08",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jalen Williams Named to All-Rookie First Team",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/thunder/news/release-allrookie-230508",
+        "publishedAt": "2023-05-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sga-first-team-all-nba",
+      "title": "Shai Gilgeous-Alexander makes All-NBA First Team",
+      "eventDate": "2023-05-10",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Shai Gilgeous-Alexander Shares Message After Making All-NBA First Team",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/05/11/shai-gilgeous-alexander-shares-message-after-making-all-nba-first-team",
+        "publishedAt": "2023-05-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nuggets-rout-suns-game-6",
+      "title": "Nuggets rout the Suns in Game 6 to reach the West finals",
+      "eventDate": "2023-05-11",
+      "teams": [
+        "den",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets advance to Western Conference finals, focused on 'winning a championship'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37607597/nikola-jokic-nuggets-rout-suns-advance-western-conference-finals",
+        "publishedAt": "2023-05-11"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-den",
+        "playoffs-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-eliminate-knicks",
+      "title": "Heat eliminate the Knicks in six games",
+      "eventDate": "2023-05-12",
+      "teams": [
+        "mia",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Heat become 2nd No. 8 seed ever to reach conference finals, eliminate Knicks",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba-playoffs-heat-become-2nd-no-8-seed-ever-to-reach-conference-finals-eliminate-knicks-022010527.html",
+        "publishedAt": "2023-05-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-mia",
+        "playoffs-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-eliminate-warriors",
+      "title": "Lakers eliminate the defending champion Warriors",
+      "eventDate": "2023-05-12",
+      "teams": [
+        "lal",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers Overwhelm Warriors in Game 6 to Reach Conference Finals",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/05/13/lebron-james-lakers-warriors-game-6-conference-semifinals",
+        "publishedAt": "2023-05-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-lal",
+        "playoffs-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "suns-fire-monty-williams",
+      "title": "Suns fire Monty Williams",
+      "eventDate": "2023-05-13",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Phoenix Suns fire coach Monty Williams after four seasons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37644346/sources-suns-dismiss-coach-monty-williams-4-seasons",
+        "publishedAt": "2023-05-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "tatum-51-game-7-sixers",
+      "title": "Jayson Tatum scores a Game 7-record 51 to knock out the 76ers",
+      "eventDate": "2023-05-14",
+      "teams": [
+        "bos",
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jayson Tatum Sets Game 7 Scoring Record in Celtics’ Blowout Win",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/05/14/jayson-tatum-sets-game-7-scoring-record-celtics-blowout-win-sixers",
+        "publishedAt": "2023-05-14"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-bos",
+        "playoffs-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sixers-fire-doc-rivers",
+      "title": "76ers fire Doc Rivers after the Game 7 loss",
+      "eventDate": "2023-05-16",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "76ers fire coach Doc Rivers after three seasons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37661620/sources-76ers-fire-coach-doc-rivers-three-seasons",
+        "publishedAt": "2023-05-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-win-wembanyama-lottery",
+      "title": "Spurs win the lottery and the right to draft Victor Wembanyama",
+      "eventDate": "2023-05-16",
+      "teams": [
+        "sas",
+        "cha",
+        "por",
+        "det",
+        "hou"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Spurs win lottery, right to draft Wembanyama on 'incredible day'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37665449/san-antonio-spurs-win-nba-draft-lottery-right-draft-victor-wembanyama",
+        "publishedAt": "2023-05-16"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-lottery"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nuggets-sweep-lakers",
+      "title": "Nuggets sweep the Lakers to reach their first Finals",
+      "eventDate": "2023-05-22",
+      "teams": [
+        "den",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets sweep Lakers, will make first NBA Finals appearance",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37710989/nuggets-finish-sweep-lakers-secure-first-ever-nba-finals-appearance",
+        "publishedAt": "2023-05-22"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-den",
+        "playoffs-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-hire-adrian-griffin",
+      "title": "Bucks hire Adrian Griffin to replace Mike Budenholzer",
+      "eventDate": "2023-05-27",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks hiring Raptors' Adrian Griffin as coach, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37741554/bucks-planning-hire-raptors-adrian-griffin-sources-say",
+        "publishedAt": "2023-05-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-win-game-7-in-boston",
+      "title": "Heat beat the Celtics in Game 7 to reach the Finals as a No. 8 seed",
+      "eventDate": "2023-05-29",
+      "teams": [
+        "mia",
+        "bos"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Heat stomp Celtics in G7, become second No. 8 seed to make Finals",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37757464/heat-stomp-celtics-game-7-carry-dream-run-nba-finals",
+        "publishedAt": "2023-05-29"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-mia",
+        "playoffs-bos",
+        "retro-heat-run"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sixers-hire-nick-nurse",
+      "title": "76ers replace Doc Rivers with Nick Nurse",
+      "eventDate": "2023-05-29",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Philadelphia 76ers to hire Nick Nurse as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37755448/sources-philadelphia-76ers-hire-nick-nurse-head-coach",
+        "publishedAt": "2023-05-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pistons-hire-monty-williams",
+      "title": "Pistons hire Monty Williams on a record contract",
+      "eventDate": "2023-05-31",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Monty Williams to coach Pistons on record 6-year, $78.5M deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37770616/monty-williams-coach-pistons-agrees-record-6-year-785m-deal",
+        "publishedAt": "2023-05-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "raptors-hire-rajakovic",
+      "title": "Raptors hire Darko Rajaković to replace Nick Nurse",
+      "eventDate": "2023-06-10",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors Set to Hire Grizzlies Assistant Darko Rajakovic as Head Coach, per Report",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/06/10/toronto-raptors-hire-darko-rajakovic-head-coach-report",
+        "publishedAt": "2023-06-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jokic-finals-mvp",
+      "title": "Nikola Jokić named Finals MVP after a record postseason",
+      "eventDate": "2023-06-12",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nikola Jokic Named 2023 NBA Finals MVP After Record-Shattering Postseason Leads Nuggets to First Title",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/06/13/nikola-jokic-2023-nba-finals-mvp-nuggets-heat",
+        "publishedAt": "2023-06-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-finals"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nuggets-win-first-title",
+      "title": "Nuggets win their first NBA title",
+      "eventDate": "2023-06-12",
+      "teams": [
+        "den",
+        "mia"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Nuggets edge Heat in Game 5 to secure their 1st NBA title",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/denver-nuggets-edge-miami-heat-for-1st-nba-championship-in-franchise-history",
+        "publishedAt": "2023-06-12"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-finals"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jordan-sells-hornets",
+      "title": "Michael Jordan agrees to sell the Hornets",
+      "eventDate": "2023-06-16",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Michael Jordan agrees to sell Hornets stake for $3B",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37863644/sources-michael-jordan-finalizing-charlotte-hornets-sale",
+        "publishedAt": "2023-06-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "morant-suspended-25-games",
+      "title": "NBA suspends Ja Morant 25 games after a second gun video",
+      "eventDate": "2023-06-16",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ja Morant suspended 25 games by NBA for latest gun incident; NBPA decries 'excessive and inappropriate' punishment",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/ja-morant-nba-suspended-25-games-latest-gun-incident-190447191.html",
+        "publishedAt": "2023-06-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "beal-traded-to-suns",
+      "title": "Wizards trade Bradley Beal to the Suns for Chris Paul",
+      "eventDate": "2023-06-18",
+      "teams": [
+        "phx",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Suns finalizing trade for Wizards' Bradley Beal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37873714/sources-suns-finalizing-trade-wizards-bradley-beal",
+        "publishedAt": "2023-06-18"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "offseason-2023-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "porzingis-to-celtics-smart-to-grizzlies",
+      "title": "Celtics land Kristaps Porziņģis as Marcus Smart goes to Memphis",
+      "eventDate": "2023-06-21",
+      "teams": [
+        "bos",
+        "mem",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies acquiring Marcus Smart in 3-team deal involving Kristaps Porzingis, Tyus Jones, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37896379/grizzlies-acquire-marcus-smart-celtics-3-team-deal-involving-kristaps-porzingis-tyus-jones-sources-say",
+        "publishedAt": "2023-06-22"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "offseason-2023-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hornets-pick-brandon-miller",
+      "title": "Hornets take Brandon Miller No. 2 over Scoot Henderson",
+      "eventDate": "2023-06-22",
+      "teams": [
+        "cha",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2023 NBA Draft winners and losers: Spurs pick Victor Wembanyama, Hornets pass on Scoot Henderson",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/2023-nba-draft-winners-and-losers-spurs-pick-victor-wembanyama-hornets-pass-on-scoot-henderson/",
+        "publishedAt": "2023-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-night"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "magic-draft-black-howard",
+      "title": "Magic draft Anthony Black and Jett Howard in the lottery",
+      "eventDate": "2023-06-22",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic select Anthony Black, Jett Howard in 2023 NBA draft",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/magic-select-anthony-black-jett-012200955.html",
+        "publishedAt": "2023-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-night"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "poole-traded-for-chris-paul",
+      "title": "Warriors trade Jordan Poole to the Wizards for Chris Paul",
+      "eventDate": "2023-06-22",
+      "teams": [
+        "gsw",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards Trading Chris Paul to Warriors for Deal That Includes Jordan Poole, per Report",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2023/06/22/wizards-trading-chris-paul-warriors-deal-jordan-poole",
+        "publishedAt": "2023-06-22"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "offseason-2023-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-draft-wembanyama",
+      "title": "Spurs draft Victor Wembanyama No. 1",
+      "eventDate": "2023-06-22",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs take phenom Victor Wembanyama with No. 1 pick in NBA draft",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/37901592/spurs-take-phenom-victor-wembanyama-no-1-overall-pick-nba-draft",
+        "publishedAt": "2023-06-22"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-night"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "thompson-twins-top-five",
+      "title": "Rockets and Pistons draft the Thompson twins at Nos. 4 and 5",
+      "eventDate": "2023-06-22",
+      "teams": [
+        "hou",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2023 NBA Draft: Amen, Ausar Thompson become first brothers selected in the top 10 of the same draft",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/2023-nba-draft-amen-ausar-thompson-become-first-brothers-selected-in-the-top-10-of-the-same-draft-015417522.html",
+        "publishedAt": "2023-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-night"
+      ],
+      "status": "included"
+    }
+  ]
+}
