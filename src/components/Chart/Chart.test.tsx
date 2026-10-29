@@ -285,7 +285,7 @@ describe('User Story 3 — inspect and follow a team', () => {
     const { container } = render(chart())
     expect(container.querySelectorAll('circle').length).toBe(0)
 
-    fireEvent.mouseEnter(hitPath(container, 2))
+    fireEvent.pointerEnter(hitPath(container, 2))
 
     expect(linePath(container, MIAMI)).toHaveAttribute('stroke-width', '3')
     expect(linePath(container, BOSTON)).toHaveAttribute('opacity', '0.25')
@@ -295,17 +295,27 @@ describe('User Story 3 — inspect and follow a team', () => {
     expect(screen.getByText('Miami Heat')).toHaveAttribute('font-weight', '700')
   })
 
+  it('ignores touch hovers so a tap reaches the click handler', () => {
+    const onClick = vi.fn()
+    const { container } = render(chart({ onClick }))
+    fireEvent.pointerEnter(hitPath(container, 2), { pointerType: 'touch' })
+    expect(linePath(container, MIAMI)).toHaveAttribute('stroke-width', '1.5')
+
+    fireEvent.click(hitPath(container, 2))
+    expect(onClick).toHaveBeenCalledWith(Team.Miami)
+  })
+
   it('highlights a team when its label is hovered', () => {
     const { container } = render(chart())
-    fireEvent.mouseEnter(screen.getByText('Miami Heat'))
+    fireEvent.pointerEnter(screen.getByText('Miami Heat'))
     expect(linePath(container, MIAMI)).toHaveAttribute('stroke-width', '3')
   })
 
   it('shows rank, full team name, record, summary and week in the tooltip', () => {
     const { container } = render(chart())
-    fireEvent.mouseEnter(hitPath(container, 2))
+    fireEvent.pointerEnter(hitPath(container, 2))
     const dots = container.querySelectorAll(`circle[fill="${MIAMI}"]`)
-    fireEvent.mouseEnter(dots[2])
+    fireEvent.pointerEnter(dots[2])
 
     expect(screen.getByText('#10 Miami Heat (2-0)')).toBeInTheDocument()
     expect(screen.getByText('Week 3 summary')).toBeInTheDocument()
@@ -316,8 +326,8 @@ describe('User Story 3 — inspect and follow a team', () => {
     const restore = mockReducedMotion(true)
     try {
       const { container, rerender } = render(chart())
-      fireEvent.mouseEnter(hitPath(container, 2))
-      fireEvent.mouseEnter(container.querySelector(`circle[fill="${MIAMI}"]`)!)
+      fireEvent.pointerEnter(hitPath(container, 2))
+      fireEvent.pointerEnter(container.querySelector(`circle[fill="${MIAMI}"]`)!)
       expect(screen.getByText('Week 1 summary')).toBeInTheDocument()
 
       rerender(chart({ startWeek: 1, endWeek: 25 }))
@@ -336,7 +346,7 @@ describe('User Story 3 — inspect and follow a team', () => {
       'dimmed'
     )
 
-    fireEvent.mouseEnter(hitPath(container, 0))
+    fireEvent.pointerEnter(hitPath(container, 0))
 
     expect(linePath(container, MIAMI)).toHaveAttribute('stroke-width', '3')
     expect(linePath(container, BOSTON)).toHaveAttribute('stroke-width', '1.5')
@@ -384,7 +394,7 @@ describe('Pinned team layering', () => {
 
   it("shows the pinned team's tooltip from a node drawn on top", () => {
     const { container } = render(chart({ pinnedTeams: [Team.Boston] }))
-    fireEvent.mouseEnter(
+    fireEvent.pointerEnter(
       container.querySelectorAll(`circle[fill="${BOSTON}"]`)[0]
     )
     expect(screen.getByText('#1 Boston Celtics (0-0)')).toBeInTheDocument()
@@ -395,7 +405,7 @@ describe('Pinned team layering', () => {
 describe('Tooltip placement', () => {
   const openTooltip = (container: HTMLElement, index: number) => {
     const dots = container.querySelectorAll(`circle[fill="${BOSTON}"]`)
-    fireEvent.mouseEnter(dots[index < 0 ? dots.length + index : index])
+    fireEvent.pointerEnter(dots[index < 0 ? dots.length + index : index])
     return screen.getByText(/^Week \d+$/).closest('div') as HTMLElement
   }
 

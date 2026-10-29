@@ -1,6 +1,11 @@
 import type { Margin, Team, TeamRankings } from 'types'
 import { interpolate, type ChartTransitionState } from './useChartTransition'
-import { firstRankingInRange, getYforRank, PLAYOFF_MEDALS } from './utils'
+import {
+  firstRankingInRange,
+  getYforRank,
+  PLAYOFF_MEDALS,
+  unlessTouch,
+} from './utils'
 import { getTeamLogoUrl } from 'components/teamLogos'
 
 const LOGO_SIZE = 22
@@ -58,7 +63,7 @@ export default function TeamLabels(props: TeamLabelsProps) {
           width={LOGO_SIZE}
           height={LOGO_SIZE}
           opacity={anyActive && !active ? 0.35 : 1}
-          onMouseEnter={() => props.onHover(team.teamId)}
+          onPointerEnter={unlessTouch(() => props.onHover(team.teamId))}
           onClick={(e) => {
             e.stopPropagation()
             props.onClick(team.teamId)
@@ -78,7 +83,7 @@ export default function TeamLabels(props: TeamLabelsProps) {
         textAnchor="end"
         dominantBaseline="middle"
         fontWeight={active ? 700 : 400}
-        onMouseEnter={() => props.onHover(team.teamId)}
+        onPointerEnter={unlessTouch(() => props.onHover(team.teamId))}
         onClick={(e) => {
           e.stopPropagation()
           props.onClick(team.teamId)

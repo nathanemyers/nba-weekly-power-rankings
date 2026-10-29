@@ -1,4 +1,10 @@
+import type { PointerEvent } from 'react'
 import { type Margin, PlayoffStage, Teams, type WeekRanking } from 'types'
+
+// iOS cancels a tap's click when a hover handler changes the page, so hover only follows mouse and pen
+export const unlessTouch = (onHover: () => void) => (e: PointerEvent) => {
+  if (e.pointerType !== 'touch') onHover()
+}
 
 export const PLAYOFF_MEDALS: Record<
   PlayoffStage,

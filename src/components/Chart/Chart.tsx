@@ -3,7 +3,7 @@ import { cn } from 'cn'
 import { type Margin, type Team, type TeamRankings } from 'types'
 import TeamLabels from './TeamLabels'
 import { useChartTransition } from './useChartTransition'
-import { getYforRank, PLAYOFF_MEDALS } from './utils'
+import { getYforRank, PLAYOFF_MEDALS, unlessTouch } from './utils'
 import { findLast, max, range, sortBy } from 'lodash'
 
 const PLAYOFFS_WEEK = 24
@@ -227,12 +227,12 @@ export default function RankingsChart(props: ChartProps) {
                     stroke="transparent"
                     strokeWidth={14}
                     className="cursor-pointer"
-                    onMouseEnter={() =>
+                    onPointerEnter={unlessTouch(() =>
                       setHover((h) => ({
                         teamId: team.teamId,
                         week: h?.teamId === team.teamId ? h.week : undefined,
                       }))
-                    }
+                    )}
                     onClick={(e) => {
                       e.stopPropagation()
                       props.onClick(team.teamId)
@@ -250,9 +250,9 @@ export default function RankingsChart(props: ChartProps) {
                           fill={team.color}
                           strokeWidth={1.5}
                           className="cursor-pointer stroke-background"
-                          onMouseEnter={() =>
+                          onPointerEnter={unlessTouch(() =>
                             setHover({ teamId: team.teamId, week: r.week })
-                          }
+                          )}
                           onClick={(e) => {
                             e.stopPropagation()
                             setHover({ teamId: team.teamId, week: r.week })
