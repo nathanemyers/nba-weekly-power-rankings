@@ -65,7 +65,6 @@ function ChartBody() {
           )}
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2 md:justify-end">
-          {singlePinnedTeam && <TeamHistoryButton team={singlePinnedTeam} />}
           {pinnedTeams.length > 0 && <ChartFilterClearButton />}
           <ChartFilter />
         </div>
@@ -83,7 +82,8 @@ function ChartBody() {
           pinnedTeams={pinnedTeams}
           onClick={togglePin}
         />
-        <div className="flex justify-center">
+        <div className="flex items-center justify-between gap-3">
+          <TeamHistoryButton team={singlePinnedTeam} />
           <ChartControls />
         </div>
         <div className="mt-6">
