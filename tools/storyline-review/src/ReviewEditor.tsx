@@ -4,12 +4,15 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select'
 import CandidateRow from './CandidateRow'
+import FindMore from './FindMore'
 import TeamCoverage, { type TeamFilter } from './TeamCoverage'
 import {
+  findMore,
   isSeasonStoryline,
   KINDS,
   saveReview,
   type Candidate,
+  type MoreResult,
   type ReviewState,
 } from './types'
 
@@ -44,6 +47,8 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
   const [status, setStatus] = useState('')
   const [kind, setKind] = useState('')
   const [search, setSearch] = useState('')
+  const [finding, setFinding] = useState(props.initial.running)
+  const [moreResult, setMoreResult] = useState<MoreResult>()
 
   useEffect(() => {
     if (!dirty) return
@@ -65,10 +70,38 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
       setReview(saved)
       setRaw(saved.raw)
       setDirty(false)
+      return true
     } catch (error) {
       setSaveError(String(error))
+      return false
     } finally {
       setSaving(false)
+    }
+  }
+
+  // Saves first so the agent sees current decisions, then keeps any edits made while it ran
+  const findMoreFor = async (section: string) => {
+    if (dirty && !(await save())) return
+    setFinding(section)
+    setMoreResult(undefined)
+    try {
+      const result = await findMore(raw.season, section)
+      setReview(result)
+      setRaw((current) => {
+        const ids = current.candidates.map((c) => c.id)
+        return {
+          ...result.raw,
+          candidates: [
+            ...current.candidates,
+            ...result.raw.candidates.filter((c) => !ids.includes(c.id)),
+          ],
+        }
+      })
+      setMoreResult(result.more)
+    } catch (error) {
+      setMoreResult({ section, added: [], error: String(error) })
+    } finally {
+      setFinding(null)
     }
   }
 
@@ -102,7 +135,7 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
         </span>
         <Button
           onClick={save}
-          disabled={!dirty || saving}
+          disabled={!dirty || saving || finding !== null}
           className="cursor-pointer"
         >
           {saving ? 'Saving…' : 'Save'}
@@ -121,6 +154,13 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
       )}
 
       {saveError && <p className="text-sm text-destructive">{saveError}</p>}
+
+      {props.initial.running && finding === props.initial.running && (
+        <p className="text-sm text-muted-foreground">
+          A search for {props.initial.running} was already running when this
+          page loaded. Reload once it finishes to see its candidates.
+        </p>
+      )}
 
       {(otherFailures.length > 0 || review.failures.length > 0) && (
         <section aria-label="Validation" className="text-sm">
@@ -157,6 +197,15 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
       </section>
 
       <section aria-label="Candidates" className="flex flex-col gap-3">
+        {team && (
+          <FindMore
+            section={team}
+            label={team === 'season' ? 'season storylines' : team.toUpperCase()}
+            finding={finding}
+            result={moreResult}
+            onFind={findMoreFor}
+          />
+        )}
         <div className="flex flex-wrap items-center gap-2">
           <h2 className="font-semibold">
             {visible.length} of {raw.candidates.length} candidates

@@ -34,6 +34,16 @@ export type ReviewState = {
   finalized: boolean
   failures: string[]
   finalizeFailures: string[]
+  running: string | null
+}
+
+// Outcome of a headless `/season-storylines <season> more <section>` run
+export type MoreResult = {
+  section: string
+  added: string[]
+  summary?: string
+  costUsd?: number
+  error?: string
 }
 
 export const KINDS: CandidateKind[] = [
@@ -69,3 +79,14 @@ export const saveReview = (raw: RawStorylines) =>
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(raw),
   }).then(readResponse)
+
+export const findMore = (season: string, section: string) =>
+  fetch(`${endpoint(season)}/more`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ section }),
+  }).then(
+    readResponse as (
+      response: Response
+    ) => Promise<ReviewState & { more: MoreResult }>
+  )

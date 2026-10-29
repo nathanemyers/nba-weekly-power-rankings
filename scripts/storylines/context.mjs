@@ -4,7 +4,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const here = dirname(fileURLToPath(import.meta.url))
-const root = join(here, '..', '..')
+export const root = join(here, '..', '..')
 const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'))
 
 export const seasonPaths = (season) => ({

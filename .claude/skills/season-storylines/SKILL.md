@@ -1,7 +1,7 @@
 ---
 name: 'season-storylines'
-description: 'Find, review, and finalize curated storyline articles for a completed NBA season. Phases: discover (search approved sources for candidates), review (maintainer picks candidates in batches), finalize (write the static list), revise (deliberately change a finalized list).'
-argument-hint: '<season, e.g. 2024-25> [discover|review|finalize|revise]'
+description: 'Find, review, and finalize curated storyline articles for a completed NBA season. Phases: discover (search approved sources for candidates), more (find extra candidates for one team or the season storylines), review (maintainer picks candidates in batches), finalize (write the static list), revise (deliberately change a finalized list).'
+argument-hint: '<season, e.g. 2024-25> [discover|more <team|season>|review|finalize|revise]'
 user-invocable: true
 ---
 
@@ -20,6 +20,7 @@ inclusion decision. Spec: `specs/007-season-storylines/spec.md`. File shapes:
 | `scripts/storylines/draft-dates.json`     | Draft dates that bound each season                                                          |
 | `data/raw/storylines/<season>.json`       | Guidance topics and candidates with review status. The only file this skill edits directly  |
 | `data/processed/storylines/<season>.json` | Finalized list. Written only by `npm run check:storylines -- <season> --finalize`           |
+| `data/raw/storylines/<season>.additions.json` | `more` only: new topics and candidates, merged by `node scripts/storylines/add.mjs <season>` |
 
 ## Rules
 
@@ -36,7 +37,7 @@ inclusion decision. Spec: `specs/007-season-storylines/spec.md`. File shapes:
 
 ## Choosing the phase
 
-Parse `$ARGUMENTS` as `<season> [phase]`. With no phase: `discover` if there is no raw file,
+Parse `$ARGUMENTS` as `<season> [phase] [section]` (`section` is only for `more`). With no phase: `discover` if there is no raw file,
 `review` if any candidate is `pending`, otherwise `finalize`.
 
 Before any phase, stop and tell the maintainer if:
@@ -91,6 +92,33 @@ lottery and draft after the Finals belong to the season that just ended. A candi
    any playoff team still without a `playoffs` candidate. Then open the review tool for the
    season (see **Review tool** below).
 
+## more
+
+`more <team|season>` finds extra candidates for one section: a team code, or `season` for the
+season storylines. The review tool's "Find more" button runs it headless with
+`claude -p "/season-storylines <season> more <section>"`, so nobody is there to answer questions:
+do not ask any, make the reasonable choice, and say what you chose in the final summary.
+
+1. Run `node scripts/storylines/section.mjs <season> <section>`. It prints the window, approved
+   domains, the section's existing candidates (with status) and guidance topics, and for a team its
+   playoff run, award codes, and weekly blurbs. Do not read the whole season or raw file.
+2. Pick 3–6 storylines the section does not cover yet: events in the blurbs, playoff run, awards,
+   offseason and draft-week moves inside the window, or, for `season`, league-wide stories from a
+   retrospective search. Excluded candidates are the maintainer's "no": do not re-add that story
+   under a new URL.
+3. Search and choose articles exactly as in `discover` steps 2–4 (approved domains only, check
+   dates, skip recaps and previews), skipping URLs already listed.
+4. Write `data/raw/storylines/<season>.additions.json` as
+   `{ "guidance": [GuidanceTopic], "candidates": [Candidate] }`, giving every new storyline its
+   own new guidance topic (or an existing topic ID). Then run
+   `node scripts/storylines/add.mjs <season>`. It appends them as `pending`, sorted by event date,
+   and refuses the whole batch if any entry fails the checks; fix or drop the failures and rerun.
+   Never edit existing candidates or topics.
+5. Run `npm run check:storylines -- <season>`. End with a short summary: one line per added
+   candidate (title, publisher), and any storyline you searched for but could not source.
+
+If the season is already finalized, this still only changes the raw file; say so in the summary.
+
 ## review
 
 ### Review tool
@@ -126,6 +154,7 @@ the decisions to the raw file, run the check, and report how many candidates are
 In either mode, the maintainer can ask for more searches on a topic during review; add the
 results as new pending candidates (in the same batch for chat review). In the review tool, first
 make sure the maintainer has saved, then tell them to reload the page to see the new candidates.
+The tool's "Find more" button does this itself for one section by running `more`.
 
 ## finalize
 

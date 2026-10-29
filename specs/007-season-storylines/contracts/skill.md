@@ -14,6 +14,7 @@ Location: `.claude/skills/season-storylines/SKILL.md`. Maintainer-invoked only
 | Phase | Reads | Writes | Must not |
 |---|---|---|---|
 | `discover` | processed season file, raw candidates file (if any), sources, draft dates | raw candidates file (adds guidance + pending candidates; dedupes by URL) | write to `data/processed/`; search domains outside `sources.json` |
+| `more <team\|season>` | section summary from `scripts/storylines/section.mjs`, sources, draft dates | additions file merged by `scripts/storylines/add.mjs` (new pending candidates and topics only) | edit existing candidates; ask questions (it runs headless from the review tool) |
 | `review` | raw candidates file | raw candidates file (status, title, teams, featured, kind edits) | change anything without the maintainer's decision |
 | `finalize` | raw candidates file | `data/processed/storylines/<season>.json` via `check:storylines --finalize`, then runs `npm run build:rankings` | write the processed file itself; overwrite an existing one |
 | `revise` | processed file, raw candidates file | processed file via `check:storylines --finalize --revise`, only after the maintainer explicitly confirms | run discovery implicitly |
@@ -47,3 +48,8 @@ Chat review is the fallback when the maintainer asks for it or the tool cannot s
 a time, season storylines first, then each team alphabetically, playoff teams' playoff-run
 candidates flagged. Each batch is a table of title, headline, publisher, event date, teams,
 featured; the maintainer replies with include/exclude/edit per row.
+
+Selecting a section in the review tool shows a "Find more" button. It saves pending edits, then the
+dev server runs `claude -p "/season-storylines <season> more <section>"` with a tool allowlist
+(search, read, the additions file, `section.mjs`, `add.mjs`, `check:storylines`) and a
+`--max-budget-usd` cap, and merges the new pending candidates into the page.
