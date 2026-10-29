@@ -8,7 +8,8 @@ import { getPinnedTeams, setPinnedTeams } from '@/store/slices/chart'
 import { Team } from 'types'
 
 vi.mock('data/seasons', async () => {
-  const { buildRankings, ROSTERS } = await import('test/fixtures')
+  const { buildRankings, PLAYOFFS, ROSTERS, STORYLINES } =
+    await import('test/fixtures')
   const { mockSeasonModule } = await import('test/mockSeasons')
   return mockSeasonModule({
     long: {
@@ -21,6 +22,14 @@ vi.mock('data/seasons', async () => {
         mia: 'Miami hovered at tenth.',
       },
       rosters: ROSTERS,
+    },
+    storied: {
+      season: 'storied',
+      source: 'nba',
+      maxWeek: 8,
+      rankings: buildRankings(8),
+      playoffs: PLAYOFFS,
+      storylines: STORYLINES,
     },
     bare: {
       season: 'bare',
@@ -66,6 +75,7 @@ describe('DetailTabs', () => {
       'Trends',
       'Roster',
       'Awards',
+      'Storylines',
     ])
     expect(enabledTabs()).toEqual(['Trends', 'Awards'])
     expect(selectedTab()).toBe('Awards')
@@ -74,6 +84,7 @@ describe('DetailTabs', () => {
   it('opens on Roster when the pinned team has a roster', async () => {
     await renderTabs([Team.Boston])
     expect(enabledTabs()).toEqual(['Summary', 'Trends', 'Roster', 'Awards'])
+    expect(enabledTabs()).not.toContain('Storylines')
     expect(selectedTab()).toBe('Roster')
   })
 
@@ -97,6 +108,23 @@ describe('DetailTabs', () => {
     await user.click(screen.getByRole('tab', { name: 'Roster' }))
     pin(store, [])
     expect(selectedTab()).toBe('Awards')
+  })
+
+  it('opens on Storylines when the season has storylines and nothing is pinned', async () => {
+    await renderTabs([], 'storied')
+    expect(enabledTabs()).toContain('Storylines')
+    expect(selectedTab()).toBe('Storylines')
+  })
+
+  it('offers Summary for a pinned team with storylines but no AI summary', async () => {
+    await renderTabs([Team.Miami], 'storied')
+    expect(enabledTabs()).toContain('Summary')
+    expect(selectedTab()).toBe('Summary')
+    expect(
+      within(screen.getByRole('tabpanel')).getByRole('link', {
+        name: 'miami-slump headline',
+      })
+    ).toBeInTheDocument()
   })
 
   it('renders nothing when no tab has content', async () => {

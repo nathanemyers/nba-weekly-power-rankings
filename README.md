@@ -29,3 +29,15 @@ npm run build:rankings
 `build:rankings` then rebuilds the app data under `data/processed/seasons/`, including the summaries. Neither step runs during deploy, so commit the results.
 
 Raw data lives in one folder per source. `npm run scrape:powerRankings` fills `data/raw/nba/` from NBA.com, `npm run scrape:playoffs` fills `data/raw/basketball-reference/`, and `npm run scrape:espnPowerRankings` fills `data/raw/espn/` with ESPN's 2003-04 to 2015-16 rankings. `scrape:playoffs` also stores each series' score, which the playoff series badges show, and re-fetches any saved season that doesn't have scores yet. `npm run scrape:rosters` fills `data/raw/basketball-reference/rosters/` with each season's regular-season player stats and head coaches for the roster pane; it skips saved seasons, `-- --season 2025-26` re-fetches one season, and `-- --force` re-fetches all of them.
+
+## Storylines
+
+Completed seasons can have curated storylines: links to articles about each team's season, plus featured league-wide storylines that show in the Storylines tab. They are gathered with the `season-storylines` Claude Code skill, which the maintainer runs by hand (never in CI):
+
+```text
+/season-storylines 2024-25 discover   # search approved sources, save candidates
+/season-storylines 2024-25 review     # include or exclude candidates in batches
+/season-storylines 2024-25 finalize   # write the static list and rebuild the season
+```
+
+Candidates live in `data/raw/storylines/<season>.json` and the finalized list in `data/processed/storylines/<season>.json`, which `build:rankings` merges into the season file. `npm run check:storylines -- <season>` checks candidates against the approved sources in `scripts/storylines/sources.json`, the season's draft-to-draft window in `scripts/storylines/draft-dates.json`, and the team rules; with `--finalize` it also requires a playoff storyline for every playoff team and refuses to overwrite a finalized season unless `--revise` is passed.

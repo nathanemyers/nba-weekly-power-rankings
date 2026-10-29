@@ -1,8 +1,16 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { omit } from 'lodash'
-import { buildRankings, COACHES, PLAYOFFS, ROSTERS } from 'test/fixtures'
+import {
+  buildRankings,
+  COACHES,
+  PLAYOFFS,
+  ROSTERS,
+  STORYLINES,
+} from 'test/fixtures'
 import { Team } from 'types'
 import {
+  getSeasonStorylines,
+  getTeamStorylines,
   loadAllSeasons,
   loadSeason,
   parseSeason,
@@ -178,5 +186,50 @@ describe('loadAllSeasons', () => {
     expect(errorSpy).toHaveBeenCalledWith(
       expect.objectContaining({ message: 'offline' })
     )
+  })
+})
+
+describe('storylines', () => {
+  const ids = (storylines: { id: string }[]) => storylines.map((s) => s.id)
+  const withStorylines = (storylines: unknown) =>
+    parseSeason('s', { ...valid(), storylines })
+
+  it('lists season storylines in date order', () => {
+    expect(ids(getSeasonStorylines(withStorylines(STORYLINES)))).toEqual([
+      'big-trade',
+      'league-record',
+      'title-run',
+    ])
+  })
+
+  it("lists a team's storylines in date order", () => {
+    const season = withStorylines(STORYLINES)
+    expect(ids(getTeamStorylines(season, Team.Miami))).toEqual([
+      'miami-slump',
+      'big-trade',
+    ])
+    expect(getTeamStorylines(season, Team.Detroit)).toEqual([])
+    expect(getTeamStorylines(season, undefined)).toEqual([])
+  })
+
+  it('has none for a season that is not completed', () => {
+    const season = parseSeason('s', {
+      ...omit(valid(), 'playoffs'),
+      storylines: STORYLINES,
+    })
+    expect(getSeasonStorylines(season)).toEqual([])
+    expect(getTeamStorylines(season, Team.Boston)).toEqual([])
+  })
+
+  it('has none when the season has no storylines', () => {
+    expect(getSeasonStorylines(parseSeason('s', valid()))).toEqual([])
+  })
+
+  it('drops invalid storylines and keeps the season', () => {
+    const season = withStorylines([
+      { ...STORYLINES[0], teams: [], featured: false },
+    ])
+    expect(season.teams.length).toBeGreaterThan(0)
+    expect(getSeasonStorylines(season)).toEqual([])
   })
 })

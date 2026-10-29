@@ -1,3 +1,4 @@
+import type { Storyline } from 'schemas/season'
 import {
   PlayoffStage,
   Team,
@@ -125,3 +126,16 @@ export function mockReducedMotion(reduce: boolean) {
     window.matchMedia = original
   }
 }
+
+const storyline = (id: string, eventDate: string, teams: Team[], featured: boolean): Storyline => ({
+  id, title: `${id} title`, eventDate, teams, featured,
+  article: { headline: `${id} headline`, publisher: 'ESPN', url: `https://www.espn.com/nba/story/${id}`, publishedAt: eventDate },
+})
+
+// Out of date order; the trade involves Boston and Miami and is also a season storyline
+export const STORYLINES: Storyline[] = [
+  storyline('title-run', '2008-06-17', [Team.Boston], true),
+  storyline('big-trade', '2008-02-01', [Team.Boston, Team.Miami], true),
+  storyline('miami-slump', '2007-12-01', [Team.Miami], false),
+  storyline('league-record', '2008-03-01', [], true),
+]

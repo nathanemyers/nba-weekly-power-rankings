@@ -1,0 +1,84 @@
+{
+  "season": "2024-25",
+  "finalizedAt": "2026-10-29",
+  "storylines": [
+    {
+      "id": "cavaliers-15-0-start",
+      "title": "Cavaliers open 15-0",
+      "eventDate": "2024-11-17",
+      "teams": ["cle"],
+      "featured": false,
+      "article": {
+        "headline": "Cavaliers top Hornets, tie 2nd-best start to NBA season (15-0)",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/42455250/cavaliers-beat-hornets-tie-second-best-start-season-nba-history",
+        "publishedAt": "2024-11-17"
+      }
+    },
+    {
+      "id": "bucks-win-nba-cup",
+      "title": "Bucks win the NBA Cup",
+      "eventDate": "2024-12-17",
+      "teams": ["mil", "okc"],
+      "featured": true,
+      "article": {
+        "headline": "Giannis Antetokounmpo carries red-hot Bucks to NBA Cup title",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=43033645",
+        "publishedAt": "2024-12-17"
+      }
+    },
+    {
+      "id": "doncic-trade-lakers",
+      "title": "Dončić traded to the Lakers",
+      "eventDate": "2025-02-02",
+      "teams": ["dal", "lal", "uta"],
+      "featured": true,
+      "article": {
+        "headline": "Luka Doncic to Lakers, Anthony Davis to Mavs in 3-team trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43659380/sources-mavericks-trading-doncic-lakers-anthony-davis",
+        "publishedAt": "2025-02-02"
+      }
+    },
+    {
+      "id": "mavericks-win-lottery",
+      "title": "Mavericks win the lottery at 1.8% odds",
+      "eventDate": "2025-05-12",
+      "teams": ["dal"],
+      "featured": true,
+      "article": {
+        "headline": "Mavericks win NBA draft lottery with 1.8% odds",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45117355/mavericks-win-nba-draft-lottery-18-odds",
+        "publishedAt": "2025-05-12"
+      }
+    },
+    {
+      "id": "pacers-reach-finals",
+      "title": "Pacers reach their first Finals in 25 years",
+      "eventDate": "2025-05-31",
+      "teams": ["ind", "nyk"],
+      "featured": false,
+      "article": {
+        "headline": "Pacers race past Knicks to reach first NBA Finals in 25 years",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45413751/pacers-race-knicks-reach-first-nba-finals-25-years",
+        "publishedAt": "2025-05-31"
+      }
+    },
+    {
+      "id": "thunder-win-title",
+      "title": "Thunder win their first title",
+      "eventDate": "2025-06-22",
+      "teams": ["okc", "ind"],
+      "featured": true,
+      "article": {
+        "headline": "Shai Gilgeous-Alexander wins NBA Finals MVP, completing season not seen since Shaquille O'Neal, Michael Jordan",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/shai-gilgeous-alexander-wins-nba-finals-mvp-completing-season-not-seen-since-shaquille-oneal-michael-jordan/",
+        "publishedAt": "2025-06-22"
+      }
+    }
+  ]
+}

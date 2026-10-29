@@ -1,0 +1,13 @@
+{
+  "excludePaths": ["/recap", "/boxscore", "/game/", "/watch/"],
+  "publishers": [
+    { "publisher": "ESPN", "domains": ["espn.com"], "excludePaths": [] },
+    { "publisher": "NBA.com", "domains": ["nba.com"], "excludePaths": [] },
+    { "publisher": "The Ringer", "domains": ["theringer.com"], "excludePaths": [] },
+    { "publisher": "CBS Sports", "domains": ["cbssports.com"], "excludePaths": ["/fantasy/"] },
+    { "publisher": "Sports Illustrated", "domains": ["si.com"], "excludePaths": ["/onsi/", "/betting/"] },
+    { "publisher": "Bleacher Report", "domains": ["bleacherreport.com"], "excludePaths": [] },
+    { "publisher": "Yahoo Sports", "domains": ["sports.yahoo.com"], "excludePaths": [] },
+    { "publisher": "Indy Cornrows", "domains": ["indycornrows.com"], "excludePaths": [] }
+  ]
+}

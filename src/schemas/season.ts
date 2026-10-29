@@ -57,6 +57,28 @@ export const CoachStintSchema = z.object({
   l: z.int().min(0),
 })
 
+const IsoDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/)
+
+// One curated storyline, as written by scripts/storylines/validate.mjs --finalize
+export const StorylineSchema = z
+  .object({
+    id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/),
+    title: z.string().min(1),
+    eventDate: IsoDateSchema,
+    teams: z.array(z.enum(Team)),
+    featured: z.boolean(),
+    article: z.object({
+      headline: z.string().min(1),
+      publisher: z.string().min(1),
+      url: z.url({ protocol: /^https$/ }),
+      publishedAt: IsoDateSchema,
+    }),
+  })
+  .refine((storyline) => storyline.teams.length > 0 || storyline.featured, {
+    message:
+      'Every storyline must have at least one team or be a season storyline',
+  })
+
 // Output of scripts/build-rankings.mjs, one file per season
 export const SeasonDataSchema = z.object({
   season: z.string().min(1),
@@ -70,6 +92,8 @@ export const SeasonDataSchema = z.object({
     .optional(),
   rosters: z.partialRecord(z.enum(Team), z.array(RosterEntrySchema)).optional(),
   coaches: z.partialRecord(z.enum(Team), z.array(CoachStintSchema)).optional(),
+  // Bad storyline data drops the storylines rather than failing the whole season
+  storylines: z.array(StorylineSchema).optional().catch(undefined),
 })
 
 // One entry of the generated season list in data/processed/seasons/index.ts
@@ -84,4 +108,5 @@ export type SeasonData = z.infer<typeof SeasonDataSchema>
 export type SeriesResult = z.infer<typeof SeriesResultSchema>
 export type RosterEntry = z.infer<typeof RosterEntrySchema>
 export type CoachStint = z.infer<typeof CoachStintSchema>
+export type Storyline = z.infer<typeof StorylineSchema>
 export type SeasonIndexEntry = z.infer<typeof SeasonIndexEntrySchema>

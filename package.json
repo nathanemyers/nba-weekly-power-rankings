@@ -7,6 +7,7 @@
     "dev": "vite",
     "build:rankings": "node scripts/build-rankings.mjs",
     "build:summaries": "node scripts/build-summaries.mjs",
+    "check:storylines": "node scripts/storylines/validate.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
