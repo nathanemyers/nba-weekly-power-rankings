@@ -1,0 +1,3353 @@
+{
+  "season": "2025-26",
+  "updatedAt": "2026-10-29",
+  "guidance": [
+    {
+      "id": "retro-knicks-double",
+      "summary": "Knicks win the NBA Cup and the title, the league's first double",
+      "origin": "retrospective",
+      "teams": [
+        "nyk"
+      ]
+    },
+    {
+      "id": "retro-finals-game-4",
+      "summary": "Knicks' record 29-point comeback in Finals Game 4",
+      "origin": "retrospective",
+      "teams": [
+        "nyk",
+        "sas"
+      ]
+    },
+    {
+      "id": "retro-wembanyama-breakout",
+      "summary": "Wembanyama's breakout: unanimous DPOY and a Finals run",
+      "origin": "retrospective",
+      "teams": [
+        "sas"
+      ]
+    },
+    {
+      "id": "retro-gambling-arrests",
+      "summary": "Billups and Rozier arrested in federal gambling cases",
+      "origin": "retrospective",
+      "teams": [
+        "por",
+        "mia"
+      ]
+    },
+    {
+      "id": "retro-adebayo-83",
+      "summary": "Bam Adebayo scores 83 against the Wizards",
+      "origin": "retrospective",
+      "teams": [
+        "mia",
+        "was"
+      ]
+    },
+    {
+      "id": "retro-sga-20-point-streak",
+      "summary": "Gilgeous-Alexander passes Wilt's 126 straight 20-point games",
+      "origin": "retrospective",
+      "teams": [
+        "okc"
+      ]
+    },
+    {
+      "id": "retro-jokic-triple-double",
+      "summary": "Jokić leads the league in rebounds and assists",
+      "origin": "retrospective",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "retro-flagg-knueppel",
+      "summary": "Flagg and Knueppel's rookie race",
+      "origin": "retrospective",
+      "teams": [
+        "dal",
+        "cha"
+      ]
+    },
+    {
+      "id": "retro-tanking",
+      "summary": "Tanking epidemic and the new lottery structure",
+      "origin": "retrospective",
+      "teams": []
+    },
+    {
+      "id": "retro-media-deal",
+      "summary": "First season of the NBC/Amazon/Disney media deal",
+      "origin": "retrospective",
+      "teams": []
+    },
+    {
+      "id": "retro-clippers-investigation",
+      "summary": "NBA investigation into Clippers cap circumvention (Aspiration)",
+      "origin": "retrospective",
+      "teams": [
+        "lac"
+      ]
+    },
+    {
+      "id": "retro-pistons-rise",
+      "summary": "Pistons win 60 games and the East's top seed",
+      "origin": "retrospective",
+      "teams": [
+        "det"
+      ]
+    },
+    {
+      "id": "retro-hornets-turnaround",
+      "summary": "Hornets' turnaround from 19 wins",
+      "origin": "retrospective",
+      "teams": [
+        "cha"
+      ]
+    },
+    {
+      "id": "retro-clippers-turnaround",
+      "summary": "Clippers go from 6-21 to a winning record",
+      "origin": "retrospective",
+      "teams": [
+        "lac"
+      ]
+    },
+    {
+      "id": "retro-celtics-without-tatum",
+      "summary": "Celtics take the No. 2 seed while Tatum recovers",
+      "origin": "retrospective",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "retro-lebron-records",
+      "summary": "LeBron's record 23rd season and career milestones",
+      "origin": "retrospective",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "retro-doncic-scoring-title",
+      "summary": "Dončić wins the scoring title",
+      "origin": "retrospective",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "retro-giannis-trade",
+      "summary": "Bucks trade Giannis to the Heat on the eve of the draft",
+      "origin": "retrospective",
+      "teams": [
+        "mil",
+        "mia"
+      ]
+    },
+    {
+      "id": "playoffs-finals",
+      "summary": "Finals: Knicks beat the Spurs 4-1",
+      "origin": "playoffs",
+      "teams": [
+        "nyk",
+        "sas"
+      ]
+    },
+    {
+      "id": "playoffs-nyk",
+      "summary": "Knicks: beat ATL 4-2 (after trailing 2-1), swept PHI and CLE, won the Finals",
+      "origin": "playoffs",
+      "teams": [
+        "nyk",
+        "atl",
+        "phi",
+        "cle",
+        "sas"
+      ]
+    },
+    {
+      "id": "playoffs-sas",
+      "summary": "Spurs: beat POR 4-1, MIN 4-2, OKC 4-3; lost the Finals",
+      "origin": "playoffs",
+      "teams": [
+        "sas",
+        "por",
+        "min",
+        "okc",
+        "nyk"
+      ]
+    },
+    {
+      "id": "playoffs-okc",
+      "summary": "Thunder: swept PHX and LAL, lost to SAS in 7 in the conference finals",
+      "origin": "playoffs",
+      "teams": [
+        "okc",
+        "phx",
+        "lal",
+        "sas"
+      ]
+    },
+    {
+      "id": "playoffs-cle",
+      "summary": "Cavaliers: beat TOR and DET in 7, swept by NYK in the conference finals",
+      "origin": "playoffs",
+      "teams": [
+        "cle",
+        "tor",
+        "det",
+        "nyk"
+      ]
+    },
+    {
+      "id": "playoffs-det",
+      "summary": "Pistons: beat ORL 4-3 from 3-1 down, lost to CLE in 7",
+      "origin": "playoffs",
+      "teams": [
+        "det",
+        "orl",
+        "cle"
+      ]
+    },
+    {
+      "id": "playoffs-phi",
+      "summary": "76ers: beat BOS 4-3 from 3-1 down, swept by NYK",
+      "origin": "playoffs",
+      "teams": [
+        "phi",
+        "bos",
+        "nyk"
+      ]
+    },
+    {
+      "id": "playoffs-lal",
+      "summary": "Lakers: beat HOU 4-2 without Dončić, swept by OKC",
+      "origin": "playoffs",
+      "teams": [
+        "lal",
+        "hou",
+        "okc"
+      ]
+    },
+    {
+      "id": "playoffs-min",
+      "summary": "Timberwolves: beat DEN 4-2 shorthanded, lost to SAS 4-2",
+      "origin": "playoffs",
+      "teams": [
+        "min",
+        "den",
+        "sas"
+      ]
+    },
+    {
+      "id": "playoffs-atl",
+      "summary": "Hawks: lost to NYK 4-2 in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "atl",
+        "nyk"
+      ]
+    },
+    {
+      "id": "playoffs-bos",
+      "summary": "Celtics: lost to PHI 4-3 in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "bos",
+        "phi"
+      ]
+    },
+    {
+      "id": "playoffs-tor",
+      "summary": "Raptors: lost to CLE 4-3 in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "tor",
+        "cle"
+      ]
+    },
+    {
+      "id": "playoffs-orl",
+      "summary": "Magic: lost to DET 4-3 in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "orl",
+        "det"
+      ]
+    },
+    {
+      "id": "playoffs-phx",
+      "summary": "Suns: swept by OKC in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "phx",
+        "okc"
+      ]
+    },
+    {
+      "id": "playoffs-hou",
+      "summary": "Rockets: lost to LAL 4-2 in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "hou",
+        "lal"
+      ]
+    },
+    {
+      "id": "playoffs-den",
+      "summary": "Nuggets: lost to MIN 4-2 in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "den",
+        "min"
+      ]
+    },
+    {
+      "id": "playoffs-por",
+      "summary": "Trail Blazers: lost to SAS 4-1 in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "por",
+        "sas"
+      ]
+    },
+    {
+      "id": "awards-mvp",
+      "summary": "Gilgeous-Alexander wins MVP and Clutch Player of the Year",
+      "origin": "awards",
+      "teams": [
+        "okc"
+      ]
+    },
+    {
+      "id": "awards-dpoy",
+      "summary": "Wembanyama wins Defensive Player of the Year",
+      "origin": "awards",
+      "teams": [
+        "sas"
+      ]
+    },
+    {
+      "id": "awards-roy",
+      "summary": "Cooper Flagg wins Rookie of the Year",
+      "origin": "awards",
+      "teams": [
+        "dal"
+      ]
+    },
+    {
+      "id": "awards-6moy",
+      "summary": "Keldon Johnson wins Sixth Man of the Year",
+      "origin": "awards",
+      "teams": [
+        "sas"
+      ]
+    },
+    {
+      "id": "awards-mip",
+      "summary": "Nickeil Alexander-Walker wins Most Improved Player",
+      "origin": "awards",
+      "teams": [
+        "atl"
+      ]
+    },
+    {
+      "id": "awards-coy",
+      "summary": "Joe Mazzulla wins Coach of the Year",
+      "origin": "awards",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "weekly-atl-trae-trade",
+      "summary": "Hawks trade Trae Young for McCollum and Kispert",
+      "origin": "weekly",
+      "teams": [
+        "atl",
+        "was"
+      ],
+      "weeks": [
+        13
+      ]
+    },
+    {
+      "id": "weekly-atl-kuminga",
+      "summary": "Hawks take a flyer on Jonathan Kuminga at the deadline",
+      "origin": "weekly",
+      "teams": [
+        "atl",
+        "gsw"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-atl-streak",
+      "summary": "Hawks' 11-game winning streak in March",
+      "origin": "weekly",
+      "teams": [
+        "atl"
+      ],
+      "weeks": [
+        22,
+        23
+      ]
+    },
+    {
+      "id": "weekly-bkn-comeback",
+      "summary": "Nets end a 10-game skid with a comeback in Detroit",
+      "origin": "weekly",
+      "teams": [
+        "bkn",
+        "det"
+      ],
+      "weeks": [
+        21
+      ]
+    },
+    {
+      "id": "weekly-bos-tatum",
+      "summary": "Tatum returns after a 10-month absence",
+      "origin": "weekly",
+      "teams": [
+        "bos"
+      ],
+      "weeks": [
+        19,
+        21
+      ]
+    },
+    {
+      "id": "weekly-cha-streak",
+      "summary": "Hornets' nine-game winning streak and turnaround",
+      "origin": "weekly",
+      "teams": [
+        "cha"
+      ],
+      "weeks": [
+        16,
+        17,
+        25
+      ]
+    },
+    {
+      "id": "weekly-chi-deadline",
+      "summary": "Bulls sell Vučević, White, Dosunmu and Huerter at the deadline",
+      "origin": "weekly",
+      "teams": [
+        "chi",
+        "bos",
+        "cha",
+        "min"
+      ],
+      "weeks": [
+        17,
+        25
+      ]
+    },
+    {
+      "id": "weekly-cle-harden",
+      "summary": "Cavs trade Garland for James Harden",
+      "origin": "weekly",
+      "teams": [
+        "cle",
+        "lac"
+      ],
+      "weeks": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "weekly-dal-harrison",
+      "summary": "Mavs fire Nico Harrison",
+      "origin": "weekly",
+      "teams": [
+        "dal"
+      ],
+      "weeks": [
+        5
+      ]
+    },
+    {
+      "id": "weekly-dal-davis-trade",
+      "summary": "Anthony Davis era in Dallas ends",
+      "origin": "weekly",
+      "teams": [
+        "dal",
+        "was"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-dal-flagg",
+      "summary": "Cooper Flagg's big scoring nights",
+      "origin": "weekly",
+      "teams": [
+        "dal"
+      ],
+      "weeks": [
+        7,
+        16,
+        25
+      ]
+    },
+    {
+      "id": "weekly-den-jokic-injury",
+      "summary": "Jokić's knee injury; Nuggets go 10-6 without him",
+      "origin": "weekly",
+      "teams": [
+        "den"
+      ],
+      "weeks": [
+        12,
+        16
+      ]
+    },
+    {
+      "id": "weekly-det-streak",
+      "summary": "Pistons' 13-game winning streak",
+      "origin": "weekly",
+      "teams": [
+        "det"
+      ],
+      "weeks": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "weekly-det-stewart-suspension",
+      "summary": "Isaiah Stewart's seven-game suspension",
+      "origin": "weekly",
+      "teams": [
+        "det"
+      ],
+      "weeks": [
+        19
+      ]
+    },
+    {
+      "id": "weekly-det-cunningham-lung",
+      "summary": "Cade Cunningham's collapsed lung",
+      "origin": "weekly",
+      "teams": [
+        "det"
+      ],
+      "weeks": [
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "id": "weekly-gsw-butler",
+      "summary": "Jimmy Butler's season-ending ACL tear",
+      "origin": "weekly",
+      "teams": [
+        "gsw"
+      ],
+      "weeks": [
+        15
+      ]
+    },
+    {
+      "id": "weekly-ind-carlisle",
+      "summary": "Rick Carlisle stuck on 999 wins, then reaches 1,000",
+      "origin": "weekly",
+      "teams": [
+        "ind"
+      ],
+      "weeks": [
+        10,
+        12,
+        13
+      ]
+    },
+    {
+      "id": "weekly-ind-zubac",
+      "summary": "Pacers trade for Ivica Zubac",
+      "origin": "weekly",
+      "teams": [
+        "ind",
+        "lac"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-lac-chris-paul",
+      "summary": "Clippers send Chris Paul home",
+      "origin": "weekly",
+      "teams": [
+        "lac"
+      ],
+      "weeks": [
+        8
+      ]
+    },
+    {
+      "id": "weekly-lac-turnaround",
+      "summary": "Clippers' turnaround from 6-21",
+      "origin": "weekly",
+      "teams": [
+        "lac"
+      ],
+      "weeks": [
+        11,
+        13,
+        17
+      ]
+    },
+    {
+      "id": "weekly-lal-reaves",
+      "summary": "Austin Reaves' 51 points in Sacramento",
+      "origin": "weekly",
+      "teams": [
+        "lal"
+      ],
+      "weeks": [
+        2
+      ]
+    },
+    {
+      "id": "weekly-lal-lebron",
+      "summary": "LeBron's season debut in Year 23",
+      "origin": "weekly",
+      "teams": [
+        "lal"
+      ],
+      "weeks": [
+        6
+      ]
+    },
+    {
+      "id": "weekly-lal-doncic-injury",
+      "summary": "Dončić and Reaves hurt before the playoffs",
+      "origin": "weekly",
+      "teams": [
+        "lal"
+      ],
+      "weeks": [
+        25
+      ]
+    },
+    {
+      "id": "weekly-mem-morant",
+      "summary": "Ja Morant suspension and trade speculation",
+      "origin": "weekly",
+      "teams": [
+        "mem"
+      ],
+      "weeks": [
+        3,
+        13,
+        14
+      ]
+    },
+    {
+      "id": "weekly-mem-jjj",
+      "summary": "Grizzlies trade Jaren Jackson Jr.",
+      "origin": "weekly",
+      "teams": [
+        "mem",
+        "uta"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-mia-adebayo-83",
+      "summary": "Adebayo's 83-point game",
+      "origin": "weekly",
+      "teams": [
+        "mia"
+      ],
+      "weeks": [
+        22
+      ]
+    },
+    {
+      "id": "weekly-mil-giannis",
+      "summary": "Giannis trade speculation through the deadline",
+      "origin": "weekly",
+      "teams": [
+        "mil"
+      ],
+      "weeks": [
+        8,
+        16,
+        17
+      ]
+    },
+    {
+      "id": "weekly-mil-streak-ends",
+      "summary": "Bucks' nine-year playoff streak ends",
+      "origin": "weekly",
+      "teams": [
+        "mil"
+      ],
+      "weeks": [
+        22,
+        24
+      ]
+    },
+    {
+      "id": "weekly-min-edwards",
+      "summary": "Edwards' career-high 55 in San Antonio",
+      "origin": "weekly",
+      "teams": [
+        "min",
+        "sas"
+      ],
+      "weeks": [
+        14
+      ]
+    },
+    {
+      "id": "weekly-min-dosunmu",
+      "summary": "Wolves trade for Ayo Dosunmu",
+      "origin": "weekly",
+      "teams": [
+        "min",
+        "chi"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-nop-green",
+      "summary": "Pelicans fire Willie Green",
+      "origin": "weekly",
+      "teams": [
+        "nop"
+      ],
+      "weeks": [
+        5
+      ]
+    },
+    {
+      "id": "weekly-nyk-mike-brown",
+      "summary": "Knicks' first season under Mike Brown",
+      "origin": "weekly",
+      "teams": [
+        "nyk"
+      ],
+      "weeks": [
+        2
+      ]
+    },
+    {
+      "id": "weekly-nyk-slump",
+      "summary": "Knicks' 2-9 slump and record 54-point win over the Nets",
+      "origin": "weekly",
+      "teams": [
+        "nyk",
+        "bkn"
+      ],
+      "weeks": [
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "id": "weekly-okc-start",
+      "summary": "Thunder's 24-1 start",
+      "origin": "weekly",
+      "teams": [
+        "okc"
+      ],
+      "weeks": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": "weekly-phi-george",
+      "summary": "Paul George's 25-game suspension",
+      "origin": "weekly",
+      "teams": [
+        "phi"
+      ],
+      "weeks": [
+        16,
+        24
+      ]
+    },
+    {
+      "id": "weekly-por-billups",
+      "summary": "Billups indicted; Tiago Splitter takes over",
+      "origin": "weekly",
+      "teams": [
+        "por"
+      ],
+      "weeks": [
+        2
+      ]
+    },
+    {
+      "id": "weekly-sac-losing-streak",
+      "summary": "Kings' 16-game losing streak",
+      "origin": "weekly",
+      "teams": [
+        "sac"
+      ],
+      "weeks": [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "id": "weekly-sas-thunder-rivalry",
+      "summary": "Spurs win four of five against the Thunder",
+      "origin": "weekly",
+      "teams": [
+        "sas",
+        "okc"
+      ],
+      "weeks": [
+        9,
+        11,
+        17
+      ]
+    },
+    {
+      "id": "weekly-tor-all-stars",
+      "summary": "Raptors' Barnes and Ingram both make the All-Star Game",
+      "origin": "weekly",
+      "teams": [
+        "tor"
+      ],
+      "weeks": [
+        18
+      ]
+    },
+    {
+      "id": "weekly-uta-kessler",
+      "summary": "Walker Kessler's season-ending shoulder surgery",
+      "origin": "weekly",
+      "teams": [
+        "uta"
+      ],
+      "weeks": [
+        4
+      ]
+    },
+    {
+      "id": "weekly-uta-jjj",
+      "summary": "Jazz trade three firsts for Jaren Jackson Jr.",
+      "origin": "weekly",
+      "teams": [
+        "uta",
+        "mem"
+      ],
+      "weeks": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "weekly-was-trae-debut",
+      "summary": "Trae Young debuts for the Wizards",
+      "origin": "weekly",
+      "teams": [
+        "was"
+      ],
+      "weeks": [
+        21
+      ]
+    },
+    {
+      "id": "theme-nba-cup",
+      "summary": "NBA Cup: Knicks beat the Spurs in the final",
+      "origin": "theme",
+      "teams": [
+        "nyk",
+        "sas",
+        "okc"
+      ]
+    },
+    {
+      "id": "theme-trades",
+      "summary": "Trade deadline: Harden, Davis, Zubac, Jackson Jr., Kuminga, Bulls selloff",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "theme-giannis-saga",
+      "summary": "Giannis Antetokounmpo's future in Milwaukee",
+      "origin": "theme",
+      "teams": [
+        "mil"
+      ]
+    },
+    {
+      "id": "theme-play-in",
+      "summary": "Play-In Tournament results",
+      "origin": "theme",
+      "teams": [
+        "por",
+        "phx",
+        "gsw",
+        "lac",
+        "cha",
+        "mia",
+        "orl",
+        "phi"
+      ]
+    },
+    {
+      "id": "theme-all-star",
+      "summary": "All-Star Game's new USA vs. World format",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "theme-europe-games",
+      "summary": "Magic and Grizzlies play in Berlin and London",
+      "origin": "theme",
+      "teams": [
+        "orl",
+        "mem"
+      ]
+    },
+    {
+      "id": "offseason-lillard",
+      "summary": "Bucks waive Lillard; he re-signs with Portland",
+      "origin": "weekly",
+      "teams": [
+        "por",
+        "mil"
+      ]
+    },
+    {
+      "id": "offseason-turner",
+      "summary": "Myles Turner leaves the Pacers for the Bucks",
+      "origin": "weekly",
+      "teams": [
+        "ind",
+        "mil"
+      ]
+    },
+    {
+      "id": "offseason-vanvleet",
+      "summary": "Fred VanVleet tears his ACL before the season",
+      "origin": "weekly",
+      "teams": [
+        "hou"
+      ]
+    },
+    {
+      "id": "draft-lottery",
+      "summary": "2026 lottery: Wizards win; Pacers' pick conveys to the Clippers",
+      "origin": "draft",
+      "teams": [
+        "was",
+        "ind",
+        "lac"
+      ]
+    },
+    {
+      "id": "draft-no-1",
+      "summary": "2026 draft: Wizards take AJ Dybantsa No. 1",
+      "origin": "draft",
+      "teams": [
+        "was"
+      ]
+    },
+    {
+      "id": "offseason-bkn-mpj-trade",
+      "summary": "Nets trade Cam Johnson to the Nuggets for Michael Porter Jr. and a 2032 first",
+      "origin": "weekly",
+      "teams": [
+        "bkn",
+        "den"
+      ]
+    },
+    {
+      "id": "weekly-bkn-bucks-rout",
+      "summary": "Nets tie their franchise record with a 45-point win over the Bucks",
+      "origin": "weekly",
+      "teams": [
+        "bkn",
+        "mil"
+      ],
+      "weeks": [
+        9
+      ]
+    },
+    {
+      "id": "weekly-bkn-cam-thomas",
+      "summary": "Nets keep Porter at the deadline and waive Cam Thomas",
+      "origin": "weekly",
+      "teams": [
+        "bkn"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "draft-bkn-lottery",
+      "summary": "Nets slide to No. 6 in the lottery and draft Mikel Brown Jr.",
+      "origin": "draft",
+      "teams": [
+        "bkn"
+      ]
+    },
+    {
+      "id": "offseason-ind-haliburton-out",
+      "summary": "Pacers confirm Tyrese Haliburton will miss the season after tearing his Achilles in the Finals",
+      "origin": "weekly",
+      "teams": [
+        "ind"
+      ],
+      "weeks": [
+        2
+      ]
+    },
+    {
+      "id": "weekly-ind-16-game-streak",
+      "summary": "Pacers lose a franchise-record 16 straight games across the All-Star break",
+      "origin": "weekly",
+      "teams": [
+        "ind"
+      ],
+      "weeks": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "id": "weekly-ind-franchise-worst",
+      "summary": "Pacers finish 19-63, the worst record in franchise history",
+      "origin": "weekly",
+      "teams": [
+        "ind"
+      ],
+      "weeks": [
+        25
+      ]
+    },
+    {
+      "id": "draft-ind-pick-conveys",
+      "summary": "Pacers' pick lands fifth and conveys to the Clippers; Pritchard apologizes for the Zubac trade risk",
+      "origin": "draft",
+      "teams": [
+        "ind",
+        "lac"
+      ]
+    },
+    {
+      "id": "draft-tor-ujiri-out",
+      "summary": "Raptors part ways with Masai Ujiri the day after the 2025 draft",
+      "origin": "draft",
+      "teams": [
+        "tor"
+      ]
+    },
+    {
+      "id": "weekly-tor-ingram-playoff-push",
+      "summary": "Brandon Ingram carries the Raptors back to the playoffs",
+      "origin": "weekly",
+      "teams": [
+        "tor"
+      ],
+      "weeks": [
+        24,
+        25
+      ]
+    },
+    {
+      "id": "awards-tor-barnes-all-defense",
+      "summary": "Scottie Barnes makes the All-Defensive second team",
+      "origin": "awards",
+      "teams": [
+        "tor"
+      ]
+    },
+    {
+      "id": "weekly-chi-giddey-extension",
+      "summary": "Bulls re-sign Josh Giddey to a four-year, $100M deal",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": [
+        1
+      ]
+    },
+    {
+      "id": "weekly-chi-hot-start",
+      "summary": "Bulls open 5-0 for the first time since 1996-97",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "weekly-chi-winless-february",
+      "summary": "Bulls go winless in February with an 11-game losing streak",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": [
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "id": "weekly-chi-buzelis-41",
+      "summary": "Matas Buzelis scores a career-high 41 at Golden State",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": [
+        22
+      ]
+    },
+    {
+      "id": "weekly-chi-front-office",
+      "summary": "Bulls fire Artūras Karnišovas and Marc Eversley",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": [
+        25
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "turner-leaves-pacers-for-bucks",
+      "title": "Myles Turner leaves the Pacers for the Bucks",
+      "eventDate": "2025-07-01",
+      "teams": [
+        "ind",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Myles Turner signs reported 4-year, $107 million deal with Bucks",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/bucks-myles-turner-free-agency",
+        "publishedAt": "2025-07-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "offseason-turner"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-hire-mike-brown",
+      "title": "Knicks hire Mike Brown",
+      "eventDate": "2025-07-07",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "New York Knicks officially hire Mike Brown as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45690579/new-york-knicks-officially-hire-mike-brown-head-coach",
+        "publishedAt": "2025-07-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk-mike-brown"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lillard-returns-to-blazers",
+      "title": "Damian Lillard returns to Portland",
+      "eventDate": "2025-07-17",
+      "teams": [
+        "por",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Damian Lillard reaches deal to return to Trail Blazers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45765001/sources-damian-lillard-finalizing-deal-return-trail-blazers",
+        "publishedAt": "2025-07-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "offseason-lillard"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "clippers-aspiration-investigation",
+      "title": "NBA investigates the Clippers over Kawhi Leonard's Aspiration deal",
+      "eventDate": "2025-09-03",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The latest on the NBA's investigation into the LA Clippers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48369328/the-latest-kawhi-leonard-steve-ballmer-nba-investigation-aspiration-la-clippers",
+        "publishedAt": "2026-04-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-clippers-investigation"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "vanvleet-tears-acl",
+      "title": "Fred VanVleet tears his ACL",
+      "eventDate": "2025-09-22",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Rockets' Fred VanVleet has torn ACL, may miss season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46348548/sources-rockets-fred-vanvleet-torn-acl-miss-season",
+        "publishedAt": "2025-09-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "offseason-vanvleet"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "new-media-deal-begins",
+      "title": "NBC and Amazon join the NBA's new TV deal",
+      "eventDate": "2025-10-21",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "Who Is Winning the NBA's TV Arms Race?",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2025/11/05/nba/espn-nbc-amazon-nba-tv-michael-jordan-inside-the-nba",
+        "publishedAt": "2025-11-05"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-media-deal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "billups-rozier-arrested",
+      "title": "Billups and Rozier arrested in federal gambling cases",
+      "eventDate": "2025-10-23",
+      "teams": [
+        "por",
+        "mia"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Trail Blazers coach Chauncey Billups, Heat guard Terry Rozier among over 30 individuals arrested by FBI for alleged illegal gambling",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/trail-blazers-coach-chauncey-billups-heat-guard-terry-rozier-among-over-30-individuals-arrested-by-fbi-for-alleged-illegal-gambling-120646980.html",
+        "publishedAt": "2025-10-23"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-gambling-arrests",
+        "weekly-por-billups"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "reaves-scores-51",
+      "title": "Austin Reaves scores 51 in Sacramento",
+      "eventDate": "2025-10-26",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Austin Reaves scores career-high 51 points as Lakers top Kings",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46741338/austin-reaves-scores-career-high-51-points-lakers-win",
+        "publishedAt": "2025-10-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lal-reaves"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "grizzlies-suspend-morant",
+      "title": "Grizzlies suspend Ja Morant",
+      "eventDate": "2025-11-01",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies suspend Ja Morant for 1 game for detrimental conduct",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46806262/grizzlies-suspend-ja-morant-1-game-conduct-detrimental",
+        "publishedAt": "2025-11-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem-morant"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kessler-season-ending-surgery",
+      "title": "Walker Kessler needs season-ending shoulder surgery",
+      "eventDate": "2025-11-05",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz center Walker Kessler to undergo shoulder surgery and miss rest of season",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/utah-jazz-walker-kessler-season-ending-shoulder-surgery",
+        "publishedAt": "2025-11-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta-kessler"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavericks-fire-nico-harrison",
+      "title": "Mavericks fire Nico Harrison",
+      "eventDate": "2025-11-11",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavericks fire GM Nico Harrison amid continued fan angst",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46928742/sources-mavericks-expected-fire-general-manager-nico-harrison",
+        "publishedAt": "2025-11-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal-harrison"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pelicans-fire-willie-green",
+      "title": "Pelicans fire Willie Green",
+      "eventDate": "2025-11-15",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans fire coach Willie Green amid 2-10 start",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46974538/sources-pelicans-fire-coach-willie-green-amid-2-10-start",
+        "publishedAt": "2025-11-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop-green"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lebron-begins-23rd-season",
+      "title": "LeBron James begins a record 23rd season",
+      "eventDate": "2025-11-18",
+      "teams": [
+        "lal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Lakers' LeBron James debuts vs. Jazz, begins record 23rd year",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47016229/sources-lakers-lebron-james-make-season-debut-vs-jazz",
+        "publishedAt": "2025-11-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lebron-records",
+        "weekly-lal-lebron"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pistons-13-game-streak",
+      "title": "Pistons win a franchise-record-tying 13 straight",
+      "eventDate": "2025-11-24",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Detroit Pistons win 13th straight, tie franchise record",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47092129/detroit-pistons-win-13th-straight-game-tie-franchise-record",
+        "publishedAt": "2025-11-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det-streak",
+        "retro-pistons-rise"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "clippers-send-chris-paul-home",
+      "title": "Clippers send Chris Paul home",
+      "eventDate": "2025-12-03",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers send Chris Paul home, say he's no longer on team",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47187141/clippers-send-cp3-home-road-trip-say-no-longer-team",
+        "publishedAt": "2025-12-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac-chris-paul"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-24-1-start",
+      "title": "Thunder match the record 24-1 start",
+      "eventDate": "2025-12-10",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder blow out Suns, match 73-win Warriors with 24-1 start",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47273843/thunder-blow-suns-match-73-win-warriors-24-1-start",
+        "publishedAt": "2025-12-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-okc-start"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-end-thunder-streak-in-cup",
+      "title": "Spurs end the Thunder's 16-game streak in the NBA Cup semifinals",
+      "eventDate": "2025-12-13",
+      "teams": [
+        "sas",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Victor Wembanyama returns to give Spurs emotional edge against Thunder in NBA Cup Semifinals win",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/victor-wembanyama-return-lifts-spurs",
+        "publishedAt": "2025-12-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-nba-cup",
+        "weekly-sas-thunder-rivalry"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-win-nba-cup",
+      "title": "Knicks win the NBA Cup",
+      "eventDate": "2025-12-16",
+      "teams": [
+        "nyk",
+        "sas"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Knicks-Spurs: 4 takeaways as New York captures Emirates NBA Cup",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/4-takeaways-knicks-spurs-nba-cup",
+        "publishedAt": "2025-12-16"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-nba-cup",
+        "retro-knicks-double"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jokic-hyperextends-knee",
+      "title": "Nikola Jokić hyperextends his knee",
+      "eventDate": "2025-12-29",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets' Nikola Jokic to miss 4 weeks with hyperextended knee",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47454834/nuggets-nikola-jokic-miss-4-weeks-hyperextended-knee",
+        "publishedAt": "2025-12-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den-jokic-injury"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hawks-trade-trae-young",
+      "title": "Hawks trade Trae Young to the Wizards",
+      "eventDate": "2026-01-07",
+      "teams": [
+        "atl",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trae Young trade: Hawks send All-Star guard to Wizards in first blockbuster of NBA season, per report",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/trae-young-trade-hawks-wizards-cj-mccollum/",
+        "publishedAt": "2026-01-07"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trades",
+        "weekly-atl-trae-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "carlisle-1000th-win",
+      "title": "Rick Carlisle gets his 1,000th win",
+      "eventDate": "2026-01-08",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers beat Hornets 114-112 to end 13-game skid and give Rick Carlisle his 1,000th win",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/pacers-beat-hornets-114-112-to-end-13-game-skid-and-give-rick-carlisle-his-1000th-win/",
+        "publishedAt": "2026-01-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind-carlisle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "edwards-scores-55",
+      "title": "Anthony Edwards scores a career-high 55 against the Spurs",
+      "eventDate": "2026-01-17",
+      "teams": [
+        "min",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Anthony Edwards scores 55 points, Victor Wembanyama counters with 39 in Spurs' 126-123 win over Timberwolves",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/article/anthony-edwards-scores-55-points-victor-wembanyama-counters-with-39-in-spurs-126-123-win-over-timberwolves-035812395.html",
+        "publishedAt": "2026-01-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min-edwards"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "grizzlies-beat-magic-in-london",
+      "title": "Morant returns as the Grizzlies beat the Magic in London",
+      "eventDate": "2026-01-18",
+      "teams": [
+        "mem",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ja Morant returns for Grizzlies, says he wants to stay in Memphis",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47652725/ja-morant-returns-score-24-lift-grizzlies-magic-london",
+        "publishedAt": "2026-01-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem-morant",
+        "theme-europe-games"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "butler-tears-acl",
+      "title": "Jimmy Butler tears his ACL",
+      "eventDate": "2026-01-19",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors' Jimmy Butler suffers torn ACL, ending season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47667747/warriors-jimmy-butler-helped-knee-injury-vs-heat",
+        "publishedAt": "2026-01-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw-butler"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-rout-nets-by-54",
+      "title": "Knicks beat the Nets by a franchise-record 54",
+      "eventDate": "2026-01-21",
+      "teams": [
+        "nyk",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks end losing streak with blowout home win against Nets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47688765/knicks-end-4-game-skid-blowout-home-win-nets",
+        "publishedAt": "2026-01-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk-slump"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "paul-george-suspended",
+      "title": "Paul George suspended 25 games",
+      "eventDate": "2026-01-31",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Paul George banned 25 games for taking 'improper medication'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47787888/76ers-george-banned-25-games-violating-nba-anti-drug-rules",
+        "publishedAt": "2026-01-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi-george"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "harden-garland-trade",
+      "title": "Clippers trade James Harden to the Cavaliers for Darius Garland",
+      "eventDate": "2026-02-03",
+      "teams": [
+        "lac",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers trade James Harden to Cavaliers for Darius Garland",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/james-harden-darius-garland-trade",
+        "publishedAt": "2026-02-03"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trades",
+        "weekly-cle-harden"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jazz-trade-for-jaren-jackson",
+      "title": "Grizzlies trade Jaren Jackson Jr. to the Jazz",
+      "eventDate": "2026-02-03",
+      "teams": [
+        "mem",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Grizzlies trade Jaren Jackson Jr. to Jazz in 8-player deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47818224/sources-grizzlies-trade-jaren-jackson-jr-jazz-8-player-deal",
+        "publishedAt": "2026-02-03"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trades",
+        "weekly-uta-jjj",
+        "weekly-mem-jjj"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "celtics-trade-for-vucevic",
+      "title": "Celtics trade Anfernee Simons for Nikola Vučević",
+      "eventDate": "2026-02-03",
+      "teams": [
+        "bos",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Bulls trade Nikola Vucevic to Celtics for Anfernee Simons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47819106/sources-bulls-trade-nikola-vucevic-celtics-anfernee-simons",
+        "publishedAt": "2026-02-03"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trades",
+        "weekly-chi-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavericks-trade-anthony-davis",
+      "title": "Mavericks trade Anthony Davis to the Wizards",
+      "eventDate": "2026-02-04",
+      "teams": [
+        "dal",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Anthony Davis Trade Is the Disaster the Dallas Mavericks Needed",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2026/02/05/nba/anthony-davis-trade-dallas-mavericks-washington-wizards",
+        "publishedAt": "2026-02-05"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trades",
+        "weekly-dal-davis-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "warriors-trade-kuminga-to-hawks",
+      "title": "Warriors trade Jonathan Kuminga to the Hawks for Porziņģis",
+      "eventDate": "2026-02-04",
+      "teams": [
+        "gsw",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Golden State reportedly trades Jonathan Kuminga, Buddy Hield to Hawks for Kristaps Porziņģis",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/golden-state-reportedly-trades-jonathan-kuminga-buddy-hield-to-hawks-for-kristaps-porzingis-043010275.html",
+        "publishedAt": "2026-02-04"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trades",
+        "weekly-atl-kuminga"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-acquire-zubac",
+      "title": "Pacers trade for Ivica Zubac",
+      "eventDate": "2026-02-05",
+      "teams": [
+        "ind",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers trade Ivica Zubac to Pacers for Mathurin, picks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47840423/sources-clippers-trading-center-ivica-zubac-pacers",
+        "publishedAt": "2026-02-05"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trades",
+        "weekly-ind-zubac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-keep-giannis-at-deadline",
+      "title": "Bucks keep Giannis at the trade deadline",
+      "eventDate": "2026-02-05",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks keep Giannis Antetokounmpo, who alludes to not leaving",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47839083/sources-bucks-keep-giannis-antetokounmpo-deadline",
+        "publishedAt": "2026-02-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-giannis-saga",
+        "weekly-mil-giannis"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bulls-deadline-teardown",
+      "title": "Bulls break up the roster at the deadline",
+      "eventDate": "2026-02-05",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls aim to leave NBA's 'middle' with busy deadline",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47842845/bulls-aim-leave-nba-middle-busy-deadline",
+        "publishedAt": "2026-02-05"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trades",
+        "weekly-chi-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wolves-trade-for-dosunmu",
+      "title": "Timberwolves trade for Ayo Dosunmu",
+      "eventDate": "2026-02-05",
+      "teams": [
+        "min",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wolves trade for Ayo Dosunmu, send Rob Dillingham to Bulls",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/ayo-dosunumu-trade-wolves-bulls",
+        "publishedAt": "2026-02-05"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trades",
+        "weekly-min-dosunmu"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pistons-hornets-fight",
+      "title": "Pistons end the Hornets' streak in a game marred by a fight",
+      "eventDate": "2026-02-09",
+      "teams": [
+        "det",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons snap Hornets' 9-game streak with 110-104 win in game marred by fight, ejections",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/pistons-snap-hornets-9-game-025942784.html",
+        "publishedAt": "2026-02-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha-streak",
+        "weekly-det-stewart-suspension"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "all-star-usa-vs-world",
+      "title": "All-Star Game switches to USA vs. World",
+      "eventDate": "2026-02-15",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "2026 NBA All-Star Game: USA Stars defeat USA Stripes in Championship",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/2026-all-star-teams-announcement",
+        "publishedAt": "2026-02-15"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-all-star"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kings-end-16-game-skid",
+      "title": "Kings end a franchise-worst 16-game losing streak",
+      "eventDate": "2026-02-23",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings beat Grizzlies to snap franchise-worst 16-game skid",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48019219/sacramento-kings-beat-grizzlies-snap-franchise-worst-16-game-losing-streak",
+        "publishedAt": "2026-02-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac-losing-streak"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knueppel-rookie-3-point-record",
+      "title": "Kon Knueppel breaks the rookie 3-point record",
+      "eventDate": "2026-02-26",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets' Kon Knueppel sets rookie 3-point record with 207th",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48048750/hornets-kon-knueppel-sets-rookie-3-point-record-207th",
+        "publishedAt": "2026-02-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-flagg-knueppel"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "trae-young-wizards-debut",
+      "title": "Trae Young debuts for the Wizards",
+      "eventDate": "2026-03-05",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trae Young makes Wizards debut in D.C. against Jazz",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/trae-young-makes-wizards-debut-in-d-c-against-jazz",
+        "publishedAt": "2026-03-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was-trae-debut"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "tatum-returns",
+      "title": "Jayson Tatum returns from his Achilles tear",
+      "eventDate": "2026-03-06",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics' Jayson Tatum (Achilles) starts vs. Mavs in return",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48123442/celtics-jayson-tatum-achilles-available-return-friday",
+        "publishedAt": "2026-03-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bos-tatum",
+        "retro-celtics-without-tatum"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nets-stun-pistons",
+      "title": "Nets erase a 23-point deficit in Detroit",
+      "eventDate": "2026-03-07",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets end 10-game losing streak by rallying from down 23 points to stun Pistons 107-105",
+        "publisher": "Yahoo Sports",
+        "url": "https://ca.sports.yahoo.com/news/nets-end-10-game-losing-015939335.html",
+        "publishedAt": "2026-03-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn-comeback"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "adebayo-scores-83",
+      "title": "Bam Adebayo scores 83 points",
+      "eventDate": "2026-03-10",
+      "teams": [
+        "mia",
+        "was"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Bam Adebayo scores 83, second-most points in NBA history",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48168997/bam-adebayo-scores-83-second-most-points-nba-history",
+        "publishedAt": "2026-03-10"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-adebayo-83",
+        "weekly-mia-adebayo-83"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sga-breaks-wilt-20-point-streak",
+      "title": "Gilgeous-Alexander breaks Wilt's 20-point streak",
+      "eventDate": "2026-03-12",
+      "teams": [
+        "okc"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Gilgeous-Alexander eclipses Wilt for NBA's longest 20-point streak",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48190692/gilgeous-alexander-eclipses-wilt-nba-longest-20-point-streak",
+        "publishedAt": "2026-03-12"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-sga-20-point-streak"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cunningham-collapsed-lung",
+      "title": "Cade Cunningham suffers a collapsed lung",
+      "eventDate": "2026-03-17",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons' Cade Cunningham (collapsed lung) to miss at least 2 weeks",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/cade-cunningham-out-collapsed-lung",
+        "publishedAt": "2026-03-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det-cunningham-lung"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-eliminated",
+      "title": "Bucks' nine-year playoff streak ends",
+      "eventDate": "2026-03-28",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks eliminated from playoff contention with blowout loss",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48333041/bucks-eliminated-playoff-contention-blowout-loss",
+        "publishedAt": "2026-03-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil-streak-ends",
+        "theme-giannis-saga"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "flagg-scores-51",
+      "title": "Cooper Flagg scores 51, the first teen to reach 50",
+      "eventDate": "2026-04-03",
+      "teams": [
+        "dal",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavs rookie Cooper Flagg scores 51 points to become 1st teen to reach 50 in an NBA game",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/mavs-rookie-cooper-flagg-scores-51-points-to-become-1st-teen-to-reach-50-in-an-nba-game",
+        "publishedAt": "2026-04-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-flagg-knueppel",
+        "weekly-dal-flagg"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pistons-clinch-top-seed",
+      "title": "Pistons clinch the East's No. 1 seed",
+      "eventDate": "2026-04-04",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Aces of the East: Pistons clinch No. 1 seed for first time in nearly 20 years",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/aces-east-pistons-clinch-no-012351272.html",
+        "publishedAt": "2026-04-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-pistons-rise"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "doncic-scoring-title",
+      "title": "Luka Dončić wins the scoring title",
+      "eventDate": "2026-04-12",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Luka Dončić earns NBA scoring title in first full season for Lakers",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/luka-don-earns-nba-scoring-015729397.html",
+        "publishedAt": "2026-04-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-doncic-scoring-title",
+        "weekly-lal-doncic-injury"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jokic-leads-rebounds-and-assists",
+      "title": "Jokić leads the league in rebounds and assists",
+      "eventDate": "2026-04-12",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nikola Jokić becomes 1st player in NBA history to lead league in assists and rebounds",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/nikola-jokic-first-player-lead-nba-assists-rebounds",
+        "publishedAt": "2026-04-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-jokic-triple-double"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "clippers-record-turnaround",
+      "title": "Clippers recover from 6-21 to a winning record",
+      "eventDate": "2026-04-12",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers make NBA history by beating Warriors to finish roller-coaster regular season",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/clippers-nba-history-beating-warriors-140545342.html",
+        "publishedAt": "2026-04-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-clippers-turnaround",
+        "weekly-lac-turnaround"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "blazers-beat-suns-play-in",
+      "title": "Blazers rally past the Suns for the No. 7 seed",
+      "eventDate": "2026-04-14",
+      "teams": [
+        "por",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Blazers rally to stun Suns in play-in, grab West's No. 7 seed",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48491106/blazers-rally-stun-suns-play-grab-west-no-7-seed",
+        "publishedAt": "2026-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hornets-eliminate-heat-play-in",
+      "title": "Hornets eliminate the Heat in overtime of the play-in",
+      "eventDate": "2026-04-14",
+      "teams": [
+        "cha",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LaMelo Ball's clutch drive saves Hornets in frantic play-in win",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48490005/lamelo-ball-clutch-drive-saves-hornets-frantic-play-win",
+        "publishedAt": "2026-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hornets-turnaround",
+      "title": "Hornets go from 19 wins to a winning record",
+      "eventDate": "2026-04-14",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Inside Hornets' metamorphosis into the NBA's buzziest team",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48472147/nba-playoffs-2026-charlotte-hornets-kon-knueppel-lamelo-ball-play-miami-heat",
+        "publishedAt": "2026-04-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-hornets-turnaround",
+        "weekly-cha-streak"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "suns-end-warriors-season",
+      "title": "Suns eliminate the Warriors in the play-in",
+      "eventDate": "2026-04-17",
+      "teams": [
+        "phx",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns end Warriors' season, set first-round date with Thunder",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48519075/suns-end-warriors-season-set-first-round-date-thunder",
+        "publishedAt": "2026-04-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "magic-rout-hornets-play-in",
+      "title": "Magic rout the Hornets for the No. 8 seed",
+      "eventDate": "2026-04-17",
+      "teams": [
+        "orl",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic, driven by 'urgency,' rout Hornets in play-in record",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48518420/magic-post-record-play-game-rout-hornets-get-east-8-seed",
+        "publishedAt": "2026-04-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wembanyama-unanimous-dpoy",
+      "title": "Wembanyama is the first unanimous Defensive Player of the Year",
+      "eventDate": "2026-04-20",
+      "teams": [
+        "sas"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Spurs' Victor Wembanyama named 2025-26 Kia NBA Defensive Player of the Year",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/kia-nba-defensive-player-of-the-year-award-2025-26",
+        "publishedAt": "2026-04-20"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "awards-dpoy",
+        "retro-wembanyama-breakout"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "keldon-johnson-sixth-man",
+      "title": "Keldon Johnson wins Sixth Man of the Year",
+      "eventDate": "2026-04-22",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs' Keldon Johnson named 2025-26 Kia NBA Sixth Man of the Year",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/kia-nba-sixth-man-2025-26",
+        "publishedAt": "2026-04-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-6moy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hawks-take-2-1-lead-on-knicks",
+      "title": "McCollum gives the Hawks a 2-1 lead over the Knicks",
+      "eventDate": "2026-04-23",
+      "teams": [
+        "atl",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "4 takeaways: Knicks-Hawks Game 3 thrills to final seconds, as CJ McCollum takes over again",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/knicks-hawks-2026-playoffs-first-round-game-3-takeaways",
+        "publishedAt": "2026-04-23"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "alexander-walker-most-improved",
+      "title": "Nickeil Alexander-Walker wins Most Improved Player",
+      "eventDate": "2026-04-24",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nickeil Alexander-Walker named 2025-26 Kia NBA Most Improved Player",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/kia-nba-most-improved-player-2025-26",
+        "publishedAt": "2026-04-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-mip"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-sweep-suns",
+      "title": "Thunder sweep the Suns",
+      "eventDate": "2026-04-27",
+      "teams": [
+        "okc",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder sweep the Suns behind Shai Gilgeous-Alexander's 31 points, will wait on Lakers, Rockets",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/article/thunder-sweep-the-suns-behind-shai-gilgeous-alexanders-31-points-will-wait-on-lakers-rockets-041649331.html",
+        "publishedAt": "2026-04-27"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-okc",
+        "playoffs-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "flagg-rookie-of-the-year",
+      "title": "Cooper Flagg wins Rookie of the Year",
+      "eventDate": "2026-04-27",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cooper Flagg named 2025-26 Kia NBA Rookie of the Year",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/kia-nba-rookie-of-the-year-2025-26",
+        "publishedAt": "2026-04-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-roy",
+        "retro-flagg-knueppel"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-close-out-blazers",
+      "title": "Spurs eliminate the Trail Blazers",
+      "eventDate": "2026-04-28",
+      "teams": [
+        "sas",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "De'Aaron Fox, Spurs close out Blazers to roll into West semis",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48624718/spurs-close-blazers-roll-second-round-playoffs",
+        "publishedAt": "2026-04-28"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-sas",
+        "playoffs-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-rout-hawks-game-6",
+      "title": "Knicks close out the Hawks with a record halftime lead",
+      "eventDate": "2026-04-30",
+      "teams": [
+        "nyk",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "4 takeaways: Knicks close out Hawks in historic fashion during Game 6",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/knicks-hawks-2026-playoffs-first-round-game-6-takeaways",
+        "publishedAt": "2026-04-30"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-nyk",
+        "playoffs-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "timberwolves-eliminate-nuggets",
+      "title": "Shorthanded Timberwolves eliminate the Nuggets",
+      "eventDate": "2026-04-30",
+      "teams": [
+        "min",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "4 takeaways: Timberwolves back up the big talk, take down Nuggets for good in Game 6",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/nuggets-timberwolves-2026-playoffs-game-6-takeaways",
+        "publishedAt": "2026-04-30"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-min",
+        "playoffs-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-eliminate-rockets",
+      "title": "Lakers eliminate the Rockets",
+      "eventDate": "2026-05-01",
+      "teams": [
+        "lal",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers close out Rockets in Game 6 rout, face Thunder next",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48652810/lakers-eliminate-rockets-game-6-rout",
+        "publishedAt": "2026-05-01"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-lal",
+        "playoffs-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "76ers-beat-celtics-game-7",
+      "title": "76ers rally from 3-1 down to beat the Celtics",
+      "eventDate": "2026-05-02",
+      "teams": [
+        "phi",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "76ers, Joel Embiid vanquish Celtics to complete 3-1 comeback",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48662033/76ers-embiid-vanquish-celtics-complete-3-1-comeback",
+        "publishedAt": "2026-05-02"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-phi",
+        "playoffs-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pistons-beat-magic-game-7",
+      "title": "Pistons rally from 3-1 down to beat the Magic",
+      "eventDate": "2026-05-03",
+      "teams": [
+        "det",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons dispel Magic in Game 7, win first playoff series since 2008",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/pistons-dispel-magic-game-7-221537323.html",
+        "publishedAt": "2026-05-03"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-det",
+        "playoffs-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cavaliers-beat-raptors-game-7",
+      "title": "Cavaliers beat the Raptors in Game 7",
+      "eventDate": "2026-05-03",
+      "teams": [
+        "cle",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jarrett Allen, Cavaliers close out Raptors in Game 7",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48671932/cavaliers-close-raptors-game-7-advance-face-pistons-east-semifinals",
+        "publishedAt": "2026-05-03"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-cle",
+        "playoffs-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-sweep-76ers",
+      "title": "Knicks sweep the 76ers",
+      "eventDate": "2026-05-10",
+      "teams": [
+        "nyk",
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "4 takeaways: Knicks find their best form when it matters most, sweep 76ers in East Semifinals",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/knicks-76ers-2026-playoffs-game-4-takeaways",
+        "publishedAt": "2026-05-10"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-nyk",
+        "playoffs-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wizards-win-lottery",
+      "title": "Wizards win the draft lottery",
+      "eventDate": "2026-05-10",
+      "teams": [
+        "was",
+        "ind",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Washington Wizards win 2026 NBA Draft Lottery",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/2026-nba-draft-lottery-result",
+        "publishedAt": "2026-05-10"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-lottery"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-sweep-lakers",
+      "title": "Thunder sweep the Lakers",
+      "eventDate": "2026-05-11",
+      "teams": [
+        "okc",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder vs. Lakers final score, results: SGA's 35 says goodnight to LA and LeBron James in series sweep",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/thunder-vs-lakers-game-4-030300752.html",
+        "publishedAt": "2026-05-11"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-okc",
+        "playoffs-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-oust-timberwolves",
+      "title": "Spurs eliminate the Timberwolves",
+      "eventDate": "2026-05-15",
+      "teams": [
+        "sas",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs oust Wolves in Game 6 blowout, get OKC in West finals",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48783917/spurs-oust-wolves-game-6-blowout-get-okc-conference-finals",
+        "publishedAt": "2026-05-15"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-sas",
+        "playoffs-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cavaliers-rout-pistons-game-7",
+      "title": "Cavaliers rout the top-seeded Pistons in Game 7",
+      "eventDate": "2026-05-17",
+      "teams": [
+        "cle",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons' playoff run comes crashing to a halt in Game 7 rout by Cavs",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/pistons-playoff-run-ends-game-024951795.html",
+        "publishedAt": "2026-05-17"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-cle",
+        "playoffs-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sga-wins-second-mvp",
+      "title": "Gilgeous-Alexander wins a second straight MVP",
+      "eventDate": "2026-05-17",
+      "teams": [
+        "okc"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Shai Gilgeous-Alexander named MVP: Thunder star becomes just 14th player to win back-to-back awards",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/shai-gilgeous-alexander-mvp-thunder-back-to-back/",
+        "publishedAt": "2026-05-17"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "awards-mvp"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-sweep-cavaliers",
+      "title": "Knicks sweep the Cavaliers to reach the Finals",
+      "eventDate": "2026-05-25",
+      "teams": [
+        "nyk",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks sweep Cavs, return to NBA Finals for 1st time since 1999",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48877691/knicks-finish-cavs-make-first-nba-finals-27-years",
+        "publishedAt": "2026-05-25"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-nyk",
+        "playoffs-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mazzulla-coach-of-the-year",
+      "title": "Joe Mazzulla wins Coach of the Year",
+      "eventDate": "2026-05-26",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics' Joe Mazzulla wins 2025-26 NBA Coach of the Year Award",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/celtics-joe-mazzulla-nba-coach-of-year-award/",
+        "publishedAt": "2026-05-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-coy",
+        "retro-celtics-without-tatum"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lottery-reform-approved",
+      "title": "NBA approves the 3-2-1 lottery to curb tanking",
+      "eventDate": "2026-05-28",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "NBA Board of Governors approves new Draft Lottery system to address tanking",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/nba-board-governors-approve-new-draft-lottery-system",
+        "publishedAt": "2026-05-28"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-tanking"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-beat-thunder-game-7",
+      "title": "Spurs beat the Thunder in Game 7 to reach the Finals",
+      "eventDate": "2026-05-30",
+      "teams": [
+        "sas",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Emotional Victor Wembanyama leads Spurs back to NBA Finals",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48926783/emotional-victor-wembanyama-leads-spurs-back-nba-finals",
+        "publishedAt": "2026-05-30"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-sas",
+        "playoffs-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-finals-game-4-comeback",
+      "title": "Knicks erase 29-point deficit in Finals Game 4",
+      "eventDate": "2026-06-10",
+      "teams": [
+        "nyk",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks complete NBA Finals record 29-point comeback to seal Game 4 win over Spurs",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/knicks-complete-nba-finals-record-29-point-comeback-to-seal-game-4-win-over-spurs",
+        "publishedAt": "2026-06-10"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-finals",
+        "retro-finals-game-4"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-win-title",
+      "title": "Knicks win their first title since 1973",
+      "eventDate": "2026-06-13",
+      "teams": [
+        "nyk",
+        "sas"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "4 takeaways: Jalen Brunson delivers in the 4th to carry Knicks to the NBA championship",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/4-takeaways-knicks-spurs-game-5",
+        "publishedAt": "2026-06-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-finals",
+        "playoffs-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "giannis-traded-to-heat",
+      "title": "Bucks trade Giannis Antetokounmpo to the Heat",
+      "eventDate": "2026-06-22",
+      "teams": [
+        "mil",
+        "mia"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Bucks trading Giannis Antetokounmpo to Heat for haul of players, picks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/49149967/bucks-trading-giannis-antetokounmpo-bobby-portis-heat-tyler-herro-kelel-ware-jaime-jaquez-jr-kasparas-jakucionis-picks",
+        "publishedAt": "2026-06-22"
+      },
+      "kind": "trade",
+      "blockbuster": true,
+      "guidance": [
+        "theme-giannis-saga",
+        "retro-giannis-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wizards-draft-dybantsa",
+      "title": "Wizards draft AJ Dybantsa No. 1",
+      "eventDate": "2026-06-23",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards tab AJ Dybantsa with No. 1 overall pick in 2026 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/wizards-take-aj-dybantsa-no-1-2026-draft",
+        "publishedAt": "2026-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-no-1"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nets-trade-for-michael-porter-jr",
+      "title": "Nets trade Cam Johnson to the Nuggets for Michael Porter Jr.",
+      "eventDate": "2025-06-30",
+      "teams": [
+        "bkn",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Denver trading Michael Porter Jr. to Nets for Cam Johnson, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45622594/denver-trading-michael-porter-jr-nets-cam-johnson-sources-say",
+        "publishedAt": "2025-06-30"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "offseason-bkn-mpj-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nets-rout-bucks-by-45",
+      "title": "Nets tie their franchise record with a 45-point win over the Bucks",
+      "eventDate": "2025-12-14",
+      "teams": [
+        "bkn",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets tie franchise record with 45-point rout of Giannis Antetokounmpo-less Bucks",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/nets-tie-franchise-record-45-015316708.html",
+        "publishedAt": "2025-12-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn-bucks-rout"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "nets-waive-cam-thomas",
+      "title": "Nets waive Cam Thomas after the trade deadline",
+      "eventDate": "2026-02-05",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets waiving Cam Thomas after NBA trade deadline passes",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/nets-waiving-cam-thomas-nba-202145502.html",
+        "publishedAt": "2026-02-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn-cam-thomas"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "nets-slide-to-sixth-in-lottery",
+      "title": "Nets slide to No. 6 in the draft lottery",
+      "eventDate": "2026-05-10",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets land No. 6 pick in NBA Draft Lottery after another painful slide",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/nets-land-no-6-pick-193700073.html",
+        "publishedAt": "2026-05-10"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-bkn-lottery"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nets-draft-mikel-brown-jr",
+      "title": "Nets draft Mikel Brown Jr. at No. 6",
+      "eventDate": "2026-06-23",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets take Mikel Brown Jr. with No. 6 overall pick in 2026 NBA Draft",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/nets-mikel-brown-jr-no-011857816.html",
+        "publishedAt": "2026-06-24"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-bkn-lottery"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "haliburton-out-for-season",
+      "title": "Tyrese Haliburton ruled out for the season",
+      "eventDate": "2025-07-07",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers confirm Tyrese Haliburton will miss entire 2025-26 season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45690127/pacers-confirm-tyrese-haliburton-miss-entire-2025-26-season",
+        "publishedAt": "2025-07-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "offseason-ind-haliburton-out"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-16-game-losing-streak",
+      "title": "Pacers lose a franchise-record 16 straight",
+      "eventDate": "2026-03-23",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Numbers Behind The Indiana Pacers Franchise-Record Losing Streak",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/numbers-behind-indiana-pacers-franchise-195618706.html",
+        "publishedAt": "2026-03-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind-16-game-streak"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-franchise-worst-record",
+      "title": "Pacers finish with the worst record in franchise history",
+      "eventDate": "2026-04-12",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers set franchise record with 63 losses in season finale",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/pacers-set-franchise-record-63-004012283.html",
+        "publishedAt": "2026-04-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind-franchise-worst"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-pick-conveys-to-clippers",
+      "title": "Pacers' lottery pick conveys to the Clippers",
+      "eventDate": "2026-05-10",
+      "teams": [
+        "ind",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers president Kevin Pritchard apologizes for Ivica Zubac trade that cost them lottery pick after falling out of top 4: 'I own taking the risk'",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/pacers-president-kevin-pritchard-apologizes-for-ivica-zubac-trade-that-cost-them-lottery-pick-after-falling-out-of-top-4-i-own-taking-the-risk-213710278.html",
+        "publishedAt": "2026-05-10"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-ind-pick-conveys"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "raptors-part-ways-with-masai-ujiri",
+      "title": "Raptors part ways with Masai Ujiri",
+      "eventDate": "2025-06-27",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Masai Ujiri out as vice chairman and president of the Raptors",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45596081/sources-masai-ujiri-vice-chairman-president-raptors",
+        "publishedAt": "2025-06-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "draft-tor-ujiri-out"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "barnes-and-ingram-both-all-stars",
+      "title": "Barnes and Ingram both make the All-Star Game",
+      "eventDate": "2026-02-10",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors' Brandon Ingram replaces Stephen Curry in 2026 NBA All-Star Game",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/raptors-brandon-ingram-replaces-stephen-curry-all-star-game",
+        "publishedAt": "2026-02-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-tor-all-stars"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "ingram-pushes-raptors-to-the-playoffs",
+      "title": "Ingram pushes the Raptors back to the playoffs",
+      "eventDate": "2026-04-10",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Athletic: Brandon Ingram and a quiet professionalism have Raptors on verge of NBA playoffs",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/brandon-ingram-quiet-professionalism-raptors-playoffs",
+        "publishedAt": "2026-04-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-tor-ingram-playoff-push"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "barnes-makes-all-defensive-second-team",
+      "title": "Barnes makes the All-Defensive second team",
+      "eventDate": "2026-05-22",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "'Bulls--t,' Scottie Barnes Reacts to Snub After NBA All-Defensive 1st-Team 2025-26 Revealed",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/25430392-bulls-t-scottie-barnes-reacts-snub-after-nba-all-defensive-1st-team-2025-26-revealed",
+        "publishedAt": "2026-05-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-tor-barnes-all-defense"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "bulls-re-sign-giddey",
+      "title": "Bulls re-sign Josh Giddey",
+      "eventDate": "2025-09-09",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Josh Giddey agrees to 4-year, $100M extension with Bulls",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46208674/josh-giddey-agrees-4-year-100m-extension-bulls",
+        "publishedAt": "2025-09-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi-giddey-extension"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "bulls-5-0-start",
+      "title": "Bulls open 5-0 behind Josh Giddey",
+      "eventDate": "2025-10-31",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "How Josh Giddey has led the Bulls to their first 5-0 start since Chicago's Michael Jordan days",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/bulls-josh-giddey-5-0-best-start/",
+        "publishedAt": "2025-11-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi-hot-start"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bulls-winless-february",
+      "title": "Bulls go winless in February",
+      "eventDate": "2026-02-24",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Tank Watch: The Bulls have finally picked a direction, Pacers get the memo",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/nba-tank-watch-bulls-pacers-feb-24/",
+        "publishedAt": "2026-02-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi-winless-february"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "buzelis-career-high-41",
+      "title": "Matas Buzelis scores 41 at Golden State",
+      "eventDate": "2026-03-10",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Matas Buzelis is evolving for the Chicago Bulls. His career-best 41-point game is the latest evidence.",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/matas-buzelis-evolving-chicago-bulls-180500595.html",
+        "publishedAt": "2026-03-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi-buzelis-41"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "bulls-fire-front-office",
+      "title": "Bulls fire Karnišovas and Eversley",
+      "eventDate": "2026-04-06",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Why the Bulls fired their front office with just one week left in the regular season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48413848/the-chicago-bulls-clean-house-fired-president-gm-why-now-coach-billy-donovan-status-happen-next",
+        "publishedAt": "2026-04-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi-front-office"
+      ],
+      "status": "included"
+    }
+  ]
+}
