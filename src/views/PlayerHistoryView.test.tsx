@@ -37,6 +37,7 @@ describe('Player history', () => {
     act(() => {
       store.dispatch(setPinnedTeams([Team.Boston]))
     })
+    await user.click(screen.getByRole('tab', { name: 'Roster' }))
     const rosterRatings = ratings(
       rosterLink('Paul Pierce').closest('tr')!
     ).slice(1)
