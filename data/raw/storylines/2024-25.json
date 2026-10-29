@@ -1,0 +1,2957 @@
+{
+  "season": "2024-25",
+  "updatedAt": "2026-10-29",
+  "guidance": [
+    {
+      "id": "retro-doncic-trade",
+      "summary": "Mavericks trade Luka Dončić to the Lakers for Anthony Davis; fan backlash in Dallas",
+      "origin": "retrospective",
+      "teams": [
+        "dal",
+        "lal",
+        "uta"
+      ]
+    },
+    {
+      "id": "retro-thunder-historic",
+      "summary": "Thunder go 68-14 with a record point differential",
+      "origin": "retrospective",
+      "teams": [
+        "okc"
+      ]
+    },
+    {
+      "id": "retro-pistons-turnaround",
+      "summary": "Pistons go from 14 wins to the playoffs",
+      "origin": "retrospective",
+      "teams": [
+        "det"
+      ]
+    },
+    {
+      "id": "retro-cavs-rise",
+      "summary": "Cavaliers win 64 under first-year coach Kenny Atkinson",
+      "origin": "retrospective",
+      "teams": [
+        "cle"
+      ]
+    },
+    {
+      "id": "retro-coaching-firings",
+      "summary": "Late-season and in-season coaching firings",
+      "origin": "retrospective",
+      "teams": [
+        "mem",
+        "den",
+        "sac",
+        "nyk",
+        "phx"
+      ]
+    },
+    {
+      "id": "retro-injuries",
+      "summary": "Season defined by star injuries: Embiid, Wembanyama, Achilles tears",
+      "origin": "retrospective",
+      "teams": [
+        "phi",
+        "sas",
+        "dal",
+        "bos",
+        "mil",
+        "ind"
+      ]
+    },
+    {
+      "id": "retro-suns-disappointment",
+      "summary": "Suns miss the play-in with a record payroll",
+      "origin": "retrospective",
+      "teams": [
+        "phx"
+      ]
+    },
+    {
+      "id": "retro-butler-saga",
+      "summary": "Jimmy Butler suspensions and trade to Golden State",
+      "origin": "retrospective",
+      "teams": [
+        "mia",
+        "gsw"
+      ]
+    },
+    {
+      "id": "retro-jokic-triple-double",
+      "summary": "Jokić averages a triple-double",
+      "origin": "retrospective",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "retro-aging-stars",
+      "summary": "LeBron James milestones in his 22nd season",
+      "origin": "retrospective",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "playoffs-mia",
+      "summary": "Heat win two road play-in games as a 10 seed, swept by the Cavaliers",
+      "origin": "playoffs",
+      "teams": [
+        "mia",
+        "cle"
+      ]
+    },
+    {
+      "id": "playoffs-cle",
+      "summary": "Cavaliers sweep the Heat, lose 4-1 to the Pacers in the semis",
+      "origin": "playoffs",
+      "teams": [
+        "cle",
+        "mia",
+        "ind"
+      ]
+    },
+    {
+      "id": "playoffs-mil",
+      "summary": "Bucks lose 4-1 to the Pacers; Lillard tears Achilles",
+      "origin": "playoffs",
+      "teams": [
+        "mil",
+        "ind"
+      ]
+    },
+    {
+      "id": "playoffs-ind",
+      "summary": "Pacers beat the Bucks, Cavaliers and Knicks, lose the Finals in seven",
+      "origin": "playoffs",
+      "teams": [
+        "ind",
+        "mil",
+        "cle",
+        "nyk",
+        "okc"
+      ]
+    },
+    {
+      "id": "playoffs-det",
+      "summary": "Pistons lose to the Knicks in six",
+      "origin": "playoffs",
+      "teams": [
+        "det",
+        "nyk"
+      ]
+    },
+    {
+      "id": "playoffs-nyk",
+      "summary": "Knicks beat the Pistons and Celtics, lose the conference finals to the Pacers",
+      "origin": "playoffs",
+      "teams": [
+        "nyk",
+        "det",
+        "bos",
+        "ind"
+      ]
+    },
+    {
+      "id": "playoffs-orl",
+      "summary": "Magic win the 7-8 play-in game, lose 4-1 to the Celtics",
+      "origin": "playoffs",
+      "teams": [
+        "orl",
+        "bos",
+        "atl"
+      ]
+    },
+    {
+      "id": "playoffs-bos",
+      "summary": "Celtics beat the Magic, lose to the Knicks after Tatum tears Achilles",
+      "origin": "playoffs",
+      "teams": [
+        "bos",
+        "orl",
+        "nyk"
+      ]
+    },
+    {
+      "id": "playoffs-mem",
+      "summary": "Grizzlies win the 8 seed through the play-in, swept by the Thunder",
+      "origin": "playoffs",
+      "teams": [
+        "mem",
+        "okc",
+        "dal",
+        "gsw"
+      ]
+    },
+    {
+      "id": "playoffs-okc",
+      "summary": "Thunder sweep the Grizzlies, beat the Nuggets in seven and the Wolves in five",
+      "origin": "playoffs",
+      "teams": [
+        "okc",
+        "mem",
+        "den",
+        "min"
+      ]
+    },
+    {
+      "id": "playoffs-lac",
+      "summary": "Clippers lose to the Nuggets in seven",
+      "origin": "playoffs",
+      "teams": [
+        "lac",
+        "den"
+      ]
+    },
+    {
+      "id": "playoffs-den",
+      "summary": "Nuggets beat the Clippers in seven, lose to the Thunder in seven",
+      "origin": "playoffs",
+      "teams": [
+        "den",
+        "lac",
+        "okc"
+      ]
+    },
+    {
+      "id": "playoffs-min",
+      "summary": "Wolves beat the Lakers and Warriors, lose the conference finals to the Thunder",
+      "origin": "playoffs",
+      "teams": [
+        "min",
+        "lal",
+        "gsw",
+        "okc"
+      ]
+    },
+    {
+      "id": "playoffs-lal",
+      "summary": "Lakers lose to the Wolves in five",
+      "origin": "playoffs",
+      "teams": [
+        "lal",
+        "min"
+      ]
+    },
+    {
+      "id": "playoffs-gsw",
+      "summary": "Warriors win the play-in, beat the Rockets in seven, lose to the Wolves without Curry",
+      "origin": "playoffs",
+      "teams": [
+        "gsw",
+        "mem",
+        "hou",
+        "min"
+      ]
+    },
+    {
+      "id": "playoffs-hou",
+      "summary": "Rockets lose to the Warriors in seven as the 2 seed",
+      "origin": "playoffs",
+      "teams": [
+        "hou",
+        "gsw"
+      ]
+    },
+    {
+      "id": "playoffs-finals",
+      "summary": "Thunder beat the Pacers in seven for their first title; Haliburton tears Achilles in Game 7",
+      "origin": "playoffs",
+      "teams": [
+        "okc",
+        "ind"
+      ]
+    },
+    {
+      "id": "awards-mvp",
+      "summary": "Shai Gilgeous-Alexander wins MVP",
+      "origin": "awards",
+      "teams": [
+        "okc"
+      ]
+    },
+    {
+      "id": "awards-dpoy",
+      "summary": "Evan Mobley wins Defensive Player of the Year",
+      "origin": "awards",
+      "teams": [
+        "cle"
+      ]
+    },
+    {
+      "id": "awards-roy",
+      "summary": "Stephon Castle wins Rookie of the Year",
+      "origin": "awards",
+      "teams": [
+        "sas"
+      ]
+    },
+    {
+      "id": "awards-mip",
+      "summary": "Dyson Daniels wins Most Improved Player",
+      "origin": "awards",
+      "teams": [
+        "atl"
+      ]
+    },
+    {
+      "id": "awards-6moy",
+      "summary": "Payton Pritchard wins Sixth Man of the Year",
+      "origin": "awards",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "awards-cpoy",
+      "summary": "Jalen Brunson wins Clutch Player of the Year",
+      "origin": "awards",
+      "teams": [
+        "nyk"
+      ]
+    },
+    {
+      "id": "awards-coy",
+      "summary": "Kenny Atkinson wins Coach of the Year",
+      "origin": "awards",
+      "teams": [
+        "cle"
+      ]
+    },
+    {
+      "id": "weekly-atl-jalen-johnson",
+      "summary": "Jalen Johnson out for the season",
+      "origin": "weekly",
+      "teams": [
+        "atl"
+      ],
+      "weeks": [
+        16
+      ]
+    },
+    {
+      "id": "weekly-atl-hunter-trade",
+      "summary": "Hawks trade De'Andre Hunter and Bogdan Bogdanović",
+      "origin": "weekly",
+      "teams": [
+        "atl",
+        "cle",
+        "lac"
+      ],
+      "weeks": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "weekly-bkn-trades",
+      "summary": "Nets trade Schröder and Finney-Smith in December, buy out Ben Simmons",
+      "origin": "weekly",
+      "teams": [
+        "bkn",
+        "gsw",
+        "lal",
+        "lac"
+      ],
+      "weeks": [
+        9,
+        11,
+        17
+      ]
+    },
+    {
+      "id": "weekly-cha-williams-trade",
+      "summary": "Mark Williams traded to the Lakers, then returned",
+      "origin": "weekly",
+      "teams": [
+        "cha",
+        "lal"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-cha-drought",
+      "summary": "Hornets extend the longest playoff drought; Blazers beat them by 53",
+      "origin": "weekly",
+      "teams": [
+        "cha",
+        "por"
+      ],
+      "weeks": [
+        19,
+        25
+      ]
+    },
+    {
+      "id": "weekly-chi-lavine-trade",
+      "summary": "Bulls trade Zach LaVine",
+      "origin": "weekly",
+      "teams": [
+        "chi",
+        "sac",
+        "sas"
+      ],
+      "weeks": [
+        16
+      ]
+    },
+    {
+      "id": "weekly-chi-giddey-winner",
+      "summary": "Giddey's halfcourt game-winner caps the Bulls' late run",
+      "origin": "weekly",
+      "teams": [
+        "chi",
+        "lal"
+      ],
+      "weeks": [
+        24,
+        25
+      ]
+    },
+    {
+      "id": "weekly-cle-streaks",
+      "summary": "Cavaliers open 15-0 and later win 16 straight",
+      "origin": "weekly",
+      "teams": [
+        "cle"
+      ],
+      "weeks": [
+        5,
+        21,
+        22
+      ]
+    },
+    {
+      "id": "weekly-dal-injuries",
+      "summary": "Dončić calf strain, Davis injured in Mavs debut, Irving tears ACL",
+      "origin": "weekly",
+      "teams": [
+        "dal"
+      ],
+      "weeks": [
+        11,
+        17,
+        21
+      ]
+    },
+    {
+      "id": "weekly-den-murray-jokic",
+      "summary": "Murray's 55 points; Jokić's 56 in a loss to the Wizards",
+      "origin": "weekly",
+      "teams": [
+        "den",
+        "was",
+        "por"
+      ],
+      "weeks": [
+        8,
+        18
+      ]
+    },
+    {
+      "id": "weekly-det-rise",
+      "summary": "Pistons climb over .500 and clinch a playoff spot",
+      "origin": "weekly",
+      "teams": [
+        "det"
+      ],
+      "weeks": [
+        11,
+        13,
+        25
+      ]
+    },
+    {
+      "id": "weekly-gsw-butler",
+      "summary": "Warriors acquire Schröder, then Jimmy Butler, and surge",
+      "origin": "weekly",
+      "teams": [
+        "gsw"
+      ],
+      "weeks": [
+        9,
+        17,
+        22
+      ]
+    },
+    {
+      "id": "weekly-hou-second-seed",
+      "summary": "Rockets surge to the 2 seed",
+      "origin": "weekly",
+      "teams": [
+        "hou"
+      ],
+      "weeks": [
+        24,
+        25
+      ]
+    },
+    {
+      "id": "weekly-ind-paris",
+      "summary": "Pacers and Spurs play two games in Paris",
+      "origin": "weekly",
+      "teams": [
+        "ind",
+        "sas"
+      ],
+      "weeks": [
+        14,
+        15
+      ]
+    },
+    {
+      "id": "weekly-lac-kawhi",
+      "summary": "Kawhi Leonard makes his season debut",
+      "origin": "weekly",
+      "teams": [
+        "lac"
+      ],
+      "weeks": [
+        10,
+        12
+      ]
+    },
+    {
+      "id": "weekly-lal-milestones",
+      "summary": "LeBron and Bronny play together; LeBron reaches 50,000 points",
+      "origin": "weekly",
+      "teams": [
+        "lal"
+      ],
+      "weeks": [
+        2,
+        21
+      ]
+    },
+    {
+      "id": "weekly-lal-wildfires",
+      "summary": "Los Angeles wildfires postpone Lakers and Clippers games",
+      "origin": "weekly",
+      "teams": [
+        "lal",
+        "lac"
+      ],
+      "weeks": [
+        13
+      ]
+    },
+    {
+      "id": "weekly-mem-smart-trade",
+      "summary": "Grizzlies trade Marcus Smart at the deadline",
+      "origin": "weekly",
+      "teams": [
+        "mem",
+        "was",
+        "sac"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-mia-butler",
+      "summary": "Heat suspend Jimmy Butler three times",
+      "origin": "weekly",
+      "teams": [
+        "mia"
+      ],
+      "weeks": [
+        11,
+        12,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "id": "weekly-mil-middleton-lillard",
+      "summary": "Bucks trade Middleton; Lillard out with a blood clot",
+      "origin": "weekly",
+      "teams": [
+        "mil",
+        "was"
+      ],
+      "weeks": [
+        17,
+        24
+      ]
+    },
+    {
+      "id": "weekly-min-edwards",
+      "summary": "Anthony Edwards' career-high 53; Towns returns to Minnesota",
+      "origin": "weekly",
+      "teams": [
+        "min",
+        "nyk"
+      ],
+      "weeks": [
+        10,
+        12
+      ]
+    },
+    {
+      "id": "weekly-nop-injuries",
+      "summary": "Pelicans injury wave; Dejounte Murray tears Achilles; Ingram traded",
+      "origin": "weekly",
+      "teams": [
+        "nop",
+        "tor"
+      ],
+      "weeks": [
+        4,
+        16,
+        17
+      ]
+    },
+    {
+      "id": "weekly-nyk-towns",
+      "summary": "Knicks acquire Karl-Anthony Towns",
+      "origin": "weekly",
+      "teams": [
+        "nyk",
+        "min"
+      ],
+      "weeks": [
+        10
+      ]
+    },
+    {
+      "id": "weekly-okc-holmgren",
+      "summary": "Chet Holmgren fractures his hip",
+      "origin": "weekly",
+      "teams": [
+        "okc"
+      ],
+      "weeks": [
+        4,
+        17
+      ]
+    },
+    {
+      "id": "weekly-orl-injuries",
+      "summary": "Banchero, Wagner and Suggs injuries",
+      "origin": "weekly",
+      "teams": [
+        "orl"
+      ],
+      "weeks": [
+        3,
+        8,
+        20
+      ]
+    },
+    {
+      "id": "weekly-phi-disaster",
+      "summary": "Sixers: George signing, Embiid suspension and shutdown, McCain injury",
+      "origin": "weekly",
+      "teams": [
+        "phi"
+      ],
+      "weeks": [
+        4,
+        9,
+        20,
+        25
+      ]
+    },
+    {
+      "id": "weekly-phx-moves",
+      "summary": "Suns trade Nurkić, chase Butler",
+      "origin": "weekly",
+      "teams": [
+        "phx",
+        "cha"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-sac-coach-fox",
+      "summary": "Kings fire Mike Brown, trade De’Aaron Fox",
+      "origin": "weekly",
+      "teams": [
+        "sac",
+        "sas"
+      ],
+      "weeks": [
+        11,
+        16
+      ]
+    },
+    {
+      "id": "weekly-sas-wemby-pop",
+      "summary": "Popovich stroke; Wembanyama out with DVT; Fox acquired",
+      "origin": "weekly",
+      "teams": [
+        "sas"
+      ],
+      "weeks": [
+        16,
+        19,
+        25
+      ]
+    },
+    {
+      "id": "weekly-tor-ingram",
+      "summary": "Raptors acquire Brandon Ingram",
+      "origin": "weekly",
+      "teams": [
+        "tor",
+        "nop"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-uta-worst",
+      "summary": "Jazz finish with the worst record",
+      "origin": "weekly",
+      "teams": [
+        "uta"
+      ],
+      "weeks": [
+        22,
+        25
+      ]
+    },
+    {
+      "id": "weekly-was-losing",
+      "summary": "Wizards lose 16 straight twice",
+      "origin": "weekly",
+      "teams": [
+        "was"
+      ],
+      "weeks": [
+        8,
+        16
+      ]
+    },
+    {
+      "id": "theme-nba-cup",
+      "summary": "Emirates NBA Cup",
+      "origin": "theme",
+      "teams": [
+        "mil",
+        "okc"
+      ]
+    },
+    {
+      "id": "theme-trade-deadline",
+      "summary": "February 2025 trade deadline",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "theme-play-in",
+      "summary": "SoFi Play-In Tournament",
+      "origin": "theme",
+      "teams": [
+        "mia",
+        "atl",
+        "chi",
+        "orl",
+        "gsw",
+        "mem",
+        "dal",
+        "sac"
+      ]
+    },
+    {
+      "id": "theme-achilles",
+      "summary": "Achilles tears to Murray, Lillard, Tatum and Haliburton",
+      "origin": "theme",
+      "teams": [
+        "nop",
+        "mil",
+        "bos",
+        "ind"
+      ]
+    },
+    {
+      "id": "theme-ownership",
+      "summary": "Record team sales: Celtics and Lakers",
+      "origin": "theme",
+      "teams": [
+        "bos",
+        "lal"
+      ]
+    },
+    {
+      "id": "theme-2024-offseason",
+      "summary": "2024 offseason moves: George to Philadelphia, Thompson to Dallas, Towns to New York",
+      "origin": "theme",
+      "teams": [
+        "phi",
+        "dal",
+        "gsw",
+        "nyk",
+        "min"
+      ]
+    },
+    {
+      "id": "draft-lottery",
+      "summary": "Mavericks win the lottery at 1.8% odds",
+      "origin": "draft",
+      "teams": [
+        "dal"
+      ]
+    },
+    {
+      "id": "draft-flagg",
+      "summary": "Cooper Flagg goes No. 1",
+      "origin": "draft",
+      "teams": [
+        "dal"
+      ]
+    },
+    {
+      "id": "draft-pre-draft-trades",
+      "summary": "Pre-draft trades: Durant to Houston, Bane to Orlando, Holiday and Porziņģis out of Boston",
+      "origin": "draft",
+      "teams": [
+        "phx",
+        "hou",
+        "orl",
+        "mem",
+        "bos",
+        "por",
+        "atl",
+        "bkn"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "cavaliers-15-0-start",
+      "title": "Cavaliers open 15-0",
+      "eventDate": "2024-11-17",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavaliers top Hornets, tie 2nd-best start to NBA season (15-0)",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/42455250/cavaliers-beat-hornets-tie-second-best-start-season-nba-history",
+        "publishedAt": "2024-11-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cle-streaks",
+        "retro-cavs-rise"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-win-nba-cup",
+      "title": "Bucks win the NBA Cup",
+      "eventDate": "2024-12-17",
+      "teams": [
+        "mil",
+        "okc"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Giannis Antetokounmpo carries red-hot Bucks to NBA Cup title",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=43033645",
+        "publishedAt": "2024-12-17"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-nba-cup"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "doncic-trade-lakers",
+      "title": "Dončić traded to the Lakers",
+      "eventDate": "2025-02-02",
+      "teams": [
+        "dal",
+        "lal",
+        "uta"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Luka Doncic to Lakers, Anthony Davis to Mavs in 3-team trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43659380/sources-mavericks-trading-doncic-lakers-anthony-davis",
+        "publishedAt": "2025-02-02"
+      },
+      "kind": "trade",
+      "blockbuster": true,
+      "guidance": [
+        "retro-doncic-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavericks-win-lottery",
+      "title": "Mavericks win the lottery at 1.8% odds",
+      "eventDate": "2025-05-12",
+      "teams": [
+        "dal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Mavericks win NBA draft lottery with 1.8% odds",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45117355/mavericks-win-nba-draft-lottery-18-odds",
+        "publishedAt": "2025-05-12"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-lottery"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-reach-finals",
+      "title": "Pacers reach their first Finals in 25 years",
+      "eventDate": "2025-05-31",
+      "teams": [
+        "ind",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers race past Knicks to reach first NBA Finals in 25 years",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45413751/pacers-race-knicks-reach-first-nba-finals-25-years",
+        "publishedAt": "2025-05-31"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-ind",
+        "playoffs-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-win-title",
+      "title": "Thunder win their first title",
+      "eventDate": "2025-06-22",
+      "teams": [
+        "okc",
+        "ind"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Shai Gilgeous-Alexander wins NBA Finals MVP, completing season not seen since Shaquille O'Neal, Michael Jordan",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/shai-gilgeous-alexander-wins-nba-finals-mvp-completing-season-not-seen-since-shaquille-oneal-michael-jordan/",
+        "publishedAt": "2025-06-22"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-finals",
+        "playoffs-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cavaliers-rout-heat",
+      "title": "Cavaliers hand Heat worst playoff loss in sweep",
+      "eventDate": "2025-04-26",
+      "teams": [
+        "cle",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cleveland Cavaliers hand Miami Heat worst-ever playoff loss",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44871262/cleveland-cavaliers-hand-miami-heat-worst-ever-playoff-loss",
+        "publishedAt": "2025-04-26"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-cle",
+        "playoffs-mia"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-oust-cavaliers",
+      "title": "Pacers knock out the top-seeded Cavaliers",
+      "eventDate": "2025-05-13",
+      "teams": [
+        "ind",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers pen winning 'script,' top Cavs to return to East finals",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45135467/pacers-eliminate-cavaliers-return-eastern-conference-finals",
+        "publishedAt": "2025-05-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-ind",
+        "playoffs-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-stun-bucks",
+      "title": "Pacers rally past Bucks in overtime to close out series",
+      "eventDate": "2025-04-29",
+      "teams": [
+        "ind",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "How the Pacers eliminated the Bucks and pulled off the biggest comeback in franchise playoff history",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/how-the-pacers-eliminated-the-bucks-and-pulled-off-the-biggest-comeback-in-franchise-playoff-history/",
+        "publishedAt": "2025-04-29"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-ind",
+        "playoffs-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "brunson-eliminates-pistons",
+      "title": "Brunson's late 3 ends the Pistons' season",
+      "eventDate": "2025-05-01",
+      "teams": [
+        "nyk",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jalen Brunson's clutch 3-pointer eliminates Pistons, sends Knicks to East semis",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/knicks-brunson-series-clinching-3-pointer",
+        "publishedAt": "2025-05-01"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-nyk",
+        "playoffs-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-oust-celtics",
+      "title": "Knicks oust the champion Celtics",
+      "eventDate": "2025-05-16",
+      "teams": [
+        "nyk",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks oust Celtics as playoff run marches into East finals",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45186016/knicks-beat-celtics-38-book-long-awaited-spot-east-finals",
+        "publishedAt": "2025-05-16"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-nyk",
+        "playoffs-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "celtics-close-out-magic",
+      "title": "Celtics close out the Magic",
+      "eventDate": "2025-04-29",
+      "teams": [
+        "bos",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Celtics close out Magic in Game 5 with blowout win, advance to second round",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/article/nba-playoffs-celtics-close-out-magic-in-game-5-with-blowout-win-advance-to-second-round-031740973.html",
+        "publishedAt": "2025-04-29"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-bos",
+        "playoffs-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-record-comeback-grizzlies",
+      "title": "Thunder erase 29-point deficit on way to sweeping Grizzlies",
+      "eventDate": "2025-04-24",
+      "teams": [
+        "okc",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder Make Playoff History With Huge Comeback to Beat Grizzlies",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/thunder-make-playoff-history-comeback-beat-grizzlies",
+        "publishedAt": "2025-04-25"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-okc",
+        "playoffs-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-beat-nuggets-game-7",
+      "title": "Thunder beat the Nuggets in Game 7",
+      "eventDate": "2025-05-18",
+      "teams": [
+        "okc",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder conquer nerves to topple Nuggets and reach West finals",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45213686/thunder-conquer-nerves-topple-nuggets-reach-west-finals",
+        "publishedAt": "2025-05-18"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-okc",
+        "playoffs-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-oust-wolves",
+      "title": "Thunder beat the Wolves to reach the Finals",
+      "eventDate": "2025-05-28",
+      "teams": [
+        "okc",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder oust Wolves in 5, roll into first NBA Finals since '12",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45368421/thunder-oust-wolves-5-roll-first-nba-finals-12",
+        "publishedAt": "2025-05-28"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-okc",
+        "playoffs-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nuggets-beat-clippers-game-7",
+      "title": "Nuggets beat the Clippers in Game 7",
+      "eventDate": "2025-05-03",
+      "teams": [
+        "den",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Nuggets cap grueling series with Game 7 blowout over Clippers, set up showdown with OKC, matchup of MVP finalists",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/article/nba-playoffs-nuggets-cap-grueling-series-with-game-7-blowout-over-clippers-set-up-showdown-with-okc-matchup-of-mvp-finalists-015519802.html",
+        "publishedAt": "2025-05-03"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-den",
+        "playoffs-lac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wolves-eliminate-lakers",
+      "title": "Wolves knock out the Lakers in five",
+      "eventDate": "2025-04-30",
+      "teams": [
+        "min",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Minnesota Timberwolves Have Relinquished the Self",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2025/05/01/nba/minnesota-timberwolves-rudy-gobert-los-angeles-lakers-game-5-nba-playoffs",
+        "publishedAt": "2025-05-01"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-min",
+        "playoffs-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wolves-oust-warriors",
+      "title": "Wolves beat the Curry-less Warriors",
+      "eventDate": "2025-05-14",
+      "teams": [
+        "min",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Timberwolves close out Warriors to reach second straight Western Conference finals",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/nba-playoffs-timberwolves-close-out-warriors-to-reach-second-straight-western-conference-finals-041351286.html",
+        "publishedAt": "2025-05-14"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-min",
+        "playoffs-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "warriors-win-game-7-rockets",
+      "title": "Warriors win Game 7 in Houston",
+      "eventDate": "2025-05-04",
+      "teams": [
+        "gsw",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Buddy Hield leads Warriors flying past Rockets in Game 7 to close out series on the road",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/nba-playoffs-buddy-hield-leads-warriors-flying-past-rockets-in-game-7-to-close-out-series-on-the-road-030635056.html",
+        "publishedAt": "2025-05-04"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-gsw",
+        "playoffs-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "haliburton-achilles-game-7",
+      "title": "Haliburton tears Achilles in Game 7 of the Finals",
+      "eventDate": "2025-06-22",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers star Tyrese Haliburton undergoes surgery on right Achilles tendon",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/star-guard-tyrese-haliburton-tears-right-achilles-tendon-pacers-confirm",
+        "publishedAt": "2025-06-23"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-finals",
+        "theme-achilles"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-10-seed-play-in",
+      "title": "Heat become the first 10 seed to reach the playoffs",
+      "eventDate": "2025-04-18",
+      "teams": [
+        "mia",
+        "atl",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat put away Hawks in OT, advance out of play-in to face Cavs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44740719/heat-put-away-hawks-ot-advance-play-face-cavaliers",
+        "publishedAt": "2025-04-18"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-mia",
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "magic-claim-7-seed",
+      "title": "Magic claim the 7 seed in the play-in",
+      "eventDate": "2025-04-15",
+      "teams": [
+        "orl",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Anthony, Magic claim 7th seed with 120-95 win over Hawks in Play-In Tournament",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/anthony-magic-claim-7th-seed-with-120-95-win-over-hawks-in-play-in-tournament/",
+        "publishedAt": "2025-04-15"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-orl",
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "warriors-win-play-in",
+      "title": "Butler and Curry carry Warriors through the play-in",
+      "eventDate": "2025-04-15",
+      "teams": [
+        "gsw",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors dispel play-in struggles, advance to face Rockets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44693889/butler-curry-lead-warriors-grizzlies-playoffs",
+        "publishedAt": "2025-04-15"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-gsw",
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "grizzlies-eliminate-mavericks",
+      "title": "Grizzlies end the Mavericks’ season in the play-in",
+      "eventDate": "2025-04-18",
+      "teams": [
+        "mem",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavs bow out in play-in game, proud despite 'tumultuous' season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44743629/mavs-bow-play-game-proud-tumultuous-season",
+        "publishedAt": "2025-04-18"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-mem",
+        "theme-play-in"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "tatum-achilles",
+      "title": "Tatum ruptures Achilles against the Knicks",
+      "eventDate": "2025-05-12",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics' Jayson Tatum has surgery on ruptured right Achilles",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45131551/celtics-jayson-tatum-undergoes-surgery-torn-achilles",
+        "publishedAt": "2025-05-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-bos",
+        "theme-achilles"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lillard-achilles",
+      "title": "Lillard tears Achilles in the playoffs",
+      "eventDate": "2025-04-27",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks' Damian Lillard to have surgery for torn Achilles tendon",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44903786/sources-bucks-damian-lillard-torn-left-achilles-tendon",
+        "publishedAt": "2025-04-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-mil",
+        "theme-achilles"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "gilgeous-alexander-mvp",
+      "title": "Gilgeous-Alexander wins MVP",
+      "eventDate": "2025-05-21",
+      "teams": [
+        "okc"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Oklahoma City's Shai Gilgeous-Alexander named 2024-25 Kia NBA MVP",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/kia-nba-most-valuable-player-award-2024-25-shai-gilgeous-alexander",
+        "publishedAt": "2025-05-21"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "awards-mvp"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mobley-dpoy",
+      "title": "Mobley wins Defensive Player of the Year",
+      "eventDate": "2025-04-24",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavaliers' Evan Mobley named 2024-25 Kia NBA Defensive Player of the Year",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/kia-defensive-player-of-the-year-award-2024-25-evan-mobley",
+        "publishedAt": "2025-04-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-dpoy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "castle-roy",
+      "title": "Castle wins Rookie of the Year",
+      "eventDate": "2025-04-29",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs' Stephon Castle named 2024-25 Kia NBA Rookie of the Year Award winner",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/kia-nba-rookie-of-the-year-2024-25-stephon-castle",
+        "publishedAt": "2025-04-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-roy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "daniels-mip",
+      "title": "Daniels wins Most Improved Player",
+      "eventDate": "2025-04-30",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks' Dyson Daniels named 2024-25 Kia NBA Most Improved Player",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/kia-most-improved-player-2024-25-dyson-daniels",
+        "publishedAt": "2025-04-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-mip"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pritchard-sixth-man",
+      "title": "Pritchard wins Sixth Man of the Year",
+      "eventDate": "2025-04-22",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics' Payton Pritchard wins NBA's Sixth Man of the Year for providing Boston with young spark",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/celtics-payton-pritchard-wins-nbas-sixth-man-of-the-year-for-providing-boston-with-young-spark/",
+        "publishedAt": "2025-04-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-6moy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "brunson-clutch-player",
+      "title": "Brunson wins Clutch Player of the Year",
+      "eventDate": "2025-04-23",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks' Jalen Brunson wins NBA's Clutch Player of the Year award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44823711/knicks-jalen-brunson-wins-nba-clutch-player-year-award",
+        "publishedAt": "2025-04-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-cpoy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "atkinson-coach-of-year",
+      "title": "Atkinson wins Coach of the Year",
+      "eventDate": "2025-05-05",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kenny Atkinson named NBA Coach of the Year after leading Cavaliers to best record in Eastern Conference",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/kenny-atkinson-named-nba-coach-of-the-year-after-leading-cavaliers-to-best-record-in-eastern-conference-223321021.html",
+        "publishedAt": "2025-05-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-coy",
+        "retro-cavs-rise"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "butler-traded-to-warriors",
+      "title": "Butler traded to the Warriors",
+      "eventDate": "2025-02-06",
+      "teams": [
+        "gsw",
+        "mia",
+        "uta",
+        "det"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Warriors Acquire Five-Time All-NBA Forward Jimmy Butler From Heat",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/warriors/news/warriors-acquire-five-time-all-nba-forward-jimmy-butler-from-heat-20250206",
+        "publishedAt": "2025-02-06"
+      },
+      "kind": "trade",
+      "blockbuster": true,
+      "guidance": [
+        "retro-butler-saga",
+        "weekly-gsw-butler",
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "fox-traded-to-spurs",
+      "title": "Fox to the Spurs, LaVine to the Kings",
+      "eventDate": "2025-02-02",
+      "teams": [
+        "sas",
+        "sac",
+        "chi"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "De'Aaron Fox to Spurs, Zach LaVine to Kings in 3-team trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43670995/kings-trading-deaaron-fox-spurs-multiteam-deal-zach-lavine-sacramento",
+        "publishedAt": "2025-02-02"
+      },
+      "kind": "trade",
+      "blockbuster": true,
+      "guidance": [
+        "weekly-sac-coach-fox",
+        "weekly-chi-lavine-trade",
+        "weekly-sas-wemby-pop",
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "middleton-traded-to-wizards",
+      "title": "Bucks trade Middleton for Kuzma",
+      "eventDate": "2025-02-05",
+      "teams": [
+        "mil",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks trade Khris Middleton to Wizards for Kyle Kuzma",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/bucks-trade-khris-middleton-wizards-kyle-kuzma",
+        "publishedAt": "2025-02-05"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil-middleton-lillard",
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hunter-traded-to-cavaliers",
+      "title": "Cavaliers add De’Andre Hunter",
+      "eventDate": "2025-02-06",
+      "teams": [
+        "cle",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavs acquire De'Andre Hunter from Hawks for Caris LeVert, Georges Niang, draft considerations",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/cavaliers-hawks-hunter-levert-niang-trade",
+        "publishedAt": "2025-02-06"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-atl-hunter-trade",
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "ingram-traded-to-raptors",
+      "title": "Ingram traded to the Raptors",
+      "eventDate": "2025-02-05",
+      "teams": [
+        "tor",
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brandon Ingram traded to Raptors; Bruce Brown, Kelly Olynyk to Pels",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43712864/brandon-ingram-traded-raptors-bruce-brown-kelly-olynyk-pels",
+        "publishedAt": "2025-02-05"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-tor-ingram",
+        "weekly-nop-injuries",
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "schroder-traded-to-warriors",
+      "title": "Warriors acquire Schröder from the Nets",
+      "eventDate": "2024-12-14",
+      "teams": [
+        "gsw",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors acquire Dennis Schroder in trade with Nets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/42970182/sources-warriors-acquiring-dennis-schroder-nets",
+        "publishedAt": "2024-12-14"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn-trades",
+        "weekly-gsw-butler"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "finney-smith-traded-to-lakers",
+      "title": "Lakers trade Russell for Finney-Smith",
+      "eventDate": "2024-12-29",
+      "teams": [
+        "lal",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers trade D'Angelo Russell to Nets in 4-player deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43209044/sources-lakers-trading-dangelo-russell-nets-4-player-deal",
+        "publishedAt": "2024-12-29"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mark-williams-trade-rescinded",
+      "title": "Lakers rescind Mark Williams trade",
+      "eventDate": "2025-02-08",
+      "teams": [
+        "lal",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers' trade for Hornets center Mark Williams rescinded",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/lakers-hornets-trade-rescinded",
+        "publishedAt": "2025-02-08"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha-williams-trade",
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "grizzlies-trade-smart",
+      "title": "Grizzlies trade Marcus Smart",
+      "eventDate": "2025-02-06",
+      "teams": [
+        "mem",
+        "was",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Grizzlies trading Marcus Smart, pick to Wizards",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43721787/grizzlies-trading-marcus-smart-pick-wizards",
+        "publishedAt": "2025-02-06"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem-smart-trade",
+        "theme-trade-deadline"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nurkic-traded-to-hornets",
+      "title": "Suns trade Nurkić to the Hornets",
+      "eventDate": "2025-02-06",
+      "teams": [
+        "phx",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns trade center Jusuf Nurkic to Hornets for Cody Martin",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43720738/sources-suns-trading-jusuf-nurkic-hornets-cody-martin",
+        "publishedAt": "2025-02-06"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx-moves",
+        "theme-trade-deadline"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "bogdanovic-traded-to-clippers",
+      "title": "Clippers acquire Bogdanović",
+      "eventDate": "2025-02-06",
+      "teams": [
+        "lac",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers acquire Bogan Bogdanović from Hawks in 3-player deal",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/clippers-hawks-trade-bogdan-bogdanovic",
+        "publishedAt": "2025-02-06"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-atl-hunter-trade",
+        "theme-trade-deadline"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "towns-traded-to-knicks",
+      "title": "Knicks trade for Karl-Anthony Towns",
+      "eventDate": "2024-09-27",
+      "teams": [
+        "nyk",
+        "min",
+        "cha"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Karl-Anthony Towns Acquired by New York Knicks in Trade with Minnesota Timberwolves",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/knicks/news/new-york-knicks-acquire-karl-anthony-towns",
+        "publishedAt": "2024-10-02"
+      },
+      "kind": "trade",
+      "blockbuster": true,
+      "guidance": [
+        "weekly-nyk-towns",
+        "weekly-min-edwards",
+        "theme-2024-offseason"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thompson-joins-mavericks",
+      "title": "Klay Thompson leaves the Warriors for Dallas",
+      "eventDate": "2024-07-06",
+      "teams": [
+        "dal",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavs complete sign-and-trade deal for Klay Thompson in 6-team transaction",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/klay-thompson-2024-free-agency",
+        "publishedAt": "2024-07-06"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-2024-offseason"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "durant-traded-to-rockets",
+      "title": "Durant traded to the Rockets",
+      "eventDate": "2025-06-22",
+      "teams": [
+        "phx",
+        "hou"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Sources: Suns trading Kevin Durant to Rockets in blockbuster deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45561747/sources-suns-trading-kevin-durant-rockets-blockbuster-deal",
+        "publishedAt": "2025-06-22"
+      },
+      "kind": "trade",
+      "blockbuster": true,
+      "guidance": [
+        "draft-pre-draft-trades",
+        "retro-suns-disappointment"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bane-traded-to-magic",
+      "title": "Magic trade four firsts for Desmond Bane",
+      "eventDate": "2025-06-15",
+      "teams": [
+        "orl",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies trade Desmond Bane to Magic in blockbuster deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45517668/sources-grizzlies-trade-desmond-bane-magic-blockbuster-deal",
+        "publishedAt": "2025-06-15"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "draft-pre-draft-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "holiday-traded-to-blazers",
+      "title": "Celtics trade Holiday to the Blazers",
+      "eventDate": "2025-06-23",
+      "teams": [
+        "bos",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics trading Jrue Holiday to Trail Blazers, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45572537/celtics-trading-jrue-holiday-trail-blazers-sources-say",
+        "publishedAt": "2025-06-23"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "draft-pre-draft-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "porzingis-traded-to-hawks",
+      "title": "Celtics trade Porziņģis to the Hawks",
+      "eventDate": "2025-06-24",
+      "teams": [
+        "bos",
+        "atl",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kristaps Porziņģis trade: Celtics big man heading to Hawks in three-team deal with Nets, per report",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/kristaps-porzingis-trade-celtics-big-man-heading-to-hawks-in-three-team-deal-with-nets-per-report/",
+        "publishedAt": "2025-06-24"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "draft-pre-draft-trades"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "george-signs-with-sixers",
+      "title": "Paul George signs with the Sixers",
+      "eventDate": "2024-07-01",
+      "teams": [
+        "phi",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Paul George agrees to 4-year, $212M deal with 76ers, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/40471660/paul-george-agrees-4-year-212m-deal-76ers-sources",
+        "publishedAt": "2024-07-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-2024-offseason",
+        "weekly-phi-disaster"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "simmons-bought-out",
+      "title": "Nets buy out Ben Simmons",
+      "eventDate": "2025-02-08",
+      "teams": [
+        "bkn",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets buy out Ben Simmons; move to Clippers next, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43749600/nets-buy-ben-simmons-contract-sources-say",
+        "publishedAt": "2025-02-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn-trades"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "kings-fire-mike-brown",
+      "title": "Kings fire Mike Brown",
+      "eventDate": "2024-12-27",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Struggling Kings fire third-year coach Mike Brown",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43185140/struggling-kings-fire-head-coach-mike-brown",
+        "publishedAt": "2024-12-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac-coach-fox",
+        "retro-coaching-firings"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "grizzlies-fire-jenkins",
+      "title": "Grizzlies fire Taylor Jenkins with nine games left",
+      "eventDate": "2025-03-28",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Taylor Jenkins fired as Grizzlies coach after six seasons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44444002/taylor-jenkins-grizzlies-coach-six-seasons",
+        "publishedAt": "2025-03-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-coaching-firings"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nuggets-fire-malone-booth",
+      "title": "Nuggets fire Malone and Booth",
+      "eventDate": "2025-04-08",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets fire coach Michael Malone and GM Calvin Booth",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44588997/nuggets-fire-coach-michael-malone-stunner",
+        "publishedAt": "2025-04-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-coaching-firings"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-fire-thibodeau",
+      "title": "Knicks fire Thibodeau",
+      "eventDate": "2025-06-03",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks fire Tom Thibodeau as coach after five seasons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45443832/sources-knicks-firing-tom-thibodeau-coach-5-seasons",
+        "publishedAt": "2025-06-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-coaching-firings",
+        "playoffs-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "suns-fire-budenholzer",
+      "title": "Suns fire Budenholzer after one season",
+      "eventDate": "2025-04-14",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns fire coach Mike Budenholzer after one season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44671389/sources-suns-fire-coach-mike-budenholzer-one-season",
+        "publishedAt": "2025-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-suns-disappointment",
+        "retro-coaching-firings"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "popovich-stroke",
+      "title": "Popovich suffers a stroke",
+      "eventDate": "2024-11-02",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs: Coach Gregg Popovich recovering from mild stroke",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/gregg-popovich-suffered-mild-stroke-nov-2",
+        "publishedAt": "2024-11-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sas-wemby-pop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "popovich-steps-down",
+      "title": "Popovich steps down as coach",
+      "eventDate": "2025-05-02",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Gregg Popovich done coaching Spurs; Mitch Johnson takes over",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44967466/sources-popovich-done-coaching-spurs-staying-front-office",
+        "publishedAt": "2025-05-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sas-wemby-pop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pelicans-hire-dumars",
+      "title": "Pelicans replace Griffin with Joe Dumars",
+      "eventDate": "2025-04-16",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Joe Dumars vows to 'set standards' off Pelicans' 21-61 year",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44805658/joe-dumars-vows-set-standards-pelicans-21-61-year",
+        "publishedAt": "2025-04-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop-injuries"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wembanyama-out-for-season",
+      "title": "Wembanyama out for the season with a blood clot",
+      "eventDate": "2025-02-20",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Victor Wembanyama out for the season: Impact on Spurs, future",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43938058/wembanyama-season-means-spurs",
+        "publishedAt": "2025-02-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sas-wemby-pop",
+        "retro-injuries"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "irving-tears-acl",
+      "title": "Kyrie Irving tears his ACL",
+      "eventDate": "2025-03-03",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavericks' Kyrie Irving has torn ACL, out remainder of season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44107102/sources-mavericks-kyrie-irving-torn-acl-rest-season",
+        "publishedAt": "2025-03-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal-injuries",
+        "retro-injuries"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavericks-trade-fallout",
+      "title": "Dallas fans revolt over the Dončić trade",
+      "eventDate": "2025-02-21",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Protests, ejections and backlash: Inside the fallout from the Luka Doncic trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43924307/inside-fallout-dallas-mavericks-luka-doncic-trade-los-angeles-lakers",
+        "publishedAt": "2025-02-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-doncic-trade",
+        "weekly-dal-injuries"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "doncic-returns-to-dallas",
+      "title": "Dončić scores 45 in his return to Dallas",
+      "eventDate": "2025-04-09",
+      "teams": [
+        "lal",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers' Luka Doncic wipes away tears, then whips Mavs in return",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44610795/lakers-luka-doncic-wipes-away-tears-whips-mavs-return",
+        "publishedAt": "2025-04-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-doncic-trade"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "embiid-suspended",
+      "title": "Embiid suspended for shoving a columnist",
+      "eventDate": "2024-11-05",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA suspends 76ers center Joel Embiid for shoving a member of the media",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/nba-suspends-joel-embiid-3-games",
+        "publishedAt": "2024-11-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi-disaster"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "embiid-shut-down",
+      "title": "Sixers shut down Embiid after 19 games",
+      "eventDate": "2025-02-28",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "76ers shut down Joel Embiid: Knee injury ends former MVP's season as team determines treatment plan",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/76ers-shut-down-joel-embiid-knee-injury-ends-former-mvps-season-as-team-determines-treatment-plan/",
+        "publishedAt": "2025-02-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi-disaster",
+        "retro-injuries"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mccain-out-for-season",
+      "title": "McCain’s rookie season ends with knee surgery",
+      "eventDate": "2025-01-09",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "76ers rule out Jared McCain for rest of season after knee surgery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43351757/76ers-rule-jared-mccain-rest-season-knee-surgery",
+        "publishedAt": "2025-01-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi-disaster"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "holmgren-hip-fracture",
+      "title": "Holmgren fractures his hip",
+      "eventDate": "2024-11-10",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder center Chet Holmgren (pelvic fracture) out at least 8-10 weeks",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/chet-holmgren-thunder-hip-injury",
+        "publishedAt": "2024-11-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-okc-holmgren"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "banchero-tears-oblique",
+      "title": "Banchero tears his oblique",
+      "eventDate": "2024-10-30",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Paolo Banchero Diagnosed With Torn Right Oblique",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/magic/news/paolo-banchero-diagnosed-with-torn-right-oblique-20241031",
+        "publishedAt": "2024-10-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-orl-injuries"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "suggs-out-for-season",
+      "title": "Suggs out for the season after knee surgery",
+      "eventDate": "2025-03-04",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic's Jalen Suggs to miss rest of season after knee surgery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44107418/magic-jalen-suggs-miss-rest-season-knee-surgery",
+        "publishedAt": "2025-03-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-orl-injuries"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jalen-johnson-out-for-season",
+      "title": "Jalen Johnson out for the season",
+      "eventDate": "2025-01-29",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks' Jalen Johnson to have season-ending shoulder surgery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43611422/sources-hawks-jalen-johnson-season-ending-surgery",
+        "publishedAt": "2025-01-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-atl-jalen-johnson"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "dejounte-murray-achilles",
+      "title": "Dejounte Murray ruptures his Achilles",
+      "eventDate": "2025-01-31",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Dejounte Murray ruptures Achilles tendon in Pelicans loss",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43645701/pelicans-murray-suffers-lower-right-leg-injury-vs-celtics",
+        "publishedAt": "2025-01-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop-injuries",
+        "theme-achilles"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lillard-blood-clot",
+      "title": "Lillard sidelined by a blood clot",
+      "eventDate": "2025-03-25",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Damian Lillard Out Indefinitely With Blood Clot in Calf",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/damian-lillard-out-indefinitely-blood-clot-bucks",
+        "publishedAt": "2025-03-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil-middleton-lillard"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "kawhi-season-debut",
+      "title": "Kawhi Leonard makes his season debut",
+      "eventDate": "2025-01-04",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers' Kawhi Leonard makes season debut vs. Hawks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43279073/clippers-kawhi-leonard-plans-make-season-debut-sat",
+        "publishedAt": "2025-01-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac-kawhi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-suspend-butler",
+      "title": "Heat suspend Butler and open trade talks",
+      "eventDate": "2025-01-03",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat suspend Jimmy Butler 7 games, will listen to trade offers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43276332/heat-suspend-jimmy-butler-listen-trade-offers",
+        "publishedAt": "2025-01-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mia-butler",
+        "retro-butler-saga"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lebron-bronny-play-together",
+      "title": "LeBron and Bronny play together",
+      "eventDate": "2024-10-22",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LeBron, Bronny James first father and son to play together",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/41653840/lebron-james-bronny-james-share-court-first-nba",
+        "publishedAt": "2024-10-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lal-milestones",
+        "retro-aging-stars"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lebron-50000-points",
+      "title": "LeBron reaches 50,000 points",
+      "eventDate": "2025-03-04",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers star LeBron James surpasses 50,000 combined points in regular season and playoffs",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/lakers-lebron-james-surpasses-50000-total-points",
+        "publishedAt": "2025-03-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lal-milestones",
+        "retro-aging-stars"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jokic-triple-double-season",
+      "title": "Jokić averages a triple-double",
+      "eventDate": "2025-04-11",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets' Nikola Jokic wraps up triple-double average for season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44637129/nuggets-nikola-jokic-wraps-triple-double-average-season",
+        "publishedAt": "2025-04-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-jokic-triple-double"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "murray-scores-55",
+      "title": "Jamal Murray scores 55",
+      "eventDate": "2025-02-12",
+      "teams": [
+        "den",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jamal Murray's career-best 55 points propel streaking Nuggets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43820341/jamal-murray-career-best-55-points-propel-streaking-nuggets",
+        "publishedAt": "2025-02-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den-murray-jokic"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wizards-end-skid-vs-jokic-56",
+      "title": "Wizards end 16-game skid despite Jokić’s 56",
+      "eventDate": "2024-12-07",
+      "teams": [
+        "was",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards' 16-game losing streak ends: Washington stuns Denver despite Nikola Jokic's career-high 56 points",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/wizards-16-game-losing-streak-ends-washington-stuns-denver-despite-nikola-jokics-career-high-56-points/",
+        "publishedAt": "2024-12-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was-losing",
+        "weekly-den-murray-jokic"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "edwards-scores-53",
+      "title": "Anthony Edwards scores 53 in a loss",
+      "eventDate": "2025-01-04",
+      "teams": [
+        "min",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Anthony Edwards scores career-high 53 in loss to Pistons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43290175/anthony-edwards-scores-career-high-53-loss-timberwolves-pistons",
+        "publishedAt": "2025-01-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min-edwards"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "giddey-beats-lakers-from-halfcourt",
+      "title": "Giddey beats the Lakers from beyond halfcourt",
+      "eventDate": "2025-03-27",
+      "teams": [
+        "chi",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Giddey's 47-foot buzzer-beater lifts red-hot Bulls to wild win over Lakers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44437104/giddey-47-foot-buzzer-beater-lifts-red-hot-bulls-wild-win-lakers",
+        "publishedAt": "2025-03-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi-giddey-winner"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "blazers-beat-hornets-by-53",
+      "title": "Blazers beat Hornets by a franchise-record 53",
+      "eventDate": "2025-02-22",
+      "teams": [
+        "por",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trail Blazers romp to the largest blowout victory in team history, routing Hornets 141-88",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/article/trail-blazers-romp-largest-blowout-053415351.html",
+        "publishedAt": "2025-02-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha-drought"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jazz-worst-record",
+      "title": "Jazz finish with the worst record in franchise history",
+      "eventDate": "2025-04-13",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz finish with the worst record in the NBA. All they can do is hope it was all worth it",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/article/jazz-finish-worst-record-nba-235640303.html",
+        "publishedAt": "2025-04-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta-worst"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-record-point-differential",
+      "title": "Thunder set the point differential record",
+      "eventDate": "2025-04-13",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder break NBA record for scoring differential in a season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44665322/oklahoma-city-thunder-break-nba-record-scoring-differential-season",
+        "publishedAt": "2025-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-thunder-historic"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pistons-clinch-playoffs",
+      "title": "Pistons clinch their first playoff spot since 2019",
+      "eventDate": "2025-04-04",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons beat Raptors to clinch 1st playoff berth since 2018-19",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/pistons-clinch-playoff-berth",
+        "publishedAt": "2025-04-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-pistons-turnaround",
+        "weekly-det-rise"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cavaliers-16-game-streak-ends",
+      "title": "Cavaliers’ franchise-record 16-game streak ends",
+      "eventDate": "2025-03-16",
+      "teams": [
+        "cle",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic end Cavaliers' franchise-best win streak at 16 games",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44279357/magic-end-cavaliers-franchise-best-win-streak-16-games",
+        "publishedAt": "2025-03-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cle-streaks"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "rockets-clinch-2-seed",
+      "title": "Rockets clinch the 2 seed",
+      "eventDate": "2025-04-08",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "With Lakers’ loss, Rockets clinch No. 2 spot in 2025 West playoff field",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/article/lakers-loss-rockets-clinch-no-022642179.html",
+        "publishedAt": "2025-04-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-hou-second-seed"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-spurs-paris-games",
+      "title": "Pacers and Spurs play in Paris",
+      "eventDate": "2025-01-23",
+      "teams": [
+        "ind",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers-Spurs game in Paris on Jan. 23 delivers most-watched NBA game ever in France",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/pacers-spurs-jan-23-most-watched-nba-game-ever-france",
+        "publishedAt": "2025-01-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind-paris"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wildfires-postpone-games",
+      "title": "Los Angeles wildfires postpone games",
+      "eventDate": "2025-01-11",
+      "teams": [
+        "lal",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA postpones Spurs-Lakers, Hornets-Clips in L.A. due to fires",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43365134/nba-postpones-spurs-lakers-hornets-clips-la-due-fires",
+        "publishedAt": "2025-01-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lal-wildfires"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "celtics-sold",
+      "title": "Celtics sold for a record $6.1 billion",
+      "eventDate": "2025-03-20",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Boston Celtics sale: NBA franchise agrees to sell for record-breaking $6.1 billion to Bill Chisholm",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/boston-celtics-sale-nba-franchise-agrees-to-sell-for-record-breaking-6-1-billion-to-bill-chisholm/",
+        "publishedAt": "2025-03-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-ownership"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-sold",
+      "title": "Buss family sells the Lakers to Mark Walter",
+      "eventDate": "2025-06-18",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Buss family to sell Lakers to Mark Walter for $10B valuation",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45539931/buss-family-agrees-sell-lakers-mark-walter-sources-say",
+        "publishedAt": "2025-06-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-ownership"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "most-angsty-season",
+      "title": "An injury-plagued, angst-filled regular season",
+      "eventDate": "2025-04-11",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "Farewell to the Most Angsty NBA Season Ever",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2025/04/11/nba/nba-regular-season-injuries-trades-standings-2024-25",
+        "publishedAt": "2025-04-11"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-injuries",
+        "retro-doncic-trade"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "biggest-surprises",
+      "title": "The season’s biggest surprises",
+      "eventDate": "2025-04-08",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "Luka Dončić-Anthony Davis trade among 5 biggest surprises from 2024-25 season",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/5-biggest-surprises-from-2024-25-season",
+        "publishedAt": "2025-04-08"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-doncic-trade",
+        "retro-pistons-turnaround",
+        "retro-cavs-rise",
+        "retro-coaching-firings"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "trade-deadline-winners-losers",
+      "title": "A trade deadline reshaped by Dončić and Butler",
+      "eventDate": "2025-02-06",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "2025 NBA Trade Deadline Winners and Losers",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2025/02/06/nba/nba-trade-deadline-2025-tracker-luka-doncic-jimmy-butler",
+        "publishedAt": "2025-02-06"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "flagg-no-1-pick",
+      "title": "Mavericks draft Cooper Flagg No. 1",
+      "eventDate": "2025-06-25",
+      "teams": [
+        "dal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Mavericks draft Cooper Flagg with No. 1 pick in 2025 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/dallas-mavericks-take-cooper-flagg-no-1-pick-nba-draft",
+        "publishedAt": "2025-06-25"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-flagg"
+      ],
+      "status": "included"
+    }
+  ]
+}
