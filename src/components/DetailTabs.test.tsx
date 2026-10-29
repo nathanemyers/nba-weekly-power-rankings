@@ -75,23 +75,23 @@ describe('DetailTabs', () => {
       'Trends',
       'Roster',
       'Awards',
-      'Storylines',
     ])
     expect(enabledTabs()).toEqual(['Trends', 'Awards'])
     expect(selectedTab()).toBe('Awards')
   })
 
-  it('opens on Roster when the pinned team has a roster', async () => {
+  it('opens on Summary when a team is pinned', async () => {
     await renderTabs([Team.Boston])
     expect(enabledTabs()).toEqual(['Summary', 'Trends', 'Roster', 'Awards'])
-    expect(enabledTabs()).not.toContain('Storylines')
-    expect(selectedTab()).toBe('Roster')
+    expect(selectedTab()).toBe('Summary')
   })
 
-  it('falls back to Summary when the pinned team has no roster', async () => {
-    await renderTabs([Team.Miami])
-    expect(enabledTabs()).not.toContain('Roster')
-    expect(selectedTab()).toBe('Summary')
+  it('keeps Roster selected when another team with a roster is pinned', async () => {
+    const user = userEvent.setup()
+    const { store } = await renderTabs([Team.Boston])
+    await user.click(screen.getByRole('tab', { name: 'Roster' }))
+    pin(store, [Team.Detroit])
+    expect(selectedTab()).toBe('Roster')
   })
 
   it('keeps the chosen tab across pin changes while it is available', async () => {
@@ -110,10 +110,15 @@ describe('DetailTabs', () => {
     expect(selectedTab()).toBe('Awards')
   })
 
-  it('opens on Storylines when the season has storylines and nothing is pinned', async () => {
+  it('opens on Summary with season storylines when the season has them and nothing is pinned', async () => {
     await renderTabs([], 'storied')
-    expect(enabledTabs()).toContain('Storylines')
-    expect(selectedTab()).toBe('Storylines')
+    expect(enabledTabs()).toContain('Summary')
+    expect(selectedTab()).toBe('Summary')
+    expect(
+      within(screen.getByRole('tabpanel')).getByRole('list', {
+        name: 'storied storylines',
+      })
+    ).toBeInTheDocument()
   })
 
   it('offers Summary for a pinned team with storylines but no AI summary', async () => {

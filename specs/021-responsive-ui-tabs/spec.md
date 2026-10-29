@@ -85,7 +85,7 @@ The team history and player history pages also fit phones and tablets. Tables, c
 - If the user rotates a phone from portrait to landscape, the layout adapts to the new width without a reload.
 - If a pinned team has no roster data, the Roster tab is not selectable.
 - On a season in progress (no AI summaries, Trends maybe limited), only tabs with data are offered. If no tab has data, the panel is hidden.
-- When one team is pinned, the Roster tab is selected by default. When no team is pinned, the Awards tab is selected by default.
+- When one team is pinned, the Summary tab is selected by default, and a tab the visitor chose (e.g. Roster) stays selected when another team is pinned. When no team is pinned, the Summary tab is selected by default if the season has storylines, otherwise Awards.
 - Player names with suffixes or multi-part surnames (for example, "Gary Trent Jr.", "Shai Gilgeous-Alexander", "Karl-Anthony Towns") are shortened to the first initial plus everything after the first name ("G. Trent Jr.", "S. Gilgeous-Alexander", "K. Towns"). Single-word names are shown unchanged.
 - Very long player names in the compact roster wrap or truncate and don't push stat columns off screen.
 - Chart labels for 30 teams at phone width must stay legible or be simplified (for example, logos only) rather than overlapping.

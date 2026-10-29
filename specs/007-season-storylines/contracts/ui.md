@@ -7,11 +7,11 @@
 - Accessors in `src/data/seasonData.ts`: season storylines (`featured`) and team storylines
   (`teams` includes the team), both sorted by `eventDate`.
 
-## Season storylines tab
+## Season storylines
 
-- New `storylines` detail tab labelled "Storylines".
-- Available only when the season is completed and has ≥ 1 featured storyline (FR-001, FR-002).
-- First in the unpinned tab order, last in the pinned order.
+- Shown in the Summary tab when no single team is pinned, under a "Season storylines" heading.
+- The Summary tab is available unpinned only when the season is completed and has ≥ 1 featured
+  storyline (FR-001, FR-002), and is then first in the unpinned tab order.
 - Each row: storyline title, article headline as a link (opens in a new tab), publisher, and
   date (FR-008). Team logos for any teams listed.
 
@@ -23,4 +23,4 @@
 
 ## Empty states
 
-- No finalized list, or season not completed: no tab, no section, no placeholder (SC-005).
+- No finalized list, or season not completed: no section, no placeholder (SC-005).
