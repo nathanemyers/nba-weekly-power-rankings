@@ -255,48 +255,44 @@ describe('User Story 3 — pin a team', () => {
   })
 })
 
-describe('Team AI summary', () => {
-  const summaryButton = () => screen.getByRole('button', { name: 'AI Summary' })
+describe('Team AI summary tab', () => {
+  const summaryTab = () => screen.queryByRole('tab', { name: 'Summary' })
 
-  it("shows the pinned team's labeled summary on hover and disables on unpin", async () => {
+  it("shows the pinned team's labeled summary and hides on unpin", async () => {
     const user = userEvent.setup()
     await renderWithRouter()
-    expect(summaryButton()).toBeDisabled()
+    expect(summaryTab()).toBeDisabled()
 
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
-    expect(summaryButton()).not.toBeDisabled()
-
-    await user.hover(summaryButton())
+    await user.click(summaryTab()!)
     expect(
-      await screen.findByText('Boston led from the first week.')
+      screen.getByText('Boston led from the first week.')
     ).toBeInTheDocument()
     expect(screen.getByText('AI-generated summary')).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: 'Boston Celtics' })
     ).toBeInTheDocument()
 
-    await user.unhover(summaryButton())
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
-    expect(summaryButton()).toBeDisabled()
+    expect(summaryTab()).toBeDisabled()
   })
 
-  it('disables the summary when switching seasons clears the pin', async () => {
+  it('hides the summary when switching seasons clears the pin', async () => {
     const user = userEvent.setup()
     await renderWithRouter()
 
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
     await chooseSeason(user, 'mid')
 
-    expect(summaryButton()).toBeDisabled()
+    expect(summaryTab()).toBeDisabled()
     expect(shownWeeks()).toBe('1–21')
   })
 })
 
-describe('Rank swings hover card', () => {
-  const trendsButton = () =>
-    screen.queryByRole('button', { name: 'Season Trends' })
+describe('Season trends tab', () => {
+  const trendsTab = () => screen.queryByRole('tab', { name: 'Trends' })
   const openTrends = async (user: ReturnType<typeof userEvent.setup>) => {
-    await user.hover(trendsButton()!)
+    await user.click(trendsTab()!)
     await screen.findByRole('heading', { name: 'Biggest Up' })
   }
   // The team logos in a section, in display order
@@ -325,15 +321,14 @@ describe('Rank swings hover card', () => {
     expect(sectionTeams('Biggest Down')).toHaveLength(3)
   })
 
-  it('is absent for a season that has not completed', async () => {
+  it('is enabled for a season in progress, with the summary tab disabled', async () => {
     const user = userEvent.setup()
     await renderWithRouter()
     await chooseSeason(user, 'active')
+    await user.click(screen.getByText('Indiana Pacers', { selector: 'text' }))
 
-    expect(trendsButton()).not.toBeInTheDocument()
-    expect(
-      screen.queryByRole('button', { name: 'AI Summary' })
-    ).not.toBeInTheDocument()
+    expect(trendsTab()).toBeEnabled()
+    expect(screen.getByRole('tab', { name: 'Summary' })).toBeDisabled()
   })
 
   it('pins the clicked team, replacing an earlier pin', async () => {
@@ -382,17 +377,15 @@ describe('Rank swings hover card', () => {
     ).not.toBeInTheDocument()
   })
 
-  it('disappears and drops the pin when switching to a season that has not completed', async () => {
+  it('drops the pin when switching to a season that has not completed', async () => {
     const user = userEvent.setup()
     await renderWithRouter()
     await chooseSeason(user, 'rising')
     await openTrends(user)
     await user.click(toggle('Indiana Pacers'))
-    await user.unhover(trendsButton()!)
 
     await chooseSeason(user, 'active')
 
-    expect(trendsButton()).not.toBeInTheDocument()
     fireEvent.mouseLeave(chart())
     expect(
       screen.getByText('Indiana Pacers', { selector: 'text' })

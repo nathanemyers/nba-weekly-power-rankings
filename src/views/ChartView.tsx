@@ -2,8 +2,6 @@ import RankingsChart from 'components/Chart/Chart'
 import GitHubBadge from '@/components/Badges/GitHubBadge'
 import SeasonSelect from 'components/SeasonSelect'
 import DataSourceBadge from '@/components/Badges/DataSourceBadge'
-import RankSwings from '@/components/RankSwings'
-import TeamSeasonSummary from '@/components/TeamSeasonSummary'
 import type { Team } from 'types'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
 import { useSeason } from '@/hooks/useSeason'
@@ -22,10 +20,16 @@ import ChartFilter from 'components/ChartFilter'
 import ChartFilterClearButton from 'components/ChartFilterClearButton'
 import TeamHistoryButton from 'components/TeamHistoryButton'
 import PlayoffSeriesBadges from '@/components/Badges/PlayoffSeriesBadges'
-import RosterPane from 'components/RosterPane'
-import SeasonAwardsPane from 'components/SeasonAwardsPane'
-import { CHART_HEIGHT, CHART_MARGIN, CHART_WIDTH } from '@/constants'
-import { ButtonGroup } from '@/components/ui/button-group'
+import DetailTabs from 'components/DetailTabs'
+import {
+  CHART_HEIGHT,
+  CHART_MARGIN,
+  CHART_WIDTH,
+  COMPACT_CHART_HEIGHT,
+  COMPACT_CHART_MARGIN,
+  COMPACT_CHART_WIDTH,
+} from '@/constants'
+import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 function ChartBody() {
   const dispatch = useAppDispatch()
@@ -34,6 +38,7 @@ function ChartBody() {
   const endWeek = useAppSelector((s) => getEndWeek(s, data.maxWeek))
   const pinnedTeams = useAppSelector(getPinnedTeams)
   const singlePinnedTeam = useAppSelector(getSinglePinnedTeam)
+  const wide = useMediaQuery('(min-width: 640px)')
 
   const pinnedSeries = data.teams.find(
     (team) => team.teamId === singlePinnedTeam
@@ -46,12 +51,12 @@ function ChartBody() {
 
   return (
     <>
-      <div className="grid md:grid-cols-3 gap-4 mt-5">
-        <div className="grid-col-1 md:justify-self-start justify-self-center flex flex-row items-center gap-3">
+      <div className="mt-5 grid gap-3 md:grid-cols-3">
+        <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
           <SeasonSelect />
           <DataSourceBadge source={data.source} season={data.name} />
         </div>
-        <div className="grid-col-2 justify-self-center flex flex-row flex-wrap items-center justify-center gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-3">
           {singlePinnedTeam && (
             <PlayoffSeriesBadges
               series={pinnedSeries}
@@ -59,7 +64,7 @@ function ChartBody() {
             />
           )}
         </div>
-        <div className="grid-col-3 md:justify-self-end justify-self-center align-items-center gap-2 flex flex-row">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:justify-end">
           {pinnedTeams.length > 0 && <ChartFilterClearButton />}
           <ChartFilter />
         </div>
@@ -70,26 +75,20 @@ function ChartBody() {
           startWeek={startWeek}
           endWeek={endWeek}
           teams={data.teams}
-          width={CHART_WIDTH}
-          height={CHART_HEIGHT}
-          margin={CHART_MARGIN}
+          width={wide ? CHART_WIDTH : COMPACT_CHART_WIDTH}
+          height={wide ? CHART_HEIGHT : COMPACT_CHART_HEIGHT}
+          margin={wide ? CHART_MARGIN : COMPACT_CHART_MARGIN}
+          compact={!wide}
           pinnedTeams={pinnedTeams}
           onClick={togglePin}
         />
-        <div className="flex direction-row place-content-center">
+        <div className="flex items-center justify-between gap-3">
+          <TeamHistoryButton team={singlePinnedTeam} />
           <ChartControls />
         </div>
-        <div className="flex flex-row place-content-center justify-between">
-          {data.completed && (
-            <ButtonGroup>
-              <TeamSeasonSummary />
-              <RankSwings />
-              <TeamHistoryButton team={singlePinnedTeam} />
-            </ButtonGroup>
-          )}
+        <div className="mt-6">
+          <DetailTabs />
         </div>
-        <RosterPane />
-        {pinnedTeams.length === 0 && <SeasonAwardsPane />}
       </div>
     </>
   )
@@ -101,12 +100,15 @@ export default function ChartView() {
   return (
     <div>
       <header className="flex items-start justify-between gap-4">
-        <div>
+        <div className="min-w-0">
           <h1 className="text-2xl leading-tight font-bold sm:text-4xl">
             NBA Weekly Power Rankings
           </h1>
           <p className="mt-1 text-muted-foreground sm:text-lg">
-            Hover a line or dot, click a team to pin it, use arrow keys to pan
+            <span className="sm:hidden">Tap a team to pin it</span>
+            <span className="hidden sm:inline">
+              Hover a line or dot, click a team to pin it, use arrow keys to pan
+            </span>
           </p>
         </div>
         <GitHubBadge className="mt-1" />

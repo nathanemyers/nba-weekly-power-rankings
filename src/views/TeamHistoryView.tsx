@@ -16,8 +16,8 @@ export default function TeamHistoryView() {
 
   return (
     <div className="flex flex-col">
-      <h1 className="flex flex-row items-center gap-5 mb-10 text-4xl">
-        <TeamLogo team={team} />
+      <h1 className="mb-6 flex flex-row items-center gap-3 text-2xl sm:mb-10 sm:gap-5 sm:text-4xl">
+        <TeamLogo team={team} className="size-10 object-contain sm:size-auto" />
         {getTeamName(team)} Team History
       </h1>
       <Suspense fallback={<p className="text-muted-foreground">Loading…</p>}>

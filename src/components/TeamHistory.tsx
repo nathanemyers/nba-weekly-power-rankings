@@ -34,17 +34,17 @@ export default function TeamHistory(props: TeamHistoryProps) {
           >
             <CardContent>
               <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
-                <div className="grid grid-cols-2 content-center">
-                  <div className="flex direction-row">
-                    <h2 className="text-2xl font-semibold shrink mr-10">
+                <div className="flex w-full flex-col gap-2 sm:grid sm:grid-cols-2 sm:content-center">
+                  <div className="flex flex-row items-center gap-4">
+                    <h2 className="shrink-0 text-xl font-semibold sm:mr-6 sm:text-2xl">
                       {season.name}
                     </h2>
-                    <div className="content-center md:w-100">
+                    <div className="w-full content-center md:w-100">
                       <TrendMinimap team={team.teamId} season={season} />
                     </div>
                   </div>
                   <PlayoffSeriesBadges
-                    className="justify-end justify-self-end"
+                    className="sm:justify-end sm:justify-self-end"
                     series={team.playoffSeries}
                   />
                 </div>

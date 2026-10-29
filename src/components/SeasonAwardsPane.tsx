@@ -80,11 +80,8 @@ export default function SeasonAwardsPane() {
     groups.filter((group) => codes.includes(group.code))
 
   return (
-    <section aria-labelledby="awards-heading" className="mt-6">
-      <h2 id="awards-heading" className="text-lg font-semibold">
-        {season.name} awards
-      </h2>
-      <div className="mt-2 grid gap-4 md:grid-cols-2">
+    <section aria-label={`${season.name} awards`}>
+      <div className="grid gap-4 md:grid-cols-2">
         {winners.length > 0 && (
           <Card>
             <CardHeader>

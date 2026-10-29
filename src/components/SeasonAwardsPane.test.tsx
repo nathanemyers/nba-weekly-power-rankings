@@ -18,7 +18,7 @@ afterEach(cleanup)
 describe('SeasonAwardsPane', () => {
   it("lists the season's award winners and team selections", async () => {
     await renderWithRouter(['/long'])
-    await screen.findByRole('heading', { name: 'long awards' })
+    await screen.findByRole('region', { name: 'long awards' })
     expect(
       within(pane())
         .getAllByRole('list')
@@ -41,7 +41,7 @@ describe('SeasonAwardsPane', () => {
   it("opens a player's history when their name is clicked", async () => {
     const user = userEvent.setup()
     const { router } = await renderWithRouter(['/long'])
-    await screen.findByRole('heading', { name: 'long awards' })
+    await screen.findByRole('region', { name: 'long awards' })
     await user.click(
       within(
         within(pane()).getByRole('list', { name: 'All-NBA Second Team' })
@@ -56,21 +56,20 @@ describe('SeasonAwardsPane', () => {
   it('is absent for a season without awards', async () => {
     await renderWithRouter(['/short'])
     await screen.findByRole('combobox')
-    expect(screen.queryByRole('heading', { name: /awards/ })).toBeNull()
+    expect(screen.queryByRole('region', { name: /awards/ })).toBeNull()
   })
 
-  it('hides while any team is selected and returns when the selection clears', async () => {
+  it('stays reachable from the Awards tab while a team is pinned', async () => {
+    const user = userEvent.setup()
     const { store } = await renderWithRouter(['/long'])
-    await screen.findByRole('heading', { name: 'long awards' })
+    await screen.findByRole('region', { name: 'long awards' })
     act(() => {
       store.dispatch(setPinnedTeams([Team.Boston]))
     })
-    expect(screen.queryByRole('heading', { name: 'long awards' })).toBeNull()
-    act(() => {
-      store.dispatch(setPinnedTeams([]))
-    })
+    expect(screen.queryByRole('region', { name: 'long awards' })).toBeNull()
+    await user.click(screen.getByRole('tab', { name: 'Awards' }))
     expect(
-      screen.getByRole('heading', { name: 'long awards' })
+      screen.getByRole('region', { name: 'long awards' })
     ).toBeInTheDocument()
   })
 })

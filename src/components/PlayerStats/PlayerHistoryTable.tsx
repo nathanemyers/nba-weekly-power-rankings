@@ -67,7 +67,9 @@ export default function PlayerHistoryTable(props: {
                   alt=""
                   className="size-5 object-contain"
                 />
-                {getTeamName(stint.team)}
+                <span className="sr-only sm:not-sr-only">
+                  {getTeamName(stint.team)}
+                </span>
               </span>
             </TableCell>
             <TableCell className="text-center">

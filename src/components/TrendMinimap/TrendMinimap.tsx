@@ -1,4 +1,5 @@
 import { useId } from 'react'
+import { cn } from 'cn'
 import { Team, Teams } from 'types'
 import { getYforRank } from 'components/Chart/utils'
 import type { Season } from '@/data/seasonData'
@@ -12,6 +13,7 @@ interface TrendMinimapProps {
   season: Season
   width?: number
   height?: number
+  className?: string
 }
 
 export default function TrendMinimap(props: TrendMinimapProps) {
@@ -40,12 +42,13 @@ export default function TrendMinimap(props: TrendMinimapProps) {
   const bottomBoundary = y(BAND_SIZE * 2 + 0.5) / height
 
   return (
-    // A size-* class opts out of the icon sizing library controls apply to nested SVGs
+    // A size-* class opts out of library icon sizing, and preserveAspectRatio none lets callers stretch the line
     <svg
-      className="size-auto shrink-0"
+      className={cn('size-auto shrink-0', props.className)}
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
+      preserveAspectRatio="none"
       aria-hidden="true"
     >
       <defs>
@@ -84,6 +87,7 @@ export default function TrendMinimap(props: TrendMinimapProps) {
         fill="none"
         stroke={`url(#${gradientId})`}
         strokeWidth={2}
+        vectorEffect="non-scaling-stroke"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { cn } from 'cn'
 import { type Margin, type Team, type TeamRankings } from 'types'
 import TeamLabels from './TeamLabels'
 import { useChartTransition } from './useChartTransition'
@@ -23,6 +24,7 @@ interface ChartProps {
   height: number
   margin: Margin
   pinnedTeams: Team[]
+  compact: boolean
   onClick: (team?: Team) => void
 }
 
@@ -64,7 +66,7 @@ export default function RankingsChart(props: ChartProps) {
   const PLAYOFF_X =
     props.margin.left +
     (props.width - props.margin.left - props.margin.right) +
-    60
+    (props.compact ? 44 : 60)
   const PLOT_W = props.width - props.margin.left - props.margin.right
   const PLOT_H = props.height - props.margin.top - props.margin.bottom
 
@@ -74,13 +76,22 @@ export default function RankingsChart(props: ChartProps) {
 
   // Anchoring on the far edge keeps the full width available near the right side
   const tipX = hoveredTooltip ? x(hoveredTooltip.week) / props.width : 0
-  const tipPosition =
-    tipX > 0.5
+  const tipY = hoveredTooltip ? y(hoveredTooltip.rank) / props.height : 0
+  // Narrow charts have no room beside the dot, so the tooltip spans the width above or below it
+  const tipPosition = props.compact
+    ? {
+        left: '2%',
+        right: '2%',
+        transform: tipY > 0.5 ? 'translateY(calc(-100% - 14px))' : 'translateY(14px)',
+      }
+    : tipX > 0.5
       ? { right: `${(1 - tipX) * 100}%`, transform: 'translate(-14px, -50%)' }
       : { left: `${tipX * 100}%`, transform: 'translate(14px, -50%)' }
 
+  // Narrow charts label every fifth week once the window is too wide for every tick
+  const tickEvery = props.compact && span > 12 ? 5 : 1
   const weeks = range(Math.floor(start), Math.ceil(end) + 1).filter(
-    (w) => w >= 1 && w <= lastWeek
+    (w) => w >= 1 && w <= lastWeek && (w === 1 || w % tickEvery === 0)
   )
 
   const inWindow = (week: number) => week >= start && week <= end
@@ -153,13 +164,15 @@ export default function RankingsChart(props: ChartProps) {
           >
             Week
           </text>
-          <text
-            className="fill-muted-foreground text-[15px]"
-            transform={`translate(${props.width - 14}, ${props.margin.top + PLOT_H / 2}) rotate(-90)`}
-            textAnchor="middle"
-          >
-            Rank
-          </text>
+          {!props.compact && (
+            <text
+              className="fill-muted-foreground text-[15px]"
+              transform={`translate(${props.width - 14}, ${props.margin.top + PLOT_H / 2}) rotate(-90)`}
+              textAnchor="middle"
+            >
+              Rank
+            </text>
+          )}
 
           {inWindow(PLAYOFFS_WEEK) && (
             <g>
@@ -170,14 +183,16 @@ export default function RankingsChart(props: ChartProps) {
                 y1={props.margin.top}
                 y2={props.margin.top + PLOT_H}
               />
-              <text
-                className="fill-chart-playoffs text-[13px]"
-                x={x(PLAYOFFS_WEEK) - 6}
-                y={props.margin.top + 14}
-                textAnchor="end"
-              >
-                Playoffs Begin
-              </text>
+              {!props.compact && (
+                <text
+                  className="fill-chart-playoffs text-[13px]"
+                  x={x(PLAYOFFS_WEEK) - 6}
+                  y={props.margin.top + 14}
+                  textAnchor="end"
+                >
+                  Playoffs Begin
+                </text>
+              )}
             </g>
           )}
 
@@ -238,6 +253,10 @@ export default function RankingsChart(props: ChartProps) {
                           onMouseEnter={() =>
                             setHover({ teamId: team.teamId, week: r.week })
                           }
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            setHover({ teamId: team.teamId, week: r.week })
+                          }}
                         />
                       ))}
                 </g>
@@ -258,18 +277,21 @@ export default function RankingsChart(props: ChartProps) {
             transition={transition}
             activeTeams={activeTeams}
             height={props.height}
+            compact={props.compact}
           />
 
           {props.endWeek >= lastWeek && (
             <g className="playoff-column">
-              <text
-                className="fill-muted-foreground text-[15px]"
-                x={PLAYOFF_X}
-                y={props.margin.top - 8}
-                textAnchor="middle"
-              >
-                Playoffs
-              </text>
+              {!props.compact && (
+                <text
+                  className="fill-muted-foreground text-[15px]"
+                  x={PLAYOFF_X}
+                  y={props.margin.top - 8}
+                  textAnchor="middle"
+                >
+                  Playoffs
+                </text>
+              )}
               {props.teams.map((team) => {
                 const last = findLast(team.rankings, (r) =>
                   inTargetWindow(r.week)
@@ -296,10 +318,13 @@ export default function RankingsChart(props: ChartProps) {
 
         {hoveredTooltip && (
           <div
-            className="pointer-events-none absolute w-max max-w-[min(20rem,calc(50%-14px))] rounded-md bg-popover/85 px-3 py-2.5 text-[0.9rem] leading-snug text-popover-foreground"
+            className={cn(
+              'pointer-events-none absolute rounded-md bg-popover/85 px-3 py-2.5 text-[0.9rem] leading-snug text-popover-foreground',
+              !props.compact && 'w-max max-w-[min(20rem,calc(50%-14px))]'
+            )}
             style={{
               ...tipPosition,
-              top: `${(y(hoveredTooltip.rank) / props.height) * 100}%`,
+              top: `${tipY * 100}%`,
             }}
           >
             <strong>

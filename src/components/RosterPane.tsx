@@ -19,6 +19,7 @@ import {
   TableRow,
 } from './ui/table'
 import RatingKey from 'components/PlayerStats/RatingKey'
+import { shortPlayerName } from 'components/PlayerStats/shortPlayerName'
 
 function MoveMark(props: { joined: boolean; team: Team }) {
   const dispatch = useAppDispatch()
@@ -87,11 +88,17 @@ export default function RosterPane() {
   if (!teamId || !roster?.length) return null
 
   return (
-    <section aria-labelledby="roster-heading" className="mt-6">
-      <h2 id="roster-heading" className="text-lg font-semibold">
-        {getTeamName(teamId)} roster, {season.name}
+    <section aria-labelledby="roster-heading">
+      <h2
+        id="roster-heading"
+        className="flex items-center gap-2 text-lg font-semibold"
+      >
+        <TeamLogo team={teamId} alt="" className="size-6 object-contain" />
+        <span className="sr-only sm:not-sr-only">
+          {getTeamName(teamId)} roster, {season.name}
+        </span>
       </h2>
-      <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
+      <div className="flex flex-col gap-x-6 gap-y-2 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
         {coaches?.length ? <CoachLine coaches={coaches} /> : null}
         <RatingKey />
       </div>
@@ -101,19 +108,25 @@ export default function RosterPane() {
             <TableHead className="sticky left-0 bg-background">
               Player
             </TableHead>
-            <StatHeads />
+            <StatHeads compact />
           </TableRow>
         </TableHeader>
         <TableBody>
           {roster.map((player) => (
             <TableRow key={player.id} className="group hover:bg-muted">
-              <TableCell className="sticky left-0 bg-background font-medium transition-colors group-hover:bg-muted">
+              <TableCell className="sticky left-0 min-w-0 bg-background font-medium whitespace-normal transition-colors group-hover:bg-muted sm:whitespace-nowrap">
                 <span className="flex items-center justify-between gap-3">
                   <Link
                     to={'/playerHistory/' + player.id}
+                    title={player.name}
                     className="cursor-pointer hover:underline"
                   >
-                    {player.name}
+                    <span className="sm:hidden" aria-hidden>
+                      {shortPlayerName(player.name)}
+                    </span>
+                    <span className="sr-only sm:not-sr-only">
+                      {player.name}
+                    </span>
                   </Link>
                   {(player.joinedFrom || player.leftFor) && (
                     <span className="flex gap-1">
@@ -127,7 +140,7 @@ export default function RosterPane() {
                   )}
                 </span>
               </TableCell>
-              <StatCells player={player} />
+              <StatCells player={player} compact />
             </TableRow>
           ))}
         </TableBody>

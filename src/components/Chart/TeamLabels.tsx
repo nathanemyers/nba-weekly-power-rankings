@@ -1,6 +1,9 @@
 import type { Margin, Team, TeamRankings } from 'types'
 import { interpolate, type ChartTransitionState } from './useChartTransition'
 import { firstRankingInRange, getYforRank, PLAYOFF_MEDALS } from './utils'
+import { getTeamLogoUrl } from 'components/teamLogos'
+
+const LOGO_SIZE = 22
 
 interface TeamLabelsProps {
   teams: TeamRankings[]
@@ -8,6 +11,7 @@ interface TeamLabelsProps {
   activeTeams: Team[]
   margin: Margin
   height: number
+  compact: boolean
   onHover: (teamId: Team) => void
   onClick: (teamId: Team) => void
 }
@@ -43,6 +47,27 @@ export default function TeamLabels(props: TeamLabelsProps) {
     const y = labelY(team)
     if (y === undefined) return null
     const active = props.activeTeams.includes(team.teamId)
+    if (props.compact) {
+      return (
+        <image
+          key={team.teamId}
+          className="cursor-pointer transition-opacity duration-150"
+          href={getTeamLogoUrl(team.teamId)}
+          x={props.margin.left - 6 - LOGO_SIZE}
+          y={y - LOGO_SIZE / 2}
+          width={LOGO_SIZE}
+          height={LOGO_SIZE}
+          opacity={anyActive && !active ? 0.35 : 1}
+          onMouseEnter={() => props.onHover(team.teamId)}
+          onClick={(e) => {
+            e.stopPropagation()
+            props.onClick(team.teamId)
+          }}
+        >
+          <title>{team.name}</title>
+        </image>
+      )
+    }
     return (
       <text
         key={team.teamId}
@@ -65,6 +90,7 @@ export default function TeamLabels(props: TeamLabelsProps) {
   })
 
   const playoffMedals = props.teams.map((team) => {
+    if (props.compact) return null
     const y = labelY(team)
     const medal = team.playoff && PLAYOFF_MEDALS[team.playoff]
     if (y === undefined || !medal) return null

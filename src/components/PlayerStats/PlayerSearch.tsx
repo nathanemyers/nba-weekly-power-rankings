@@ -19,6 +19,8 @@ export default function PlayerSearch(props: {
   const players = use(props.players)
   const navigate = useNavigate()
   const [query, setQuery] = useState('')
+  // The dropdown anchors to the whole search box so it spans the icon too
+  const [anchor, setAnchor] = useState<HTMLDivElement | null>(null)
   const results = searchPlayers(players, query, MAX_RESULTS)
 
   return (
@@ -32,12 +34,19 @@ export default function PlayerSearch(props: {
       autoHighlight
       itemToStringValue={(player: PlayerSummary) => player.name}
     >
-      <AutocompleteInput
-        aria-label="Player name"
-        placeholder="Find a player…"
-        className="w-64"
-      />
-      <AutocompleteContent align="end" className="w-72">
+      <div ref={setAnchor} className="w-full md:w-80">
+        <AutocompleteInput
+          type={'search'}
+          aria-label="Player name"
+          placeholder="Find a player…"
+          className="w-full"
+        />
+      </div>
+      <AutocompleteContent
+        anchor={anchor}
+        align="end"
+        className="w-(--anchor-width)"
+      >
         {query.trim() && (
           <AutocompleteEmpty>No players found.</AutocompleteEmpty>
         )}

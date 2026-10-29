@@ -24,7 +24,7 @@ function PlayerHistoryContent(props: {
 
   return (
     <div className="flex flex-col">
-      <h1 className="mb-4 text-4xl">{playerHistory[0].player.name}</h1>
+      <h1 className="mb-4 text-2xl sm:text-4xl">{playerHistory[0].player.name}</h1>
       <div className="mb-6">
         <CareerHighlights player={playerSummary} limit={10} />
       </div>

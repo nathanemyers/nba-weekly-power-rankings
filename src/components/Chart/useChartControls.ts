@@ -9,6 +9,7 @@ export const useChartControls = (maxWeek: number) => {
   useEffect(() => {
     if (zoomedOut) return
     const onKey = (e: KeyboardEvent) => {
+      if (e.defaultPrevented) return
       if (e.key === 'ArrowLeft') dispatch(pageWindow(-1, maxWeek))
       if (e.key === 'ArrowRight') dispatch(pageWindow(1, maxWeek))
     }

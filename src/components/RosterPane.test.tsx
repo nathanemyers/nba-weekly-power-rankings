@@ -22,14 +22,37 @@ async function renderPane(pinned: Team[], season = 'long') {
 
 const bodyRows = () =>
   within(screen.getAllByRole('rowgroup')[1]).getAllByRole('row')
+// Reads cells as assistive technology does, skipping the phone-only short names
 const cells = (row: HTMLElement) =>
   within(row)
     .getAllByRole('cell')
-    .map((cell) => cell.textContent)
+    .map((cell) => {
+      const copy = cell.cloneNode(true) as HTMLElement
+      copy.querySelectorAll('[aria-hidden]').forEach((el) => el.remove())
+      return copy.textContent
+    })
 
 afterEach(cleanup)
 
 describe('RosterPane', () => {
+  it('shows short names and only PTS, REB, and AST on phones', async () => {
+    await renderPane([Team.Boston])
+    const pierce = screen.getByRole('link', { name: 'Paul Pierce' })
+    expect(pierce).toHaveAttribute('title', 'Paul Pierce')
+    expect(within(pierce).getByText('P. Pierce')).toHaveAttribute(
+      'aria-hidden'
+    )
+    for (const label of ['PTS', 'REB', 'AST'])
+      expect(
+        screen.getByRole('columnheader', { name: label })
+      ).not.toHaveClass('hidden')
+    for (const label of ['Pos', 'MIN', 'PER'])
+      expect(screen.getByRole('columnheader', { name: label })).toHaveClass(
+        'hidden',
+        'sm:table-cell'
+      )
+  })
+
   it("lists the pinned team's players in roster order", async () => {
     await renderPane([Team.Boston])
     expect(
