@@ -1,12 +1,13 @@
 // API for the storyline review tool: GET /__storylines lists seasons, GET and PUT /__storylines/<season>,
-// POST /__storylines/<season>/more runs the skill's `more` phase for one section
+// POST /__storylines/<season>/more runs the skill's `more` phase for one section,
+// POST /__storylines/<season>/finalize runs the skill's `finalize` commands
 import { spawn } from 'node:child_process'
 import { existsSync, readdirSync, writeFileSync } from 'node:fs'
 import { dirname } from 'node:path'
 import { loadSeason, root, seasonPaths } from '../../scripts/storylines/context.mjs'
 import { checkFinalize, checkRaw } from '../../scripts/storylines/rules.mjs'
 
-const ROUTE = /^\/__storylines(?:\/(\d{4}-\d{2})(\/more)?)?$/
+const ROUTE = /^\/__storylines(?:\/(\d{4}-\d{2})(\/more|\/finalize)?)?$/
 const MAX_BUDGET_USD = '3'
 const TIMEOUT_MS = 20 * 60 * 1000
 const ADDITIONS = './data/raw/storylines/*.additions.json'
@@ -83,6 +84,33 @@ function runMore(season, section) {
   })
 }
 
+// Runs one command and resolves with its exit code and combined output
+function runCommand(command, args) {
+  return new Promise((resolve) => {
+    const child = spawn(command, args, { cwd: root, stdio: ['ignore', 'pipe', 'pipe'] })
+    let output = ''
+    child.stdout.on('data', (chunk) => (output += chunk))
+    child.stderr.on('data', (chunk) => (output += chunk))
+    child.on('error', (error) => resolve({ code: 1, output: error.message }))
+    child.on('close', (code) => resolve({ code, output }))
+  })
+}
+
+async function handleFinalize(res, season) {
+  const before = reviewState(season)
+  if (before.status !== 200) return sendJson(res, before.status, before.payload)
+  if (running[season]) return sendJson(res, 409, { failures: [`Wait for the search for ${running[season]} to finish`] })
+  if (before.payload.finalized)
+    return sendJson(res, 409, { failures: [`${season} is already finalized; revising it goes through the skill's revise phase`] })
+  for (const args of [['run', 'check:storylines', '--', season, '--finalize'], ['run', 'build:rankings']]) {
+    const { code, output } = await runCommand('npm', args)
+    if (code !== 0)
+      return sendJson(res, 422, { failures: output.split('\n').filter((line) => line && !line.startsWith('>')) })
+  }
+  const after = reviewState(season)
+  sendJson(res, after.status, after.payload)
+}
+
 async function handleMore(req, res, season) {
   const { section } = JSON.parse(await readBody(req))
   const before = reviewState(season)
@@ -121,6 +149,7 @@ export default function storylineReview() {
           }
           if (match[2]) {
             if (req.method !== 'POST') return sendJson(res, 405, { failures: ['POST only'] })
+            if (match[2] === '/finalize') return await handleFinalize(res, season)
             return await handleMore(req, res, season)
           }
           if (req.method === 'PUT') {

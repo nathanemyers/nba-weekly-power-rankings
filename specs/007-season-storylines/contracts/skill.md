@@ -57,3 +57,7 @@ not shown inline; when it finishes the button plays a short animation to alert t
 
 Discovery leaves every team with at least 5 candidates, and `more <team>` tops a team up to at
 least 5 non-excluded candidates; either reports any team the approved sources cannot fill.
+
+A "Finalize" button next to Save saves pending edits, then the dev server runs
+`npm run check:storylines -- <season> --finalize` and `npm run build:rankings` and shows any
+failures. It is disabled for an already finalized season; revising stays with the skill.

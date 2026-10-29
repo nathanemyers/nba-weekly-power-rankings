@@ -7,6 +7,7 @@ import CandidateRow from './CandidateRow'
 import FindMore from './FindMore'
 import TeamCoverage, { type TeamFilter } from './TeamCoverage'
 import {
+  finalizeReview,
   findMore,
   isSeasonStoryline,
   KINDS,
@@ -41,6 +42,7 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
   const [raw, setRaw] = useState(props.initial.raw)
   const [dirty, setDirty] = useState(false)
   const [saving, setSaving] = useState(false)
+  const [finalizing, setFinalizing] = useState(false)
   const [saveError, setSaveError] = useState<string>()
   const [team, setTeam] = useState<TeamFilter>(null)
   const [status, setStatus] = useState('')
@@ -75,6 +77,21 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
       return false
     } finally {
       setSaving(false)
+    }
+  }
+
+  const finalize = async () => {
+    if (dirty && !(await save())) return
+    setFinalizing(true)
+    setSaveError(undefined)
+    try {
+      const finalized = await finalizeReview(raw.season)
+      setReview(finalized)
+      setRaw(finalized.raw)
+    } catch (error) {
+      setSaveError(String(error))
+    } finally {
+      setFinalizing(false)
     }
   }
 
@@ -137,10 +154,20 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
         </span>
         <Button
           onClick={save}
-          disabled={!dirty || saving || finding !== null}
+          disabled={!dirty || saving || finalizing || finding !== null}
           className="cursor-pointer"
         >
           {saving ? 'Saving…' : 'Save'}
+        </Button>
+        <Button
+          variant="outline"
+          onClick={finalize}
+          disabled={
+            review.finalized || saving || finalizing || finding !== null
+          }
+          className="cursor-pointer"
+        >
+          {finalizing ? 'Finalizing…' : 'Finalize'}
         </Button>
       </header>
 
@@ -155,7 +182,11 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
         </p>
       )}
 
-      {saveError && <p className="text-sm text-destructive">{saveError}</p>}
+      {saveError && (
+        <p className="text-sm whitespace-pre-wrap text-destructive">
+          {saveError}
+        </p>
+      )}
 
       {props.initial.running && finding === props.initial.running && (
         <p className="text-sm text-muted-foreground">

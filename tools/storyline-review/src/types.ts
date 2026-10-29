@@ -90,3 +90,6 @@ export const findMore = (season: string, section: string) =>
       response: Response
     ) => Promise<ReviewState & { more: MoreResult }>
   )
+
+export const finalizeReview = (season: string) =>
+  fetch(`${endpoint(season)}/finalize`, { method: 'POST' }).then(readResponse)

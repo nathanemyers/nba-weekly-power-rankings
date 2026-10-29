@@ -171,6 +171,9 @@ The tool's "Find more" button does this itself for one section by running `more`
 3. Report how many storylines were finalized, how many are featured, and the files that
    changed.
 
+The review tool's "Finalize" button (next to Save) runs steps 1 and 2 itself and shows any
+failures; it is disabled once the season is finalized.
+
 ## revise
 
 Only when the maintainer explicitly asks to change an already finalized season.
