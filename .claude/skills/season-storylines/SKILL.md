@@ -1,7 +1,7 @@
 ---
 name: 'season-storylines'
-description: 'Find, review, and finalize curated storyline articles for a completed NBA season. Phases: discover (search approved sources for candidates), more (find extra candidates for one team or the season storylines), review (maintainer picks candidates in batches), finalize (write the static list), revise (deliberately change a finalized list).'
-argument-hint: '<season, e.g. 2024-25> [discover|more <team|season>|review|finalize|revise]'
+description: 'Find, review, and finalize curated storyline articles for a completed NBA season. Phases: status (list every season and how far its storylines have got), discover (search approved sources for candidates), more (find extra candidates for one team or the season storylines), review (maintainer picks candidates in batches), finalize (write the static list), revise (deliberately change a finalized list).'
+argument-hint: 'status | <season, e.g. 2024-25> [discover|more <team|season>|review|finalize|revise]'
 user-invocable: true
 ---
 
@@ -37,10 +37,12 @@ inclusion decision. Spec: `specs/007-season-storylines/spec.md`. File shapes:
 
 ## Choosing the phase
 
-Parse `$ARGUMENTS` as `<season> [phase] [section]` (`section` is only for `more`). With no phase: `discover` if there is no raw file,
+If `$ARGUMENTS` is `status` or empty, run `status` (below) and stop.
+
+Otherwise parse `$ARGUMENTS` as `<season> [phase] [section]` (`section` is only for `more`). With no phase: `discover` if there is no raw file,
 `review` if any candidate is `pending`, otherwise `finalize`.
 
-Before any phase, stop and tell the maintainer if:
+Before any other phase, stop and tell the maintainer if:
 
 - the season file has no team with `"champion"` in `playoffs` (season not complete), or
 - `seasonWindow` cannot be computed (draft date missing for either end in `draft-dates.json`).
@@ -53,6 +55,14 @@ phases may still update the raw file, and must say so.
 A season `YYYY-YY` runs from the day after the `YYYY` draft through the `YYYY+1` draft. The
 lottery and draft after the Finals belong to the season that just ended. A candidate's
 `eventDate` is when the event happened, not when the article was published.
+
+## status
+
+Read only. Run `npm run -s status:storylines` and show its table to the maintainer as-is. It
+lists every season in `data/processed/seasons/` with its status (`finalized`, `reviewed`,
+`in review`, `not started`, `not complete`, or `no window`), the phase to run next, and
+candidate or storyline counts. Then suggest the next command for the most recent season that
+isn't finalized, e.g. `/season-storylines 2021-22`. Do not start that phase.
 
 ## discover
 
