@@ -40,4 +40,6 @@ Completed seasons can have curated storylines: links to articles about each team
 /season-storylines 2024-25 finalize   # write the static list and rebuild the season
 ```
 
+Instead of the skill's `review` phase, you can review candidates with the internal review tool, which is separate from the site and never built or deployed: run `npm run review:storylines` and open `http://127.0.0.1:5180`. It shows per-team coverage (playoff teams missing a playoff storyline are outlined in red), and lets you include or exclude each candidate, mark season storylines, and edit teams, kind, title, and event date. Save writes the raw file and shows `check:storylines` failures. The tool lives in `tools/storyline-review/`.
+
 Candidates live in `data/raw/storylines/<season>.json` and the finalized list in `data/processed/storylines/<season>.json`, which `build:rankings` merges into the season file. `npm run check:storylines -- <season>` checks candidates against the approved sources in `scripts/storylines/sources.json`, the season's draft-to-draft window in `scripts/storylines/draft-dates.json`, and the team rules; with `--finalize` it also requires a playoff storyline for every playoff team and refuses to overwrite a finalized season unless `--revise` is passed.

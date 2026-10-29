@@ -1,9 +1,8 @@
 ---
-name: "season-storylines"
-description: "Find, review, and finalize curated storyline articles for a completed NBA season. Phases: discover (search approved sources for candidates), review (maintainer picks candidates in batches), finalize (write the static list), revise (deliberately change a finalized list)."
-argument-hint: "<season, e.g. 2024-25> [discover|review|finalize|revise]"
+name: 'season-storylines'
+description: 'Find, review, and finalize curated storyline articles for a completed NBA season. Phases: discover (search approved sources for candidates), review (maintainer picks candidates in batches), finalize (write the static list), revise (deliberately change a finalized list).'
+argument-hint: '<season, e.g. 2024-25> [discover|review|finalize|revise]'
 user-invocable: true
-disable-model-invocation: true
 ---
 
 # Season storylines
@@ -14,13 +13,13 @@ inclusion decision. Spec: `specs/007-season-storylines/spec.md`. File shapes:
 
 ## Files
 
-| File | Role |
-|---|---|
-| `data/processed/seasons/<season>.json` | Read only: weekly blurbs (`rankings`), `playoffs`, `playoffSeries`, `rosters` (award codes) |
-| `scripts/storylines/sources.json` | Approved publishers, domains, excluded paths |
-| `scripts/storylines/draft-dates.json` | Draft dates that bound each season |
-| `data/raw/storylines/<season>.json` | Guidance topics and candidates with review status. The only file this skill edits directly |
-| `data/processed/storylines/<season>.json` | Finalized list. Written only by `npm run check:storylines -- <season> --finalize` |
+| File                                      | Role                                                                                        |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `data/processed/seasons/<season>.json`    | Read only: weekly blurbs (`rankings`), `playoffs`, `playoffSeries`, `rosters` (award codes) |
+| `scripts/storylines/sources.json`         | Approved publishers, domains, excluded paths                                                |
+| `scripts/storylines/draft-dates.json`     | Draft dates that bound each season                                                          |
+| `data/raw/storylines/<season>.json`       | Guidance topics and candidates with review status. The only file this skill edits directly  |
+| `data/processed/storylines/<season>.json` | Finalized list. Written only by `npm run check:storylines -- <season> --finalize`           |
 
 ## Rules
 
@@ -41,6 +40,7 @@ Parse `$ARGUMENTS` as `<season> [phase]`. With no phase: `discover` if there is 
 `review` if any candidate is `pending`, otherwise `finalize`.
 
 Before any phase, stop and tell the maintainer if:
+
 - the season file has no team with `"champion"` in `playoffs` (season not complete), or
 - `seasonWindow` cannot be computed (draft date missing for either end in `draft-dates.json`).
 
@@ -88,9 +88,27 @@ lottery and draft after the Finals belong to the season that just ended. A candi
      published. `article.publisher`: the matching `publisher` from `sources.json`.
    - `id`: kebab-case from the title, unique within the season.
 5. **Write** the raw file (`updatedAt` = today), run the check, and report counts per kind and
-   any playoff team still without a `playoffs` candidate. Then offer to start `review`.
+   any playoff team still without a `playoffs` candidate. Then open the review tool for the
+   season (see **Review tool** below).
 
 ## review
+
+### Review tool
+
+Review happens in the internal review tool by default; it saves straight to the raw file.
+
+1. Start it with the `storyline-review` entry in `.claude/launch.json` (`preview_start` when the
+   browser pane is available), or run `npm run review:storylines` in the background. Reuse it if
+   it is already running.
+2. Open `http://127.0.0.1:5180/?season=<season>` for the maintainer, and tell them to edit, press
+   Save, and say when they are done.
+3. When they are done, re-read the raw file, run the check, and report what it says, how many
+   candidates are still pending, and any playoff team without an included `playoffs` candidate.
+   Do not re-ask about decisions already saved in the file.
+
+### Chat review
+
+Use this only when the maintainer asks for it or the review tool cannot start.
 
 Work in batches and save after each one, so the maintainer can stop at any point and resume
 later.
@@ -105,8 +123,9 @@ Ask the maintainer to reply per row with include, exclude, or an edit (title, te
 kind, eventDate). Use `AskUserQuestion` for quick include/exclude choices when it helps. Apply
 the decisions to the raw file, run the check, and report how many candidates are still pending.
 
-The maintainer can also ask for more searches on a topic during review; add the results as new
-pending candidates in the same batch.
+In either mode, the maintainer can ask for more searches on a topic during review; add the
+results as new pending candidates (in the same batch for chat review). In the review tool, first
+make sure the maintainer has saved, then tell them to reload the page to see the new candidates.
 
 ## finalize
 

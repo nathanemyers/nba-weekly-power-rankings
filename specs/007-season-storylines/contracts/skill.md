@@ -37,6 +37,13 @@ remain, otherwise `finalize`.
 
 ## Review presentation
 
-One batch at a time: season storylines first, then each team alphabetically, playoff teams'
-playoff-run candidates flagged. Each batch is a table of title, headline, publisher, event date,
-teams, featured; the maintainer replies with include/exclude/edit per row.
+When `discover` finishes, the skill starts the internal review tool (`npm run review:storylines`,
+`tools/storyline-review/`, a separate Vite app that is not part of the site) and opens it at
+`http://127.0.0.1:5180/?season=<season>`. The tool reads and writes the raw file and reports
+`checkRaw` / `checkFinalize` failures on save. When the maintainer says they are done, the skill
+re-reads the raw file and runs the check.
+
+Chat review is the fallback when the maintainer asks for it or the tool cannot start: one batch at
+a time, season storylines first, then each team alphabetically, playoff teams' playoff-run
+candidates flagged. Each batch is a table of title, headline, publisher, event date, teams,
+featured; the maintainer replies with include/exclude/edit per row.

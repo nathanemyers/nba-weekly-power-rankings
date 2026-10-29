@@ -1,12 +1,7 @@
 // Usage: npm run check:storylines -- <season> [--finalize] [--revise]
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
-import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { existsSync, writeFileSync } from 'node:fs'
+import { loadSeason, seasonPaths } from './context.mjs'
 import { buildProcessed, checkFinalize, checkRaw } from './rules.mjs'
-
-const here = dirname(fileURLToPath(import.meta.url))
-const root = join(here, '..', '..')
-const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'))
 
 const args = process.argv.slice(2)
 const season = args.find((arg) => !arg.startsWith('--'))
@@ -20,23 +15,10 @@ function exitWith(failures) {
 
 if (!season) exitWith(['Usage: npm run check:storylines -- <season> [--finalize] [--revise]'])
 
-const rawFile = join(root, 'data', 'raw', 'storylines', `${season}.json`)
-const seasonFile = join(root, 'data', 'processed', 'seasons', `${season}.json`)
-const processedFile = join(root, 'data', 'processed', 'storylines', `${season}.json`)
-if (!existsSync(rawFile)) exitWith([`No candidates file at ${rawFile}`])
-if (!existsSync(seasonFile)) exitWith([`No season file at ${seasonFile}; run npm run build:rankings`])
-
-const raw = readJson(rawFile)
-const seasonData = readJson(seasonFile)
-const playoffs = seasonData.playoffs ?? {}
-const ctx = {
-  season,
-  sources: readJson(join(here, 'sources.json')),
-  draftDates: readJson(join(here, 'draft-dates.json')),
-  teams: Object.keys(seasonData.rankings),
-  playoffTeams: Object.keys(playoffs),
-  completed: Object.values(playoffs).includes('champion'),
-}
+const { processedFile } = seasonPaths(season)
+const loaded = loadSeason(season)
+if (loaded.failures) exitWith(loaded.failures)
+const { raw, ctx } = loaded
 
 const failures = finalize ? checkFinalize(raw, ctx) : checkRaw(raw, ctx)
 if (finalize && existsSync(processedFile) && !revise)
