@@ -1,0 +1,1640 @@
+{
+  "season": "2020-21",
+  "finalizedAt": "2026-10-29",
+  "storylines": [
+    {
+      "id": "raptors-move-to-tampa",
+      "title": "Raptors play home games in Tampa",
+      "eventDate": "2020-11-20",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Toronto Raptors to play home games in Tampa to open NBA season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30354415/toronto-raptors-play-home-games-tampa-open-nba-season",
+        "publishedAt": "2020-11-20"
+      }
+    },
+    {
+      "id": "hayward-to-hornets",
+      "title": "Hornets sign Gordon Hayward to four-year, $120 million deal",
+      "eventDate": "2020-11-21",
+      "teams": [
+        "cha",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Hornets Swoop In to Sign Gordon Hayward, Leaving Everyone Confused",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/11/21/nba/gordon-hayward-charlotte-hornets-free-agency",
+        "publishedAt": "2020-11-21"
+      }
+    },
+    {
+      "id": "jrue-holiday-trade",
+      "title": "Bucks acquire Jrue Holiday in four-team deal",
+      "eventDate": "2020-11-24",
+      "teams": [
+        "mil",
+        "nop",
+        "okc",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Milwaukee Bucks Acquire Jrue Holiday From The New Orleans Pelicans As Part Of Four-Team Deal",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/bucks/news/milwaukee-bucks-acquire-jrue-holiday-new-orleans-pelicans-part-four-team-deal",
+        "publishedAt": "2020-11-24"
+      }
+    },
+    {
+      "id": "bogdanovic-to-hawks",
+      "title": "Kings let Bogdan Bogdanovic go to the Hawks",
+      "eventDate": "2020-11-24",
+      "teams": [
+        "atl",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Atlanta Hawks sign Bogdan Bogdanovic as Sacramento Kings decline to match offer",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30383598/sacramento-kings-not-matching-atlanta-hawks-offer-sheet-bogdan-bogdanovic",
+        "publishedAt": "2020-11-24"
+      }
+    },
+    {
+      "id": "westbrook-wall-trade",
+      "title": "Rockets swap Westbrook to Wizards for John Wall",
+      "eventDate": "2020-12-02",
+      "teams": [
+        "hou",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Russell Westbrook trade: Grading the Rockets-Wizards star swap",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/12/03/russell-westbrook-john-wall-trade-grade",
+        "publishedAt": "2020-12-03"
+      }
+    },
+    {
+      "id": "lebron-extension",
+      "title": "LeBron James signs two-year extension",
+      "eventDate": "2020-12-02",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LeBron James's Extension Was More Than Just a Formality",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/12/02/nba/lebron-james-extension-lakers",
+        "publishedAt": "2020-12-02"
+      }
+    },
+    {
+      "id": "giannis-supermax",
+      "title": "Giannis signs supermax extension with the Bucks",
+      "eventDate": "2020-12-15",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Giannis Antetokounmpo, Milwaukee Bucks reach five-year, $228M supermax extension",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30526147/giannis-antetokounmpo-milwaukee-bucks-reach-five-year-228m-supermax-extension",
+        "publishedAt": "2020-12-15"
+      }
+    },
+    {
+      "id": "bucks-tampering-penalty",
+      "title": "Bucks lose a draft pick over the failed Bogdanovic sign-and-trade",
+      "eventDate": "2020-12-21",
+      "teams": [
+        "mil",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks lose 2022 draft pick over failed Bogdan Bogdanovic trade",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/12/21/bucks-lose-2022-draft-pick-bogdan-bogdanovic-trade-violate-tampering-rules",
+        "publishedAt": "2020-12-21"
+      }
+    },
+    {
+      "id": "morant-ankle-sprain",
+      "title": "Ja Morant sprains his ankle",
+      "eventDate": "2020-12-28",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ja Morant's Injury Grounds the Grizzlies, but Not for Long",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/12/29/nba/ja-morant-injury-memphis-grizzlies",
+        "publishedAt": "2020-12-29"
+      }
+    },
+    {
+      "id": "hammon-first-woman-coach",
+      "title": "Becky Hammon becomes first woman to direct an NBA team",
+      "eventDate": "2020-12-30",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Becky Hammon Becomes First Woman to Lead NBA Team After Gregg Popovich's Ejection",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/12/31/gregg-popovich-spurs-ejected-becky-hammon-acting-head-coach",
+        "publishedAt": "2020-12-31"
+      }
+    },
+    {
+      "id": "curry-62-points",
+      "title": "Curry scores career-high 62 against Portland",
+      "eventDate": "2021-01-03",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stephen Curry has career-high 62, Warriors beat Blazers",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/stephen-curry-career-high-62-041842563.html",
+        "publishedAt": "2021-01-03"
+      }
+    },
+    {
+      "id": "lamelo-youngest-triple-double",
+      "title": "LaMelo Ball becomes youngest player with a triple-double",
+      "eventDate": "2021-01-09",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LaMelo Ball Becomes Youngest NBA Player to Record Triple-Double",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/01/10/lamelo-ball-posts-first-triple-double-youngest-nba-player",
+        "publishedAt": "2021-01-10"
+      }
+    },
+    {
+      "id": "heat-covid-protocols",
+      "title": "Butler and Adebayo sidelined as Heat are hit by protocols",
+      "eventDate": "2021-01-11",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jimmy Butler, Bam Adebayo among Heat players sidelined due to NBA's Health and Safety Protocols",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/jimmy-butler-bam-adebayo-among-heat-players-sidelined-due-to-nbas-health-and-safety-protocols/",
+        "publishedAt": "2021-01-11"
+      }
+    },
+    {
+      "id": "covid-protocols",
+      "title": "COVID absences and postponements force stricter league protocols",
+      "eventDate": "2021-01-12",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "NBA announces additional COVID-19 protocols as absences mount",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/01/12/nba-announces-coronavirus-protocols-wave-absences",
+        "publishedAt": "2021-01-12"
+      }
+    },
+    {
+      "id": "harden-not-good-enough",
+      "title": "Harden says the Rockets are not good enough",
+      "eventDate": "2021-01-12",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "James Harden calls Rockets' situation 'crazy' after loss to Lakers",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/01/13/james-harden-candid-rockets-future-loss-lakers",
+        "publishedAt": "2021-01-13"
+      }
+    },
+    {
+      "id": "harden-trade-nets",
+      "title": "James Harden traded to the Nets in four-team blockbuster",
+      "eventDate": "2021-01-13",
+      "teams": [
+        "bkn",
+        "hou",
+        "cle",
+        "ind"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "The Winners and Losers of the James Harden Trade",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2021/01/13/nba/james-harden-trade-nets-rockets-winners-losers",
+        "publishedAt": "2021-01-13"
+      }
+    },
+    {
+      "id": "kyrie-absence-fine",
+      "title": "Kyrie Irving's unexplained absence and protocol fine",
+      "eventDate": "2021-01-15",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kyrie Irving Fined $50,000 for Violating NBA's Health and Safety Protocols",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/01/15/kyrie-irving-fined-violating-nba-protocols-attending-birthday-party",
+        "publishedAt": "2021-01-15"
+      }
+    },
+    {
+      "id": "towns-covid",
+      "title": "Karl-Anthony Towns tests positive for COVID-19",
+      "eventDate": "2021-01-15",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Karl-Anthony Towns tests positive for COVID-19 after losing mom, 6 other family members to the virus",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/minnesota-timberwolves-karl-anthony-towns-positive-coronavirus-covid19-pandemic-nba-postponed-234328836.html",
+        "publishedAt": "2021-01-15"
+      }
+    },
+    {
+      "id": "mccollum-foot-fracture",
+      "title": "CJ McCollum fractures his foot",
+      "eventDate": "2021-01-16",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Portland Trail Blazers' CJ McCollum to miss at least four weeks with small fracture in left foot",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30740134/portland-trail-blazers-cj-mccollum-miss-least-4-weeks-small-fracture-left-foot",
+        "publishedAt": "2021-01-19"
+      }
+    },
+    {
+      "id": "sexton-42-nets",
+      "title": "Collin Sexton's 42 spoils the Nets' Big 3 debut",
+      "eventDate": "2021-01-20",
+      "teams": [
+        "cle",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Collin Sexton Isn't Trae or Luka, but He's Getting Buckets on Everyone",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2021/01/21/nba/collin-sexton-isnt-trae-young-or-luka-doncic-but-hes-getting-buckets-on-everyone",
+        "publishedAt": "2021-01-21"
+      }
+    },
+    {
+      "id": "rose-to-knicks",
+      "title": "Knicks reunite Derrick Rose with Thibodeau",
+      "eventDate": "2021-02-07",
+      "teams": [
+        "nyk",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Pistons Trade Derrick Rose to Knicks for Dennis Smith Jr., Draft Picks",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/02/07/derrick-rose-trade-knicks-pistons-dennis-smith-jr",
+        "publishedAt": "2021-02-07"
+      }
+    },
+    {
+      "id": "spurs-covid-outbreak",
+      "title": "COVID outbreak postpones five Spurs games",
+      "eventDate": "2021-02-16",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "San Antonio Spurs have 4 players test positive for COVID-19; five games postponed",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30911667/next-three-san-antonio-spurs-games-postponed-four-players-test-positive-covid-19",
+        "publishedAt": "2021-02-16"
+      }
+    },
+    {
+      "id": "russell-knee-surgery",
+      "title": "D'Angelo Russell has knee surgery",
+      "eventDate": "2021-02-16",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "D'Angelo Russell injury: Timberwolves guard to miss four to six weeks",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/02/16/dangelo-russell-knee-surgery-miss-four-six-weeks",
+        "publishedAt": "2021-02-16"
+      }
+    },
+    {
+      "id": "wolves-fire-saunders",
+      "title": "Wolves fire Ryan Saunders and hire Chris Finch",
+      "eventDate": "2021-02-21",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Minnesota Timberwolves fire coach Ryan Saunders, hire Toronto Raptors assistant Chris Finch as replacement",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30943300/sources-minnesota-timberwolves-dismiss-coach-ryan-saunders",
+        "publishedAt": "2021-02-22"
+      }
+    },
+    {
+      "id": "lavine-first-all-star",
+      "title": "Zach LaVine named an All-Star for the first time",
+      "eventDate": "2021-02-23",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Zach LaVine named All-Star for first time in his career",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/bulls/news/zach-lavine-named-all-star-first-time-his-career",
+        "publishedAt": "2021-02-23"
+      }
+    },
+    {
+      "id": "raptors-covid-outbreak",
+      "title": "COVID sidelines Siakam, Nick Nurse and five assistants",
+      "eventDate": "2021-02-26",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Toronto Raptors' Pascal Siakam, coach Nick Nurse, 5 assistants sidelined due to protocols",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30969629/toronto-raptors-coach-nick-nurse-5-assistants-friday-game-due-protocols",
+        "publishedAt": "2021-02-26"
+      }
+    },
+    {
+      "id": "hawks-fire-pierce",
+      "title": "Hawks fire Lloyd Pierce, turn to Nate McMillan",
+      "eventDate": "2021-03-01",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Atlanta Hawks fire coach Lloyd Pierce",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30986230/atlanta-hawks-fire-coach-lloyd-pierce",
+        "publishedAt": "2021-03-01"
+      }
+    },
+    {
+      "id": "griffin-to-nets",
+      "title": "Blake Griffin joins the Nets after Pistons buyout",
+      "eventDate": "2021-03-07",
+      "teams": [
+        "bkn",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Blake Griffin contract: Signs with Nets after clearing waivers",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/03/07/blake-griffin-signs-nets-contract-buyout",
+        "publishedAt": "2021-03-07"
+      }
+    },
+    {
+      "id": "zion-all-star-debut",
+      "title": "Zion Williamson makes his first All-Star team",
+      "eventDate": "2021-03-07",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Zion Williamson skies for 10 points in his NBA All-Star debut",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/pelicans/news/zion-williamson-skies-10-points-his-nba-all-star-debut",
+        "publishedAt": "2021-03-07"
+      }
+    },
+    {
+      "id": "aldridge-spurs-split",
+      "title": "Spurs and LaMarcus Aldridge part ways",
+      "eventDate": "2021-03-10",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs, LaMarcus Aldridge to Mutually Part Ways",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/03/11/spurs-lamarcus-aldridge-mutually-part-ways",
+        "publishedAt": "2021-03-11"
+      }
+    },
+    {
+      "id": "embiid-bone-bruise",
+      "title": "Embiid's MVP push interrupted by knee injury",
+      "eventDate": "2021-03-12",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Joel Embiid's MRI Reveals No Structural Damage in Left Knee After Friday's Injury",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/03/13/joel-embiid-sixers-injury-left-knee-mri",
+        "publishedAt": "2021-03-13"
+      }
+    },
+    {
+      "id": "edwards-40-point-game",
+      "title": "Anthony Edwards scores 42 as a 19-year-old",
+      "eventDate": "2021-03-18",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Minnesota Timberwolves rookie Anthony Edwards third youngest in NBA history with 40-point game",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31090744/minnesota-timberwolves-rookie-anthony-edwards-third-youngest-40-point-game",
+        "publishedAt": "2021-03-18"
+      }
+    },
+    {
+      "id": "lamelo-wrist-fracture",
+      "title": "LaMelo Ball fractures his wrist",
+      "eventDate": "2021-03-20",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: LaMelo Ball Likely Out For Season With Fractured Wrist",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/03/22/lamelo-ball-hornets-wrist-injury-ends-season",
+        "publishedAt": "2021-03-22"
+      }
+    },
+    {
+      "id": "lebron-ankle-sprain",
+      "title": "LeBron James suffers high ankle sprain",
+      "eventDate": "2021-03-20",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LeBron James Suffers High Right Ankle Sprain, Out Indefinitely",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/03/20/lebron-james-injury-right",
+        "publishedAt": "2021-03-20"
+      }
+    },
+    {
+      "id": "rockets-20-game-skid",
+      "title": "Rockets snap franchise-record 20-game losing streak",
+      "eventDate": "2021-03-22",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Houston Rockets 'joyous' after snapping 20-game losing streak",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31118108/houston-rockets-joyous-snapping-20-game-leasing-streak",
+        "publishedAt": "2021-03-22"
+      }
+    },
+    {
+      "id": "magic-deadline-teardown",
+      "title": "Magic tear down roster at the trade deadline",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic's Active Trade Deadline Turns the Page to Next Chapter of Franchise History",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/magic/orlando-magic-trade-deadline-recap-nikola-vucevic-aaron-gordon-evan-fournier-wendell-carter-gary-harris-otto-porter-rj-hampton-draft-pick-story-20210325",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "vucevic-to-bulls",
+      "title": "Bulls trade for All-Star Nikola Vucevic",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "chi",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Reports: Magic trade Nikola Vucevic to Bulls",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/reports-orlando-trades-all-star-forward-nikola-vucevic-to-chicago-150740932.html",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "fournier-to-celtics",
+      "title": "Celtics land Evan Fournier for two second-rounders",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "bos",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Boston Celtics get Orlando Magic's Evan Fournier for draft picks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=31134054",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "trade-deadline-2021",
+      "title": "Trade deadline: Lowry stays, Oladipo to Miami, Gordon to Denver",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "tor",
+        "mia",
+        "den",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA trade deadline results: Kyle Lowry stays with Raptors; Heat get Victor Oladipo; Nuggets land Aaron Gordon",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/nba-trade-deadline-results-kyle-lowry-stays-with-raptors-heat-get-victor-oladipo-nuggets-land-aaron-gordon/live/",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "theis-to-bulls",
+      "title": "Bulls add Daniel Theis in three-team deadline deal",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "chi",
+        "bos",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls complete three-team trade with Wizards & Celtics",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/bulls/news/bulls-complete-three-team-trade-wizards-celtics",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "wright-joseph-trade",
+      "title": "Pistons send Delon Wright to Kings for Cory Joseph and picks",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "det",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Detroit Pistons sending Delon Wright to Sacramento Kings for Cory Joseph, picks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31131581/detroit-pistons-sending-delon-wright-sacramento-kings-cory-joseph-picks",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "oladipo-to-heat",
+      "title": "Heat acquire Victor Oladipo from the Rockets",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "mia",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Miami Heat acquire Victor Oladipo in trade with Houston Rockets; team eyes bought-out LaMarcus Aldridge",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31135332/houston-rockets-trade-victor-oladipo-miami-heat-source-says",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "sga-plantar-fasciitis",
+      "title": "Shai Gilgeous-Alexander sidelined with plantar fasciitis",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Oklahoma City Thunder's Shai Gilgeous-Alexander to miss extended time with plantar fasciitis in right foot",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31131242/oklahoma-city-thunder-shai-gilgeous-alexander-miss-extended-plantar-fasciitis-right-foot",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "powell-to-blazers",
+      "title": "Blazers trade for Norman Powell; Raptors get Gary Trent Jr.",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "por",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Norman Powell trade: Grading Raptors-Blazers deal",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/03/25/norman-powell-gary-trent-jr-blazers-raptors-trade-grades",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "rondo-williams-trade",
+      "title": "Clippers trade Lou Williams to the Hawks for Rajon Rondo",
+      "eventDate": "2021-03-25",
+      "teams": [
+        "lac",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Atlanta Hawks trade Rajon Rondo to LA Clippers for Lou Williams, future second-round picks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31134947/source-atlanta-hawks-trading-rajon-rondo-la-clippers-lou-williams",
+        "publishedAt": "2021-03-25"
+      }
+    },
+    {
+      "id": "drummond-buyout",
+      "title": "Cavaliers bench and buy out Andre Drummond",
+      "eventDate": "2021-03-26",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Andre Drummond free agency: Cavaliers agree to contract buyout",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/03/26/andre-drummond-agrees-to-contract-buyout-with-cavaliers",
+        "publishedAt": "2021-03-26"
+      }
+    },
+    {
+      "id": "horford-shut-down",
+      "title": "Thunder shut down Al Horford to develop young players",
+      "eventDate": "2021-03-27",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Thunder to Shut Down Al Horford for Rest of Season to Develop Younger Players",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/03/27/oklahoma-city-thunder-al-horford-shut-down-season",
+        "publishedAt": "2021-03-27"
+      }
+    },
+    {
+      "id": "point-zion",
+      "title": "Pelicans hand the offense to \"Point Zion\"",
+      "eventDate": "2021-04-09",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "New Orleans Pelicans give Zion Williamson keys to offense, drive away with win",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31226281/new-orleans-pelicans-give-zion-williamson-keys-offense-drive-away-win",
+        "publishedAt": "2021-04-10"
+      }
+    },
+    {
+      "id": "murray-acl",
+      "title": "Jamal Murray tears his ACL",
+      "eventDate": "2021-04-12",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Denver Nuggets guard Jamal Murray suffers torn ACL in left knee, out indefinitely",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31249220/denver-nuggets-guard-jamal-murray-suffers-torn-acl-left-knee-indefinitely",
+        "publishedAt": "2021-04-13"
+      }
+    },
+    {
+      "id": "curry-passes-wilt",
+      "title": "Curry passes Wilt Chamberlain as the Warriors' all-time leading scorer",
+      "eventDate": "2021-04-12",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stephen Curry passes Wilt Chamberlain for Warriors all-time scoring record",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/stephen-curry-passes-wilt-chamberlain-for-warriors-all-time-scoring-record",
+        "publishedAt": "2021-04-12"
+      }
+    },
+    {
+      "id": "aldridge-retires",
+      "title": "LaMarcus Aldridge retires after irregular heartbeat",
+      "eventDate": "2021-04-15",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brooklyn Nets center LaMarcus Aldridge abruptly retires due to health scare",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31262807/brooklyn-nets-forward-lamarcus-aldridge-abruptly-retires-due-health-scare",
+        "publishedAt": "2021-04-15"
+      }
+    },
+    {
+      "id": "lavine-health-protocols",
+      "title": "LaVine enters health protocols during the play-in race",
+      "eventDate": "2021-04-15",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chicago Bulls' Zach LaVine in health and safety protocol, expected to miss several games, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31263924/chicago-bulls-zach-lavine-health-safety-protocol-expected-miss-several-games-sources-say",
+        "publishedAt": "2021-04-15"
+      }
+    },
+    {
+      "id": "jjj-returns",
+      "title": "Jaren Jackson Jr. returns from knee surgery",
+      "eventDate": "2021-04-21",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Memphis Grizzlies' Jaren Jackson Jr. says returning to court after injury 'a big win'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31307393/memphis-grizzlies-jaren-jackson-says-returning-court-injury-big-win",
+        "publishedAt": "2021-04-21"
+      }
+    },
+    {
+      "id": "haliburton-knee",
+      "title": "Haliburton's standout rookie season ends with knee injury",
+      "eventDate": "2021-05-04",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "MRI reveals no ligament damage to knee of Sacramento Kings rookie Tyrese Haliburton",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31391487",
+        "publishedAt": "2021-05-04"
+      }
+    },
+    {
+      "id": "zion-finger-fracture",
+      "title": "Zion's season ends with a fractured finger",
+      "eventDate": "2021-05-07",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Zion Williamson Sidelined Indefinitely With Fractured Finger",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/05/07/zion-williamson-injury-out-indefinitely-fractured-finger-pelicans",
+        "publishedAt": "2021-05-07"
+      }
+    },
+    {
+      "id": "westbrook-triple-double-record",
+      "title": "Westbrook breaks Oscar Robertson's career triple-double record",
+      "eventDate": "2021-05-10",
+      "teams": [
+        "was"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Russell Westbrook Breaks Oscar Robertson's Career Triple-Double Record",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/05/11/russell-westbrook-career-triple-double-record-oscar-robertson",
+        "publishedAt": "2021-05-11"
+      }
+    },
+    {
+      "id": "oladipo-quad-surgery",
+      "title": "Oladipo's Heat stint ends with season-ending surgery",
+      "eventDate": "2021-05-12",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Victor Oladipo injury: Heat guard will undergo season-ending surgery",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/05/12/heat-victor-oladipo-end-season-undergo-surgery-quad",
+        "publishedAt": "2021-05-12"
+      }
+    },
+    {
+      "id": "knicks-clinch-playoffs",
+      "title": "Knicks clinch first playoff berth since 2013",
+      "eventDate": "2021-05-12",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks Clinch 1st NBA Playoff Berth Since 2013 After Celtics Lose to Cavaliers",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/2940805-knicks-clinch-1st-nba-playoff-berth-since-2013-after-celtics-lose-to-cavaliers",
+        "publishedAt": "2021-05-12"
+      }
+    },
+    {
+      "id": "kings-playoff-drought",
+      "title": "Kings tie NBA record with 15th straight season out of the playoffs",
+      "eventDate": "2021-05-13",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings Tie NBA Record By Missing Playoffs for 15th Consecutive Season",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10002625-kings-tie-nba-record-by-missing-playoffs-for-15th-consecutive-season",
+        "publishedAt": "2021-05-13"
+      }
+    },
+    {
+      "id": "wolves-sale-arod-lore",
+      "title": "Glen Taylor agrees to sell the Wolves to Marc Lore and Alex Rodriguez",
+      "eventDate": "2021-05-13",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Alex Rodriguez group to purchase Minnesota Timberwolves for $1.5 billion, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31439557/alex-rodriguez-group-purchase-minnesota-timberwolves-15-billion-per-reports",
+        "publishedAt": "2021-05-13"
+      }
+    },
+    {
+      "id": "curry-scoring-title",
+      "title": "Curry wins scoring title at 33",
+      "eventDate": "2021-05-16",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stephen Curry Clinches Second Career Scoring Title",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/05/16/stephen-curry-wins-second-scoring-title",
+        "publishedAt": "2021-05-16"
+      }
+    },
+    {
+      "id": "jazz-clinch-top-seed",
+      "title": "Jazz finish with the league's best record",
+      "eventDate": "2021-05-16",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz Clinch West's No. 1 Seed, Home-Court Advantage in 2021 NBA Playoffs",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10002869-jazz-clinch-wests-no-1-seed-home-court-advantage-in-2021-nba-playoffs",
+        "publishedAt": "2021-05-16"
+      }
+    },
+    {
+      "id": "play-in-debut",
+      "title": "Play-In Tournament makes its debut",
+      "eventDate": "2021-05-18",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "How Does the NBA Play-In Tournament Work?",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/05/14/play-in-tournament-format-dates-explained",
+        "publishedAt": "2021-05-14"
+      }
+    },
+    {
+      "id": "pacers-rout-hornets-play-in",
+      "title": "Pacers rout Hornets in the play-in",
+      "eventDate": "2021-05-18",
+      "teams": [
+        "ind",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers Rout LaMelo Ball, Hornets in Play-in Game; Will Face Wizards-Celtics Loser",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10003045-pacers-rout-lamelo-ball-hornets-in-play-in-game-will-face-wizards-celtics-loser",
+        "publishedAt": "2021-05-18"
+      }
+    },
+    {
+      "id": "lebron-play-in-winner",
+      "title": "LeBron's deep three beats Warriors in play-in",
+      "eventDate": "2021-05-19",
+      "teams": [
+        "lal",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LeBron James hits game-winner to lift Lakers over Warriors",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/05/20/lakers-beat-warriors-play-in-tournament-lebron-james-stephen-curry",
+        "publishedAt": "2021-05-20"
+      }
+    },
+    {
+      "id": "spurs-play-in-loss",
+      "title": "Grizzlies end the Spurs' season in the play-in",
+      "eventDate": "2021-05-19",
+      "teams": [
+        "sas",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "'Fired up' Memphis Grizzlies advance in NBA's play-in tournament, end San Antonio Spurs' season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=31474849",
+        "publishedAt": "2021-05-19"
+      }
+    },
+    {
+      "id": "wizards-play-in",
+      "title": "Westbrook delivers Wizards to the playoffs through the play-in",
+      "eventDate": "2021-05-20",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Russell Westbrook delivers on midseason vow, leads Washington Wizards to playoffs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31480976/russell-westbrook-delivers-midseason-vow-leads-washington-wizards-playoffs",
+        "publishedAt": "2021-05-21"
+      }
+    },
+    {
+      "id": "grizzlies-play-in",
+      "title": "Grizzlies beat Warriors in overtime play-in to reach playoffs",
+      "eventDate": "2021-05-21",
+      "teams": [
+        "mem",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ja Morant, Memphis Grizzlies into NBA playoffs after ousting Golden State Warriors in overtime",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31486823/ja-morant-memphis-grizzlies-playoffs-ousting-warriors-over",
+        "publishedAt": "2021-05-22"
+      }
+    },
+    {
+      "id": "clarkson-6moy",
+      "title": "Clarkson wins Sixth Man of the Year",
+      "eventDate": "2021-05-24",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jordan Clarkson Wins 2020-21 NBA Sixth Man of the Year Award over Rose, Ingles",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/2939791-jordan-clarkson-wins-2020-21-nba-sixth-man-of-the-year-award-over-rose-ingles",
+        "publishedAt": "2021-05-24"
+      }
+    },
+    {
+      "id": "randle-mip",
+      "title": "Julius Randle named Most Improved Player",
+      "eventDate": "2021-05-25",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Julius Randle named 2020-21 Kia NBA Most Improved Player",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/julius-randle-named-2020-21-kia-nba-most-improved-player",
+        "publishedAt": "2021-05-25"
+      }
+    },
+    {
+      "id": "morant-47-jazz",
+      "title": "Morant scores 47 as Grizzlies push top-seeded Jazz",
+      "eventDate": "2021-05-26",
+      "teams": [
+        "mem",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Memphis Grizzlies' Ja Morant downplays 47-point night, earns Utah Jazz's respect",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31519532/memphis-grizzlies-ja-morant-downplays-franchise-playoff-record-47-points-earns-utah-respect",
+        "publishedAt": "2021-05-27"
+      }
+    },
+    {
+      "id": "heat-swept-by-bucks",
+      "title": "Heat swept by the Bucks a year after reaching the Finals",
+      "eventDate": "2021-05-29",
+      "teams": [
+        "mia",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Miami Heat's Pat Riley says team needs downtime after exhausting year",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31561426/miami-heat-pat-riley-says-team-needs-exhausting-year",
+        "publishedAt": "2021-06-03"
+      }
+    },
+    {
+      "id": "kyrie-logo-stomp",
+      "title": "Nets dispatch Celtics as Irving stomps on Boston logo",
+      "eventDate": "2021-05-30",
+      "teams": [
+        "bos",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kyrie Irving Took His Shot From the Logo: Unchecked",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/06/01/kyrie-irving-brooklyn-nets-boston-celtics-logo-stomp",
+        "publishedAt": "2021-06-01"
+      }
+    },
+    {
+      "id": "sixers-eliminate-wizards",
+      "title": "Sixers knock out Wizards in five",
+      "eventDate": "2021-06-02",
+      "teams": [
+        "phi",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Tobias Harris, Seth Curry Help 76ers Eliminate Wizards With Game 5 Win",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10004644-tobias-harris-seth-curry-help-76ers-eliminate-wizards-with-game-5-win",
+        "publishedAt": "2021-06-02"
+      }
+    },
+    {
+      "id": "hawks-eliminate-knicks",
+      "title": "Trae Young takes a bow as Hawks oust Knicks",
+      "eventDate": "2021-06-02",
+      "teams": [
+        "atl",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks-Knicks: Trae Young eliminates New York with a bow, joins Michael Jordan in Madison Square Garden lore",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/hawks-knicks-trae-young-eliminates-new-york-with-a-bow-joins-michael-jordan-in-madison-square-garden-lore/",
+        "publishedAt": "2021-06-03"
+      }
+    },
+    {
+      "id": "ainge-retires-stevens",
+      "title": "Ainge retires and Brad Stevens moves to the Celtics front office",
+      "eventDate": "2021-06-02",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Boston Celtics president Danny Ainge retires, coach Brad Stevens takes over",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31552637/boston-celtics-president-danny-ainge-step-brad-stevens-moving-front-office",
+        "publishedAt": "2021-06-02"
+      }
+    },
+    {
+      "id": "embiid-meniscus-tear",
+      "title": "Embiid plays through a torn meniscus in the playoffs",
+      "eventDate": "2021-06-02",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Joel Embiid sits out Game 5 with small meniscus tear in right knee",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/joel-embiid-out-for-game-5",
+        "publishedAt": "2021-06-02"
+      }
+    },
+    {
+      "id": "suns-eliminate-lakers",
+      "title": "Booker's 47 ends the defending champion Lakers' reign",
+      "eventDate": "2021-06-03",
+      "teams": [
+        "lal",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Devin Booker drops 47 points as Phoenix Suns end Los Angeles Lakers' reign in first round",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31563523/devin-booker-drops-47-points-phoenix-suns-end-lakers-reign-first-round",
+        "publishedAt": "2021-06-04"
+      }
+    },
+    {
+      "id": "nuggets-eliminate-blazers",
+      "title": "Jokic's Nuggets beat Blazers in six without Murray",
+      "eventDate": "2021-06-03",
+      "teams": [
+        "den",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nikola Jokic, Nuggets Eliminate Blazers in Game 6 Despite Damian Lillard's 28",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10004761-nikola-jokic-nuggets-eliminate-blazers-in-game-6-despite-damian-lillards-28",
+        "publishedAt": "2021-06-03"
+      }
+    },
+    {
+      "id": "stotts-out-portland",
+      "title": "Blazers part ways with Terry Stotts after nine seasons",
+      "eventDate": "2021-06-04",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Terry Stotts out as Portland Trail Blazers' head coach after nine seasons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31568373/sources-terry-stotts-portland-trail-blazers-head-coach-nine-seasons",
+        "publishedAt": "2021-06-04"
+      }
+    },
+    {
+      "id": "clippers-beat-mavs-game-7",
+      "title": "Clippers rally from 0-2 to beat Doncic's Mavs in Game 7",
+      "eventDate": "2021-06-06",
+      "teams": [
+        "lac",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LA Clippers exorcise playoff demons in Game 7 triumph",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/la-clippers-exorcise-playoff-demons-with-game-7-triumph",
+        "publishedAt": "2021-06-06"
+      }
+    },
+    {
+      "id": "jokic-mvp",
+      "title": "Nikola Jokic wins MVP",
+      "eventDate": "2021-06-08",
+      "teams": [
+        "den"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Nikola Jokic wins 2020-21 Kia NBA Most Valuable Player Award",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/nikola-jokic-wins-2020-21-kia-nba-most-valuable-player-award",
+        "publishedAt": "2021-06-08"
+      }
+    },
+    {
+      "id": "thibodeau-coy",
+      "title": "Thibodeau named Coach of the Year",
+      "eventDate": "2021-06-08",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Tom Thibodeau Wins Coach of the Year Award After Leading Knicks to Playoff Berth",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/06/08/tom-thibodeau-named-nba-coach-of-the-year-knicks-pat-riley",
+        "publishedAt": "2021-06-08"
+      }
+    },
+    {
+      "id": "gobert-dpoy",
+      "title": "Gobert wins third Defensive Player of the Year",
+      "eventDate": "2021-06-09",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rudy Gobert wins Defensive Player of the Year Award for third time",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/06/10/rudy-gobert-wins-defensive-player-of-the-year-award",
+        "publishedAt": "2021-06-10"
+      }
+    },
+    {
+      "id": "bjorkgren-fired",
+      "title": "Pacers fire Nate Bjorkgren after one season",
+      "eventDate": "2021-06-09",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nate Bjorkgren fired as Indiana Pacers coach after playoff streak ends",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31597939/nate-bjorkgren-fired-indiana-pacers-coach-playoff-streak-ends",
+        "publishedAt": "2021-06-09"
+      }
+    },
+    {
+      "id": "suns-sweep-nuggets",
+      "title": "Suns sweep MVP Jokic's Nuggets",
+      "eventDate": "2021-06-13",
+      "teams": [
+        "den",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nikola Jokic's ejection seals Denver Nuggets' fate",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/nikola-jokics-ejection-seals-nuggets-fate-vs-suns",
+        "publishedAt": "2021-06-13"
+      }
+    },
+    {
+      "id": "lamelo-roy",
+      "title": "LaMelo Ball wins Rookie of the Year",
+      "eventDate": "2021-06-16",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets' LaMelo Ball wins 2020-21 NBA Rookie of the Year despite missing 21 regular-season games",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/hornets-lamelo-ball-wins-2020-21-nba-rookie-of-the-year-despite-missing-21-regular-season-games/",
+        "publishedAt": "2021-06-16"
+      }
+    },
+    {
+      "id": "donnie-nelson-out",
+      "title": "Mavericks part ways with Donnie Nelson",
+      "eventDate": "2021-06-16",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavericks Part Ways With GM Donnie Nelson After 24 Years With Franchise",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/06/16/donnie-nelson-mavericks-part-ways-franchise",
+        "publishedAt": "2021-06-16"
+      }
+    },
+    {
+      "id": "van-gundy-out",
+      "title": "Pelicans part with Stan Van Gundy after one season",
+      "eventDate": "2021-06-16",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Pelicans part with Stan Van Gundy after one season",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/06/16/stan-van-gundy-pelicans-part-ways-one-season",
+        "publishedAt": "2021-06-16"
+      }
+    },
+    {
+      "id": "carlisle-leaves-dallas",
+      "title": "Rick Carlisle steps down as Mavericks coach",
+      "eventDate": "2021-06-17",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rick Carlisle out as Mavericks head coach after 13 seasons, one NBA title in Dallas",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/rick-carlisle-out-as-mavericks-head-coach-after-13-seasons-and-one-nba-title-in-dallas/",
+        "publishedAt": "2021-06-17"
+      }
+    },
+    {
+      "id": "clippers-eliminate-jazz",
+      "title": "Terance Mann's 39 sends Clippers past Jazz to first conference finals",
+      "eventDate": "2021-06-18",
+      "teams": [
+        "lac",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The 'Terance Mann Game' lifts Clippers to first conference finals",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/jazz-clippers-game-6-analysis-the-terance-mann-game-lifts-clippers-to-first-conference-finals",
+        "publishedAt": "2021-06-19"
+      }
+    },
+    {
+      "id": "kemba-horford-trade",
+      "title": "Celtics trade Kemba Walker to Thunder for Al Horford",
+      "eventDate": "2021-06-18",
+      "teams": [
+        "bos",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kemba Walker, Draft Picks Traded to Thunder; Celtics Get Al Horford, More",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/2944424-kemba-walker-draft-picks-traded-to-thunder-celtics-get-al-horford-more",
+        "publishedAt": "2021-06-18"
+      }
+    },
+    {
+      "id": "bucks-beat-nets-game-7",
+      "title": "Bucks outlast Durant's 48 in Game 7 overtime to end Nets' run",
+      "eventDate": "2021-06-19",
+      "teams": [
+        "bkn",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kevin Durant Put His Best Foot Forward, but the Bucks Won the War of Attrition",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2021/06/20/nba/kevin-durant-brooklyn-nets-milwaukee-bucks-game-7",
+        "publishedAt": "2021-06-20"
+      }
+    },
+    {
+      "id": "sixers-game-7-collapse",
+      "title": "Top-seeded Sixers fall to Hawks in Game 7 as Simmons questions mount",
+      "eventDate": "2021-06-20",
+      "teams": [
+        "phi",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Joel Embiid, Doc Rivers Raise Questions About Ben Simmons Following Game 7 Loss",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/06/21/ben-simmons-joel-embiid-doc-rivers-76ers-game-7-loss",
+        "publishedAt": "2021-06-21"
+      }
+    },
+    {
+      "id": "pistons-win-lottery",
+      "title": "Pistons win the draft lottery",
+      "eventDate": "2021-06-22",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA draft 2021: Detroit Pistons win No. 1 pick at lottery",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/06/23/nba-draft-lottery-results-2021-pistons-win-no-1-pick",
+        "publishedAt": "2021-06-23"
+      }
+    },
+    {
+      "id": "carlisle-to-pacers",
+      "title": "Rick Carlisle returns to coach the Pacers",
+      "eventDate": "2021-06-24",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Pacers Hire Rick Carlisle as Head Coach",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/06/24/rick-carlisle-hired-pacers-head-coach-mavericks-departure",
+        "publishedAt": "2021-06-24"
+      }
+    },
+    {
+      "id": "kidd-hired-dallas",
+      "title": "Mavericks hire Jason Kidd and Nico Harrison",
+      "eventDate": "2021-06-28",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jason Kidd, Nico Harrison Officially Announced as Mavericks Head Coach, GM",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/10006653-jason-kidd-nico-harrison-officially-announced-as-mavericks-head-coach-gm",
+        "publishedAt": "2021-06-28"
+      }
+    },
+    {
+      "id": "billups-hired-portland",
+      "title": "Blazers hire Chauncey Billups amid criticism",
+      "eventDate": "2021-06-28",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Portland Trail Blazers' Arrogance on the Allegations Against Chauncey Billups",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/06/30/trail-blazers-arrogance-billups",
+        "publishedAt": "2021-06-30"
+      }
+    },
+    {
+      "id": "suns-reach-finals",
+      "title": "Suns beat Clippers to reach first Finals since 1993",
+      "eventDate": "2021-06-30",
+      "teams": [
+        "phx",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Phoenix Suns finish off LA Clippers in 6, advance to first NBA Finals since 1993",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31742002/phoenix-suns-finish-la-clippers-6-advance-first-nba-finals-1993",
+        "publishedAt": "2021-06-30"
+      }
+    },
+    {
+      "id": "hawks-ecf-run-ends",
+      "title": "Hawks' run from 14-20 ends in the conference finals",
+      "eventDate": "2021-07-03",
+      "teams": [
+        "atl",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trae Young, Hawks seized a unique opportunity, but living up to new expectations will be a tall task",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/trae-young-hawks-seized-a-unique-opportunity-but-living-up-to-new-expectations-will-be-a-tall-task/",
+        "publishedAt": "2021-07-05"
+      }
+    },
+    {
+      "id": "mcmillan-permanent",
+      "title": "Hawks remove Nate McMillan's interim tag",
+      "eventDate": "2021-07-08",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks name Nate McMillan coach, remove interim tag",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/hawks-name-nate-mcmillan-coach-remove-interim-tag",
+        "publishedAt": "2021-07-08"
+      }
+    },
+    {
+      "id": "kawhi-acl-surgery",
+      "title": "Kawhi Leonard has surgery on partially torn ACL",
+      "eventDate": "2021-07-13",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers' Kawhi Leonard Undergoes Surgery on Torn ACL Injury Suffered vs. Jazz",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/2945435-clippers-kawhi-leonard-undergoes-surgery-on-torn-acl-injury-suffered-vs-jazz",
+        "publishedAt": "2021-07-13"
+      }
+    },
+    {
+      "id": "bucks-win-2021-title",
+      "title": "Bucks win first title in 50 years behind Giannis's 50-point closeout",
+      "eventDate": "2021-07-20",
+      "teams": [
+        "mil",
+        "phx"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Bucks Beat Suns in Game 6 to Win First Championship in 50 Years",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2021/07/21/bucks-beat-suns-game-6-win-2021-nba-championship",
+        "publishedAt": "2021-07-21"
+      }
+    },
+    {
+      "id": "suns-finals-loss",
+      "title": "Suns' Finals run ends after blowing 2-0 lead",
+      "eventDate": "2021-07-20",
+      "teams": [
+        "phx",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chris Paul's Moment Slips Through His Fingers",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2021/07/21/nba/chris-paul-nba-finals-phoenix-suns",
+        "publishedAt": "2021-07-21"
+      }
+    },
+    {
+      "id": "cade-cunningham-no-1",
+      "title": "Pistons take Cade Cunningham No. 1 overall",
+      "eventDate": "2021-07-29",
+      "teams": [
+        "det",
+        "cle",
+        "orl"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Detroit Pistons take Cade Cunningham with No. 1 overall pick in NBA draft; Jalen Suggs ends up with Orlando Magic",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/31914795/2021-nba-draft-detroit-pistons-make-official-take-cade-cunningham-no-1-overall-pick-nba-draft",
+        "publishedAt": "2021-07-29"
+      }
+    },
+    {
+      "id": "raptors-draft-barnes",
+      "title": "Raptors stun with Scottie Barnes at No. 4",
+      "eventDate": "2021-07-29",
+      "teams": [
+        "tor",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Ripple Effects of the Raptors' Stunning Pick at No. 4",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2021/07/29/nba-draft/nba-draft-raptors-magic-scottie-barnes-jalen-suggs",
+        "publishedAt": "2021-07-29"
+      }
+    }
+  ]
+}
