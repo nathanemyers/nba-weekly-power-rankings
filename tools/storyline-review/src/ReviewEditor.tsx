@@ -12,7 +12,6 @@ import {
   KINDS,
   saveReview,
   type Candidate,
-  type MoreResult,
   type ReviewState,
 } from './types'
 
@@ -48,7 +47,7 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
   const [kind, setKind] = useState('')
   const [search, setSearch] = useState('')
   const [finding, setFinding] = useState(props.initial.running)
-  const [moreResult, setMoreResult] = useState<MoreResult>()
+  const [finished, setFinished] = useState({ count: 0, failed: false })
 
   useEffect(() => {
     if (!dirty) return
@@ -83,7 +82,6 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
   const findMoreFor = async (section: string) => {
     if (dirty && !(await save())) return
     setFinding(section)
-    setMoreResult(undefined)
     try {
       const result = await findMore(raw.season, section)
       setReview(result)
@@ -97,9 +95,13 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
           ],
         }
       })
-      setMoreResult(result.more)
+      setFinished((f) => ({
+        count: f.count + 1,
+        failed: result.more.error !== undefined,
+      }))
     } catch (error) {
-      setMoreResult({ section, added: [], error: String(error) })
+      setSaveError(String(error))
+      setFinished((f) => ({ count: f.count + 1, failed: true }))
     } finally {
       setFinding(null)
     }
@@ -202,7 +204,7 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
             section={team}
             label={team === 'season' ? 'season storylines' : team.toUpperCase()}
             finding={finding}
-            result={moreResult}
+            finished={finished}
             onFind={findMoreFor}
           />
         )}

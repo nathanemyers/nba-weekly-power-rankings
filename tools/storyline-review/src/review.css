@@ -1,2 +1,20 @@
 @import '../../../src/index.css';
 @source '../../../src/components';
+
+@theme {
+  --animate-attention: attention 0.8s ease-out 3;
+
+  @keyframes attention {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 var(--attention);
+    }
+    30% {
+      transform: scale(1.08);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px transparent;
+    }
+  }
+}

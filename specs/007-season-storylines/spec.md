@@ -93,6 +93,7 @@ The maintainer looks over the candidate articles the discovery tool found, appli
 - **FR-011**: For every team that played in a completed season's playoffs, candidate discovery MUST also be guided by that team's playoff results, and the finalized list MUST include at least one storyline covering that team's playoff run.
 - **FR-012**: A season's storyline window MUST run from the day after the previous season's draft through the draft that follows that season's Finals; the draft lottery and draft belong to the season that precedes them, since they depend on its results. Candidate discovery MUST only offer articles about events within that window.
 - **FR-013**: A trade storyline MUST be associated with every team involved in the trade, and a blockbuster trade MUST also be marked as a season storyline.
+- **FR-014**: Candidate discovery MUST offer every team at least 5 candidate articles to choose from, unless the approved sources have no more coverage of that team's season, in which case the shortfall MUST be reported to the maintainer.
 
 ### Key Entities
 

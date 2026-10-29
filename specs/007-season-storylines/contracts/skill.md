@@ -52,4 +52,8 @@ featured; the maintainer replies with include/exclude/edit per row.
 Selecting a section in the review tool shows a "Find more" button. It saves pending edits, then the
 dev server runs `claude -p "/season-storylines <season> more <section>"` with a tool allowlist
 (search, read, the additions file, `section.mjs`, `add.mjs`, `check:storylines`) and a
-`--max-budget-usd` cap, and merges the new pending candidates into the page.
+`--max-budget-usd` cap, and merges the new pending candidates into the page. The run's summary is
+not shown inline; when it finishes the button plays a short animation to alert the maintainer.
+
+Discovery leaves every team with at least 5 candidates, and `more <team>` tops a team up to at
+least 5 non-excluded candidates; either reports any team the approved sources cannot fill.

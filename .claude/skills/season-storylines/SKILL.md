@@ -88,8 +88,12 @@ lottery and draft after the Finals belong to the season that just ended. A candi
    - `title`: a short storyline label in your own words. `article.headline`: exactly as
      published. `article.publisher`: the matching `publisher` from `sources.json`.
    - `id`: kebab-case from the title, unique within the season.
-5. **Write** the raw file (`updatedAt` = today), run the check, and report counts per kind and
-   any playoff team still without a `playoffs` candidate. Then open the review tool for the
+5. **Fill thin teams**: every team must have at least 5 candidates (counting every candidate
+   that lists it, trades included). For each team below 5, search for more of its storylines from
+   the blurbs, playoff run, awards, and offseason moves until it reaches 5. If the approved
+   sources truly have nothing more, stop and list that team in the report.
+6. **Write** the raw file (`updatedAt` = today), run the check, and report counts per kind, any
+   team still under 5 candidates, and any playoff team still without a `playoffs` candidate. Then open the review tool for the
    season (see **Review tool** below).
 
 ## more
@@ -102,7 +106,8 @@ do not ask any, make the reasonable choice, and say what you chose in the final 
 1. Run `node scripts/storylines/section.mjs <season> <section>`. It prints the window, approved
    domains, the section's existing candidates (with status) and guidance topics, and for a team its
    playoff run, award codes, and weekly blurbs. Do not read the whole season or raw file.
-2. Pick 3–6 storylines the section does not cover yet: events in the blurbs, playoff run, awards,
+2. Pick 3–6 storylines the section does not cover yet, and for a team at least enough to leave it
+   with 5 candidates that are not `excluded`: events in the blurbs, playoff run, awards,
    offseason and draft-week moves inside the window, or, for `season`, league-wide stories from a
    retrospective search. Excluded candidates are the maintainer's "no": do not re-add that story
    under a new URL.
@@ -115,7 +120,8 @@ do not ask any, make the reasonable choice, and say what you chose in the final 
    and refuses the whole batch if any entry fails the checks; fix or drop the failures and rerun.
    Never edit existing candidates or topics.
 5. Run `npm run check:storylines -- <season>`. End with a short summary: one line per added
-   candidate (title, publisher), and any storyline you searched for but could not source.
+   candidate (title, publisher), any storyline you searched for but could not source, and for a
+   team that is still under 5 non-excluded candidates, say so.
 
 If the season is already finalized, this still only changes the raw file; say so in the summary.
 
