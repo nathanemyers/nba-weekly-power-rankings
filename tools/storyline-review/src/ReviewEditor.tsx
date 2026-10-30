@@ -40,8 +40,8 @@ function matchesFilters(
 export default function ReviewEditor(props: { initial: ReviewState }) {
   const [review, setReview] = useState(props.initial)
   const [raw, setRaw] = useState(props.initial.raw)
-  const [dirty, setDirty] = useState(false)
-  const [saving, setSaving] = useState(false)
+  const [edits, setEdits] = useState(0)
+  const [savedEdits, setSavedEdits] = useState(0)
   const [finalizing, setFinalizing] = useState(false)
   const [saveError, setSaveError] = useState<string>()
   const [team, setTeam] = useState<TeamFilter>(null)
@@ -50,6 +50,7 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
   const [search, setSearch] = useState('')
   const [finding, setFinding] = useState(props.initial.running)
   const [finished, setFinished] = useState({ count: 0, failed: false })
+  const dirty = edits !== savedEdits
 
   useEffect(() => {
     if (!dirty) return
@@ -59,26 +60,38 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
   }, [dirty])
 
   const updateCandidates = (change: (candidate: Candidate) => Candidate) => {
-    setRaw({ ...raw, candidates: raw.candidates.map(change) })
-    setDirty(true)
+    setRaw((current) => ({
+      ...current,
+      candidates: current.candidates.map(change),
+    }))
+    setEdits((e) => e + 1)
   }
 
   const save = async () => {
-    setSaving(true)
+    const sent = edits
     setSaveError(undefined)
     try {
-      const saved = await saveReview(raw)
-      setReview(saved)
-      setRaw(saved.raw)
-      setDirty(false)
+      setReview(await saveReview(raw))
+      setSavedEdits((s) => Math.max(s, sent))
       return true
     } catch (error) {
       setSaveError(String(error))
       return false
-    } finally {
-      setSaving(false)
     }
   }
+
+  // Saves after every edit; edits made during a search are saved once it finishes
+  useEffect(() => {
+    if (edits === savedEdits || finding !== null) return
+    saveReview(raw).then(
+      (saved) => {
+        setReview(saved)
+        setSavedEdits((s) => Math.max(s, edits))
+        setSaveError(undefined)
+      },
+      (error) => setSaveError(String(error))
+    )
+  }, [raw, edits, savedEdits, finding])
 
   const finalize = async () => {
     if (dirty && !(await save())) return
@@ -150,21 +163,23 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
           </span>
         </span>
         <span className="ml-auto text-sm text-muted-foreground">
-          {dirty ? 'Unsaved changes' : `Saved ${raw.updatedAt}`}
+          {!dirty
+            ? `Saved ${review.raw.updatedAt}`
+            : saveError
+              ? 'Unsaved changes'
+              : finding !== null
+                ? 'Saves after the search'
+                : 'Saving…'}
         </span>
-        <Button
-          onClick={save}
-          disabled={!dirty || saving || finalizing || finding !== null}
-          className="cursor-pointer"
-        >
-          {saving ? 'Saving…' : 'Save'}
-        </Button>
+        {dirty && saveError && (
+          <Button onClick={save} className="cursor-pointer">
+            Retry save
+          </Button>
+        )}
         <Button
           variant="outline"
           onClick={finalize}
-          disabled={
-            review.finalized || saving || finalizing || finding !== null
-          }
+          disabled={review.finalized || finalizing || finding !== null}
           className="cursor-pointer"
         >
           {finalizing ? 'Finalizing…' : 'Finalize'}

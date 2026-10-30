@@ -115,8 +115,11 @@ export default function CandidateRow(props: CandidateRowProps) {
 
       <Input
         aria-label="Title"
-        value={candidate.title}
-        onChange={(event) => update({ title: event.target.value })}
+        defaultValue={candidate.title}
+        onBlur={(event) =>
+          event.target.value !== candidate.title &&
+          update({ title: event.target.value })
+        }
         className="font-semibold"
       />
 

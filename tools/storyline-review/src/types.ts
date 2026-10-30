@@ -73,12 +73,20 @@ export const fetchSeasons = (): Promise<string[]> =>
 export const fetchReview = (season: string) =>
   fetch(endpoint(season)).then(readResponse)
 
-export const saveReview = (raw: RawStorylines) =>
-  fetch(endpoint(raw.season), {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(raw),
-  }).then(readResponse)
+let saveQueue: Promise<unknown> = Promise.resolve()
+
+// Saves run one at a time so an older body never lands after a newer one
+export const saveReview = (raw: RawStorylines) => {
+  const saved = saveQueue.then(() =>
+    fetch(endpoint(raw.season), {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(raw),
+    }).then(readResponse)
+  )
+  saveQueue = saved.catch(() => undefined)
+  return saved
+}
 
 export const findMore = (season: string, section: string) =>
   fetch(`${endpoint(season)}/more`, {
