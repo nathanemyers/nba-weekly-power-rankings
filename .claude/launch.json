@@ -26,6 +26,15 @@
         "--strictPort"
       ],
       "port": 4173
+    },
+    {
+      "name": "storyline-review",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "review:storylines"
+      ],
+      "port": 5180
     }
   ]
 }

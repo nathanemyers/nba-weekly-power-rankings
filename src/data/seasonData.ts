@@ -4,6 +4,7 @@ import {
   SeasonDataSchema,
   SeasonIndexEntrySchema,
   type SeasonIndexEntry,
+  type Storyline,
 } from 'schemas/season'
 import {
   PlayoffStage,
@@ -20,6 +21,7 @@ export type Season = {
   maxWeek: number
   completed: boolean
   champion?: Team
+  storylines: Storyline[]
 }
 
 function parseIndex(raw: unknown): SeasonIndexEntry[] {
@@ -69,6 +71,9 @@ export function parseSeason(name: string, raw: unknown): Season {
     maxWeek: data.maxWeek,
     completed: champion !== undefined,
     champion,
+    storylines: (data.storylines ?? []).toSorted((a, b) =>
+      a.eventDate.localeCompare(b.eventDate)
+    ),
   }
 }
 
@@ -108,3 +113,12 @@ export const getTeamRankings = (season: Season, team: Team | undefined) =>
 
 export const getAISummary = (season: Season, team: Team | undefined) =>
   getTeamRankings(season, team)?.aiSummary
+
+// Storylines only show once a season is complete
+export const getSeasonStorylines = (season: Season) =>
+  season.completed ? season.storylines.filter((s) => s.featured) : []
+
+export const getTeamStorylines = (season: Season, team: Team | undefined) =>
+  season.completed && team
+    ? season.storylines.filter((s) => s.teams.includes(team))
+    : []

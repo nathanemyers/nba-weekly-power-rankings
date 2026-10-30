@@ -8,7 +8,8 @@ import { getPinnedTeams, setPinnedTeams } from '@/store/slices/chart'
 import { Team } from 'types'
 
 vi.mock('data/seasons', async () => {
-  const { buildRankings, ROSTERS } = await import('test/fixtures')
+  const { buildRankings, PLAYOFFS, ROSTERS, STORYLINES } =
+    await import('test/fixtures')
   const { mockSeasonModule } = await import('test/mockSeasons')
   return mockSeasonModule({
     long: {
@@ -21,6 +22,14 @@ vi.mock('data/seasons', async () => {
         mia: 'Miami hovered at tenth.',
       },
       rosters: ROSTERS,
+    },
+    storied: {
+      season: 'storied',
+      source: 'nba',
+      maxWeek: 8,
+      rankings: buildRankings(8),
+      playoffs: PLAYOFFS,
+      storylines: STORYLINES,
     },
     bare: {
       season: 'bare',
@@ -71,16 +80,18 @@ describe('DetailTabs', () => {
     expect(selectedTab()).toBe('Awards')
   })
 
-  it('opens on Roster when the pinned team has a roster', async () => {
+  it('opens on Summary when a team is pinned', async () => {
     await renderTabs([Team.Boston])
     expect(enabledTabs()).toEqual(['Summary', 'Trends', 'Roster', 'Awards'])
-    expect(selectedTab()).toBe('Roster')
+    expect(selectedTab()).toBe('Summary')
   })
 
-  it('falls back to Summary when the pinned team has no roster', async () => {
-    await renderTabs([Team.Miami])
-    expect(enabledTabs()).not.toContain('Roster')
-    expect(selectedTab()).toBe('Summary')
+  it('keeps Roster selected when another team with a roster is pinned', async () => {
+    const user = userEvent.setup()
+    const { store } = await renderTabs([Team.Boston])
+    await user.click(screen.getByRole('tab', { name: 'Roster' }))
+    pin(store, [Team.Detroit])
+    expect(selectedTab()).toBe('Roster')
   })
 
   it('keeps the chosen tab across pin changes while it is available', async () => {
@@ -97,6 +108,28 @@ describe('DetailTabs', () => {
     await user.click(screen.getByRole('tab', { name: 'Roster' }))
     pin(store, [])
     expect(selectedTab()).toBe('Awards')
+  })
+
+  it('opens on Summary with season storylines when the season has them and nothing is pinned', async () => {
+    await renderTabs([], 'storied')
+    expect(enabledTabs()).toContain('Summary')
+    expect(selectedTab()).toBe('Summary')
+    expect(
+      within(screen.getByRole('tabpanel')).getByRole('list', {
+        name: 'storied storylines',
+      })
+    ).toBeInTheDocument()
+  })
+
+  it('offers Summary for a pinned team with storylines but no AI summary', async () => {
+    await renderTabs([Team.Miami], 'storied')
+    expect(enabledTabs()).toContain('Summary')
+    expect(selectedTab()).toBe('Summary')
+    expect(
+      within(screen.getByRole('tabpanel')).getByRole('link', {
+        name: 'miami-slump headline',
+      })
+    ).toBeInTheDocument()
   })
 
   it('renders nothing when no tab has content', async () => {

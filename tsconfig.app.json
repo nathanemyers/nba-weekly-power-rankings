@@ -35,5 +35,5 @@
       "store/*": ["./src/store/*"]
     }
   },
-  "include": ["src", "data/processed/seasons"]
+  "include": ["src", "data/processed/seasons", "tools/storyline-review/src"]
 }
