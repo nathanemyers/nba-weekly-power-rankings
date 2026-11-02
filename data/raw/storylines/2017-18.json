@@ -1,6 +1,6 @@
 {
   "season": "2017-18",
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-11-02",
   "guidance": [
     {
       "id": "retro-offseason-2017",
@@ -976,7 +976,7 @@
         "hou",
         "lac"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Breaking Down the Chris Paul–to-Houston Trade",
         "publisher": "The Ringer",
@@ -984,13 +984,13 @@
         "publishedAt": "2017-06-28"
       },
       "kind": "trade",
-      "blockbuster": true,
+      "blockbuster": false,
       "guidance": [
         "retro-offseason-2017",
         "weekly-hou",
         "weekly-lac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "knicks-part-ways-with-phil-jackson",
@@ -1012,7 +1012,7 @@
         "retro-offseason-2017",
         "weekly-nyk"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "paul-george-traded-to-thunder",
@@ -1022,7 +1022,7 @@
         "okc",
         "ind"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Pacers agree to send All-Star Paul George to Thunder, sources say",
         "publisher": "ESPN",
@@ -1030,13 +1030,13 @@
         "publishedAt": "2017-06-30"
       },
       "kind": "trade",
-      "blockbuster": true,
+      "blockbuster": false,
       "guidance": [
         "retro-offseason-2017",
         "weekly-okc",
         "weekly-ind"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nuggets-sign-millsap",
@@ -1059,7 +1059,7 @@
         "retro-offseason-2017",
         "weekly-den"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "hayward-picks-celtics",
@@ -1083,7 +1083,7 @@
         "weekly-bos",
         "weekly-uta"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kings-sign-veterans",
@@ -1105,7 +1105,7 @@
         "retro-offseason-2017",
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "avery-bradley-traded-to-pistons",
@@ -1129,7 +1129,7 @@
         "weekly-det",
         "weekly-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nets-take-on-bad-contracts",
@@ -1152,7 +1152,7 @@
       "guidance": [
         "weekly-bkn"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kyrie-irving-traded-to-celtics",
@@ -1162,7 +1162,7 @@
         "bos",
         "cle"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Cavaliers trade Kyrie Irving to Celtics for Package Involving Isaiah Thomas",
         "publisher": "Sports Illustrated",
@@ -1170,21 +1170,20 @@
         "publishedAt": "2017-08-22"
       },
       "kind": "trade",
-      "blockbuster": true,
+      "blockbuster": false,
       "guidance": [
         "retro-kyrie-trade",
         "weekly-bos",
         "weekly-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lakers-fined-for-tampering",
       "title": "Lakers fined $500,000 for tampering with Paul George",
       "eventDate": "2017-08-31",
       "teams": [
-        "lal",
-        "ind"
+        "lal"
       ],
       "featured": false,
       "article": {
@@ -1198,7 +1197,7 @@
       "guidance": [
         "weekly-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "carmelo-anthony-traded-to-thunder",
@@ -1208,7 +1207,7 @@
         "okc",
         "nyk"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Thunder agree to deal to add Carmelo Anthony",
         "publisher": "ESPN",
@@ -1216,13 +1215,13 @@
         "publishedAt": "2017-09-23"
       },
       "kind": "trade",
-      "blockbuster": true,
+      "blockbuster": false,
       "guidance": [
         "retro-offseason-2017",
         "weekly-okc",
         "weekly-nyk"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wade-joins-lebron-in-cleveland",
@@ -1245,7 +1244,7 @@
         "retro-offseason-2017",
         "weekly-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lottery-reform-approved",
@@ -1264,7 +1263,7 @@
       "guidance": [
         "theme-tanking"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "hayward-opening-night-injury",
@@ -1287,7 +1286,7 @@
         "retro-hayward-injury",
         "weekly-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "portis-punches-mirotic",
@@ -1308,7 +1307,7 @@
       "guidance": [
         "weekly-chi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jeremy-lin-season-ending-injury",
@@ -1329,7 +1328,7 @@
       "guidance": [
         "weekly-bkn"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "suns-fire-earl-watson",
@@ -1351,7 +1350,7 @@
         "weekly-phx",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "markelle-fultz-shoulder-mystery",
@@ -1373,7 +1372,7 @@
         "retro-fultz",
         "weekly-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "aaron-gordon-hot-start",
@@ -1394,7 +1393,7 @@
       "guidance": [
         "weekly-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "dennis-smith-jr-rookie",
@@ -1415,7 +1414,7 @@
       "guidance": [
         "weekly-dal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bledsoe-traded-to-bucks",
@@ -1438,7 +1437,7 @@
         "weekly-phx",
         "weekly-mil"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "porzingis-takes-over-knicks",
@@ -1459,15 +1458,14 @@
       "guidance": [
         "weekly-nyk"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lonzo-youngest-triple-double",
       "title": "Lonzo Ball becomes the youngest to record a triple-double",
       "eventDate": "2017-11-11",
       "teams": [
-        "lal",
-        "mil"
+        "lal"
       ],
       "featured": false,
       "article": {
@@ -1481,7 +1479,7 @@
       "guidance": [
         "weekly-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "dangelo-russell-knee-surgery",
@@ -1502,7 +1500,7 @@
       "guidance": [
         "weekly-bkn"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "celtics-16-game-win-streak",
@@ -1524,7 +1522,7 @@
         "retro-celtics",
         "weekly-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "millsap-wrist-surgery",
@@ -1545,7 +1543,7 @@
       "guidance": [
         "weekly-den"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "beverley-lost-for-season",
@@ -1566,7 +1564,7 @@
       "guidance": [
         "weekly-lac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "grizzlies-fire-fizdale",
@@ -1588,7 +1586,7 @@
         "weekly-mem",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "pistons-drummond-fast-start",
@@ -1609,7 +1607,7 @@
       "guidance": [
         "weekly-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "clifford-health-leave",
@@ -1630,7 +1628,7 @@
       "guidance": [
         "weekly-cha"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "okafor-traded-to-nets",
@@ -1653,7 +1651,7 @@
         "weekly-bkn",
         "weekly-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kings-youth-direction",
@@ -1674,7 +1672,7 @@
       "guidance": [
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "oladipo-breakout",
@@ -1697,7 +1695,7 @@
         "retro-pacers",
         "weekly-ind"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kobe-jerseys-retired",
@@ -1718,7 +1716,7 @@
       "guidance": [
         "weekly-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bulls-win-streak-with-mirotic",
@@ -1739,7 +1737,7 @@
       "guidance": [
         "weekly-chi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kuzmania",
@@ -1760,15 +1758,14 @@
       "guidance": [
         "weekly-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lou-williams-50-at-warriors",
       "title": "Lou Williams scores 50 in Oakland",
       "eventDate": "2018-01-10",
       "teams": [
-        "lac",
-        "gsw"
+        "lac"
       ],
       "featured": false,
       "article": {
@@ -1783,7 +1780,7 @@
         "awards-6moy",
         "weekly-lac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lavine-bulls-debut",
@@ -1805,15 +1802,14 @@
       "guidance": [
         "weekly-chi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "rockets-clippers-locker-room",
       "title": "Rockets storm the Clippers' locker room",
       "eventDate": "2018-01-15",
       "teams": [
-        "hou",
-        "lac"
+        "hou"
       ],
       "featured": false,
       "article": {
@@ -1828,7 +1824,7 @@
         "weekly-hou",
         "weekly-lac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wolves-having-a-moment",
@@ -1849,7 +1845,7 @@
       "guidance": [
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "hornets-shop-kemba",
@@ -1871,7 +1867,7 @@
         "weekly-cha",
         "theme-trade-deadline"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kawhi-rehab-rift",
@@ -1893,7 +1889,7 @@
         "retro-kawhi",
         "weekly-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bucks-fire-jason-kidd",
@@ -1915,7 +1911,7 @@
         "weekly-mil",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "cavs-team-meeting-love",
@@ -1936,7 +1932,7 @@
       "guidance": [
         "weekly-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lebron-youngest-to-30000",
@@ -1945,7 +1941,7 @@
       "teams": [
         "cle"
       ],
-      "featured": false,
+      "featured": true,
       "article": {
         "headline": "LeBron Passes Kobe as Youngest to 30,000 Points, but Latest Milestone is Only the Start",
         "publisher": "Sports Illustrated",
@@ -1958,7 +1954,7 @@
         "retro-milestones",
         "weekly-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bradley-beal-first-all-star",
@@ -1979,7 +1975,7 @@
       "guidance": [
         "weekly-was"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "cousins-achilles-tear",
@@ -2001,7 +1997,7 @@
         "retro-cousins",
         "weekly-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "conley-season-ending-surgery",
@@ -2022,15 +2018,14 @@
       "guidance": [
         "weekly-mem"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "roberson-ruptures-patellar-tendon",
       "title": "Andre Roberson ruptures his patellar tendon",
       "eventDate": "2018-01-27",
       "teams": [
-        "okc",
-        "det"
+        "okc"
       ],
       "featured": false,
       "article": {
@@ -2044,7 +2039,7 @@
       "guidance": [
         "weekly-okc"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "blake-griffin-traded-to-pistons",
@@ -2054,7 +2049,7 @@
         "det",
         "lac"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Welcome to Trade Season: Making Sense of Blake Griffin’s Deal to Detroit",
         "publisher": "The Ringer",
@@ -2062,13 +2057,13 @@
         "publishedAt": "2018-01-29"
       },
       "kind": "trade",
-      "blockbuster": true,
+      "blockbuster": false,
       "guidance": [
         "retro-griffin-trade",
         "weekly-det",
         "weekly-lac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "harden-60-point-triple-double",
@@ -2092,7 +2087,7 @@
         "awards-mvp",
         "weekly-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wall-knee-surgery",
@@ -2113,7 +2108,7 @@
       "guidance": [
         "weekly-was"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mirotic-traded-to-pelicans",
@@ -2136,7 +2131,7 @@
         "weekly-chi",
         "weekly-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "porzingis-tears-acl",
@@ -2157,7 +2152,7 @@
       "guidance": [
         "weekly-nyk"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "isaiah-thomas-traded-to-lakers",
@@ -2181,7 +2176,7 @@
         "weekly-cle",
         "weekly-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "cavs-deadline-overhaul",
@@ -2194,7 +2189,7 @@
         "mia",
         "lal"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "NBA trade deadline 2018: Cavs roster looks unrecognizable after blockbuster deals",
         "publisher": "CBS Sports",
@@ -2202,12 +2197,12 @@
         "publishedAt": "2018-02-08"
       },
       "kind": "trade",
-      "blockbuster": true,
+      "blockbuster": false,
       "guidance": [
         "theme-trade-deadline",
         "weekly-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wade-traded-back-to-heat",
@@ -2230,7 +2225,7 @@
         "theme-trade-deadline",
         "weekly-mia"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "elfrid-payton-traded-to-suns",
@@ -2254,7 +2249,7 @@
         "weekly-orl",
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kerr-lets-players-coach",
@@ -2276,7 +2271,7 @@
       "guidance": [
         "weekly-gsw"
       ],
-      "status": "pending"
+      "status": "excluded"
     },
     {
       "id": "jazz-midseason-surge",
@@ -2298,7 +2293,7 @@
         "weekly-uta",
         "awards-dpoy"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wall-gortat-clear-the-air",
@@ -2319,15 +2314,14 @@
       "guidance": [
         "weekly-was"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jokic-fastest-triple-double",
       "title": "Nikola Jokic records the fastest triple-double ever",
       "eventDate": "2018-02-15",
       "teams": [
-        "den",
-        "mil"
+        "den"
       ],
       "featured": false,
       "article": {
@@ -2342,7 +2336,7 @@
         "weekly-den",
         "retro-milestones"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mavericks-workplace-scandal",
@@ -2364,7 +2358,7 @@
         "retro-mavs-scandal",
         "weekly-dal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "cuban-fined-for-tanking-talk",
@@ -2386,7 +2380,7 @@
         "theme-tanking",
         "weekly-dal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "butler-meniscus-injury",
@@ -2407,15 +2401,14 @@
       "guidance": [
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "dirk-reaches-31000",
       "title": "Dirk Nowitzki reaches 31,000 points",
       "eventDate": "2018-02-28",
       "teams": [
-        "dal",
-        "okc"
+        "dal"
       ],
       "featured": false,
       "article": {
@@ -2430,7 +2423,7 @@
         "weekly-dal",
         "retro-milestones"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wizards-thrive-without-wall",
@@ -2451,7 +2444,7 @@
       "guidance": [
         "weekly-was"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "love-derozan-mental-health",
@@ -2473,15 +2466,14 @@
       "guidance": [
         "retro-mental-health"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "blazers-beat-warriors-streak",
       "title": "Blazers' 13-game winning streak vaults them to third in the West",
       "eventDate": "2018-03-10",
       "teams": [
-        "por",
-        "gsw"
+        "por"
       ],
       "featured": false,
       "article": {
@@ -2495,7 +2487,7 @@
       "guidance": [
         "weekly-por"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "raptors-culture-reset",
@@ -2516,15 +2508,14 @@
       "guidance": [
         "weekly-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "dwight-howard-30-30",
       "title": "Dwight Howard's 30-point, 30-rebound game",
       "eventDate": "2018-03-21",
       "teams": [
-        "cha",
-        "bkn"
+        "cha"
       ],
       "featured": false,
       "article": {
@@ -2538,15 +2529,14 @@
       "guidance": [
         "weekly-cha"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "stephon-clark-protests-kings",
       "title": "Stephon Clark protests shut the Kings' arena",
       "eventDate": "2018-03-22",
       "teams": [
-        "sac",
-        "atl"
+        "sac"
       ],
       "featured": false,
       "article": {
@@ -2560,7 +2550,7 @@
       "guidance": [
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "curry-mcl-sprain",
@@ -2581,7 +2571,7 @@
       "guidance": [
         "weekly-gsw"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "pistons-fade-from-race",
@@ -2602,7 +2592,7 @@
       "guidance": [
         "weekly-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "whiteside-minutes-rant",
@@ -2623,7 +2613,7 @@
       "guidance": [
         "weekly-mia"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "gobert-dpoy-case",
@@ -2644,7 +2634,7 @@
       "guidance": [
         "awards-dpoy"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kyrie-out-for-playoffs",
@@ -2666,7 +2656,7 @@
         "retro-celtics",
         "weekly-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "sixers-close-on-16-game-streak",
@@ -2688,7 +2678,7 @@
         "retro-sixers",
         "weekly-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "spurs-21st-straight-playoffs",
@@ -2709,15 +2699,14 @@
       "guidance": [
         "weekly-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wolves-end-playoff-drought",
       "title": "Wolves end a 14-year playoff drought on the final night",
       "eventDate": "2018-04-11",
       "teams": [
-        "min",
-        "den"
+        "min"
       ],
       "featured": false,
       "article": {
@@ -2732,7 +2721,7 @@
         "weekly-min",
         "weekly-den"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "rockets-franchise-record-65-wins",
@@ -2754,7 +2743,7 @@
         "retro-rockets",
         "weekly-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "season-awards-races",
@@ -2765,7 +2754,7 @@
         "phi",
         "uta"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "The Crossover's 2018 NBA Awards: A Rookie of the Year Battle for the Ages",
         "publisher": "Sports Illustrated",
@@ -2779,7 +2768,7 @@
         "awards-roy",
         "awards-dpoy"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "westbrook-second-triple-double-season",
@@ -2801,7 +2790,7 @@
         "retro-milestones",
         "weekly-okc"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "hawks-rebuild-year-one",
@@ -2822,7 +2811,7 @@
       "guidance": [
         "weekly-atl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nuggets-eliminated-on-final-night",
@@ -2845,7 +2834,7 @@
         "weekly-den",
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "knicks-fire-hornacek",
@@ -2867,7 +2856,7 @@
         "weekly-nyk",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "magic-fire-vogel",
@@ -2889,7 +2878,7 @@
         "weekly-orl",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "hornets-fire-clifford",
@@ -2911,7 +2900,7 @@
         "weekly-cha",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "erin-popovich-dies",
@@ -2933,7 +2922,7 @@
         "playoffs-sas",
         "weekly-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "sixers-embiid-mask-return",
@@ -2956,15 +2945,14 @@
         "playoffs-phi",
         "playoffs-mia"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "blazers-swept-by-pelicans",
       "title": "Third-seeded Blazers swept by the Pelicans",
       "eventDate": "2018-04-19",
       "teams": [
-        "por",
-        "nop"
+        "por"
       ],
       "featured": false,
       "article": {
@@ -2979,7 +2967,7 @@
         "playoffs-por",
         "playoffs-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "pelicans-sweep-blazers",
@@ -3002,7 +2990,7 @@
         "playoffs-nop",
         "playoffs-por"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "spurs-out-without-kawhi",
@@ -3026,7 +3014,7 @@
         "playoffs-gsw",
         "retro-kawhi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "heat-ousted-by-sixers",
@@ -3049,7 +3037,7 @@
         "playoffs-mia",
         "playoffs-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wolves-first-playoffs-in-14-years-end",
@@ -3072,7 +3060,7 @@
         "playoffs-min",
         "playoffs-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mitchell-eliminates-thunder",
@@ -3095,15 +3083,14 @@
         "playoffs-uta",
         "playoffs-okc"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wizards-fall-to-raptors",
       "title": "Wizards bow out to the top-seeded Raptors",
       "eventDate": "2018-04-27",
       "teams": [
-        "was",
-        "tor"
+        "was"
       ],
       "featured": false,
       "article": {
@@ -3118,15 +3105,14 @@
         "playoffs-was",
         "playoffs-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "thunder-out-in-first-round",
       "title": "Thunder's star trio out in the first round",
       "eventDate": "2018-04-27",
       "teams": [
-        "okc",
-        "uta"
+        "okc"
       ],
       "featured": false,
       "article": {
@@ -3141,7 +3127,7 @@
         "playoffs-okc",
         "playoffs-uta"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "melo-okc-experiment-fails",
@@ -3162,7 +3148,7 @@
       "guidance": [
         "weekly-okc"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "pacers-force-game-7",
@@ -3185,7 +3171,7 @@
         "playoffs-ind",
         "awards-mip"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bucks-fall-to-celtics-in-seven",
@@ -3208,7 +3194,7 @@
         "playoffs-mil",
         "playoffs-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "pacers-push-cavs-to-seven",
@@ -3231,7 +3217,7 @@
         "playoffs-ind",
         "playoffs-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lebron-buzzer-beater-sweeps-raptors",
@@ -3254,7 +3240,7 @@
         "playoffs-tor",
         "playoffs-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "raptors-swept-again",
@@ -3277,15 +3263,14 @@
         "playoffs-tor",
         "playoffs-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "knicks-hire-fizdale",
       "title": "Knicks hire David Fizdale",
       "eventDate": "2018-05-07",
       "teams": [
-        "nyk",
-        "mem"
+        "nyk"
       ],
       "featured": false,
       "article": {
@@ -3300,7 +3285,7 @@
         "weekly-nyk",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "pistons-part-with-van-gundy",
@@ -3322,7 +3307,7 @@
         "weekly-det",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "warriors-oust-pelicans",
@@ -3345,7 +3330,7 @@
         "playoffs-gsw",
         "playoffs-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "chris-paul-first-conference-finals",
@@ -3368,7 +3353,7 @@
         "playoffs-hou",
         "playoffs-uta"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "pelicans-run-ends",
@@ -3390,7 +3375,7 @@
       "guidance": [
         "playoffs-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "celtics-young-core-beats-sixers",
@@ -3413,7 +3398,7 @@
         "playoffs-bos",
         "playoffs-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "sixers-season-ends-in-boston",
@@ -3435,7 +3420,7 @@
       "guidance": [
         "playoffs-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jayson-tatum-rookie-run",
@@ -3457,7 +3442,7 @@
         "retro-celtics",
         "playoffs-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "hawks-hire-lloyd-pierce",
@@ -3479,7 +3464,7 @@
         "weekly-atl",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "raptors-fire-casey",
@@ -3501,7 +3486,7 @@
         "weekly-tor",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "suns-win-draft-lottery",
@@ -3514,7 +3499,7 @@
         "mem",
         "dal"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "2018 NBA Draft Lottery: Winners and Losers",
         "publisher": "Sports Illustrated",
@@ -3526,7 +3511,7 @@
       "guidance": [
         "draft-lottery"
       ],
-      "status": "pending"
+      "status": "excluded"
     },
     {
       "id": "bucks-hire-budenholzer",
@@ -3550,7 +3535,7 @@
         "weekly-atl",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "all-nba-teams-2018",
@@ -3574,7 +3559,7 @@
         "awards-mvp",
         "weekly-por"
       ],
-      "status": "pending"
+      "status": "excluded"
     },
     {
       "id": "cavs-win-game-7-in-boston",
@@ -3597,7 +3582,7 @@
         "playoffs-cle",
         "playoffs-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "rockets-miss-27-straight-threes",
@@ -3620,7 +3605,7 @@
         "playoffs-hou",
         "playoffs-gsw"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "magic-hire-clifford",
@@ -3643,7 +3628,7 @@
         "weekly-orl",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jr-smith-game-1-blunder",
@@ -3666,7 +3651,7 @@
         "playoffs-finals",
         "playoffs-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "colangelo-burner-accounts-resigns",
@@ -3688,7 +3673,7 @@
         "retro-colangelo",
         "weekly-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "warriors-sweep-cavs-for-title",
@@ -3711,7 +3696,7 @@
         "playoffs-finals",
         "playoffs-gsw"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "durant-second-finals-mvp",
@@ -3733,7 +3718,7 @@
         "playoffs-finals",
         "playoffs-gsw"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "raptors-promote-nick-nurse",
@@ -3755,7 +3740,7 @@
         "weekly-tor",
         "theme-coaching"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kawhi-leonard-trade-request",
@@ -3764,7 +3749,7 @@
       "teams": [
         "sas"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Two Decades Later, the Spurs May Have to Rebuild",
         "publisher": "The Ringer",
@@ -3777,7 +3762,7 @@
         "retro-kawhi",
         "weekly-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "suns-draft-deandre-ayton",
@@ -3798,7 +3783,7 @@
       "guidance": [
         "draft-2018"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "luka-trae-draft-swap",
@@ -3808,7 +3793,7 @@
         "dal",
         "atl"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Luka Doncic headed to Mavs, Trae Young to Hawks after teams swap picks",
         "publisher": "ESPN",
@@ -3820,7 +3805,7 @@
       "guidance": [
         "draft-2018"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kings-draft-bagley",
@@ -3841,7 +3826,7 @@
       "guidance": [
         "draft-2018"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "grizzlies-draft-jaren-jackson",
@@ -3862,7 +3847,7 @@
       "guidance": [
         "draft-2018"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "magic-draft-mo-bamba",
@@ -3883,7 +3868,7 @@
       "guidance": [
         "draft-2018"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bulls-draft-wendell-carter",
@@ -3904,7 +3889,7 @@
       "guidance": [
         "draft-2018"
       ],
-      "status": "pending"
+      "status": "included"
     }
   ]
 }
