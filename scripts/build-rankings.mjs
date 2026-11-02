@@ -38,7 +38,7 @@ function currentRecord(summaryText) {
   return match ? match[1] : undefined
 }
 
-// ESPN covers 2003-04 to 2015-16 and NBA.com 2017-18 onward; NBA.com wins if they ever overlap
+// ESPN covers 2003-04 to 2016-17 and NBA.com 2017-18 onward; NBA.com wins if they ever overlap
 const nbaSeasons = loadSeasonEntries(nbaDir)
 const bySeason = { ...loadEspnSeasonEntries(espnDir), ...nbaSeasons }
 const summariesDir = join(processedDir, 'summaries')

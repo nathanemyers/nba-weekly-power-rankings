@@ -1,0 +1,3806 @@
+{
+  "season": "2015-16",
+  "updatedAt": "2026-10-29",
+  "guidance": [
+    {
+      "id": "retro-warriors-73",
+      "summary": "Warriors open 24-0 and finish 73-9, breaking the 1995-96 Bulls' record",
+      "origin": "retrospective",
+      "teams": [
+        "gsw"
+      ]
+    },
+    {
+      "id": "retro-curry-unanimous",
+      "summary": "Curry makes 402 threes and becomes the first unanimous MVP",
+      "origin": "retrospective",
+      "teams": [
+        "gsw"
+      ]
+    },
+    {
+      "id": "retro-spurs-67",
+      "summary": "Spurs add LaMarcus Aldridge and win a franchise-record 67 games",
+      "origin": "retrospective",
+      "teams": [
+        "sas",
+        "por"
+      ]
+    },
+    {
+      "id": "retro-kobe-farewell",
+      "summary": "Kobe Bryant's farewell season, ending with 60 points in his finale",
+      "origin": "retrospective",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "retro-cavs-comeback",
+      "summary": "Cavaliers rally from 3-1 down to win the title, ending Cleveland's 52-year drought",
+      "origin": "retrospective",
+      "teams": [
+        "cle",
+        "gsw"
+      ]
+    },
+    {
+      "id": "retro-thunder-collapse",
+      "summary": "Thunder upset the Spurs, then blow a 3-1 West finals lead to Golden State",
+      "origin": "retrospective",
+      "teams": [
+        "okc",
+        "sas",
+        "gsw"
+      ]
+    },
+    {
+      "id": "retro-clippers-injuries",
+      "summary": "Clippers lose Chris Paul and Blake Griffin and fall to Portland in Round 1",
+      "origin": "retrospective",
+      "teams": [
+        "lac",
+        "por"
+      ]
+    },
+    {
+      "id": "retro-sixers-process",
+      "summary": "76ers start 1-30, finish 10-72, and Sam Hinkie resigns",
+      "origin": "retrospective",
+      "teams": [
+        "phi"
+      ]
+    },
+    {
+      "id": "retro-blatt-fired",
+      "summary": "Cavaliers fire David Blatt at 30-11 and promote Tyronn Lue",
+      "origin": "retrospective",
+      "teams": [
+        "cle"
+      ]
+    },
+    {
+      "id": "retro-pistons-revival",
+      "summary": "Pistons post their first winning season in eight years and return to the playoffs",
+      "origin": "retrospective",
+      "teams": [
+        "det"
+      ]
+    },
+    {
+      "id": "retro-hornets-bounce-back",
+      "summary": "Hornets win the most games since 1999-2000 with a remade offense",
+      "origin": "retrospective",
+      "teams": [
+        "cha"
+      ]
+    },
+    {
+      "id": "retro-raptors-best-season",
+      "summary": "Raptors win a franchise-record 56 games and reach their first conference finals",
+      "origin": "retrospective",
+      "teams": [
+        "tor"
+      ]
+    },
+    {
+      "id": "retro-rockets-disappointment",
+      "summary": "Rockets fall from 56 wins to .500 amid Harden-Howard friction",
+      "origin": "retrospective",
+      "teams": [
+        "hou"
+      ]
+    },
+    {
+      "id": "retro-blazers-overachieve",
+      "summary": "Blazers lose four starters yet make the second round behind Lillard and McCollum",
+      "origin": "retrospective",
+      "teams": [
+        "por"
+      ]
+    },
+    {
+      "id": "retro-deandre-saga",
+      "summary": "DeAndre Jordan commits to Dallas, then reverses and re-signs with the Clippers",
+      "origin": "retrospective",
+      "teams": [
+        "lac",
+        "dal"
+      ]
+    },
+    {
+      "id": "playoffs-det",
+      "summary": "Pistons swept by Cleveland in Round 1 in their first playoff trip since 2009",
+      "origin": "playoffs",
+      "teams": [
+        "det"
+      ]
+    },
+    {
+      "id": "playoffs-cle",
+      "summary": "Cavaliers go 12-2 through the East (sweep Detroit and Atlanta, beat Toronto 4-2) and beat Golden State 4-3 in the Finals",
+      "origin": "playoffs",
+      "teams": [
+        "cle"
+      ]
+    },
+    {
+      "id": "playoffs-ind",
+      "summary": "Pacers lose to Toronto 4-3 in Round 1",
+      "origin": "playoffs",
+      "teams": [
+        "ind"
+      ]
+    },
+    {
+      "id": "playoffs-tor",
+      "summary": "Raptors beat Indiana 4-3 and Miami 4-3, then lose to Cleveland 4-2 in the East finals",
+      "origin": "playoffs",
+      "teams": [
+        "tor"
+      ]
+    },
+    {
+      "id": "playoffs-cha",
+      "summary": "Hornets lose to Miami 4-3 in Round 1 after leading 3-2",
+      "origin": "playoffs",
+      "teams": [
+        "cha"
+      ]
+    },
+    {
+      "id": "playoffs-mia",
+      "summary": "Heat beat Charlotte 4-3, then lose to Toronto 4-3 in the second round",
+      "origin": "playoffs",
+      "teams": [
+        "mia"
+      ]
+    },
+    {
+      "id": "playoffs-bos",
+      "summary": "Celtics lose to Atlanta 4-2 in Round 1",
+      "origin": "playoffs",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "playoffs-atl",
+      "summary": "Hawks beat Boston 4-2, then are swept by Cleveland in the second round",
+      "origin": "playoffs",
+      "teams": [
+        "atl"
+      ]
+    },
+    {
+      "id": "playoffs-hou",
+      "summary": "Rockets lose to Golden State 4-1 in Round 1",
+      "origin": "playoffs",
+      "teams": [
+        "hou"
+      ]
+    },
+    {
+      "id": "playoffs-gsw",
+      "summary": "Warriors beat Houston 4-1, Portland 4-1 and Oklahoma City 4-3 (from 3-1 down), then lose the Finals 4-3 after leading 3-1",
+      "origin": "playoffs",
+      "teams": [
+        "gsw"
+      ]
+    },
+    {
+      "id": "playoffs-mem",
+      "summary": "Injury-ravaged Grizzlies swept by San Antonio in Round 1",
+      "origin": "playoffs",
+      "teams": [
+        "mem"
+      ]
+    },
+    {
+      "id": "playoffs-sas",
+      "summary": "Spurs sweep Memphis, then lose to Oklahoma City 4-2 in the second round",
+      "origin": "playoffs",
+      "teams": [
+        "sas"
+      ]
+    },
+    {
+      "id": "playoffs-dal",
+      "summary": "Mavericks lose to Oklahoma City 4-1 in Round 1",
+      "origin": "playoffs",
+      "teams": [
+        "dal"
+      ]
+    },
+    {
+      "id": "playoffs-okc",
+      "summary": "Thunder beat Dallas 4-1 and San Antonio 4-2, then lose the West finals to Golden State 4-3 after leading 3-1",
+      "origin": "playoffs",
+      "teams": [
+        "okc"
+      ]
+    },
+    {
+      "id": "playoffs-por",
+      "summary": "Blazers beat the injured Clippers 4-2, then lose to Golden State 4-1",
+      "origin": "playoffs",
+      "teams": [
+        "por"
+      ]
+    },
+    {
+      "id": "playoffs-lac",
+      "summary": "Clippers lose Paul and Griffin and fall to Portland 4-2 in Round 1",
+      "origin": "playoffs",
+      "teams": [
+        "lac"
+      ]
+    },
+    {
+      "id": "playoffs-finals",
+      "summary": "Cavaliers beat the 73-win Warriors 4-3 after trailing 3-1; LeBron James is Finals MVP",
+      "origin": "playoffs",
+      "teams": [
+        "cle",
+        "gsw"
+      ]
+    },
+    {
+      "id": "awards-mvp",
+      "summary": "Stephen Curry, MVP (unanimous)",
+      "origin": "awards",
+      "teams": [
+        "gsw"
+      ]
+    },
+    {
+      "id": "awards-dpoy",
+      "summary": "Kawhi Leonard, Defensive Player of the Year (second straight)",
+      "origin": "awards",
+      "teams": [
+        "sas"
+      ]
+    },
+    {
+      "id": "awards-roy",
+      "summary": "Karl-Anthony Towns, Rookie of the Year (unanimous)",
+      "origin": "awards",
+      "teams": [
+        "min"
+      ]
+    },
+    {
+      "id": "awards-mip",
+      "summary": "CJ McCollum, Most Improved Player",
+      "origin": "awards",
+      "teams": [
+        "por"
+      ]
+    },
+    {
+      "id": "awards-6moy",
+      "summary": "Jamal Crawford, Sixth Man of the Year (record third)",
+      "origin": "awards",
+      "teams": [
+        "lac"
+      ]
+    },
+    {
+      "id": "weekly-atl",
+      "summary": "Hawks: step back from 60 wins, Millsap's third All-Star nod, Teague trade talk, late defensive surge",
+      "origin": "weekly",
+      "teams": [
+        "atl"
+      ],
+      "weeks": [
+        8,
+        13,
+        14,
+        16,
+        20,
+        22
+      ]
+    },
+    {
+      "id": "weekly-bkn",
+      "summary": "Nets: 0-7 start, Hollins fired and King reassigned, Sean Marks hired, Joe Johnson buyout, Lopez and Young shut down",
+      "origin": "weekly",
+      "teams": [
+        "bkn"
+      ],
+      "weeks": [
+        2,
+        11,
+        15,
+        17,
+        18,
+        23
+      ]
+    },
+    {
+      "id": "weekly-bos",
+      "summary": "Celtics: Isaiah Thomas All-Star, near-upset of 24-0 Warriors in double OT, win in Oakland, 48 wins",
+      "origin": "weekly",
+      "teams": [
+        "bos"
+      ],
+      "weeks": [
+        7,
+        9,
+        14,
+        19,
+        22
+      ]
+    },
+    {
+      "id": "weekly-cha",
+      "summary": "Hornets: Jeremy Lin's 35-point game, Kidd-Gilchrist shoulder, Kemba Walker's breakout, Courtney Lee trade, late surge",
+      "origin": "weekly",
+      "teams": [
+        "cha"
+      ],
+      "weeks": [
+        1,
+        8,
+        13,
+        14,
+        17,
+        20
+      ]
+    },
+    {
+      "id": "weekly-chi",
+      "summary": "Bulls: Hoiberg's first season, Butler's 'coached harder' comments, Butler's 40-point half, Noah's shoulder, missed playoffs",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": [
+        1,
+        9,
+        10,
+        14,
+        18,
+        24
+      ]
+    },
+    {
+      "id": "weekly-cle",
+      "summary": "Cavaliers: Kyrie Irving's return, David Blatt fired for Tyronn Lue, LeBron's shooting slump, top seed in the East",
+      "origin": "weekly",
+      "teams": [
+        "cle"
+      ],
+      "weeks": [
+        7,
+        12,
+        13,
+        14,
+        18,
+        23
+      ]
+    },
+    {
+      "id": "weekly-dal",
+      "summary": "Mavericks: DeAndre Jordan fallout, Matthews and Parsons return, Dirk passes Shaq, late push to the playoffs",
+      "origin": "weekly",
+      "teams": [
+        "dal"
+      ],
+      "weeks": [
+        1,
+        2,
+        10,
+        13,
+        22,
+        24
+      ]
+    },
+    {
+      "id": "weekly-den",
+      "summary": "Nuggets: Ty Lawson traded, rookies Mudiay and Jokic, Gallinari's ankle, Will Barton's bench scoring",
+      "origin": "weekly",
+      "teams": [
+        "den"
+      ],
+      "weeks": [
+        3,
+        5,
+        11,
+        15,
+        18
+      ]
+    },
+    {
+      "id": "weekly-det",
+      "summary": "Pistons: Andre Drummond's double-doubles and All-Star nod, Hack-a-Drummond, Tobias Harris trade, first playoffs since 2009",
+      "origin": "weekly",
+      "teams": [
+        "det"
+      ],
+      "weeks": [
+        2,
+        7,
+        9,
+        13,
+        17,
+        22
+      ]
+    },
+    {
+      "id": "weekly-gsw",
+      "summary": "Warriors: 24-0 start under Luke Walton, Kerr's return, chase of 72 wins, loss streaks at San Antonio and home ending",
+      "origin": "weekly",
+      "teams": [
+        "gsw"
+      ],
+      "weeks": [
+        3,
+        5,
+        9,
+        13,
+        20,
+        24
+      ]
+    },
+    {
+      "id": "weekly-hou",
+      "summary": "Rockets: Kevin McHale fired after 4-7 start, Bickerstaff interim, Dwight Howard trade talk, last playoff spot",
+      "origin": "weekly",
+      "teams": [
+        "hou"
+      ],
+      "weeks": [
+        3,
+        5,
+        16,
+        17,
+        21,
+        24
+      ]
+    },
+    {
+      "id": "weekly-ind",
+      "summary": "Pacers: Paul George's return to form at power forward, Monta Ellis signing, Myles Turner, Vogel's future",
+      "origin": "weekly",
+      "teams": [
+        "ind"
+      ],
+      "weeks": [
+        3,
+        5,
+        14,
+        17,
+        24
+      ]
+    },
+    {
+      "id": "weekly-lac",
+      "summary": "Clippers: Blake Griffin's quad injury and punching incident, winning without him, Jeff Green trade",
+      "origin": "weekly",
+      "teams": [
+        "lac"
+      ],
+      "weeks": [
+        9,
+        10,
+        12,
+        15,
+        17,
+        23
+      ]
+    },
+    {
+      "id": "weekly-lal",
+      "summary": "Lakers: Kobe Bryant's farewell tour, D'Angelo Russell's development and Nick Young video, franchise-worst record",
+      "origin": "weekly",
+      "teams": [
+        "lal"
+      ],
+      "weeks": [
+        1,
+        5,
+        11,
+        15,
+        22,
+        24
+      ]
+    },
+    {
+      "id": "weekly-mem",
+      "summary": "Grizzlies: Randolph to the bench, Marc Gasol's broken foot, Jeff Green and Courtney Lee traded, record 28 players used",
+      "origin": "weekly",
+      "teams": [
+        "mem"
+      ],
+      "weeks": [
+        7,
+        10,
+        17,
+        20,
+        22,
+        24
+      ]
+    },
+    {
+      "id": "weekly-mia",
+      "summary": "Heat: Hassan Whiteside's breakout, Chris Bosh's blood clots, Joe Johnson signing, Wade's resurgence",
+      "origin": "weekly",
+      "teams": [
+        "mia"
+      ],
+      "weeks": [
+        1,
+        5,
+        13,
+        18,
+        21,
+        24
+      ]
+    },
+    {
+      "id": "weekly-mil",
+      "summary": "Bucks: Greg Monroe signing, Jason Kidd's hip surgery, Giannis at point guard, Jabari Parker's return, disappointing season",
+      "origin": "weekly",
+      "teams": [
+        "mil"
+      ],
+      "weeks": [
+        1,
+        7,
+        13,
+        17,
+        19,
+        23
+      ]
+    },
+    {
+      "id": "weekly-min",
+      "summary": "Timberwolves: Flip Saunders' death, Karl-Anthony Towns' rookie year, LaVine's dunk title, young core",
+      "origin": "weekly",
+      "teams": [
+        "min"
+      ],
+      "weeks": [
+        1,
+        3,
+        9,
+        16,
+        18,
+        23
+      ]
+    },
+    {
+      "id": "weekly-nop",
+      "summary": "Pelicans: injury-wrecked season, Anthony Davis' 59-point game and season-ending surgery, Gentry's first year",
+      "origin": "weekly",
+      "teams": [
+        "nop"
+      ],
+      "weeks": [
+        1,
+        4,
+        17,
+        18,
+        21,
+        24
+      ]
+    },
+    {
+      "id": "weekly-nyk",
+      "summary": "Knicks: Kristaps Porzingis' rookie season, Derek Fisher fired, Rambis interim, Melo's future",
+      "origin": "weekly",
+      "teams": [
+        "nyk"
+      ],
+      "weeks": [
+        2,
+        4,
+        14,
+        16,
+        21,
+        24
+      ]
+    },
+    {
+      "id": "weekly-okc",
+      "summary": "Thunder: Durant's healthy return, Westbrook's triple-doubles, Donovan's first season, late-game collapses",
+      "origin": "weekly",
+      "teams": [
+        "okc"
+      ],
+      "weeks": [
+        1,
+        4,
+        12,
+        19,
+        20,
+        22
+      ]
+    },
+    {
+      "id": "weekly-orl",
+      "summary": "Magic: 19-13 start under Scott Skiles then January collapse, Aaron Gordon's dunk contest, Tobias Harris trade",
+      "origin": "weekly",
+      "teams": [
+        "orl"
+      ],
+      "weeks": [
+        5,
+        8,
+        12,
+        15,
+        16,
+        24
+      ]
+    },
+    {
+      "id": "weekly-phi",
+      "summary": "76ers: record 0-18 start, Jerry Colangelo hired, Okafor's off-court trouble, Ish Smith trade, Hinkie's exit",
+      "origin": "weekly",
+      "teams": [
+        "phi"
+      ],
+      "weeks": [
+        3,
+        4,
+        6,
+        7,
+        9,
+        24
+      ]
+    },
+    {
+      "id": "weekly-phx",
+      "summary": "Suns: Bledsoe's torn meniscus, Hornacek fired for Earl Watson, Markieff Morris saga, Devin Booker emerges",
+      "origin": "weekly",
+      "teams": [
+        "phx"
+      ],
+      "weeks": [
+        6,
+        9,
+        10,
+        15,
+        17,
+        22
+      ]
+    },
+    {
+      "id": "weekly-por",
+      "summary": "Blazers: life after Aldridge, McCollum's leap, Lillard's All-Star snub and 51-point game, playoff berth",
+      "origin": "weekly",
+      "teams": [
+        "por"
+      ],
+      "weeks": [
+        1,
+        2,
+        17,
+        18,
+        22,
+        24
+      ]
+    },
+    {
+      "id": "weekly-sac",
+      "summary": "Kings: Cousins and George Karl feud, Rondo's resurgence and slur suspension, last season at Sleep Train Arena",
+      "origin": "weekly",
+      "teams": [
+        "sac"
+      ],
+      "weeks": [
+        1,
+        5,
+        7,
+        14,
+        15,
+        24
+      ]
+    },
+    {
+      "id": "weekly-sas",
+      "summary": "Spurs: Aldridge's arrival, Kawhi Leonard's MVP-level season, perfect home start, 67 wins, Duncan's 1,000th win",
+      "origin": "weekly",
+      "teams": [
+        "sas"
+      ],
+      "weeks": [
+        2,
+        6,
+        11,
+        16,
+        19,
+        23
+      ]
+    },
+    {
+      "id": "weekly-tor",
+      "summary": "Raptors: Lowry and DeRozan lead a franchise-record season, Toronto hosts All-Star Weekend",
+      "origin": "weekly",
+      "teams": [
+        "tor"
+      ],
+      "weeks": [
+        10,
+        11,
+        14,
+        16,
+        20,
+        23
+      ]
+    },
+    {
+      "id": "weekly-uta",
+      "summary": "Jazz: Exum's torn ACL, Gobert's knee sprain, Rodney Hood's emergence, missed playoffs on the final night",
+      "origin": "weekly",
+      "teams": [
+        "uta"
+      ],
+      "weeks": [
+        3,
+        10,
+        11,
+        14,
+        21,
+        24
+      ]
+    },
+    {
+      "id": "weekly-was",
+      "summary": "Wizards: Bradley Beal's leg injuries, Markieff Morris trade, missed playoffs, Wittman fired",
+      "origin": "weekly",
+      "teams": [
+        "was"
+      ],
+      "weeks": [
+        3,
+        5,
+        7,
+        18,
+        23,
+        24
+      ]
+    },
+    {
+      "id": "theme-free-agency-2015",
+      "summary": "2015 free agency: Aldridge, DeAndre Jordan, Monroe, Chandler, Ellis, Lin",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "theme-trade-deadline",
+      "summary": "2016 trade deadline deals: Tobias Harris, Markieff Morris, Jeff Green, Courtney Lee",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "theme-all-star-toronto",
+      "summary": "All-Star Weekend in Toronto: Kobe's last All-Star Game, LaVine-Gordon dunk contest",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "theme-coaching-carousel",
+      "summary": "Coaching changes: McHale, Blatt, Hollins, Fisher, Hornacek, Karl, Scott, Wittman, Vogel, Skiles, Joerger",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "theme-kobe-farewell",
+      "summary": "Kobe Bryant's farewell tour across the league",
+      "origin": "theme",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "draft-lottery",
+      "summary": "2016 lottery: 76ers win No. 1; Lakers keep No. 2; Celtics get No. 3 via Brooklyn",
+      "origin": "draft",
+      "teams": [
+        "phi",
+        "lal",
+        "bos",
+        "bkn"
+      ]
+    },
+    {
+      "id": "draft-2016",
+      "summary": "2016 draft: Simmons, Ingram, Brown, Bender, Dunn, Hield, Murray; draft-night trades",
+      "origin": "draft",
+      "teams": []
+    }
+  ],
+  "candidates": [
+    {
+      "id": "davis-max-extension",
+      "title": "Anthony Davis agrees to a five-year max extension",
+      "eventDate": "2015-07-01",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans will re-sign Anthony Davis to 5-year, $145M extension",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/13178518/2015-nba-free-agency-new-orleans-pelicans-not-pausing-make-anthony-davis-league-richest",
+        "publishedAt": "2015-07-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop",
+        "theme-free-agency-2015"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "nets-resign-lopez-young",
+      "title": "Nets re-sign Brook Lopez and Thaddeus Young",
+      "eventDate": "2015-07-01",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grade the deals: Nets re-sign Brook Lopez, Thad Young to multiyear deals",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/07/01/brook-lopez-thaddeus-young-brooklyn-nets-nba-free-agency-grades",
+        "publishedAt": "2015-07-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn",
+        "theme-free-agency-2015"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "suns-sign-chandler",
+      "title": "Suns sign Tyson Chandler away from Dallas",
+      "eventDate": "2015-07-01",
+      "teams": [
+        "phx",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grade the deal: Suns take calculated risk, sign Chandler for 4 years, $52M",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/07/01/nba-free-agency-grades-tyson-chandler-suns-four-years-52-million",
+        "publishedAt": "2015-07-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx",
+        "theme-free-agency-2015"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bucks-sign-monroe",
+      "title": "Greg Monroe picks the Bucks",
+      "eventDate": "2015-07-02",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grade the deal: Greg Monroe inks max deal with Bucks in free-agent stunner",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/07/02/greg-monroe-milwaukee-bucks-free-agency-grades",
+        "publishedAt": "2015-07-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil",
+        "theme-free-agency-2015"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "pacers-sign-monta-ellis",
+      "title": "Pacers sign Monta Ellis",
+      "eventDate": "2015-07-02",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grade the deal: Pacers sign Monta Ellis to four-year, $44 million contract",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/07/02/monta-ellis-indiana-pacers-free-agency-grades-larry-bird",
+        "publishedAt": "2015-07-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind",
+        "theme-free-agency-2015"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "aldridge-to-spurs",
+      "title": "LaMarcus Aldridge leaves Portland for San Antonio",
+      "eventDate": "2015-07-04",
+      "teams": [
+        "sas",
+        "por"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "LaMarcus Aldridge joining Spurs after marveling from a distance for years",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/07/04/lamarcus-aldridge-san-antonio-spurs-free-agency-tim-duncan",
+        "publishedAt": "2015-07-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-spurs-67",
+        "theme-free-agency-2015",
+        "weekly-sas",
+        "weekly-por"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "deandre-jordan-saga",
+      "title": "DeAndre Jordan backs out of Dallas and re-signs with the Clippers",
+      "eventDate": "2015-07-08",
+      "teams": [
+        "lac",
+        "dal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "DeAndre Jordan rejoins Clippers, snubs Mavericks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/13224797/deandre-jordan-deal-los-angeles-clippers-snubs-dallas-mavericks",
+        "publishedAt": "2015-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-deandre-saga",
+        "theme-free-agency-2015",
+        "weekly-dal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "jeremy-lin-to-hornets",
+      "title": "Jeremy Lin signs with the Hornets",
+      "eventDate": "2015-07-08",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grade the deal: Jeremy Lin announces he will sign with Hornets",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/07/09/charlotte-hornets-jeremy-lin-contract-nba-free-agency-2015",
+        "publishedAt": "2015-07-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha",
+        "theme-free-agency-2015"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "ty-lawson-trade",
+      "title": "Nuggets trade Ty Lawson to the Rockets",
+      "eventDate": "2015-07-19",
+      "teams": [
+        "hou",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Nuggets trade guard Ty Lawson to Rockets",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/sources--nuggets-trade-guard-ty-lawson-to-rockets-012827302.html",
+        "publishedAt": "2015-07-19"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den",
+        "weekly-hou"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "exum-acl",
+      "title": "Dante Exum tears his ACL and misses the season",
+      "eventDate": "2015-08-04",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz PG Dante Exum has torn ACL, according to MRI results",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/13389381/dante-exum-utah-jazz-torn-acl",
+        "publishedAt": "2015-08-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "kidd-gilchrist-shoulder",
+      "title": "Michael Kidd-Gilchrist tears his labrum before the season",
+      "eventDate": "2015-10-03",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Michael Kidd-Gilchrist sustained torn labrum in right shoulder",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/13817763/michael-kidd-gilchrist-charlotte-hornets-indefinitely-torn-labrum",
+        "publishedAt": "2015-10-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "flip-saunders-dies",
+      "title": "Flip Saunders dies days before the season",
+      "eventDate": "2015-10-25",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Remembering Flip Saunders: Wolves head coach and president dies at 60",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/10/25/flip-saunders-death-minnesota-timberwolves-coach-president-detroit-pistons-washington-wizards",
+        "publishedAt": "2015-10-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "porzingis-rookie-hope",
+      "title": "Kristaps Porzingis wins over the Knicks fans who booed his pick",
+      "eventDate": "2015-11-06",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kristaps Porzingis is providing hope, which never ends well for the Knicks",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/the-cauldron/2015/11/06/kristaps-porzingis-new-york-knicks-carmelo-anthony-phil-jackson",
+        "publishedAt": "2015-11-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "paul-george-returns",
+      "title": "Paul George returns to star form",
+      "eventDate": "2015-11-17",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Paul George's return to form with the Pacers makes the NBA a star richer",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/11/17/paul-george-indiana-pacers-frank-vogel-larry-bird-monta-ellis",
+        "publishedAt": "2015-11-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "rockets-fire-mchale",
+      "title": "Rockets fire Kevin McHale after a 4-7 start",
+      "eventDate": "2015-11-18",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rockets fire coach Kevin McHale",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14160559/houston-rockets-fire-coach-kevin-mchale",
+        "publishedAt": "2015-11-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-hou",
+        "retro-rockets-disappointment",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "kobe-retirement-announcement",
+      "title": "Kobe Bryant announces this season will be his last",
+      "eventDate": "2015-11-29",
+      "teams": [
+        "lal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Kobe announces retirement: 'This season is all I have left to give'",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/kobe-announces-retirement-this-season-is-all-i-have-left-to-give/",
+        "publishedAt": "2015-11-29"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-kobe-farewell",
+        "theme-kobe-farewell",
+        "weekly-lal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "sixers-first-win",
+      "title": "76ers end their 0-18 start and 28-game skid against Kobe's Lakers",
+      "eventDate": "2015-12-01",
+      "teams": [
+        "phi",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sixers avoid NBA’s worst start ever, spoil Kobe’s Philadelphia return",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/12/02/philadelphia-76ers-sixers-lakers-end-losing-streak",
+        "publishedAt": "2015-12-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi",
+        "retro-sixers-process"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "gobert-mcl-sprain",
+      "title": "Rudy Gobert sprains his MCL",
+      "eventDate": "2015-12-02",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz center Rudy Gobert out indefinitely with sprained MCL",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/12/03/utah-jazz-rudy-gobert-out-injury-knee-sprained-mcl-update",
+        "publishedAt": "2015-12-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "okafor-suspended",
+      "title": "Jahlil Okafor suspended after Boston street fights",
+      "eventDate": "2015-12-02",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "76ers' Jahlil Okafor gets two-game suspension",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14275722/philadelphia-76ers-suspend-rookie-jahlil-okafor-two-games",
+        "publishedAt": "2015-12-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "sixers-hire-colangelo",
+      "title": "76ers bring in Jerry Colangelo above Sam Hinkie",
+      "eventDate": "2015-12-07",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Philadelphia 76ers bring in Jerry Colangelo to help with 'process'",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/12/07/philadelphia-76ers-jerry-colangelo-jahlil-okafor-nerlens-noel",
+        "publishedAt": "2015-12-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi",
+        "retro-sixers-process"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "warriors-escape-boston",
+      "title": "Warriors survive double overtime in Boston to reach 24-0",
+      "eventDate": "2015-12-11",
+      "teams": [
+        "gsw",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors’ win streak, victory at Celtics a byproduct of champion resolve",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/12/12/golden-state-warriors-win-streak-boston-celtics-champion-resolve",
+        "publishedAt": "2015-12-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw",
+        "weekly-bos"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "beal-stress-reaction",
+      "title": "Bradley Beal's leg injury returns",
+      "eventDate": "2015-12-12",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bradley Beal has beginnings of stress reaction in right fibula",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14349943/bradley-beal-least-two-weeks-washington-wizards",
+        "publishedAt": "2015-12-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "warriors-24-0-start",
+      "title": "Warriors open with a record 24-0 start",
+      "eventDate": "2015-12-12",
+      "teams": [
+        "gsw",
+        "mil"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Warriors finally lose as Bucks end NBA-record 24-0 start",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/blogs/nba-ball-dont-lie/warriors-finally-lose-as-bucks-end-nba-record-24-0-start-041031639.html",
+        "publishedAt": "2015-12-12"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-warriors-73",
+        "weekly-gsw"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "rondo-slur-suspension",
+      "title": "Rajon Rondo suspended for a slur at referee Bill Kennedy",
+      "eventDate": "2015-12-14",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Referee Bill Kennedy reveals he is gay after alleged slur from Rajon Rondo",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/12/14/nba-referee-bill-kennedy-gay",
+        "publishedAt": "2015-12-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "butler-hoiberg-critique",
+      "title": "Jimmy Butler says Hoiberg should coach the Bulls harder",
+      "eventDate": "2015-12-19",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls’ Jimmy Butler doesn’t regret public critique of coach Fred Hoiberg",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/12/22/chicago-bulls-jimmy-butler-fred-hoiberg-comments-regret",
+        "publishedAt": "2015-12-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "kyrie-irving-returns",
+      "title": "Kyrie Irving returns from his Finals knee injury",
+      "eventDate": "2015-12-19",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Irving's 'I'm back' could prove to be prophetic for LeBron, Cavaliers",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/12/19/kyrie-irving-lebron-james-kevin-love-cavaliers-im-back",
+        "publishedAt": "2015-12-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cle"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "kidd-hip-surgery",
+      "title": "Jason Kidd misses six weeks after hip surgery",
+      "eventDate": "2015-12-21",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jason Kidd's absence just another hitch in Bucks' challenging season",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/12/21/jason-kidd-injury-hip-surgery-milwaukee-bucks-joe-prunty",
+        "publishedAt": "2015-12-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dirk-passes-shaq",
+      "title": "Dirk Nowitzki passes Shaq for sixth on the scoring list",
+      "eventDate": "2015-12-23",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Dirk Nowitzki moves into 6th place on NBA's all-time scoring list",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14430976/dirk-nowitzki-dallas-mavericks-passes-shaquille-oneal-no-6-nba-all-scoring-list",
+        "publishedAt": "2015-12-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bledsoe-meniscus",
+      "title": "Eric Bledsoe's season ends with a torn meniscus",
+      "eventDate": "2015-12-29",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Eric Bledsoe’s season-ending surgery deals Suns a tough reality check",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2015/12/30/phoenix-suns-eric-bledsoe-season-ending-surgery-reality-check",
+        "publishedAt": "2015-12-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "butler-40-point-half",
+      "title": "Jimmy Butler breaks Jordan's record with 40 in a half",
+      "eventDate": "2016-01-03",
+      "teams": [
+        "chi",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jimmy Butler tops Michael Jordan with 40 after halftime, rallies Bulls",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14497290/jimmy-butler-one-ups-michael-jordan-best-40-points-half",
+        "publishedAt": "2016-01-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "nets-fire-hollins",
+      "title": "Nets fire Lionel Hollins and reassign Billy King",
+      "eventDate": "2016-01-10",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets part ways with coach Lionel Hollins, reassign GM Billy King",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14541429/brooklyn-nets-fire-coach-lionel-hollins-reassign-gm-billy-king",
+        "publishedAt": "2016-01-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "clippers-without-griffin",
+      "title": "Clippers thrive without Blake Griffin",
+      "eventDate": "2016-01-13",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Five theories: Why the Clippers look better than ever without Blake Griffin",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/01/13/clippers-blake-griffin-chris-paul-doc-rivers-lance-stephenson-josh-smith",
+        "publishedAt": "2016-01-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "noah-shoulder-surgery",
+      "title": "Joakim Noah's season ends with shoulder surgery",
+      "eventDate": "2016-01-15",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Joakim Noah, the Ultimate Fighter, faces uncertain future with Bulls",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/01/17/chicago-bulls-joakim-noah-shoulder-surgery-free-agency-ultimate-fighter",
+        "publishedAt": "2016-01-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "booker-emerges",
+      "title": "Rookie Devin Booker emerges for the Suns",
+      "eventDate": "2016-01-20",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Devin Booker provides rare silver lining for fledgling Phoenix Suns",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/01/20/devin-booker-phoenix-suns-kentucky-melvin-booker-eric-bledsoe-john-calipari",
+        "publishedAt": "2016-01-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "hack-a-drummond",
+      "title": "Rockets foul Drummond into a record 23 missed free throws",
+      "eventDate": "2016-01-20",
+      "teams": [
+        "det",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Andre Drummond sets NBA record with 23 missed free throws",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/01/21/detroit-pistons-andre-drummond-missed-free-throws-record-rockets",
+        "publishedAt": "2016-01-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cavs-fire-blatt",
+      "title": "Cavaliers fire David Blatt and promote Tyronn Lue",
+      "eventDate": "2016-01-22",
+      "teams": [
+        "cle"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "David Blatt fired as Cavaliers coach; Tyronn Lue to take over team",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14627529/david-blatt-fired-cleveland-cavaliers-coach",
+        "publishedAt": "2016-01-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-blatt-fired",
+        "weekly-cle",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "kerr-returns",
+      "title": "Kerr returns after Walton's 39-4 interim run",
+      "eventDate": "2016-01-22",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Steve Kerr will return to Warriors on Friday",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/01/22/steve-kerr-return-golden-state-warriors-head-coach",
+        "publishedAt": "2016-01-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "griffin-punching-incident",
+      "title": "Blake Griffin breaks his hand punching a team staffer",
+      "eventDate": "2016-01-23",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers suspend Blake Griffin four games for punching incident",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/clippers-suspend-blake-griffin-four-games-for-punching-incident/",
+        "publishedAt": "2016-02-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "drummond-all-star",
+      "title": "Andre Drummond is Detroit's first All-Star since 2009",
+      "eventDate": "2016-01-28",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Andre Drummond Selected to 2016 Eastern Conference All-Star Team",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/pistons/news/andre-drummond-selected-2016-eastern-conference-all-star-team",
+        "publishedAt": "2016-01-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "isaiah-thomas-all-star",
+      "title": "Isaiah Thomas becomes an All-Star",
+      "eventDate": "2016-01-28",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "All-Star selection a big feat for little guy Isaiah Thomas",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14670175/all-star-nod-big-feat-little-guy-isaiah-thomas-boston-celtics",
+        "publishedAt": "2016-01-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bos"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "millsap-third-all-star",
+      "title": "Paul Millsap makes his third straight All-Star team",
+      "eventDate": "2016-01-28",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Overlooking Paul Millsap continues to be equally remarkable and ridiculous",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/01/29/paul-millsap-atlanta-hawks-all-star-blake-griffin-demarcus-cousins",
+        "publishedAt": "2016-01-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-atl"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "suns-fire-hornacek",
+      "title": "Suns fire Jeff Hornacek, promote Earl Watson",
+      "eventDate": "2016-02-01",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns mercifully axe Jeff Hornacek as franchise continues to spin aimlessly",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/02/01/jeff-hornacek-phoenix-suns-robert-sarver-eric-bledsoe-tyson-chandler",
+        "publishedAt": "2016-02-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "hood-emerges",
+      "title": "Rodney Hood emerges as a scorer for the Jazz",
+      "eventDate": "2016-02-02",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rodney Hood outshining peers as he models game off another crafty lefty",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/02/02/rodney-hood-utah-jazz-james-harden-quin-snyder-rudy-gobert",
+        "publishedAt": "2016-02-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "jokic-emerges",
+      "title": "Rookie Nikola Jokic emerges as Denver's center",
+      "eventDate": "2016-02-02",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets’ Nikola Jokic well on his way to becoming the center of attention",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/02/02/nikola-jokic-nuggets-emmanuel-mudiay-mike-malone-will-barton",
+        "publishedAt": "2016-02-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "knicks-fire-fisher",
+      "title": "Knicks fire Derek Fisher",
+      "eventDate": "2016-02-08",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Derek Fisher fired by Knicks in his second season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14739795/new-york-knicks-fire-coach-derek-fisher-23-31-start-season",
+        "publishedAt": "2016-02-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dunk-contest-2016",
+      "title": "LaVine and Gordon stage an all-time dunk contest",
+      "eventDate": "2016-02-13",
+      "teams": [
+        "min",
+        "orl"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Zach LaVine wins slam dunk contest in battle with Aaron Gordon",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14774906/zach-lavine-minnesota-timberwolves-edges-orlando-magic-aaron-gordon-slam-dunk-contest",
+        "publishedAt": "2016-02-13"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-all-star-toronto",
+        "weekly-orl",
+        "weekly-min"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "all-star-toronto",
+      "title": "Toronto hosts the first All-Star Weekend outside the U.S.",
+      "eventDate": "2016-02-14",
+      "teams": [
+        "tor"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Toronto comes out a big winner from NBA's All-Star weekend",
+        "publisher": "Yahoo Sports",
+        "url": "https://ca.sports.yahoo.com/blogs/eh-game/toronto-comes-out-a-big-winner-from-nba-s-all-star-weekend-101423334.html",
+        "publishedAt": "2016-02-15"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-all-star-toronto",
+        "weekly-tor"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "westbrook-all-star-mvp",
+      "title": "Westbrook wins back-to-back All-Star MVPs in Kobe's last All-Star Game",
+      "eventDate": "2016-02-14",
+      "teams": [
+        "okc",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "One-of-a-kind Russell Westbrook makes it two straight All-Star MVPs",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/one-of-a-kind-russell-westbrook-makes-it-two-straight-all-star-mvps/",
+        "publishedAt": "2016-02-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-all-star-toronto",
+        "weekly-okc"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bosh-blood-clot",
+      "title": "Chris Bosh's season ends with another blood clot",
+      "eventDate": "2016-02-16",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Why Chris Bosh's blood clot kept him out of the playoffs",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/05/05/chris-bosh-health-blood-clot-miami-heat-nba-playoffs",
+        "publishedAt": "2016-05-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mia"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "courtney-lee-trade",
+      "title": "Hornets land Courtney Lee in a three-team deal",
+      "eventDate": "2016-02-16",
+      "teams": [
+        "cha",
+        "mem",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets acquire Courtney Lee in 3-team trade with Grizzlies, Heat",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14787463/memphis-grizzlies-ship-courtney-lee-charlotte-hornets-part-multiplayer-three-team-deal",
+        "publishedAt": "2016-02-16"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-cha",
+        "weekly-mem"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "tobias-harris-trade",
+      "title": "Pistons acquire Tobias Harris from the Magic",
+      "eventDate": "2016-02-16",
+      "teams": [
+        "det",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trade grades: Pistons send Jennings, Ilyasova to Magic for Harris",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/02/16/tobias-harris-ersan-ilyasova-brandon-jennings-pistons-magic-trade-grades",
+        "publishedAt": "2016-02-16"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-det",
+        "weekly-orl"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "hawks-stand-pat-deadline",
+      "title": "Hawks keep Horford and Teague at the deadline",
+      "eventDate": "2016-02-18",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks keep Al Horford and Jeff Teague through the trade deadline",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/hawks-keep-al-horford-and-jeff-teague-through-the-trade-deadline/",
+        "publishedAt": "2016-02-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-atl",
+        "theme-trade-deadline"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "jeff-green-trade",
+      "title": "Clippers trade a first-rounder for Jeff Green",
+      "eventDate": "2016-02-18",
+      "teams": [
+        "lac",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers send Lance Stephenson to Grizzlies for Jeff Green, first-rounder",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/clippers-send-lance-stephenson-to-grizzlies-for-jeff-green-first-rounder/",
+        "publishedAt": "2016-02-18"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-lac",
+        "weekly-mem"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "markieff-morris-trade",
+      "title": "Suns trade a disgruntled Markieff Morris to the Wizards",
+      "eventDate": "2016-02-18",
+      "teams": [
+        "was",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trade grades: Wizards take risk on Suns’ disgruntled Markieff Morris",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/02/18/markieff-morris-trade-grades-suns-wizards-deadline-rumors",
+        "publishedAt": "2016-02-18"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-phx",
+        "weekly-was"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "nets-hire-sean-marks",
+      "title": "Nets hire Sean Marks from the Spurs as GM",
+      "eventDate": "2016-02-18",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets pluck Sean Marks from Spurs, hire him as new general manager",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/nets-pluck-sean-marks-from-spurs-hire-him-as-new-general-manager/",
+        "publishedAt": "2016-02-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "rockets-keep-howard",
+      "title": "Rockets keep Dwight Howard at the deadline",
+      "eventDate": "2016-02-18",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Rockets set asking price too high for Dwight Howard trade",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/02/19/trade-deadline-houston-rockets-dwight-howard-price",
+        "publishedAt": "2016-02-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-hou",
+        "theme-trade-deadline"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "lillard-51-after-snub",
+      "title": "Damian Lillard scores 51 on the Warriors after his All-Star snub",
+      "eventDate": "2016-02-19",
+      "teams": [
+        "por",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lillard scores career-high 51, Blazers beat Warriors 137-105",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story?id=14810713",
+        "publishedAt": "2016-02-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-por"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "davis-59-points",
+      "title": "Anthony Davis scores 59 with 20 rebounds",
+      "eventDate": "2016-02-21",
+      "teams": [
+        "nop",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans' Anthony Davis scores 59 points, grabs 20 rebounds in win",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/pelicans-anthony-davis-scores-59-points-grabs-20-rebounds-in-win/",
+        "publishedAt": "2016-02-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "motiejunas-trade-voided",
+      "title": "Pistons void the Motiejunas trade after a failed physical",
+      "eventDate": "2016-02-22",
+      "teams": [
+        "det",
+        "hou",
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons void trade with Rockets when Donatas Motiejunas fails physical",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14825052/detroit-pistons-void-trade-houston-rockets-returning-donatas-motiejunas-marcus-thornton-joel-anthony-original-teams",
+        "publishedAt": "2016-02-22"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-det",
+        "weekly-hou"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "gasol-foot-surgery",
+      "title": "Marc Gasol breaks his foot and misses the rest of the season",
+      "eventDate": "2016-02-23",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies' Marc Gasol out for season after foot surgery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14830291/marc-gasol-memphis-grizzlies-foot-surgery-season",
+        "publishedAt": "2016-02-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "gallinari-ankle",
+      "title": "Danilo Gallinari tears two ankle ligaments",
+      "eventDate": "2016-02-26",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Danilo Gallinari has 2 torn ligaments in ankle injured Feb. 26",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14874843/danilo-gallinari-denver-nuggets-two-torn-ligaments-right-ankle",
+        "publishedAt": "2016-03-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "joe-johnson-to-heat",
+      "title": "Joe Johnson takes a Nets buyout and signs with the Heat",
+      "eventDate": "2016-02-27",
+      "teams": [
+        "mia",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Joe Johnson signs with Miami Heat after clearing waivers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14860409/joe-johnson-joins-miami-heat-clearing-waivers",
+        "publishedAt": "2016-02-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mia",
+        "weekly-bkn"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "giannis-point-guard",
+      "title": "Giannis Antetokounmpo takes over at point guard",
+      "eventDate": "2016-03-08",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "To the point: Giannis Antetokounmpo blossoming with the ball",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/03/08/giannis-antetokounmpo-milwaukee-bucks-jason-kidd-kobe-bryant",
+        "publishedAt": "2016-03-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cousins-suspended",
+      "title": "Kings suspend DeMarcus Cousins after he yells at George Karl",
+      "eventDate": "2016-03-10",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings suspend DeMarcus Cousins for one game",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/14945350/sacramento-kings-suspend-center-demarcus-cousins-1-game",
+        "publishedAt": "2016-03-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "melo-future-doubts",
+      "title": "Carmelo Anthony questions his future in New York",
+      "eventDate": "2016-03-18",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Carmelo Anthony expresses doubt over future with Knicks",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/03/18/carmelo-anthony-new-york-knicks-future-no-trade-clause",
+        "publishedAt": "2016-03-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "davis-shut-down",
+      "title": "Pelicans shut down Anthony Davis for surgery",
+      "eventDate": "2016-03-20",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans shut down Anthony Davis, who will undergo surgery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15026564/new-orleans-pelicans-shut-anthony-davis-rest-season",
+        "publishedAt": "2016-03-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "hornets-transformation",
+      "title": "Hornets remake their offense and surge in the East",
+      "eventDate": "2016-03-24",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets' transformation has them surging in the East",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15062204",
+        "publishedAt": "2016-03-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha",
+        "retro-hornets-bounce-back"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "parsons-knee-surgery",
+      "title": "Chandler Parsons' season ends with knee surgery",
+      "eventDate": "2016-03-25",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chandler Parsons has surgery to repair torn meniscus",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15065520/chandler-parsons-dallas-mavericks-surgery-repair-torn-meniscus-right-knee",
+        "publishedAt": "2016-03-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bulls-lost-season",
+      "title": "Bulls slide out of the playoff race",
+      "eventDate": "2016-03-26",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls hit low point in lost season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/chicago/bulls/post/_/id/23183/bulls-hit-low-point-in-lost-season",
+        "publishedAt": "2016-03-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "most-disappointing-teams",
+      "title": "Bucks, Rockets and Wizards fall short of expectations",
+      "eventDate": "2016-03-28",
+      "teams": [
+        "mil",
+        "hou",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Who has been this season's most disappointing team?",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/2016/news/features/david_aldridge/03/28/morning-tip-most-disappointing-teams-milwaukee-bucks-houston-rockets-washington-wizards/",
+        "publishedAt": "2016-03-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil",
+        "weekly-hou",
+        "weekly-was"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "russell-young-video",
+      "title": "D'Angelo Russell's Nick Young video splits the Lakers",
+      "eventDate": "2016-03-29",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Lakers teammates 'isolating' D'Angelo Russell after video surfaces",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15095276/dangelo-russell-center-los-angeles-lakers-rift-video-took-nick-young-made-public",
+        "publishedAt": "2016-03-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "celtics-end-warriors-home-streak",
+      "title": "Celtics end the Warriors' 54-game home winning streak",
+      "eventDate": "2016-04-01",
+      "teams": [
+        "bos",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics defeat Warriors, snap Golden State’s home-winning streak",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/02/golden-state-warriors-boston-celtics-home-winning-streak-stephen-curry",
+        "publishedAt": "2016-04-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bos",
+        "weekly-gsw"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "grizzlies-28-players",
+      "title": "Grizzlies use a record 28 players",
+      "eventDate": "2016-04-01",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies sign Bryce Cotton, set NBA record with 28 players this season",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/grizzlies-sign-bryce-cotton-set-nba-record-with-28-players-this-season/",
+        "publishedAt": "2016-04-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "spurs-franchise-record-wins",
+      "title": "Spurs set a franchise record for wins",
+      "eventDate": "2016-04-02",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "San Antonio Spurs set franchise record with 64th win",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/03/san-antonio-spurs-set-franchise-record-64-wins",
+        "publishedAt": "2016-04-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sas",
+        "retro-spurs-67"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "duncan-1000-wins",
+      "title": "Tim Duncan wins his 1,000th game",
+      "eventDate": "2016-04-05",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Tim Duncan becomes 3rd player in NBA history to win 1,000 games",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15144112/tim-duncan-becomes-3rd-player-nba-history-win-1000-games",
+        "publishedAt": "2016-04-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sas"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "hinkie-resigns",
+      "title": "Sam Hinkie resigns as 76ers GM",
+      "eventDate": "2016-04-06",
+      "teams": [
+        "phi"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Sam Hinkie steps down as 76ers GM, head of basketball operations",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15150185/sam-hinkie-steps-philadelphia-76ers-general-manager-president-basketball-operations",
+        "publishedAt": "2016-04-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-sixers-process",
+        "weekly-phi"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "wolves-young-core",
+      "title": "Towns, Wiggins and LaVine form Minnesota's young core",
+      "eventDate": "2016-04-06",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Timberwolves Doctrine: Inside look at Minnesota's young core",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/06/minnesota-timberwolves-andrew-wiggins-karl-anthony-towns-zach-lavine",
+        "publishedAt": "2016-04-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "sleep-train-arena-farewell",
+      "title": "Kings close Sleep Train Arena",
+      "eventDate": "2016-04-09",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings saying farewell to longtime arena, 'one special place'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story?id=15163575",
+        "publishedAt": "2016-04-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "pelicans-injury-season",
+      "title": "Injuries wreck the Pelicans' season",
+      "eventDate": "2016-04-10",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Scar tissue: Behind the curtain of the Pelicans' training operations",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15179914/new-orleans-pelicans-season-injury",
+        "publishedAt": "2016-04-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "warriors-win-in-san-antonio",
+      "title": "Warriors win in San Antonio for No. 72, ending the Spurs' perfect home record",
+      "eventDate": "2016-04-10",
+      "teams": [
+        "gsw",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors end Spurs' home winning streak at 39",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/san-antonio-spurs/post/_/id/722/warriors-end-spurs-home-winning-streak-at-39",
+        "publishedAt": "2016-04-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-warriors-73",
+        "weekly-gsw",
+        "weekly-sas"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "mavericks-clinch-playoffs",
+      "title": "Mavericks grind their way into the playoffs",
+      "eventDate": "2016-04-11",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavs complete Dirk Nowitzki's most difficult journey to playoffs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/dallas-mavericks/post/_/id/4706353/mavs-complete-dirk-nowitzkis-most-difficult-journey-to-playoffs",
+        "publishedAt": "2016-04-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "donovan-first-season",
+      "title": "Billy Donovan's first season with a healthy Durant",
+      "eventDate": "2016-04-13",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "How did the Thunder change in Billy Donovan's first season?",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/okc-thunder/post/_/id/1433/how-did-the-thunder-change-in-billy-donovans-first-season",
+        "publishedAt": "2016-04-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-okc"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "kobe-60-finale",
+      "title": "Kobe scores 60 in his final game",
+      "eventDate": "2016-04-13",
+      "teams": [
+        "lal",
+        "uta"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Not with a whimper but a bang: Kobe lights up for 60 in finale",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/los-angeles/lakers/post/_/id/43084",
+        "publishedAt": "2016-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-kobe-farewell",
+        "theme-kobe-farewell",
+        "weekly-lal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "nuggets-malone-first-season",
+      "title": "Nuggets build a young core in Michael Malone's first season",
+      "eventDate": "2016-04-13",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Growing Forward",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/nuggets/news/nuggets-season-recap-041516",
+        "publishedAt": "2016-04-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "warriors-73-wins",
+      "title": "Warriors finish 73-9, breaking the Bulls' record",
+      "eventDate": "2016-04-13",
+      "teams": [
+        "gsw"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Move over, Bulls: Warriors further legacy, capture 73rd win with ease",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/14/golden-state-warriors-73-wins-chicago-bulls-nba-record-legacy",
+        "publishedAt": "2016-04-14"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-warriors-73"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "kings-fire-karl",
+      "title": "Kings fire George Karl",
+      "eventDate": "2016-04-14",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings fire George Karl",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15203663/sacramento-kings-fire-coach-george-karl",
+        "publishedAt": "2016-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "wizards-fire-wittman",
+      "title": "Wizards fire Randy Wittman after missing the playoffs",
+      "eventDate": "2016-04-14",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards fire coach Randy Wittman after team misses playoffs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15200611/wizards-fire-coach-randy-wittman-team-misses-playoffs",
+        "publishedAt": "2016-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "nets-hire-atkinson",
+      "title": "Nets hire Kenny Atkinson as coach",
+      "eventDate": "2016-04-17",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brooklyn Nets hire Kenny Atkinson as head coach",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/17/brooklyn-nets-hire-kenny-atkinson-head-coach",
+        "publishedAt": "2016-04-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "spurs-sweep-grizzlies",
+      "title": "Spurs sweep the injury-depleted Grizzlies",
+      "eventDate": "2016-04-17",
+      "teams": [
+        "sas",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "After slow start, Spurs defense stifles punchless Grizzlies",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/2016/news/features/fran_blinebury/04/18/spurs-defense-puts-clamps-on-memphis/",
+        "publishedAt": "2016-04-18"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-sas",
+        "playoffs-mem"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "kawhi-dpoy",
+      "title": "Kawhi Leonard repeats as Defensive Player of the Year",
+      "eventDate": "2016-04-18",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kawhi Leonard claims back-to-back DPOY awards",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15227383/kawhi-leonard-san-antonio-spurs-wins-defensive-player-year-second-straight-season",
+        "publishedAt": "2016-04-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-dpoy"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "crawford-sixth-man",
+      "title": "Jamal Crawford wins a record third Sixth Man award",
+      "eventDate": "2016-04-19",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jamal Crawford wins NBA record third Sixth Man of the Year award",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/jamal-crawford-wins-nba-record-third-sixth-man-of-the-year-award/",
+        "publishedAt": "2016-04-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-6moy"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "wizards-hire-brooks",
+      "title": "Wizards hire Scott Brooks",
+      "eventDate": "2016-04-20",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Scott Brooks agrees to terms with Washington Wizards to be new head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15291296/scott-brooks-agrees-terms-washington-wizards-new-head-coach",
+        "publishedAt": "2016-04-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "wolves-hire-thibodeau",
+      "title": "Timberwolves hire Tom Thibodeau as coach and president",
+      "eventDate": "2016-04-20",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Tom Thibodeau hired by Wolves as coach and president",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15283051/minnesota-timberwolves-agree-hire-tom-thibodeau-coach-scott-layden-gm",
+        "publishedAt": "2016-04-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "mccollum-mip",
+      "title": "CJ McCollum wins Most Improved Player",
+      "eventDate": "2016-04-22",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trail Blazers’ C.J. McCollum wins Most Improved Player Award",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/22/trail-blazers-cj-mccollum-wins-most-improved-player-award",
+        "publishedAt": "2016-04-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-mip",
+        "weekly-por"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cavs-sweep-pistons",
+      "title": "Cavaliers sweep the Pistons in Detroit's first playoffs since 2009",
+      "eventDate": "2016-04-24",
+      "teams": [
+        "cle",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Cavaliers sweep Pistons, look primed for deep run",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/25/cavaliers-pistons-lebron-james-kyrie-irving-nba-playoffs",
+        "publishedAt": "2016-04-25"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-cle",
+        "playoffs-det",
+        "retro-pistons-revival"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "lakers-fire-byron-scott",
+      "title": "Lakers fire Byron Scott after a franchise-worst season",
+      "eventDate": "2016-04-24",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers fire Byron Scott after Kobe's final season spirals out of control",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/25/lakers-byron-scott-fired-kobe-bryant-dangelo-russell-nick-young",
+        "publishedAt": "2016-04-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lal",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "clippers-lose-paul-griffin",
+      "title": "Paul and Griffin injuries sink the Clippers against Portland",
+      "eventDate": "2016-04-25",
+      "teams": [
+        "lac",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Season-ending injuries to Chris Paul, Blake Griffin derail Clippers’ playoffs",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/26/nba-playoffs-chris-paul-hand-injury-los-angeles-clippers",
+        "publishedAt": "2016-04-26"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-lac",
+        "playoffs-por",
+        "retro-clippers-injuries"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "thunder-beat-mavericks",
+      "title": "Thunder close out Dallas after Cuban's Westbrook jab",
+      "eventDate": "2016-04-25",
+      "teams": [
+        "okc",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mark Cuban: Kevin Durant is the 'one superstar' on Thunder",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15357001/dallas-mavericks-owner-mark-cuban-says-russell-westbrook-oklahoma-city-thunder-all-star-not-superstar",
+        "publishedAt": "2016-04-25"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-okc",
+        "playoffs-dal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "warriors-eliminate-rockets",
+      "title": "Warriors eliminate the Rockets without Curry",
+      "eventDate": "2016-04-27",
+      "teams": [
+        "gsw",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors eliminate Rockets in Game 5: What's next for both teams?",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/28/nba-playoffs-warriors-eliminate-rockets-stephen-curry-klay-thompson-video",
+        "publishedAt": "2016-04-28"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-gsw",
+        "playoffs-hou",
+        "retro-rockets-disappointment"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "hawks-eliminate-celtics",
+      "title": "Hawks eliminate the Celtics in six",
+      "eventDate": "2016-04-28",
+      "teams": [
+        "atl",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: Hawks finish Celtics, earn date with LeBron James",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/28/nba-playoffs-hawks-celtics-lebron-james-cavaliers-conference-semifinals-video",
+        "publishedAt": "2016-04-28"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-atl",
+        "playoffs-bos"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "lakers-hire-walton",
+      "title": "Lakers hire Luke Walton",
+      "eventDate": "2016-04-29",
+      "teams": [
+        "lal",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers’ hire of Luke Walton a move L.A. needed to make",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/04/30/luke-walton-los-angeles-lakers-head-coach-golden-state-warriors",
+        "publishedAt": "2016-04-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lal",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "heat-beat-hornets-game-7",
+      "title": "Heat rout Charlotte in Game 7",
+      "eventDate": "2016-05-01",
+      "teams": [
+        "mia",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA-Dragic stars as Heat pound Hornets to win series",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba-dragic-stars-heat-pound-hornets-win-series-212204567--nba.html",
+        "publishedAt": "2016-05-01"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-mia",
+        "playoffs-cha"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "pacers-lose-game-7",
+      "title": "Pacers fall to Toronto in Game 7",
+      "eventDate": "2016-05-01",
+      "teams": [
+        "ind",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers Links: After Game 7 loss, offseason begins quickly for Pacers",
+        "publisher": "Indy Cornrows",
+        "url": "https://www.indycornrows.com/2016/5/2/11564646/pacers-links-after-game-7-loss-offseason-begins-quickly-for-pacers",
+        "publishedAt": "2016-05-02"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-ind",
+        "playoffs-tor"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cavs-sweep-hawks",
+      "title": "Cavaliers sweep the Hawks with a record 25 threes in Game 2",
+      "eventDate": "2016-05-04",
+      "teams": [
+        "cle",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavaliers drain NBA-record 25 3-pointers in Game 2 rout of Hawks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15464826/cleveland-cavaliers-set-nba-playoff-record-3-pointers-vs-atlanta-hawks",
+        "publishedAt": "2016-05-04"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-cle",
+        "playoffs-atl"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "pacers-drop-vogel",
+      "title": "Pacers decline to bring back Frank Vogel",
+      "eventDate": "2016-05-05",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers aren't bringing back Frank Vogel",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15467670/indiana-pacers-part-ways-coach-frank-vogel",
+        "publishedAt": "2016-05-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "grizzlies-fire-joerger",
+      "title": "Grizzlies fire Dave Joerger",
+      "eventDate": "2016-05-07",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mutual animosity led to Dave Joerger's firing, per sources",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15481248/memphis-grizzlies-fire-coach-dave-joerger-three-seasons",
+        "publishedAt": "2016-05-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "curry-return-17-ot",
+      "title": "Curry returns with a record 17 overtime points against Portland",
+      "eventDate": "2016-05-09",
+      "teams": [
+        "gsw",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "He’s back: Curry’s return for the ages sends Warriors past Blazers",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/05/10/nba-playoffs-golden-state-warriors-portland-trail-blazers-game-4-stephen-curry",
+        "publishedAt": "2016-05-10"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-gsw",
+        "playoffs-por"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "kings-hire-joerger",
+      "title": "Kings hire Dave Joerger two days after Memphis fires him",
+      "eventDate": "2016-05-09",
+      "teams": [
+        "sac",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings introduce Dave Joerger as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15501770/sacramento-kings-introduce-dave-joerger-new-head-coach",
+        "publishedAt": "2016-05-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "curry-unanimous-mvp",
+      "title": "Curry becomes the first unanimous MVP",
+      "eventDate": "2016-05-10",
+      "teams": [
+        "gsw"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Stephen Curry claims MVP again: Five incredible feats from his historic year",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/05/10/stephen-curry-mvp-season-golden-state-warriors-history",
+        "publishedAt": "2016-05-10"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "awards-mvp",
+        "retro-curry-unanimous"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "blazers-prove-doubters-wrong",
+      "title": "Blazers' surprise season ends in the second round",
+      "eventDate": "2016-05-11",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "No shame in defeat: Portland Trail Blazers proved doubters wrong",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/05/13/portland-trail-blazers-damian-lillard-cj-mccollum-terry-stotts-nba-playoffs",
+        "publishedAt": "2016-05-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-por",
+        "retro-blazers-overachieve"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "skiles-resigns",
+      "title": "Scott Skiles resigns after one season in Orlando",
+      "eventDate": "2016-05-12",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Scott Skiles informs Orlando Magic he's resigning",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15517163/scott-skiles-tells-orlando-magic-stepping-down",
+        "publishedAt": "2016-05-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-orl",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "thunder-upset-spurs",
+      "title": "Thunder knock out the 67-win Spurs",
+      "eventDate": "2016-05-12",
+      "teams": [
+        "okc",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder reach West finals as Spurs left to realize basketball mortality",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/05/13/playoffs-thunder-spurs-kevin-durant-tim-duncan-game-6-video",
+        "publishedAt": "2016-05-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-okc",
+        "playoffs-sas",
+        "retro-thunder-collapse"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "pacers-promote-mcmillan",
+      "title": "Pacers promote Nate McMillan to head coach",
+      "eventDate": "2016-05-15",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers promote assistant Nate McMillan to head coach",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/05/15/indiana-pacers-nate-mcmillan-head-coach-finalizing-deal",
+        "publishedAt": "2016-05-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "raptors-beat-heat-game-7",
+      "title": "Raptors beat Miami in Game 7 to reach their first East finals",
+      "eventDate": "2016-05-15",
+      "teams": [
+        "tor",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lowry’s moment: Raptors ride All-Star to East finals in Game 7 win over Heat",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/05/15/playoffs-raptors-heat-kyle-lowry-dwyane-wade-eastern-conference-finals",
+        "publishedAt": "2016-05-15"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-tor",
+        "playoffs-mia"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "towns-rookie-of-the-year",
+      "title": "Karl-Anthony Towns is a unanimous Rookie of the Year",
+      "eventDate": "2016-05-16",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Karl-Anthony Towns named NBA Rookie of the Year unanimously",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/05/16/karl-anthony-towns-nba-rookie-year-unanimous-voting-results",
+        "publishedAt": "2016-05-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "awards-roy",
+        "weekly-min"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "sixers-win-lottery",
+      "title": "76ers win the lottery; Lakers keep No. 2, Celtics get No. 3",
+      "eventDate": "2016-05-17",
+      "teams": [
+        "phi",
+        "lal",
+        "bos"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Sixers win NBA lottery for top pick; Lakers get No. 2, Celtics No. 3",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2016/story/_/id/15581021/philadelphia-76ers-win-lottery-pick-first-2016-nba-draft",
+        "publishedAt": "2016-05-17"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-lottery"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "magic-hire-vogel",
+      "title": "Magic hire Frank Vogel",
+      "eventDate": "2016-05-20",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic officially announce Frank Vogel as new head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15632270/orlando-magic-officially-announce-frank-vogel-new-head-coach",
+        "publishedAt": "2016-05-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-orl",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "rockets-hire-dantoni",
+      "title": "Rockets hire Mike D'Antoni",
+      "eventDate": "2016-05-26",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Three things to know about the Rockets reportedly hiring Mike D'Antoni as coach",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/three-things-to-know-about-rockets-reportedly-hiring-mike-dantoni-as-coach/",
+        "publishedAt": "2016-05-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-hou",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "raptors-season-ends-east-finals",
+      "title": "Raptors' best season ends in the East finals",
+      "eventDate": "2016-05-27",
+      "teams": [
+        "tor",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "How these Raptors raised the bar and set a new standard",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/nba/post/_/id/20509/how-these-raptors-raised-the-bar-and-set-a-new-standard",
+        "publishedAt": "2016-05-27"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-tor",
+        "playoffs-cle",
+        "retro-raptors-best-season"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "grizzlies-hire-fizdale",
+      "title": "Grizzlies hire David Fizdale",
+      "eventDate": "2016-05-29",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies announce David Fizdale as team's new head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15814540/david-fizdale-announced-memphis-grizzlies-new-coach",
+        "publishedAt": "2016-05-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "warriors-west-finals-comeback",
+      "title": "Warriors rally from 3-1 down to beat the Thunder",
+      "eventDate": "2016-05-30",
+      "teams": [
+        "gsw",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors complete Game 7 comeback over Thunder to reach NBA Finals",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/05/31/finals-golden-state-warriors-okc-thunder-game7-cleveland-cavaliers-stephen-curry",
+        "publishedAt": "2016-05-31"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-gsw",
+        "playoffs-okc",
+        "retro-thunder-collapse"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "knicks-hire-hornacek",
+      "title": "Knicks hire Jeff Hornacek",
+      "eventDate": "2016-06-02",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jeff Hornacek 'honored' to be Knicks' new coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/15901566/new-york-knicks-announce-jeff-hornacek-new-coach",
+        "publishedAt": "2016-06-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk",
+        "theme-coaching-carousel"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "draymond-green-suspension",
+      "title": "Draymond Green suspended for Finals Game 5",
+      "eventDate": "2016-06-12",
+      "teams": [
+        "gsw",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Draymond Green suspended for Game 5: What’s next for Warriors, Cavs?",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/06/13/draymond-green-suspension-lebron-james-stephen-curry-warriors-cavaliers-game-5",
+        "publishedAt": "2016-06-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-finals",
+        "playoffs-gsw"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cavs-win-title",
+      "title": "Cavaliers rally from 3-1 down to win the championship",
+      "eventDate": "2016-06-19",
+      "teams": [
+        "cle",
+        "gsw"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "The Ultimate Triumph: Ohio’s LeBron James delivers Cavs’ first title",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/06/20/nba-finals-lebron-james-cavs-warriors-game-7-cleveland-first-title",
+        "publishedAt": "2016-06-20"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "playoffs-finals",
+        "playoffs-cle",
+        "retro-cavs-comeback"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "derrick-rose-to-knicks",
+      "title": "Bulls trade Derrick Rose to the Knicks",
+      "eventDate": "2016-06-22",
+      "teams": [
+        "nyk",
+        "chi"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Trade grades: Knicks' deal for Derrick Rose all sizzle and no steak",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/06/22/derrick-rose-trade-knicks-bulls-robin-lopez-jose-calderon",
+        "publishedAt": "2016-06-22"
+      },
+      "kind": "trade",
+      "blockbuster": true,
+      "guidance": [
+        "draft-2016",
+        "weekly-chi",
+        "weekly-nyk"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "jeff-teague-trade",
+      "title": "Hawks send Jeff Teague to Indiana in a three-team deal",
+      "eventDate": "2016-06-22",
+      "teams": [
+        "atl",
+        "ind",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "What the Hell Happened With the Jeff Teague Trade?",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2016/06/22/nba/jeff-teague-trade-pacers-hawks-jazz-reaction-e3f4740891e2",
+        "publishedAt": "2016-06-22"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2016",
+        "weekly-atl",
+        "weekly-ind",
+        "weekly-uta"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dunn-fifth-pick",
+      "title": "Timberwolves take Kris Dunn No. 5",
+      "eventDate": "2016-06-23",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Timberwolves select Kris Dunn with No. 5 pick in 2016 NBA draft",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/06/24/kris-dunn-2016-nba-draft",
+        "publishedAt": "2016-06-24"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2016"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "hield-sixth-pick",
+      "title": "Pelicans take Buddy Hield No. 6",
+      "eventDate": "2016-06-23",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans select Buddy Hield with the No. 6 pick in 2016 NBA draft",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/06/24/buddy-hield-2016-nba-draft",
+        "publishedAt": "2016-06-24"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2016"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "ingram-second-pick",
+      "title": "Lakers take Brandon Ingram No. 2",
+      "eventDate": "2016-06-23",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers take Brandon Ingram with second pick of draft",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2016/story/_/id/16458661/2016-nba-draft-los-angeles-lakers-take-brandon-ingram-no-2-pick",
+        "publishedAt": "2016-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2016"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "jaylen-brown-third-pick",
+      "title": "Celtics take Jaylen Brown with the Nets' pick",
+      "eventDate": "2016-06-23",
+      "teams": [
+        "bos",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics hold on to No. 3 overall pick to draft Jaylen Brown",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2016/story/_/id/16458663/2016-nba-draft-boston-celtics-select-jaylen-brown-no-3-overall-pick",
+        "publishedAt": "2016-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2016",
+        "draft-lottery"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "murray-seventh-pick",
+      "title": "Nuggets take Jamal Murray No. 7",
+      "eventDate": "2016-06-23",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets select Jamal Murray with No. 7 pick in 2016 NBA draft",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2016/06/24/jamal-murray-2016-nba-draft",
+        "publishedAt": "2016-06-24"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2016"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "serge-ibaka-trade",
+      "title": "Thunder trade Serge Ibaka to Orlando for Oladipo on draft night",
+      "eventDate": "2016-06-23",
+      "teams": [
+        "okc",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Serge and Destroy",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2016/06/24/nba/oklahoma-city-thunder-orlando-magic-trade-ibaka-oladipo-d3d224e5e752",
+        "publishedAt": "2016-06-24"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2016",
+        "weekly-okc",
+        "weekly-orl"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "simmons-first-pick",
+      "title": "76ers take Ben Simmons No. 1",
+      "eventDate": "2016-06-23",
+      "teams": [
+        "phi"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Sixers take LSU's Ben Simmons with No. 1 overall pick",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2016/story/_/id/16458660/2016-nba-draft-philadelphia-76ers-take-ben-simmons-no-1-overall-pick",
+        "publishedAt": "2016-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2016"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "suns-draft-bender-chriss",
+      "title": "Suns draft Dragan Bender and trade up for Marquese Chriss",
+      "eventDate": "2016-06-23",
+      "teams": [
+        "phx",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns speeding up rebuilding process with Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/2016/news/06/24/phoenix-suns-accelerate-rebuilding-process-with-2016-draft/",
+        "publishedAt": "2016-06-24"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2016"
+      ],
+      "status": "pending"
+    }
+  ]
+}

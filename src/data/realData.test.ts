@@ -2,7 +2,7 @@ import { expect, it } from 'vitest'
 import { loadAllSeasons, seasonIndex } from './seasonData'
 
 it('validates every bundled season and its index entry', async () => {
-  expect(seasonIndex).toHaveLength(22)
+  expect(seasonIndex).toHaveLength(23)
   const seasons = await loadAllSeasons()
   expect(seasons.map((s) => s.name)).toEqual(seasonIndex.map((e) => e.name))
 })

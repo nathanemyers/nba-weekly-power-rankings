@@ -1,0 +1,2057 @@
+{
+  "season": "2019-20",
+  "finalizedAt": "2026-11-02",
+  "storylines": [
+    {
+      "id": "kd-kyrie-sign-with-nets",
+      "title": "Durant and Irving sign with the Nets",
+      "eventDate": "2019-06-30",
+      "teams": [
+        "bkn",
+        "gsw",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brooklyn-bound: KD, Kyrie announce Nets moves",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/27091242/brooklyn-bound-kd-kyrie-announce-nets-moves",
+        "publishedAt": "2019-06-30"
+      }
+    },
+    {
+      "id": "kemba-walker-to-celtics",
+      "title": "Kemba Walker joins the Celtics; Rozier to Charlotte",
+      "eventDate": "2019-06-30",
+      "teams": [
+        "bos",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Walker agrees to join Celtics; Rozier to Hornets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/27083706/walker-agrees-join-celtics-rozier-hornets",
+        "publishedAt": "2019-06-30"
+      }
+    },
+    {
+      "id": "brogdon-to-pacers",
+      "title": "Pacers land Malcolm Brogdon in sign-and-trade",
+      "eventDate": "2019-06-30",
+      "teams": [
+        "ind",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Malcolm Brogdon trade: Pacers land near-perfect fit",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2019/06/30/malcolm-brogdon-nba-free-agency-trade-pacers-bucks-draft",
+        "publishedAt": "2019-06-30"
+      }
+    },
+    {
+      "id": "butler-sign-and-trade-heat",
+      "title": "Jimmy Butler joins the Heat in a sign-and-trade",
+      "eventDate": "2019-07-01",
+      "teams": [
+        "mia",
+        "phi",
+        "dal",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jimmy Butler trade: Heat win big in deal with Sixers, Mavs",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2019/07/01/jimmy-butler-trade-miami-heat-mavericks-sixers-free-agency",
+        "publishedAt": "2019-07-01"
+      }
+    },
+    {
+      "id": "lakers-acquire-anthony-davis",
+      "title": "Lakers acquire Anthony Davis",
+      "eventDate": "2019-07-06",
+      "teams": [
+        "lal",
+        "nop",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers Acquire Anthony Davis",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/lakers/releases/190706-lakers-acquire-davis",
+        "publishedAt": "2019-07-06"
+      }
+    },
+    {
+      "id": "clippers-land-kawhi-and-george",
+      "title": "Clippers sign Kawhi Leonard and trade for Paul George",
+      "eventDate": "2019-07-06",
+      "teams": [
+        "lac",
+        "okc",
+        "tor"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "The Clippers Got Kawhi Leonard and Paul George, and Changed What’s Possible in the NBA",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2019/07/06/nba/paul-george-kawhi-leonard-clippers-free-agency-russell-westbrook",
+        "publishedAt": "2019-07-06"
+      }
+    },
+    {
+      "id": "jazz-acquire-mike-conley",
+      "title": "Jazz acquire Mike Conley from the Grizzlies",
+      "eventDate": "2019-07-06",
+      "teams": [
+        "uta",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Utah Jazz Acquire Guard Mike Conley Jr.",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/jazz/utah-jazz-acquire-guard-mike-conley-jr",
+        "publishedAt": "2019-07-06"
+      }
+    },
+    {
+      "id": "westbrook-paul-trade",
+      "title": "Rockets trade Chris Paul for Russell Westbrook",
+      "eventDate": "2019-07-11",
+      "teams": [
+        "hou",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Winners and Losers of the Russell Westbrook–for–Chris Paul Trade",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/nba/2019/7/11/20691296/russell-westbrook-chris-paul-trade-thunder-rockets",
+        "publishedAt": "2019-07-11"
+      }
+    },
+    {
+      "id": "morey-hong-kong-tweet",
+      "title": "Daryl Morey's Hong Kong tweet sparks China fallout",
+      "eventDate": "2019-10-04",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daryl Morey’s Hong Kong Tweet Has Put His Relationship With the Rockets in Limbo",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2019/10/06/nba/daryl-morey-hong-kong-china-houston-rockets-tweet-controversy",
+        "publishedAt": "2019-10-06"
+      }
+    },
+    {
+      "id": "beal-extension",
+      "title": "Bradley Beal signs extension with the Wizards",
+      "eventDate": "2019-10-17",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bradley Beal’s Contract Extension Puts a Cap on Superstar Movement—for Now",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2019/10/17/nba/bradley-beal-contract-extension-washington-wizards",
+        "publishedAt": "2019-10-17"
+      }
+    },
+    {
+      "id": "siakam-max-extension",
+      "title": "Pascal Siakam signs max extension",
+      "eventDate": "2019-10-19",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Siakam’s Razor: The Future of the Raptors Is in Pascal Siakam’s Hands",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2019/10/21/nba/toronto-raptors-pascal-siakam-max-extension",
+        "publishedAt": "2019-10-21"
+      }
+    },
+    {
+      "id": "zion-knee-surgery",
+      "title": "Zion Williamson has knee surgery before his debut",
+      "eventDate": "2019-10-21",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Zion Williamson’s Six-to-Eight-Week Absence Is a Bummer for Everyone",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2019/10/21/nba/zion-williamson-surgery-6-to-8-weeks-absence",
+        "publishedAt": "2019-10-21"
+      }
+    },
+    {
+      "id": "raptors-ring-night",
+      "title": "Raptors raise their first banner on ring night",
+      "eventDate": "2019-10-22",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Toronto Raptors receive championship rings, unveil first banner ahead of the start of the 2019-20 season",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/toronto-raptors-receive-championship-rings-unveil-first-banner-ahead-of-the-start-of-the-2019-20-season/",
+        "publishedAt": "2019-10-22"
+      }
+    },
+    {
+      "id": "ayton-suspended-25-games",
+      "title": "Deandre Ayton suspended 25 games",
+      "eventDate": "2019-10-24",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Damn, Sun: Deandre Ayton Banned 25 Games for a Positive Test",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/nba/2019/10/24/20931538/deandre-ayton-phoenix-suns-suspension-diuretic",
+        "publishedAt": "2019-10-24"
+      }
+    },
+    {
+      "id": "curry-breaks-hand",
+      "title": "Stephen Curry breaks his left hand",
+      "eventDate": "2019-10-30",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stephen Curry injury: Warriors guard suffers broken left hand vs Suns",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2019/10/31/stephen-curry-injury-broken-hand-warriors-suns",
+        "publishedAt": "2019-10-31"
+      }
+    },
+    {
+      "id": "collins-suspended-25-games",
+      "title": "John Collins suspended 25 games",
+      "eventDate": "2019-11-05",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks' John Collins suspended 25 games for PEDs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28012876/hawks-john-collins-suspended-25-games-peds",
+        "publishedAt": "2019-11-05"
+      }
+    },
+    {
+      "id": "hayward-broken-hand",
+      "title": "Gordon Hayward breaks his hand",
+      "eventDate": "2019-11-09",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Add a Broken Hand to Gordon Hayward’s Star-Crossed Celtics Run",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/nba/2019/11/9/20957219/gordon-hayward-broken-hand-boston-celtics",
+        "publishedAt": "2019-11-09"
+      }
+    },
+    {
+      "id": "knicks-front-office-presser",
+      "title": "Knicks executives' impromptu press conference",
+      "eventDate": "2019-11-10",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "It Turns Out the Knicks Suck at Losing, Too",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2019/11/11/nba/new-york-knicks-steve-mills-scott-perry-press-conference-james-dolan",
+        "publishedAt": "2019-11-11"
+      }
+    },
+    {
+      "id": "carmelo-signs-with-blazers",
+      "title": "Carmelo Anthony returns with the Blazers",
+      "eventDate": "2019-11-19",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trail Blazers Sign 10-Time NBA All-Star Carmelo Anthony",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/blazers/news/2019/11/19/blazers-sign-carmelo-anthony",
+        "publishedAt": "2019-11-19"
+      }
+    },
+    {
+      "id": "lavine-13-threes",
+      "title": "Zach LaVine hits 13 threes and the winner in Charlotte",
+      "eventDate": "2019-11-23",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls' Zach LaVine has 49, hits winner game after benching",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28149806/bulls-zach-lavine-49-hits-winner-game-benching",
+        "publishedAt": "2019-11-23"
+      }
+    },
+    {
+      "id": "spurs-crumbling",
+      "title": "Spurs' slow start puts the streak in danger",
+      "eventDate": "2019-11-26",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Spurs Are Crumbling Before Our Eyes",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2019/11/26/nba/san-antonio-spurs-struggling-gregg-popovich",
+        "publishedAt": "2019-11-26"
+      }
+    },
+    {
+      "id": "luka-mvp-level-start",
+      "title": "Luka Doncic plays at an MVP level",
+      "eventDate": "2019-12-03",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "How the Mavericks Unlocked Luka Doncic’s MVP Potential",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2019/12/03/nba/luka-doncic-dallas-mavericks-rick-carlisle",
+        "publishedAt": "2019-12-03"
+      }
+    },
+    {
+      "id": "knicks-fire-fizdale",
+      "title": "Knicks fire David Fizdale",
+      "eventDate": "2019-12-06",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "You’re Never Going to Believe This, but the Knicks Have Fired Their Head Coach",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/nba/2019/12/6/20999591/david-fizdale-fired-head-coach-new-york-knicks",
+        "publishedAt": "2019-12-06"
+      }
+    },
+    {
+      "id": "derrick-rose-game-winner",
+      "title": "Derrick Rose's resurgence in Detroit",
+      "eventDate": "2019-12-09",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Derrick Rose, 'born to do this,' lifts Pistons with last-second winner",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28263666/derrick-rose-born-do-lifts-pistons-last-second-winner",
+        "publishedAt": "2019-12-09"
+      }
+    },
+    {
+      "id": "devonte-graham-emerges",
+      "title": "Devonte' Graham emerges after Kemba's exit",
+      "eventDate": "2019-12-12",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Put Some Respect on Devonte’ Graham’s Name",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2019/12/12/nba/devonte-graham-charlotte-hornets-kemba-walker",
+        "publishedAt": "2019-12-12"
+      }
+    },
+    {
+      "id": "spurs-four-straight-overtimes",
+      "title": "Spurs play a record four straight overtime games",
+      "eventDate": "2019-12-14",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs play NBA-record 4th straight overtime game: 'It's awful'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28299454/spurs-play-nba-record-4th-straight-game-awful",
+        "publishedAt": "2019-12-14"
+      }
+    },
+    {
+      "id": "bucks-18-game-streak-ends",
+      "title": "Mavericks end the Bucks' 18-game win streak",
+      "eventDate": "2019-12-16",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Bucks’ 18-Game Win Streak Ended As Quietly As It Began",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/nba/2019/12/17/21025573/milwaukee-bucks-giannis-luka-doncic-kristaps-porzingis",
+        "publishedAt": "2019-12-17"
+      }
+    },
+    {
+      "id": "david-stern-dies",
+      "title": "David Stern dies at 77",
+      "eventDate": "2020-01-01",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "David Stern, former NBA commissioner, dies at 77",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/01/01/david-stern-death-nba-commissioner-brain-hemorrhage",
+        "publishedAt": "2020-01-01"
+      }
+    },
+    {
+      "id": "griffin-knee-surgery",
+      "title": "Blake Griffin has knee surgery",
+      "eventDate": "2020-01-07",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons star Blake Griffin out indefinitely after surgery on knee",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28441083/pistons-star-blake-griffin-indefinitely-surgery-knee",
+        "publishedAt": "2020-01-07"
+      }
+    },
+    {
+      "id": "thunder-rebuild-wins",
+      "title": "Thunder's three-guard rebuild keeps winning",
+      "eventDate": "2020-01-08",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Thunder’s Rebuild Has Hit the NBA’s Sweet Spot",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/01/08/nba/oklahoma-city-thunder-chris-paul-shai-gilgeous-alexander",
+        "publishedAt": "2020-01-08"
+      }
+    },
+    {
+      "id": "beilein-apologizes",
+      "title": "John Beilein apologizes for 'thugs' remark",
+      "eventDate": "2020-01-09",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: John Beilein meets with Cavaliers players, gives emotional apology",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28453087/sources-john-beilein-meets-cavaliers-players-gives-emotional-apology",
+        "publishedAt": "2020-01-09"
+      }
+    },
+    {
+      "id": "hawks-reacquire-teague",
+      "title": "Hawks reacquire Jeff Teague",
+      "eventDate": "2020-01-16",
+      "teams": [
+        "atl",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks acquire Jeff Teague, Treveon Graham from Timberwolves for Allen Crabbe",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28496583/hawks-acquire-jeff-teague-treveon-graham-timberwolves-allen-crabbe",
+        "publishedAt": "2020-01-16"
+      }
+    },
+    {
+      "id": "kevin-love-outburst",
+      "title": "Kevin Love's frustration boils over",
+      "eventDate": "2020-01-18",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kevin Love reportedly erupts at Cavaliers general manager amid team's struggles, fined $1,000 for outburst",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/kevin-love-reportedly-erupts-at-cavaliers-general-manager-koby-altman-amid-teams-struggles/",
+        "publishedAt": "2020-01-18"
+      }
+    },
+    {
+      "id": "lillard-61-vs-warriors",
+      "title": "Damian Lillard scores 61 against the Warriors",
+      "eventDate": "2020-01-20",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Damian Lillard erupts for 61, sinks Warriors with clutch 3s",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28527621/damian-lillard-erupts-61-sinks-warriors-clutch-3s",
+        "publishedAt": "2020-01-20"
+      }
+    },
+    {
+      "id": "powell-torn-achilles",
+      "title": "Dwight Powell tears his Achilles",
+      "eventDate": "2020-01-21",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Dwight Powell injury: Mavericks center tears right Achilles tendon",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/01/22/mavericks-center-dwight-powell-suffers-torn-achilles",
+        "publishedAt": "2020-01-22"
+      }
+    },
+    {
+      "id": "zion-debut",
+      "title": "Zion Williamson debuts with a 17-point burst",
+      "eventDate": "2020-01-22",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans' Zion Williamson erupts for 17 in 4th, sits out final minutes of debut",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28542223/pelicans-zion-williamson-erupts-17-4th-sits-final-minutes-debut",
+        "publishedAt": "2020-01-22"
+      }
+    },
+    {
+      "id": "trae-young-all-star-starter",
+      "title": "Trae Young voted an All-Star starter",
+      "eventDate": "2020-01-23",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trae Young Performs Like a Star. Does That Make Him an All-Star?",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/nba/2020/1/23/21078140/trae-young-atlanta-hawks-all-star-starter",
+        "publishedAt": "2020-01-23"
+      }
+    },
+    {
+      "id": "paris-game",
+      "title": "Bucks and Hornets play the first NBA game in Paris",
+      "eventDate": "2020-01-24",
+      "teams": [
+        "cha",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks dominate Hornets in first Paris NBA game",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/bucks-dominate-hornets-first-paris-nba-game-225613681--nba.html",
+        "publishedAt": "2020-01-24"
+      }
+    },
+    {
+      "id": "lebron-passes-kobe",
+      "title": "LeBron James passes Kobe Bryant on the scoring list",
+      "eventDate": "2020-01-25",
+      "teams": [
+        "lal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "LeBron James surpasses Kobe Bryant for third on all-time scoring list",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28563822/lebron-james-surpasses-kobe-bryant-third-all-scoring-list",
+        "publishedAt": "2020-01-25"
+      }
+    },
+    {
+      "id": "kobe-bryant-dies",
+      "title": "Kobe Bryant dies in a helicopter crash",
+      "eventDate": "2020-01-26",
+      "teams": [
+        "lal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Kobe Bryant Has Died in a Helicopter Crash",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/01/26/nba/kobe-bryant-dies-in-helicopter-crash-lakers-star-41",
+        "publishedAt": "2020-01-26"
+      }
+    },
+    {
+      "id": "oladipo-returns",
+      "title": "Victor Oladipo returns after a year out",
+      "eventDate": "2020-01-29",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Victor Oladipo makes long-awaited return after leg injury, leads Pacers past Bulls",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/indiana-pacers-victor-oladipo-returns-injured-quad-chicago-bulls-023352794.html",
+        "publishedAt": "2020-01-29"
+      }
+    },
+    {
+      "id": "capela-covington-four-team-trade",
+      "title": "Rockets trade Capela for Covington and go all-in on microball",
+      "eventDate": "2020-02-05",
+      "teams": [
+        "hou",
+        "atl",
+        "min",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA trade grades: Rockets, Hawks, Timberwolves, Nuggets complete 12-player, four-team deal",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/nba-trade-grades-rockets-hawks-timberwolves-nuggets-complete-12-player-four-team-deal/",
+        "publishedAt": "2020-02-05"
+      }
+    },
+    {
+      "id": "russell-for-wiggins-trade",
+      "title": "Warriors trade D'Angelo Russell for Andrew Wiggins",
+      "eventDate": "2020-02-06",
+      "teams": [
+        "gsw",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "D'Angelo Russell trade: Warriors, Timberwolves deal includes Andrew Wiggins",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/02/06/dangelo-russell-trade-warriors-timberwolves-andrew-wiggins-draft-picks",
+        "publishedAt": "2020-02-06"
+      }
+    },
+    {
+      "id": "drummond-traded-to-cavs",
+      "title": "Pistons trade Andre Drummond to the Cavaliers",
+      "eventDate": "2020-02-06",
+      "teams": [
+        "det",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Pistons Traded Andre Drummond to the Cavaliers. But Why?",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/02/06/nba/andre-drummond-trade-detroit-pistons-cleveland-cavaliers",
+        "publishedAt": "2020-02-06"
+      }
+    },
+    {
+      "id": "heat-acquire-iguodala",
+      "title": "Heat acquire Andre Iguodala and Jae Crowder",
+      "eventDate": "2020-02-06",
+      "teams": [
+        "mia",
+        "mem",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA trade grades: Heat win Andre Iguodala sweepstakes; Grizzlies hit home run with Justise Winslow",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/nba-trade-grades-heat-win-andre-iguodala-sweepstakes-grizzlies-hit-home-run-with-justise-winslow/",
+        "publishedAt": "2020-02-06"
+      }
+    },
+    {
+      "id": "clippers-acquire-marcus-morris",
+      "title": "Clippers acquire Marcus Morris from the Knicks",
+      "eventDate": "2020-02-06",
+      "teams": [
+        "lac",
+        "nyk",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Marcus Morris, Isaiah Thomas to Clippers in 3-team deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28648448/marcus-morris-isaiah-thomas-clippers-3-team-deal",
+        "publishedAt": "2020-02-06"
+      }
+    },
+    {
+      "id": "raptors-15-game-streak",
+      "title": "Raptors win a franchise-record 15 straight",
+      "eventDate": "2020-02-10",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "There’s Something About These Toronto Raptors",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/02/12/nba/toronto-raptors-pascal-siakam-kyle-lowry",
+        "publishedAt": "2020-02-12"
+      }
+    },
+    {
+      "id": "hield-unhappy-on-bench",
+      "title": "Buddy Hield unhappy after move to the bench",
+      "eventDate": "2020-02-12",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Kings' Buddy Hield Might Request Trade Due to Displeasure With Role, Walton",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/02/12/kings-hield-trade-displeasure-role",
+        "publishedAt": "2020-02-12"
+      }
+    },
+    {
+      "id": "beilein-steps-down",
+      "title": "John Beilein steps down; Bickerstaff takes over",
+      "eventDate": "2020-02-19",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "John Beilein out as Cavs coach; J.B. Bickerstaff takes over",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28732883/john-beilein-cavs-coach-jb-bickerstaff-takes-over",
+        "publishedAt": "2020-02-19"
+      }
+    },
+    {
+      "id": "kyrie-shoulder-surgery",
+      "title": "Kyrie Irving's season ends with shoulder surgery",
+      "eventDate": "2020-02-20",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kyrie Irving Is Hurt Again. Now Brooklyn’s Lost Season Is Even Weirder.",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/02/20/nba/kyrie-irving-injury-brooklyn-nets-surgery",
+        "publishedAt": "2020-02-20"
+      }
+    },
+    {
+      "id": "monk-suspended",
+      "title": "Malik Monk suspended indefinitely",
+      "eventDate": "2020-02-26",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets' Malik Monk suspended indefinitely for violating NBA anti-drug program",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28787320/hornets-malik-monk-suspended-indefinitely-violating-nba-anti-drug-program",
+        "publishedAt": "2020-02-26"
+      }
+    },
+    {
+      "id": "knicks-hire-leon-rose",
+      "title": "Knicks hire Leon Rose as president",
+      "eventDate": "2020-03-02",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks hire longtime player agent Leon Rose as team president",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/new-york-knicks-hire-leon-rose-president",
+        "publishedAt": "2020-03-02"
+      }
+    },
+    {
+      "id": "nets-part-with-atkinson",
+      "title": "Nets part ways with Kenny Atkinson",
+      "eventDate": "2020-03-07",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Which Head Coach Can Handle the Nets’ New Expectations (and Kyrie Irving)?",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/03/07/nba/brooklyn-nets-kenny-atkinson-fired-next-head-coach",
+        "publishedAt": "2020-03-07"
+      }
+    },
+    {
+      "id": "nba-suspends-season",
+      "title": "Gobert's positive test suspends the season",
+      "eventDate": "2020-03-11",
+      "teams": [
+        "uta",
+        "okc"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "The NBA Has Suspended Its Season After Rudy Gobert’s Reported Positive COVID-19 Test",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/03/11/nba/nba-coronavirus-rudy-gobert-utah-jazz-season-suspended",
+        "publishedAt": "2020-03-11"
+      }
+    },
+    {
+      "id": "inside-nba-shutdown",
+      "title": "Inside the tense hours that shut down the NBA",
+      "eventDate": "2020-03-11",
+      "teams": [
+        "uta",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Inside the NBA coronavirus shutdown: How a few tense hours changed everything",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28897195/inside-nba-coronavirus-shutdown-how-tense-hours-changed-everything",
+        "publishedAt": "2020-03-13"
+      }
+    },
+    {
+      "id": "sports-world-halts",
+      "title": "The NBA's shutdown brings the sports world to a halt",
+      "eventDate": "2020-03-12",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "Coronavirus brings sports world to a halt",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/03/13/when-sports-stopped-coronavirus",
+        "publishedAt": "2020-03-13"
+      }
+    },
+    {
+      "id": "zion-pays-arena-workers",
+      "title": "Zion Williamson pledges to pay arena workers",
+      "eventDate": "2020-03-13",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Zion Williamson pledges to pay arena worker salaries in NBA break",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/03/13/zion-williamson-pledges-salaries-smoothie-king-center",
+        "publishedAt": "2020-03-13"
+      }
+    },
+    {
+      "id": "durant-tests-positive",
+      "title": "Kevin Durant among four Nets to test positive",
+      "eventDate": "2020-03-17",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kevin Durant among four Nets players to test positive for the coronavirus",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28917855/four-nets-players-test-positive-coronavirus",
+        "publishedAt": "2020-03-17"
+      }
+    },
+    {
+      "id": "gobert-mitchell-rift",
+      "title": "Gobert and Mitchell's relationship frays",
+      "eventDate": "2020-04-10",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Donovan Mitchell, Rudy Gobert Relationship 'Doesn't Appear Salvageable'",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/04/10/rudy-gobert-donovan-mitchell-relationship-salvagable",
+        "publishedAt": "2020-04-10"
+      }
+    },
+    {
+      "id": "towns-mother-dies",
+      "title": "Karl-Anthony Towns's mother dies of COVID-19",
+      "eventDate": "2020-04-13",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mother of Timberwolves star Karl-Anthony Towns dies due to complications from coronavirus",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29030877/mother-timberwolves-star-karl-anthony-towns-dies-due-complications-coronavirus",
+        "publishedAt": "2020-04-13"
+      }
+    },
+    {
+      "id": "bulls-hire-karnisovas",
+      "title": "Bulls hire Arturas Karnisovas to run basketball operations",
+      "eventDate": "2020-04-13",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls hire Arturas Karnisovas, fire GM Gar Forman",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/bulls-hire-karnasovas-fire-forman-reassign-paxson",
+        "publishedAt": "2020-04-13"
+      }
+    },
+    {
+      "id": "bogdanovic-wrist-surgery",
+      "title": "Bojan Bogdanovic out for the season after wrist surgery",
+      "eventDate": "2020-05-19",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz's Bojan Bogdanovic has surgery, will begin rehab 'at appropriate time'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29195852/jazz-bojan-bogdanovic-surgery-begin-rehab-appropriate",
+        "publishedAt": "2020-05-19"
+      }
+    },
+    {
+      "id": "restart-approved",
+      "title": "NBA approves a 22-team restart in Orlando",
+      "eventDate": "2020-06-04",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "Ready or Not, Here Comes the NBA",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/06/04/nba/nba-board-of-governors-restart-22-teams",
+        "publishedAt": "2020-06-04"
+      }
+    },
+    {
+      "id": "aldridge-shoulder-surgery",
+      "title": "LaMarcus Aldridge out for the restart",
+      "eventDate": "2020-06-08",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LaMarcus Aldridge out for season after shoulder surgery, jeopardizing Spurs' 22-year playoff streak",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/lamarcus-aldridge-out-for-season-after-shoulder-surgery-jeopardizing-spurs-22-year-playoff-streak/",
+        "publishedAt": "2020-06-08"
+      }
+    },
+    {
+      "id": "pistons-hire-troy-weaver",
+      "title": "Pistons hire Troy Weaver as general manager",
+      "eventDate": "2020-06-18",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons hire Thunder's Troy Weaver as new general manager",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29328808/pistons-hire-thunder-troy-weaver-new-gm",
+        "publishedAt": "2020-06-18"
+      }
+    },
+    {
+      "id": "vince-carter-retires",
+      "title": "Vince Carter retires after 22 seasons",
+      "eventDate": "2020-06-25",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Vince Carter 'officially done' after 22 years in NBA",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29364093/vince-carter-officially-done-22-years-nba",
+        "publishedAt": "2020-06-25"
+      }
+    },
+    {
+      "id": "spurs-prioritize-youth",
+      "title": "Popovich puts youth development ahead of the streak",
+      "eventDate": "2020-06-26",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs' remarkable playoff streak secondary to youth development",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/spurs-remarkable-playoff-streak-secondary-developing-youth",
+        "publishedAt": "2020-06-26"
+      }
+    },
+    {
+      "id": "restart-opening-night",
+      "title": "Bubble opens with players kneeling for social justice",
+      "eventDate": "2020-07-30",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "Inside the first night of the NBA's bold bubble experiment",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/page/nbareturn29564338/inside-first-night-nba-bold-bubble-experiment",
+        "publishedAt": "2020-07-31"
+      }
+    },
+    {
+      "id": "knicks-hire-thibodeau",
+      "title": "Knicks hire Tom Thibodeau",
+      "eventDate": "2020-07-30",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks make it official, hire Tom Thibodeau as coach",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/new-york-knicks-hire-tom-thibodeau-coach",
+        "publishedAt": "2020-07-30"
+      }
+    },
+    {
+      "id": "isaac-stands-for-anthem",
+      "title": "Jonathan Isaac stands for the anthem",
+      "eventDate": "2020-07-31",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Orlando's Jonathan Isaac first in NBA bubble to stand during anthem",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29573762/orlando-jonathan-isaac-first-nba-bubble-stand-anthem",
+        "publishedAt": "2020-07-31"
+      }
+    },
+    {
+      "id": "warren-53-points",
+      "title": "T.J. Warren scores 53 in the bubble opener",
+      "eventDate": "2020-08-01",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "T.J. Warren: Pacers guard drops 53 points in win over Philadelphia",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/08/02/tj-warren-scores-53-points-pacers-nba-restart",
+        "publishedAt": "2020-08-02"
+      }
+    },
+    {
+      "id": "isaac-tears-acl",
+      "title": "Jonathan Isaac tears his ACL",
+      "eventDate": "2020-08-02",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic F Jonathan Isaac suffers brutal left knee injury against Kings",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/orlando-magic-jonathan-isaac-injured-knee-sacramento-kings-nba-bubble-001904117.html",
+        "publishedAt": "2020-08-02"
+      }
+    },
+    {
+      "id": "porter-37-points",
+      "title": "Michael Porter Jr. breaks out in the bubble",
+      "eventDate": "2020-08-03",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Michael Porter Jr. scores career-high 37 in Nuggets' overtime win",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29591813/nuggets-michael-porter-jr-scores-career-high-37-win",
+        "publishedAt": "2020-08-03"
+      }
+    },
+    {
+      "id": "jaren-jackson-meniscus",
+      "title": "Jaren Jackson Jr. tears his meniscus",
+      "eventDate": "2020-08-04",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jaren Jackson Jr.’s Injury Shakes the Grizzlies and the West’s Playoff Race",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/08/04/nba/jaren-jackson-jr-injury-shakes-grizzlies-west-playoff-race",
+        "publishedAt": "2020-08-04"
+      }
+    },
+    {
+      "id": "booker-beats-clippers",
+      "title": "Devin Booker's buzzer-beater over the Clippers",
+      "eventDate": "2020-08-04",
+      "teams": [
+        "phx",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Devin Booker drains amazing buzzer-beater against Clippers as Suns remain unbeaten in bubble",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/devin-booker-drains-amazing-buzzer-beater-against-clippers-as-suns-remain-unbeaten-in-bubble/",
+        "publishedAt": "2020-08-04"
+      }
+    },
+    {
+      "id": "simmons-knee-injury",
+      "title": "Ben Simmons's knee injury ends his season",
+      "eventDate": "2020-08-05",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ben Simmons’s Injury May Finally Give Philly Its Moment of Clarity",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/08/10/nba/ben-simmons-injury-joel-embiid-philadelphia-76ers",
+        "publishedAt": "2020-08-10"
+      }
+    },
+    {
+      "id": "kings-drought-extended",
+      "title": "Kings eliminated, extending their playoff drought to 14 years",
+      "eventDate": "2020-08-09",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings now sole owners of second-longest playoff drought in NBA history",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/kings-now-sole-owners-second-165232583.html",
+        "publishedAt": "2020-08-10"
+      }
+    },
+    {
+      "id": "lillard-61-vs-mavericks",
+      "title": "Damian Lillard's 61 against the Mavericks",
+      "eventDate": "2020-08-11",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trail Blazers' Damian Lillard scores 61 points in critical win over Mavericks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29643363/trail-blazers-damian-lillard-scores-61-points-critical-win-mavericks",
+        "publishedAt": "2020-08-11"
+      }
+    },
+    {
+      "id": "suns-8-0-bubble",
+      "title": "Suns go 8-0 in the bubble but miss the play-in",
+      "eventDate": "2020-08-13",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Let the Suns in the Playoffs, You Cowards",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/08/14/nba/phoenix-suns-bubble-restart-undefeated-play-in-race-solution",
+        "publishedAt": "2020-08-14"
+      }
+    },
+    {
+      "id": "spurs-streak-ends",
+      "title": "Spurs' 22-year playoff streak ends",
+      "eventDate": "2020-08-13",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs' 22-Year Postseason Appearance Streak Snapped",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/08/13/spurs-postseason-streak-snapped-22-years",
+        "publishedAt": "2020-08-13"
+      }
+    },
+    {
+      "id": "bulls-fire-boylen",
+      "title": "Bulls fire Jim Boylen",
+      "eventDate": "2020-08-14",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chicago Bulls fire Jim Boylen after abysmal 39-84 record as head coach",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/chicago-bulls-fire-jim-boylen-after-abysmal-39-84-record-as-head-coach/",
+        "publishedAt": "2020-08-14"
+      }
+    },
+    {
+      "id": "divac-steps-down",
+      "title": "Vlade Divac steps down as Kings GM",
+      "eventDate": "2020-08-14",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Vlade Divac steps down as Kings general manager",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/divac-steps-down-kings-general-manager-official-release",
+        "publishedAt": "2020-08-14"
+      }
+    },
+    {
+      "id": "blazers-win-play-in",
+      "title": "Blazers beat the Grizzlies in the first play-in game",
+      "eventDate": "2020-08-15",
+      "teams": [
+        "por",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trail Blazers-Grizzlies: Three thoughts on NBA's inaugural play-in game",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/08/15/portland-trail-blazers-win-nba-play-in-game-analysis",
+        "publishedAt": "2020-08-15"
+      }
+    },
+    {
+      "id": "pelicans-fire-gentry",
+      "title": "Pelicans fire Alvin Gentry",
+      "eventDate": "2020-08-15",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Who’s the Right Coach to Unlock Zion?",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/08/15/nba/alvin-gentry-fired-zion-williamson",
+        "publishedAt": "2020-08-15"
+      }
+    },
+    {
+      "id": "wolves-win-lottery",
+      "title": "Timberwolves win the draft lottery",
+      "eventDate": "2020-08-20",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Five Biggest Takeaways From the 2020 NBA Draft Lottery",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/08/20/nba-draft/nba-draft-lottery-results-timberwolves",
+        "publishedAt": "2020-08-20"
+      }
+    },
+    {
+      "id": "nurse-coach-of-the-year",
+      "title": "Nick Nurse named Coach of the Year",
+      "eventDate": "2020-08-22",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nick Nurse wins NBA Coach of the Year award in second season with the Raptors",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/toronto-raptors-nick-nurse-wins-nba-coach-of-the-year-award-190359208.html",
+        "publishedAt": "2020-08-22"
+      }
+    },
+    {
+      "id": "mitchell-murray-50-point-duel",
+      "title": "Mitchell and Murray trade 50-point games",
+      "eventDate": "2020-08-23",
+      "teams": [
+        "uta",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Donovan Mitchell scores 51 in historic duel with Jamal Murray",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29728675/donovan-mitchell-scores-51-historic-duel-jamal-murray",
+        "publishedAt": "2020-08-23"
+      }
+    },
+    {
+      "id": "luka-game-4-buzzer-beater",
+      "title": "Luka Doncic's overtime buzzer-beater beats the Clippers",
+      "eventDate": "2020-08-23",
+      "teams": [
+        "dal",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Luka Doncic hits buzzer-beater to lift Mavericks over Clippers in Game 4",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/luka-doncic-hits-buzzer-beater-to-lift-mavericks-over-clippers-in-game-4/",
+        "publishedAt": "2020-08-23"
+      }
+    },
+    {
+      "id": "raptors-sweep-nets",
+      "title": "Raptors sweep the Nets",
+      "eventDate": "2020-08-23",
+      "teams": [
+        "tor",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors vs. Nets score, takeaways: Toronto destroys Brooklyn to complete first sweep in franchise history",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/raptors-vs-nets-score-takeaways-toronto-destroys-brooklyn-to-complete-first-sweep-in-franchise-history/live/",
+        "publishedAt": "2020-08-23"
+      }
+    },
+    {
+      "id": "celtics-sweep-sixers",
+      "title": "Celtics sweep the Sixers",
+      "eventDate": "2020-08-23",
+      "teams": [
+        "bos",
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics Move on as They Sweep the Philadelphia 76ers in the First Round of the NBA Playoffs",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/video/2020/08/23/celtics-sweep-76ers-first-round-playoffs",
+        "publishedAt": "2020-08-23"
+      }
+    },
+    {
+      "id": "heat-sweep-pacers",
+      "title": "Heat sweep the Pacers",
+      "eventDate": "2020-08-24",
+      "teams": [
+        "mia",
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat Complete Sweep of Victor Oladipo, Pacers as Bam Adebayo Shines in Game 4",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/2906101-heat-complete-sweep-of-victor-oladipo-pacers-as-bam-adebayo-shines-in-game-4",
+        "publishedAt": "2020-08-24"
+      }
+    },
+    {
+      "id": "sixers-fire-brett-brown",
+      "title": "Sixers fire Brett Brown",
+      "eventDate": "2020-08-24",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Philadelphia 76ers fire coach Brett Brown after seven seasons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29732808/sources-philadelphia-76ers-fire-coach-brett-brown-7-seasons",
+        "publishedAt": "2020-08-24"
+      }
+    },
+    {
+      "id": "giannis-wins-dpoy",
+      "title": "Giannis Antetokounmpo wins Defensive Player of the Year",
+      "eventDate": "2020-08-25",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks' Giannis Antetokounmpo wins Defensive Player of the Year",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/08/25/giannis-antetokounmpo-defensive-player-of-the-year",
+        "publishedAt": "2020-08-25"
+      }
+    },
+    {
+      "id": "bucks-boycott-game-5",
+      "title": "Bucks boycott Game 5 after the Jacob Blake shooting",
+      "eventDate": "2020-08-26",
+      "teams": [
+        "mil",
+        "orl"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "NBA, WNBA Players Stage Playoff Strike Days After Police Shoot Jacob Blake",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/08/26/nba/nba-boycott-jacob-blake-bucks-magic",
+        "publishedAt": "2020-08-26"
+      }
+    },
+    {
+      "id": "pacers-fire-mcmillan",
+      "title": "Pacers fire Nate McMillan",
+      "eventDate": "2020-08-26",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Can Mike D’Antoni Take the Pacers Further Than Nate McMillan?",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/08/26/nba/nate-mcmillan-fired-indiana-pacers",
+        "publishedAt": "2020-08-26"
+      }
+    },
+    {
+      "id": "bucks-eliminate-magic",
+      "title": "Bucks eliminate the Magic",
+      "eventDate": "2020-08-29",
+      "teams": [
+        "mil",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Giannis, Bucks Advance to Face Heat After 118-104 Game 5 Win vs. Magic",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/2906779-giannis-bucks-advance-to-face-heat-after-118-104-game-5-win-vs-magic",
+        "publishedAt": "2020-08-29"
+      }
+    },
+    {
+      "id": "lakers-eliminate-blazers",
+      "title": "Lakers eliminate the Blazers",
+      "eventDate": "2020-08-29",
+      "teams": [
+        "lal",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers vs. Trail Blazers score, takeaways: LeBron, Anthony Davis have huge nights in closeout Game 5 win",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/lakers-vs-trail-blazers-score-takeaways-lebron-anthony-davis-have-huge-nights-in-closeout-game-5-win/live/",
+        "publishedAt": "2020-08-29"
+      }
+    },
+    {
+      "id": "murray-forces-game-7",
+      "title": "Jamal Murray's second 50 forces Game 7",
+      "eventDate": "2020-08-30",
+      "teams": [
+        "den",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jamal Murray outduels Donovan Mitchell to set up first Game 7 in the bubble",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/08/31/jamal-murray-outduels-donovan-mitchell-game-6",
+        "publishedAt": "2020-08-31"
+      }
+    },
+    {
+      "id": "clippers-eliminate-mavericks",
+      "title": "Kawhi Leonard closes out the Mavericks",
+      "eventDate": "2020-08-30",
+      "teams": [
+        "lac",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kawhi Leonard takes control as Clippers close out Mavericks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29775575/kawhi-leonard-takes-control-clippers-close-mavericks",
+        "publishedAt": "2020-08-30"
+      }
+    },
+    {
+      "id": "ingram-most-improved",
+      "title": "Brandon Ingram named Most Improved Player",
+      "eventDate": "2020-08-31",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans' Brandon Ingram Named NBA's Most Improved Player",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/08/31/brandon-ingram-named-most-improved-player-nba-pelicans",
+        "publishedAt": "2020-08-31"
+      }
+    },
+    {
+      "id": "nuggets-rally-past-jazz",
+      "title": "Nuggets rally from 3-1 down to beat the Jazz",
+      "eventDate": "2020-09-01",
+      "teams": [
+        "den",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nikola Jokic leads Nuggets rally from 3-1 deficit in Game 7 thriller over Jazz",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nikola-jokic-leads-nuggets-rally-from-31-deficit-in-game-7-win-over-jazz-025737283.html",
+        "publishedAt": "2020-09-01"
+      }
+    },
+    {
+      "id": "rockets-edge-thunder-game-7",
+      "title": "Harden's block sends the Rockets past the Thunder in Game 7",
+      "eventDate": "2020-09-02",
+      "teams": [
+        "hou",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "James Harden has Rockets moving on, and gets to send Chris Paul home",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/thunder-rockets-game-7-breakdown",
+        "publishedAt": "2020-09-03"
+      }
+    },
+    {
+      "id": "morant-rookie-of-the-year",
+      "title": "Ja Morant named Rookie of the Year",
+      "eventDate": "2020-09-03",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ja Morant: Rookie of the Year, Antigravity Plane",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/09/04/nba/ja-morant-2020-nba-rookie-of-the-year-grizzlies",
+        "publishedAt": "2020-09-04"
+      }
+    },
+    {
+      "id": "nets-hire-steve-nash",
+      "title": "Nets hire Steve Nash",
+      "eventDate": "2020-09-03",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brooklyn Nets hire Hall of Famer Steve Nash as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29800840/nets-hire-hall-famer-steve-nash-head-coach",
+        "publishedAt": "2020-09-03"
+      }
+    },
+    {
+      "id": "harrell-sixth-man",
+      "title": "Montrezl Harrell named Sixth Man of the Year",
+      "eventDate": "2020-09-04",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers' Montrezl Harrell wins NBA Sixth Man of the Year Award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29812117/source-clippers-montrezl-harrell-wins-nba-sixth-man-year-award",
+        "publishedAt": "2020-09-04"
+      }
+    },
+    {
+      "id": "heat-eliminate-bucks",
+      "title": "Heat eliminate the top-seeded Bucks",
+      "eventDate": "2020-09-08",
+      "teams": [
+        "mia",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks face big offseason with Giannis after inspirational bubble appearance",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/09/09/bucks-decision-giannis-antetokounmpo-jacob-blake-protest",
+        "publishedAt": "2020-09-09"
+      }
+    },
+    {
+      "id": "celtics-beat-raptors-game-7",
+      "title": "Celtics beat the Raptors in Game 7",
+      "eventDate": "2020-09-11",
+      "teams": [
+        "bos",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics prepared for NBA title run after gritty series vs. Raptors",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/09/12/celtics-raptors-game-7-nba-playoffs",
+        "publishedAt": "2020-09-12"
+      }
+    },
+    {
+      "id": "lakers-eliminate-rockets",
+      "title": "Lakers end the Rockets' season",
+      "eventDate": "2020-09-12",
+      "teams": [
+        "hou",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rockets in familiar position after latest playoff exit at the hands of Lakers",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/09/13/rockets-lakers-game-5-nba-title-window-closing",
+        "publishedAt": "2020-09-13"
+      }
+    },
+    {
+      "id": "nuggets-stun-clippers",
+      "title": "Nuggets complete a second 3-1 comeback against the Clippers",
+      "eventDate": "2020-09-15",
+      "teams": [
+        "den",
+        "lac"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Nuggets call for some 'respect' after upending Clippers in Game 7 to complete historic postseason comeback",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29895725/nuggets-call-some-respect-upending-clippers-game-7-complete-historic-postseason-comeback",
+        "publishedAt": "2020-09-15"
+      }
+    },
+    {
+      "id": "clippers-collapse",
+      "title": "Clippers' title hopes crumble after blowing a 3-1 lead",
+      "eventDate": "2020-09-15",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers' championship dreams crumble in Game 7 loss to Nuggets",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/clippers-championship-dreams-crumble-game-7-loss-nuggets",
+        "publishedAt": "2020-09-15"
+      }
+    },
+    {
+      "id": "luka-first-team-all-nba",
+      "title": "Luka Doncic makes first-team All-NBA",
+      "eventDate": "2020-09-16",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Exclusive club: Luka joins Dirk as only Mavs to make All-NBA first team",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/mavs/luka-is-all-nba",
+        "publishedAt": "2020-09-16"
+      }
+    },
+    {
+      "id": "kings-hire-mcnair",
+      "title": "Kings hire Monte McNair as GM",
+      "eventDate": "2020-09-17",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sacramento Kings name Monte McNair as their general manager",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29905664/sacramento-kings-name-monte-mcnair-their-general-manager",
+        "publishedAt": "2020-09-17"
+      }
+    },
+    {
+      "id": "giannis-second-mvp",
+      "title": "Giannis Antetokounmpo wins a second straight MVP",
+      "eventDate": "2020-09-18",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Milwaukee Bucks' Giannis Antetokounmpo wins second straight NBA MVP award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29913814/sources-milwaukee-bucks-giannis-antetokounmpo-wins-second-straight-mvp-award",
+        "publishedAt": "2020-09-18"
+      }
+    },
+    {
+      "id": "bulls-hire-donovan",
+      "title": "Bulls hire Billy Donovan after his Thunder exit",
+      "eventDate": "2020-09-22",
+      "teams": [
+        "chi",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls Hire Billy Donovan As Next Head Coach",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/09/22/billy-donovan-bulls-head-coach-hire",
+        "publishedAt": "2020-09-22"
+      }
+    },
+    {
+      "id": "lakers-reach-finals",
+      "title": "LeBron leads the Lakers past the Nuggets to the Finals",
+      "eventDate": "2020-09-26",
+      "teams": [
+        "lal",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LeBron James Leads Lakers Past Nuggets to 1st NBA Finals Since 2010",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/2910810-lebron-james-leads-lakers-past-nuggets-to-1st-nba-finals-since-2010",
+        "publishedAt": "2020-09-26"
+      }
+    },
+    {
+      "id": "heat-reach-finals",
+      "title": "Bam Adebayo sends the Heat past the Celtics to the Finals",
+      "eventDate": "2020-09-27",
+      "teams": [
+        "mia",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Miami Heat advance to Finals as Bam Adebayo bounces back in big way",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/29990232/miami-heat-advance-nba-finals-closing-boston-celtics-emphatically",
+        "publishedAt": "2020-09-27"
+      }
+    },
+    {
+      "id": "clippers-part-with-doc-rivers",
+      "title": "Clippers part ways with Doc Rivers",
+      "eventDate": "2020-09-28",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers Part Ways With Doc Rivers After Seven Seasons",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/09/28/los-angeles-clippers-part-ways-doc-rivers-seven-seasons",
+        "publishedAt": "2020-09-28"
+      }
+    },
+    {
+      "id": "sixers-hire-doc-rivers",
+      "title": "Sixers hire Doc Rivers",
+      "eventDate": "2020-10-01",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Doc Rivers agrees to five-year deal to coach Philadelphia 76ers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30018563/sources-doc-rivers-agrees-deal-coach-philadelphia-76ers",
+        "publishedAt": "2020-10-01"
+      }
+    },
+    {
+      "id": "lakers-win-title",
+      "title": "Lakers win their 17th championship",
+      "eventDate": "2020-10-11",
+      "teams": [
+        "lal",
+        "mia"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Los Angeles Lakers lean on defense in dominant Game 6 win vs. Miami Heat, claim first NBA title in a decade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30096209/los-angeles-lakers-lean-defense-dominant-game-6-win-vs-miami-heat-capture-first-nba-championship-decade",
+        "publishedAt": "2020-10-11"
+      }
+    },
+    {
+      "id": "morey-leaves-rockets",
+      "title": "Daryl Morey steps down as Rockets GM",
+      "eventDate": "2020-10-15",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ex-Rockets GM Daryl Morey made the NBA a more entertaining place",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/10/15/daryl-morey-rockets-gm-always-went-for-it",
+        "publishedAt": "2020-10-15"
+      }
+    },
+    {
+      "id": "clippers-hire-ty-lue",
+      "title": "Clippers hire Ty Lue",
+      "eventDate": "2020-10-15",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Ty Lue agrees to five-year deal to coach LA Clippers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30121649/sources-ty-lue-finalizing-five-year-deal-coach-la-clippers",
+        "publishedAt": "2020-10-15"
+      }
+    },
+    {
+      "id": "pacers-hire-bjorkgren",
+      "title": "Pacers hire Nate Bjorkgren",
+      "eventDate": "2020-10-20",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Indiana Pacers hire Toronto Raptors assistant Nate Bjorkgren as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30154580/indiana-pacers-hire-toronto-raptors-assistant-nate-bjorkgren-head-coach",
+        "publishedAt": "2020-10-20"
+      }
+    },
+    {
+      "id": "pelicans-hire-van-gundy",
+      "title": "Pelicans hire Stan Van Gundy",
+      "eventDate": "2020-10-21",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "New Orleans Pelicans hire Stan Van Gundy as head coach",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/10/21/pelicans-hire-stan-van-gundy-head-coach",
+        "publishedAt": "2020-10-21"
+      }
+    },
+    {
+      "id": "rockets-hire-silas",
+      "title": "Rockets hire Stephen Silas after D'Antoni leaves",
+      "eventDate": "2020-10-28",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stephen Silas to be new head coach of Houston Rockets, sources say",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30212357/stephen-silas-finalizing-deal-head-coach-houston-rockets-sources-say",
+        "publishedAt": "2020-10-28"
+      }
+    },
+    {
+      "id": "sixers-hire-morey",
+      "title": "Sixers hire Daryl Morey to run basketball operations",
+      "eventDate": "2020-11-02",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Philadelphia 76ers name Daryl Morey team president; extend GM Elton Brand",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30243140/philadelphia-76ers-name-daryl-morey-team-president-extend-gm-elton-brand",
+        "publishedAt": "2020-11-02"
+      }
+    },
+    {
+      "id": "chris-paul-traded-to-suns",
+      "title": "Thunder trade Chris Paul to the Suns",
+      "eventDate": "2020-11-16",
+      "teams": [
+        "okc",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chris Paul trade: Suns acquire All-Star guard from Thunder",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/11/16/chris-paul-suns-trade-thunder",
+        "publishedAt": "2020-11-16"
+      }
+    },
+    {
+      "id": "edwards-first-pick",
+      "title": "Timberwolves take Anthony Edwards No. 1",
+      "eventDate": "2020-11-18",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Minnesota Timberwolves take Georgia's Anthony Edwards with No. 1 pick in NBA draft",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/30345269/minnesota-timberwolves-take-georgia-anthony-edwards-no-1-pick-nba-draft",
+        "publishedAt": "2020-11-18"
+      }
+    },
+    {
+      "id": "warriors-draft-wiseman",
+      "title": "Warriors draft James Wiseman No. 2",
+      "eventDate": "2020-11-18",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors Select James Wiseman With No. 2 Pick in 2020 NBA Draft",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/11/19/james-wiseman-2020-nba-draft-golden-state-warriors",
+        "publishedAt": "2020-11-19"
+      }
+    },
+    {
+      "id": "klay-tears-achilles",
+      "title": "Klay Thompson tears his Achilles on draft day",
+      "eventDate": "2020-11-18",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors Star Klay Thompson Suffers Season-Ending Achilles Tear in Workout",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2020/11/19/klay-thompson-tears-achilles-season-ending-injury",
+        "publishedAt": "2020-11-19"
+      }
+    },
+    {
+      "id": "hornets-draft-lamelo",
+      "title": "Hornets draft LaMelo Ball No. 3",
+      "eventDate": "2020-11-18",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "What Does LaMelo Ball’s Rise to the Top Three Mean for the NBA’s Development Pipeline?",
+        "publisher": "The Ringer",
+        "url": "https://www.theringer.com/2020/11/19/nba-draft/lamelo-ball-nba-draft-ncaa-pipeline-charlotte-hornets",
+        "publishedAt": "2020-11-19"
+      }
+    },
+    {
+      "id": "bulls-draft-patrick-williams",
+      "title": "Bulls draft Patrick Williams No. 4",
+      "eventDate": "2020-11-18",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2020 NBA Draft grade: Bulls select Patrick Williams with No. 4 overall pick",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/2020-nba-draft-grade-bulls-select-patrick-williams-with-no-4-overall-pick/",
+        "publishedAt": "2020-11-18"
+      }
+    },
+    {
+      "id": "cavs-draft-okoro",
+      "title": "Cavaliers draft Isaac Okoro No. 5",
+      "eventDate": "2020-11-18",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2020 NBA Draft grade: Cavaliers select Isaac Okoro with No. 5 overall pick",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/2020-nba-draft-grade-cavaliers-select-isaac-okoro-with-no-5-overall-pick/",
+        "publishedAt": "2020-11-18"
+      }
+    },
+    {
+      "id": "wizards-draft-avdija",
+      "title": "Wizards draft Deni Avdija No. 9",
+      "eventDate": "2020-11-18",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2020 NBA Draft grade: Wizards select Deni Avdija with No. 9 overall pick",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/2020-nba-draft-grade-wizards-select-deni-avdija-with-no-9-overall-pick/",
+        "publishedAt": "2020-11-18"
+      }
+    },
+    {
+      "id": "kings-draft-haliburton",
+      "title": "Tyrese Haliburton slides to the Kings at No. 12",
+      "eventDate": "2020-11-18",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2020 NBA Draft: Tyrese Haliburton slides to Kings with the No. 12 overall pick",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/2020-nba-draft-tyrese-haliburton-slides-to-kings-with-the-no-12-overall-pick/",
+        "publishedAt": "2020-11-18"
+      }
+    }
+  ]
+}

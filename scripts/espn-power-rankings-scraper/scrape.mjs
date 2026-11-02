@@ -5,6 +5,7 @@ import path from 'node:path'
 import { fetchTextWithRetry, sleep } from '../lib/http.mjs'
 import { editionSlug, parseEdition } from './editionPage.mjs'
 import { editionUrl, parseSeasonPage, seasonLabel, seasonUrl } from './seasonPage.mjs'
+import { FINAL_STORY_URLS, parseStoryEdition, parseStoryIndex } from './storyPage.mjs'
 
 export function editionFile(season, espnWeek) {
   return path.join('articles', season, `${editionSlug(season, espnWeek)}.json`)
@@ -42,6 +43,41 @@ export async function writeIndex(indexPath, entries) {
   await writeFile(indexPath, JSON.stringify(sortIndex(entries), null, 2), 'utf8')
 }
 
+// Story seasons list their editions in the final story's "Previous rankings" links rather than a week dropdown.
+async function scrapeStorySeason({ endYear, outDir, delayMs, force, index, counts }) {
+  const season = seasonLabel(endYear)
+  const finalUrl = FINAL_STORY_URLS[endYear]
+  console.log(`Fetching ${season} final story...`)
+  const finalHtml = await fetchTextWithRetry(finalUrl, { encoding: 'utf-8-lenient' })
+  const editions = parseStoryIndex(finalHtml, finalUrl)
+  console.log(`  ${editions.length} editions listed.`)
+
+  for (const [i, { espnWeek, url }] of editions.entries()) {
+    const slug = editionSlug(season, espnWeek)
+    console.log(`[${i + 1}/${editions.length}] ${slug}`)
+    const savedPath = path.join(outDir, editionFile(season, espnWeek))
+    try {
+      if (!force && existsSync(savedPath)) {
+        index.push(indexEntry(JSON.parse(await readFile(savedPath, 'utf8'))))
+        counts.skipped++
+        continue
+      }
+      let html = finalHtml
+      if (url !== finalUrl) {
+        await sleep(delayMs)
+        html = await fetchTextWithRetry(url, { encoding: 'utf-8-lenient' })
+      }
+      const { edition, warnings } = parseStoryEdition(html, { season, espnWeek, url })
+      await saveEdition(outDir, edition, warnings)
+      index.push(indexEntry(edition))
+      counts.fetched++
+    } catch (err) {
+      counts.failed++
+      console.error(`  failed: ${String(err)}`)
+    }
+  }
+}
+
 /** Scrapes ESPN's weekly editions for the given end years into `outDir`, reusing saved files unless `force` is set. */
 export async function scrape({ fromEndYear, toEndYear, outDir, delayMs, force = false }) {
   await mkdir(outDir, { recursive: true })
@@ -51,6 +87,16 @@ export async function scrape({ fromEndYear, toEndYear, outDir, delayMs, force = 
 
   for (let endYear = fromEndYear; endYear <= toEndYear; endYear++) {
     const season = seasonLabel(endYear)
+    if (FINAL_STORY_URLS[endYear]) {
+      try {
+        await scrapeStorySeason({ endYear, outDir, delayMs, force, index, counts })
+      } catch (err) {
+        counts.failed++
+        console.error(`  failed: ${String(err)}`)
+      }
+      if (endYear < toEndYear) await sleep(delayMs)
+      continue
+    }
     console.log(`Fetching ${season} season page...`)
 
     let seasonHtml
