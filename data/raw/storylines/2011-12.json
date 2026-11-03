@@ -1,6 +1,6 @@
 {
   "season": "2011-12",
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-03",
   "guidance": [
     {
       "id": "retro-lockout",
@@ -715,7 +715,7 @@
       "guidance": [
         "retro-lockout"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "chris-paul-veto",
@@ -741,7 +741,7 @@
         "weekly-nop",
         "weekly-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "roy-retires",
@@ -901,7 +901,7 @@
         "weekly-lac",
         "weekly-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jeff-green-heart",
@@ -922,7 +922,7 @@
       "guidance": [
         "weekly-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "rose-extension",
@@ -1049,6 +1049,27 @@
       "guidance": [
         "weekly-atl"
       ],
+      "status": "included"
+    },
+    {
+      "id": "bargnani-calf",
+      "title": "Bargnani's calf injury",
+      "eventDate": "2012-01-11",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors’ Andrea Bargnani strains calf",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/blogs/scoop-du-jour/raptors-andrea-bargnani-strains-calf-110154379.html",
+        "publishedAt": "2012-01-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-tor"
+      ],
       "status": "pending"
     },
     {
@@ -1091,6 +1112,48 @@
       "blockbuster": false,
       "guidance": [
         "weekly-min"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "gallinari-extension",
+      "title": "Gallinari signs extension",
+      "eventDate": "2012-01-25",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Danilo Gallinari, Denver Nuggets agree to four-year extension",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/7502471/danilo-gallinari-denver-nuggets-agree-four-year-extension",
+        "publishedAt": "2012-01-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "jackson-suspended",
+      "title": "Stephen Jackson suspended",
+      "eventDate": "2012-01-28",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks swingman Jackson suspended one game",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/7514249/milwaukee-bucks-swingman-stephen-jackson-suspended-one-game",
+        "publishedAt": "2012-01-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil"
       ],
       "status": "pending"
     },
@@ -1152,7 +1215,7 @@
         "weekly-phx",
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "linsanity",
@@ -1173,6 +1236,48 @@
       "guidance": [
         "retro-linsanity",
         "weekly-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "varejao-wrist",
+      "title": "Varejao breaks wrist",
+      "eventDate": "2012-02-10",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cleveland Cavaliers Anderson Varejao to miss time with fractured wrist",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/7565982/cleveland-cavaliers-anderson-varejao-miss-time-fractured-wrist",
+        "publishedAt": "2012-02-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cle"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "ben-wallace-final-season",
+      "title": "Ben Wallace's final season",
+      "eventDate": "2012-02-14",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ben Wallace is set to break an NBA record, and retire after 2011-12",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/ben-wallace-set-break-nba-record-retire-2011-174921085.html",
+        "publishedAt": "2012-02-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
       ],
       "status": "pending"
     },
@@ -1195,7 +1300,28 @@
       "guidance": [
         "weekly-bkn"
       ],
-      "status": "pending"
+      "status": "included"
+    },
+    {
+      "id": "lopez-ankle",
+      "title": "Brook Lopez's lost season",
+      "eventDate": "2012-03-05",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lopez out three weeks with ankle sprain",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/new-york/new-jersey-nets/post/_/id/4275/lopez-out-three-weeks-with-ankle-sprain",
+        "publishedAt": "2012-03-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "included"
     },
     {
       "id": "rubio-acl",
@@ -1243,6 +1369,28 @@
       "status": "pending"
     },
     {
+      "id": "ellis-bogut-winners-losers",
+      "title": "Ellis-Bogut trade winners and losers",
+      "eventDate": "2012-03-13",
+      "teams": [
+        "gsw",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors-Bucks Trade: Winners and Losers in Monta Ellis and Andrew Bogut Deal",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/1103639-warriors-bucks-trade-winners-and-losers-in-monta-ellis-andrew-bogut-deal",
+        "publishedAt": "2012-03-13"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "dantoni-resigns",
       "title": "Mike D'Antoni resigns as Knicks coach",
       "eventDate": "2012-03-14",
@@ -1285,7 +1433,7 @@
         "theme-trade-deadline",
         "weekly-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "fisher-traded",
@@ -1359,7 +1507,7 @@
         "weekly-bkn",
         "weekly-por"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "blazers-fire-mcmillan",
@@ -1469,6 +1617,28 @@
       "status": "pending"
     },
     {
+      "id": "ilyasova-breakout",
+      "title": "Ilyasova's breakout season",
+      "eventDate": "2012-04-20",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "MIP in the making?",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/bucks/features/mb_120420.html",
+        "publishedAt": "2012-04-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil",
+        "award-mip"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "nets-leave-new-jersey",
       "title": "Nets play their final game in New Jersey",
       "eventDate": "2012-04-23",
@@ -1487,7 +1657,7 @@
       "guidance": [
         "weekly-bkn"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "metta-elbow",
@@ -1595,7 +1765,7 @@
       "guidance": [
         "weekly-cha"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kings-arena-dead",
@@ -1639,7 +1809,7 @@
         "po-chi",
         "po-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bobcats-let-silas-go",
@@ -1661,7 +1831,7 @@
         "theme-coaching-changes",
         "weekly-cha"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "amare-fire-extinguisher",
@@ -1797,6 +1967,49 @@
       "status": "pending"
     },
     {
+      "id": "jazz-swept-by-spurs",
+      "title": "Jazz reach playoffs, swept by Spurs",
+      "eventDate": "2012-05-07",
+      "teams": [
+        "uta",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz Flashbacks: Al Jefferson",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/jazz-flashbacks-al-jefferson-180044139.html",
+        "publishedAt": "2026-10-09"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-uta"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "raja-bell-blasts-corbin",
+      "title": "Raja Bell rips Corbin",
+      "eventDate": "2012-05-08",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz guard Raja Bell blasts coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/7905962/utah-jazz-guard-raja-bell-blasts-coach-tyrone-corbin-unprofessional",
+        "publishedAt": "2012-05-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "heat-oust-knicks",
       "title": "Heat beat the Knicks in five",
       "eventDate": "2012-05-09",
@@ -1840,7 +2053,7 @@
         "po-bos",
         "po-atl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lebron-third-mvp",
@@ -2002,6 +2215,27 @@
       "status": "pending"
     },
     {
+      "id": "knight-all-rookie",
+      "title": "Brandon Knight makes All-Rookie first team",
+      "eventDate": "2012-05-23",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brandon Knight Named to NBA All-Rookie First Team",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/pistons/news/brandon-knight-named-nba-all-rookie-first-team",
+        "publishedAt": "2012-05-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "lowry-mchale-rift",
       "title": "Kyle Lowry says he may not return under Kevin McHale",
       "eventDate": "2012-05-24",
@@ -2065,6 +2299,27 @@
       "guidance": [
         "po-bos",
         "po-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-20-game-streak",
+      "title": "Spurs' 20-game winning streak",
+      "eventDate": "2012-05-27",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Playoffs 2012: What Ridiculous Winning Streak Means for San Antonio Spurs",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/1198501-nba-playoffs-2012-what-ridiculous-winning-streak-means-for-san-antonio-spurs",
+        "publishedAt": "2012-05-27"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-sas"
       ],
       "status": "pending"
     },
@@ -2134,6 +2389,27 @@
         "po-bos",
         "retro-lebron-title"
       ],
+      "status": "included"
+    },
+    {
+      "id": "pera-buys-grizzlies",
+      "title": "Heisley agrees to sell Grizzlies to Pera",
+      "eventDate": "2012-06-11",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Michael Heisley to sell Memphis Grizzlies to Robert Pera",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/si-wire/2012/06/11/memphis-grizzlies-deal-robert-pera",
+        "publishedAt": "2012-06-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
       "status": "pending"
     },
     {
@@ -2177,6 +2453,29 @@
         "theme-coaching-changes",
         "weekly-cha"
       ],
+      "status": "included"
+    },
+    {
+      "id": "okafor-ariza-to-wizards",
+      "title": "Wizards trade for Okafor and Ariza",
+      "eventDate": "2012-06-20",
+      "teams": [
+        "nop",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets trade Emeka Okafor, Trevor Ariza to Wizards for Rashard Lewis and No.46 pick",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/hornets-trade-emeka-okafor-trevor-ariza-to-wizards-for-rashard-lewis-and-no46-pick/",
+        "publishedAt": "2012-06-20"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was",
+        "weekly-nop"
+      ],
       "status": "pending"
     },
     {
@@ -2202,7 +2501,7 @@
         "po-okc",
         "retro-lebron-title"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lebron-finals-mvp",
@@ -2245,7 +2544,7 @@
       "guidance": [
         "weekly-atl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bird-steps-down",
@@ -2273,8 +2572,7 @@
       "title": "Hornets take Anthony Davis No. 1",
       "eventDate": "2012-06-28",
       "teams": [
-        "nop",
-        "cha"
+        "nop"
       ],
       "featured": true,
       "article": {
@@ -2288,7 +2586,7 @@
       "guidance": [
         "draft-2012"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "draft-2012-winners-losers",
@@ -2319,6 +2617,137 @@
         "weekly-por",
         "weekly-gsw",
         "weekly-det"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "drummond-pick",
+      "title": "Pistons draft Andre Drummond",
+      "eventDate": "2012-06-28",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons Select Andre Drummond With The Ninth Pick In The 2012 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/pistons/news/pistons-select-andre-drummond-ninth-pick-2012-nba-draft",
+        "publishedAt": "2012-06-28"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2012"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cavs-draft-waiters-zeller",
+      "title": "Cavs draft Waiters, trade for Zeller",
+      "eventDate": "2012-06-28",
+      "teams": [
+        "cle",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavaliers Select Waiters And Acquire Draft Rights To Zeller From Dallas In The 2012 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/cavaliers/releases/draft_120628.html",
+        "publishedAt": "2012-06-28"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2012"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "beal-pick",
+      "title": "Wizards draft Bradley Beal",
+      "eventDate": "2012-06-28",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards Select Beal With Third Pick In 2012 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/wizards/wizards-select-beal-third-pick-2012-nba-draft-0",
+        "publishedAt": "2012-06-28"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2012"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "rockets-draft-night",
+      "title": "Rockets land three first-rounders",
+      "eventDate": "2012-06-28",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rockets 2012 Draft Night",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/rockets/news/rockets-2012-draft-night",
+        "publishedAt": "2012-06-28"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2012"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "mkg-pick",
+      "title": "Bobcats draft Kidd-Gilchrist",
+      "eventDate": "2012-06-28",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bobcats Select Michael Kidd-Gilchrist with the Second Overall Pick in 2012 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/hornets/bobcats-select-michael-kidd-gilchrist-second-overall-pick-2012-nba-draft",
+        "publishedAt": "2012-06-28"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2012"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "draft-2012-top-5-grades",
+      "title": "Grading the top five picks",
+      "eventDate": "2012-06-28",
+      "teams": [
+        "nop",
+        "cha",
+        "was",
+        "cle",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Draft 2012 Grades: Breaking Down Every Top-5 Pick",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/1240627-nba-draft-2012-grades-breaking-down-every-top-5-pick",
+        "publishedAt": "2012-06-28"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2012"
       ],
       "status": "pending"
     }
