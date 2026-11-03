@@ -22,12 +22,17 @@ function SeasonList(props: { seasons: Promise<string[]> }) {
   )
 }
 
-function ReviewContent(props: { review: Promise<ReviewState> }) {
-  return <ReviewEditor initial={use(props.review)} />
+function ReviewContent(props: {
+  review: Promise<ReviewState>
+  seasons: Promise<string[]>
+}) {
+  return (
+    <ReviewEditor initial={use(props.review)} seasons={use(props.seasons)} />
+  )
 }
 
 interface AppProps {
-  seasons?: Promise<string[]>
+  seasons: Promise<string[]>
   review?: Promise<ReviewState>
 }
 
@@ -35,8 +40,11 @@ export default function App(props: AppProps) {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 py-4">
       <Suspense fallback={<p className="text-muted-foreground">Loading…</p>}>
-        {props.review && <ReviewContent review={props.review} />}
-        {props.seasons && <SeasonList seasons={props.seasons} />}
+        {props.review ? (
+          <ReviewContent review={props.review} seasons={props.seasons} />
+        ) : (
+          <SeasonList seasons={props.seasons} />
+        )}
       </Suspense>
     </main>
   )

@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select'
 import CandidateRow from './CandidateRow'
 import FindMore from './FindMore'
+import SeasonPicker from './SeasonPicker'
 import TeamCoverage, { type TeamFilter } from './TeamCoverage'
 import {
   finalizeReview,
@@ -37,7 +38,10 @@ function matchesFilters(
   )
 }
 
-export default function ReviewEditor(props: { initial: ReviewState }) {
+export default function ReviewEditor(props: {
+  initial: ReviewState
+  seasons: string[]
+}) {
   const [review, setReview] = useState(props.initial)
   const [raw, setRaw] = useState(props.initial.raw)
   const [edits, setEdits] = useState(0)
@@ -150,8 +154,9 @@ export default function ReviewEditor(props: { initial: ReviewState }) {
 
   return (
     <div className="flex flex-col gap-6">
-      <header className="sticky top-0 z-10 flex flex-wrap items-center gap-3 border-b border-border bg-background py-3">
-        <h1 className="text-2xl">{raw.season} storyline review</h1>
+      <header className="flex flex-wrap items-center gap-3 border-b border-border py-3">
+        <h1 className="text-2xl">Storyline review</h1>
+        <SeasonPicker seasons={props.seasons} season={raw.season} />
         {review.finalized && <Badge variant="destructive">Finalized</Badge>}
         <span className="text-sm text-muted-foreground">
           <span className="text-review-included">

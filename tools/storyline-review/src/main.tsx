@@ -10,11 +10,10 @@ const season = new URLSearchParams(window.location.search).get('season')
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <TooltipProvider>
-      {season ? (
-        <App review={fetchReview(season)} />
-      ) : (
-        <App seasons={fetchSeasons()} />
-      )}
+      <App
+        seasons={fetchSeasons()}
+        review={season ? fetchReview(season) : undefined}
+      />
     </TooltipProvider>
   </StrictMode>
 )
