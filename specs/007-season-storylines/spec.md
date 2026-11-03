@@ -8,6 +8,16 @@
 
 **Input**: User description: "For completed seasons, I want to highlight some of the major storylines that took place. We will need to scrape the internet to find articles published during the season. This will involve a degree of judgement, which I as the maintainer will supply. This will probably take the form of a special tool or agent skill to gather articles from approved sources that I will review and then save to be displayed. Use events gleaned from weekly summaries to help guide finding articles. Once we have the list of articles, these will be saved as a static list and will not change."
 
+## Clarifications
+
+### Session 2026-10-29
+
+- Q: Are storylines season-wide or tied to teams, and do playoff runs count? → A: Storylines are tied to teams, and every team that reached the playoffs must have storylines covering its playoff run.
+- Q: Do storylines replace the existing team AI summaries? → A: No. Storylines are shown alongside the AI summaries; replacing them is out of scope for now.
+- Q: Are there storylines for the season as a whole as well as per team? → A: Yes. Each season has team storylines for each team plus a separate set of league-wide season storylines, shown in its own section apart from any team's storylines.
+- Q: What time span does a season's storylines cover? → A: A season runs through the last game of its Finals, plus the draft lottery and draft that follow it. The lottery and draft belong to the season that precedes them because they happen near that season's Finals and depend on its results (e.g., the 2025 lottery and 2025 draft are 2024-25 storylines).
+- Q: Which teams does a trade storyline belong to, and are trades season storylines? → A: A trade storyline is associated with every team involved in the trade. Blockbuster trades are also featured in the season storylines.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Visitor sees a completed season's major storylines (Priority: P1)
@@ -79,10 +89,15 @@ The maintainer looks over the candidate articles the discovery tool found, appli
 - **FR-007**: The maintainer MUST be able to review discovered candidates and choose which ones to include before anything is finalized.
 - **FR-008**: Each storyline entry shown to visitors MUST provide enough information to identify the source article it is based on (at minimum a headline and its source).
 - **FR-009**: System MUST support each completed season having its own independent storyline list.
+- **FR-010**: Each storyline article MUST be associated with zero or more teams and shown with each of them, and MAY additionally be marked as a season storyline, shown in a season storylines section separate from any team's storylines. Every storyline MUST have at least one team or be a season storyline.
+- **FR-011**: For every team that played in a completed season's playoffs, candidate discovery MUST also be guided by that team's playoff results, and the finalized list MUST include at least one storyline covering that team's playoff run.
+- **FR-012**: A season's storyline window MUST run from the day after the previous season's draft through the draft that follows that season's Finals; the draft lottery and draft belong to the season that precedes them, since they depend on its results. Candidate discovery MUST only offer articles about events within that window.
+- **FR-013**: A trade storyline MUST be associated with every team involved in the trade, and a blockbuster trade MUST also be marked as a season storyline.
+- **FR-014**: Candidate discovery MUST offer every team at least 5 candidate articles to choose from, unless the approved sources have no more coverage of that team's season, in which case the shortfall MUST be reported to the maintainer.
 
 ### Key Entities
 
-- **Storyline Article**: One curated, visitor-facing entry representing a major storyline for a season; references a real article (headline, source) and the storyline it captures.
+- **Storyline Article**: One curated, visitor-facing entry representing a major storyline for a season; references a real article (headline, source) and the storyline it captures. It lists the team(s) it concerns (possibly none) and may also be marked as a season storyline; a trade lists every team involved.
 - **Approved Source**: A publisher or site the maintainer has designated as acceptable for storyline discovery; discovery is limited to this set.
 - **Season Storyline List**: The finalized, static set of Storyline Articles for one completed season; does not exist until the maintainer finalizes it, and does not change afterward except through deliberate maintainer action.
 - **Weekly Summary** *(existing data)*: Source of the events/topics used to guide which articles discovery looks for; not itself displayed as a storyline.
@@ -106,4 +121,5 @@ The maintainer looks over the candidate articles the discovery tool found, appli
 - There is no fixed required number of storylines per season; "major storylines" is a qualitative judgment the maintainer applies during review, and a season could end up with a small handful or, rarely, none.
 - The events/topics drawn from weekly summaries are used only to steer discovery toward relevant articles; they are not displayed to visitors and need not have a strict one-to-one relationship with the final storyline articles.
 - The specific UI element used to display storylines to visitors is undetermined, consistent with how other recently specified season-detail features (playoff bracket, team AI summary) also leave their presentation to be designed separately.
-- This feature is scoped at the season level; storylines are not required to be tied to any single team or week.
+- Storylines are not tied to individual weeks. Team storylines may involve more than one team; season storylines cover the league as a whole (e.g., the title race, a historic record, a league-wide event).
+- Storylines are an addition to the existing team AI summaries (006), not a replacement; the AI summaries remain unchanged by this feature.

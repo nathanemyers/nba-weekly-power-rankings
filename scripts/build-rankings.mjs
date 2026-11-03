@@ -38,10 +38,11 @@ function currentRecord(summaryText) {
   return match ? match[1] : undefined
 }
 
-// ESPN covers 2003-04 to 2015-16 and NBA.com 2017-18 onward; NBA.com wins if they ever overlap
+// ESPN covers 2003-04 to 2016-17 and NBA.com 2017-18 onward; NBA.com wins if they ever overlap
 const nbaSeasons = loadSeasonEntries(nbaDir)
 const bySeason = { ...loadEspnSeasonEntries(espnDir), ...nbaSeasons }
 const summariesDir = join(processedDir, 'summaries')
+const storylinesDir = join(processedDir, 'storylines')
 
 rmSync(outDir, { recursive: true, force: true })
 mkdirSync(outDir, { recursive: true })
@@ -67,6 +68,12 @@ for (const season of Object.keys(bySeason).sort()) {
   const summariesFile = join(summariesDir, `${season}.json`)
   const stored = existsSync(summariesFile) ? JSON.parse(readFileSync(summariesFile, 'utf8')) : {}
   const summaries = Object.fromEntries(Object.keys(stored).map((slug) => [slug, stored[slug].summary]))
+
+  // Maintainer-finalized storylines from scripts/storylines/validate.mjs --finalize
+  const storylinesFile = join(storylinesDir, `${season}.json`)
+  const storylines = existsSync(storylinesFile)
+    ? JSON.parse(readFileSync(storylinesFile, 'utf8')).storylines.toSorted((a, b) => a.eventDate.localeCompare(b.eventDate))
+    : []
 
   // Each team gets the furthest stage it reached
   const STAGE_ORDER = ['first-round', 'semis', 'conf-finals', 'finals', 'champion']
@@ -106,6 +113,7 @@ for (const season of Object.keys(bySeason).sort()) {
     ...(Object.keys(summaries).length && { summaries }),
     ...(Object.keys(rosters).length && { rosters }),
     ...(Object.keys(coaches).length && { coaches }),
+    ...(storylines.length && { storylines }),
   }
   seasonIndex[season] = {
     name: season,

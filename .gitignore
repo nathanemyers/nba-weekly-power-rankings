@@ -29,3 +29,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 .env*
+
+# Storyline additions written by the season-storylines skill before merging
+data/raw/storylines/*.additions.json

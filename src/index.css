@@ -43,6 +43,9 @@
   --move-left: #ff5a50;
   --chart-grid: #333336;
   --chart-playoffs: #ff4d4f;
+  --review-included: #30d158;
+  --review-excluded: #5c5c63;
+  --review-pending: #ffd60a;
 }
 
 /* Exposes each theme value to Tailwind, e.g. --color-card makes bg-card and text-card exist. */
@@ -83,6 +86,9 @@
   --color-move-left: var(--move-left);
   --color-chart-grid: var(--chart-grid);
   --color-chart-playoffs: var(--chart-playoffs);
+  --color-review-included: var(--review-included);
+  --color-review-excluded: var(--review-excluded);
+  --color-review-pending: var(--review-pending);
 
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);

@@ -60,6 +60,7 @@ Names specific to this site:
 | `move-joined`, `move-left` | Arrows on roster badges for players who joined / left mid-season |
 | `chart-grid` | Chart grid lines |
 | `chart-playoffs` | "Playoffs Begin" line and label |
+| `review-included`, `review-excluded`, `review-pending` | Candidate status in the internal storyline review tool (`tools/storyline-review/`) |
 
 The typeface is the one value that lives in `@theme inline` instead of `:root`: `--font-sans`.
 
