@@ -601,6 +601,23 @@
       "weeks": [
         8
       ]
+    },
+    {
+      "id": "po-den-karl-return",
+      "summary": "George Karl returns to the playoffs after missing 2010 for cancer treatment",
+      "origin": "playoffs",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "po-den-karl-brooks",
+      "summary": "Karl faces former assistant Scott Brooks in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "den",
+        "okc"
+      ]
     }
   ],
   "candidates": [
@@ -1853,6 +1870,28 @@
       "status": "included"
     },
     {
+      "id": "karl-back-in-playoffs",
+      "title": "George Karl back on the playoff bench",
+      "eventDate": "2011-04-16",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Karl engerized for postseason after sitting out 2010 playoffs",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/nuggets/features/playoffs_karl_04_16_2011.html",
+        "publishedAt": "2011-04-16"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-den-karl-return",
+        "po-den"
+      ],
+      "status": "excluded"
+    },
+    {
       "id": "cp3-stuns-lakers",
       "title": "Chris Paul steals Game 1 from the Lakers",
       "eventDate": "2011-04-17",
@@ -2047,6 +2086,51 @@
       "guidance": [
         "po-ind",
         "po-chi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "karl-vs-brooks",
+      "title": "Karl vs. his former assistant Scott Brooks",
+      "eventDate": "2011-04-26",
+      "teams": [
+        "den",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Karl trying to prevent former assistant from playoff success",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/nuggets/features/karl_brooks_04_26_2011.html",
+        "publishedAt": "2011-04-26"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-den-karl-brooks",
+        "po-den"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "thunder-eliminate-nuggets",
+      "title": "Durant's late surge ends the Nuggets' season",
+      "eventDate": "2011-04-27",
+      "teams": [
+        "den",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Durant closes the deal as Nuggets lose series to Thunder",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/nuggets/news/nuggets_thunder_04_28_2011.html",
+        "publishedAt": "2011-04-28"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-den"
       ],
       "status": "included"
     },
