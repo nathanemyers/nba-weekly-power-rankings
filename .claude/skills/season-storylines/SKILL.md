@@ -56,6 +56,28 @@ A season `YYYY-YY` runs from the day after the `YYYY` draft through the `YYYY+1`
 lottery and draft after the Finals belong to the season that just ended. A candidate's
 `eventDate` is when the event happened, not when the article was published.
 
+## Relocated and renamed franchises
+
+Team codes follow the franchise, not the city or name. Treat each franchise below as one
+continuous team, tag its storylines with the code shown, and use the name it had at the time
+in `title` (e.g. "SuperSonics trade Ray Allen", not "Thunder trade Ray Allen").
+
+| Code  | Franchise history                                                                                                                                                                                                                                                                                       |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `okc` | Seattle SuperSonics through 2007-08. The settlement with Seattle came on July 2, 2008, and 2008-09 was the first Oklahoma City Thunder season. The franchise is continuous, but the Thunder do not claim the SuperSonics' history or their 1979 title, so never credit that title to the Thunder in a title or summary. |
+| `nop` | Charlotte Hornets (1988-2002), then the New Orleans Hornets from 2002-03. After Hurricane Katrina they played as the New Orleans/Oklahoma City Hornets in 2005-06 and 2006-07, and they became the Pelicans in 2013-14. Treat all of it as one team. |
+| `cha` | A separate franchise: the Charlotte Bobcats, an expansion team that began play in 2004-05. They renamed themselves the Charlotte Hornets for 2014-15. The NBA moved the 1988-2002 Charlotte Hornets records to this franchise in 2014, but for this project those years stay with `nop`. |
+| `bkn` | New Jersey Nets through 2011-12, then the Brooklyn Nets from 2012-13. |
+
+Common traps:
+
+- A 2005-07 storyline set in Oklahoma City is about the Hornets (`nop`), not the Thunder (`okc`).
+- "Charlotte Hornets" means `nop` before 2002-03 and `cha` from 2014-15. Between those years,
+  Charlotte stories are about the Bobcats (`cha`).
+- The 2008 relocation story (Clay Bennett's ownership, the KeyArena lawsuit, the settlement) is
+  an `okc` storyline in 2007-08 or 2008-09, by `eventDate`. The 2012-13 attempt to move the
+  Kings to Seattle is a `sac` storyline.
+
 ## status
 
 Read only. Run `npm run -s status:storylines` and show its table to the maintainer as-is. It
