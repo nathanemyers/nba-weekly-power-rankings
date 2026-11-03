@@ -71,7 +71,14 @@ function runMore(season, section) {
     const timer = setTimeout(() => child.kill('SIGTERM'), TIMEOUT_MS)
     child.stdout.on('data', (chunk) => (stdout += chunk))
     child.stderr.on('data', (chunk) => (stderr += chunk))
-    child.on('error', (error) => resolve({ error: `Could not start claude: ${error.message}` }))
+    child.on('error', (error) =>
+      resolve({
+        error:
+          error.code === 'ENOENT'
+            ? 'Could not start claude: the Claude Code CLI is not on the PATH of the review server. Install it, then restart the server.'
+            : `Could not start claude: ${error.message}`,
+      })
+    )
     child.on('close', (code) => {
       clearTimeout(timer)
       try {

@@ -53,7 +53,11 @@ export default function ReviewEditor(props: {
   const [kind, setKind] = useState('')
   const [search, setSearch] = useState('')
   const [finding, setFinding] = useState(props.initial.running)
-  const [finished, setFinished] = useState({ count: 0, failed: false })
+  const [finished, setFinished] = useState({
+    count: 0,
+    failed: false,
+    message: '',
+  })
   const dirty = edits !== savedEdits
 
   useEffect(() => {
@@ -132,10 +136,17 @@ export default function ReviewEditor(props: {
       setFinished((f) => ({
         count: f.count + 1,
         failed: result.more.error !== undefined,
+        message:
+          result.more.error ??
+          `Added ${result.more.added.length} pending candidate${result.more.added.length === 1 ? '' : 's'}.`,
       }))
     } catch (error) {
       setSaveError(String(error))
-      setFinished((f) => ({ count: f.count + 1, failed: true }))
+      setFinished((f) => ({
+        count: f.count + 1,
+        failed: true,
+        message: String(error),
+      }))
     } finally {
       setFinding(null)
     }

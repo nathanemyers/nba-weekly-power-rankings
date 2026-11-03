@@ -4,7 +4,7 @@ interface FindMoreProps {
   section: string
   label: string
   finding: string | null
-  finished: { count: number; failed: boolean }
+  finished: { count: number; failed: boolean; message: string }
   onFind: (section: string) => void
 }
 
@@ -25,9 +25,13 @@ export default function FindMore(props: FindMoreProps) {
           ? 'Searching…'
           : `Find more for ${props.label}`}
       </Button>
-      <span className="text-muted-foreground">
+      <span
+        data-failed={props.finished.failed || undefined}
+        className="whitespace-pre-wrap text-muted-foreground data-[failed]:text-destructive"
+      >
         {props.finding === null
-          ? 'Runs the season-storylines skill headless; new candidates arrive as pending.'
+          ? props.finished.message ||
+            'Runs the season-storylines skill headless; new candidates arrive as pending.'
           : props.finding === props.section
             ? 'This takes a few minutes. You can keep reviewing; saving is paused until it finishes.'
             : `Already searching for ${props.finding}.`}

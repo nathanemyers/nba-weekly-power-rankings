@@ -1,6 +1,6 @@
 {
   "season": "2008-09",
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-03",
   "guidance": [
     {
       "id": "retro-redeem-team",
@@ -576,7 +576,7 @@
         "retro-thunder-arrive",
         "weekly-okc"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "brand-to-sixers",
@@ -599,7 +599,7 @@
         "weekly-phi",
         "weekly-lac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "baron-to-clippers",
@@ -622,7 +622,7 @@
         "weekly-lac",
         "weekly-gsw"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "deron-extension",
@@ -643,7 +643,7 @@
       "guidance": [
         "weekly-uta"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "artest-to-rockets",
@@ -666,7 +666,7 @@
         "weekly-hou",
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "josh-smith-matched",
@@ -688,7 +688,7 @@
       "guidance": [
         "weekly-atl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "redeem-team-gold",
@@ -707,7 +707,7 @@
         "mil",
         "det"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Gold-medal game is dream scene for Redeem Team",
         "publisher": "ESPN",
@@ -719,7 +719,7 @@
       "guidance": [
         "retro-redeem-team"
       ],
-      "status": "pending"
+      "status": "excluded"
     },
     {
       "id": "monta-moped",
@@ -740,7 +740,7 @@
       "guidance": [
         "weekly-gsw"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "arenas-knee",
@@ -761,7 +761,7 @@
       "guidance": [
         "weekly-was"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "oden-debut",
@@ -782,7 +782,7 @@
       "guidance": [
         "weekly-por"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "iverson-for-billups",
@@ -792,7 +792,7 @@
         "det",
         "den"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Source: Iverson traded to Detroit",
         "publisher": "Yahoo Sports",
@@ -800,13 +800,13 @@
         "publishedAt": "2008-11-03"
       },
       "kind": "trade",
-      "blockbuster": true,
+      "blockbuster": false,
       "guidance": [
         "retro-billups-trade",
         "weekly-det",
         "weekly-den"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "sloan-1000",
@@ -828,7 +828,7 @@
       "guidance": [
         "weekly-uta"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "knicks-clear-cap",
@@ -852,7 +852,7 @@
         "theme-trade-deadline",
         "weekly-nyk"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "carlesimo-fired",
@@ -874,7 +874,7 @@
         "theme-coaching-changes",
         "weekly-okc"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "eddie-jordan-fired",
@@ -896,7 +896,7 @@
         "theme-coaching-changes",
         "weekly-was"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mitchell-fired",
@@ -918,7 +918,7 @@
         "theme-coaching-changes",
         "weekly-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wittman-fired",
@@ -940,7 +940,7 @@
         "theme-coaching-changes",
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "richardson-to-suns",
@@ -964,7 +964,7 @@
         "weekly-cha",
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "cheeks-fired",
@@ -986,7 +986,7 @@
         "theme-coaching-changes",
         "weekly-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "theus-fired",
@@ -1008,15 +1008,14 @@
         "theme-coaching-changes",
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "roy-52",
       "title": "Brandon Roy scores 52 against Phoenix",
       "eventDate": "2008-12-18",
       "teams": [
-        "por",
-        "phx"
+        "por"
       ],
       "featured": false,
       "article": {
@@ -1030,7 +1029,7 @@
       "guidance": [
         "weekly-por"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "celtics-19-straight",
@@ -1051,7 +1050,7 @@
       "guidance": [
         "weekly-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "redd-acl",
@@ -1072,7 +1071,7 @@
       "guidance": [
         "weekly-mil"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "hollins-grizzlies",
@@ -1094,7 +1093,7 @@
         "theme-coaching-changes",
         "weekly-mem"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mayo-gasol-rookies",
@@ -1115,15 +1114,14 @@
       "guidance": [
         "weekly-mem"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kobe-61",
       "title": "Kobe scores 61 at Madison Square Garden",
       "eventDate": "2009-02-02",
       "teams": [
-        "lal",
-        "nyk"
+        "lal"
       ],
       "featured": false,
       "article": {
@@ -1137,7 +1135,7 @@
       "guidance": [
         "weekly-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "brand-shoulder",
@@ -1158,7 +1156,7 @@
       "guidance": [
         "weekly-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "morrison-to-lakers",
@@ -1181,7 +1179,7 @@
         "theme-trade-deadline",
         "weekly-cha"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jefferson-acl",
@@ -1202,7 +1200,7 @@
       "guidance": [
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "marion-for-oneal",
@@ -1226,7 +1224,7 @@
         "weekly-mia",
         "weekly-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "porter-fired",
@@ -1248,7 +1246,7 @@
         "theme-coaching-changes",
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "chandler-trade-rescinded",
@@ -1272,7 +1270,7 @@
         "weekly-okc",
         "weekly-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "miller-salmons-to-bulls",
@@ -1296,7 +1294,7 @@
         "weekly-chi",
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "tmac-microfracture",
@@ -1317,7 +1315,7 @@
       "guidance": [
         "weekly-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "marbury-to-celtics",
@@ -1340,7 +1338,7 @@
         "weekly-nyk",
         "weekly-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "iverson-pistons-bench",
@@ -1362,7 +1360,7 @@
         "retro-billups-trade",
         "weekly-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "ginobili-out",
@@ -1384,7 +1382,7 @@
         "weekly-sas",
         "po-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "garnett-knee",
@@ -1406,7 +1404,7 @@
         "weekly-bos",
         "po-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "roy-42-playoffs",
@@ -1428,7 +1426,7 @@
       "guidance": [
         "po-por"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "rose-roy",
@@ -1450,7 +1448,7 @@
       "guidance": [
         "award-roy"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nuggets-rout-hornets",
@@ -1473,7 +1471,7 @@
         "po-den",
         "po-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "celtics-bulls-classic",
@@ -1483,7 +1481,7 @@
         "bos",
         "chi"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "NBA Playoffs: Chicago Bulls and Boston Celtics complete an all-time classic series",
         "publisher": "ESPN",
@@ -1496,7 +1494,7 @@
         "po-bos",
         "po-chi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "granger-mip",
@@ -1518,7 +1516,7 @@
         "award-mip",
         "weekly-ind"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "award-winners-2009",
@@ -1547,7 +1545,7 @@
         "award-6moy",
         "award-mip"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nuggets-oust-mavs",
@@ -1570,7 +1568,7 @@
         "po-den",
         "po-dal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lakers-oust-rockets",
@@ -1593,7 +1591,7 @@
         "po-lal",
         "po-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lakers-oust-nuggets",
@@ -1616,7 +1614,7 @@
         "po-lal",
         "po-den"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lebron-no-handshake",
@@ -1626,7 +1624,7 @@
         "cle",
         "orl"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "LeBron sent a clear message by not shaking hands with Magic",
         "publisher": "Sports Illustrated",
@@ -1639,7 +1637,7 @@
         "po-cle",
         "po-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lakers-title",
@@ -1663,7 +1661,7 @@
         "po-lal",
         "po-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mchale-out",
@@ -1684,7 +1682,7 @@
       "guidance": [
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wizards-trade-fifth-pick",
@@ -1708,7 +1706,7 @@
         "weekly-was",
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jefferson-to-spurs",
@@ -1732,7 +1730,7 @@
         "weekly-sas",
         "weekly-mil"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "yao-out-indefinitely",
@@ -1753,7 +1751,7 @@
       "guidance": [
         "weekly-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "shaq-to-cavs",
@@ -1763,7 +1761,7 @@
         "cle",
         "phx"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Cavs land Shaq for Wallace, Pavlovic",
         "publisher": "Yahoo Sports",
@@ -1776,7 +1774,7 @@
         "weekly-cle",
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "carter-to-magic",
@@ -1799,7 +1797,7 @@
         "weekly-bkn",
         "weekly-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "griffin-first-pick",
@@ -1821,7 +1819,7 @@
         "draft-lottery",
         "draft-2009"
       ],
-      "status": "pending"
+      "status": "included"
     }
   ]
 }
