@@ -47,7 +47,7 @@ describe('TrendMinimap', () => {
       'aria-hidden',
       'true'
     )
-    expect(container.querySelectorAll('path')).toHaveLength(1)
+    expect(container.querySelectorAll('path')).toHaveLength(3)
     expect(moveCount(pathOf(container))).toBe(1)
   })
 
@@ -63,44 +63,42 @@ describe('TrendMinimap', () => {
     const { container } = render(
       <TrendMinimap team={Team.Boston} season={full} />
     )
-    const gradient = container.querySelector('linearGradient')
-    const stops = Array.from(container.querySelectorAll('stop'))
+    const paths = Array.from(container.querySelectorAll('path'))
+    const rects = Array.from(container.querySelectorAll('clipPath rect'))
 
-    expect(gradient).toHaveAttribute('gradientUnits', 'userSpaceOnUse')
-    expect(pathOf(container)).toHaveAttribute(
-      'stroke',
-      `url(#${gradient?.getAttribute('id')})`
-    )
-    expect(stops.map((s) => s.getAttribute('data-band'))).toEqual([
+    expect(paths.map((p) => p.getAttribute('data-band'))).toEqual([
       'top',
-      'middle',
       'middle',
       'bottom',
     ])
-    expect(stops[0].getAttribute('offset')).toBe(
-      stops[1].getAttribute('offset')
-    )
-    expect(stops[2].getAttribute('offset')).toBe(
-      stops[3].getAttribute('offset')
-    )
-    expect(Number(stops[0].getAttribute('offset'))).toBeLessThan(
-      Number(stops[2].getAttribute('offset'))
-    )
+    expect(paths.map((p) => p.getAttribute('class'))).toEqual([
+      'stroke-rank-up',
+      'stroke-rank-mid',
+      'stroke-rank-down',
+    ])
+    expect(
+      paths.every((p) => p.getAttribute('d') === paths[0].getAttribute('d'))
+    ).toBe(true)
+    paths.forEach((p) => expect(p.getAttribute('stroke')).toBeNull())
+    const tops = rects.map((r) => Number(r.getAttribute('y')))
+    expect(tops[0]).toBeLessThan(tops[1])
+    expect(tops[1]).toBeLessThan(tops[2])
   })
 
-  it('gives each instance its own gradient', () => {
+  it('gives each instance its own clip paths', () => {
     const { container } = render(
       <>
         <TrendMinimap team={Team.Boston} season={full} />
         <TrendMinimap team={Team.Miami} season={full} />
       </>
     )
-    const ids = Array.from(container.querySelectorAll('linearGradient')).map(
-      (g) => g.getAttribute('id')
+    const ids = Array.from(container.querySelectorAll('clipPath')).map((c) =>
+      c.getAttribute('id')
     )
 
-    expect(ids).toHaveLength(2)
-    expect(ids[0]).not.toBe(ids[1])
+    expect(ids).toHaveLength(6)
+    expect(ids.filter((id, i) => ids.indexOf(id) === i)).toHaveLength(6)
+    ids.forEach((id) => expect(id).toMatch(/^[a-zA-Z0-9_-]+$/))
   })
 
   it('stops short of the right edge when the data ends early', () => {
