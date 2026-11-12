@@ -1,6 +1,6 @@
 {
   "season": "2024-25",
-  "finalizedAt": "2026-10-29",
+  "finalizedAt": "2026-11-12",
   "storylines": [
     {
       "id": "george-signs-with-sixers",
@@ -19,6 +19,21 @@
       }
     },
     {
+      "id": "pistons-hire-bickerstaff",
+      "title": "Pistons hire J.B. Bickerstaff",
+      "eventDate": "2024-07-03",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "DETROIT PISTONS ANNOUNCE J.B. BICKERSTAFF AS HEAD COACH",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/pistons/news/detroit-pistons-announce-j-b-bickerstaff-as-head-coach",
+        "publishedAt": "2024-07-03"
+      }
+    },
+    {
       "id": "thompson-joins-mavericks",
       "title": "Klay Thompson leaves the Warriors for Dallas",
       "eventDate": "2024-07-06",
@@ -32,6 +47,53 @@
         "publisher": "NBA.com",
         "url": "https://www.nba.com/news/klay-thompson-2024-free-agency",
         "publishedAt": "2024-07-06"
+      }
+    },
+    {
+      "id": "derozan-to-kings",
+      "title": "DeMar DeRozan goes to the Kings in a three-team sign-and-trade",
+      "eventDate": "2024-07-06",
+      "teams": [
+        "sac",
+        "chi",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Kings land DeMar DeRozan for 3 years, $74M in trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/40509905/sources-kings-land-demar-derozan-3-years-74m-trade",
+        "publishedAt": "2024-07-06"
+      }
+    },
+    {
+      "id": "barnes-max-extension",
+      "title": "Scottie Barnes signs a five-year max extension",
+      "eventDate": "2024-07-08",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors' Scottie Barnes signs max extension with team",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/raptors-scottie-barnes-max-extension",
+        "publishedAt": "2024-07-08"
+      }
+    },
+    {
+      "id": "quickley-175m-deal",
+      "title": "Immanuel Quickley re-signs for $175 million",
+      "eventDate": "2024-07-08",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Immanuel Quickley signs $175M deal to stay with Raptors",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/raptors-immanuel-quickley-contract",
+        "publishedAt": "2024-07-08"
       }
     },
     {
@@ -64,6 +126,21 @@
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/41653840/lebron-james-bronny-james-share-court-first-nba",
         "publishedAt": "2024-10-22"
+      }
+    },
+    {
+      "id": "intuit-dome-opens",
+      "title": "Clippers open the Intuit Dome",
+      "eventDate": "2024-10-23",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers' fresh start clouded by old struggles in Intuit Dome debut",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/clippers-fresh-start-clouded-by-old-struggles-in-intuit-dome-debut-083534672.html",
+        "publishedAt": "2024-10-24"
       }
     },
     {
@@ -190,6 +267,36 @@
       }
     },
     {
+      "id": "bucks-recover-from-2-8",
+      "title": "Bucks recover from a 2-8 start",
+      "eventDate": "2024-12-17",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "How the NBA Cup might've saved Giannis and the Bucks' season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43004784/how-nba-cup-saved-giannis-bucks-season",
+        "publishedAt": "2024-12-17"
+      }
+    },
+    {
+      "id": "pacers-december-turnaround",
+      "title": "Pacers recover from a 10-15 start",
+      "eventDate": "2024-12-26",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Changing pace: Inside Indiana’s recent turnaround",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/indiana-pacers-turnaround-december-2024",
+        "publishedAt": "2024-12-26"
+      }
+    },
+    {
       "id": "kings-fire-mike-brown",
       "title": "Kings fire Mike Brown",
       "eventDate": "2024-12-27",
@@ -251,6 +358,21 @@
       }
     },
     {
+      "id": "suns-bench-beal",
+      "title": "Suns bench Bradley Beal, who keeps his no-trade clause",
+      "eventDate": "2025-01-06",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bradley Beal, agent haven't talked waiving no-trade to leave Suns",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43332318/bradley-beal-agent-talked-waiving-no-trade-leave-suns",
+        "publishedAt": "2025-01-08"
+      }
+    },
+    {
       "id": "mccain-out-for-season",
       "title": "McCain’s rookie season ends with knee surgery",
       "eventDate": "2025-01-09",
@@ -298,6 +420,37 @@
       }
     },
     {
+      "id": "brandon-miller-wrist",
+      "title": "Brandon Miller's season ends with wrist surgery",
+      "eventDate": "2025-01-23",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brandon Miller undergoes season-ending surgery to repair torn ligament in right wrist",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/hornets-brandon-miller-out-for-season-torn-ligament-right-wrist",
+        "publishedAt": "2025-01-23"
+      }
+    },
+    {
+      "id": "edwards-3-point-record",
+      "title": "Anthony Edwards becomes the Wolves' career 3-point leader",
+      "eventDate": "2025-01-25",
+      "teams": [
+        "min",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Anthony Edwards becomes Timberwolves' 3-point leader in win",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43563641/in-win-anthony-edwards-becomes-timberwolves-3-point-leader",
+        "publishedAt": "2025-01-25"
+      }
+    },
+    {
       "id": "jalen-johnson-out-for-season",
       "title": "Jalen Johnson out for the season",
       "eventDate": "2025-01-29",
@@ -310,6 +463,36 @@
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/43611422/sources-hawks-jalen-johnson-season-ending-surgery",
         "publishedAt": "2025-01-29"
+      }
+    },
+    {
+      "id": "cade-first-all-star",
+      "title": "Cade Cunningham makes his first All-Star team",
+      "eventDate": "2025-01-30",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cade Cunningham celebrates All-Star nod with 40 as Pistons win",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43645559/cade-cunningham-celebrates-all-star-nod-40-pistons-win",
+        "publishedAt": "2025-01-31"
+      }
+    },
+    {
+      "id": "sengun-first-all-star",
+      "title": "Alperen Şengün becomes the Rockets' first All-Star since 2020",
+      "eventDate": "2025-01-30",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rockets center Alperen Sengun named NBA All-Star for first time",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/rockets-center-alperen-sengun-named-000456849.html",
+        "publishedAt": "2025-01-31"
       }
     },
     {
@@ -390,6 +573,21 @@
         "headline": "Brandon Ingram traded to Raptors; Bruce Brown, Kelly Olynyk to Pels",
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/43712864/brandon-ingram-traded-raptors-bruce-brown-kelly-olynyk-pels",
+        "publishedAt": "2025-02-05"
+      }
+    },
+    {
+      "id": "lonzo-ball-extension",
+      "title": "Lonzo Ball signs an extension instead of being traded",
+      "eventDate": "2025-02-05",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Bulls, Lonzo Ball agree to 2-year, $20M extension",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/43711046/chicago-bulls-lonzo-ball-agree-two-year-extension",
         "publishedAt": "2025-02-05"
       }
     },
@@ -583,6 +781,21 @@
       }
     },
     {
+      "id": "jazz-fined-markkanen",
+      "title": "Jazz fined $100,000 for sitting Lauri Markkanen",
+      "eventDate": "2025-03-12",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz fined $100,000 for violating NBA's Player Participation Policy",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/jazz-fined-100k-violation-player-participation-policy",
+        "publishedAt": "2025-03-12"
+      }
+    },
+    {
       "id": "celtics-sold",
       "title": "Celtics sold for a record $6.1 billion",
       "eventDate": "2025-03-20",
@@ -735,6 +948,21 @@
       }
     },
     {
+      "id": "billups-extension",
+      "title": "Blazers extend Chauncey Billups after a late-season surge",
+      "eventDate": "2025-04-13",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trail Blazers sign coach Chauncey Billups to multi-year extension",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/trail-blazers-sign-chauncey-billups-contract-extension",
+        "publishedAt": "2025-04-13"
+      }
+    },
+    {
       "id": "suns-fire-budenholzer",
       "title": "Suns fire Budenholzer after one season",
       "eventDate": "2025-04-14",
@@ -841,6 +1069,21 @@
         "headline": "Celtics' Payton Pritchard wins NBA's Sixth Man of the Year for providing Boston with young spark",
         "publisher": "CBS Sports",
         "url": "https://www.cbssports.com/nba/news/celtics-payton-pritchard-wins-nbas-sixth-man-of-the-year-for-providing-boston-with-young-spark/",
+        "publishedAt": "2025-04-22"
+      }
+    },
+    {
+      "id": "haliburton-voted-most-overrated",
+      "title": "Players vote Tyrese Haliburton the NBA's most overrated",
+      "eventDate": "2025-04-22",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Tyrese Haliburton named NBA's most overrated by The Athletic's anonymous player survey",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/article/tyrese-haliburton-named-nbas-most-143528548.html",
         "publishedAt": "2025-04-22"
       }
     },
@@ -1016,6 +1259,21 @@
       }
     },
     {
+      "id": "suns-name-gregory-gm",
+      "title": "Suns make Brian Gregory GM and move James Jones aside",
+      "eventDate": "2025-05-01",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns name Brian Gregory as GM, make James Jones senior adviser",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/44951296/sources-suns-name-gregory-gm-make-jones-senior-advisor",
+        "publishedAt": "2025-05-01"
+      }
+    },
+    {
       "id": "popovich-steps-down",
       "title": "Popovich steps down as coach",
       "eventDate": "2025-05-02",
@@ -1078,6 +1336,22 @@
       }
     },
     {
+      "id": "haliburton-game-2-cavs",
+      "title": "Haliburton caps an eight-point final-minute rally to win Game 2 in Cleveland",
+      "eventDate": "2025-05-06",
+      "teams": [
+        "ind",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Tyrese Haliburton clutch again as late 3 stuns Cavs in Game 2",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45030986/pacers-stun-cavaliers-furious-rally-final-minute",
+        "publishedAt": "2025-05-06"
+      }
+    },
+    {
       "id": "mavericks-win-lottery",
       "title": "Mavericks win the lottery at 1.8% odds",
       "eventDate": "2025-05-12",
@@ -1120,6 +1394,21 @@
         "headline": "Pacers pen winning 'script,' top Cavs to return to East finals",
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/45135467/pacers-eliminate-cavaliers-return-eastern-conference-finals",
+        "publishedAt": "2025-05-13"
+      }
+    },
+    {
+      "id": "blazers-for-sale",
+      "title": "Paul Allen's estate puts the Blazers up for sale",
+      "eventDate": "2025-05-13",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Paul Allen estate says Trail Blazers officially for sale",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45129528/paul-allen-estate-says-trail-blazers-officially-sale",
         "publishedAt": "2025-05-13"
       }
     },
@@ -1187,6 +1476,37 @@
       }
     },
     {
+      "id": "pacers-game-1-knicks-comeback",
+      "title": "Pacers erase 14 points in the final 3:14 to steal Game 1 at MSG",
+      "eventDate": "2025-05-21",
+      "teams": [
+        "ind",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Anatomy of a comeback: How Indiana rallied from 14 down in final 3:14 of regulation vs. New York",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/how-pacers-erased-huge-deficit-late-in-regulation-game-1-knicks",
+        "publishedAt": "2025-05-22"
+      }
+    },
+    {
+      "id": "amen-thompson-all-defense",
+      "title": "Amen Thompson makes the All-Defensive first team",
+      "eventDate": "2025-05-22",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rockets star Amen Thompson named to NBA's All-Defensive First Team for 2024-25 season",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/article/rockets-star-amen-thompson-named-180118641.html",
+        "publishedAt": "2025-05-22"
+      }
+    },
+    {
       "id": "thunder-oust-wolves",
       "title": "Thunder beat the Wolves to reach the Finals",
       "eventDate": "2025-05-28",
@@ -1231,6 +1551,37 @@
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/45443832/sources-knicks-firing-tom-thibodeau-coach-5-seasons",
         "publishedAt": "2025-06-03"
+      }
+    },
+    {
+      "id": "suns-hire-ott",
+      "title": "Suns hire Jordan Ott as their fourth coach in four years",
+      "eventDate": "2025-06-04",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Suns hiring Cavs assistant Jordan Ott as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45450487/sources-suns-hiring-cavs-assistant-jordan-ott-head-coach",
+        "publishedAt": "2025-06-04"
+      }
+    },
+    {
+      "id": "haliburton-finals-game-1-winner",
+      "title": "Haliburton's last-second shot wins Finals Game 1 after a 15-point comeback",
+      "eventDate": "2025-06-05",
+      "teams": [
+        "ind",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers beat Thunder on Tyrese Haliburton's last-second shot",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45461714/pacers-sink-thunder-tyrese-haliburton-last-second-shot",
+        "publishedAt": "2025-06-05"
       }
     },
     {
@@ -1312,6 +1663,21 @@
       }
     },
     {
+      "id": "pacers-runners-up-to-remember",
+      "title": "The Pacers' improbable run ends one win short",
+      "eventDate": "2025-06-22",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers are runners-up to remember despite Finals loss to Thunder",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/indiana-pacers-runners-up-to-remember-2025-nba-playoffs",
+        "publishedAt": "2025-06-24"
+      }
+    },
+    {
       "id": "holiday-traded-to-blazers",
       "title": "Celtics trade Holiday to the Blazers",
       "eventDate": "2025-06-23",
@@ -1345,6 +1711,22 @@
       }
     },
     {
+      "id": "poole-mccollum-swap",
+      "title": "Wizards and Pelicans swap Poole for McCollum",
+      "eventDate": "2025-06-24",
+      "teams": [
+        "was",
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Pelicans acquire Poole from Wizards in 4-player deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45576664/sources-pelicans-trade-mccollum-olynyk-wizards-poole-bey",
+        "publishedAt": "2025-06-24"
+      }
+    },
+    {
       "id": "flagg-no-1-pick",
       "title": "Mavericks draft Cooper Flagg No. 1",
       "eventDate": "2025-06-25",
@@ -1357,6 +1739,82 @@
         "publisher": "NBA.com",
         "url": "https://www.nba.com/news/dallas-mavericks-take-cooper-flagg-no-1-pick-nba-draft",
         "publishedAt": "2025-06-25"
+      }
+    },
+    {
+      "id": "jazz-draft-ace-bailey",
+      "title": "Jazz take Ace Bailey fifth after his draft slide",
+      "eventDate": "2025-06-25",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Draft 2025: Utah Jazz select Rutgers star Ace Bailey with No. 5 overall pick",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/nba-draft-2025-utah-jazz-select-rutgers-star-ace-bailey-with-no-5-overall-pick-004047459.html",
+        "publishedAt": "2025-06-26"
+      }
+    },
+    {
+      "id": "pelicans-trade-up-queen",
+      "title": "Pelicans trade an unprotected 2026 first to move up for Derik Queen",
+      "eventDate": "2025-06-25",
+      "teams": [
+        "nop",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans acquire No. 13 overall pick Derik Queen from Hawks",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/pelicans-hawks-derik-queen-trade-2025-draft",
+        "publishedAt": "2025-06-26"
+      }
+    },
+    {
+      "id": "nets-five-first-rounders",
+      "title": "Nets use a record five first-round picks",
+      "eventDate": "2025-06-25",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Draft 2025: Brooklyn Nets break record by using all 5 of their first-round picks",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/nba-draft-2025-brooklyn-nets-break-record-by-using-all-5-of-their-first-round-picks-031718824.html",
+        "publishedAt": "2025-06-26"
+      }
+    },
+    {
+      "id": "hornets-draft-knueppel",
+      "title": "Hornets draft Kon Knueppel fourth",
+      "eventDate": "2025-06-25",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets take Duke guard Kon Knueppel with No. 4 pick in 2025 NBA draft",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/article/hornets-duke-guard-kon-knueppel-005441938.html",
+        "publishedAt": "2025-06-26"
+      }
+    },
+    {
+      "id": "sixers-draft-edgecombe",
+      "title": "Sixers keep their pick and draft VJ Edgecombe third",
+      "eventDate": "2025-06-25",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Philadelphia 76ers Select VJ Edgecombe With Third Overall Pick in 2025 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/sixers/news/philadelphia-76ers-select-vj-edgecombe-with-third-overall-pick-in-2025-nba-draft",
+        "publishedAt": "2025-06-26"
       }
     }
   ]

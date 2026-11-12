@@ -195,21 +195,26 @@ export default function ReviewEditor(props: {
         <Button
           variant="outline"
           onClick={finalize}
-          disabled={review.finalized || finalizing || finding !== null}
+          disabled={
+            (review.finalized && !review.changedSinceFinalize) ||
+            finalizing ||
+            finding !== null
+          }
           className="cursor-pointer"
         >
-          {finalizing ? 'Finalizing…' : 'Finalize'}
+          {finalizing
+            ? 'Finalizing…'
+            : review.finalized
+              ? 'Re-finalize'
+              : 'Finalize'}
         </Button>
       </header>
 
       {review.finalized && (
         <p className="text-sm text-muted-foreground">
-          This season is already finalized. Saving here only changes the raw
-          candidates file; rewriting the published list needs{' '}
-          <code>
-            npm run check:storylines -- {raw.season} --finalize --revise
-          </code>
-          .
+          {review.changedSinceFinalize
+            ? 'This season is finalized, but its included storylines have changed since. Re-finalize to rewrite the published list.'
+            : 'This season is finalized and matches its published list. Saving here only changes the raw candidates file until the included storylines change.'}
         </p>
       )}
 

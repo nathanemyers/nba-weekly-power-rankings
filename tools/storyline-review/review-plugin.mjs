@@ -1,11 +1,11 @@
 // API for the storyline review tool: GET /__storylines lists seasons, GET and PUT /__storylines/<season>,
 // POST /__storylines/<season>/more runs the skill's `more` phase for one section,
-// POST /__storylines/<season>/finalize runs the skill's `finalize` commands
+// POST /__storylines/<season>/finalize runs the skill's `finalize` commands, with --revise once finalized
 import { spawn } from 'node:child_process'
-import { existsSync, readdirSync, writeFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname } from 'node:path'
 import { loadSeason, root, seasonPaths } from '../../scripts/storylines/context.mjs'
-import { checkFinalize, checkRaw } from '../../scripts/storylines/rules.mjs'
+import { buildProcessed, checkFinalize, checkRaw } from '../../scripts/storylines/rules.mjs'
 
 const ROUTE = /^\/__storylines(?:\/(\d{4}-\d{2})(\/more|\/finalize)?)?$/
 const MAX_BUDGET_USD = '3'
@@ -41,13 +41,18 @@ function reviewState(season) {
   const loaded = loadSeason(season)
   if (loaded.failures) return { status: 404, payload: { failures: loaded.failures } }
   const { raw, ctx } = loaded
+  const { processedFile } = seasonPaths(season)
+  const finalized = existsSync(processedFile)
+  const published = finalized ? JSON.parse(readFileSync(processedFile, 'utf8')).storylines : []
   return {
     status: 200,
     payload: {
       raw,
       teams: ctx.teams,
       playoffs: loaded.playoffs,
-      finalized: existsSync(seasonPaths(season).processedFile),
+      finalized,
+      changedSinceFinalize:
+        finalized && JSON.stringify(buildProcessed(raw, '').storylines) !== JSON.stringify(published),
       failures: checkRaw(raw, ctx),
       finalizeFailures: checkFinalize(raw, ctx),
       running: running[season] ?? null,
@@ -107,9 +112,11 @@ async function handleFinalize(res, season) {
   const before = reviewState(season)
   if (before.status !== 200) return sendJson(res, before.status, before.payload)
   if (running[season]) return sendJson(res, 409, { failures: [`Wait for the search for ${running[season]} to finish`] })
-  if (before.payload.finalized)
-    return sendJson(res, 409, { failures: [`${season} is already finalized; revising it goes through the skill's revise phase`] })
-  for (const args of [['run', 'check:storylines', '--', season, '--finalize'], ['run', 'build:rankings']]) {
+  const { finalized, changedSinceFinalize } = before.payload
+  if (finalized && !changedSinceFinalize)
+    return sendJson(res, 409, { failures: [`${season} already matches its finalized list`] })
+  const check = ['run', 'check:storylines', '--', season, '--finalize', ...(finalized ? ['--revise'] : [])]
+  for (const args of [check, ['run', 'build:rankings']]) {
     const { code, output } = await runCommand('npm', args)
     if (code !== 0)
       return sendJson(res, 422, { failures: output.split('\n').filter((line) => line && !line.startsWith('>')) })

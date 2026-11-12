@@ -32,6 +32,7 @@ export type ReviewState = {
   teams: Team[]
   playoffs: Partial<Record<Team, PlayoffStage>>
   finalized: boolean
+  changedSinceFinalize: boolean
   failures: string[]
   finalizeFailures: string[]
   running: string | null

@@ -1,6 +1,6 @@
 {
   "season": "2008-09",
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-12",
   "guidance": [
     {
       "id": "retro-redeem-team",
@@ -625,6 +625,51 @@
       "status": "included"
     },
     {
+      "id": "pacers-trade-oneal",
+      "title": "Pacers trade Jermaine O'Neal to Toronto for T.J. Ford",
+      "eventDate": "2008-07-09",
+      "teams": [
+        "ind",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers, Raptors complete trade sending O'Neal to Toronto",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3480419",
+        "publishedAt": "2008-07-09"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind",
+        "weekly-tor"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "nuggets-dump-camby",
+      "title": "Nuggets give Marcus Camby to the Clippers to cut salary",
+      "eventDate": "2008-07-15",
+      "teams": [
+        "den",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets trade Camby to Clippers for second-round pick",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3491156",
+        "publishedAt": "2008-07-15"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "deron-extension",
       "title": "Deron Williams signs an extension with Utah",
       "eventDate": "2008-07-17",
@@ -644,6 +689,27 @@
         "weekly-uta"
       ],
       "status": "included"
+    },
+    {
+      "id": "bucks-skiles-rebuild",
+      "title": "Scott Skiles and John Hammond start rebuilding the Bucks",
+      "eventDate": "2008-07-24",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "For Bucks, there are signs of life",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2008/07/24/skiles-bucks",
+        "publishedAt": "2008-07-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil"
+      ],
+      "status": "pending"
     },
     {
       "id": "artest-to-rockets",
@@ -689,6 +755,29 @@
         "weekly-atl"
       ],
       "status": "included"
+    },
+    {
+      "id": "cavs-trade-for-mo-williams",
+      "title": "Cavaliers land Mo Williams in a three-team deal",
+      "eventDate": "2008-08-13",
+      "teams": [
+        "cle",
+        "mil",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks send Williams to Cavaliers in three-team deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3533552",
+        "publishedAt": "2008-08-13"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cle"
+      ],
+      "status": "pending"
     },
     {
       "id": "redeem-team-gold",
@@ -764,6 +853,27 @@
       "status": "included"
     },
     {
+      "id": "ellis-suspended-30-games",
+      "title": "Warriors suspend Monta Ellis 30 games over the moped crash",
+      "eventDate": "2008-10-11",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ellis gets 30-game suspension without pay for accident",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=3638098",
+        "publishedAt": "2008-10-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "oden-debut",
       "title": "Greg Oden's debut ends with a foot injury",
       "eventDate": "2008-10-28",
@@ -809,6 +919,28 @@
       "status": "included"
     },
     {
+      "id": "parker-scores-55",
+      "title": "Tony Parker scores 55 in Minnesota",
+      "eventDate": "2008-11-05",
+      "teams": [
+        "sas",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Parker, Amare, LeBron go wild",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-081106",
+        "publishedAt": "2008-11-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sas"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "sloan-1000",
       "title": "Jerry Sloan wins his 1,000th game with Utah",
       "eventDate": "2008-11-07",
@@ -829,6 +961,28 @@
         "weekly-uta"
       ],
       "status": "included"
+    },
+    {
+      "id": "hawks-6-0-start",
+      "title": "Hawks open 6-0",
+      "eventDate": "2008-11-11",
+      "teams": [
+        "atl",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Lakers and Hawks stay unbeaten",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-081112",
+        "publishedAt": "2008-11-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-atl"
+      ],
+      "status": "pending"
     },
     {
       "id": "knicks-clear-cap",
@@ -1011,6 +1165,48 @@
       "status": "included"
     },
     {
+      "id": "paul-steals-streak",
+      "title": "Chris Paul chases the consecutive-games steal record",
+      "eventDate": "2008-12-17",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chris Paul One Steal Away from History",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/93731-chris-paul-one-steal-away-from-history",
+        "publishedAt": "2008-12-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "boozer-opt-out-talk",
+      "title": "Carlos Boozer says he will opt out while injured",
+      "eventDate": "2008-12-17",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Carlos Boozer: The Two-Faced, Master Manipulator. Whats Next For Utah?",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/158955-carlos-boozer-the-two-faced-master-manipulator-whats-next-for-utah",
+        "publishedAt": "2009-04-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "roy-52",
       "title": "Brandon Roy scores 52 against Phoenix",
       "eventDate": "2008-12-18",
@@ -1051,6 +1247,48 @@
         "weekly-bos"
       ],
       "status": "included"
+    },
+    {
+      "id": "larry-brown-bobcats",
+      "title": "Larry Brown's demanding first season in Charlotte",
+      "eventDate": "2008-12-30",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brown holding oft-injured May out until he's in better shape",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3800906",
+        "publishedAt": "2008-12-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "nets-surprise-start",
+      "title": "Harris and rookie Brook Lopez make the Nets a surprise",
+      "eventDate": "2009-01-16",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Devin Harris and the New Jersey Nets Surprise, But Is Mediocrity Progress?",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/111843-devin-harris-and-the-new-jersey-nets-surprise-but-is-mediocrity-progress",
+        "publishedAt": "2009-01-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "pending"
     },
     {
       "id": "redd-acl",
@@ -1115,6 +1353,27 @@
         "weekly-mem"
       ],
       "status": "included"
+    },
+    {
+      "id": "devin-harris-all-star",
+      "title": "Devin Harris becomes an All-Star in New Jersey",
+      "eventDate": "2009-01-29",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Looking back at Devin Harris’ intriguing 2009 All-Star nod as a Net",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/nets/old-school/looking-back-at-devin-harris-intriguing-2009-all-star-nod-as-a-net",
+        "publishedAt": "2024-02-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "pending"
     },
     {
       "id": "kobe-61",
@@ -1227,6 +1486,49 @@
       "status": "included"
     },
     {
+      "id": "nate-robinson-dunk-title",
+      "title": "Nate Robinson leaps Dwight Howard to win the dunk contest",
+      "eventDate": "2009-02-14",
+      "teams": [
+        "nyk",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Robinson Jumps Over Howard (the Superman) To Win NBA Slam Dunk Competition Again",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/124400-robinson-jumps-over-howard-the-superman-to-win-nba-slam-dunk-competition-again",
+        "publishedAt": "2009-02-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "rudy-fernandez-dunk-contest",
+      "title": "Rudy Fernandez is voted into the dunk contest",
+      "eventDate": "2009-02-14",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Fernando Who? The Story TNT Missed at the Slam Dunk Competition",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/125500",
+        "publishedAt": "2009-02-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-por"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "porter-fired",
       "title": "Suns fire Terry Porter, return to run-and-gun under Gentry",
       "eventDate": "2009-02-15",
@@ -1247,6 +1549,28 @@
         "weekly-phx"
       ],
       "status": "included"
+    },
+    {
+      "id": "shaq-kobe-all-star-mvp",
+      "title": "Shaq and Kobe share All-Star MVP in Phoenix",
+      "eventDate": "2009-02-15",
+      "teams": [
+        "phx",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Shaq Wins Phoenix’s First All-Star MVP as West Downs East",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/suns/news/allstar09_recap_090215.html",
+        "publishedAt": "2009-02-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx"
+      ],
+      "status": "pending"
     },
     {
       "id": "chandler-trade-rescinded",
@@ -1297,6 +1621,27 @@
       "status": "included"
     },
     {
+      "id": "amare-retina-surgery",
+      "title": "Amar'e Stoudemire's detached retina ends his season",
+      "eventDate": "2009-02-20",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stoudemire has surgery to repair retina",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3921500",
+        "publishedAt": "2009-02-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "tmac-microfracture",
       "title": "Tracy McGrady's season ends with microfracture surgery",
       "eventDate": "2009-02-21",
@@ -1339,6 +1684,71 @@
         "weekly-bos"
       ],
       "status": "included"
+    },
+    {
+      "id": "pistons-iverson-collapse",
+      "title": "The Iverson experiment unravels in Detroit",
+      "eventDate": "2009-02-25",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The 2009 Detroit Pistons: The Story of Dumars, Iverson, and Curry",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/129568-the-2009-detroit-pistons-the-story-of-iverson-dumars-and-currey",
+        "publishedAt": "2009-02-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "wade-beats-bulls-2ot",
+      "title": "Wade's steal and buzzer-beater top the Bulls in double OT",
+      "eventDate": "2009-03-09",
+      "teams": [
+        "mia",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Wade's heights, Rudy's lows",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-090310",
+        "publishedAt": "2009-03-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mia",
+        "weekly-chi"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "arenas-return",
+      "title": "Gilbert Arenas pushes to return late in a lost season",
+      "eventDate": "2009-03-25",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Arenas needs to slow down return",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2009/03/25/arenas",
+        "publishedAt": "2009-03-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was"
+      ],
+      "status": "pending"
     },
     {
       "id": "iverson-pistons-bench",
@@ -1385,6 +1795,91 @@
       "status": "included"
     },
     {
+      "id": "wade-55-knicks",
+      "title": "Wade scores a career-high 55 against the Knicks",
+      "eventDate": "2009-04-12",
+      "teams": [
+        "mia",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "This Day In HEAT History: Dwyane Wade’s Career Game Against The Knicks",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/heat/news/feature-wade-55-knicks-200412",
+        "publishedAt": "2020-04-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mia"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "wade-scoring-title",
+      "title": "Dwyane Wade wins the scoring title",
+      "eventDate": "2009-04-15",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Miami Heat Season Recap: Where Dwyane Wade Happened",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/212518-miami-heat-season-recap-where-dwyane-wade-happened",
+        "publishedAt": "2009-07-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mia"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "blazers-return-to-playoffs",
+      "title": "Blazers win 54 and end the West's longest playoff drought",
+      "eventDate": "2009-04-15",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Top 10 Moments of 2009 Portland Trail Blazers",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/156805-top-10-moments-of-2009-portland-trail-blazers",
+        "publishedAt": "2009-04-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-por"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "mavs-carlisle-50-wins",
+      "title": "Mavericks recover from a 2-7 start to win 50 under Carlisle",
+      "eventDate": "2009-04-15",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2008-09: Carlisle, Mavs push, pull to 50",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/dallas/mavericks/post/_/id/4669171/2008-09-carlisle-mavs-push-pull-to-50",
+        "publishedAt": "2010-05-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "garnett-knee",
       "title": "Kevin Garnett's knee ends his season",
       "eventDate": "2009-04-16",
@@ -1405,6 +1900,29 @@
         "po-bos"
       ],
       "status": "included"
+    },
+    {
+      "id": "iguodala-game-1-winner",
+      "title": "Iguodala's Game 1 winner; Magic beat the Sixers in six",
+      "eventDate": "2009-04-19",
+      "teams": [
+        "phi",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sixers playoff rewind: Andre Iguodala sinks game winner vs. Magic",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/sixers-playoff-rewind-andre-iguodala-113004687.html",
+        "publishedAt": "2021-08-31"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-phi",
+        "po-orl"
+      ],
+      "status": "pending"
     },
     {
       "id": "roy-42-playoffs",
@@ -1451,6 +1969,72 @@
       "status": "included"
     },
     {
+      "id": "wizards-hire-saunders",
+      "title": "Wizards hire Flip Saunders",
+      "eventDate": "2009-04-22",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards Name Saunders Head Coach",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/wizards/news/saunders_090422.html",
+        "publishedAt": "2009-04-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "jazz-take-game-3",
+      "title": "Jazz steal Game 3 but fall to the Lakers in five",
+      "eventDate": "2009-04-23",
+      "teams": [
+        "uta",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Jazz Strike First and Last to Overtake the Lakers, 88-86",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/161355-the-jazz-strike-first-and-last-to-overtake-the-lakers-88-86",
+        "publishedAt": "2009-04-24"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-uta"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cavs-sweep-pistons",
+      "title": "Cavaliers sweep the Pistons, ending Detroit's run",
+      "eventDate": "2009-04-26",
+      "teams": [
+        "cle",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons' Playoff Run Ends In First-Round Sweep",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/163286-pistons-playoff-run-ends-in-first-round-sweep",
+        "publishedAt": "2009-04-27"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-cle",
+        "po-det"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "nuggets-rout-hornets",
       "title": "Nuggets beat the Hornets by 58",
       "eventDate": "2009-04-27",
@@ -1474,6 +2058,29 @@
       "status": "included"
     },
     {
+      "id": "mavs-oust-spurs",
+      "title": "Mavericks knock the Spurs out in the first round",
+      "eventDate": "2009-04-28",
+      "teams": [
+        "dal",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "San Antonio Spurs' Reign of Basketball Brilliance is Over",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/162899-san-antonio-spurs-reign-of-basketball-brilliance-is-over",
+        "publishedAt": "2009-04-26"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-dal",
+        "po-sas"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "celtics-bulls-classic",
       "title": "Celtics outlast the Bulls in an all-time first-round series",
       "eventDate": "2009-05-02",
@@ -1495,6 +2102,73 @@
         "po-chi"
       ],
       "status": "included"
+    },
+    {
+      "id": "hawks-mia-game-7",
+      "title": "Hawks beat Miami in Game 7 for first series win in a decade",
+      "eventDate": "2009-05-03",
+      "teams": [
+        "atl",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks' history lesson leads to first playoff series victory in 10 years",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2009/05/03/hawks-heatgame7",
+        "publishedAt": "2009-05-03"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-atl",
+        "po-mia"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cavs-sweep-hawks",
+      "title": "Cavaliers sweep the Hawks in the second round",
+      "eventDate": "2009-05-11",
+      "teams": [
+        "cle",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Cavaliers school Hawks again in Game 2",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-090508",
+        "publishedAt": "2009-05-08"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-cle",
+        "po-atl"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "triano-permanent-coach",
+      "title": "Raptors make Jay Triano their full-time coach",
+      "eventDate": "2009-05-11",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Toronto Raptors: A Complete Coaching Changeover",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/254891-toronto-raptors-a-complete-coaching-changeover",
+        "publishedAt": "2009-09-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-tor"
+      ],
+      "status": "pending"
     },
     {
       "id": "granger-mip",
@@ -1594,6 +2268,54 @@
       "status": "included"
     },
     {
+      "id": "magic-win-game-7-boston",
+      "title": "Magic win Game 7 in Boston, ending the Celtics' title defense",
+      "eventDate": "2009-05-17",
+      "teams": [
+        "orl",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic Classic Wins: Game 7 of 2009 Conference Semifinals Against Celtics",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/magic/magic-classic-wins-game-7-2009-conference-semifinals-against-celtics-20200522",
+        "publishedAt": "2020-05-22"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-orl",
+        "po-bos"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "clippers-win-lottery",
+      "title": "Clippers win the lottery; Kings fall to No. 4",
+      "eventDate": "2009-05-19",
+      "teams": [
+        "lac",
+        "sac",
+        "mem",
+        "okc",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers win draft lottery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=4181208",
+        "publishedAt": "2009-05-19"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-lottery"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "lakers-oust-nuggets",
       "title": "Lakers eliminate the Nuggets in the West finals",
       "eventDate": "2009-05-29",
@@ -1617,6 +2339,27 @@
       "status": "included"
     },
     {
+      "id": "sixers-hire-eddie-jordan",
+      "title": "Sixers hire Eddie Jordan",
+      "eventDate": "2009-05-29",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Eddie Jordan hired to coach Sixers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4216449",
+        "publishedAt": "2009-05-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "lebron-no-handshake",
       "title": "Magic stun the Cavs; LeBron skips the handshake",
       "eventDate": "2009-05-30",
@@ -1638,6 +2381,27 @@
         "po-orl"
       ],
       "status": "included"
+    },
+    {
+      "id": "kings-hire-westphal",
+      "title": "Kings hire Paul Westphal after a 17-65 season",
+      "eventDate": "2009-06-09",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Westphal new Kings coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4247234",
+        "publishedAt": "2009-06-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac"
+      ],
+      "status": "pending"
     },
     {
       "id": "lakers-title",
@@ -1820,6 +2584,133 @@
         "draft-2009"
       ],
       "status": "included"
+    },
+    {
+      "id": "knicks-draft-hill-after-curry",
+      "title": "Knicks take Jordan Hill one pick after Curry goes to Golden State",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "nyk",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Steph Curry was hoping to be drafted by Knicks, not Warriors",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28550132/steph-curry-was-hoping-drafted-knicks-not-warriors",
+        "publishedAt": "2020-01-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2009"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bucks-draft-jennings",
+      "title": "Bucks draft Brandon Jennings after his year in Italy",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Milwaukee Bucks Draft Review",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/207066-milwaukee-bucks-draft-review",
+        "publishedAt": "2009-06-26"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2009"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "thunder-draft-harden",
+      "title": "Thunder draft James Harden third",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder Acquires James Harden, B.J. Mullens and Robert Vaden in 2009 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/thunder/news/draft_release_090625.html",
+        "publishedAt": "2009-06-26"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2009"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "grizzlies-draft-thabeet",
+      "title": "Grizzlies take Hasheem Thabeet second",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies select Hasheem Thabeet with No. 2 Pick in 2009 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/grizzlies/news/grizzlies_select_thabeet_carroll_young-090626.html",
+        "publishedAt": "2009-06-26"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2009"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "wolves-draft-rubio-flynn",
+      "title": "Timberwolves draft Rubio and Flynn back to back",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "One Guard Too Many: What Was Minnesota's Kahn Thinking?",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/207667-one-guard-too-many-what-was-minnesotas-kahn-thinking",
+        "publishedAt": "2009-06-26"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2009"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bobcats-draft-henderson",
+      "title": "Bobcats draft Gerald Henderson",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Draft grades: Evaluating every team",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2009/columns/story?columnist=ford_chad&page=DraftGrades-090626",
+        "publishedAt": "2009-06-26"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2009"
+      ],
+      "status": "pending"
     }
   ]
 }

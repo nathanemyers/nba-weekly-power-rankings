@@ -1,6 +1,6 @@
 {
   "season": "2025-26",
-  "finalizedAt": "2026-10-29",
+  "finalizedAt": "2026-11-12",
   "storylines": [
     {
       "id": "raptors-part-ways-with-masai-ujiri",
@@ -15,6 +15,21 @@
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/45596081/sources-masai-ujiri-vice-chairman-president-raptors",
         "publishedAt": "2025-06-27"
+      }
+    },
+    {
+      "id": "randle-extension",
+      "title": "Julius Randle agrees to a three-year extension",
+      "eventDate": "2025-06-29",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Reports: Julius Randle, Wolves agree to 3-year, $100 million extension",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/julius-randle-timberwolves-contract-extension-2025",
+        "publishedAt": "2025-06-29"
       }
     },
     {
@@ -80,6 +95,21 @@
       }
     },
     {
+      "id": "booker-max-extension",
+      "title": "Devin Booker signs a record two-year extension",
+      "eventDate": "2025-07-09",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Devin Booker agrees to 2-year, $145M max extension with Suns",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/45705332/devin-booker-agrees-2-year-145m-max-extension-suns",
+        "publishedAt": "2025-07-09"
+      }
+    },
+    {
       "id": "lillard-returns-to-blazers",
       "title": "Damian Lillard returns to Portland",
       "eventDate": "2025-07-17",
@@ -93,6 +123,21 @@
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/45765001/sources-damian-lillard-finalizing-deal-return-trail-blazers",
         "publishedAt": "2025-07-17"
+      }
+    },
+    {
+      "id": "raptors-promote-webster",
+      "title": "Raptors give Bobby Webster control instead of hiring a president",
+      "eventDate": "2025-08-18",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors extend GM Bobby Webster, won't hire president",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46008705/sources-raptors-gm-webster-head-basketball-operations",
+        "publishedAt": "2025-08-18"
       }
     },
     {
@@ -123,6 +168,51 @@
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/46348548/sources-rockets-fred-vanvleet-torn-acl-miss-season",
         "publishedAt": "2025-09-22"
+      }
+    },
+    {
+      "id": "kuminga-standoff-ends",
+      "title": "Kuminga and the Warriors end their contract standoff",
+      "eventDate": "2025-09-30",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors, Jonathan Kuminga agree on 2-year, $48.5 million deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46441474/warriors-jonathan-kuminga-agree-2-year-485-million-deal",
+        "publishedAt": "2025-09-30"
+      }
+    },
+    {
+      "id": "westbrook-joins-kings",
+      "title": "Russell Westbrook joins the Kings",
+      "eventDate": "2025-10-15",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Russell Westbrook agrees to join Kings for 18th NBA season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46604692/russell-westbrook-agrees-join-kings-18th-nba-season",
+        "publishedAt": "2025-10-15"
+      }
+    },
+    {
+      "id": "durant-rockets-extension",
+      "title": "Kevin Durant signs a discounted extension with Houston",
+      "eventDate": "2025-10-19",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kevin Durant gets $90M Rockets extension, $30M under max",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/46647094/kevin-durant-getting-90m-rockets-extension-30m-max",
+        "publishedAt": "2025-10-19"
       }
     },
     {
@@ -260,6 +350,21 @@
       }
     },
     {
+      "id": "maxey-54",
+      "title": "Tyrese Maxey scores a career-high 54",
+      "eventDate": "2025-11-20",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "76ers' Tyrese Maxey continues breakout season with career-high 54 points vs. Bucks",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/tyrese-maxey-breakout-season-with-career-high-54-points-043603470.html",
+        "publishedAt": "2025-11-21"
+      }
+    },
+    {
       "id": "pistons-13-game-streak",
       "title": "Pistons win a franchise-record-tying 13 straight",
       "eventDate": "2025-11-24",
@@ -271,6 +376,36 @@
         "headline": "Detroit Pistons win 13th straight, tie franchise record",
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/47092129/detroit-pistons-win-13th-straight-game-tie-franchise-record",
+        "publishedAt": "2025-11-24"
+      }
+    },
+    {
+      "id": "suns-hot-start",
+      "title": "Suns beat dreary projections with an 11-6 start",
+      "eventDate": "2025-11-24",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns upend dreary preseason projections with hot start",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/suns-strong-start-2025-26-season",
+        "publishedAt": "2025-11-24"
+      }
+    },
+    {
+      "id": "herro-season-debut",
+      "title": "Tyler Herro returns from ankle surgery and beats the Mavericks",
+      "eventDate": "2025-11-24",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Tyler Herro leads Heat to win over Mavericks in season debut",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47092158/tyler-herro-leads-heat-win-mavericks-season-debut",
         "publishedAt": "2025-11-24"
       }
     },
@@ -301,6 +436,21 @@
         "headline": "Thunder blow out Suns, match 73-win Warriors with 24-1 start",
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/47273843/thunder-blow-suns-match-73-win-warriors-24-1-start",
+        "publishedAt": "2025-12-10"
+      }
+    },
+    {
+      "id": "derik-queen-rookie",
+      "title": "Derik Queen's rookie year tests the draft-night trade",
+      "eventDate": "2025-12-10",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Can Pelicans, Derik Queen prove draft-night trade doubters wrong?",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47190959/new-orleans-pelicans-derik-queen-jeremiah-fears-zion-williamson-willie-green",
         "publishedAt": "2025-12-10"
       }
     },
@@ -427,6 +577,22 @@
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/47667747/warriors-jimmy-butler-helped-knee-injury-vs-heat",
         "publishedAt": "2026-01-20"
+      }
+    },
+    {
+      "id": "demin-rookie-3-record",
+      "title": "Egor Demin sets the rookie record for straight games with a 3",
+      "eventDate": "2026-01-30",
+      "teams": [
+        "bkn",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets guard Egor Demin sets NBA rookie record with 3-pointer",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47783563/nets-guard-egor-demin-sets-nba-rookie-record-3-pointer",
+        "publishedAt": "2026-01-30"
       }
     },
     {
@@ -603,6 +769,21 @@
       }
     },
     {
+      "id": "jjj-season-ending-surgery",
+      "title": "Jaren Jackson Jr. needs season-ending knee surgery",
+      "eventDate": "2026-02-12",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz's Jaren Jackson Jr. to have surgery for growth in knee",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/47909248/source-jazz-jaren-jackson-jr-season-ending-surgery",
+        "publishedAt": "2026-02-12"
+      }
+    },
+    {
       "id": "all-star-usa-vs-world",
       "title": "All-Star Game switches to USA vs. World",
       "eventDate": "2026-02-15",
@@ -613,6 +794,21 @@
         "publisher": "NBA.com",
         "url": "https://www.nba.com/news/2026-all-star-teams-announcement",
         "publishedAt": "2026-02-15"
+      }
+    },
+    {
+      "id": "lavine-sabonis-out",
+      "title": "LaVine and Sabonis both need season-ending surgery",
+      "eventDate": "2026-02-18",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings' Zach LaVine, Domantas Sabonis will miss the rest of the season after surgeries",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/news/zach-lavine-domantas-sabonis-surgeries",
+        "publishedAt": "2026-02-19"
       }
     },
     {
@@ -767,6 +963,21 @@
       }
     },
     {
+      "id": "morant-season-over",
+      "title": "Grizzlies rule Ja Morant out for the season",
+      "eventDate": "2026-03-24",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies rule Ja Morant's season over due to left elbow injury",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48300820/grizzlies-rule-ja-morant-season-due-left-elbow-injury",
+        "publishedAt": "2026-03-24"
+      }
+    },
+    {
       "id": "bucks-eliminated",
       "title": "Bucks' nine-year playoff streak ends",
       "eventDate": "2026-03-28",
@@ -779,6 +990,21 @@
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/48333041/bucks-eliminated-playoff-contention-blowout-loss",
         "publishedAt": "2026-03-28"
+      }
+    },
+    {
+      "id": "blazers-sale-approved",
+      "title": "NBA approves the Blazers' sale to Tom Dundon",
+      "eventDate": "2026-03-30",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA approves Trail Blazers' sale to group led by Tom Dundon",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48350814/nba-board-governors-approves-portland-trail-blazers-sale-group-led-tom-dundon",
+        "publishedAt": "2026-03-30"
       }
     },
     {
@@ -810,6 +1036,21 @@
         "publisher": "Yahoo Sports",
         "url": "https://sports.yahoo.com/articles/aces-east-pistons-clinch-no-012351272.html",
         "publishedAt": "2026-04-04"
+      }
+    },
+    {
+      "id": "curry-returns-knee",
+      "title": "Stephen Curry returns from a 27-game knee absence",
+      "eventDate": "2026-04-05",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stephen Curry drops 29 points in return from knee injury as Warriors fall to Rockets",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba/breaking-news/article/stephen-curry-drops-29-points-in-return-from-knee-injury-as-warriors-fall-to-rockets-044205241.html",
+        "publishedAt": "2026-04-06"
       }
     },
     {
@@ -900,6 +1141,21 @@
         "publisher": "Yahoo Sports",
         "url": "https://sports.yahoo.com/articles/pacers-set-franchise-record-63-004012283.html",
         "publishedAt": "2026-04-13"
+      }
+    },
+    {
+      "id": "kings-keep-christie",
+      "title": "Kings keep Doug Christie after a 22-60 season",
+      "eventDate": "2026-04-12",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Kings to retain coach Doug Christie for next season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48466453/sources-kings-retain-coach-doug-christie-next-season",
+        "publishedAt": "2026-04-12"
       }
     },
     {
@@ -1186,6 +1442,22 @@
       }
     },
     {
+      "id": "magic-fire-mosley",
+      "title": "Magic fire Jamahl Mosley after blowing a 3-1 lead",
+      "eventDate": "2026-05-04",
+      "teams": [
+        "orl",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic fire head coach Jamahl Mosley after 5 seasons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48675305/sources-magic-fire-head-coach-jamahl-mosley-5-seasons",
+        "publishedAt": "2026-05-04"
+      }
+    },
+    {
       "id": "knicks-sweep-76ers",
       "title": "Knicks sweep the 76ers",
       "eventDate": "2026-05-10",
@@ -1313,6 +1585,22 @@
       }
     },
     {
+      "id": "pelicans-hire-mosley",
+      "title": "Pelicans hire Jamahl Mosley",
+      "eventDate": "2026-05-18",
+      "teams": [
+        "nop",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pelicans hire Jamahl Mosley, fired by Magic, as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/48806473/sources-pelicans-hiring-jamahl-mosley-head-coach",
+        "publishedAt": "2026-05-18"
+      }
+    },
+    {
       "id": "knicks-sweep-cavaliers",
       "title": "Knicks sweep the Cavaliers to reach the Finals",
       "eventDate": "2026-05-25",
@@ -1370,6 +1658,21 @@
         "publisher": "ESPN",
         "url": "https://www.espn.com/nba/story/_/id/48926783/emotional-victor-wembanyama-leads-spurs-back-nba-finals",
         "publishedAt": "2026-05-30"
+      }
+    },
+    {
+      "id": "cavs-keep-core",
+      "title": "Cavaliers plan to run it back after the conference finals",
+      "eventDate": "2026-05-31",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavaliers' Offseason Plans Revealed After Conference Finals Exit To Knicks",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/articles/cavaliers-offseason-plans-revealed-conference-125154342.html",
+        "publishedAt": "2026-05-31"
       }
     },
     {
