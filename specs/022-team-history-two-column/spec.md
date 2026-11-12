@@ -64,16 +64,20 @@ While reading storylines in the right column, the fan scrolls through several se
 
 ### User Story 4 - Read team history on a phone (Priority: P3)
 
-A fan opens the same page on a narrow (phone-sized) screen. Instead of two columns, each season appears as a single stacked block containing its overview (name, minimap, postseason badges) followed by its storylines and top-player badges. The page scrolls as one normal page.
+A fan opens the same page on a narrow (phone-sized) screen. There is no two-column layout. The page shows only the season overviews (name, minimap, postseason badges), one per season, in a single list. Tapping a season expands it in place, showing that season's detail (storylines, top-player badges, season-chart link, data source) directly below its overview. Tapping it again collapses it. The page scrolls as one normal page.
 
-**Why this priority**: The request targets desktop; mobile needs a sensible fallback that still drops the AI summaries and shows the new player badges.
+**Why this priority**: The request targets desktop; on a phone the overview list gives a fast scan of every season, and expanding on demand keeps the long storyline lists out of the way.
 
-**Independent Test**: Open a team history page at phone width and confirm there is one page-level scroll, each season shows overview then detail, and no AI summary appears.
+**Independent Test**: Open a team history page at phone width, confirm only overviews are shown, tap a season to expand its detail below it, tap again to collapse, and confirm there is one page-level scroll and no AI summary.
 
 **Acceptance Scenarios**:
 
-1. **Given** a phone-width viewport, **When** the user opens a team history page, **Then** seasons appear in a single column with each season's overview directly above its storylines and player badges.
-2. **Given** a phone-width viewport, **When** the user scrolls, **Then** the whole page scrolls as one, with no nested scroll areas.
+1. **Given** a phone-width viewport, **When** the user opens a team history page, **Then** seasons appear in a single column showing only each season's overview, all collapsed.
+2. **Given** a collapsed season, **When** the user taps its overview, **Then** that season's storylines, player badges, season-chart link, and data source appear directly below its overview, pushing later seasons down.
+3. **Given** an expanded season, **When** the user taps its overview again, **Then** the detail is hidden.
+4. **Given** one season is expanded, **When** the user taps a different season, **Then** that season expands too and the first stays as it was.
+5. **Given** a phone-width viewport, **When** the user scrolls, **Then** the whole page scrolls as one, with no nested scroll areas.
+6. **Given** a screen-reader or keyboard user, **When** they reach a season overview, **Then** it is announced as expandable with its current expanded/collapsed state and can be toggled with Enter or Space.
 
 ---
 
@@ -86,7 +90,8 @@ A fan opens the same page on a narrow (phone-sized) screen. Instead of two colum
 - A player was traded mid-season: rank by minutes played for this team only.
 - A season has no postseason appearance: the left entry shows no postseason badges (as today) and keeps the same layout height as other entries where practical.
 - The team has only one season of data: both columns still render; the single season is highlighted.
-- The browser window is resized across the desktop/phone breakpoint: the layout switches without losing the user's place more than one season.
+- The browser window is resized across the desktop/phone breakpoint: the layout switches without error; expanded/collapsed state on phone and the active season on desktop are not required to carry over.
+- On phone, the user expands a season near the bottom of the screen: the page does not jump; the detail simply appears below and the user scrolls to read it.
 - A user clicks a left-column entry while a previous click's scroll is still running: the latest click wins and the highlight ends on that season, without flickering through the seasons in between.
 - The user has requested reduced motion in their system settings: scrolling jumps directly rather than animating.
 
@@ -107,7 +112,9 @@ A fan opens the same page on a narrow (phone-sized) screen. Instead of two colum
 - **FR-011**: Scrolling triggered by a left-column click MUST NOT cause the highlight to step through the intermediate seasons it passes.
 - **FR-012**: Scroll movements MUST respect the user's reduced-motion preference.
 - **FR-013**: Left-column entries MUST be reachable and activatable by keyboard and MUST expose which entry is currently active to assistive technology.
-- **FR-014**: On viewports below the desktop breakpoint, the page MUST show a single scrolling column in which each season's overview is immediately followed by its storylines and player badges.
+- **FR-014**: On viewports below the desktop breakpoint, the page MUST NOT use two columns. It MUST show a single page-scrolling list of season overviews (the FR-002 content only), all collapsed on load.
+- **FR-014a**: On phone layout, tapping or keyboard-activating a season overview MUST toggle that season's detail (the FR-003 content plus the FR-015 and FR-016 controls) directly below it. Each season expands and collapses independently, and each overview MUST expose its expanded/collapsed state to assistive technology.
+- **FR-014b**: The desktop highlight and linked-scroll behaviors (FR-007 through FR-011) do not apply on phone layout.
 - **FR-015**: Users MUST still be able to open a season's full power ranking chart with that team pinned from the team history page, via an explicit control on each season (since clicking a left-column entry now scrolls instead of navigating).
 - **FR-016**: The data source attribution currently shown per season MUST remain visible for each season.
 - **FR-017**: Seasons missing storylines or roster data MUST still render their section, omitting only the missing parts, with a brief note when there are no storylines.
@@ -130,6 +137,7 @@ A fan opens the same page on a narrow (phone-sized) screen. Instead of two colum
 - **SC-005**: Zero AI-generated summary text appears on any team history page.
 - **SC-006**: For every season with roster data, the six player badges shown match the six highest minute totals for that team and season.
 - **SC-007**: On a phone-width screen, the page has no horizontal scrolling and no nested scroll areas.
+- **SC-008**: On a phone-width screen, a user can reach any season's storylines with one tap after scrolling to it, and the initial page shows only season overviews.
 
 ## Assumptions
 
@@ -138,6 +146,7 @@ A fan opens the same page on a narrow (phone-sized) screen. Instead of two colum
 - Removing AI summaries applies to the team history page only; the single-team summary on the season chart page and the stored summary data are unchanged. Removing them elsewhere would be a separate change.
 - Clicking a left-column entry scrolls rather than navigating to the season chart, so the season-chart link moves to a dedicated control on each season (FR-015).
 - "Minutes" means total regular-season minutes played for this team, derived from the games played and minutes per game already prepared for the roster view; no new data collection is needed. Total (not per-game) minutes is used so short-stint players with high per-game minutes do not outrank season-long contributors.
+- On phone, multiple seasons may be expanded at once (expanding one does not collapse others), and expanded state is not remembered across visits.
 - Player badges are compact name chips in the same visual family as the app's existing badges; showing extra stats on them is out of scope.
 - The page header (team logo and name) stays above both columns and does not scroll with either column.
 - No change to the page URL is required when the active season changes; deep-linking to a specific season on the team history page is out of scope.
