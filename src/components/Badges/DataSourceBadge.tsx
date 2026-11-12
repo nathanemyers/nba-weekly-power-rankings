@@ -37,8 +37,6 @@ export default function DataSourceBadge(props: DataSourceBadgeProps) {
         rel="noopener noreferrer"
         title={source.title}
         aria-label={`${props.season} rankings source: ${source.title}`}
-        // Team history cards navigate on click, so keep the link from triggering that too
-        onClick={(event) => event.stopPropagation()}
       >
         Source: {source.label}
       </a>

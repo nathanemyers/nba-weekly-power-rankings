@@ -71,7 +71,7 @@ describe('DetailTabs', () => {
   it('shows Awards by default and disables team tabs when nothing is pinned', async () => {
     await renderTabs()
     expect(screen.getAllByRole('tab').map((tab) => tab.textContent)).toEqual([
-      'Summary',
+      'Storylines',
       'Trends',
       'Roster',
       'Awards',
@@ -80,10 +80,11 @@ describe('DetailTabs', () => {
     expect(selectedTab()).toBe('Awards')
   })
 
-  it('opens on Summary when a team is pinned', async () => {
+  it('opens on Roster when a pinned team has an AI summary but no storylines', async () => {
     await renderTabs([Team.Boston])
-    expect(enabledTabs()).toEqual(['Summary', 'Trends', 'Roster', 'Awards'])
-    expect(selectedTab()).toBe('Summary')
+    expect(enabledTabs()).toEqual(['Trends', 'Roster', 'Awards'])
+    expect(selectedTab()).toBe('Roster')
+    expect(screen.queryByText('Boston led from the first week.')).toBeNull()
   })
 
   it('keeps Roster selected when another team with a roster is pinned', async () => {
@@ -110,10 +111,10 @@ describe('DetailTabs', () => {
     expect(selectedTab()).toBe('Awards')
   })
 
-  it('opens on Summary with season storylines when the season has them and nothing is pinned', async () => {
+  it('opens on Storylines with season storylines when the season has them and nothing is pinned', async () => {
     await renderTabs([], 'storied')
-    expect(enabledTabs()).toContain('Summary')
-    expect(selectedTab()).toBe('Summary')
+    expect(enabledTabs()).toContain('Storylines')
+    expect(selectedTab()).toBe('Storylines')
     expect(
       within(screen.getByRole('tabpanel')).getByRole('list', {
         name: 'storied storylines',
@@ -121,10 +122,10 @@ describe('DetailTabs', () => {
     ).toBeInTheDocument()
   })
 
-  it('offers Summary for a pinned team with storylines but no AI summary', async () => {
+  it('offers Storylines for a pinned team with storylines', async () => {
     await renderTabs([Team.Miami], 'storied')
-    expect(enabledTabs()).toContain('Summary')
-    expect(selectedTab()).toBe('Summary')
+    expect(enabledTabs()).toContain('Storylines')
+    expect(selectedTab()).toBe('Storylines')
     expect(
       within(screen.getByRole('tabpanel')).getByRole('link', {
         name: 'miami-slump headline',

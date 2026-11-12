@@ -1,25 +1,38 @@
 import { Suspense, use } from 'react'
 import { useLoaderData } from 'react-router'
-import TeamHistory from '@/components/TeamHistory'
+import TeamHistory from '@/components/TeamHistory/TeamHistory'
 import TeamLogo from '@/components/TeamLogo'
+import TeamSelect from '@/components/TeamHistory/TeamSelect'
 import type { Season } from '@/data/seasonData'
 import { getTeamName, type Team } from '@/types'
 
 type TeamHistoryLoaderData = { team: Team; seasons: Promise<Season[]> }
 
 function TeamHistorySeasons(props: { team: Team; seasons: Promise<Season[]> }) {
-  return <TeamHistory team={props.team} seasons={use(props.seasons)} />
+  return (
+    <TeamHistory
+      key={props.team}
+      team={props.team}
+      seasons={use(props.seasons)}
+    />
+  )
 }
 
 export default function TeamHistoryView() {
   const { team, seasons } = useLoaderData() as TeamHistoryLoaderData
 
   return (
-    <div className="flex flex-col">
-      <h1 className="mb-6 flex flex-row items-center gap-3 text-2xl sm:mb-10 sm:gap-5 sm:text-4xl">
-        <TeamLogo team={team} className="size-10 object-contain sm:size-auto" />
-        {getTeamName(team)} Team History
-      </h1>
+    <div className="flex flex-col lg:h-[calc(100dvh-4rem)]">
+      <div className="mb-6 flex shrink-0 flex-wrap items-center justify-between gap-3 sm:mb-10">
+        <h1 className="flex flex-row items-center gap-3 text-2xl sm:gap-5 sm:text-4xl">
+          <TeamLogo
+            team={team}
+            className="size-10 object-contain sm:size-auto"
+          />
+          {getTeamName(team)} Team History
+        </h1>
+        <TeamSelect team={team} />
+      </div>
       <Suspense fallback={<p className="text-muted-foreground">Loading…</p>}>
         <TeamHistorySeasons team={team} seasons={seasons} />
       </Suspense>

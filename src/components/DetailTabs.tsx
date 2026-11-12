@@ -3,31 +3,30 @@ import { useAppSelector } from '@/store/hooks'
 import { getSinglePinnedTeam } from '@/store/slices/chart'
 import { useSeason } from '@/hooks/useSeason'
 import {
-  getAISummary,
   getSeasonStorylines,
   getTeamRankings,
   getTeamStorylines,
 } from '@/data/seasonData'
 import { getSeasonAwardGroups } from '@/data/awards'
 import { getMostDeclinedTeams, getMostImprovedTeams } from '@/data/analysis'
-import TeamSeasonSummary from './TeamSeasonSummary'
+import TeamStorylinesPane from './TeamStorylinesPane'
 import RankSwings from './RankSwings'
 import RosterPane from './RosterPane'
 import SeasonAwardsPane from './SeasonAwardsPane'
 import SeasonStorylinesPane from './SeasonStorylinesPane'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs'
 
-type DetailTabId = 'summary' | 'trends' | 'roster' | 'awards'
+type DetailTabId = 'storylines' | 'trends' | 'roster' | 'awards'
 
 const TABS: { id: DetailTabId; label: string }[] = [
-  { id: 'summary', label: 'Summary' },
+  { id: 'storylines', label: 'Storylines' },
   { id: 'trends', label: 'Trends' },
   { id: 'roster', label: 'Roster' },
   { id: 'awards', label: 'Awards' },
 ]
 
-const PINNED_ORDER: DetailTabId[] = ['summary', 'roster', 'trends', 'awards']
-const UNPINNED_ORDER: DetailTabId[] = ['summary', 'awards', 'trends']
+const PINNED_ORDER: DetailTabId[] = ['storylines', 'roster', 'trends', 'awards']
+const UNPINNED_ORDER: DetailTabId[] = ['storylines', 'awards', 'trends']
 
 export default function DetailTabs() {
   const [chosenTab, setChosenTab] = useState<DetailTabId>()
@@ -35,9 +34,8 @@ export default function DetailTabs() {
   const team = useAppSelector(getSinglePinnedTeam)
 
   const isAvailable: Record<DetailTabId, boolean> = {
-    summary: team
-      ? !!getAISummary(season, team) ||
-        getTeamStorylines(season, team).length > 0
+    storylines: team
+      ? getTeamStorylines(season, team).length > 0
       : getSeasonStorylines(season).length > 0,
     trends:
       getMostImprovedTeams(season).length +
@@ -72,8 +70,8 @@ export default function DetailTabs() {
           </TabsTrigger>
         ))}
       </TabsList>
-      <TabsContent value="summary" className="min-h-svh pt-2">
-        {team ? <TeamSeasonSummary /> : <SeasonStorylinesPane />}
+      <TabsContent value="storylines" className="min-h-svh pt-2">
+        {team ? <TeamStorylinesPane /> : <SeasonStorylinesPane />}
       </TabsContent>
       <TabsContent value="trends" className="min-h-svh pt-2">
         <RankSwings />

@@ -8,12 +8,9 @@ export default function SeasonStorylinesPane() {
   if (!storylines.length) return null
 
   return (
-    <div>
-      <h2 className="mb-2 text-lg font-semibold">Season storylines</h2>
-      <StorylineList
-        label={`${season.name} storylines`}
-        storylines={storylines}
-      />
-    </div>
+    <StorylineList
+      label={`${season.name} storylines`}
+      storylines={storylines}
+    />
   )
 }

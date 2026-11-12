@@ -3,6 +3,7 @@ import { seasonIndex as rawIndex, seasonLoaders } from 'data/seasons'
 import {
   SeasonDataSchema,
   SeasonIndexEntrySchema,
+  type RosterEntry,
   type SeasonIndexEntry,
   type Storyline,
 } from 'schemas/season'
@@ -111,9 +112,6 @@ export async function loadAllSeasons(): Promise<Season[]> {
 export const getTeamRankings = (season: Season, team: Team | undefined) =>
   team ? season.teams.find((t) => t.teamId === team) : undefined
 
-export const getAISummary = (season: Season, team: Team | undefined) =>
-  getTeamRankings(season, team)?.aiSummary
-
 // Storylines only show once a season is complete
 export const getSeasonStorylines = (season: Season) =>
   season.completed ? season.storylines.filter((s) => s.featured) : []
@@ -122,3 +120,14 @@ export const getTeamStorylines = (season: Season, team: Team | undefined) =>
   season.completed && team
     ? season.storylines.filter((s) => s.teams.includes(team))
     : []
+
+export type TopPlayer = RosterEntry & { minutes: number }
+
+export const getTopPlayersByMinutes = (
+  roster: RosterEntry[] | undefined,
+  count = 6
+): TopPlayer[] =>
+  (roster ?? [])
+    .map((entry) => ({ ...entry, minutes: Math.round(entry.g * entry.mpg) }))
+    .toSorted((a, b) => b.minutes - a.minutes || a.name.localeCompare(b.name))
+    .slice(0, count)

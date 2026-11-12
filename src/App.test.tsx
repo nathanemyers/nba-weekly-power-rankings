@@ -8,7 +8,7 @@ import {
   within,
 } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { mockReducedMotion } from 'test/fixtures'
+import { mockMediaQueries } from 'test/fixtures'
 import { renderWithRouter } from 'test/renderWithRouter'
 
 // Fixture seasons: 26 weeks, 21 weeks, one short enough to fit the window (from ESPN), and two with rank swings
@@ -89,7 +89,10 @@ const weekTickCount = (container: HTMLElement) =>
 let restoreMotion: () => void
 
 beforeEach(() => {
-  restoreMotion = mockReducedMotion(true)
+  restoreMotion = mockMediaQueries([
+    '(prefers-reduced-motion: reduce)',
+    '(min-width: 640px)',
+  ])
 })
 
 afterEach(() => {
@@ -255,36 +258,27 @@ describe('User Story 3 — pin a team', () => {
   })
 })
 
-describe('Team AI summary tab', () => {
-  const summaryTab = () => screen.queryByRole('tab', { name: 'Summary' })
+describe('Team storylines tab', () => {
+  const storylinesTab = () => screen.queryByRole('tab', { name: 'Storylines' })
 
-  it("shows the pinned team's labeled summary and hides on unpin", async () => {
+  it("never shows the pinned team's AI summary", async () => {
     const user = userEvent.setup()
     await renderWithRouter()
-    expect(summaryTab()).toBeDisabled()
-
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
-    await user.click(summaryTab()!)
-    expect(
-      screen.getByText('Boston led from the first week.')
-    ).toBeInTheDocument()
-    expect(screen.getByText('AI-generated summary')).toBeInTheDocument()
-    expect(
-      screen.getByRole('heading', { name: 'Boston Celtics' })
-    ).toBeInTheDocument()
 
-    await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
-    expect(summaryTab()).toBeDisabled()
+    expect(storylinesTab()).toBeDisabled()
+    expect(screen.queryByText('Boston led from the first week.')).toBeNull()
+    expect(screen.queryByText('AI-generated summary')).toBeNull()
   })
 
-  it('hides the summary when switching seasons clears the pin', async () => {
+  it('hides team storylines when switching seasons clears the pin', async () => {
     const user = userEvent.setup()
     await renderWithRouter()
 
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
     await chooseSeason(user, 'mid')
 
-    expect(summaryTab()).toBeDisabled()
+    expect(storylinesTab()).toBeDisabled()
     expect(shownWeeks()).toBe('1–21')
   })
 })
@@ -321,14 +315,14 @@ describe('Season trends tab', () => {
     expect(sectionTeams('Biggest Down')).toHaveLength(3)
   })
 
-  it('is enabled for a season in progress, with the summary tab disabled', async () => {
+  it('is enabled for a season in progress, with the storylines tab disabled', async () => {
     const user = userEvent.setup()
     await renderWithRouter()
     await chooseSeason(user, 'active')
     await user.click(screen.getByText('Indiana Pacers', { selector: 'text' }))
 
     expect(trendsTab()).toBeEnabled()
-    expect(screen.getByRole('tab', { name: 'Summary' })).toBeDisabled()
+    expect(screen.getByRole('tab', { name: 'Storylines' })).toBeDisabled()
   })
 
   it('pins the clicked team, replacing an earlier pin', async () => {
@@ -453,7 +447,7 @@ describe('Data source badges', () => {
       'Source: NBA.com',
       'Source: NBA.com',
     ])
-    expect(screen.getAllByText('AI-generated summary')).toHaveLength(1)
+    expect(screen.queryAllByText('AI-generated summary')).toHaveLength(0)
   })
 })
 
@@ -601,7 +595,7 @@ describe('Team history addresses', () => {
     await openTeamHistory(user)
     expect(path(router)).toBe('/teamHistory/bos')
 
-    await user.click(screen.getByRole('heading', { name: 'mid' }))
+    await user.click(screen.getByRole('link', { name: 'View mid chart' }))
     await findChart()
     expect(path(router)).toBe('/mid')
     fireEvent.mouseLeave(chart())
@@ -614,12 +608,12 @@ describe('Team history addresses', () => {
     expect(path(router)).toBe('/teamHistory/bos')
   })
 
-  it('pins the team when a card is opened from a shared history link', async () => {
+  it('pins the team when a season chart is opened from a shared history link', async () => {
     const user = userEvent.setup()
     await renderWithRouter(['/teamHistory/mia'])
     await settle()
 
-    await user.click(screen.getByRole('heading', { name: 'long' }))
+    await user.click(screen.getByRole('link', { name: 'View long chart' }))
     await findChart()
     fireEvent.mouseLeave(chart())
     expect(miamiLabel()).toHaveAttribute('font-weight', '700')

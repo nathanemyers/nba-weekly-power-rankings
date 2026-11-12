@@ -8,8 +8,10 @@ import {
   STORYLINES,
 } from 'test/fixtures'
 import { Team } from 'types'
+import type { RosterEntry } from 'schemas/season'
 import {
   getSeasonStorylines,
+  getTopPlayersByMinutes,
   getTeamStorylines,
   loadAllSeasons,
   loadSeason,
@@ -231,5 +233,61 @@ describe('storylines', () => {
     ])
     expect(season.teams.length).toBeGreaterThan(0)
     expect(getSeasonStorylines(season)).toEqual([])
+  })
+})
+
+describe('getTopPlayersByMinutes', () => {
+  const entry = (name: string, g: number, mpg: number): RosterEntry => ({
+    id: name.toLowerCase(),
+    name,
+    pos: 'G',
+    age: 25,
+    g,
+    gs: 0,
+    mpg,
+    pts: 0,
+    trb: 0,
+    ast: 0,
+    stl: 0,
+    blk: 0,
+    tov: 0,
+    per: null,
+    awards: [],
+  })
+  const names = (roster: RosterEntry[] | undefined) =>
+    getTopPlayersByMinutes(roster).map((p) => p.name)
+
+  it('ranks by total minutes, not minutes per game', () => {
+    const top = getTopPlayersByMinutes([
+      entry('Short', 10, 40),
+      entry('Long', 70, 30),
+    ])
+    expect(top).toMatchObject([
+      { id: 'long', name: 'Long', minutes: 2100 },
+      { id: 'short', name: 'Short', minutes: 400 },
+    ])
+  })
+
+  it('breaks ties by name', () => {
+    expect(names([entry('Zed', 50, 20), entry('Abe', 40, 25)])).toEqual([
+      'Abe',
+      'Zed',
+    ])
+  })
+
+  it('keeps at most six players', () => {
+    const roster = 'ABCDEFGH'.split('').map((n, i) => entry(n, 80 - i, 20))
+    expect(names(roster)).toEqual(['A', 'B', 'C', 'D', 'E', 'F'])
+  })
+
+  it('returns every player of a short roster', () => {
+    expect(
+      names([entry('A', 1, 1), entry('B', 2, 2), entry('C', 3, 3)])
+    ).toEqual(['C', 'B', 'A'])
+  })
+
+  it('returns nothing without a roster', () => {
+    expect(getTopPlayersByMinutes(undefined)).toEqual([])
+    expect(getTopPlayersByMinutes([])).toEqual([])
   })
 })
