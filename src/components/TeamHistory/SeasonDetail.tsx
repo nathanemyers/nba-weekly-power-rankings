@@ -35,7 +35,6 @@ export default function SeasonDetail(props: SeasonDetailProps) {
         </Heading>
       )}
       <TopPlayerBadges season={season} team={props.team} />
-      <h3 className="mt-2 text-lg font-semibold">Storylines</h3>
       {storylines.length > 0 ? (
         <StorylineList
           label={`${season.name} ${getTeamName(props.teamId)} storylines`}

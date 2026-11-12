@@ -112,9 +112,6 @@ export async function loadAllSeasons(): Promise<Season[]> {
 export const getTeamRankings = (season: Season, team: Team | undefined) =>
   team ? season.teams.find((t) => t.teamId === team) : undefined
 
-export const getAISummary = (season: Season, team: Team | undefined) =>
-  getTeamRankings(season, team)?.aiSummary
-
 // Storylines only show once a season is complete
 export const getSeasonStorylines = (season: Season) =>
   season.completed ? season.storylines.filter((s) => s.featured) : []

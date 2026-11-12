@@ -258,36 +258,27 @@ describe('User Story 3 — pin a team', () => {
   })
 })
 
-describe('Team AI summary tab', () => {
-  const summaryTab = () => screen.queryByRole('tab', { name: 'Summary' })
+describe('Team storylines tab', () => {
+  const storylinesTab = () => screen.queryByRole('tab', { name: 'Storylines' })
 
-  it("shows the pinned team's labeled summary and hides on unpin", async () => {
+  it("never shows the pinned team's AI summary", async () => {
     const user = userEvent.setup()
     await renderWithRouter()
-    expect(summaryTab()).toBeDisabled()
-
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
-    await user.click(summaryTab()!)
-    expect(
-      screen.getByText('Boston led from the first week.')
-    ).toBeInTheDocument()
-    expect(screen.getByText('AI-generated summary')).toBeInTheDocument()
-    expect(
-      screen.getByRole('heading', { name: 'Boston Celtics' })
-    ).toBeInTheDocument()
 
-    await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
-    expect(summaryTab()).toBeDisabled()
+    expect(storylinesTab()).toBeDisabled()
+    expect(screen.queryByText('Boston led from the first week.')).toBeNull()
+    expect(screen.queryByText('AI-generated summary')).toBeNull()
   })
 
-  it('hides the summary when switching seasons clears the pin', async () => {
+  it('hides team storylines when switching seasons clears the pin', async () => {
     const user = userEvent.setup()
     await renderWithRouter()
 
     await user.click(screen.getByText('Boston Celtics', { selector: 'text' }))
     await chooseSeason(user, 'mid')
 
-    expect(summaryTab()).toBeDisabled()
+    expect(storylinesTab()).toBeDisabled()
     expect(shownWeeks()).toBe('1–21')
   })
 })
@@ -324,14 +315,14 @@ describe('Season trends tab', () => {
     expect(sectionTeams('Biggest Down')).toHaveLength(3)
   })
 
-  it('is enabled for a season in progress, with the summary tab disabled', async () => {
+  it('is enabled for a season in progress, with the storylines tab disabled', async () => {
     const user = userEvent.setup()
     await renderWithRouter()
     await chooseSeason(user, 'active')
     await user.click(screen.getByText('Indiana Pacers', { selector: 'text' }))
 
     expect(trendsTab()).toBeEnabled()
-    expect(screen.getByRole('tab', { name: 'Summary' })).toBeDisabled()
+    expect(screen.getByRole('tab', { name: 'Storylines' })).toBeDisabled()
   })
 
   it('pins the clicked team, replacing an earlier pin', async () => {

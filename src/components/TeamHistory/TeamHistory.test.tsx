@@ -76,6 +76,22 @@ describe('TeamHistory', () => {
   })
 })
 
+describe('team picker', () => {
+  it('shows the current team and switches to another team', async () => {
+    const user = userEvent.setup()
+    const { router } = await renderWithRouter(['/teamHistory/bos'])
+    const picker = await screen.findByRole('combobox', { name: 'Team' })
+    expect(picker).toHaveTextContent('Boston Celtics')
+
+    await user.click(picker)
+    await user.click(screen.getByRole('option', { name: 'Miami Heat' }))
+    expect(router.state.location.pathname).toBe('/teamHistory/mia')
+    expect(
+      await screen.findByRole('heading', { name: /Miami Heat Team History/ })
+    ).toBeInTheDocument()
+  })
+})
+
 describe('two-column layout', () => {
   it('lists seasons in the same order in both columns', async () => {
     await renderWithRouter(['/teamHistory/bos'])

@@ -82,7 +82,7 @@ export default function TeamHistoryColumns(props: TeamHistoryColumnsProps) {
       <nav
         id={leftId}
         aria-label="Seasons"
-        className="relative overflow-y-auto pr-2"
+        className="relative overflow-y-auto p-1 pr-2"
       >
         <ul className="flex flex-col gap-1">
           {entries.map(({ season, team }) => {
