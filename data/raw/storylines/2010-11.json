@@ -1,0 +1,2799 @@
+{
+  "season": "2010-11",
+  "updatedAt": "2026-11-03",
+  "guidance": [
+    {
+      "id": "retro-decision",
+      "summary": "LeBron James, Chris Bosh and Dwyane Wade join forces in Miami; Cleveland reacts",
+      "origin": "retrospective",
+      "teams": [
+        "mia",
+        "cle",
+        "tor"
+      ]
+    },
+    {
+      "id": "retro-heat-start",
+      "summary": "The Heat's 9-8 start, the Spoelstra bump, and the crying-in-the-locker-room loss",
+      "origin": "retrospective",
+      "teams": [
+        "mia"
+      ]
+    },
+    {
+      "id": "retro-trade-season",
+      "summary": "Carmelo Anthony and Deron Williams change teams within days; Jerry Sloan resigns",
+      "origin": "retrospective",
+      "teams": [
+        "nyk",
+        "den",
+        "uta",
+        "bkn"
+      ]
+    },
+    {
+      "id": "po-finals",
+      "summary": "Mavericks beat the Heat 4-2 for their first title; Dirk Nowitzki is Finals MVP",
+      "origin": "playoffs",
+      "teams": [
+        "dal",
+        "mia"
+      ]
+    },
+    {
+      "id": "po-dal",
+      "summary": "Mavericks: beat Portland 4-2, swept the Lakers, beat OKC 4-1, beat Miami 4-2",
+      "origin": "playoffs",
+      "teams": [
+        "dal"
+      ]
+    },
+    {
+      "id": "po-mia",
+      "summary": "Heat: beat Philadelphia 4-1, Boston 4-1 and Chicago 4-1, lost the Finals 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "mia"
+      ]
+    },
+    {
+      "id": "po-chi",
+      "summary": "Bulls: beat Indiana 4-1 and Atlanta 4-2, lost to Miami 1-4 in the East finals",
+      "origin": "playoffs",
+      "teams": [
+        "chi"
+      ]
+    },
+    {
+      "id": "po-okc",
+      "summary": "Thunder: beat Denver 4-1 and Memphis 4-3, lost to Dallas 1-4 in the West finals",
+      "origin": "playoffs",
+      "teams": [
+        "okc"
+      ]
+    },
+    {
+      "id": "po-mem",
+      "summary": "Grizzlies: upset top-seeded San Antonio 4-2, lost to OKC 3-4",
+      "origin": "playoffs",
+      "teams": [
+        "mem"
+      ]
+    },
+    {
+      "id": "po-bos",
+      "summary": "Celtics: swept New York, lost to Miami 1-4",
+      "origin": "playoffs",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "po-atl",
+      "summary": "Hawks: beat Orlando 4-2, lost to Chicago 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "atl"
+      ]
+    },
+    {
+      "id": "po-lal",
+      "summary": "Lakers: beat New Orleans 4-2, swept by Dallas",
+      "origin": "playoffs",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "po-ind",
+      "summary": "Pacers: lost to Chicago 1-4",
+      "origin": "playoffs",
+      "teams": [
+        "ind"
+      ]
+    },
+    {
+      "id": "po-phi",
+      "summary": "76ers: lost to Miami 1-4",
+      "origin": "playoffs",
+      "teams": [
+        "phi"
+      ]
+    },
+    {
+      "id": "po-nyk",
+      "summary": "Knicks: swept by Boston",
+      "origin": "playoffs",
+      "teams": [
+        "nyk"
+      ]
+    },
+    {
+      "id": "po-orl",
+      "summary": "Magic: lost to Atlanta 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "orl"
+      ]
+    },
+    {
+      "id": "po-sas",
+      "summary": "Spurs: top seed, lost to Memphis 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "sas"
+      ]
+    },
+    {
+      "id": "po-nop",
+      "summary": "Hornets: lost to the Lakers 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "nop"
+      ]
+    },
+    {
+      "id": "po-por",
+      "summary": "Trail Blazers: lost to Dallas 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "por"
+      ]
+    },
+    {
+      "id": "po-den",
+      "summary": "Nuggets: lost to OKC 1-4",
+      "origin": "playoffs",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "award-mvp",
+      "summary": "Derrick Rose, MVP",
+      "origin": "awards",
+      "teams": [
+        "chi"
+      ]
+    },
+    {
+      "id": "award-roy",
+      "summary": "Blake Griffin, Rookie of the Year",
+      "origin": "awards",
+      "teams": [
+        "lac"
+      ]
+    },
+    {
+      "id": "award-dpoy",
+      "summary": "Dwight Howard, Defensive Player of the Year",
+      "origin": "awards",
+      "teams": [
+        "orl"
+      ]
+    },
+    {
+      "id": "award-mip",
+      "summary": "Kevin Love, Most Improved Player",
+      "origin": "awards",
+      "teams": [
+        "min"
+      ]
+    },
+    {
+      "id": "award-6moy",
+      "summary": "Lamar Odom, Sixth Man of the Year",
+      "origin": "awards",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "award-coy",
+      "summary": "Tom Thibodeau, Coach of the Year",
+      "origin": "awards",
+      "teams": [
+        "chi"
+      ]
+    },
+    {
+      "id": "theme-free-agency-2010",
+      "summary": "The 2010 free-agent class reshapes the league",
+      "origin": "theme",
+      "teams": [
+        "mia",
+        "nyk",
+        "chi",
+        "atl",
+        "okc"
+      ]
+    },
+    {
+      "id": "theme-trade-deadline",
+      "summary": "A busy February trade deadline",
+      "origin": "theme",
+      "teams": [
+        "nyk",
+        "den",
+        "uta",
+        "bkn",
+        "bos",
+        "okc",
+        "cha",
+        "por"
+      ]
+    },
+    {
+      "id": "theme-coaching-changes",
+      "summary": "Midseason coaching changes",
+      "origin": "theme",
+      "teams": [
+        "cha",
+        "ind",
+        "uta"
+      ]
+    },
+    {
+      "id": "draft-lottery",
+      "summary": "Cleveland wins the lottery with the Clippers' pick",
+      "origin": "draft",
+      "teams": [
+        "cle",
+        "lac"
+      ]
+    },
+    {
+      "id": "draft-2011",
+      "summary": "The 2011 draft",
+      "origin": "draft",
+      "teams": []
+    },
+    {
+      "id": "weekly-atl",
+      "summary": "Joe Johnson max deal; second round again",
+      "origin": "weekly",
+      "teams": [
+        "atl"
+      ],
+      "weeks": [
+        15,
+        18
+      ]
+    },
+    {
+      "id": "weekly-bos",
+      "summary": "Perkins trade; swept Knicks, lost to Miami",
+      "origin": "weekly",
+      "teams": [
+        "bos"
+      ],
+      "weeks": [
+        18
+      ]
+    },
+    {
+      "id": "weekly-bkn",
+      "summary": "Deron Williams arrives",
+      "origin": "weekly",
+      "teams": [
+        "bkn"
+      ],
+      "weeks": [
+        13,
+        18,
+        24
+      ]
+    },
+    {
+      "id": "weekly-cha",
+      "summary": "Larry Brown out; Gerald Wallace traded",
+      "origin": "weekly",
+      "teams": [
+        "cha"
+      ],
+      "weeks": [
+        9,
+        18
+      ]
+    },
+    {
+      "id": "weekly-chi",
+      "summary": "Boozer signs; Rose MVP; 62 wins",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-cle",
+      "summary": "Post-LeBron collapse; 26-game losing streak",
+      "origin": "weekly",
+      "teams": [
+        "cle"
+      ],
+      "weeks": [
+        16
+      ]
+    },
+    {
+      "id": "weekly-dal",
+      "summary": "Title run",
+      "origin": "weekly",
+      "teams": [
+        "dal"
+      ],
+      "weeks": [
+        10
+      ]
+    },
+    {
+      "id": "weekly-den",
+      "summary": "Carmelo saga ends in a trade",
+      "origin": "weekly",
+      "teams": [
+        "den"
+      ],
+      "weeks": [
+        7,
+        17,
+        22
+      ]
+    },
+    {
+      "id": "weekly-det",
+      "summary": "Player revolt against Kuester",
+      "origin": "weekly",
+      "teams": [
+        "det"
+      ],
+      "weeks": [
+        18,
+        24
+      ]
+    },
+    {
+      "id": "weekly-gsw",
+      "summary": "New ownership",
+      "origin": "weekly",
+      "teams": [
+        "gsw"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-hou",
+      "summary": "Yao lost for the season",
+      "origin": "weekly",
+      "teams": [
+        "hou"
+      ],
+      "weeks": [
+        8
+      ]
+    },
+    {
+      "id": "weekly-ind",
+      "summary": "O'Brien fired; Vogel's playoff push",
+      "origin": "weekly",
+      "teams": [
+        "ind"
+      ],
+      "weeks": [
+        14
+      ]
+    },
+    {
+      "id": "weekly-lac",
+      "summary": "Blake Griffin's rookie year",
+      "origin": "weekly",
+      "teams": [
+        "lac"
+      ],
+      "weeks": [
+        15,
+        17
+      ]
+    },
+    {
+      "id": "weekly-mia",
+      "summary": "Big Three debut season",
+      "origin": "weekly",
+      "teams": [
+        "mia"
+      ],
+      "weeks": [
+        19
+      ]
+    },
+    {
+      "id": "weekly-min",
+      "summary": "Kevin Love's double-double streak",
+      "origin": "weekly",
+      "teams": [
+        "min"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-nyk",
+      "summary": "Amar'e then Carmelo",
+      "origin": "weekly",
+      "teams": [
+        "nyk"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-okc",
+      "summary": "Durant extension; Perkins trade",
+      "origin": "weekly",
+      "teams": [
+        "okc"
+      ],
+      "weeks": [
+        18
+      ]
+    },
+    {
+      "id": "weekly-orl",
+      "summary": "December roster overhaul",
+      "origin": "weekly",
+      "teams": [
+        "orl"
+      ],
+      "weeks": [
+        8,
+        24
+      ]
+    },
+    {
+      "id": "weekly-mil",
+      "summary": "Jennings injury; missed playoffs",
+      "origin": "weekly",
+      "teams": [
+        "mil"
+      ],
+      "weeks": [
+        14
+      ]
+    },
+    {
+      "id": "weekly-mem",
+      "summary": "Randolph extension; Gay shoulder injury",
+      "origin": "weekly",
+      "teams": [
+        "mem"
+      ],
+      "weeks": [
+        14,
+        18
+      ]
+    },
+    {
+      "id": "weekly-lal",
+      "summary": "Three-peat bid; Phil Jackson retires",
+      "origin": "weekly",
+      "teams": [
+        "lal"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-tor",
+      "summary": "Post-Bosh rebuild; Casey hired",
+      "origin": "weekly",
+      "teams": [
+        "tor"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-sas",
+      "summary": "61 wins; Kawhi draft trade",
+      "origin": "weekly",
+      "teams": [
+        "sas"
+      ],
+      "weeks": [
+        7
+      ]
+    },
+    {
+      "id": "weekly-phi",
+      "summary": "Collins turnaround; Iguodala trade talk",
+      "origin": "weekly",
+      "teams": [
+        "phi"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-nop",
+      "summary": "Paul trade talk; league takeover",
+      "origin": "weekly",
+      "teams": [
+        "nop"
+      ],
+      "weeks": [
+        2,
+        8
+      ]
+    },
+    {
+      "id": "weekly-phx",
+      "summary": "Life after Amar'e; December trade",
+      "origin": "weekly",
+      "teams": [
+        "phx"
+      ],
+      "weeks": [
+        8,
+        15,
+        18
+      ]
+    },
+    {
+      "id": "weekly-por",
+      "summary": "Wallace trade; Roy and Oden injuries",
+      "origin": "weekly",
+      "teams": [
+        "por"
+      ],
+      "weeks": [
+        12,
+        18
+      ]
+    },
+    {
+      "id": "weekly-sac",
+      "summary": "Anaheim relocation saga",
+      "origin": "weekly",
+      "teams": [
+        "sac"
+      ],
+      "weeks": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "weekly-uta",
+      "summary": "Sloan resigns, Deron traded",
+      "origin": "weekly",
+      "teams": [
+        "uta"
+      ],
+      "weeks": [
+        16,
+        18
+      ]
+    },
+    {
+      "id": "weekly-was",
+      "summary": "Arenas traded",
+      "origin": "weekly",
+      "teams": [
+        "was"
+      ],
+      "weeks": [
+        8
+      ]
+    },
+    {
+      "id": "po-den-karl-return",
+      "summary": "George Karl returns to the playoffs after missing 2010 for cancer treatment",
+      "origin": "playoffs",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "po-den-karl-brooks",
+      "summary": "Karl faces former assistant Scott Brooks in the first round",
+      "origin": "playoffs",
+      "teams": [
+        "den",
+        "okc"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "salmons-re-signs",
+      "title": "Bucks re-sign John Salmons",
+      "eventDate": "2010-07-02",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Bucks to re-sign G Salmons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5349332",
+        "publishedAt": "2010-07-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2010",
+        "weekly-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "amare-to-knicks",
+      "title": "Amar'e Stoudemire signs with the Knicks",
+      "eventDate": "2010-07-05",
+      "teams": [
+        "nyk",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stoudemire has agreement with Knicks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/new-york/nba/news/story?id=5356502",
+        "publishedAt": "2010-07-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2010",
+        "weekly-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "durant-extension",
+      "title": "Kevin Durant quietly signs a five-year extension",
+      "eventDate": "2010-07-07",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Durant does the unthinkable this summer, lands deal without fanfare",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/07/09/durant-thunder",
+        "publishedAt": "2010-07-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2010",
+        "weekly-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "boozer-to-bulls",
+      "title": "Bulls sign Carlos Boozer",
+      "eventDate": "2010-07-07",
+      "teams": [
+        "chi",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Boozer has Bulls deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/chicago/nba/news/story?id=5361792",
+        "publishedAt": "2010-07-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2010",
+        "weekly-chi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "the-decision",
+      "title": "LeBron takes his talents to South Beach",
+      "eventDate": "2010-07-08",
+      "teams": [
+        "mia",
+        "cle",
+        "tor"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Trifecta: LeBron will join Wade, Bosh with Heat",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5365165",
+        "publishedAt": "2010-07-08"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-decision",
+        "theme-free-agency-2010",
+        "weekly-mia",
+        "weekly-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "gilbert-letter",
+      "title": "Dan Gilbert's open letter to Cavs fans",
+      "eventDate": "2010-07-08",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Letter from Cavs owner Dan Gilbert",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5365704",
+        "publishedAt": "2010-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-decision",
+        "weekly-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "joe-johnson-max",
+      "title": "Hawks re-sign Joe Johnson to a max deal",
+      "eventDate": "2010-07-08",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Johnson: 'Atlanta was the place I wanted to be'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5365184",
+        "publishedAt": "2010-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2010",
+        "weekly-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lee-to-warriors",
+      "title": "David Lee goes to Golden State in a sign-and-trade",
+      "eventDate": "2010-07-08",
+      "teams": [
+        "gsw",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Agent: David Lee agrees to sign-and-trade to Golden State Warriors",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5364903",
+        "publishedAt": "2010-07-08"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2010",
+        "weekly-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "beasley-to-wolves",
+      "title": "Heat dump Michael Beasley on Minnesota to clear cap space",
+      "eventDate": "2010-07-08",
+      "teams": [
+        "mia",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Heat clear space, deal Beasley",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5365794",
+        "publishedAt": "2010-07-08"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2010",
+        "weekly-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jefferson-to-jazz",
+      "title": "Wolves trade Al Jefferson to Utah",
+      "eventDate": "2010-07-13",
+      "teams": [
+        "min",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wolves send Jefferson to Jazz for Koufos, picks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5376884",
+        "publishedAt": "2010-07-13"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta",
+        "weekly-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "chandler-to-dallas",
+      "title": "Mavericks trade for Tyson Chandler",
+      "eventDate": "2010-07-13",
+      "teams": [
+        "dal",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavs get Chandler from Bobcats",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5377055",
+        "publishedAt": "2010-07-13"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hedo-to-suns",
+      "title": "Raptors trade Hedo Turkoglu to Phoenix",
+      "eventDate": "2010-07-14",
+      "teams": [
+        "phx",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns Acquire Hedo Turkoglu",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/suns/news/turkoglu_signing_100714.html",
+        "publishedAt": "2010-07-14"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx",
+        "weekly-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lacob-buys-warriors",
+      "title": "Lacob and Guber buy the Warriors",
+      "eventDate": "2010-07-15",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lacob, Guber have deal to buy Warriors",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5383261",
+        "publishedAt": "2010-07-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cho-to-blazers",
+      "title": "Blazers hire Rich Cho as GM",
+      "eventDate": "2010-07-19",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nine things to know about Rich Cho",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/truehoop/post/_/id/18422/nine-things-to-know-about-rich-cho",
+        "publishedAt": "2010-07-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cp3-trade-talk",
+      "title": "Chris Paul and the Hornets meet amid trade talk",
+      "eventDate": "2010-07-23",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "New Orleans Hornets say Chris Paul meeting didn't include trade talk",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5411166",
+        "publishedAt": "2010-07-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "shaq-to-celtics",
+      "title": "Shaquille O'Neal signs with Boston",
+      "eventDate": "2010-08-04",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics Sign Shaquille O'Neal",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/celtics/news/press_release/press080410-celtics-sign-shaq.html",
+        "publishedAt": "2010-08-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "collison-four-team",
+      "title": "Four-team trade sends Collison to Indiana and Ariza to New Orleans",
+      "eventDate": "2010-08-11",
+      "teams": [
+        "ind",
+        "nop",
+        "hou",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Four-team, five-player trade in the works",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2010/08/11/four-teamtrade",
+        "publishedAt": "2010-08-11"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind",
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "arenas-fakes-injury",
+      "title": "Gilbert Arenas fakes an injury in the preseason",
+      "eventDate": "2010-10-12",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Gilbert Arenas says he faked injury",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5678971",
+        "publishedAt": "2010-10-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hornets-new-style",
+      "title": "Monty Williams's Hornets start fast",
+      "eventDate": "2010-11-05",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ian Thomsen: Hornets' boast new outlook, style",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/11/05/chris-paul",
+        "publishedAt": "2010-11-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-fast-start",
+      "title": "Spurs race to the best record",
+      "eventDate": "2010-12-10",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: What's the biggest surprise of the season? It's jingling along.",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime/_/page/dime-101210/daily-dime",
+        "publishedAt": "2010-12-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sas"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "melo-extension-standoff",
+      "title": "Carmelo will only sign an extension with the Knicks",
+      "eventDate": "2010-12-12",
+      "teams": [
+        "den",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Carmelo extension hinges on N.Y. trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/new-york/nba/news/story?id=5912307",
+        "publishedAt": "2010-12-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-trade-season",
+        "weekly-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "yao-season-over",
+      "title": "Yao Ming's season ends with another stress fracture",
+      "eventDate": "2010-12-17",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Yao out for season with stress fracture in ankle",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5931199",
+        "publishedAt": "2010-12-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "magic-remake",
+      "title": "Magic remake the roster with Arenas, Turkoglu and Richardson",
+      "eventDate": "2010-12-18",
+      "teams": [
+        "orl",
+        "was",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic land Arenas, Richardson, Turkoglu",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/aw-arenastradetalks121810.html",
+        "publishedAt": "2010-12-18"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-orl",
+        "weekly-was",
+        "weekly-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hornets-sold-to-nba",
+      "title": "The NBA takes over the Hornets",
+      "eventDate": "2010-12-20",
+      "teams": [
+        "nop"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "NBA completes purchase of New Orleans Hornets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5940332",
+        "publishedAt": "2010-12-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "larry-brown-out",
+      "title": "Larry Brown out in Charlotte",
+      "eventDate": "2010-12-22",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Larry Brown is out as Charlotte Bobcats coach",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/larry-brown-charlotte-bobcats-coach--nba.html",
+        "publishedAt": "2010-12-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "butler-knee",
+      "title": "Caron Butler's season ends with a knee injury",
+      "eventDate": "2011-01-01",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Caron Butler done for season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/dallas/nba/news/story?id=5988038",
+        "publishedAt": "2011-01-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "aldridge-breakout",
+      "title": "LaMarcus Aldridge's breakout season",
+      "eventDate": "2011-01-14",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Portland Trail Blazers' LaMarcus Aldridge's All-Star motivation",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/columns/story?columnist=adande_ja&page=Aldridge-110114",
+        "publishedAt": "2011-01-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "prokhorov-ends-melo",
+      "title": "Prokhorov ends the Nets pursuit of Carmelo",
+      "eventDate": "2011-01-19",
+      "teams": [
+        "bkn",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Prokhorov ends Nets' pursuit of Anthony",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/aw-netsanthony011911.html",
+        "publishedAt": "2011-01-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-trade-season",
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mayo-suspended",
+      "title": "O.J. Mayo suspended for a failed drug test",
+      "eventDate": "2011-01-27",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "O.J. Mayo suspended 10 games",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6065824",
+        "publishedAt": "2011-01-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jennings-foot",
+      "title": "Brandon Jennings returns from a broken foot",
+      "eventDate": "2011-01-29",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks G Brandon Jennings returns from 19-game absence",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6072449",
+        "publishedAt": "2011-01-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-fire-obrien",
+      "title": "Pacers fire Jim O'Brien, promote Frank Vogel",
+      "eventDate": "2011-01-30",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers fire O'Brien, Vogel takes over for rest of season",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2011/01/30/pacers-fireobrien",
+        "publishedAt": "2011-01-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "all-star-reserves-2011",
+      "title": "All-Star reserves named",
+      "eventDate": "2011-02-03",
+      "teams": [
+        "atl",
+        "bos",
+        "mia",
+        "sas",
+        "lal",
+        "min",
+        "dal",
+        "nop",
+        "okc",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Reserves announced for 2011 NBA All-Star Game",
+        "publisher": "NBA.com",
+        "url": "https://pr.nba.com/2011-nba-all-star-game-reserves/",
+        "publishedAt": "2011-02-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-atl"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "griffin-all-star",
+      "title": "Blake Griffin becomes a rookie All-Star",
+      "eventDate": "2011-02-03",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "BLAKE GRIFFIN SELECTED TO 2011 WESTERN CONFERENCE ALL-STAR TEAM",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/clippers/news/griffin_allstar_110203.html",
+        "publishedAt": "2011-02-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "nash-stays",
+      "title": "Suns decide to keep Steve Nash",
+      "eventDate": "2011-02-04",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Weekend Dime: Suns set on keeping Nash",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime/_/page/dime-110204-06/suns-set-keeping-nash",
+        "publishedAt": "2011-02-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cavs-26-straight",
+      "title": "Cavaliers lose a record 26 straight",
+      "eventDate": "2011-02-09",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cleveland Cavaliers' 26 consecutive losses by the numbers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/page2/index/_/id/6108213",
+        "publishedAt": "2011-02-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sloan-resigns",
+      "title": "Jerry Sloan resigns after 23 seasons",
+      "eventDate": "2011-02-10",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Utah Jazz coach Jerry Sloan resigns",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6109031",
+        "publishedAt": "2011-02-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-trade-season",
+        "theme-coaching-changes",
+        "weekly-uta"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cousins-greene-fight",
+      "title": "DeMarcus Cousins fights a teammate",
+      "eventDate": "2011-02-13",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings probing Cousins’ fight with Greene",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/mc-cousinskings021311.html",
+        "publishedAt": "2011-02-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kings-anaheim",
+      "title": "Kings explore a move to Anaheim",
+      "eventDate": "2011-02-19",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Sacramento Kings exploring relocation to Anaheim",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/allstar2011/news/story?id=6140807",
+        "publishedAt": "2011-02-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "griffin-dunk-contest",
+      "title": "Blake Griffin jumps a car to win the dunk contest",
+      "eventDate": "2011-02-19",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Blake Show: Griffin leaps car, wins dunk contest",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/allstar2011/news/story?id=6140274",
+        "publishedAt": "2011-02-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "melo-to-knicks",
+      "title": "Knicks land Carmelo Anthony",
+      "eventDate": "2011-02-21",
+      "teams": [
+        "nyk",
+        "den",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Knicks land Carmelo Anthony",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6145912",
+        "publishedAt": "2011-02-21"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-trade-season",
+        "theme-trade-deadline",
+        "weekly-nyk",
+        "weekly-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "deron-to-nets",
+      "title": "Jazz trade Deron Williams to the Nets",
+      "eventDate": "2011-02-23",
+      "teams": [
+        "uta",
+        "bkn"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Jazz deal All-Star Williams to Nets",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/aw-jazzwilliamsnets022311.html",
+        "publishedAt": "2011-02-23"
+      },
+      "kind": "trade",
+      "blockbuster": true,
+      "guidance": [
+        "retro-trade-season",
+        "theme-trade-deadline",
+        "weekly-uta",
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hinrich-to-hawks",
+      "title": "Hawks trade Bibby for Kirk Hinrich",
+      "eventDate": "2011-02-23",
+      "teams": [
+        "atl",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Atlanta Hawks get Kirk Hinrich from Washington Wizards in 5-player deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6152388",
+        "publishedAt": "2011-02-23"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "perkins-for-green",
+      "title": "Celtics trade Kendrick Perkins to OKC for Jeff Green",
+      "eventDate": "2011-02-24",
+      "teams": [
+        "bos",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics get Thunder's Jeff Green",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/boston/nba/news/story?id=6155082",
+        "publishedAt": "2011-02-24"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-bos",
+        "weekly-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wallace-to-blazers",
+      "title": "Bobcats trade Gerald Wallace to Portland",
+      "eventDate": "2011-02-24",
+      "teams": [
+        "cha",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Gerald Wallace traded to Blazers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6155334",
+        "publishedAt": "2011-02-24"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-cha",
+        "weekly-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "baron-davis-to-cavs",
+      "title": "Clippers send Baron Davis and their pick to Cleveland",
+      "eventDate": "2011-02-24",
+      "teams": [
+        "lac",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Baron Davis traded for Williams, Moon",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/los-angeles/nba/news/story?id=6153550",
+        "publishedAt": "2011-02-24"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "draft-lottery"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "dragic-for-brooks",
+      "title": "Suns trade Goran Dragic for Aaron Brooks",
+      "eventDate": "2011-02-24",
+      "teams": [
+        "phx",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns Trade Dragic and a Protected Pick for Brooks",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/suns/news/brooks_release_110224.html",
+        "publishedAt": "2011-02-24"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mayo-trade-collapses",
+      "title": "Mayo trade to Indiana falls apart at the deadline",
+      "eventDate": "2011-02-24",
+      "teams": [
+        "mem",
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Memphis Grizzlies' trade of O.J. Mayo to Indiana Pacers falls apart",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6155170",
+        "publishedAt": "2011-02-24"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pistons-boycott",
+      "title": "Pistons veterans skip shootaround in protest of Kuester",
+      "eventDate": "2011-02-25",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Some Pistons AWOL in protest",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6159298",
+        "publishedAt": "2011-02-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hamilton-turmoil",
+      "title": "Rip Hamilton at the center of the Pistons turmoil",
+      "eventDate": "2011-02-26",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hamilton at center of Pistons’ turmoil",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/aw-hamiltonpistons022611.html",
+        "publishedAt": "2011-02-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-crying",
+      "title": "Spoelstra says Heat players were crying after a loss",
+      "eventDate": "2011-03-06",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "All cried out: Spoelstra, Heat on tearful talk",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6191031",
+        "publishedAt": "2011-03-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-heat-start",
+        "weekly-mia"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nuggets-after-melo",
+      "title": "Nuggets thrive after the Carmelo trade",
+      "eventDate": "2011-03-23",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "With Melo gone, good times in Denver",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/truehoop/post/_/id/26699/with-melo-gone-good-times-in-denver",
+        "publishedAt": "2011-03-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-trade-season",
+        "weekly-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "gores-buys-pistons",
+      "title": "Tom Gores agrees to buy the Pistons",
+      "eventDate": "2011-04-07",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Tom Gores agrees to buy Pistons, arena",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6309235",
+        "publishedAt": "2011-04-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "howard-technicals",
+      "title": "Dwight Howard suspended for technical fouls",
+      "eventDate": "2011-04-07",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Orlando Magic's Dwight Howard suspended one game for 18th technical foul",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6305667",
+        "publishedAt": "2011-04-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "deron-wrist",
+      "title": "Deron Williams has wrist surgery",
+      "eventDate": "2011-04-11",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets point guard Williams has surgery on wrist",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/new-york/nba/news/story?id=6329259",
+        "publishedAt": "2011-04-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "howard-dpoy",
+      "title": "Dwight Howard wins a third straight DPOY",
+      "eventDate": "2011-04-14",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic's Howard earns third defensive POY honor",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2011/news/story?id=6381715",
+        "publishedAt": "2011-04-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-dpoy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "ginobili-elbow",
+      "title": "Ginobili hurts his elbow before the playoffs",
+      "eventDate": "2011-04-16",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2011 NBA playoffs: Manu Ginobili of San Antonio Spurs out for Game 1 vs. Memphis Grizzlies",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2011/news/story?id=6375402",
+        "publishedAt": "2011-04-16"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-sas"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "karl-back-in-playoffs",
+      "title": "George Karl back on the playoff bench",
+      "eventDate": "2011-04-16",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Karl engerized for postseason after sitting out 2010 playoffs",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/nuggets/features/playoffs_karl_04_16_2011.html",
+        "publishedAt": "2011-04-16"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-den-karl-return",
+        "po-den"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "cp3-stuns-lakers",
+      "title": "Chris Paul steals Game 1 from the Lakers",
+      "eventDate": "2011-04-17",
+      "teams": [
+        "nop",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "New Orleans Hornets more confident after Game 1",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/columns/story?id=6391941",
+        "publishedAt": "2011-04-18"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "adelman-out",
+      "title": "Rick Adelman and the Rockets part ways",
+      "eventDate": "2011-04-18",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Adelman out as Rockets coach after four years",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6384752",
+        "publishedAt": "2011-04-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "odom-6moy",
+      "title": "Lamar Odom is Sixth Man of the Year",
+      "eventDate": "2011-04-19",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lamar Odom wins Sixth Man of the Year Award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/los-angeles-lakers/post/_/id/18246/lamar-odom-wins-sixth-man-of-the-year-award",
+        "publishedAt": "2011-04-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-6moy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-lose-amare",
+      "title": "Knicks lose Amar'e and Billups and get swept by Boston",
+      "eventDate": "2011-04-19",
+      "teams": [
+        "nyk",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "New York Knicks lost Amare Stoudemire in Game 2 defeat, but not their confidence",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/new-york/nba/columns/story?columnist=sheridan_chris&id=6392562",
+        "publishedAt": "2011-04-20"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-nyk",
+        "po-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "randolph-extension",
+      "title": "Grizzlies extend Zach Randolph",
+      "eventDate": "2011-04-20",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies' Randolph agrees to new 4-year deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6377990",
+        "publishedAt": "2011-04-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "love-mip",
+      "title": "Kevin Love is Most Improved Player",
+      "eventDate": "2011-04-21",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kevin Love wins Most Improved award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6399422",
+        "publishedAt": "2011-04-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-mip",
+        "weekly-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "roy-comeback",
+      "title": "Brandon Roy's fourth-quarter comeback against Dallas",
+      "eventDate": "2011-04-23",
+      "teams": [
+        "por",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: The Brandon Roy Of Old",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime/_/page/dime-110424/daily-dime",
+        "publishedAt": "2011-04-24"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sixers-avoid-sweep",
+      "title": "Lou Williams keeps the 76ers alive against Miami",
+      "eventDate": "2011-04-24",
+      "teams": [
+        "phi",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "How the Heat let Game 4 slip away",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/truehoop/miamiheat/post/_/id/6557/how-the-heat-let-game-4-slip-away",
+        "publishedAt": "2011-04-25"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "granger-noah",
+      "title": "Bulls finish off a physical Pacers series",
+      "eventDate": "2011-04-26",
+      "teams": [
+        "ind",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Indiana Pacers forward Danny Granger said Chicago Bulls center Joakim Noah was cowardly",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/chicago/nba/news/story?id=6434456",
+        "publishedAt": "2011-04-27"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-ind",
+        "po-chi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "karl-vs-brooks",
+      "title": "Karl vs. his former assistant Scott Brooks",
+      "eventDate": "2011-04-26",
+      "teams": [
+        "den",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Karl trying to prevent former assistant from playoff success",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/nuggets/features/karl_brooks_04_26_2011.html",
+        "publishedAt": "2011-04-26"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-den-karl-brooks",
+        "po-den"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "thunder-eliminate-nuggets",
+      "title": "Durant's late surge ends the Nuggets' season",
+      "eventDate": "2011-04-27",
+      "teams": [
+        "den",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Durant closes the deal as Nuggets lose series to Thunder",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/nuggets/news/nuggets_thunder_04_28_2011.html",
+        "publishedAt": "2011-04-28"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hawks-oust-magic",
+      "title": "Hawks knock out the Magic",
+      "eventDate": "2011-04-28",
+      "teams": [
+        "atl",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chris Mannix: Magic's future in question after falling to Hawks in first round",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2011/04/29/hawks-magicgame6",
+        "publishedAt": "2011-04-29"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-atl",
+        "po-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "grizzlies-upset-spurs",
+      "title": "Eighth-seeded Grizzlies knock out the Spurs",
+      "eventDate": "2011-04-29",
+      "teams": [
+        "mem",
+        "sas"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Misfits no more: Grizzlies knock out Spurs in historic first-round upset",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2011/04/30/grizzlies-spursgame6",
+        "publishedAt": "2011-04-30"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mem",
+        "po-sas"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thibodeau-coy",
+      "title": "Tom Thibodeau is Coach of the Year",
+      "eventDate": "2011-05-01",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls' Thibodeau wins Coach of the Year award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6460616",
+        "publishedAt": "2011-05-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-coy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kings-stay",
+      "title": "Kings stay in Sacramento for another season",
+      "eventDate": "2011-05-02",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sacramento Kings owners decide against Anaheim move for next season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6465353",
+        "publishedAt": "2011-05-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hawks-steal-game-1",
+      "title": "Hawks steal Game 1 in Chicago",
+      "eventDate": "2011-05-02",
+      "teams": [
+        "atl",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks fly to finish against Bulls",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/truehoop/post/_/id/28756/hawks-fly-to-finish-against-bulls",
+        "publishedAt": "2011-05-03"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "rose-mvp",
+      "title": "Derrick Rose becomes the youngest MVP",
+      "eventDate": "2011-05-03",
+      "teams": [
+        "chi"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Source: Derrick Rose is NBA MVP",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/chicago/nba/news/story?id=6468133",
+        "publishedAt": "2011-05-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-mvp"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "griffin-roy",
+      "title": "Blake Griffin is a unanimous Rookie of the Year",
+      "eventDate": "2011-05-04",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clips' Griffin unanimously voted top NBA rookie",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story/_/id/6479861",
+        "publishedAt": "2011-05-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-roy",
+        "weekly-lac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bynum-odom-ejected",
+      "title": "Mavericks sweep the Lakers in Phil Jackson's last series",
+      "eventDate": "2011-05-08",
+      "teams": [
+        "lal",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Andrew Bynum, Lamar Odom ejected",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/los-angeles/nba/news/story?id=6508860",
+        "publishedAt": "2011-05-08"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-lal",
+        "po-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-oust-celtics",
+      "title": "Heat finally get past the Celtics",
+      "eventDate": "2011-05-11",
+      "teams": [
+        "mia",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "James, Heat clear important hurdle after ousting gritty Celtics in five",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2011/05/12/heat-celticsgame5",
+        "publishedAt": "2011-05-12"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mia",
+        "po-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-grizzlies",
+      "title": "Thunder outlast the Grizzlies in seven",
+      "eventDate": "2011-05-11",
+      "teams": [
+        "okc",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Oklahoma City Thunder take charge against worn-down Memphis Grizzlies in Game 5",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2011/columns/story?columnist=hollinger_john&page=grizzlies-thunder-110512",
+        "publishedAt": "2011-05-12"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-okc",
+        "po-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "all-rookie-2011",
+      "title": "Griffin, Wall and Cousins lead the All-Rookie team",
+      "eventDate": "2011-05-11",
+      "teams": [
+        "lac",
+        "was",
+        "nyk",
+        "sac",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers' Blake Griffin, Wizards' John Wall headline 2010-11 T-Mobile All-Rookie Team",
+        "publisher": "NBA.com",
+        "url": "https://pr.nba.com/2010-11-nba-all-rookie-team/",
+        "publishedAt": "2011-05-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-roy",
+        "weekly-was"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "thunder-game-4-collapse",
+      "title": "Thunder's Game 4 collapse against Dallas",
+      "eventDate": "2011-05-23",
+      "teams": [
+        "okc",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Oklahoma City Thunder's painful Game 4 loss part of championship-building process",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2011/columns/story?columnist=hollinger_john&page=mavericks-thunderG4-110524",
+        "publishedAt": "2011-05-24"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-okc",
+        "po-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mike-brown-lakers",
+      "title": "Lakers hire Mike Brown to replace Phil Jackson",
+      "eventDate": "2011-05-25",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mike Brown new Lakers coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6587752",
+        "publishedAt": "2011-05-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-oust-bulls",
+      "title": "Heat eliminate the top-seeded Bulls",
+      "eventDate": "2011-05-26",
+      "teams": [
+        "mia",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chicago Bulls' Game 5 loss to Miami Heat will be a tough one to shake",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/columns/story?columnist=wilbon_michael&id=6598222",
+        "publishedAt": "2011-05-27"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-chi",
+        "po-mia"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mchale-rockets",
+      "title": "Rockets hire Kevin McHale",
+      "eventDate": "2011-06-01",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Houston Rockets officially hire Kevin McHale as coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6616341",
+        "publishedAt": "2011-06-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "triano-out",
+      "title": "Raptors move on from Jay Triano",
+      "eventDate": "2011-06-01",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jay Triano out as Toronto Raptors coach but stays on as consultant",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6616581",
+        "publishedAt": "2011-06-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kuester-fired",
+      "title": "Pistons fire John Kuester",
+      "eventDate": "2011-06-05",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "John Kuester Relieved of Pistons' Coaching Duties",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/pistons/news/kuester_110605.html",
+        "publishedAt": "2011-06-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mark-jackson-warriors",
+      "title": "Warriors hire Mark Jackson",
+      "eventDate": "2011-06-06",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors hire Jackson as new coach",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/aw-wojnarowski_mark_jackson_warriors_0607011.html",
+        "publishedAt": "2011-06-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "iguodala-ellis-talks",
+      "title": "Sixers shop Andre Iguodala",
+      "eventDate": "2011-06-06",
+      "teams": [
+        "phi",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Andre Iguodala, Monta Ellis deal being discussed",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6633355",
+        "publishedAt": "2011-06-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavs-title",
+      "title": "Dirk and the Mavericks beat the Heat for their first title",
+      "eventDate": "2011-06-12",
+      "teams": [
+        "dal",
+        "mia"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Mavs down the Heat, take home their first NBA title",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/dallas-downs-heat-takes-home-first-nba-title-033108271.html",
+        "publishedAt": "2011-06-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-finals",
+        "po-dal",
+        "po-mia"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cho-to-bobcats",
+      "title": "Blazers fire Rich Cho; Bobcats hire him",
+      "eventDate": "2011-06-14",
+      "teams": [
+        "cha",
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Charlotte Bobcats hire Rich Cho as general manager",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6659387",
+        "publishedAt": "2011-06-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-por",
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "casey-raptors",
+      "title": "Raptors hire Dwane Casey",
+      "eventDate": "2011-06-21",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors hire Dwane Casey as coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=6687541",
+        "publishedAt": "2011-06-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "iguodala-odom-talks",
+      "title": "Sixers and Lakers discuss Iguodala for Odom",
+      "eventDate": "2011-06-22",
+      "teams": [
+        "phi",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sam Amick: 76ers, Lakers discuss Iguodala-for-Odom deal",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2011/06/22/iguodala-sixers",
+        "publishedAt": "2011-06-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-kings-bobcats-trade",
+      "title": "Draft-night trade sends Stephen Jackson to Milwaukee and Jimmer to Sacramento",
+      "eventDate": "2011-06-23",
+      "teams": [
+        "mil",
+        "cha",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bobcats' Jackson dealt to Bucks in 3-team deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2011/news/story?id=6697545",
+        "publishedAt": "2011-06-23"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2011",
+        "weekly-mil",
+        "weekly-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hill-for-kawhi",
+      "title": "Spurs trade George Hill for the rights to Kawhi Leonard",
+      "eventDate": "2011-06-23",
+      "teams": [
+        "sas",
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA draft 2011: Indiana Pacers deal 15th pick Kawhi Leonard to San Antonio Spurs for George Hill",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2011/news/story?id=6698432",
+        "publishedAt": "2011-06-23"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2011",
+        "weekly-sas",
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knight-pick",
+      "title": "Pistons draft Brandon Knight",
+      "eventDate": "2011-06-23",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons Select Brandon Knight with the Eighth Pick in the NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/pistons/news/draft_knight_110623.html",
+        "publishedAt": "2011-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2011"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "draft-2011-team-by-team",
+      "title": "Every team's 2011 draft haul",
+      "eventDate": "2011-06-23",
+      "teams": [
+        "uta",
+        "cha",
+        "tor",
+        "was",
+        "sac",
+        "gsw",
+        "phi",
+        "mil",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2011 NBA Draft Team-by-Team",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story?id=6699165",
+        "publishedAt": "2011-06-24"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2011"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "nets-trade-for-brooks",
+      "title": "Nets trade up for MarShon Brooks",
+      "eventDate": "2011-06-23",
+      "teams": [
+        "bkn",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets trade for Marshon Brooks - NBA draft 2011",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/new-york/nba/news/story?id=6699065",
+        "publishedAt": "2011-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2011"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kyrie-first-pick",
+      "title": "Cavs take Kyrie Irving first with the Clippers' pick",
+      "eventDate": "2011-06-23",
+      "teams": [
+        "cle",
+        "lac"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Cavs take Kyrie Irving with No. 1 pick",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2011/news/story?id=6698166",
+        "publishedAt": "2011-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-lottery",
+        "draft-2011"
+      ],
+      "status": "included"
+    }
+  ]
+}

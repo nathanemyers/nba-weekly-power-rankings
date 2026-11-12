@@ -1,5 +1,5 @@
-import type { Team } from '@/types'
-import type { Season } from '@/data/seasonData'
+import { getTeamName, type Team } from '@/types'
+import { getTeamStorylines, type Season } from '@/data/seasonData'
 import { useAppDispatch } from '@/store/hooks'
 import { useNavigate } from 'react-router'
 import TrendMinimap from './TrendMinimap/TrendMinimap'
@@ -8,6 +8,7 @@ import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 import DataSourceBadge from './Badges/DataSourceBadge'
 import PlayoffSeriesBadges from './Badges/PlayoffSeriesBadges'
+import StorylineList from './StorylineList'
 
 interface TeamHistoryProps {
   team: Team
@@ -22,6 +23,7 @@ export default function TeamHistory(props: TeamHistoryProps) {
       {props.seasons.map((season) => {
         const team = season.teams.find((team) => team.teamId === props.team)
         if (!team) return null
+        const storylines = getTeamStorylines(season, props.team)
 
         return (
           <Card
@@ -52,6 +54,18 @@ export default function TeamHistory(props: TeamHistoryProps) {
               <p className="text-base leading-normal text-foreground-soft">
                 {team.aiSummary}
               </p>
+              {storylines.length > 0 && (
+                <>
+                  <h3 className="mt-4 mb-2 text-lg font-semibold">
+                    Storylines
+                  </h3>
+                  <StorylineList
+                    label={`${season.name} ${getTeamName(props.team)} storylines`}
+                    storylines={storylines}
+                    hideTeam={props.team}
+                  />
+                </>
+              )}
               <div className="flex flex-row flex-wrap items-center justify-end gap-2 mt-2">
                 <DataSourceBadge source={season.source} season={season.name} />
                 {team.aiSummary && (

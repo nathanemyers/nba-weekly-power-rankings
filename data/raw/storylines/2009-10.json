@@ -1,0 +1,2239 @@
+{
+  "season": "2009-10",
+  "updatedAt": "2026-11-03",
+  "guidance": [
+    {
+      "id": "retro-lebron-free-agency",
+      "summary": "The run-up to LeBron James and the 2010 free-agent class",
+      "origin": "retrospective",
+      "teams": [
+        "cle",
+        "nyk",
+        "mia",
+        "chi",
+        "bkn"
+      ]
+    },
+    {
+      "id": "retro-arenas",
+      "summary": "Gilbert Arenas gun incident and season-long suspension",
+      "origin": "retrospective",
+      "teams": [
+        "was"
+      ]
+    },
+    {
+      "id": "po-finals",
+      "summary": "Lakers beat the Celtics 4-3; Kobe Bryant is Finals MVP",
+      "origin": "playoffs",
+      "teams": [
+        "lal",
+        "bos"
+      ]
+    },
+    {
+      "id": "po-lal",
+      "summary": "Lakers: beat OKC 4-2, swept Utah, beat Phoenix 4-2, beat Boston 4-3",
+      "origin": "playoffs",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "po-bos",
+      "summary": "Celtics: beat Miami 4-1, Cleveland 4-2, Orlando 4-2, lost the Finals 3-4",
+      "origin": "playoffs",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "po-orl",
+      "summary": "Magic: swept Charlotte and Atlanta, lost to Boston 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "orl"
+      ]
+    },
+    {
+      "id": "po-phx",
+      "summary": "Suns: beat Portland 4-2, swept San Antonio, lost to the Lakers 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "phx"
+      ]
+    },
+    {
+      "id": "po-cle",
+      "summary": "Cavaliers: beat Chicago 4-1, lost to Boston 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "cle"
+      ]
+    },
+    {
+      "id": "po-atl",
+      "summary": "Hawks: beat Milwaukee 4-3, swept by Orlando",
+      "origin": "playoffs",
+      "teams": [
+        "atl"
+      ]
+    },
+    {
+      "id": "po-uta",
+      "summary": "Jazz: beat Denver 4-2, swept by the Lakers",
+      "origin": "playoffs",
+      "teams": [
+        "uta"
+      ]
+    },
+    {
+      "id": "po-sas",
+      "summary": "Spurs: beat Dallas 4-2, swept by Phoenix",
+      "origin": "playoffs",
+      "teams": [
+        "sas"
+      ]
+    },
+    {
+      "id": "po-okc",
+      "summary": "Thunder: lost to the Lakers 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "okc"
+      ]
+    },
+    {
+      "id": "po-dal",
+      "summary": "Mavericks: lost to San Antonio 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "dal"
+      ]
+    },
+    {
+      "id": "po-por",
+      "summary": "Trail Blazers: lost to Phoenix 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "por"
+      ]
+    },
+    {
+      "id": "po-den",
+      "summary": "Nuggets: lost to Utah 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "po-mil",
+      "summary": "Bucks: lost to Atlanta 3-4",
+      "origin": "playoffs",
+      "teams": [
+        "mil"
+      ]
+    },
+    {
+      "id": "po-mia",
+      "summary": "Heat: lost to Boston 1-4",
+      "origin": "playoffs",
+      "teams": [
+        "mia"
+      ]
+    },
+    {
+      "id": "po-chi",
+      "summary": "Bulls: lost to Cleveland 1-4",
+      "origin": "playoffs",
+      "teams": [
+        "chi"
+      ]
+    },
+    {
+      "id": "po-cha",
+      "summary": "Bobcats: first playoff trip, swept by Orlando",
+      "origin": "playoffs",
+      "teams": [
+        "cha"
+      ]
+    },
+    {
+      "id": "award-mvp",
+      "summary": "LeBron James, MVP",
+      "origin": "awards",
+      "teams": [
+        "cle"
+      ]
+    },
+    {
+      "id": "award-roy",
+      "summary": "Tyreke Evans, Rookie of the Year",
+      "origin": "awards",
+      "teams": [
+        "sac"
+      ]
+    },
+    {
+      "id": "award-dpoy",
+      "summary": "Dwight Howard, Defensive Player of the Year",
+      "origin": "awards",
+      "teams": [
+        "orl"
+      ]
+    },
+    {
+      "id": "award-mip",
+      "summary": "Aaron Brooks, Most Improved Player",
+      "origin": "awards",
+      "teams": [
+        "hou"
+      ]
+    },
+    {
+      "id": "award-6moy",
+      "summary": "Jamal Crawford, Sixth Man of the Year",
+      "origin": "awards",
+      "teams": [
+        "atl"
+      ]
+    },
+    {
+      "id": "award-coy",
+      "summary": "Scott Brooks, Coach of the Year",
+      "origin": "awards",
+      "teams": [
+        "okc"
+      ]
+    },
+    {
+      "id": "theme-free-agency-2009",
+      "summary": "2009 free-agent moves",
+      "origin": "theme",
+      "teams": [
+        "lal",
+        "bos",
+        "det",
+        "tor"
+      ]
+    },
+    {
+      "id": "theme-trade-deadline",
+      "summary": "February trade deadline deals",
+      "origin": "theme",
+      "teams": [
+        "cle",
+        "was",
+        "dal",
+        "nyk",
+        "hou",
+        "sac"
+      ]
+    },
+    {
+      "id": "theme-coaching-changes",
+      "summary": "Coaching changes",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "draft-lottery",
+      "summary": "Washington wins the 2010 lottery",
+      "origin": "draft",
+      "teams": [
+        "was"
+      ]
+    },
+    {
+      "id": "draft-2010",
+      "summary": "The 2010 draft",
+      "origin": "draft",
+      "teams": []
+    },
+    {
+      "id": "weekly-atl",
+      "summary": "53 wins; Woodson out",
+      "origin": "weekly",
+      "teams": [
+        "atl"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-bos",
+      "summary": "Aging Big Three reach the Finals",
+      "origin": "weekly",
+      "teams": [
+        "bos"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-bkn",
+      "summary": "Historic 0-18 start; 12-70",
+      "origin": "weekly",
+      "teams": [
+        "bkn"
+      ],
+      "weeks": [
+        5
+      ]
+    },
+    {
+      "id": "weekly-cha",
+      "summary": "Jordan buys team; first playoffs",
+      "origin": "weekly",
+      "teams": [
+        "cha"
+      ],
+      "weeks": [
+        3,
+        21
+      ]
+    },
+    {
+      "id": "weekly-chi",
+      "summary": "Del Negro era",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-cle",
+      "summary": "Best record; LeBron free agency looms",
+      "origin": "weekly",
+      "teams": [
+        "cle"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-dal",
+      "summary": "Butler trade",
+      "origin": "weekly",
+      "teams": [
+        "dal"
+      ],
+      "weeks": [
+        16
+      ]
+    },
+    {
+      "id": "weekly-den",
+      "summary": "Karl cancer",
+      "origin": "weekly",
+      "teams": [
+        "den"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-det",
+      "summary": "Gordon/Villanueva signings flop",
+      "origin": "weekly",
+      "teams": [
+        "det"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-gsw",
+      "summary": "Jackson trade; Curry rookie year",
+      "origin": "weekly",
+      "teams": [
+        "gsw"
+      ],
+      "weeks": [
+        3,
+        24
+      ]
+    },
+    {
+      "id": "weekly-hou",
+      "summary": "Yao out; T-Mac traded",
+      "origin": "weekly",
+      "teams": [
+        "hou"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-ind",
+      "summary": "Granger",
+      "origin": "weekly",
+      "teams": [
+        "ind"
+      ],
+      "weeks": [
+        22
+      ]
+    },
+    {
+      "id": "weekly-lac",
+      "summary": "Griffin out for season",
+      "origin": "weekly",
+      "teams": [
+        "lac"
+      ],
+      "weeks": [
+        12
+      ]
+    },
+    {
+      "id": "weekly-lal",
+      "summary": "Repeat champions",
+      "origin": "weekly",
+      "teams": [
+        "lal"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-mem",
+      "summary": "Iverson stint; Randolph All-Star",
+      "origin": "weekly",
+      "teams": [
+        "mem"
+      ],
+      "weeks": [
+        3,
+        14,
+        18
+      ]
+    },
+    {
+      "id": "weekly-mia",
+      "summary": "Wade carries Heat",
+      "origin": "weekly",
+      "teams": [
+        "mia"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-mil",
+      "summary": "Fear the Deer",
+      "origin": "weekly",
+      "teams": [
+        "mil"
+      ],
+      "weeks": [
+        3,
+        17,
+        22,
+        23
+      ]
+    },
+    {
+      "id": "weekly-min",
+      "summary": "Rambis first year",
+      "origin": "weekly",
+      "teams": [
+        "min"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-nop",
+      "summary": "Byron Scott fired",
+      "origin": "weekly",
+      "teams": [
+        "nop"
+      ],
+      "weeks": [
+        3,
+        15
+      ]
+    },
+    {
+      "id": "weekly-nyk",
+      "summary": "Clearing cap space for 2010",
+      "origin": "weekly",
+      "teams": [
+        "nyk"
+      ],
+      "weeks": [
+        8,
+        17
+      ]
+    },
+    {
+      "id": "weekly-okc",
+      "summary": "Durant scoring title; 50 wins",
+      "origin": "weekly",
+      "teams": [
+        "okc"
+      ],
+      "weeks": [
+        24
+      ]
+    },
+    {
+      "id": "weekly-orl",
+      "summary": "Back to the East finals",
+      "origin": "weekly",
+      "teams": [
+        "orl"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-phi",
+      "summary": "Iverson return",
+      "origin": "weekly",
+      "teams": [
+        "phi"
+      ],
+      "weeks": [
+        6
+      ]
+    },
+    {
+      "id": "weekly-phx",
+      "summary": "Surprise West finals run",
+      "origin": "weekly",
+      "teams": [
+        "phx"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-por",
+      "summary": "Injuries",
+      "origin": "weekly",
+      "teams": [
+        "por"
+      ],
+      "weeks": [
+        6,
+        17
+      ]
+    },
+    {
+      "id": "weekly-sac",
+      "summary": "Tyreke Evans",
+      "origin": "weekly",
+      "teams": [
+        "sac"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-sas",
+      "summary": "Jefferson trade",
+      "origin": "weekly",
+      "teams": [
+        "sas"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-tor",
+      "summary": "Bosh final season",
+      "origin": "weekly",
+      "teams": [
+        "tor"
+      ],
+      "weeks": [
+        24
+      ]
+    },
+    {
+      "id": "weekly-uta",
+      "summary": "Boozer final season",
+      "origin": "weekly",
+      "teams": [
+        "uta"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-was",
+      "summary": "Arenas suspension",
+      "origin": "weekly",
+      "teams": [
+        "was"
+      ],
+      "weeks": [
+        11,
+        14
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "hedo-to-toronto",
+      "title": "Hedo Turkoglu spurns Portland for Toronto",
+      "eventDate": "2009-07-03",
+      "teams": [
+        "tor",
+        "por",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Turkoglu headed to Toronto",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4305310",
+        "publishedAt": "2009-07-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2009",
+        "weekly-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kuester-to-pistons",
+      "title": "Pistons hire John Kuester",
+      "eventDate": "2009-07-07",
+      "teams": [
+        "det",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Cavs' Kuester to be Pistons' coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4311090",
+        "publishedAt": "2009-07-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "gordon-villanueva",
+      "title": "Pistons spend big on Ben Gordon and Charlie Villanueva",
+      "eventDate": "2009-07-08",
+      "teams": [
+        "det",
+        "chi",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons sign free agents Gordon, Villanueva",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4314591",
+        "publishedAt": "2009-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2009",
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "artest-to-lakers",
+      "title": "Lakers sign Ron Artest; Ariza goes to Houston",
+      "eventDate": "2009-07-08",
+      "teams": [
+        "lal",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wish granted: Artest finally becomes a Laker",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4314742",
+        "publishedAt": "2009-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2009",
+        "weekly-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sheed-to-celtics",
+      "title": "Celtics sign Rasheed Wallace",
+      "eventDate": "2009-07-08",
+      "teams": [
+        "bos",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA free agents: Boston Celtics sign free-agent forward Rasheed Wallace",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4314180",
+        "publishedAt": "2009-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-free-agency-2009",
+        "weekly-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "yao-foot-surgery",
+      "title": "Yao Ming out for the season after foot surgery",
+      "eventDate": "2009-07-17",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Yao to have surgery, likely out 2009-10",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4336553",
+        "publishedAt": "2009-07-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "okafor-for-chandler",
+      "title": "Bobcats and Hornets swap Okafor and Chandler",
+      "eventDate": "2009-07-28",
+      "teams": [
+        "cha",
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bobcats, Hornets finish Okafor-Chandler trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4361334",
+        "publishedAt": "2009-07-28"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha",
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "ben-wallace-returns",
+      "title": "Ben Wallace returns to Detroit",
+      "eventDate": "2009-08-07",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Source: Wallace, Pistons agree on 1-year deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4383906",
+        "publishedAt": "2009-08-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "rubio-stays-in-spain",
+      "title": "Ricky Rubio stays in Spain",
+      "eventDate": "2009-09-02",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rubio still committed to NBA",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4439216",
+        "publishedAt": "2009-09-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "prokhorov-deal",
+      "title": "Mikhail Prokhorov agrees to buy the Nets",
+      "eventDate": "2009-09-23",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Prokhorov has deal to buy Nets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4497411",
+        "publishedAt": "2009-09-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "monta-curry-cant",
+      "title": "Monta Ellis says he can't play with rookie Stephen Curry",
+      "eventDate": "2009-09-28",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rookie Stephen Curry gets rude awakening in Warriors dysfunction",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2009/09/29/warriors",
+        "publishedAt": "2009-09-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "love-broken-hand",
+      "title": "Kevin Love breaks his hand in the preseason",
+      "eventDate": "2009-10-16",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Timberwolves' Love fractures bone in left hand",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4567788",
+        "publishedAt": "2009-10-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "summer-2010-cap-space",
+      "title": "Teams clear cap space for the summer of 2010",
+      "eventDate": "2009-10-30",
+      "teams": [
+        "mia",
+        "nyk",
+        "chi",
+        "bkn",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Weekend Dime: Who will have money for the summer of 2010?",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-091030-31",
+        "publishedAt": "2009-10-31"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lebron-free-agency"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "scott-fired",
+      "title": "Hornets fire Byron Scott",
+      "eventDate": "2009-11-12",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets fire Scott, name Bower coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4648162",
+        "publishedAt": "2009-11-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jennings-55",
+      "title": "Brandon Jennings scores 55 as a rookie",
+      "eventDate": "2009-11-14",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Milwaukee Bucks rookie Brandon Jennings is taking the league by storm",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?page=Jennings-091119",
+        "publishedAt": "2009-11-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jackson-to-bobcats",
+      "title": "Warriors trade Stephen Jackson to Charlotte",
+      "eventDate": "2009-11-16",
+      "teams": [
+        "gsw",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors trade Jackson to Bobcats",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4659552",
+        "publishedAt": "2009-11-16"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw",
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "iverson-leaves-memphis",
+      "title": "Allen Iverson's Memphis stint ends after three games",
+      "eventDate": "2009-11-16",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Iverson, Grizzlies agree to terminate contract",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4661327",
+        "publishedAt": "2009-11-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nets-fire-frank",
+      "title": "Nets fire Lawrence Frank during an 0-16 start",
+      "eventDate": "2009-11-29",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Winless, now jobless: Frank fired by 0-16 Nets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4697789",
+        "publishedAt": "2009-11-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "oden-kneecap",
+      "title": "Greg Oden's season ends with a fractured kneecap",
+      "eventDate": "2009-12-05",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Blazers confirm Oden's season is over",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4720683",
+        "publishedAt": "2009-12-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "iverson-returns",
+      "title": "Allen Iverson returns to Philadelphia",
+      "eventDate": "2009-12-07",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Emotional Allen Iverson marks Philly return",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story?id=4724044",
+        "publishedAt": "2009-12-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nate-robinson-benched",
+      "title": "Nate Robinson benched by D'Antoni, asks out",
+      "eventDate": "2009-12-20",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Robinson wants trade from Knicks",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/news/robinson-wants-trade-knicks-032600120--nba.html",
+        "publishedAt": "2009-12-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "arenas-suspended-indefinitely",
+      "title": "Gilbert Arenas suspended over guns in the locker room",
+      "eventDate": "2010-01-06",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Arenas suspended indefinitely",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4802267",
+        "publishedAt": "2010-01-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-arenas",
+        "weekly-was"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "griffin-out",
+      "title": "Blake Griffin's rookie season ends before it starts",
+      "eventDate": "2010-01-13",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers' Griffin to have season-ending surgery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4823032",
+        "publishedAt": "2010-01-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "arenas-out-for-season",
+      "title": "Arenas and Crittenton suspended for the season",
+      "eventDate": "2010-01-27",
+      "teams": [
+        "was"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "NBA suspends Arenas for rest of season",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/aw-arenasstern012710.html",
+        "publishedAt": "2010-01-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-arenas",
+        "weekly-was"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "randolph-all-star",
+      "title": "Zach Randolph makes his first All-Star team",
+      "eventDate": "2010-01-28",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Zach Randolph named to Western Conference All-Star team",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/grizzlies/news/zach_randolph_named_to_allstar_team-1000128.html",
+        "publishedAt": "2010-01-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cp3-knee",
+      "title": "Chris Paul has knee surgery; Collison steps in",
+      "eventDate": "2010-02-04",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "New Orleans Hornets point guard Chris Paul to miss 4-6 weeks after knee surgery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4888073",
+        "publishedAt": "2010-02-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "butler-to-dallas",
+      "title": "Mavericks trade for Caron Butler and Brendan Haywood",
+      "eventDate": "2010-02-13",
+      "teams": [
+        "dal",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavericks, Wizards complete seven-player deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/dallas/nba/news/story?id=4912262",
+        "publishedAt": "2010-02-13"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "karl-cancer",
+      "title": "George Karl diagnosed with throat cancer",
+      "eventDate": "2010-02-16",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets' Karl fighting 'treatable' throat cancer",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4919794",
+        "publishedAt": "2010-02-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "camby-to-blazers",
+      "title": "Blazers trade for Marcus Camby",
+      "eventDate": "2010-02-16",
+      "teams": [
+        "por",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Blazers acquire center Camby from Clippers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4918893",
+        "publishedAt": "2010-02-16"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jamison-to-cavs",
+      "title": "Cavaliers trade for Antawn Jamison",
+      "eventDate": "2010-02-17",
+      "teams": [
+        "cle",
+        "was",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavs strike deal for Wizards' Jamison",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/aw-jamisontrade021710.html",
+        "publishedAt": "2010-02-17"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "tmac-to-knicks",
+      "title": "Knicks land Tracy McGrady in a three-team deal",
+      "eventDate": "2010-02-18",
+      "teams": [
+        "nyk",
+        "hou",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "T-Mac traded in 3-team deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4924836",
+        "publishedAt": "2010-02-18"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-nyk",
+        "weekly-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "salmons-to-bucks",
+      "title": "Bulls trade John Salmons to Milwaukee",
+      "eventDate": "2010-02-18",
+      "teams": [
+        "chi",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls acquire Warrick, Alexander from Bucks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4924897",
+        "publishedAt": "2010-02-18"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-chi",
+        "weekly-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nate-to-celtics",
+      "title": "Celtics get Nate Robinson from the Knicks",
+      "eventDate": "2010-02-18",
+      "teams": [
+        "bos",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Boston Celtics get Nate Robinson from New York Knicks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/boston/nba/news/story?id=4924052",
+        "publishedAt": "2010-02-18"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "brewer-to-grizzlies",
+      "title": "Jazz trade Ronnie Brewer to Memphis",
+      "eventDate": "2010-02-18",
+      "teams": [
+        "uta",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies acquire Ronnie Brewer from Jazz",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/grizzlies/news/021810_grizzlies_acquire_ro_2010_02_18.html",
+        "publishedAt": "2010-02-18"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-uta"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thabeet-d-league",
+      "title": "Grizzlies send No. 2 pick Hasheem Thabeet to the D-League",
+      "eventDate": "2010-02-25",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies demote Thabeet to D-League's Wizards",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4946483",
+        "publishedAt": "2010-02-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jordan-buys-bobcats",
+      "title": "Michael Jordan buys the Bobcats",
+      "eventDate": "2010-03-17",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jordan purchase of Bobcats approved",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5003048",
+        "publishedAt": "2010-03-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "skiles-bucks",
+      "title": "Scott Skiles's Bucks surge toward the playoffs",
+      "eventDate": "2010-03-23",
+      "teams": [
+        "mil",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Skiles' mentality lifts Bucks",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/03/23/skiles-bucks",
+        "publishedAt": "2010-03-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "granger-star",
+      "title": "Danny Granger carries a losing Pacers team",
+      "eventDate": "2010-03-26",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Weekly Countdown: Family bond helped turn Granger into star",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/03/26/countdown-granger",
+        "publishedAt": "2010-03-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bogut-elbow",
+      "title": "Andrew Bogut breaks his arm before the playoffs",
+      "eventDate": "2010-04-03",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks C Bogut likely out for season after fall",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5053689",
+        "publishedAt": "2010-04-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bosh-face-fracture",
+      "title": "Chris Bosh's facial fracture sinks Toronto's playoff hopes",
+      "eventDate": "2010-04-06",
+      "teams": [
+        "tor",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Toronto Raptors' Chris Bosh could miss 'weeks' after surgery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5064436",
+        "publishedAt": "2010-04-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nelson-record",
+      "title": "Don Nelson becomes the winningest coach",
+      "eventDate": "2010-04-07",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Don Nelson - Most NBA Career Wins",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/sportscenter/post/_/id/42788/don-nelson-most-nba-career-wins",
+        "publishedAt": "2010-04-07"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "thunder-playoffs",
+      "title": "Thunder make the playoffs",
+      "eventDate": "2010-04-12",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Frank Hughes: Playoffs a whole new world for OKC",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/04/12/thunder-playoffs",
+        "publishedAt": "2010-04-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "eddie-jordan-out",
+      "title": "Sixers fire Eddie Jordan after one season",
+      "eventDate": "2010-04-15",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Source: 76ers coach will be fired after 1 season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5090619",
+        "publishedAt": "2010-04-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bosh-future",
+      "title": "Chris Bosh unsure where he will play next",
+      "eventDate": "2010-04-15",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Toronto Raptors' Chris Bosh unsure where he'll play next season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5095751",
+        "publishedAt": "2010-04-15"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lebron-free-agency",
+        "weekly-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "okur-achilles",
+      "title": "Mehmet Okur tears his Achilles in Game 1 at Denver",
+      "eventDate": "2010-04-17",
+      "teams": [
+        "uta",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jazz center Okur out for rest of playoffs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2010/news/story?id=5109836",
+        "publishedAt": "2010-04-18"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-uta",
+        "po-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bobcats-first-playoffs",
+      "title": "Bobcats' first playoff game",
+      "eventDate": "2010-04-18",
+      "teams": [
+        "cha",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Fast Breaks: 'Cats-Magic, Game 1",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/04/19/bobcats-magicgame1",
+        "publishedAt": "2010-04-19"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-cha",
+        "po-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "game-2-talking-points",
+      "title": "Bulls and Jazz face long odds early in the first round",
+      "eventDate": "2010-04-19",
+      "teams": [
+        "chi",
+        "cle",
+        "uta",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Morning Talking Points: Bulls, Jazz up against tough odds in Game 2",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/04/19/morning-talkingpoints",
+        "publishedAt": "2010-04-19"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-den",
+        "po-uta"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "noah-rips-cleveland",
+      "title": "Joakim Noah rips Cleveland during the first round",
+      "eventDate": "2010-04-19",
+      "teams": [
+        "chi",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chicago Bulls center Joakim Noah answers Cleveland Cavaliers fans by ripping their city",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/chicago/nba/news/story?id=5110424",
+        "publishedAt": "2010-04-19"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-chi",
+        "po-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "brooks-mip",
+      "title": "Aaron Brooks is Most Improved Player",
+      "eventDate": "2010-04-22",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brooks is NBA's most improved player",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5126038",
+        "publishedAt": "2010-04-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-mip"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "roy-returns",
+      "title": "Brandon Roy returns from knee surgery in Game 4",
+      "eventDate": "2010-04-24",
+      "teams": [
+        "por",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2010 NBA playoffs: Blazers' Roy makes a triumphant return",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2010/columns/story?columnist=hollinger_john&page=roygame4-100424",
+        "publishedAt": "2010-04-24"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wade-46",
+      "title": "Dwyane Wade scores 46 to avoid a sweep",
+      "eventDate": "2010-04-25",
+      "teams": [
+        "mia",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Dwyane Wade's hot hand saves Heat from elimination",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2010/columns/story?page=wadegame4-100425",
+        "publishedAt": "2010-04-25"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mia"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "crawford-6moy",
+      "title": "Jamal Crawford is Sixth Man of the Year",
+      "eventDate": "2010-04-27",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks G Crawford named sixth man of year",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5140150",
+        "publishedAt": "2010-04-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-6moy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "van-gundy-officials",
+      "title": "Stan Van Gundy fined for criticizing officials",
+      "eventDate": "2010-04-27",
+      "teams": [
+        "orl",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "To NBA commissioner Davis Stern's delight, Orlando Magic coach Stan Van Gundy done talking about officials",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2010/news/story?id=5132933",
+        "publishedAt": "2010-04-27"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-orl"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "tyreke-roy",
+      "title": "Tyreke Evans is Rookie of the Year",
+      "eventDate": "2010-04-29",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings PG Evans wins NBA rookie of year award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5148787",
+        "publishedAt": "2010-04-29"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-roy"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-oust-mavs",
+      "title": "Spurs knock out the second-seeded Mavericks",
+      "eventDate": "2010-04-29",
+      "teams": [
+        "dal",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Dallas Mavericks free rookie Rodrigue Beaubois too late as season collapses",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/columns/story?columnist=macmahon_tim&id=5150489",
+        "publishedAt": "2010-04-30"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-dal",
+        "po-sas"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "gasol-tip-thunder",
+      "title": "Gasol's tip-in finishes off the young Thunder",
+      "eventDate": "2010-04-30",
+      "teams": [
+        "lal",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Fast Breaks: Lakers-OKC, Game 6",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/05/01/lakers-thundergame6",
+        "publishedAt": "2010-05-01"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-lal",
+        "po-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lebron-mvp",
+      "title": "LeBron James wins a second straight MVP",
+      "eventDate": "2010-05-02",
+      "teams": [
+        "cle"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "LeBron dominates voting to win 2nd MVP award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5156199",
+        "publishedAt": "2010-05-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-mvp"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "del-negro-fired",
+      "title": "Bulls fire Vinny Del Negro",
+      "eventDate": "2010-05-03",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls fire Del Negro; announcement Tuesday",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/chicago/nba/news/story?id=5159051",
+        "publishedAt": "2010-05-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-chi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "los-suns",
+      "title": "Suns wear 'Los Suns' jerseys against Arizona's immigration law",
+      "eventDate": "2010-05-05",
+      "teams": [
+        "phx",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns to wear 'Los Suns' uniforms to honor Phoenix's Latino community",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/suns-wear-los-suns-uniforms-honor-phoenixs-latino--nba.html",
+        "publishedAt": "2010-05-04"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "suns-sweep-spurs",
+      "title": "Suns finally beat the Spurs",
+      "eventDate": "2010-05-07",
+      "teams": [
+        "phx",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bill Simmons: Phoenix Suns trying to erase 40 years of stomach punches",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/page2/story?page=simmons%2F100507",
+        "publishedAt": "2010-05-07"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-phx",
+        "po-sas"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-sweep-jazz",
+      "title": "Lakers sweep the Jazz",
+      "eventDate": "2010-05-10",
+      "teams": [
+        "lal",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers take out Jazz: The reactions",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/los-angeles/lakers/post/_/id/6405/lakers-take-out-jazz-the-reactions",
+        "publishedAt": "2010-05-11"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-uta",
+        "po-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "prokhorov-approved",
+      "title": "NBA approves Prokhorov as Nets owner",
+      "eventDate": "2010-05-11",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA approves Mikhail Prokhorov's bid to control New Jersey Nets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/new-york/nba/news/story?id=5181478",
+        "publishedAt": "2010-05-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lebron-game-5",
+      "title": "LeBron and the Cavs collapse in Game 5 against Boston",
+      "eventDate": "2010-05-11",
+      "teams": [
+        "cle",
+        "bos"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Joe Posnanski: LeBron, Cavs lacked fight in Game 5",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/05/12/lebron-cavaliers",
+        "publishedAt": "2010-05-12"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-cle",
+        "po-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "woodson-out",
+      "title": "Hawks let Mike Woodson go after a sweep by Orlando",
+      "eventDate": "2010-05-14",
+      "teams": [
+        "atl",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks dismiss coach Woodson after 6 seasons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5188712",
+        "publishedAt": "2010-05-14"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-atl",
+        "po-orl",
+        "theme-coaching-changes"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wizards-win-lottery",
+      "title": "Wizards win the lottery",
+      "eventDate": "2010-05-18",
+      "teams": [
+        "was",
+        "phi",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards Land First Overall Pick in 2010 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/wizards/news/lottery_100518.html",
+        "publishedAt": "2010-05-18"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-lottery"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavs-season-review",
+      "title": "Mavericks review a season that went nowhere",
+      "eventDate": "2010-05-21",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2009-10: All dressed up, nowhere to go",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/dallas/mavericks/post/_/id/4669190/2009-10-all-dressed-up-but-going-nowhere",
+        "publishedAt": "2010-05-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mike-brown-fired",
+      "title": "Cavaliers fire Mike Brown",
+      "eventDate": "2010-05-24",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavs fire Brown after 5 seasons, no NBA titles",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5213917",
+        "publishedAt": "2010-05-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-oust-suns",
+      "title": "Lakers beat the Suns in the West finals",
+      "eventDate": "2010-05-29",
+      "teams": [
+        "lal",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Shelburne: More heartbreak for Nash and Suns",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/los-angeles/nba/columns/story?id=5228200",
+        "publishedAt": "2010-05-30"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-lal",
+        "po-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-repeat",
+      "title": "Lakers beat the Celtics in Game 7 to repeat",
+      "eventDate": "2010-06-17",
+      "teams": [
+        "lal",
+        "bos"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Daily Dime: Lakers 2010 NBA champions",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime/_/page/dime-100618/daily-dim",
+        "publishedAt": "2010-06-18"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-finals",
+        "po-lal",
+        "po-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bird-point-guard",
+      "title": "Pacers miss the playoffs again; Bird hunts a point guard",
+      "eventDate": "2010-06-22",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bird says Pacers may trade pick for point guard",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2010/news/story?id=5315083",
+        "publishedAt": "2010-06-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-clear-space",
+      "title": "Heat clear cap space for free agency",
+      "eventDate": "2010-06-23",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat working to create cap space",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=5322877",
+        "publishedAt": "2010-06-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lebron-free-agency",
+        "weekly-mia"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kings-want-cousins",
+      "title": "Kings plan to draft DeMarcus Cousins",
+      "eventDate": "2010-06-23",
+      "teams": [
+        "sac",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Buzz: Kings want Cousins, Warriors eye Udoh",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/ys-draftbuzz062310.html",
+        "publishedAt": "2010-06-23"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2010"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "draft-2010-winners-losers",
+      "title": "Wizards take John Wall first; draft winners and losers",
+      "eventDate": "2010-06-24",
+      "teams": [
+        "was",
+        "phi",
+        "bkn",
+        "min",
+        "sac"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "NBA draft 2010: Winners & losers",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/mc-draftwinnerslosers062510.html",
+        "publishedAt": "2010-06-25"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2010"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "draft-2010-team-by-team",
+      "title": "Every team's 2010 draft haul",
+      "eventDate": "2010-06-24",
+      "teams": [
+        "ind",
+        "det",
+        "lac",
+        "uta",
+        "nop",
+        "mem",
+        "tor",
+        "hou",
+        "mil",
+        "okc",
+        "gsw",
+        "atl",
+        "den",
+        "mia",
+        "nyk",
+        "sas",
+        "dal",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2010 NBA Draft Team-by-Team",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/wire?id=5327872&section=nba",
+        "publishedAt": "2010-06-25"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2010"
+      ],
+      "status": "excluded"
+    }
+  ]
+}

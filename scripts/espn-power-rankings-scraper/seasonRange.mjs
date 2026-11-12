@@ -1,7 +1,7 @@
 export const FIRST_SEASON = '2003-04'
-export const LAST_SEASON = '2015-16'
+export const LAST_SEASON = '2016-17'
 
-const SUPPORTED = `ESPN's structured Power Rankings cover ${FIRST_SEASON} to ${LAST_SEASON}`
+const SUPPORTED = `ESPN's Power Rankings cover ${FIRST_SEASON} to ${LAST_SEASON}`
 
 function toEndYear(season) {
   const match = /^(\d{4})-(\d{2})$/.exec(season ?? '')

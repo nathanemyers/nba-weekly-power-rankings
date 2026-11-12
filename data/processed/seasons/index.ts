@@ -45,6 +45,11 @@ export const seasonIndex: unknown = [
     "champion": "gsw"
   },
   {
+    "name": "2016-17",
+    "source": "espn",
+    "champion": "gsw"
+  },
+  {
     "name": "2015-16",
     "source": "espn",
     "champion": "cle"
@@ -121,6 +126,7 @@ export const seasonLoaders: Record<string, () => Promise<{ default: unknown }>> 
   "2019-20": () => import("./2019-20.json"),
   "2018-19": () => import("./2018-19.json"),
   "2017-18": () => import("./2017-18.json"),
+  "2016-17": () => import("./2016-17.json"),
   "2015-16": () => import("./2015-16.json"),
   "2014-15": () => import("./2014-15.json"),
   "2013-14": () => import("./2013-14.json"),

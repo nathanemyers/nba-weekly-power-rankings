@@ -1,7 +1,7 @@
 # espn-power-rankings-scraper
 
 Scrapes ESPN's weekly NBA Power Rankings (written by Marc Stein) for the
-2003-04 through 2015-16 seasons into JSON. It's a separate tool, but it works
+2003-04 through 2016-17 seasons into JSON. It's a separate tool, but it works
 like the [NBA.com scraper](../nba-power-rankings-scraper/README.md) and writes
 the same kind of layout.
 
@@ -44,8 +44,24 @@ because some old pages carry wrong "Updated" dates.
 - Pages are UTF-8 with stray Windows-1252 bytes (e.g. "5½ games"), which are
   decoded as Windows-1252. 2012-13 week 23 and the 2014-15 training camp
   edition contain bytes ESPN itself mangled; those come out as "�".
-- From 2016-17 on, ESPN publishes power rankings as regular articles in a
-  different format, which this tool doesn't handle.
+- From 2016-17 on, ESPN publishes each edition as a regular story (see
+  [Story seasons](#story-seasons)). Only 2016-17 is supported, since NBA.com
+  covers 2017-18 onward.
+
+## Story seasons
+
+ESPN redirects `/year/2017` to its current rankings, so 2016-17 is scraped
+from its stories instead. `FINAL_STORY_URLS` in
+[`storyPage.mjs`](storyPage.mjs) names each season's final story, whose
+"Previous rankings" line links every earlier edition. Week numbers come from
+each story's URL (`training-camp-edition` is `-1`, `preseason-edition` is `0`,
+`week-<n>-rankings` is `n`). ESPN's links label the preseason edition
+"Week 1", and the first weekly story is week 2, so 2016-17 has no week 1.
+
+Each team's block starts at its logo. The paragraph holding "record:" gives
+rank, name, record and previous rank; the paragraphs after it are the comment.
+Week 18 is a fan-tweet edition: its comments are embedded tweets only, so the
+teams are saved with ranks, records and empty comments (and a warning each).
 
 ## Usage
 
@@ -58,7 +74,7 @@ node scripts/espn-power-rankings-scraper/cli.mjs
 By default this fetches every season into `data/raw/espn`. Options:
 
 - `--from <season>` / `--to <season>`: limit the seasons, e.g.
-  `--from 2007-08 --to 2007-08`. Seasons outside 2003-04 to 2015-16 are
+  `--from 2007-08 --to 2007-08`. Seasons outside 2003-04 to 2016-17 are
   rejected before any request is made.
 - `--out <dir>`: output directory (default `data/raw/espn`).
 - `--delay-ms <n>`: delay between requests to ESPN (default 1000).

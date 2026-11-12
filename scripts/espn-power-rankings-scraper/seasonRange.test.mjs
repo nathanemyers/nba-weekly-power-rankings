@@ -3,7 +3,7 @@ import { parseSeasonRange } from './seasonRange.mjs'
 
 describe('parseSeasonRange', () => {
   it('defaults to the whole archive', () => {
-    expect(parseSeasonRange()).toEqual({ fromEndYear: 2004, toEndYear: 2016 })
+    expect(parseSeasonRange()).toEqual({ fromEndYear: 2004, toEndYear: 2017 })
   })
 
   it('accepts a single season', () => {
@@ -16,11 +16,11 @@ describe('parseSeasonRange', () => {
 
   it.each([
     ['2001-02', '2015-16'],
-    ['2003-04', '2016-17'],
+    ['2003-04', '2017-18'],
     ['2007-09', '2015-16'],
     ['2007', '2015-16'],
     ['2010-11', '2007-08'],
   ])('rejects %s to %s with the supported range', (from, to) => {
-    expect(() => parseSeasonRange(from, to)).toThrow(/2003-04 to 2015-16/)
+    expect(() => parseSeasonRange(from, to)).toThrow(/2003-04 to 2016-17/)
   })
 })

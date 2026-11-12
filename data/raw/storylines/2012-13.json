@@ -1,0 +1,3171 @@
+{
+  "season": "2012-13",
+  "updatedAt": "2026-11-03",
+  "guidance": [
+    {
+      "id": "retro-heat-repeat",
+      "summary": "Heat win 27 straight, LeBron wins MVP, and Miami repeats after Ray Allen saves Game 6",
+      "origin": "retrospective",
+      "teams": [
+        "mia"
+      ]
+    },
+    {
+      "id": "retro-lakers-superteam",
+      "summary": "Lakers add Nash and Howard, fire Brown, lose Buss and Kobe, and get swept",
+      "origin": "retrospective",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "retro-harden-trade",
+      "summary": "Thunder trade Harden to Houston days before the season",
+      "origin": "retrospective",
+      "teams": [
+        "okc",
+        "hou"
+      ]
+    },
+    {
+      "id": "po-finals",
+      "summary": "Finals: Heat beat the Spurs 4-3; LeBron James Finals MVP",
+      "origin": "playoffs",
+      "teams": [
+        "mia",
+        "sas"
+      ]
+    },
+    {
+      "id": "po-mia",
+      "summary": "Heat: beat MIL 4-0, CHI 4-1, IND 4-3, SAS 4-3 (champion)",
+      "origin": "playoffs",
+      "teams": [
+        "mia"
+      ]
+    },
+    {
+      "id": "po-sas",
+      "summary": "Spurs: beat LAL 4-0, GSW 4-2, MEM 4-0; lost Finals to MIA 3-4",
+      "origin": "playoffs",
+      "teams": [
+        "sas"
+      ]
+    },
+    {
+      "id": "po-ind",
+      "summary": "Pacers: beat ATL 4-2, NYK 4-2; lost to MIA 3-4",
+      "origin": "playoffs",
+      "teams": [
+        "ind"
+      ]
+    },
+    {
+      "id": "po-mem",
+      "summary": "Grizzlies: beat LAC 4-2, OKC 4-1; swept by SAS",
+      "origin": "playoffs",
+      "teams": [
+        "mem"
+      ]
+    },
+    {
+      "id": "po-nyk",
+      "summary": "Knicks: beat BOS 4-2; lost to IND 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "nyk"
+      ]
+    },
+    {
+      "id": "po-chi",
+      "summary": "Bulls: beat BKN 4-3; lost to MIA 1-4",
+      "origin": "playoffs",
+      "teams": [
+        "chi"
+      ]
+    },
+    {
+      "id": "po-okc",
+      "summary": "Thunder: beat HOU 4-2; lost to MEM 1-4 without Westbrook",
+      "origin": "playoffs",
+      "teams": [
+        "okc"
+      ]
+    },
+    {
+      "id": "po-gsw",
+      "summary": "Warriors: beat DEN 4-2; lost to SAS 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "gsw"
+      ]
+    },
+    {
+      "id": "po-mil",
+      "summary": "Bucks: swept by MIA",
+      "origin": "playoffs",
+      "teams": [
+        "mil"
+      ]
+    },
+    {
+      "id": "po-bos",
+      "summary": "Celtics: lost to NYK 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "bos"
+      ]
+    },
+    {
+      "id": "po-atl",
+      "summary": "Hawks: lost to IND 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "atl"
+      ]
+    },
+    {
+      "id": "po-bkn",
+      "summary": "Nets: lost to CHI 3-4",
+      "origin": "playoffs",
+      "teams": [
+        "bkn"
+      ]
+    },
+    {
+      "id": "po-hou",
+      "summary": "Rockets: lost to OKC 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "hou"
+      ]
+    },
+    {
+      "id": "po-lal",
+      "summary": "Lakers: swept by SAS",
+      "origin": "playoffs",
+      "teams": [
+        "lal"
+      ]
+    },
+    {
+      "id": "po-den",
+      "summary": "Nuggets: lost to GSW 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "po-lac",
+      "summary": "Clippers: lost to MEM 2-4",
+      "origin": "playoffs",
+      "teams": [
+        "lac"
+      ]
+    },
+    {
+      "id": "award-mvp",
+      "summary": "MVP: LeBron James",
+      "origin": "awards",
+      "teams": [
+        "mia"
+      ]
+    },
+    {
+      "id": "award-roy",
+      "summary": "Rookie of the Year: Damian Lillard",
+      "origin": "awards",
+      "teams": [
+        "por"
+      ]
+    },
+    {
+      "id": "award-dpoy",
+      "summary": "Defensive Player of the Year: Marc Gasol",
+      "origin": "awards",
+      "teams": [
+        "mem"
+      ]
+    },
+    {
+      "id": "award-mip",
+      "summary": "Most Improved Player: Paul George",
+      "origin": "awards",
+      "teams": [
+        "ind"
+      ]
+    },
+    {
+      "id": "award-6moy",
+      "summary": "Sixth Man of the Year: J.R. Smith",
+      "origin": "awards",
+      "teams": [
+        "nyk"
+      ]
+    },
+    {
+      "id": "award-coy",
+      "summary": "Coach of the Year: George Karl",
+      "origin": "awards",
+      "teams": [
+        "den"
+      ]
+    },
+    {
+      "id": "theme-offseason-2012",
+      "summary": "2012 offseason: Nash and Howard to the Lakers, Joe Johnson to Brooklyn, Ray Allen to Miami, offer sheets",
+      "origin": "theme",
+      "teams": [
+        "lal",
+        "bkn",
+        "mia",
+        "hou",
+        "nyk",
+        "por",
+        "nop",
+        "phx",
+        "tor"
+      ]
+    },
+    {
+      "id": "theme-coaching-changes",
+      "summary": "Coaching carousel: Brown, Johnson, Skiles, Gentry fired midseason; a dozen jobs change hands after it",
+      "origin": "theme",
+      "teams": [
+        "lal",
+        "bkn",
+        "mil",
+        "phx",
+        "phi",
+        "det",
+        "cle",
+        "cha",
+        "lac",
+        "sac",
+        "den",
+        "mem",
+        "bos"
+      ]
+    },
+    {
+      "id": "theme-trade-deadline",
+      "summary": "Trade deadline: Rudy Gay to Toronto, Redick to Milwaukee, Josh Smith stays",
+      "origin": "theme",
+      "teams": [
+        "mem",
+        "tor",
+        "det",
+        "mil",
+        "orl",
+        "atl",
+        "uta"
+      ]
+    },
+    {
+      "id": "theme-kings-seattle",
+      "summary": "Kings sale to a Seattle group and the vote to keep them in Sacramento",
+      "origin": "theme",
+      "teams": [
+        "sac"
+      ]
+    },
+    {
+      "id": "theme-league",
+      "summary": "Stern announces his retirement; Jason Collins comes out",
+      "origin": "theme",
+      "teams": []
+    },
+    {
+      "id": "draft-lottery",
+      "summary": "Cavaliers win the 2013 lottery; Magic No. 2, Wizards jump to No. 3",
+      "origin": "draft",
+      "teams": [
+        "cle",
+        "orl",
+        "was"
+      ]
+    },
+    {
+      "id": "draft-2013",
+      "summary": "Bennett surprise at No. 1, Oladipo No. 2, Porter No. 3, Noel traded",
+      "origin": "draft",
+      "teams": [
+        "cle",
+        "orl",
+        "was",
+        "phi",
+        "nop"
+      ]
+    },
+    {
+      "id": "weekly-atl",
+      "summary": "Joe Johnson traded, Lou Williams ACL, Josh Smith stays",
+      "origin": "weekly",
+      "teams": [
+        "atl"
+      ],
+      "weeks": [
+        12,
+        17
+      ]
+    },
+    {
+      "id": "weekly-bos",
+      "summary": "Ray Allen leaves, Rondo ACL, Marathon, Doc leaves",
+      "origin": "weekly",
+      "teams": [
+        "bos"
+      ],
+      "weeks": [
+        13,
+        24
+      ]
+    },
+    {
+      "id": "weekly-bkn",
+      "summary": "Move to Brooklyn, Sandy, Avery Johnson fired",
+      "origin": "weekly",
+      "teams": [
+        "bkn"
+      ],
+      "weeks": [
+        1,
+        9
+      ]
+    },
+    {
+      "id": "weekly-cha",
+      "summary": "18-game skid, Dunlap fired, Clifford hired, Hornets name",
+      "origin": "weekly",
+      "teams": [
+        "cha"
+      ],
+      "weeks": [
+        22
+      ]
+    },
+    {
+      "id": "weekly-chi",
+      "summary": "Rose sits all year, Bulls end Heat streak",
+      "origin": "weekly",
+      "teams": [
+        "chi"
+      ],
+      "weeks": [
+        22
+      ]
+    },
+    {
+      "id": "weekly-cle",
+      "summary": "Kyrie three-point title, Scott fired, Brown back, Bennett No. 1",
+      "origin": "weekly",
+      "teams": [
+        "cle"
+      ],
+      "weeks": [
+        16
+      ]
+    },
+    {
+      "id": "weekly-dal",
+      "summary": "Dirk knee surgery, beards, playoff streak ends",
+      "origin": "weekly",
+      "teams": [
+        "dal"
+      ],
+      "weeks": [
+        22,
+        24
+      ]
+    },
+    {
+      "id": "weekly-den",
+      "summary": "57 wins, Gallinari ACL, Karl COY then fired, Ujiri leaves",
+      "origin": "weekly",
+      "teams": [
+        "den"
+      ],
+      "weeks": [
+        23
+      ]
+    },
+    {
+      "id": "weekly-det",
+      "summary": "Drummond rookie year, Frank fired, Cheeks hired",
+      "origin": "weekly",
+      "teams": [
+        "det"
+      ],
+      "weeks": [
+        14,
+        15,
+        22
+      ]
+    },
+    {
+      "id": "weekly-gsw",
+      "summary": "Curry extension, 54 at MSG, three-point record",
+      "origin": "weekly",
+      "teams": [
+        "gsw"
+      ],
+      "weeks": [
+        1,
+        18
+      ]
+    },
+    {
+      "id": "weekly-hou",
+      "summary": "Lin signs, Harden trade and debut",
+      "origin": "weekly",
+      "teams": [
+        "hou"
+      ],
+      "weeks": [
+        1
+      ]
+    },
+    {
+      "id": "weekly-ind",
+      "summary": "Granger out, George breakout, Bird returns",
+      "origin": "weekly",
+      "teams": [
+        "ind"
+      ],
+      "weeks": [
+        22
+      ]
+    },
+    {
+      "id": "weekly-lac",
+      "summary": "17-game win streak, Del Negro out, Doc Rivers in",
+      "origin": "weekly",
+      "teams": [
+        "lac"
+      ],
+      "weeks": [
+        8
+      ]
+    },
+    {
+      "id": "weekly-lal",
+      "summary": "Nash and Howard, Brown fired, Buss dies, Kobe Achilles",
+      "origin": "weekly",
+      "teams": [
+        "lal"
+      ],
+      "weeks": [
+        2,
+        16,
+        24
+      ]
+    },
+    {
+      "id": "weekly-mem",
+      "summary": "Rudy Gay traded, Gasol DPOY, Hollins out",
+      "origin": "weekly",
+      "teams": [
+        "mem"
+      ],
+      "weeks": [
+        14
+      ]
+    },
+    {
+      "id": "weekly-mia",
+      "summary": "Ray Allen signs, 27-game streak, LeBron MVP",
+      "origin": "weekly",
+      "teams": [
+        "mia"
+      ],
+      "weeks": [
+        22
+      ]
+    },
+    {
+      "id": "weekly-mil",
+      "summary": "Skiles out, Redick trade, Drew hired",
+      "origin": "weekly",
+      "teams": [
+        "mil"
+      ],
+      "weeks": [
+        11,
+        17
+      ]
+    },
+    {
+      "id": "weekly-min",
+      "summary": "Love hand, Rubio returns, Flip replaces Kahn",
+      "origin": "weekly",
+      "teams": [
+        "min"
+      ],
+      "weeks": [
+        7
+      ]
+    },
+    {
+      "id": "weekly-nop",
+      "summary": "Gordon matched, Davis rookie year, Pelicans name",
+      "origin": "weekly",
+      "teams": [
+        "nop"
+      ],
+      "weeks": [
+        22,
+        24
+      ]
+    },
+    {
+      "id": "weekly-nyk",
+      "summary": "Lin leaves, Melo scoring title, Atlantic title",
+      "origin": "weekly",
+      "teams": [
+        "nyk"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-okc",
+      "summary": "Harden traded, 60 wins, Westbrook injury",
+      "origin": "weekly",
+      "teams": [
+        "okc"
+      ],
+      "weeks": []
+    },
+    {
+      "id": "weekly-orl",
+      "summary": "Post-Howard rebuild, Vaughn hired, Redick traded",
+      "origin": "weekly",
+      "teams": [
+        "orl"
+      ],
+      "weeks": [
+        17
+      ]
+    },
+    {
+      "id": "weekly-phi",
+      "summary": "Bynum never plays, Collins resigns, Hinkie hired",
+      "origin": "weekly",
+      "teams": [
+        "phi"
+      ],
+      "weeks": [
+        20
+      ]
+    },
+    {
+      "id": "weekly-phx",
+      "summary": "Nash leaves, Gentry out, Hornacek hired",
+      "origin": "weekly",
+      "teams": [
+        "phx"
+      ],
+      "weeks": [
+        12
+      ]
+    },
+    {
+      "id": "weekly-por",
+      "summary": "Batum matched, Lillard ROY, late skid",
+      "origin": "weekly",
+      "teams": [
+        "por"
+      ],
+      "weeks": [
+        22
+      ]
+    },
+    {
+      "id": "weekly-sac",
+      "summary": "Cousins suspensions, Seattle saga, Ranadive buys team",
+      "origin": "weekly",
+      "teams": [
+        "sac"
+      ],
+      "weeks": [
+        2,
+        8
+      ]
+    },
+    {
+      "id": "weekly-sas",
+      "summary": "Spurs fined for resting, Finals run",
+      "origin": "weekly",
+      "teams": [
+        "sas"
+      ],
+      "weeks": [
+        5
+      ]
+    },
+    {
+      "id": "weekly-tor",
+      "summary": "Lowry trade, DeRozan extension, Rudy Gay trade, Ujiri hired",
+      "origin": "weekly",
+      "teams": [
+        "tor"
+      ],
+      "weeks": [
+        1,
+        14
+      ]
+    },
+    {
+      "id": "weekly-uta",
+      "summary": "Mo Williams trade and injury, deadline stand-pat, missed playoffs",
+      "origin": "weekly",
+      "teams": [
+        "uta"
+      ],
+      "weeks": [
+        1,
+        8,
+        17
+      ]
+    },
+    {
+      "id": "weekly-was",
+      "summary": "Wall injury and return, Beal rookie year, Porter drafted",
+      "origin": "weekly",
+      "teams": [
+        "was"
+      ],
+      "weeks": [
+        11,
+        22
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "odom-mo-williams-four-team",
+      "title": "Lamar Odom to the Clippers, Mo Williams to Utah in a four-team deal",
+      "eventDate": "2012-06-29",
+      "teams": [
+        "lac",
+        "uta",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Dallas ships Odom to Clippers in trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8113523/lamar-odom-traded-los-angeles-clippers-mo-williams-utah-jazz-four-team-trade",
+        "publishedAt": "2012-06-29"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-offseason-2012",
+        "weekly-lac",
+        "weekly-uta",
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "joe-johnson-to-nets",
+      "title": "Hawks dump Joe Johnson on Brooklyn",
+      "eventDate": "2012-07-02",
+      "teams": [
+        "bkn",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Nets, Hawks agree on Johnson trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/new-york/nba/story/_/id/8124182/brooklyn-nets-agree-trade-atlanta-hawks-joe-johnson-sources-say",
+        "publishedAt": "2012-07-02"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-offseason-2012",
+        "weekly-bkn",
+        "weekly-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "deron-stays-in-brooklyn",
+      "title": "Deron Williams picks Brooklyn over Dallas",
+      "eventDate": "2012-07-03",
+      "teams": [
+        "bkn",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Free agent Deron Williams appears to announce his return to Nets on Twitter",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/si-wire/2012/07/04/deron-williams-return-nets-twitter",
+        "publishedAt": "2012-07-04"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-offseason-2012",
+        "weekly-bkn",
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nash-to-lakers",
+      "title": "Suns send Steve Nash to the Lakers",
+      "eventDate": "2012-07-04",
+      "teams": [
+        "lal",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers to acquire PG Nash in sign-and-trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/los-angeles/nba/story/_/id/8130840/steve-nash-headed-los-angeles-lakers-sign-trade-deal",
+        "publishedAt": "2012-07-04"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-offseason-2012",
+        "weekly-lal",
+        "weekly-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lowry-to-raptors",
+      "title": "Raptors trade for Kyle Lowry",
+      "eventDate": "2012-07-05",
+      "teams": [
+        "tor",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kyle Lowry to Raptors: Winners and Losers from Trade with Rockets",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/1248430-kyle-lowry-to-raptors-winners-and-losers-from-trade-with-rockets",
+        "publishedAt": "2012-07-05"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-offseason-2012",
+        "weekly-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "ray-allen-to-heat",
+      "title": "Ray Allen leaves Boston for the Heat",
+      "eventDate": "2012-07-07",
+      "teams": [
+        "mia",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ray Allen signs with Heat after reported 'rift' with Celtics' Rajon Rondo, Ainge",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/si-wire/2012/07/08/ray-allen-heat-celtics-rajon-rondo-danny-ainge-free-agent",
+        "publishedAt": "2012-07-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-offseason-2012",
+        "weekly-mia",
+        "weekly-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "eric-gordon-matched",
+      "title": "Hornets match the Suns offer sheet for Eric Gordon",
+      "eventDate": "2012-07-14",
+      "teams": [
+        "nop",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets agree to match Suns' offer for Gordon",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8166544/new-orleans-hornets-agree-match-phoenix-suns-offer-eric-gordon",
+        "publishedAt": "2012-07-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-offseason-2012",
+        "weekly-nop",
+        "weekly-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lin-to-rockets",
+      "title": "Knicks let Jeremy Lin go to Houston",
+      "eventDate": "2012-07-17",
+      "teams": [
+        "hou",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jeremy Lin headed to Rockets after Knicks decline to match offer sheet",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/jeremy-lin-headed-to-rockets-after-knicks-decline-to-match-offer-sheet/",
+        "publishedAt": "2012-07-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-offseason-2012",
+        "weekly-hou",
+        "weekly-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "batum-matched",
+      "title": "Blazers match Minnesota's offer sheet for Nicolas Batum",
+      "eventDate": "2012-07-18",
+      "teams": [
+        "por",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Portland Trail Blazers match Minnesota Timberwolves' offer for Nicolas Batum",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8178326/portland-trail-blazers-match-minnesota-timberwolves-offer-nicolas-batum",
+        "publishedAt": "2012-07-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-offseason-2012",
+        "weekly-por",
+        "weekly-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "magic-hire-vaughn",
+      "title": "Magic hire Jacque Vaughn",
+      "eventDate": "2012-07-28",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Orlando Magic tap ex-San Antonio Spurs assistant Jacque Vaughn as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8208615/orlando-magic-tap-ex-san-antonio-spurs-assistant-jacque-vaughn-head-coach",
+        "publishedAt": "2012-07-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "dwight-to-lakers",
+      "title": "Dwight Howard traded to the Lakers in a four-team deal",
+      "eventDate": "2012-08-09",
+      "teams": [
+        "lal",
+        "orl",
+        "phi",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Dwight Howard to Lakers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8252042/sources-dwight-howard-los-angeles-lakers-four-team-deal-complete",
+        "publishedAt": "2012-08-09"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lakers-superteam",
+        "theme-offseason-2012",
+        "weekly-lal",
+        "weekly-orl",
+        "weekly-phi",
+        "weekly-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "love-breaks-hand",
+      "title": "Kevin Love breaks his hand doing knuckle push-ups",
+      "eventDate": "2012-10-17",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wolves' Kevin Love broke hand doing 'knuckle pushups'; no surgery required",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2012/10/18/kevin-love-hand-injury-no-surgery",
+        "publishedAt": "2012-10-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "dirk-knee-surgery",
+      "title": "Dirk Nowitzki has knee surgery before the season",
+      "eventDate": "2012-10-19",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavericks' Dirk Nowitzki out six weeks after knee surgery",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2012/10/19/dirk-nowitzki-knee-surgery-dallas-mavericks",
+        "publishedAt": "2012-10-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "stern-retirement",
+      "title": "David Stern announces he will retire; Adam Silver to succeed him",
+      "eventDate": "2012-10-25",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "NBA commissioner David Stern to retire in 2014; Adam Silver to take top spot",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2012/10/25/david-stern-retire-nba-commissioner",
+        "publishedAt": "2012-10-25"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-league"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "harden-to-rockets",
+      "title": "Thunder trade James Harden to Houston",
+      "eventDate": "2012-10-27",
+      "teams": [
+        "okc",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "James Harden traded to Rockets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8562868/oklahoma-city-thunder-trade-james-harden-houston-rockets",
+        "publishedAt": "2012-10-27"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "retro-harden-trade",
+        "weekly-okc",
+        "weekly-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jazz-keep-corbin",
+      "title": "Jazz pick up Tyrone Corbin's option for 2013-14",
+      "eventDate": "2012-10-30",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Utah Jazz exercise option, keep Tyrone Corbin for 2013-14",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8573075/utah-jazz-exercise-option-keep-tyrone-corbin-2013-14",
+        "publishedAt": "2012-10-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sandy-postpones-opener",
+      "title": "Hurricane Sandy postpones the Nets' first Brooklyn game",
+      "eventDate": "2012-10-31",
+      "teams": [
+        "bkn",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks-Nets opener postponed due to Sandy",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/new-york/nba/story/_/id/8577086/new-york-knicks-brooklyn-nets-opener-postponed-due-hurricane-sandy",
+        "publishedAt": "2012-10-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "harden-rockets-debut",
+      "title": "James Harden scores 37 in his Rockets debut",
+      "eventDate": "2012-10-31",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "James Harden dazzles in Rockets debut with 37 points and 12 assists (VIDEO)",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/james-harden-dazzles-rockets-debut-37-points-12-051759253--nba.html",
+        "publishedAt": "2012-11-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-harden-trade",
+        "weekly-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "curry-extension",
+      "title": "Warriors sign Stephen Curry to a four-year, $44 million extension",
+      "eventDate": "2012-10-31",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors take the plunge with four-year extension for Stephen Curry",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/point-forward/2012/10/31/stephen-curry-golden-state-warriors-contract-extension",
+        "publishedAt": "2012-10-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "derozan-extension",
+      "title": "Raptors extend DeMar DeRozan",
+      "eventDate": "2012-10-31",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Reports: Raptors agree to sign DeMar DeRozan to four-year contract extension",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2012/10/31/demar-derozan-toronto-raptors-contract-extension",
+        "publishedAt": "2012-10-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-fire-mike-brown",
+      "title": "Lakers fire Mike Brown after a 1-4 start",
+      "eventDate": "2012-11-09",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers fire Mike Brown",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/los-angeles/nba/story/_/id/8610888/los-angeles-lakers-fire-coach-mike-brown",
+        "publishedAt": "2012-11-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lakers-superteam",
+        "theme-coaching-changes",
+        "weekly-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "dantoni-over-phil",
+      "title": "Lakers hire Mike D'Antoni over Phil Jackson",
+      "eventDate": "2012-11-11",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers hire Mike D'Antoni as coach, passing on Phil Jackson",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2012/11/12/mike-dantoni-lakers-coach-phil-jackson",
+        "publishedAt": "2012-11-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lakers-superteam",
+        "theme-coaching-changes",
+        "weekly-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cousins-elliott-suspension",
+      "title": "DeMarcus Cousins suspended for confronting Sean Elliott",
+      "eventDate": "2012-11-12",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cousins banned two games for Elliott exchange",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8621522/demarcus-cousins-sacramento-kings-banned-two-games-sean-elliott-exchange",
+        "publishedAt": "2012-11-12"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "spurs-fined-for-resting",
+      "title": "Spurs fined $250,000 for sending stars home before Miami game",
+      "eventDate": "2012-11-30",
+      "teams": [
+        "sas",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs fined $250,000 for 'disservice'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8695865/nba-fines-san-antonio-spurs-250000-sitting-players",
+        "publishedAt": "2012-11-30"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sas"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "love-vents-at-wolves",
+      "title": "Kevin Love publicly criticizes Wolves management",
+      "eventDate": "2012-12-11",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Love vents about Timberwolves owner, GM over contract, direction of team",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2012/12/11/kevin-love-minnesota-timberwolves-david-kahn-glen-taylor",
+        "publishedAt": "2012-12-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "rubio-returns",
+      "title": "Ricky Rubio returns from his torn ACL",
+      "eventDate": "2012-12-15",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Return of Ricky Rubio",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/the-return-of-ricky-rubio/",
+        "publishedAt": "2012-12-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "clippers-franchise-record-streak",
+      "title": "Clippers set a franchise record on the way to 17 straight wins",
+      "eventDate": "2012-12-21",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clips on roll with 11-game streak, second-best record",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2012/12/21/clippers-winning-streak",
+        "publishedAt": "2012-12-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kings-suspend-cousins",
+      "title": "Kings suspend Cousins indefinitely after a halftime blowup",
+      "eventDate": "2012-12-22",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings suspend DeMarcus Cousins",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8772913/sacramento-kings-suspend-demarcus-cousins-indefinitely-conduct",
+        "publishedAt": "2012-12-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mo-williams-thumb",
+      "title": "Mo Williams out with a thumb injury",
+      "eventDate": "2012-12-23",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mo Williams out indefinitely with thumb injury",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/si-wire/2012/12/24/mo-williams-injury-jazz",
+        "publishedAt": "2012-12-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-uta"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nets-fire-avery-johnson",
+      "title": "Nets fire Avery Johnson at 14-14",
+      "eventDate": "2012-12-27",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets fire Avery Johnson",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8783854/avery-johnson-fired-brooklyn-nets-starting-14-14",
+        "publishedAt": "2012-12-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-part-with-skiles",
+      "title": "Bucks part ways with Scott Skiles",
+      "eventDate": "2013-01-08",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks part ways with coach Skiles, name Boylan as replacement",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/01/08/milwaukee-bucks-fire-coach-scott-skiles",
+        "publishedAt": "2013-01-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wall-returns",
+      "title": "John Wall returns from his knee injury",
+      "eventDate": "2013-01-12",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "John Wall returns from knee injury",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8838815/john-wall-returns-knee-injury-washington-wizards",
+        "publishedAt": "2013-01-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-was"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "suns-part-with-gentry",
+      "title": "Suns part ways with Alvin Gentry",
+      "eventDate": "2013-01-18",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns sacrifice rare bit of stability in dismissing head coach Alvin Gentry",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/01/18/suns-sacrifice-rare-bit-of-stability-in-dismissing-head-coach-alvin-gentry",
+        "publishedAt": "2013-01-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lou-williams-acl",
+      "title": "Lou Williams tears his ACL",
+      "eventDate": "2013-01-18",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lou Williams of Atlanta Hawks has torn ACL, out for season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8860328/lou-williams-atlanta-hawks-torn-acl-season",
+        "publishedAt": "2013-01-19"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "rondo-acl",
+      "title": "Rajon Rondo tears his ACL",
+      "eventDate": "2013-01-27",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Celtics' Rajon Rondo (knee) out for the season",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/01/27/rajon-rondo-knee-injury-celtics",
+        "publishedAt": "2013-01-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "rudy-gay-to-raptors",
+      "title": "Grizzlies trade Rudy Gay to Toronto in a three-team deal",
+      "eventDate": "2013-01-30",
+      "teams": [
+        "mem",
+        "tor",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies trade Rudy Gay to Raptors in three-team deal",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/01/30/rudy-gay-memphis-grizzlies-toronto-raptors-detroit-pistons",
+        "publishedAt": "2013-01-30"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-mem",
+        "weekly-tor",
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "drummond-back-fracture",
+      "title": "Andre Drummond breaks a bone in his back",
+      "eventDate": "2013-02-09",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons' Andre Drummond sidelined 4-to-6 weeks with back injury",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/02/09/andre-drummond-injury-update-stress-fracture-back-pistons-detroit",
+        "publishedAt": "2013-02-09"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kyrie-three-point-contest",
+      "title": "Kyrie Irving wins the three-point contest",
+      "eventDate": "2013-02-16",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kyrie Irving Defeats Matt Bonner to Win 2013 NBA Three-Point Contest",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/1532514-kyrie-irving-defeats-matt-bonner-to-win-2013-nba-three-point-contest",
+        "publishedAt": "2013-02-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cle"
+      ],
+      "status": "excluded"
+    },
+    {
+      "id": "jerry-buss-dies",
+      "title": "Lakers owner Jerry Buss dies",
+      "eventDate": "2013-02-18",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Longtime Lakers owner Jerry Buss dies at 80",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/02/18/jerry-buss-lakers-obit",
+        "publishedAt": "2013-02-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lakers-superteam",
+        "weekly-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "redick-to-bucks",
+      "title": "Bucks trade for J.J. Redick",
+      "eventDate": "2013-02-21",
+      "teams": [
+        "mil",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks acquire J.J. Redick from Magic",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba--bucks-acquire-j-j--redick-from-magic-200520815.html",
+        "publishedAt": "2013-02-21"
+      },
+      "kind": "trade",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-mil",
+        "weekly-orl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hawks-keep-josh-smith",
+      "title": "Hawks keep Josh Smith at the deadline",
+      "eventDate": "2013-02-21",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Josh Smith to remain with Atlanta Hawks after not getting traded",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/8971816/josh-smith-remain-atlanta-hawks-not-getting-traded",
+        "publishedAt": "2013-02-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jazz-stand-pat",
+      "title": "Jazz keep Al Jefferson and Paul Millsap at the deadline",
+      "eventDate": "2013-02-21",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA trade deadline: Winners and losers",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/02/22/nba-trade-deadline-winners-and-losers",
+        "publishedAt": "2013-02-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-trade-deadline",
+        "weekly-uta"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "curry-54-at-msg",
+      "title": "Stephen Curry scores 54 at Madison Square Garden",
+      "eventDate": "2013-02-27",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stephen Curry scores 54 points, hits 11 three-pointers in Madison Square Garden (VIDEOS)",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/stephen-curry-scores-54-points-hits-11-three-055104445--nba.html?a20=1",
+        "publishedAt": "2013-02-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bynum-season-over",
+      "title": "Andrew Bynum shut down without playing a game for Philadelphia",
+      "eventDate": "2013-03-18",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Philadelphia 76ers center Andrew Bynum to have season-ending surgery on both knees",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nba--andrew-bynum-to-have-season-ending-surgery-on-both-knees-000052759.html",
+        "publishedAt": "2013-03-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-streak-ends",
+      "title": "Bulls end the Heat's 27-game winning streak",
+      "eventDate": "2013-03-27",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat winning streak snapped at 27 games in loss to Bulls",
+        "publisher": "Sports Illustrated",
+        "url": "https://si.com/nba/point-forward/2013/03/28/miami-heat-winning-streak-snapped-los-angeles-lakers",
+        "publishedAt": "2013-03-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-heat-repeat",
+        "weekly-mia",
+        "weekly-chi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavs-beards",
+      "title": "Mavericks vow not to shave until they reach .500",
+      "eventDate": "2013-03-27",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bearded Mavericks invite barber to attend Thursday's break-even game",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/03/27/dallas-mavericks-500-beards",
+        "publishedAt": "2013-03-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "rookie-class-grades",
+      "title": "Grading the 2012 rookie class: Davis, Lillard, Beal, Drummond, Kidd-Gilchrist",
+      "eventDate": "2013-03-27",
+      "teams": [
+        "nop",
+        "por",
+        "was",
+        "det",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grading Anthony Davis, Damian Lillard and the rest of the 2012 draft class",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/03/27/nba-rookie-grades-anthony-davis-damian-lillard-andre-drummond",
+        "publishedAt": "2013-03-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop",
+        "weekly-por",
+        "weekly-was",
+        "weekly-det",
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "granger-season-over",
+      "title": "Danny Granger's injury-wrecked season ends with knee surgery",
+      "eventDate": "2013-03-28",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Danny Granger to miss remainder of season after additional knee surgery",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/03/28/danny-granger-injury-indiana-pacers",
+        "publishedAt": "2013-03-28"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "gallinari-acl",
+      "title": "Danilo Gallinari tears his ACL",
+      "eventDate": "2013-04-04",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets' Gallinari out for season with torn ACL",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9138831/danilo-gallinari-denver-nuggets-season-torn-acl",
+        "publishedAt": "2013-04-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "mavs-miss-playoffs",
+      "title": "Mavericks miss the playoffs for the first time in 13 years",
+      "eventDate": "2013-04-10",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mark Cuban reflects on Dallas Mavericks missing the playoffs",
+        "publisher": "ESPN",
+        "url": "https://africa.espn.com/dallas/nba/story/_/id/9160196/mark-cuban-reflects-dallas-mavericks-missing-playoffs",
+        "publishedAt": "2013-04-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-dal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "davis-shut-down",
+      "title": "Hornets shut down Anthony Davis for the season",
+      "eventDate": "2013-04-11",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets shut down Anthony Davis (knee) for the season",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/point-forward/2013/04/11/anthony-davis-knee-injury-done-for-season-new-orleans-hornets",
+        "publishedAt": "2013-04-11"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kobe-achilles",
+      "title": "Kobe Bryant tears his Achilles and makes his free throws",
+      "eventDate": "2013-04-12",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers' Kobe Bryant suffered 'probable torn Achilles' against Warriors",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/04/13/kobe-bryant-achilles-injury-lakers-warriors",
+        "publishedAt": "2013-04-13"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "retro-lakers-superteam",
+        "weekly-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "marathon-cancels-celtics-game",
+      "title": "Boston Marathon bombing cancels Celtics-Pacers",
+      "eventDate": "2013-04-15",
+      "teams": [
+        "bos",
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA cancels game between Celtics and Pacers after Boston Marathon blasts",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/04/16/boston-marathon-bombing-terror-attack-celtics-pacers-game-cancelled-nba",
+        "publishedAt": "2013-04-16"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "melo-scoring-title",
+      "title": "Carmelo Anthony wins the scoring title as the Knicks take the Atlantic",
+      "eventDate": "2013-04-17",
+      "teams": [
+        "nyk",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Carmelo Anthony wins scoring title",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9181534/kevin-durant-sits-finale-carmelo-anthony-wins-nba-scoring-title",
+        "publishedAt": "2013-04-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "curry-three-point-record",
+      "title": "Stephen Curry sets the single-season three-point record",
+      "eventDate": "2013-04-17",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stephen Curry of Golden State Warriors sets new 3-point season record",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9184857/stephen-curry-golden-state-warriors-sets-new-3-point-season-record",
+        "publishedAt": "2013-04-17"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lakers-clinch-jazz-out",
+      "title": "Lakers clinch the No. 7 seed as the Jazz are eliminated",
+      "eventDate": "2013-04-17",
+      "teams": [
+        "lal",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers make playoffs as West's No. 7 seed",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/point-forward/2013/04/18/lakers-make-playoffs-jazz-grizzlies-thunder-spurs",
+        "publishedAt": "2013-04-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-lal",
+        "weekly-uta"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pelicans-name-official",
+      "title": "New Orleans officially becomes the Pelicans",
+      "eventDate": "2013-04-18",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets officially change name to Pelicans, launch new website",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/04/18/pelicans-hornets-new-orleans-name-change-officials",
+        "publishedAt": "2013-04-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "collins-resigns",
+      "title": "Doug Collins steps down as 76ers coach",
+      "eventDate": "2013-04-18",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Doug Collins resigns as 76ers coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9185724/doug-collins-resigns-philadelphia-76ers-head-coach-remain-team-consultant",
+        "publishedAt": "2013-04-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pistons-fire-frank",
+      "title": "Pistons fire Lawrence Frank",
+      "eventDate": "2013-04-18",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons fire coach Lawrence Frank after 2 seasons",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/04/18/lawrence-frank-fired-detroit-pistons",
+        "publishedAt": "2013-04-18"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cavs-fire-byron-scott",
+      "title": "Cavaliers fire Byron Scott",
+      "eventDate": "2013-04-18",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Byron Scott on firing from Cavaliers: 'I don't think I got a fair shake'",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/si-wire/2013/04/20/byron-scott-cavaliers-firing",
+        "publishedAt": "2013-04-20"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "suns-fire-blanks",
+      "title": "Suns part ways with GM Lance Blanks",
+      "eventDate": "2013-04-22",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns part ways with GM Lance Blanks",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/04/22/suns-fire-gm-lance-blanks-lon-babby-lindsey-hunter",
+        "publishedAt": "2013-04-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jr-smith-sixth-man",
+      "title": "J.R. Smith wins Sixth Man of the Year",
+      "eventDate": "2013-04-22",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "J.R. Smith named Sixth Man of the Year",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/point-forward/2013/04/22/jr-smith-sixth-man-of-the-year-new-york-knicks",
+        "publishedAt": "2013-04-22"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-6moy",
+        "weekly-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bobcats-fire-dunlap",
+      "title": "Bobcats fire Mike Dunlap after a 21-61 season",
+      "eventDate": "2013-04-23",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bobcats fire coach Mike Dunlap",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/bobcats-fire-coach-mike-dunlap/",
+        "publishedAt": "2013-04-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "george-most-improved",
+      "title": "Paul George wins Most Improved Player",
+      "eventDate": "2013-04-23",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers' Paul George named Most Improved Player",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/04/23/paul-george-most-improved-player-award-indiana-pacers-award-winner",
+        "publishedAt": "2013-04-23"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-mip",
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cavs-rehire-mike-brown",
+      "title": "Cavaliers bring back Mike Brown",
+      "eventDate": "2013-04-24",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavaliers re-hire Mike Brown as coach",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/04/24/mike-brown-cleveland-cavaliers-hire-coach",
+        "publishedAt": "2013-04-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-cle"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "gasol-dpoy",
+      "title": "Marc Gasol wins Defensive Player of the Year",
+      "eventDate": "2013-04-24",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Marc Gasol lauded as top defender",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2013/story/_/id/9207559/marc-gasol-memphis-grizzlies-wins-defensive-player-year-honors",
+        "publishedAt": "2013-04-24"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-dpoy",
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "westbrook-meniscus",
+      "title": "Russell Westbrook tears his meniscus in the first round",
+      "eventDate": "2013-04-24",
+      "teams": [
+        "okc",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Russell Westbrook out indefinitely",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2013/story/_/id/9214995/russell-westbrook-oklahoma-city-thunder-knee-surgery",
+        "publishedAt": "2013-04-26"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-okc",
+        "po-hou"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nate-robinson-triple-overtime",
+      "title": "Nate Robinson leads a triple-overtime comeback over the Nets",
+      "eventDate": "2013-04-27",
+      "teams": [
+        "chi",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nate Robinson rallied the Chicago Bulls in a Game 4 triple-overtime win over the Brooklyn Nets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/chicago/nba/story/_/id/9219304/nate-robinson-rallied-chicago-bulls-game-4-triple-win-brooklyn-nets",
+        "publishedAt": "2013-04-28"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-chi",
+        "po-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-sweep-bucks",
+      "title": "Heat sweep the Bucks",
+      "eventDate": "2013-04-28",
+      "teams": [
+        "mia",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Series in Review: Heat sweep the Bucks",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/nba/news/series-in-review-heat-sweep-the-bucks/",
+        "publishedAt": "2013-04-29"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mia",
+        "po-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-sweep-lakers",
+      "title": "Spurs sweep the Kobe-less Lakers",
+      "eventDate": "2013-04-28",
+      "teams": [
+        "sas",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs 2013 - Breaking down the Lakers' end",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2013/story/_/page/5-on-5-Lakers-130429/nba-playoffs-2013-breaking-lakers-end",
+        "publishedAt": "2013-04-29"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-sas",
+        "po-lal"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "jason-collins-comes-out",
+      "title": "Jason Collins becomes the first active male pro athlete to come out",
+      "eventDate": "2013-04-29",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "NBA's Jason Collins decides to come out",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9223657/jason-collins-first-openly-gay-active-player",
+        "publishedAt": "2013-04-29"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-league"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-part-with-boylan",
+      "title": "Bucks move on from Jim Boylan",
+      "eventDate": "2013-05-01",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks part ways with interim coach Jim Boylan, open coaching search",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/01/jim-boylan-milwaukee-bucks-coach-out-part-ways",
+        "publishedAt": "2013-05-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-mil"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lillard-rookie-of-the-year",
+      "title": "Damian Lillard is a unanimous Rookie of the Year",
+      "eventDate": "2013-05-01",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Blazers' Damian Lillard named Rookie of the Year in unanimous vote",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/01/damian-lillard-rookie-of-the-year-portland-trail-blazers",
+        "publishedAt": "2013-05-01"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-roy",
+        "weekly-por"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "flip-replaces-kahn",
+      "title": "Timberwolves replace David Kahn with Flip Saunders",
+      "eventDate": "2013-05-02",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Flip Saunders in, David Kahn out",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9236287/david-kahn-president-basketball-operations-minnesota-timberwolves",
+        "publishedAt": "2013-05-02"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-min"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "warriors-oust-nuggets",
+      "title": "Warriors upset the 57-win Nuggets",
+      "eventDate": "2013-05-02",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sherwood Strauss: Why Nuggets took early exit",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2013/story/_/id/9238160/nba-playoffs-2013-denver-nuggets-finish-thud",
+        "publishedAt": "2013-05-03"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-gsw",
+        "po-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "knicks-oust-celtics",
+      "title": "Knicks win their first playoff series since 2000",
+      "eventDate": "2013-05-03",
+      "teams": [
+        "nyk",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "New York Knicks vs. Boston Celtics: Game 6 Score, Highlights and Analysis",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/1628398-new-york-knicks-vs-boston-celtics-game-6-score-highlights-and-analysis",
+        "publishedAt": "2013-05-03"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-nyk",
+        "po-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-oust-hawks",
+      "title": "Pacers beat the Hawks in six",
+      "eventDate": "2013-05-03",
+      "teams": [
+        "ind",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Indiana Pacers vs. Atlanta Hawks Game 6: Video Highlights and Recap",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/1628464-indiana-pacers-vs-atlanta-hawks-game-6-video-highlights-and-recap",
+        "publishedAt": "2013-05-03"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-ind",
+        "po-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "grizzlies-oust-clippers",
+      "title": "Grizzlies beat the Clippers after Griffin sprains his ankle",
+      "eventDate": "2013-05-03",
+      "teams": [
+        "mem",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies knock out Clippers",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/grizzlies-knock-clippers-064031584--nba.html",
+        "publishedAt": "2013-05-04"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mem",
+        "po-lac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bulls-win-game-7-in-brooklyn",
+      "title": "Shorthanded Bulls win Game 7 in Brooklyn",
+      "eventDate": "2013-05-04",
+      "teams": [
+        "chi",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chicago Bulls vs. Brooklyn Nets: Game 7 Postgame Grades and Analysis",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/1629169-chicago-bulls-vs-brooklyn-nets-game-7-postgame-grades-and-analysis",
+        "publishedAt": "2013-05-04"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-chi",
+        "po-bkn"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lebron-mvp",
+      "title": "LeBron James wins MVP, one vote shy of unanimous",
+      "eventDate": "2013-05-05",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LeBron 1 vote shy of unanimous MVP honor",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2013/story/_/id/9244504/lebron-james-miami-heat-1-vote-shy-unanimous-mvp-honor",
+        "publishedAt": "2013-05-05"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-mvp",
+        "retro-heat-repeat"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "karl-coach-of-the-year",
+      "title": "George Karl wins Coach of the Year after 57 wins",
+      "eventDate": "2013-05-08",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "George Karl named Coach of the Year",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/08/george-karl-coach-of-the-year-denver-nuggets",
+        "publishedAt": "2013-05-08"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-coy",
+        "weekly-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "rose-sits-season",
+      "title": "Derrick Rose sits out the whole season after being cleared",
+      "eventDate": "2013-05-10",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Michael Rosenberg: Derrick Rose's return complicated by massive expectations",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/10/derrick-rose-injury-return-chicago-bulls-nba-playoffs-2013",
+        "publishedAt": "2013-05-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-chi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "sixers-hire-hinkie",
+      "title": "Sixers hire Sam Hinkie to run the front office",
+      "eventDate": "2013-05-10",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sixers to hire Rockets' Sam Hinkie as new GM",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/10/sam-hinkie-sixers-gm-houston-rockets-daryl-morey",
+        "publishedAt": "2013-05-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-phi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "all-rookie-team",
+      "title": "Lillard, Davis, Beal, Waiters and Barnes make All-Rookie First Team",
+      "eventDate": "2013-05-14",
+      "teams": [
+        "por",
+        "nop",
+        "was",
+        "cle",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Blazers' Damian Lillard headlines 2013 All-Rookie First Team",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/14/nba-2013-all-rookie-first-team-second-team-damian-lillard-anthony-davis-bradley-beal",
+        "publishedAt": "2013-05-14"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "award-roy",
+        "weekly-was"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kings-stay-in-sacramento",
+      "title": "NBA owners block the Kings move to Seattle",
+      "eventDate": "2013-05-15",
+      "teams": [
+        "sac"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "NBA owners vote: Kings stay in Sacramento",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9279593/nba-owners-back-recommendation-keep-kings-sacramento",
+        "publishedAt": "2013-05-15"
+      },
+      "kind": "season",
+      "blockbuster": false,
+      "guidance": [
+        "theme-kings-seattle",
+        "weekly-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "durant-needs-help",
+      "title": "Durant left without help after Westbrook injury",
+      "eventDate": "2013-05-15",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs 2013: Kevin Durant needs more help from supporting cast",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2013/story/_/id/9277161/kevin-durant-needs-more-help-supporting-cast",
+        "publishedAt": "2013-05-15"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "grizzlies-oust-thunder",
+      "title": "Grizzlies knock out the top-seeded Thunder",
+      "eventDate": "2013-05-15",
+      "teams": [
+        "mem",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Shelburne: How Grizzlies finished Kevin Durant's Thunder",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2013/story/_/id/9280528/nba-playoffs-2013-memphis-grizzlies-finished-oklahoma-city-thunder-game-5",
+        "publishedAt": "2013-05-16"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mem",
+        "po-okc"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-oust-bulls",
+      "title": "Heat beat the Bulls in five",
+      "eventDate": "2013-05-15",
+      "teams": [
+        "mia",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "What we know about the Heat after the first two rounds of the NBA playoffs",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/16/miami-heat-nba-playoffs-2013-eastern-conference-finals",
+        "publishedAt": "2013-05-16"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mia",
+        "po-chi"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-oust-warriors",
+      "title": "Spurs end the Warriors run in six",
+      "eventDate": "2013-05-16",
+      "teams": [
+        "sas",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chris Ballard: Spurs prove too much as Curry, Warriors bow out in Game 6",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/17/spurs-warrior-sgame-6-tim-duncan-stephen-curry",
+        "publishedAt": "2013-05-17"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-sas",
+        "po-gsw"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pacers-oust-knicks",
+      "title": "Hibbert's block on Melo sends the Pacers past the Knicks",
+      "eventDate": "2013-05-18",
+      "teams": [
+        "ind",
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Playoffs 2013 -- Five reasons why the Knicks lost to the Pacers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/new-york/knicks/post/_/id/44628/five-reasons-why-knicks-lost-to-pacers",
+        "publishedAt": "2013-05-19"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-ind",
+        "po-nyk"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "clippers-let-del-negro-go",
+      "title": "Clippers move on from Vinny Del Negro",
+      "eventDate": "2013-05-21",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers part ways with coach Vinny Del Negro",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/21/vinny-del-negro-los-angeles-clippers-part-ways-fired",
+        "publishedAt": "2013-05-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-lac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bobcats-to-become-hornets",
+      "title": "Michael Jordan announces the Bobcats will become the Hornets",
+      "eventDate": "2013-05-21",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Michael Jordan announces Charlotte Bobcats to change name to 'Hornets' in 2014",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/21/michael-jordan-charlotte-bobcats-hornets-name-change",
+        "publishedAt": "2013-05-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "colangelo-out-as-gm",
+      "title": "Raptors strip Bryan Colangelo of GM duties",
+      "eventDate": "2013-05-21",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bryan Colangelo not Raptors GM",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9298043/bryan-colangelo-toronto-raptors-gm-president",
+        "publishedAt": "2013-05-21"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-tor"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "cavs-win-2013-lottery",
+      "title": "Cavaliers win the lottery again",
+      "eventDate": "2013-05-21",
+      "teams": [
+        "cle",
+        "orl",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavaliers win 2013 NBA draft lottery",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/22/cleveland-cavaliers-win-2013-nba-draft-lottery",
+        "publishedAt": "2013-05-22"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-lottery"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "suns-hire-hornacek",
+      "title": "Suns hire Jeff Hornacek",
+      "eventDate": "2013-05-26",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns hire Jeff Hornacek as next head coach",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/26/jeff-hornacek-phoenix-suns-coach-ryan-mcdonough",
+        "publishedAt": "2013-05-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-phx"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bobcats-hire-clifford",
+      "title": "Bobcats hire Steve Clifford",
+      "eventDate": "2013-05-27",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bobcats agree to hire Lakers assistant Steve Clifford as next head coach",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/27/steve-clifford-hired-charlotte-bobcats-coach-los-angeles-lakers-assistant",
+        "publishedAt": "2013-05-27"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-cha"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "spurs-sweep-grizzlies",
+      "title": "Tony Parker leads the Spurs to a sweep of Memphis",
+      "eventDate": "2013-05-27",
+      "teams": [
+        "sas",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Three-Pointers: Tony Parker, Spurs sweep Grizzlies to advance to Finals",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/28/tony-parker-san-antonio-spurs-memphis-grizzlies",
+        "publishedAt": "2013-05-28"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-sas",
+        "po-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "ranadive-buys-kings",
+      "title": "Maloofs sell the Kings to Vivek Ranadive",
+      "eventDate": "2013-05-31",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Maloofs complete sale of Kings to Vivek Ranadive group at record valuation",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/31/sacramento-kings-sold-534-million-vivek-ranadive-george-maloof-joe-maloof-david-stern",
+        "publishedAt": "2013-05-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-kings-seattle",
+        "weekly-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "ujiri-to-raptors",
+      "title": "Masai Ujiri leaves Denver to run the Raptors",
+      "eventDate": "2013-05-31",
+      "teams": [
+        "tor",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors hire Nuggets executive Masai Ujiri as GM",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/05/31/masai-ujiri-denver-nuggets-toronto-raptors",
+        "publishedAt": "2013-05-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-tor",
+        "weekly-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bucks-hire-drew",
+      "title": "Bucks hire Larry Drew from Atlanta",
+      "eventDate": "2013-05-31",
+      "teams": [
+        "mil",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "GM: Drew agrees to become Bucks coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9330282/larry-drew-agrees-become-milwaukee-bucks-coach",
+        "publishedAt": "2013-05-31"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-mil",
+        "weekly-atl"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "kings-hire-malone",
+      "title": "Kings hire Michael Malone",
+      "eventDate": "2013-06-03",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sacramento Kings officially announce hiring Mike Malone as head coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9335210/sacramento-kings-officially-announce-hiring-mike-malone-head-coach",
+        "publishedAt": "2013-06-03"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-sac"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-beat-pacers-game-7",
+      "title": "Heat beat the Pacers in Game 7",
+      "eventDate": "2013-06-03",
+      "teams": [
+        "mia",
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Eastern Conference finals 2013 hub page: Miami Heat vs. Indiana Pacers",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/06/03/eastern-conference-finals-2013-miami-heat-indiana-pacers",
+        "publishedAt": "2013-06-03"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mia",
+        "po-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "nuggets-fire-karl",
+      "title": "Nuggets fire Coach of the Year George Karl",
+      "eventDate": "2013-06-06",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "George Karl out as Nuggets coach",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/06/06/george-karl-fired-denver-nuggets",
+        "publishedAt": "2013-06-06"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-den"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "grizzlies-let-hollins-go",
+      "title": "Grizzlies let Lionel Hollins go after a conference finals run",
+      "eventDate": "2013-06-10",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lionel Hollins, Grizzlies part ways",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9363245/lionel-hollins-memphis-grizzlies-parting-ways",
+        "publishedAt": "2013-06-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-mem"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "pistons-hire-cheeks",
+      "title": "Pistons hire Maurice Cheeks",
+      "eventDate": "2013-06-10",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Maurice Cheeks, Detroit Pistons agree on contract",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/9363105/maurice-cheeks-detroit-pistons-agree-contract",
+        "publishedAt": "2013-06-10"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-det"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "ray-allen-game-6",
+      "title": "Ray Allen's corner three forces overtime in Game 6",
+      "eventDate": "2013-06-18",
+      "teams": [
+        "mia",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Video: Ray Allen hits three to force overtime in Heat's Game 6 win over Spurs",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/06/19/ray-allen-forces-overtime-three-pointer-miami-heat-san-antonio-spurs-2013-nba-finals-game-6",
+        "publishedAt": "2013-06-19"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-finals",
+        "po-mia",
+        "po-sas",
+        "retro-heat-repeat"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "heat-repeat",
+      "title": "Heat beat the Spurs in seven to repeat",
+      "eventDate": "2013-06-20",
+      "teams": [
+        "mia",
+        "sas"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Heat repeat as champions, beating Spurs in 7 games to win 2013 NBA Finals",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/06/21/miami-heat-repeat-nba-champions-san-antonio-spurs-2013-nba-finals",
+        "publishedAt": "2013-06-21"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-finals",
+        "po-mia",
+        "po-sas",
+        "retro-heat-repeat"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "lebron-finals-mvp",
+      "title": "LeBron James wins his second straight Finals MVP",
+      "eventDate": "2013-06-20",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LeBron named NBA Finals MVP for 2nd time",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2013/story/_/id/9409188/2013-nba-finals-lebron-james-named-nba-finals-mvp",
+        "publishedAt": "2013-06-21"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-finals",
+        "po-mia"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "doc-rivers-to-clippers",
+      "title": "Clippers get Doc Rivers from Boston for a first-round pick",
+      "eventDate": "2013-06-25",
+      "teams": [
+        "lac",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers hire Doc Rivers as coach, Celtics receive draft pick as compensation",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/06/25/doc-rivers-clippers-coach-official-boston-celtics-draft-pick-deal",
+        "publishedAt": "2013-06-25"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "theme-coaching-changes",
+        "weekly-lac",
+        "weekly-bos"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bird-returns",
+      "title": "Larry Bird returns as Pacers president",
+      "eventDate": "2013-06-26",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA legend Larry Bird to return as Pacers president after year away",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/06/26/larry-bird-returns-indiana-pacers-president-donnie-walsh-kevin-pritchard",
+        "publishedAt": "2013-06-26"
+      },
+      "kind": "team",
+      "blockbuster": false,
+      "guidance": [
+        "weekly-ind"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "bennett-first-pick",
+      "title": "Cavaliers stun the draft by taking Anthony Bennett No. 1",
+      "eventDate": "2013-06-27",
+      "teams": [
+        "cle"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Cavs select UNLV F Bennett with No. 1 pick",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2013/story/_/id/9430005/2013-nba-draft-cleveland-cavaliers-select-anthony-bennett-no-1-pick",
+        "publishedAt": "2013-06-27"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2013"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "draft-2013-oladipo-noel",
+      "title": "Oladipo goes No. 2; Noel slides and is traded to Philadelphia",
+      "eventDate": "2013-06-27",
+      "teams": [
+        "orl",
+        "phi",
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA draft 2013: First round pick-by-pick analysis",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2013/06/27/nba-draft-2013-first-round-pick-analysis",
+        "publishedAt": "2013-06-27"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2013",
+        "weekly-orl",
+        "weekly-phi",
+        "weekly-nop"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "wizards-draft-porter",
+      "title": "Wizards take Otto Porter No. 3",
+      "eventDate": "2013-06-27",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards Select Porter in 2013 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/wizards/wizards-select-porter-2013-nba-draft",
+        "publishedAt": "2013-06-27"
+      },
+      "kind": "draft",
+      "blockbuster": false,
+      "guidance": [
+        "draft-2013",
+        "weekly-was"
+      ],
+      "status": "included"
+    }
+  ]
+}

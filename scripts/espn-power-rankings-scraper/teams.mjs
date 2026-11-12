@@ -8,6 +8,8 @@ const TEAM_IDS_BY_ABBR = {
   ny: 1610612752, okc: 1610612760, orl: 1610612753, phi: 1610612755,
   phx: 1610612756, por: 1610612757, sa: 1610612759, sac: 1610612758,
   tor: 1610612761, utah: 1610612762, wsh: 1610612764,
+  // Logo file names on the 2016-17 story pages.
+  gsw: 1610612744, nyk: 1610612752, was: 1610612764,
 }
 
 // Relocated or renamed franchises ESPN prints without a team link.
