@@ -110,7 +110,7 @@ the validator; finalized seasons cannot change without an explicit revise.
 
 ## Phase 6: Polish & Cross-Cutting
 
-- [ ] T025 [P] Replace the hand-written `data/processed/storylines/2024-25.json` from T014 with the output of a real `/season-storylines 2024-25` run once US3 is done, then `npm run build:rankings`
+- [x] T025 [P] Replace the hand-written `data/processed/storylines/2024-25.json` from T014 with the output of a real `/season-storylines 2024-25` run once US3 is done, then `npm run build:rankings`
 - [X] T026 [P] Add a short "Storylines" section to `README.md` (or `docs/`), covering the skill, `check:storylines`, where files live, and that the skill is maintainer-run and never in CI
 - [X] T027 Run `npm run lint`, `npm run build`, `npm test`, and `npm run preview` under the base path; confirm the Storylines tab with no new network requests (quickstart.md scenario 6)
 

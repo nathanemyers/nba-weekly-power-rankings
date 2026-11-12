@@ -1,0 +1,1436 @@
+{
+  "season": "2008-09",
+  "finalizedAt": "2026-11-12",
+  "storylines": [
+    {
+      "id": "sonics-settlement",
+      "title": "Sonics settle with Seattle and move to Oklahoma City",
+      "eventDate": "2008-07-02",
+      "teams": [
+        "okc"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "SuperSonics, Seattle reach last-minute settlement",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3471503",
+        "publishedAt": "2008-07-02"
+      }
+    },
+    {
+      "id": "brand-to-sixers",
+      "title": "Elton Brand leaves the Clippers for Philadelphia",
+      "eventDate": "2008-07-09",
+      "teams": [
+        "phi",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sixers strengthen low post play, sign Brand to five-year deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3480691",
+        "publishedAt": "2008-07-09"
+      }
+    },
+    {
+      "id": "baron-to-clippers",
+      "title": "Baron Davis leaves Golden State for the Clippers",
+      "eventDate": "2008-07-09",
+      "teams": [
+        "lac",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Davis signs multiyear contract with hometown Clippers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3481717",
+        "publishedAt": "2008-07-09"
+      }
+    },
+    {
+      "id": "pacers-trade-oneal",
+      "title": "Pacers trade Jermaine O'Neal to Toronto for T.J. Ford",
+      "eventDate": "2008-07-09",
+      "teams": [
+        "ind",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers, Raptors complete trade sending O'Neal to Toronto",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3480419",
+        "publishedAt": "2008-07-09"
+      }
+    },
+    {
+      "id": "nuggets-dump-camby",
+      "title": "Nuggets give Marcus Camby to the Clippers to cut salary",
+      "eventDate": "2008-07-15",
+      "teams": [
+        "den",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets trade Camby to Clippers for second-round pick",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3491156",
+        "publishedAt": "2008-07-15"
+      }
+    },
+    {
+      "id": "deron-extension",
+      "title": "Deron Williams signs an extension with Utah",
+      "eventDate": "2008-07-17",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Jazz, Williams agree to four-year, $70M extension",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3494576",
+        "publishedAt": "2008-07-17"
+      }
+    },
+    {
+      "id": "bucks-skiles-rebuild",
+      "title": "Scott Skiles and John Hammond start rebuilding the Bucks",
+      "eventDate": "2008-07-24",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "For Bucks, there are signs of life",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2008/07/24/skiles-bucks",
+        "publishedAt": "2008-07-24"
+      }
+    },
+    {
+      "id": "artest-to-rockets",
+      "title": "Rockets trade for Ron Artest",
+      "eventDate": "2008-07-29",
+      "teams": [
+        "hou",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rockets agree to send pick, Greene, Jackson to Kings for Artest",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3510261",
+        "publishedAt": "2008-07-29"
+      }
+    },
+    {
+      "id": "josh-smith-matched",
+      "title": "Hawks match Memphis's offer sheet for Josh Smith",
+      "eventDate": "2008-08-08",
+      "teams": [
+        "atl",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks match Grizzlies' $58M offer sheet, retain Smith",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3525609",
+        "publishedAt": "2008-08-08"
+      }
+    },
+    {
+      "id": "cavs-trade-for-mo-williams",
+      "title": "Cavaliers land Mo Williams in a three-team deal",
+      "eventDate": "2008-08-13",
+      "teams": [
+        "cle",
+        "mil",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks send Williams to Cavaliers in three-team deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3533552",
+        "publishedAt": "2008-08-13"
+      }
+    },
+    {
+      "id": "monta-moped",
+      "title": "Monta Ellis hurts his ankle in a moped accident",
+      "eventDate": "2008-09-03",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Report: Ellis was injured in mo-ped accident, not playing hoop",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3608428",
+        "publishedAt": "2008-09-03"
+      }
+    },
+    {
+      "id": "arenas-knee",
+      "title": "Gilbert Arenas needs a third knee surgery",
+      "eventDate": "2008-09-17",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hurt again, Arenas looking like expensive gamble for Wiz",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/columns/story?columnist=adande_ja&page=Arenas-080917",
+        "publishedAt": "2008-09-17"
+      }
+    },
+    {
+      "id": "ellis-suspended-30-games",
+      "title": "Warriors suspend Monta Ellis 30 games over the moped crash",
+      "eventDate": "2008-10-11",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Ellis gets 30-game suspension without pay for accident",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=3638098",
+        "publishedAt": "2008-10-11"
+      }
+    },
+    {
+      "id": "oden-debut",
+      "title": "Greg Oden's debut ends with a foot injury",
+      "eventDate": "2008-10-28",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Oden's debut begins with another step back",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/jy-odeninjured102908.html",
+        "publishedAt": "2008-10-29"
+      }
+    },
+    {
+      "id": "iverson-for-billups",
+      "title": "Pistons trade Chauncey Billups to Denver for Allen Iverson",
+      "eventDate": "2008-11-03",
+      "teams": [
+        "det",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Source: Iverson traded to Detroit",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/aw-iversontraded110308.html",
+        "publishedAt": "2008-11-03"
+      }
+    },
+    {
+      "id": "parker-scores-55",
+      "title": "Tony Parker scores 55 in Minnesota",
+      "eventDate": "2008-11-05",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Parker, Amare, LeBron go wild",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-081106",
+        "publishedAt": "2008-11-06"
+      }
+    },
+    {
+      "id": "sloan-1000",
+      "title": "Jerry Sloan wins his 1,000th game with Utah",
+      "eventDate": "2008-11-07",
+      "teams": [
+        "uta",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Utah Jazz coach Jerry Sloan can be first to wins milestone",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3687073",
+        "publishedAt": "2008-11-07"
+      }
+    },
+    {
+      "id": "hawks-6-0-start",
+      "title": "Hawks open 6-0",
+      "eventDate": "2008-11-11",
+      "teams": [
+        "atl",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Lakers and Hawks stay unbeaten",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-081112",
+        "publishedAt": "2008-11-12"
+      }
+    },
+    {
+      "id": "knicks-clear-cap",
+      "title": "Knicks trade Crawford and Randolph to clear space for 2010",
+      "eventDate": "2008-11-21",
+      "teams": [
+        "nyk",
+        "gsw",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors, Knicks agree on Crawford-Harrington deal; Randolph also traded",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3717209",
+        "publishedAt": "2008-11-21"
+      }
+    },
+    {
+      "id": "carlesimo-fired",
+      "title": "Thunder fire P.J. Carlesimo, promote Scott Brooks",
+      "eventDate": "2008-11-21",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Carlesimo fired; Brooks to take over Thunder in interim",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3718961",
+        "publishedAt": "2008-11-22"
+      }
+    },
+    {
+      "id": "eddie-jordan-fired",
+      "title": "Wizards fire Eddie Jordan after a 1-10 start",
+      "eventDate": "2008-11-24",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards fire coach Eddie Jordan after 1-10 start to the season",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2008/11/24/wizards-jordan",
+        "publishedAt": "2008-11-24"
+      }
+    },
+    {
+      "id": "mitchell-fired",
+      "title": "Raptors fire Sam Mitchell",
+      "eventDate": "2008-12-03",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Internets are alive: Raptors sack coach Mitchell",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/internets-alive-raptors-sack-coach-mitchell--nba.html",
+        "publishedAt": "2008-12-03"
+      }
+    },
+    {
+      "id": "wittman-fired",
+      "title": "Timberwolves fire Randy Wittman; McHale takes over",
+      "eventDate": "2008-12-08",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "4-15 Minnesota Timberwolves fire Randy Wittman",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3754151",
+        "publishedAt": "2008-12-08"
+      }
+    },
+    {
+      "id": "richardson-to-suns",
+      "title": "Suns trade Bell and Diaw to Charlotte for Jason Richardson",
+      "eventDate": "2008-12-10",
+      "teams": [
+        "phx",
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns get high-scoring Richardson",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3760914",
+        "publishedAt": "2008-12-10"
+      }
+    },
+    {
+      "id": "cheeks-fired",
+      "title": "Sixers fire Maurice Cheeks",
+      "eventDate": "2008-12-13",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "76ers fire Cheeks after slow start",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3766766",
+        "publishedAt": "2008-12-13"
+      }
+    },
+    {
+      "id": "theus-fired",
+      "title": "Kings fire Reggie Theus",
+      "eventDate": "2008-12-15",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings fire coach Reggie Theus",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/wire/_/section/nba/id/3772342",
+        "publishedAt": "2008-12-15"
+      }
+    },
+    {
+      "id": "paul-steals-streak",
+      "title": "Chris Paul chases the consecutive-games steal record",
+      "eventDate": "2008-12-17",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Chris Paul One Steal Away from History",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/93731-chris-paul-one-steal-away-from-history",
+        "publishedAt": "2008-12-16"
+      }
+    },
+    {
+      "id": "boozer-opt-out-talk",
+      "title": "Carlos Boozer says he will opt out while injured",
+      "eventDate": "2008-12-17",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Carlos Boozer: The Two-Faced, Master Manipulator. Whats Next For Utah?",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/158955-carlos-boozer-the-two-faced-master-manipulator-whats-next-for-utah",
+        "publishedAt": "2009-04-19"
+      }
+    },
+    {
+      "id": "roy-52",
+      "title": "Brandon Roy scores 52 against Phoenix",
+      "eventDate": "2008-12-18",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brandon Roy's 52, in Bullets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/truehoop/post/_/id/5714/brandon-roy-s-52-in-bullets",
+        "publishedAt": "2008-12-19"
+      }
+    },
+    {
+      "id": "celtics-19-straight",
+      "title": "Celtics win a franchise-record 19 straight",
+      "eventDate": "2008-12-23",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Celtics' win streak reaches 19",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-081224",
+        "publishedAt": "2008-12-24"
+      }
+    },
+    {
+      "id": "larry-brown-bobcats",
+      "title": "Larry Brown's demanding first season in Charlotte",
+      "eventDate": "2008-12-30",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brown holding oft-injured May out until he's in better shape",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3800906",
+        "publishedAt": "2008-12-30"
+      }
+    },
+    {
+      "id": "nets-surprise-start",
+      "title": "Harris and rookie Brook Lopez make the Nets a surprise",
+      "eventDate": "2009-01-16",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Devin Harris and the New Jersey Nets Surprise, But Is Mediocrity Progress?",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/111843-devin-harris-and-the-new-jersey-nets-surprise-but-is-mediocrity-progress",
+        "publishedAt": "2009-01-16"
+      }
+    },
+    {
+      "id": "redd-acl",
+      "title": "Michael Redd tears his ACL",
+      "eventDate": "2009-01-24",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Milwaukee Bucks' Michael Redd done for year with torn ACL/MCL",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3859546",
+        "publishedAt": "2009-01-25"
+      }
+    },
+    {
+      "id": "hollins-grizzlies",
+      "title": "Grizzlies fire Iavaroni and hire Lionel Hollins",
+      "eventDate": "2009-01-25",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies name Lionel Hollins Head Coach",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/grizzlies/news/lionel_hollins_named_head_coach-90125.html",
+        "publishedAt": "2009-01-25"
+      }
+    },
+    {
+      "id": "mayo-gasol-rookies",
+      "title": "O.J. Mayo and Marc Gasol lead a strong Grizzlies rookie class",
+      "eventDate": "2009-01-28",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "O.J. Mayo and Marc Gasol to represent Grizzlies in Rookie Challenge at 2009 All-Star Weekend",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/grizzlies/news/mayo_and_gasol_to_represent_grizzlies-090128.html",
+        "publishedAt": "2009-01-28"
+      }
+    },
+    {
+      "id": "devin-harris-all-star",
+      "title": "Devin Harris becomes an All-Star in New Jersey",
+      "eventDate": "2009-01-29",
+      "teams": [
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Looking back at Devin Harris’ intriguing 2009 All-Star nod as a Net",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/nets/old-school/looking-back-at-devin-harris-intriguing-2009-all-star-nod-as-a-net",
+        "publishedAt": "2024-02-20"
+      }
+    },
+    {
+      "id": "kobe-61",
+      "title": "Kobe scores 61 at Madison Square Garden",
+      "eventDate": "2009-02-02",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kobe Bryant's big week: Looking back at 61, 25K, KB vs. LBJ... and ahead to what really matters",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/los-angeles/lakers/post/_/id/1846/kobe-bryants-big-week-looking-back-at-61-25k-kb-vs-lbj-and-ahead-to-what-really-matters",
+        "publishedAt": "2010-01-22"
+      }
+    },
+    {
+      "id": "brand-shoulder",
+      "title": "Elton Brand's first Philly season ends with shoulder surgery",
+      "eventDate": "2009-02-05",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Elton Brand's Bad News",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/truehoop/post/_/id/5899/elton-brand-s-bad-news",
+        "publishedAt": "2009-02-05"
+      }
+    },
+    {
+      "id": "morrison-to-lakers",
+      "title": "Bobcats trade Adam Morrison to the Lakers",
+      "eventDate": "2009-02-07",
+      "teams": [
+        "cha",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cats send Morrison to Lakers for Radmanovic",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3891214",
+        "publishedAt": "2009-02-07"
+      }
+    },
+    {
+      "id": "jefferson-acl",
+      "title": "Al Jefferson tears his ACL",
+      "eventDate": "2009-02-08",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Minnesota Timberwolves' Al Jefferson out with torn ACL",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3894938",
+        "publishedAt": "2009-02-09"
+      }
+    },
+    {
+      "id": "marion-for-oneal",
+      "title": "Heat trade Shawn Marion for Jermaine O'Neal",
+      "eventDate": "2009-02-13",
+      "teams": [
+        "mia",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat swap Shawn Marion for Jermaine O'Neal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/wire?id=3906999&section=nba",
+        "publishedAt": "2009-02-13"
+      }
+    },
+    {
+      "id": "porter-fired",
+      "title": "Suns fire Terry Porter, return to run-and-gun under Gentry",
+      "eventDate": "2009-02-15",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sources: Terry Porter out as Suns coach, Alvin Gentry in",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3909711",
+        "publishedAt": "2009-02-15"
+      }
+    },
+    {
+      "id": "chandler-trade-rescinded",
+      "title": "Thunder rescind the Tyson Chandler trade",
+      "eventDate": "2009-02-18",
+      "teams": [
+        "okc",
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder reject Chandler; trade off",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3917505",
+        "publishedAt": "2009-02-18"
+      }
+    },
+    {
+      "id": "miller-salmons-to-bulls",
+      "title": "Bulls trade for Brad Miller and John Salmons",
+      "eventDate": "2009-02-18",
+      "teams": [
+        "chi",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls get Miller, Salmons from Kings in big deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3916703",
+        "publishedAt": "2009-02-18"
+      }
+    },
+    {
+      "id": "amare-retina-surgery",
+      "title": "Amar'e Stoudemire's detached retina ends his season",
+      "eventDate": "2009-02-20",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Stoudemire has surgery to repair retina",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3921500",
+        "publishedAt": "2009-02-20"
+      }
+    },
+    {
+      "id": "tmac-microfracture",
+      "title": "Tracy McGrady's season ends with microfracture surgery",
+      "eventDate": "2009-02-21",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "T-Mac to have season-ending surgery Tuesday",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3928531",
+        "publishedAt": "2009-02-21"
+      }
+    },
+    {
+      "id": "marbury-to-celtics",
+      "title": "Knicks buy out Stephon Marbury; he joins Boston",
+      "eventDate": "2009-02-24",
+      "teams": [
+        "nyk",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Marbury leaves Knicks, likely headed to Celtics",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=3931801",
+        "publishedAt": "2009-02-24"
+      }
+    },
+    {
+      "id": "pistons-iverson-collapse",
+      "title": "The Iverson experiment unravels in Detroit",
+      "eventDate": "2009-02-25",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The 2009 Detroit Pistons: The Story of Dumars, Iverson, and Curry",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/129568-the-2009-detroit-pistons-the-story-of-iverson-dumars-and-currey",
+        "publishedAt": "2009-02-25"
+      }
+    },
+    {
+      "id": "wade-beats-bulls-2ot",
+      "title": "Wade's steal and buzzer-beater top the Bulls in double OT",
+      "eventDate": "2009-03-09",
+      "teams": [
+        "mia",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Wade's heights, Rudy's lows",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-090310",
+        "publishedAt": "2009-03-10"
+      }
+    },
+    {
+      "id": "arenas-return",
+      "title": "Gilbert Arenas pushes to return late in a lost season",
+      "eventDate": "2009-03-25",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Arenas needs to slow down return",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2009/03/25/arenas",
+        "publishedAt": "2009-03-25"
+      }
+    },
+    {
+      "id": "iverson-pistons-bench",
+      "title": "Allen Iverson refuses a bench role and is shut down",
+      "eventDate": "2009-04-03",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Allen Iverson: Detroit Pistons 'lied' about coming off bench",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4523175",
+        "publishedAt": "2009-09-30"
+      }
+    },
+    {
+      "id": "ginobili-out",
+      "title": "Ginobili's ankle fracture ends his season",
+      "eventDate": "2009-04-08",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs will pay now -- and perhaps later -- for Ginobili's injury woes",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2009/04/09/ginobili",
+        "publishedAt": "2009-04-09"
+      }
+    },
+    {
+      "id": "wade-scoring-title",
+      "title": "Dwyane Wade wins the scoring title",
+      "eventDate": "2009-04-15",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Miami Heat Season Recap: Where Dwyane Wade Happened",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/212518-miami-heat-season-recap-where-dwyane-wade-happened",
+        "publishedAt": "2009-07-05"
+      }
+    },
+    {
+      "id": "blazers-return-to-playoffs",
+      "title": "Blazers win 54 and end the West's longest playoff drought",
+      "eventDate": "2009-04-15",
+      "teams": [
+        "por"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Top 10 Moments of 2009 Portland Trail Blazers",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/156805-top-10-moments-of-2009-portland-trail-blazers",
+        "publishedAt": "2009-04-15"
+      }
+    },
+    {
+      "id": "mavs-carlisle-50-wins",
+      "title": "Mavericks recover from a 2-7 start to win 50 under Carlisle",
+      "eventDate": "2009-04-15",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "2008-09: Carlisle, Mavs push, pull to 50",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/blog/dallas/mavericks/post/_/id/4669171/2008-09-carlisle-mavs-push-pull-to-50",
+        "publishedAt": "2010-05-20"
+      }
+    },
+    {
+      "id": "garnett-knee",
+      "title": "Kevin Garnett's knee ends his season",
+      "eventDate": "2009-04-16",
+      "teams": [
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rivers: Garnett not ready, could miss playoffs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2009/news/story?id=4073024",
+        "publishedAt": "2009-04-16"
+      }
+    },
+    {
+      "id": "iguodala-game-1-winner",
+      "title": "Iguodala's Game 1 winner; Magic beat the Sixers in six",
+      "eventDate": "2009-04-19",
+      "teams": [
+        "phi",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sixers playoff rewind: Andre Iguodala sinks game winner vs. Magic",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/sixers-playoff-rewind-andre-iguodala-113004687.html",
+        "publishedAt": "2021-08-31"
+      }
+    },
+    {
+      "id": "roy-42-playoffs",
+      "title": "Brandon Roy scores 42 for the first Portland playoff win in six years",
+      "eventDate": "2009-04-21",
+      "teams": [
+        "por",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Best NBA Playoff Performances",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2009/04/27/27best-nba-playoff-performances",
+        "publishedAt": "2009-04-27"
+      }
+    },
+    {
+      "id": "rose-roy",
+      "title": "Derrick Rose is Rookie of the Year",
+      "eventDate": "2009-04-22",
+      "teams": [
+        "chi",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "No surprise: Bulls' Rose named rookie of year",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4088433",
+        "publishedAt": "2009-04-22"
+      }
+    },
+    {
+      "id": "wizards-hire-saunders",
+      "title": "Wizards hire Flip Saunders",
+      "eventDate": "2009-04-22",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards Name Saunders Head Coach",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/wizards/news/saunders_090422.html",
+        "publishedAt": "2009-04-22"
+      }
+    },
+    {
+      "id": "jazz-take-game-3",
+      "title": "Jazz steal Game 3 but fall to the Lakers in five",
+      "eventDate": "2009-04-23",
+      "teams": [
+        "uta",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The Jazz Strike First and Last to Overtake the Lakers, 88-86",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/161355-the-jazz-strike-first-and-last-to-overtake-the-lakers-88-86",
+        "publishedAt": "2009-04-24"
+      }
+    },
+    {
+      "id": "cavs-sweep-pistons",
+      "title": "Cavaliers sweep the Pistons, ending Detroit's run",
+      "eventDate": "2009-04-26",
+      "teams": [
+        "cle",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons' Playoff Run Ends In First-Round Sweep",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/163286-pistons-playoff-run-ends-in-first-round-sweep",
+        "publishedAt": "2009-04-27"
+      }
+    },
+    {
+      "id": "nuggets-rout-hornets",
+      "title": "Nuggets beat the Hornets by 58",
+      "eventDate": "2009-04-27",
+      "teams": [
+        "den",
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Page 2: New Orleans Hornets join list of worst playoff humiliations",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/page2/story?sportCat=nba&page=schoenfield/090428",
+        "publishedAt": "2009-04-28"
+      }
+    },
+    {
+      "id": "mavs-oust-spurs",
+      "title": "Mavericks knock the Spurs out in the first round",
+      "eventDate": "2009-04-28",
+      "teams": [
+        "dal",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "San Antonio Spurs' Reign of Basketball Brilliance is Over",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/162899-san-antonio-spurs-reign-of-basketball-brilliance-is-over",
+        "publishedAt": "2009-04-26"
+      }
+    },
+    {
+      "id": "celtics-bulls-classic",
+      "title": "Celtics outlast the Bulls in an all-time first-round series",
+      "eventDate": "2009-05-02",
+      "teams": [
+        "bos",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Playoffs: Chicago Bulls and Boston Celtics complete an all-time classic series",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/columns/story?columnist=wojciechowski_gene&page=090502/game7&sportCat=nba",
+        "publishedAt": "2009-05-02"
+      }
+    },
+    {
+      "id": "hawks-mia-game-7",
+      "title": "Hawks beat Miami in Game 7 for first series win in a decade",
+      "eventDate": "2009-05-03",
+      "teams": [
+        "atl",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks' history lesson leads to first playoff series victory in 10 years",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2009/05/03/hawks-heatgame7",
+        "publishedAt": "2009-05-03"
+      }
+    },
+    {
+      "id": "cavs-sweep-hawks",
+      "title": "Cavaliers sweep the Hawks in the second round",
+      "eventDate": "2009-05-11",
+      "teams": [
+        "cle",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Cavaliers school Hawks again in Game 2",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-090508",
+        "publishedAt": "2009-05-08"
+      }
+    },
+    {
+      "id": "triano-permanent-coach",
+      "title": "Raptors make Jay Triano their full-time coach",
+      "eventDate": "2009-05-11",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Toronto Raptors: A Complete Coaching Changeover",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/254891-toronto-raptors-a-complete-coaching-changeover",
+        "publishedAt": "2009-09-15"
+      }
+    },
+    {
+      "id": "granger-mip",
+      "title": "Danny Granger is Most Improved Player",
+      "eventDate": "2009-05-12",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Granger officially named NBA's Most Improved Player",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/granger-officially-named-nbas-most-improved-player--nba.html",
+        "publishedAt": "2009-05-12"
+      }
+    },
+    {
+      "id": "award-winners-2009",
+      "title": "LeBron MVP, Rose ROY, Howard DPOY, Terry 6MOY, Granger MIP",
+      "eventDate": "2009-05-13",
+      "teams": [
+        "cle",
+        "chi",
+        "orl",
+        "dal",
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA's 2008-09 Award Winners",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2009/05/13/13nbas-2008-09-award-winners",
+        "publishedAt": "2009-05-13"
+      }
+    },
+    {
+      "id": "nuggets-oust-mavs",
+      "title": "Nuggets eliminate the Mavericks",
+      "eventDate": "2009-05-13",
+      "teams": [
+        "den",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Nuggets eliminate Mavs in 5",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-090514",
+        "publishedAt": "2009-05-14"
+      }
+    },
+    {
+      "id": "lakers-oust-rockets",
+      "title": "Lakers beat the Yao-less Rockets in Game 7",
+      "eventDate": "2009-05-17",
+      "teams": [
+        "lal",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA playoffs: The redemption: Lakers ground Rockets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs/2009/columns/story?columnist=adande_ja&page=lakersrocketsg7-090517",
+        "publishedAt": "2009-05-17"
+      }
+    },
+    {
+      "id": "magic-win-game-7-boston",
+      "title": "Magic win Game 7 in Boston, ending the Celtics' title defense",
+      "eventDate": "2009-05-17",
+      "teams": [
+        "orl",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic Classic Wins: Game 7 of 2009 Conference Semifinals Against Celtics",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/magic/magic-classic-wins-game-7-2009-conference-semifinals-against-celtics-20200522",
+        "publishedAt": "2020-05-22"
+      }
+    },
+    {
+      "id": "clippers-win-lottery",
+      "title": "Clippers win the lottery; Kings fall to No. 4",
+      "eventDate": "2009-05-19",
+      "teams": [
+        "lac",
+        "sac",
+        "mem",
+        "okc",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers win draft lottery",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=4181208",
+        "publishedAt": "2009-05-19"
+      }
+    },
+    {
+      "id": "lakers-oust-nuggets",
+      "title": "Lakers eliminate the Nuggets in the West finals",
+      "eventDate": "2009-05-29",
+      "teams": [
+        "lal",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Daily Dime: Lakers advance to NBA Finals",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-090530",
+        "publishedAt": "2009-05-30"
+      }
+    },
+    {
+      "id": "sixers-hire-eddie-jordan",
+      "title": "Sixers hire Eddie Jordan",
+      "eventDate": "2009-05-29",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Eddie Jordan hired to coach Sixers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4216449",
+        "publishedAt": "2009-05-29"
+      }
+    },
+    {
+      "id": "lebron-no-handshake",
+      "title": "Magic stun the Cavs; LeBron skips the handshake",
+      "eventDate": "2009-05-30",
+      "teams": [
+        "cle",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LeBron sent a clear message by not shaking hands with Magic",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2009/06/02/lebron",
+        "publishedAt": "2009-06-02"
+      }
+    },
+    {
+      "id": "kings-hire-westphal",
+      "title": "Kings hire Paul Westphal after a 17-65 season",
+      "eventDate": "2009-06-09",
+      "teams": [
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Westphal new Kings coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4247234",
+        "publishedAt": "2009-06-09"
+      }
+    },
+    {
+      "id": "lakers-title",
+      "title": "Lakers beat the Magic; Kobe wins his first title without Shaq",
+      "eventDate": "2009-06-14",
+      "teams": [
+        "lal",
+        "orl"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Daily Dime: Kobe named MVP as Lakers win NBA title",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dime-090615",
+        "publishedAt": "2009-06-15"
+      }
+    },
+    {
+      "id": "mchale-out",
+      "title": "Kevin McHale out as Timberwolves coach",
+      "eventDate": "2009-06-17",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kevin McHale out as Minnesota Timberwolves coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4265949",
+        "publishedAt": "2009-06-17"
+      }
+    },
+    {
+      "id": "wizards-trade-fifth-pick",
+      "title": "Wizards trade the No. 5 pick for Mike Miller and Randy Foye",
+      "eventDate": "2009-06-23",
+      "teams": [
+        "was",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wizards agree to trade No. 5 pick to Timberwolves for Miller, Foye",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/nba/2009/06/23/wizards-timberwolvestrade",
+        "publishedAt": "2009-06-23"
+      }
+    },
+    {
+      "id": "jefferson-to-spurs",
+      "title": "Spurs trade for Richard Jefferson",
+      "eventDate": "2009-06-23",
+      "teams": [
+        "sas",
+        "mil",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs get Jefferson from Bucks for 3 players",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4281291",
+        "publishedAt": "2009-06-23"
+      }
+    },
+    {
+      "id": "yao-out-indefinitely",
+      "title": "Yao Ming's broken foot hasn't healed",
+      "eventDate": "2009-06-24",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rockets rule Yao Ming out indefinitely with foot injury",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4285514",
+        "publishedAt": "2009-06-24"
+      }
+    },
+    {
+      "id": "shaq-to-cavs",
+      "title": "Cavaliers trade for Shaquille O'Neal",
+      "eventDate": "2009-06-24",
+      "teams": [
+        "cle",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavs land Shaq for Wallace, Pavlovic",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/aw-shaq062409.html",
+        "publishedAt": "2009-06-24"
+      }
+    },
+    {
+      "id": "carter-to-magic",
+      "title": "Nets trade Vince Carter to Orlando",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "bkn",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets ship Carter to Magic for Alston, rookie Lee",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=4287197",
+        "publishedAt": "2009-06-25"
+      }
+    },
+    {
+      "id": "griffin-first-pick",
+      "title": "Clippers draft Blake Griffin first",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "lac"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Clippers Select Oklahoma Forward Blake Griffin With Number One Pick in 2009 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/clippers/news/griffin_draft_090625.html",
+        "publishedAt": "2009-06-25"
+      }
+    },
+    {
+      "id": "knicks-draft-hill-after-curry",
+      "title": "Knicks take Jordan Hill one pick after Curry goes to Golden State",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "nyk",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Steph Curry was hoping to be drafted by Knicks, not Warriors",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/28550132/steph-curry-was-hoping-drafted-knicks-not-warriors",
+        "publishedAt": "2020-01-23"
+      }
+    },
+    {
+      "id": "bucks-draft-jennings",
+      "title": "Bucks draft Brandon Jennings after his year in Italy",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Milwaukee Bucks Draft Review",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/207066-milwaukee-bucks-draft-review",
+        "publishedAt": "2009-06-26"
+      }
+    },
+    {
+      "id": "thunder-draft-harden",
+      "title": "Thunder draft James Harden third",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Thunder Acquires James Harden, B.J. Mullens and Robert Vaden in 2009 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/thunder/news/draft_release_090625.html",
+        "publishedAt": "2009-06-26"
+      }
+    },
+    {
+      "id": "grizzlies-draft-thabeet",
+      "title": "Grizzlies take Hasheem Thabeet second",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies select Hasheem Thabeet with No. 2 Pick in 2009 NBA Draft",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/grizzlies/news/grizzlies_select_thabeet_carroll_young-090626.html",
+        "publishedAt": "2009-06-26"
+      }
+    },
+    {
+      "id": "wolves-draft-rubio-flynn",
+      "title": "Timberwolves draft Rubio and Flynn back to back",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "One Guard Too Many: What Was Minnesota's Kahn Thinking?",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/207667-one-guard-too-many-what-was-minnesotas-kahn-thinking",
+        "publishedAt": "2009-06-26"
+      }
+    },
+    {
+      "id": "bobcats-draft-henderson",
+      "title": "Bobcats draft Gerald Henderson",
+      "eventDate": "2009-06-25",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Draft grades: Evaluating every team",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2009/columns/story?columnist=ford_chad&page=DraftGrades-090626",
+        "publishedAt": "2009-06-26"
+      }
+    }
+  ]
+}
