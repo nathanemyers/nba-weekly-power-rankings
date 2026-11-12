@@ -34,7 +34,8 @@ export default function SeasonDetail(props: SeasonDetailProps) {
           {season.name}
         </Heading>
       )}
-      <h3 className="text-lg font-semibold">Storylines</h3>
+      <TopPlayerBadges season={season} team={props.team} />
+      <h3 className="mt-2 text-lg font-semibold">Storylines</h3>
       {storylines.length > 0 ? (
         <StorylineList
           label={`${season.name} ${getTeamName(props.teamId)} storylines`}
@@ -48,8 +49,6 @@ export default function SeasonDetail(props: SeasonDetailProps) {
             : 'Storylines appear once the season is complete'}
         </p>
       )}
-      <h3 className="mt-2 text-lg font-semibold">Top players</h3>
-      <TopPlayerBadges season={season} team={props.team} />
       <div className="mt-2 flex flex-wrap items-center justify-end gap-2">
         <DataSourceBadge source={season.source} season={season.name} />
         <Button asChild variant="outline" size="sm" className="cursor-pointer">

@@ -2,6 +2,13 @@ import type { RosterEntry } from 'types'
 
 export type StatRating = 'elite' | 'good' | 'fair' | 'poor'
 
+export const RATING_CLASSES: Record<StatRating, string> = {
+  elite: 'text-stat-elite',
+  good: 'text-stat-good',
+  fair: 'text-stat-fair',
+  poor: 'text-stat-poor',
+}
+
 export type RatedStat = 'pts' | 'trb' | 'ast' | 'stl' | 'blk' | 'per'
 
 type Breakpoints = {

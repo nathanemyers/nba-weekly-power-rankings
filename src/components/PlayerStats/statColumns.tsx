@@ -2,9 +2,9 @@ import { cn } from 'cn'
 import type { RosterEntry } from 'types'
 import {
   isRatable,
+  RATING_CLASSES,
   statRating,
   type RatedStat,
-  type StatRating,
 } from './statRating'
 import { TableCell, TableHead } from 'components/ui/table'
 
@@ -14,13 +14,6 @@ export type StatColumn = {
   value: (player: RosterEntry) => string
   rated?: RatedStat
   compact?: true
-}
-
-const RATING_CLASSES: Record<StatRating, string> = {
-  elite: 'text-stat-elite',
-  good: 'text-stat-good',
-  fair: 'text-stat-fair',
-  poor: 'text-stat-poor',
 }
 
 const decimal = (value: number | null) =>

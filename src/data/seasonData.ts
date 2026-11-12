@@ -124,17 +124,13 @@ export const getTeamStorylines = (season: Season, team: Team | undefined) =>
     ? season.storylines.filter((s) => s.teams.includes(team))
     : []
 
-export type TopPlayer = { id: string; name: string; minutes: number }
+export type TopPlayer = RosterEntry & { minutes: number }
 
 export const getTopPlayersByMinutes = (
   roster: RosterEntry[] | undefined,
   count = 6
 ): TopPlayer[] =>
   (roster ?? [])
-    .map((entry) => ({
-      id: entry.id,
-      name: entry.name,
-      minutes: Math.round(entry.g * entry.mpg),
-    }))
+    .map((entry) => ({ ...entry, minutes: Math.round(entry.g * entry.mpg) }))
     .toSorted((a, b) => b.minutes - a.minutes || a.name.localeCompare(b.name))
     .slice(0, count)

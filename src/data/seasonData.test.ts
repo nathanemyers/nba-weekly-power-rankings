@@ -262,7 +262,7 @@ describe('getTopPlayersByMinutes', () => {
       entry('Short', 10, 40),
       entry('Long', 70, 30),
     ])
-    expect(top).toEqual([
+    expect(top).toMatchObject([
       { id: 'long', name: 'Long', minutes: 2100 },
       { id: 'short', name: 'Short', minutes: 400 },
     ])

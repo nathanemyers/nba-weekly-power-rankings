@@ -101,19 +101,24 @@ describe('two-column layout', () => {
     expect(seasonButton('plain')).not.toHaveAttribute('aria-current')
   })
 
-  it('shows the top players by total minutes, linked to their history', async () => {
+  it('shows the top players by total minutes with rated PER, linked to their history', async () => {
     const user = userEvent.setup()
     const { router } = await renderWithRouter(['/teamHistory/bos'])
     const list = await screen.findByRole('list', {
       name: 'storied top players by minutes',
     })
     const links = within(list).getAllByRole('link')
-    expect(links.map((link) => link.textContent)).toEqual([
-      'Paul Pierce',
-      'Kevin Garnett',
-      'Joe Moves',
-      'Joe Scrub',
+    expect(links.map((link) => link.getAttribute('aria-label'))).toEqual([
+      'Paul Pierce, PER 19.8',
+      'Kevin Garnett, PER 25.3',
+      'Joe Moves, PER 15.0',
+      'Joe Scrub, PER –',
     ])
+    expect(
+      links.map((link) =>
+        link.querySelector('[data-rating]')?.getAttribute('data-rating')
+      )
+    ).toEqual(['good', 'elite', 'fair', 'unrated'])
     await user.click(links[0])
     expect(router.state.location.pathname).toBe('/playerHistory/piercpa01')
   })
