@@ -645,7 +645,7 @@
         "weekly-ind",
         "weekly-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nuggets-dump-camby",
@@ -667,7 +667,7 @@
       "guidance": [
         "weekly-den"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "deron-extension",
@@ -709,7 +709,7 @@
       "guidance": [
         "weekly-mil"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "artest-to-rockets",
@@ -777,7 +777,7 @@
       "guidance": [
         "weekly-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "redeem-team-gold",
@@ -871,7 +871,7 @@
       "guidance": [
         "weekly-gsw"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "oden-debut",
@@ -923,8 +923,7 @@
       "title": "Tony Parker scores 55 in Minnesota",
       "eventDate": "2008-11-05",
       "teams": [
-        "sas",
-        "min"
+        "sas"
       ],
       "featured": false,
       "article": {
@@ -938,7 +937,7 @@
       "guidance": [
         "weekly-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "sloan-1000",
@@ -982,7 +981,7 @@
       "guidance": [
         "weekly-atl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "knicks-clear-cap",
@@ -1183,7 +1182,7 @@
       "guidance": [
         "weekly-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "boozer-opt-out-talk",
@@ -1204,7 +1203,7 @@
       "guidance": [
         "weekly-uta"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "roy-52",
@@ -1267,7 +1266,7 @@
       "guidance": [
         "weekly-cha"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nets-surprise-start",
@@ -1288,7 +1287,7 @@
       "guidance": [
         "weekly-bkn"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "redd-acl",
@@ -1373,7 +1372,7 @@
       "guidance": [
         "weekly-bkn"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kobe-61",
@@ -1505,7 +1504,7 @@
       "guidance": [
         "weekly-nyk"
       ],
-      "status": "pending"
+      "status": "excluded"
     },
     {
       "id": "rudy-fernandez-dunk-contest",
@@ -1526,7 +1525,7 @@
       "guidance": [
         "weekly-por"
       ],
-      "status": "pending"
+      "status": "excluded"
     },
     {
       "id": "porter-fired",
@@ -1570,7 +1569,7 @@
       "guidance": [
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "excluded"
     },
     {
       "id": "chandler-trade-rescinded",
@@ -1639,7 +1638,7 @@
       "guidance": [
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "tmac-microfracture",
@@ -1704,7 +1703,7 @@
       "guidance": [
         "weekly-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wade-beats-bulls-2ot",
@@ -1727,7 +1726,7 @@
         "weekly-mia",
         "weekly-chi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "arenas-return",
@@ -1748,7 +1747,7 @@
       "guidance": [
         "weekly-was"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "iverson-pistons-bench",
@@ -1799,8 +1798,7 @@
       "title": "Wade scores a career-high 55 against the Knicks",
       "eventDate": "2009-04-12",
       "teams": [
-        "mia",
-        "nyk"
+        "mia"
       ],
       "featured": false,
       "article": {
@@ -1814,7 +1812,7 @@
       "guidance": [
         "weekly-mia"
       ],
-      "status": "pending"
+      "status": "excluded"
     },
     {
       "id": "wade-scoring-title",
@@ -1835,7 +1833,7 @@
       "guidance": [
         "weekly-mia"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "blazers-return-to-playoffs",
@@ -1856,7 +1854,7 @@
       "guidance": [
         "weekly-por"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mavs-carlisle-50-wins",
@@ -1877,7 +1875,7 @@
       "guidance": [
         "weekly-dal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "garnett-knee",
@@ -1922,7 +1920,7 @@
         "po-phi",
         "po-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "roy-42-playoffs",
@@ -1987,7 +1985,7 @@
       "guidance": [
         "weekly-was"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jazz-take-game-3",
@@ -2009,7 +2007,7 @@
       "guidance": [
         "po-uta"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "cavs-sweep-pistons",
@@ -2032,7 +2030,7 @@
         "po-cle",
         "po-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nuggets-rout-hornets",
@@ -2078,7 +2076,7 @@
         "po-dal",
         "po-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "celtics-bulls-classic",
@@ -2124,7 +2122,7 @@
         "po-atl",
         "po-mia"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "cavs-sweep-hawks",
@@ -2147,7 +2145,7 @@
         "po-cle",
         "po-atl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "triano-permanent-coach",
@@ -2168,7 +2166,7 @@
       "guidance": [
         "weekly-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "granger-mip",
@@ -2288,7 +2286,7 @@
         "po-orl",
         "po-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "clippers-win-lottery",
@@ -2313,7 +2311,7 @@
       "guidance": [
         "draft-lottery"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lakers-oust-nuggets",
@@ -2357,7 +2355,7 @@
       "guidance": [
         "weekly-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lebron-no-handshake",
@@ -2401,7 +2399,7 @@
       "guidance": [
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lakers-title",
@@ -2605,7 +2603,7 @@
       "guidance": [
         "draft-2009"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bucks-draft-jennings",
@@ -2626,7 +2624,7 @@
       "guidance": [
         "draft-2009"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "thunder-draft-harden",
@@ -2647,7 +2645,7 @@
       "guidance": [
         "draft-2009"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "grizzlies-draft-thabeet",
@@ -2668,7 +2666,7 @@
       "guidance": [
         "draft-2009"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wolves-draft-rubio-flynn",
@@ -2689,7 +2687,7 @@
       "guidance": [
         "draft-2009"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bobcats-draft-henderson",
@@ -2710,7 +2708,7 @@
       "guidance": [
         "draft-2009"
       ],
-      "status": "pending"
+      "status": "included"
     }
   ]
 }

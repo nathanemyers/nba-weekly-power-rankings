@@ -1,0 +1,1090 @@
+{
+  "season": "2004-05",
+  "finalizedAt": "2026-11-12",
+  "storylines": [
+    {
+      "id": "mcgrady-traded-to-rockets",
+      "title": "Magic trade Tracy McGrady to the Rockets",
+      "eventDate": "2004-06-29",
+      "teams": [
+        "orl",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Francis' meeting with Magic triggers trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1831594",
+        "publishedAt": "2004-06-29"
+      }
+    },
+    {
+      "id": "nash-signs-with-suns",
+      "title": "Steve Nash leaves Dallas for Phoenix",
+      "eventDate": "2004-07-01",
+      "teams": [
+        "phx",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Verbal deal: five years, more than $65M",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1833028",
+        "publishedAt": "2004-07-01"
+      }
+    },
+    {
+      "id": "shaq-traded-to-heat",
+      "title": "Lakers trade Shaq to the Heat",
+      "eventDate": "2004-07-14",
+      "teams": [
+        "lal",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers Acquire Odom, Butler, Grant and a Future First Rounder for Shaq",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/lakers/news/odomshaqtrade040714html",
+        "publishedAt": "2004-07-14"
+      }
+    },
+    {
+      "id": "jazz-sign-boozer",
+      "title": "Boozer spurns Cleveland for Utah",
+      "eventDate": "2004-07-14",
+      "teams": [
+        "uta",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Gund: Trust with Boozer 'was broken'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1839664",
+        "publishedAt": "2004-07-14"
+      }
+    },
+    {
+      "id": "kobe-re-signs-with-lakers",
+      "title": "Kobe re-signs with the Lakers over the Clippers",
+      "eventDate": "2004-07-15",
+      "teams": [
+        "lal",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kobe stays put, picks Lakers over Clippers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1840336",
+        "publishedAt": "2004-07-15"
+      }
+    },
+    {
+      "id": "harrington-jackson-swap",
+      "title": "Pacers swap Al Harrington for Stephen Jackson",
+      "eventDate": "2004-07-15",
+      "teams": [
+        "ind",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Agent: trade of Pacers' Harrington to Hawks a done deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/wire/_/section/nba/id/1840163",
+        "publishedAt": "2004-07-15"
+      }
+    },
+    {
+      "id": "kenyon-martin-to-nuggets",
+      "title": "Nets send Kenyon Martin to Denver",
+      "eventDate": "2004-07-15",
+      "teams": [
+        "bkn",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets Trade Kenyon Martin to Nuggets",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/nets/news/kenyon_040715.html",
+        "publishedAt": "2004-07-16"
+      }
+    },
+    {
+      "id": "kittles-to-clippers",
+      "title": "Clippers let Q-Rich go to Phoenix, land Kittles",
+      "eventDate": "2004-07-29",
+      "teams": [
+        "lac",
+        "bkn",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clippers don't match Richardson, but get Kittles",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1848638",
+        "publishedAt": "2004-07-29"
+      }
+    },
+    {
+      "id": "walker-traded-to-hawks",
+      "title": "Mavericks trade Antoine Walker to the Hawks",
+      "eventDate": "2004-08-04",
+      "teams": [
+        "atl",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hawks acquire Antoine Walker",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/hawks/news/trade_080404.html",
+        "publishedAt": "2004-08-02"
+      }
+    },
+    {
+      "id": "knicks-trade-for-crawford",
+      "title": "Knicks trade for Jamal Crawford",
+      "eventDate": "2004-08-05",
+      "teams": [
+        "nyk",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Guard comes to NY in six-player swap",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1853011",
+        "publishedAt": "2004-08-05"
+      }
+    },
+    {
+      "id": "payton-traded-to-celtics",
+      "title": "Lakers trade Gary Payton to the Celtics",
+      "eventDate": "2004-08-06",
+      "teams": [
+        "bos",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "L.A. gets Mihm, Banks, Atkins in deal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1853576",
+        "publishedAt": "2004-08-06"
+      }
+    },
+    {
+      "id": "mashburn-knee-injury",
+      "title": "Jamal Mashburn's knee ends his Hornets career",
+      "eventDate": "2004-09-27",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knee injury threatens forward's career",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1889785",
+        "publishedAt": "2004-09-27"
+      }
+    },
+    {
+      "id": "gasol-extension",
+      "title": "Grizzlies extend Pau Gasol",
+      "eventDate": "2004-10-01",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies Sign Pau Gasol To A Multi-Year Contract Extension",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/grizzlies/news/release-gasol_multi-year_contract.html",
+        "publishedAt": "2004-10-01"
+      }
+    },
+    {
+      "id": "sprewell-family-to-feed",
+      "title": "Sprewell's 'family to feed' contract stand",
+      "eventDate": "2004-10-31",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sadly, not shocked by Sprewell's comments",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/dickvitale/vcolumn041108-Sprewell.html",
+        "publishedAt": "2004-11-08"
+      }
+    },
+    {
+      "id": "warriors-extend-richardson-murphy",
+      "title": "Warriors extend Jason Richardson and Troy Murphy",
+      "eventDate": "2004-11-01",
+      "teams": [
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors Sign Richardson And Murphy To Multi-Year Contract Extensions",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/warriors/news/richardson_murphy_extensions110104.html",
+        "publishedAt": "2004-11-02"
+      }
+    },
+    {
+      "id": "malice-at-the-palace",
+      "title": "Malice at the Palace",
+      "eventDate": "2004-11-19",
+      "teams": [
+        "ind",
+        "det"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Suspensions without pay, won't be staggered",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1928540",
+        "publishedAt": "2004-11-21"
+      }
+    },
+    {
+      "id": "hubie-brown-resigns",
+      "title": "Hubie Brown resigns as Grizzlies coach",
+      "eventDate": "2004-11-25",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Brown renowned for his teaching",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/dickvitale/vcolumn041126-Hubie.html",
+        "publishedAt": "2004-11-26"
+      }
+    },
+    {
+      "id": "clippers-fast-start",
+      "title": "The Clippers' surprising start",
+      "eventDate": "2004-12-01",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Out of the Clipper closet",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/page2/story?page=simmons%2F041201",
+        "publishedAt": "2004-12-01"
+      }
+    },
+    {
+      "id": "tmac-13-in-35",
+      "title": "T-Mac scores 13 in 35 seconds to stun the Spurs",
+      "eventDate": "2004-12-09",
+      "teams": [
+        "hou",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "McGrady's 3-flowin' ways a real Rocket boost",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=1943089",
+        "publishedAt": "2004-12-09"
+      }
+    },
+    {
+      "id": "vince-carter-traded-to-nets",
+      "title": "Raptors trade Vince Carter to the Nets",
+      "eventDate": "2004-12-17",
+      "teams": [
+        "tor",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors receive three players and two picks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=1948449",
+        "publishedAt": "2004-12-17"
+      }
+    },
+    {
+      "id": "shaq-kobe-christmas",
+      "title": "Shaq beats Kobe in the Christmas reunion",
+      "eventDate": "2004-12-25",
+      "teams": [
+        "mia",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat's Wade, Jones steal show in Shaq-Kobe I",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=1953233",
+        "publishedAt": "2004-12-25"
+      }
+    },
+    {
+      "id": "bzdelik-fired",
+      "title": "Nuggets fire Jeff Bzdelik",
+      "eventDate": "2004-12-28",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets fire Bzdelik, promote assistant Cooper",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1954408",
+        "publishedAt": "2004-12-28"
+      }
+    },
+    {
+      "id": "vince-admits-not-trying",
+      "title": "Vince Carter admits he didn't always play hard in Toronto",
+      "eventDate": "2005-01-07",
+      "teams": [
+        "tor",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Raptors rip Carter after admission of doggin' it",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1962014",
+        "publishedAt": "2005-01-08"
+      }
+    },
+    {
+      "id": "christie-for-mobley",
+      "title": "Kings swap Doug Christie for Cuttino Mobley",
+      "eventDate": "2005-01-11",
+      "teams": [
+        "sac",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "'They shouldn't have traded him'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1964511",
+        "publishedAt": "2005-01-11"
+      }
+    },
+    {
+      "id": "kobe-ankle-injury",
+      "title": "Kobe sidelined by a severe ankle sprain",
+      "eventDate": "2005-01-13",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kobe carried to locker room after hurting ankle",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/story/_/id/1966588",
+        "publishedAt": "2005-01-14"
+      }
+    },
+    {
+      "id": "pistons-trade-for-arroyo",
+      "title": "Pistons trade for Carlos Arroyo",
+      "eventDate": "2005-01-21",
+      "teams": [
+        "det",
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "To the point: Pistons acquire Arroyo from Jazz",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1972052",
+        "publishedAt": "2005-01-21"
+      }
+    },
+    {
+      "id": "george-karl-hired",
+      "title": "Nuggets hire George Karl",
+      "eventDate": "2005-01-27",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets Name George Karl Head Coach",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/nuggets/news/karl_named_nuggets_coach.html",
+        "publishedAt": "2005-01-27"
+      }
+    },
+    {
+      "id": "alston-suspended",
+      "title": "Rafer Alston suspended after storming out of practice",
+      "eventDate": "2005-02-01",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Alston finishes suspension, returns to Raptors",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=1983424",
+        "publishedAt": "2005-02-03"
+      }
+    },
+    {
+      "id": "tomjanovich-resigns",
+      "title": "Rudy Tomjanovich resigns as Lakers coach",
+      "eventDate": "2005-02-02",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Tomjanovich quits as Lakers coach, cites health",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1982487",
+        "publishedAt": "2005-02-02"
+      }
+    },
+    {
+      "id": "arenas-jamison-all-stars",
+      "title": "Arenas and Jamison make the All-Star team",
+      "eventDate": "2005-02-08",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Arenas and Jamison Named to 2005 NBA Eastern Conference All-Star Team",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/wizards/news/allstars_announcement050208.html",
+        "publishedAt": "2005-02-08"
+      }
+    },
+    {
+      "id": "baby-bulls-recover-from-0-9",
+      "title": "Baby Bulls recover from an 0-9 start",
+      "eventDate": "2005-02-09",
+      "teams": [
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Seven questions for Baby Bulls",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/columns/story?id=1987619",
+        "publishedAt": "2005-02-09"
+      }
+    },
+    {
+      "id": "flip-saunders-fired",
+      "title": "Wolves fire Flip Saunders; McHale takes over",
+      "eventDate": "2005-02-12",
+      "teams": [
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Coaching upheaval reflects desperation",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/columns/story?columnist=stein_marc&id=1990247",
+        "publishedAt": "2005-02-12"
+      }
+    },
+    {
+      "id": "karl-malone-retires",
+      "title": "Karl Malone retires",
+      "eventDate": "2005-02-13",
+      "teams": [
+        "lal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Malone: 'You will not see me play again'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1990848",
+        "publishedAt": "2005-02-13"
+      }
+    },
+    {
+      "id": "josh-smith-dunk-title",
+      "title": "Josh Smith wins the dunk contest",
+      "eventDate": "2005-02-19",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Smith slams into history; Richardson wins on 3s",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/allstar2005/news/story?id=1995547",
+        "publishedAt": "2005-02-20"
+      }
+    },
+    {
+      "id": "webber-traded-to-sixers",
+      "title": "Kings trade Chris Webber to the 76ers",
+      "eventDate": "2005-02-23",
+      "teams": [
+        "sac",
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sixers send three to Kings for Webber, others",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1998456",
+        "publishedAt": "2005-02-24"
+      }
+    },
+    {
+      "id": "walker-returns-to-celtics",
+      "title": "Celtics bring back Antoine Walker",
+      "eventDate": "2005-02-24",
+      "teams": [
+        "bos",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Welcome back, Employee No. 88",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/page2/story?page=simmons%2F050302",
+        "publishedAt": "2005-03-02"
+      }
+    },
+    {
+      "id": "baron-davis-to-warriors",
+      "title": "Hornets trade Baron Davis to the Warriors",
+      "eventDate": "2005-02-24",
+      "teams": [
+        "gsw",
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Warriors Acquire Two-Time All-Star Baron Davis From New Orleans",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/warriors/news/acquire_barondavis_022405.html",
+        "publishedAt": "2005-02-24"
+      }
+    },
+    {
+      "id": "deadline-nazr-to-spurs-james-to-rockets",
+      "title": "Deadline deals send Nazr to the Spurs and Mike James to Houston",
+      "eventDate": "2005-02-24",
+      "teams": [
+        "nyk",
+        "sas",
+        "hou",
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Trade roundup: Knicks' Thomas swings two deals",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=1998814",
+        "publishedAt": "2005-02-24"
+      }
+    },
+    {
+      "id": "gilbert-buys-cavs",
+      "title": "Dan Gilbert takes over the Cavaliers",
+      "eventDate": "2005-02-28",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Detroit businessman to assume team control",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2002122",
+        "publishedAt": "2005-03-01"
+      }
+    },
+    {
+      "id": "francis-kicks-cameraman",
+      "title": "Steve Francis suspended for kicking a cameraman",
+      "eventDate": "2005-03-19",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Magic G Francis suspended for kicking cameraman",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/wire/_/section/nba/id/2017257",
+        "publishedAt": "2005-03-19"
+      }
+    },
+    {
+      "id": "grant-hill-comeback",
+      "title": "Grant Hill's comeback season",
+      "eventDate": "2005-04-01",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hill played in 67 games -- most since '99-'00",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2033003",
+        "publishedAt": "2005-04-08"
+      }
+    },
+    {
+      "id": "hawks-13-69",
+      "title": "Hawks bottom out at 13-69",
+      "eventDate": "2005-04-20",
+      "teams": [
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Season Recap 2004-05",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/hawks/news/season_recap_2004-05.html",
+        "publishedAt": "2005-04-27"
+      }
+    },
+    {
+      "id": "walker-suspended-pacers-celtics",
+      "title": "Walker suspended as Pacers-Celtics turns nasty",
+      "eventDate": "2005-04-29",
+      "teams": [
+        "bos",
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "No tears for 'Toine",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050429",
+        "publishedAt": "2005-04-29"
+      }
+    },
+    {
+      "id": "kwame-brown-suspended",
+      "title": "Wizards suspend Kwame Brown in the playoffs",
+      "eventDate": "2005-04-30",
+      "teams": [
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jordan unsure of Brown's status for rest of series",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/news/story?id=2051938",
+        "publishedAt": "2005-05-03"
+      }
+    },
+    {
+      "id": "heat-sweep-nets",
+      "title": "Heat sweep the Nets in Round 1",
+      "eventDate": "2005-05-01",
+      "teams": [
+        "mia",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kidd's long summer",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050501",
+        "publishedAt": "2005-05-01"
+      }
+    },
+    {
+      "id": "suns-sweep-grizzlies",
+      "title": "Suns sweep the Grizzlies as Bonzi Wells is benched",
+      "eventDate": "2005-05-01",
+      "teams": [
+        "mem",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wells played sparingly in the series",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/news/story?id=2051341",
+        "publishedAt": "2005-05-02"
+      }
+    },
+    {
+      "id": "spurs-oust-nuggets",
+      "title": "Spurs end Denver's surge in Round 1",
+      "eventDate": "2005-05-02",
+      "teams": [
+        "sas",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs' primal fear pays off",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050502",
+        "publishedAt": "2005-05-02"
+      }
+    },
+    {
+      "id": "pistons-oust-sixers",
+      "title": "Pistons beat Iverson's Sixers in five",
+      "eventDate": "2005-05-03",
+      "teams": [
+        "det",
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Iverson schools, Webber learns",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050503",
+        "publishedAt": "2005-05-03"
+      }
+    },
+    {
+      "id": "sonics-oust-kings",
+      "title": "Sonics knock out the Kings in five",
+      "eventDate": "2005-05-03",
+      "teams": [
+        "okc",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings coach Adelman fed up with flopping Sonics",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=2050817",
+        "publishedAt": "2005-04-30"
+      }
+    },
+    {
+      "id": "okafor-rookie-of-year",
+      "title": "Emeka Okafor wins Rookie of the Year",
+      "eventDate": "2005-05-04",
+      "teams": [
+        "cha",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "College try: Okafor is Rookie of the Year",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2053181",
+        "publishedAt": "2005-05-04"
+      }
+    },
+    {
+      "id": "melo-second-half-surge",
+      "title": "Carmelo's second-half resurgence under Karl",
+      "eventDate": "2005-05-04",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Melo's new groove",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050504",
+        "publishedAt": "2005-05-04"
+      }
+    },
+    {
+      "id": "all-rookie-team",
+      "title": "Okafor, Howard and Gordon lead the rookie class",
+      "eventDate": "2005-05-05",
+      "teams": [
+        "cha",
+        "orl",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Okafor, Howard, Gordon unanimous All-Rookie selections",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2054120",
+        "publishedAt": "2005-05-05"
+      }
+    },
+    {
+      "id": "wizards-first-series-win",
+      "title": "Wizards win their first playoff series since 1982",
+      "eventDate": "2005-05-06",
+      "teams": [
+        "was",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Careful what you Wiz for",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050506",
+        "publishedAt": "2005-05-06"
+      }
+    },
+    {
+      "id": "mavs-win-game-7-houston",
+      "title": "Mavs rout the Rockets in Game 7",
+      "eventDate": "2005-05-07",
+      "teams": [
+        "dal",
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Taking the long way to Phoenix",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050507",
+        "publishedAt": "2005-05-07"
+      }
+    },
+    {
+      "id": "nash-wins-mvp",
+      "title": "Steve Nash wins MVP",
+      "eventDate": "2005-05-08",
+      "teams": [
+        "phx"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Nash fourth point guard to win MVP",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/columns/story?id=2054677",
+        "publishedAt": "2005-07-05"
+      }
+    },
+    {
+      "id": "dantoni-coach-of-year",
+      "title": "Mike D'Antoni wins Coach of the Year",
+      "eventDate": "2005-05-10",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mike D'Antoni Wins 2004-05 NBA Coach of the Year Award",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/suns/news/dantoni_release_050510.html",
+        "publishedAt": "2005-05-10"
+      }
+    },
+    {
+      "id": "heat-sweep-wizards",
+      "title": "Wade's 42 completes a sweep of the Wizards",
+      "eventDate": "2005-05-14",
+      "teams": [
+        "mia",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Wade's Mt. Rushmore moment",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050514",
+        "publishedAt": "2005-05-14"
+      }
+    },
+    {
+      "id": "spurs-oust-sonics",
+      "title": "Duncan's late basket ends the Sonics' season",
+      "eventDate": "2005-05-19",
+      "teams": [
+        "sas",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs' new go-to guy",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050519",
+        "publishedAt": "2005-05-19"
+      }
+    },
+    {
+      "id": "reggie-miller-final-game",
+      "title": "Reggie Miller's last game as Pistons advance",
+      "eventDate": "2005-05-19",
+      "teams": [
+        "ind",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "18-year veteran's success manifests in successor",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/columns/story?id=2064351",
+        "publishedAt": "2005-05-20"
+      }
+    },
+    {
+      "id": "reggie-miller-retires",
+      "title": "Reggie Miller retires after 18 seasons",
+      "eventDate": "2005-05-19",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Reggie Miller retires as king of NBA dramatics",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/dickvitale/vcolumn050520-ReggieMiller.html",
+        "publishedAt": "2005-05-20"
+      }
+    },
+    {
+      "id": "suns-oust-mavs",
+      "title": "Nash's Suns knock out his old team",
+      "eventDate": "2005-05-20",
+      "teams": [
+        "phx",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "MVP takes high road in Big D",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050520",
+        "publishedAt": "2005-05-20"
+      }
+    },
+    {
+      "id": "obrien-fired-cheeks-hired",
+      "title": "Sixers fire Jim O'Brien, hire Maurice Cheeks",
+      "eventDate": "2005-05-23",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "One and done: 76ers fire O'Brien, hire Cheeks",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2066717",
+        "publishedAt": "2005-05-23"
+      }
+    },
+    {
+      "id": "cavs-hire-mike-brown",
+      "title": "Cavaliers hire Mike Brown",
+      "eventDate": "2005-05-30",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers' Mike Brown agrees to coach Cavs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=2071943",
+        "publishedAt": "2005-05-30"
+      }
+    },
+    {
+      "id": "larry-brown-cavs-talks",
+      "title": "Larry Brown's talks with the Cavs shadow the Pistons",
+      "eventDate": "2005-05-31",
+      "teams": [
+        "det",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Next Cavs president? Brown plans to take job",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2072213",
+        "publishedAt": "2005-05-31"
+      }
+    },
+    {
+      "id": "spurs-beat-suns-west-finals",
+      "title": "Spurs end the Suns' run in the West finals",
+      "eventDate": "2005-06-01",
+      "teams": [
+        "sas",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs stop run-and-gun Suns, with one exception",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=2074005",
+        "publishedAt": "2005-06-01"
+      }
+    },
+    {
+      "id": "pistons-win-east-game-7",
+      "title": "Pistons win Game 7 in Miami",
+      "eventDate": "2005-06-06",
+      "teams": [
+        "det",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rip: \"That's what we do!\"",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/dailydime?page=dailydime-050606",
+        "publishedAt": "2005-06-06"
+      }
+    },
+    {
+      "id": "phil-jackson-returns",
+      "title": "Phil Jackson returns to the Lakers",
+      "eventDate": "2005-06-14",
+      "teams": [
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers Announce Hiring of Phil Jackson as Head Coach",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/lakers/news/jackson_050614.html",
+        "publishedAt": "2005-06-15"
+      }
+    },
+    {
+      "id": "spurs-win-2005-title",
+      "title": "Spurs beat the Pistons in seven for the title",
+      "eventDate": "2005-06-23",
+      "teams": [
+        "sas",
+        "det"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Duncan shows true MVP form in decisive night",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2005/columns/story?columnist=stein_marc&id=2093657",
+        "publishedAt": "2005-07-05"
+      }
+    },
+    {
+      "id": "bucks-draft-bogut",
+      "title": "Bucks draft Andrew Bogut first overall",
+      "eventDate": "2005-06-28",
+      "teams": [
+        "mil",
+        "atl",
+        "uta",
+        "por",
+        "nop",
+        "cha"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Post-draft thoughts: Wild night",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/dickvitale/vcolumn050628-NBApostdraft.html",
+        "publishedAt": "2005-06-28"
+      }
+    }
+  ]
+}
