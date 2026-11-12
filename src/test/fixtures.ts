@@ -127,6 +127,24 @@ export function mockReducedMotion(reduce: boolean) {
   }
 }
 
+export function mockMediaQueries(matching: string[]) {
+  const original = window.matchMedia
+  window.matchMedia = (query: string) =>
+    ({
+      matches: matching.includes(query),
+      media: query,
+      onchange: null,
+      addListener: () => {},
+      removeListener: () => {},
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      dispatchEvent: () => false,
+    }) as MediaQueryList
+  return () => {
+    window.matchMedia = original
+  }
+}
+
 const storyline = (id: string, eventDate: string, teams: Team[], featured: boolean): Storyline => ({
   id, title: `${id} title`, eventDate, teams, featured,
   article: { headline: `${id} headline`, publisher: 'ESPN', url: `https://www.espn.com/nba/story/${id}`, publishedAt: eventDate },

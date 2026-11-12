@@ -8,7 +8,7 @@ import {
   within,
 } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { mockReducedMotion } from 'test/fixtures'
+import { mockMediaQueries } from 'test/fixtures'
 import { renderWithRouter } from 'test/renderWithRouter'
 
 // Fixture seasons: 26 weeks, 21 weeks, one short enough to fit the window (from ESPN), and two with rank swings
@@ -89,7 +89,10 @@ const weekTickCount = (container: HTMLElement) =>
 let restoreMotion: () => void
 
 beforeEach(() => {
-  restoreMotion = mockReducedMotion(true)
+  restoreMotion = mockMediaQueries([
+    '(prefers-reduced-motion: reduce)',
+    '(min-width: 640px)',
+  ])
 })
 
 afterEach(() => {
@@ -453,7 +456,7 @@ describe('Data source badges', () => {
       'Source: NBA.com',
       'Source: NBA.com',
     ])
-    expect(screen.getAllByText('AI-generated summary')).toHaveLength(1)
+    expect(screen.queryAllByText('AI-generated summary')).toHaveLength(0)
   })
 })
 
@@ -601,7 +604,7 @@ describe('Team history addresses', () => {
     await openTeamHistory(user)
     expect(path(router)).toBe('/teamHistory/bos')
 
-    await user.click(screen.getByRole('heading', { name: 'mid' }))
+    await user.click(screen.getByRole('link', { name: 'View mid chart' }))
     await findChart()
     expect(path(router)).toBe('/mid')
     fireEvent.mouseLeave(chart())
@@ -614,12 +617,12 @@ describe('Team history addresses', () => {
     expect(path(router)).toBe('/teamHistory/bos')
   })
 
-  it('pins the team when a card is opened from a shared history link', async () => {
+  it('pins the team when a season chart is opened from a shared history link', async () => {
     const user = userEvent.setup()
     await renderWithRouter(['/teamHistory/mia'])
     await settle()
 
-    await user.click(screen.getByRole('heading', { name: 'long' }))
+    await user.click(screen.getByRole('link', { name: 'View long chart' }))
     await findChart()
     fireEvent.mouseLeave(chart())
     expect(miamiLabel()).toHaveAttribute('font-weight', '700')

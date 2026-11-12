@@ -37,7 +37,6 @@ export default function StorylineList(props: StorylineListProps) {
             href={storyline.article.url}
             target="_blank"
             rel="noreferrer"
-            onClick={(event) => event.stopPropagation()}
             className="cursor-pointer text-foreground-soft hover:underline"
           >
             {storyline.article.headline}
