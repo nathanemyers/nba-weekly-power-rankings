@@ -1,0 +1,1326 @@
+{
+  "season": "2005-06",
+  "finalizedAt": "2026-11-12",
+  "storylines": [
+    {
+      "id": "ray-allen-extension",
+      "title": "Ray Allen re-signs with the Sonics",
+      "eventDate": "2005-07-05",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Agent: SuperSonics, Ray Allen agree to $85 million deal.",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/wire/_/section/nba/id/2100822",
+        "publishedAt": "2005-07-05"
+      }
+    },
+    {
+      "id": "mcmillan-to-blazers",
+      "title": "Nate McMillan leaves Seattle for Portland",
+      "eventDate": "2005-07-07",
+      "teams": [
+        "por",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Blazing a new trail: McMillan takes Portland job",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2101994",
+        "publishedAt": "2005-07-07"
+      }
+    },
+    {
+      "id": "saunders-to-pistons",
+      "title": "Pistons replace Larry Brown with Flip Saunders",
+      "eventDate": "2005-07-21",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Flip doesn't feel pressure in taking over Pistons",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2113217",
+        "publishedAt": "2005-07-21"
+      }
+    },
+    {
+      "id": "larry-brown-to-knicks",
+      "title": "Knicks hire Larry Brown",
+      "eventDate": "2005-07-28",
+      "teams": [
+        "nyk",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks get their man as Larry Brown era begins",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/dickvitale/vcolumn050728-LarryBrown.html",
+        "publishedAt": "2005-07-28"
+      }
+    },
+    {
+      "id": "heat-mega-trade",
+      "title": "Five-team, 13-player trade sends Walker, Williams and Posey to Miami",
+      "eventDate": "2005-08-02",
+      "teams": [
+        "mia",
+        "bos",
+        "mem",
+        "uta",
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat take big gambles with Shaq savings",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/columns/story?columnist=stein_marc&id=2123211",
+        "publishedAt": "2005-08-03"
+      }
+    },
+    {
+      "id": "butler-to-wizards",
+      "title": "Wizards trade Kwame Brown to the Lakers for Caron Butler",
+      "eventDate": "2005-08-02",
+      "teams": [
+        "was",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Lakers Acquire Brown and Profit in Exchange For Butler and Atkins",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/lakers/news/brown_trade_050802.html",
+        "publishedAt": "2005-08-02"
+      }
+    },
+    {
+      "id": "joe-johnson-to-hawks",
+      "title": "Suns trade Joe Johnson to Atlanta for Boris Diaw",
+      "eventDate": "2005-08-19",
+      "teams": [
+        "atl",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Johnson Trade to Atlanta Completed",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/suns/news/johnson_traded_050819.html",
+        "publishedAt": "2005-08-19"
+      }
+    },
+    {
+      "id": "hornets-to-oklahoma-city",
+      "title": "Hurricane Katrina sends the Hornets to Oklahoma City",
+      "eventDate": "2005-09-20",
+      "teams": [
+        "nop"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Hornets tentatively agree to play in Oklahoma City",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2165840",
+        "publishedAt": "2005-09-20"
+      }
+    },
+    {
+      "id": "curry-to-knicks",
+      "title": "Bulls trade Eddy Curry to the Knicks after a DNA test dispute",
+      "eventDate": "2005-10-03",
+      "teams": [
+        "nyk",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bulls deal Curry to Knicks after DNA test refusal",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2181113",
+        "publishedAt": "2005-10-03"
+      }
+    },
+    {
+      "id": "dress-code",
+      "title": "NBA adopts a business-casual dress code",
+      "eventDate": "2005-10-17",
+      "teams": [],
+      "featured": true,
+      "article": {
+        "headline": "NBA adopts 'business casual' dress code",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2194537",
+        "publishedAt": "2005-10-17"
+      }
+    },
+    {
+      "id": "tj-ford-returns",
+      "title": "T.J. Ford returns from his spinal injury",
+      "eventDate": "2005-11-01",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "WHEN T.J. FORD WONDERED IF HE'D EVER PLAY AGAIN, HE WENT HOME TO THE ONLY PEOPLE WHO NEVER DOUBTED HE WOULD",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/magazine/archives/news/story?page=magazine-20051205-article34",
+        "publishedAt": "2005-12-05"
+      }
+    },
+    {
+      "id": "knicks-brown-debut",
+      "title": "Larry Brown's Knicks open with an overtime loss in Boston",
+      "eventDate": "2005-11-02",
+      "teams": [
+        "nyk",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Now hear dis: Knicks knocked",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-051103",
+        "publishedAt": "2005-11-03"
+      }
+    },
+    {
+      "id": "cassell-fits-clippers",
+      "title": "Sam Cassell transforms the Clippers",
+      "eventDate": "2005-11-08",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "How Cassell Fits Clips",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-051108",
+        "publishedAt": "2005-11-08"
+      }
+    },
+    {
+      "id": "redd-max-bucks-start",
+      "title": "Redd signs a max deal and the rebuilt Bucks start 4-1",
+      "eventDate": "2005-11-15",
+      "teams": [
+        "mil"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Redd's cred keeps rising",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-051115",
+        "publishedAt": "2005-11-15"
+      }
+    },
+    {
+      "id": "magic-defense-streak",
+      "title": "Defense-first Magic win four straight",
+      "eventDate": "2005-11-28",
+      "teams": [
+        "orl",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Four straight wins? It's Magic",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-051129",
+        "publishedAt": "2005-11-29"
+      }
+    },
+    {
+      "id": "spurs-handle-heat",
+      "title": "Duncan and the Spurs handle the Shaq-less Heat",
+      "eventDate": "2005-12-07",
+      "teams": [
+        "sas",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Spurs shine; Shaq watches",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-051208",
+        "publishedAt": "2005-12-08"
+      }
+    },
+    {
+      "id": "riley-replaces-van-gundy",
+      "title": "Pat Riley replaces Stan Van Gundy",
+      "eventDate": "2005-12-12",
+      "teams": [
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Heat coach Van Gundy resigns; Riley returns",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2256435",
+        "publishedAt": "2005-12-12"
+      }
+    },
+    {
+      "id": "grant-hill-returns",
+      "title": "Grant Hill returns from a sports hernia",
+      "eventDate": "2005-12-14",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "A run-of-the-Hill return",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-051215",
+        "publishedAt": "2005-12-15"
+      }
+    },
+    {
+      "id": "brand-mvp-case",
+      "title": "Elton Brand's MVP-caliber start",
+      "eventDate": "2005-12-20",
+      "teams": [
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Choosing the leading Brand",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-051220",
+        "publishedAt": "2005-12-20"
+      }
+    },
+    {
+      "id": "kobe-62-in-three",
+      "title": "Kobe scores 62 in three quarters against Dallas",
+      "eventDate": "2005-12-20",
+      "teams": [
+        "lal",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The quarter left on the table",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-051222",
+        "publishedAt": "2005-12-22"
+      }
+    },
+    {
+      "id": "nets-seven-straight",
+      "title": "Nets win seven straight, beating LeBron at home",
+      "eventDate": "2005-12-27",
+      "teams": [
+        "bkn",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nets beat the LeBrons for No. 7",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-051228",
+        "publishedAt": "2005-12-28"
+      }
+    },
+    {
+      "id": "bob-hill-to-sonics",
+      "title": "Sonics replace Bob Weiss with Bob Hill",
+      "eventDate": "2006-01-03",
+      "teams": [
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hill aims for a Sonic bloom",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060105",
+        "publishedAt": "2006-01-05"
+      }
+    },
+    {
+      "id": "pacers-after-artest",
+      "title": "Pacers struggle after Artest demands out",
+      "eventDate": "2006-01-06",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "After Ron, a transition game",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060106",
+        "publishedAt": "2006-01-06"
+      }
+    },
+    {
+      "id": "mcgrady-back-spasms",
+      "title": "Tracy McGrady carted off with back spasms while Yao is out",
+      "eventDate": "2006-01-08",
+      "teams": [
+        "hou"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "McGrady taken to hospital with severe back spasms",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2285167",
+        "publishedAt": "2006-01-08"
+      }
+    },
+    {
+      "id": "unsung-coaches",
+      "title": "Stotts, Casey, Scott and Frank win out of the spotlight",
+      "eventDate": "2006-01-10",
+      "teams": [
+        "mil",
+        "min",
+        "nop",
+        "bkn",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Making a name for themselves",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060110",
+        "publishedAt": "2006-01-10"
+      }
+    },
+    {
+      "id": "artest-trade-saga",
+      "title": "Artest demands a trade and sits for a month",
+      "eventDate": "2006-01-11",
+      "teams": [
+        "ind",
+        "gsw",
+        "lac",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Life on the Ron, Day 32",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060111",
+        "publishedAt": "2006-01-11"
+      }
+    },
+    {
+      "id": "webber-returns-to-sacramento",
+      "title": "Webber and the Sixers a year after his trade from Sacramento",
+      "eventDate": "2006-01-12",
+      "teams": [
+        "phi",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "An exiled King's return",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060104",
+        "publishedAt": "2006-01-12"
+      }
+    },
+    {
+      "id": "shaq-kobe-reunion",
+      "title": "Shaq and Kobe reunite as the Lakers beat Miami",
+      "eventDate": "2006-01-16",
+      "teams": [
+        "lal",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The untold LA story",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060117",
+        "publishedAt": "2006-01-17"
+      }
+    },
+    {
+      "id": "kobe-odom-friction",
+      "title": "Kobe and Odom out of sync",
+      "eventDate": "2006-01-19",
+      "teams": [
+        "lal",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bryant, Odom seem out of sync",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060120",
+        "publishedAt": "2006-01-20"
+      }
+    },
+    {
+      "id": "kobe-81",
+      "title": "Kobe Bryant scores 81 against Toronto",
+      "eventDate": "2006-01-22",
+      "teams": [
+        "lal",
+        "tor"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Kobe makes records wilt",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060123",
+        "publishedAt": "2006-01-23"
+      }
+    },
+    {
+      "id": "artest-for-peja",
+      "title": "Pacers trade Ron Artest to Sacramento for Peja Stojakovic",
+      "eventDate": "2006-01-25",
+      "teams": [
+        "ind",
+        "sac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pacers: Artest-for-Peja deal finally done",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2304942",
+        "publishedAt": "2006-01-25"
+      }
+    },
+    {
+      "id": "davis-for-szczerbiak",
+      "title": "Celtics and Timberwolves swap Ricky Davis and Wally Szczerbiak",
+      "eventDate": "2006-01-26",
+      "teams": [
+        "bos",
+        "min"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Szczerbiak, Davis change teams in seven-player trade",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=2307791",
+        "publishedAt": "2006-01-26"
+      }
+    },
+    {
+      "id": "babcock-fired",
+      "title": "Last-place Raptors fire Rob Babcock",
+      "eventDate": "2006-01-26",
+      "teams": [
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Last-place Raptors fire general manager",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2307240",
+        "publishedAt": "2006-01-26"
+      }
+    },
+    {
+      "id": "artest-kings-debut",
+      "title": "Artest wins his Sacramento home debut",
+      "eventDate": "2006-01-31",
+      "teams": [
+        "sac",
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hail, King Ron-Ron",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060201",
+        "publishedAt": "2006-02-01"
+      }
+    },
+    {
+      "id": "boozer-hamstring",
+      "title": "Carlos Boozer sidelined by hamstring tears",
+      "eventDate": "2006-02-04",
+      "teams": [
+        "uta"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Boozer: 'It's been agonizing'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060204-05",
+        "publishedAt": "2006-02-04"
+      }
+    },
+    {
+      "id": "all-star-reserves",
+      "title": "Four Pistons, Pau Gasol and Tony Parker named All-Star reserves",
+      "eventDate": "2006-02-09",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Four Pistons Named as Reserves for 2006 NBA All-Star Game",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/pistons/news/allstar_reserves_060209.html",
+        "publishedAt": "2006-02-09"
+      }
+    },
+    {
+      "id": "west-buzzer-avery-praise",
+      "title": "David West's buzzer-beater; Avery's Mavs chase the Spurs",
+      "eventDate": "2006-02-13",
+      "teams": [
+        "nop",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Very good 'General' impression",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060214",
+        "publishedAt": "2006-02-14"
+      }
+    },
+    {
+      "id": "darko-to-magic",
+      "title": "Pistons trade Darko Milicic to Orlando",
+      "eventDate": "2006-02-15",
+      "teams": [
+        "det",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Pistons get Cato, first-round pick for Darko, Arroyo",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2332021",
+        "publishedAt": "2006-02-15"
+      }
+    },
+    {
+      "id": "lebron-all-star-mvp",
+      "title": "LeBron becomes the youngest All-Star MVP",
+      "eventDate": "2006-02-19",
+      "teams": [
+        "cle",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "LeBron and Pistons lead East to All-Star game win",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/allstar2006/news/story?id=2335852",
+        "publishedAt": "2006-02-19"
+      }
+    },
+    {
+      "id": "francis-to-knicks",
+      "title": "Magic trade Steve Francis to the Knicks",
+      "eventDate": "2006-02-22",
+      "teams": [
+        "nyk",
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Francis dealt to Knicks for Penny, Ariza",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/print?id=2339941",
+        "publishedAt": "2006-02-22"
+      }
+    },
+    {
+      "id": "colangelo-to-raptors",
+      "title": "Raptors hire Bryan Colangelo",
+      "eventDate": "2006-02-28",
+      "teams": [
+        "tor",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Colangelo Named Raptors President and General Manager",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/raptors/news/pressrelease_colangelo_060228.html",
+        "publishedAt": "2006-02-28"
+      }
+    },
+    {
+      "id": "suns-front-office",
+      "title": "Colangelo leaves and D'Antoni gains power in Phoenix",
+      "eventDate": "2006-03-01",
+      "teams": [
+        "phx",
+        "tor"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Why Sun resembles Pop",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060301",
+        "publishedAt": "2006-03-01"
+      }
+    },
+    {
+      "id": "nuggets-add-forwards",
+      "title": "Nuggets add Ruben Patterson and Reggie Evans at the deadline",
+      "eventDate": "2006-03-07",
+      "teams": [
+        "den",
+        "por",
+        "okc"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Forward progress for Nuggets",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060307",
+        "publishedAt": "2006-03-07"
+      }
+    },
+    {
+      "id": "webber-montgomery-hot-seat",
+      "title": "Webber on Iverson; Montgomery's job in doubt as the Warriors slide",
+      "eventDate": "2006-03-08",
+      "teams": [
+        "phi",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "On the ball with C-Webb",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060308",
+        "publishedAt": "2006-03-08"
+      }
+    },
+    {
+      "id": "magic-rebuild",
+      "title": "Magic build around Howard and Darko",
+      "eventDate": "2006-03-14",
+      "teams": [
+        "orl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Orlando primed for growth",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060314",
+        "publishedAt": "2006-03-14"
+      }
+    },
+    {
+      "id": "cavs-fade",
+      "title": "Cavs slump without Larry Hughes",
+      "eventDate": "2006-03-15",
+      "teams": [
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Cavs' troubling fade pattern",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060315",
+        "publishedAt": "2006-03-15"
+      }
+    },
+    {
+      "id": "bucks-playoff-push",
+      "title": "Bucks push toward the playoffs",
+      "eventDate": "2006-03-15",
+      "teams": [
+        "mil",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bucks pushing toward playoffs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060316",
+        "publishedAt": "2006-03-16"
+      }
+    },
+    {
+      "id": "lakers-celtics-rivalry",
+      "title": "Lakers-Celtics rivalry at a low ebb",
+      "eventDate": "2006-03-20",
+      "teams": [
+        "lal",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Deflated rivalry needs a jack",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060321",
+        "publishedAt": "2006-03-21"
+      }
+    },
+    {
+      "id": "mcgrady-out-yao-smothered",
+      "title": "T-Mac lost for the season as Dallas smothers Yao",
+      "eventDate": "2006-03-21",
+      "teams": [
+        "hou",
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "A whole smother story for Yao",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060322",
+        "publishedAt": "2006-03-22"
+      }
+    },
+    {
+      "id": "jermaine-returns",
+      "title": "Jermaine O'Neal returns from a groin injury",
+      "eventDate": "2006-03-27",
+      "teams": [
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Making a few Jermaine points",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060328",
+        "publishedAt": "2006-03-28"
+      }
+    },
+    {
+      "id": "sixers-slump",
+      "title": "Sixers slump in the race for the eighth seed",
+      "eventDate": "2006-03-29",
+      "teams": [
+        "phi",
+        "chi",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "The slouching Sixers",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060330",
+        "publishedAt": "2006-03-30"
+      }
+    },
+    {
+      "id": "morey-to-rockets",
+      "title": "Rockets hire Daryl Morey",
+      "eventDate": "2006-04-03",
+      "teams": [
+        "hou",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Rockets name Morey as assistant general manager",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2395776",
+        "publishedAt": "2006-04-03"
+      }
+    },
+    {
+      "id": "heat-shaky-nets-streak",
+      "title": "Pistons expose the Heat as the Nets win 14 straight",
+      "eventDate": "2006-04-06",
+      "teams": [
+        "mia",
+        "det",
+        "bkn"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "What were the Heat thinking?",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060407",
+        "publishedAt": "2006-04-07"
+      }
+    },
+    {
+      "id": "mvp-debate",
+      "title": "Nash, LeBron, Kobe and Wade in a crowded MVP debate",
+      "eventDate": "2006-04-11",
+      "teams": [
+        "phx",
+        "cle",
+        "lal",
+        "mia"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Let's see your valuables, sir",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060411",
+        "publishedAt": "2006-04-11"
+      }
+    },
+    {
+      "id": "sixers-playoff-push",
+      "title": "Sixers make a late playoff push",
+      "eventDate": "2006-04-12",
+      "teams": [
+        "phi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Sixers banging on playoff door",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060413",
+        "publishedAt": "2006-04-13"
+      }
+    },
+    {
+      "id": "spurs-clinch-home-court",
+      "title": "Spurs clinch home court despite Duncan and Ginobili injuries",
+      "eventDate": "2006-04-17",
+      "teams": [
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Remember the champs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060418",
+        "publishedAt": "2006-04-18"
+      }
+    },
+    {
+      "id": "avery-coach-of-year",
+      "title": "Avery Johnson named Coach of the Year",
+      "eventDate": "2006-04-25",
+      "teams": [
+        "dal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Johnson coach of year in first full Mavericks season",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2421395",
+        "publishedAt": "2006-04-25"
+      }
+    },
+    {
+      "id": "kenyon-martin-suspended",
+      "title": "Nuggets suspend Kenyon Martin mid-series after a blowup with Karl",
+      "eventDate": "2006-04-25",
+      "teams": [
+        "den"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Nuggets star forward Martin suspended indefinitely",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/playoffs2006/news/story?id=2422069",
+        "publishedAt": "2006-04-25"
+      }
+    },
+    {
+      "id": "bulls-push-heat",
+      "title": "Bulls even the series with the Heat",
+      "eventDate": "2006-04-27",
+      "teams": [
+        "chi",
+        "mia"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bad Shaq, brilliant Bulls",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060428",
+        "publishedAt": "2006-04-28"
+      }
+    },
+    {
+      "id": "miller-sixth-man",
+      "title": "Mike Miller named Sixth Man of the Year",
+      "eventDate": "2006-04-28",
+      "teams": [
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Grizzlies swingman Miller nabs Sixth Man Award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2425652",
+        "publishedAt": "2006-04-28"
+      }
+    },
+    {
+      "id": "redd-40-pistons",
+      "title": "Redd scores 40 as the Bucks fall to Detroit",
+      "eventDate": "2006-04-29",
+      "teams": [
+        "mil",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Redd rips Pistons for 40",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060430",
+        "publishedAt": "2006-04-30"
+      }
+    },
+    {
+      "id": "kobe-buzzer-kings-even",
+      "title": "Kobe's buzzer-beater puts the Lakers up 3-1; Kings even series with Spurs",
+      "eventDate": "2006-04-30",
+      "teams": [
+        "lal",
+        "sac",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Kings put squeeze on Spurs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060501",
+        "publishedAt": "2006-05-01"
+      }
+    },
+    {
+      "id": "clippers-mavs-advance",
+      "title": "Clippers win their first series since 1976; Mavs sweep Memphis",
+      "eventDate": "2006-05-01",
+      "teams": [
+        "lac",
+        "den",
+        "dal",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Clips approaching 'Hallway'",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060502",
+        "publishedAt": "2006-05-02"
+      }
+    },
+    {
+      "id": "diaw-most-improved",
+      "title": "Boris Diaw named Most Improved Player",
+      "eventDate": "2006-05-01",
+      "teams": [
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns' Diaw wins most improved player award",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story/_/id/2429294",
+        "publishedAt": "2006-05-01"
+      }
+    },
+    {
+      "id": "lebron-game-winner",
+      "title": "LeBron's overtime winner against the Wizards",
+      "eventDate": "2006-05-03",
+      "teams": [
+        "cle",
+        "was"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "How 'Bron's winner developed",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060504",
+        "publishedAt": "2006-05-04"
+      }
+    },
+    {
+      "id": "heat-beat-bulls",
+      "title": "Heat eliminate the Bulls",
+      "eventDate": "2006-05-04",
+      "teams": [
+        "mia",
+        "chi"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Bring on Game 7",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060505",
+        "publishedAt": "2006-05-05"
+      }
+    },
+    {
+      "id": "nets-beat-pacers",
+      "title": "Nets eliminate the Pacers",
+      "eventDate": "2006-05-05",
+      "teams": [
+        "bkn",
+        "ind"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "World's greatest cameo crusher",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060506",
+        "publishedAt": "2006-05-06"
+      }
+    },
+    {
+      "id": "suns-rally-past-lakers",
+      "title": "Suns come back from 3-1 down to beat the Lakers",
+      "eventDate": "2006-05-06",
+      "teams": [
+        "phx",
+        "lal"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Suns eclipse Hollywood ending",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060507",
+        "publishedAt": "2006-05-07"
+      }
+    },
+    {
+      "id": "nash-second-mvp",
+      "title": "Steve Nash wins a second straight MVP",
+      "eventDate": "2006-05-07",
+      "teams": [
+        "phx"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Steve Nash Wins Second Consecutive NBA Most Valuable Player Award",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/suns/news/mvp_release_060507.html",
+        "publishedAt": "2006-05-07"
+      }
+    },
+    {
+      "id": "wallace-dpoy",
+      "title": "Ben Wallace wins a fourth Defensive Player of the Year",
+      "eventDate": "2006-05-08",
+      "teams": [
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Detroit's Ben Wallace Wins Fourth NBA Defensive Player of the Year Award",
+        "publisher": "NBA.com",
+        "url": "https://www.nba.com/pistons/news/bwallace_dpoy_060508.html",
+        "publishedAt": "2006-05-08"
+      }
+    },
+    {
+      "id": "paul-rookie-of-year",
+      "title": "Chris Paul named Rookie of the Year",
+      "eventDate": "2006-05-10",
+      "teams": [
+        "nop"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Hornets' Paul near-unanimous Rookie of Year choice",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2439979",
+        "publishedAt": "2006-05-10"
+      }
+    },
+    {
+      "id": "suns-clippers-double-ot",
+      "title": "Suns edge the Clippers in double overtime",
+      "eventDate": "2006-05-16",
+      "teams": [
+        "phx",
+        "lac"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Extra credit: Suns win in 2 OTs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060517",
+        "publishedAt": "2006-05-17"
+      }
+    },
+    {
+      "id": "pistons-beat-cavs",
+      "title": "Pistons hold off LeBron in Game 7",
+      "eventDate": "2006-05-21",
+      "teams": [
+        "det",
+        "cle"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Detroit defense deflates LeBron",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060522",
+        "publishedAt": "2006-05-22"
+      }
+    },
+    {
+      "id": "mavs-beat-spurs-game-7",
+      "title": "Mavericks beat the Spurs in overtime of Game 7",
+      "eventDate": "2006-05-22",
+      "teams": [
+        "dal",
+        "sas"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavs love that Dirk-y water",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060523",
+        "publishedAt": "2006-05-23"
+      }
+    },
+    {
+      "id": "raptors-win-lottery",
+      "title": "Raptors jump to No. 1 in the lottery",
+      "eventDate": "2006-05-23",
+      "teams": [
+        "tor",
+        "chi",
+        "nyk",
+        "cha",
+        "por"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Jurassic start: Raptors claim No. 1 pick in NBA draft",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2006/news/story?id=2455735",
+        "publishedAt": "2006-05-23"
+      }
+    },
+    {
+      "id": "heat-beat-pistons",
+      "title": "Heat beat the 64-win Pistons in the East finals",
+      "eventDate": "2006-06-02",
+      "teams": [
+        "mia",
+        "det"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Finally, the Heat",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060603",
+        "publishedAt": "2006-06-03"
+      }
+    },
+    {
+      "id": "mavs-beat-suns",
+      "title": "Mavericks beat the Suns to reach their first Finals",
+      "eventDate": "2006-06-03",
+      "teams": [
+        "dal",
+        "phx"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Mavs mere novelty no more",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060604",
+        "publishedAt": "2006-06-04"
+      }
+    },
+    {
+      "id": "jordan-buys-into-bobcats",
+      "title": "Michael Jordan becomes part-owner of the Bobcats",
+      "eventDate": "2006-06-15",
+      "teams": [
+        "cha"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Jordan becomes part-owner of Bobcats",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2486172",
+        "publishedAt": "2006-06-15"
+      }
+    },
+    {
+      "id": "heat-win-title",
+      "title": "Heat win their first title",
+      "eventDate": "2006-06-20",
+      "teams": [
+        "mia",
+        "dal"
+      ],
+      "featured": true,
+      "article": {
+        "headline": "Great motives elevate champs",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/dailydime?page=dailydime-060621",
+        "publishedAt": "2006-06-21"
+      }
+    },
+    {
+      "id": "larry-brown-fired",
+      "title": "Knicks fire Larry Brown; Isiah takes over",
+      "eventDate": "2006-06-22",
+      "teams": [
+        "nyk"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Knicks fire Brown, name Thomas new coach",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/news/story?id=2496106",
+        "publishedAt": "2006-06-22"
+      }
+    },
+    {
+      "id": "blazers-draft-night",
+      "title": "Blazers land Aldridge and Roy in a flurry of draft-night trades",
+      "eventDate": "2006-06-28",
+      "teams": [
+        "por",
+        "chi",
+        "min",
+        "bos"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Draft trade roundup: Blazers keep dealing",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/nba/draft2006/news/story?id=2503390",
+        "publishedAt": "2006-06-28"
+      }
+    },
+    {
+      "id": "gay-for-battier",
+      "title": "Rockets agree to send Rudy Gay's rights to Memphis for Shane Battier",
+      "eventDate": "2006-06-28",
+      "teams": [
+        "hou",
+        "mem"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA draft night trades",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/nbadrafttrades062806.html",
+        "publishedAt": "2006-06-29"
+      }
+    },
+    {
+      "id": "draft-report-card",
+      "title": "Bobcats take Adam Morrison No. 3; Hawks take Shelden Williams No. 5",
+      "eventDate": "2006-06-28",
+      "teams": [
+        "cha",
+        "atl",
+        "tor",
+        "uta",
+        "gsw"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Draft report card",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/news/draft-report-card-065900509--nba.html",
+        "publishedAt": "2006-06-30"
+      }
+    }
+  ]
+}

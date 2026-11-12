@@ -1,6 +1,6 @@
 {
   "season": "2005-06",
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-12",
   "guidance": [
     {
       "id": "retro-heat-title",
@@ -724,7 +724,7 @@
       "guidance": [
         "weekly-okc"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mcmillan-to-blazers",
@@ -748,7 +748,7 @@
         "weekly-por",
         "weekly-okc"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "saunders-to-pistons",
@@ -771,7 +771,7 @@
         "retro-pistons-64",
         "weekly-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "larry-brown-to-knicks",
@@ -795,7 +795,7 @@
         "theme-coaching-changes",
         "weekly-nyk"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "heat-mega-trade",
@@ -808,7 +808,7 @@
         "uta",
         "nop"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Heat take big gambles with Shaq savings",
         "publisher": "ESPN",
@@ -816,12 +816,12 @@
         "publishedAt": "2005-08-03"
       },
       "kind": "trade",
-      "blockbuster": true,
+      "blockbuster": false,
       "guidance": [
         "retro-heat-mega-trade",
         "weekly-mia"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "butler-to-wizards",
@@ -844,7 +844,7 @@
         "weekly-was",
         "weekly-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "joe-johnson-to-hawks",
@@ -867,7 +867,7 @@
         "weekly-atl",
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "hornets-to-oklahoma-city",
@@ -889,7 +889,7 @@
         "retro-katrina",
         "weekly-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "curry-to-knicks",
@@ -912,7 +912,7 @@
         "weekly-nyk",
         "weekly-chi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "dress-code",
@@ -931,7 +931,7 @@
       "guidance": [
         "retro-dress-code"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "tj-ford-returns",
@@ -952,7 +952,7 @@
       "guidance": [
         "weekly-mil"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "knicks-brown-debut",
@@ -975,15 +975,14 @@
         "retro-larry-brown-knicks",
         "weekly-nyk"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "cassell-fits-clippers",
       "title": "Sam Cassell transforms the Clippers",
       "eventDate": "2005-11-08",
       "teams": [
-        "lac",
-        "min"
+        "lac"
       ],
       "featured": false,
       "article": {
@@ -997,15 +996,14 @@
       "guidance": [
         "weekly-lac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "redd-max-bucks-start",
       "title": "Redd signs a max deal and the rebuilt Bucks start 4-1",
       "eventDate": "2005-11-15",
       "teams": [
-        "mil",
-        "was"
+        "mil"
       ],
       "featured": false,
       "article": {
@@ -1019,7 +1017,7 @@
       "guidance": [
         "weekly-mil"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "magic-defense-streak",
@@ -1041,7 +1039,7 @@
       "guidance": [
         "weekly-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "spurs-handle-heat",
@@ -1063,7 +1061,7 @@
       "guidance": [
         "weekly-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "riley-replaces-van-gundy",
@@ -1086,15 +1084,14 @@
         "theme-coaching-changes",
         "weekly-mia"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "grant-hill-returns",
       "title": "Grant Hill returns from a sports hernia",
       "eventDate": "2005-12-14",
       "teams": [
-        "orl",
-        "nyk"
+        "orl"
       ],
       "featured": false,
       "article": {
@@ -1108,7 +1105,7 @@
       "guidance": [
         "weekly-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "brand-mvp-case",
@@ -1129,7 +1126,7 @@
       "guidance": [
         "weekly-lac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kobe-62-in-three",
@@ -1152,7 +1149,7 @@
         "retro-kobe-81",
         "weekly-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nets-seven-straight",
@@ -1174,7 +1171,7 @@
       "guidance": [
         "weekly-bkn"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bob-hill-to-sonics",
@@ -1196,7 +1193,7 @@
         "theme-coaching-changes",
         "weekly-okc"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "pacers-after-artest",
@@ -1218,7 +1215,7 @@
         "retro-artest-trade",
         "weekly-ind"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mcgrady-back-spasms",
@@ -1239,7 +1236,7 @@
       "guidance": [
         "weekly-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "unsung-coaches",
@@ -1265,7 +1262,7 @@
         "weekly-mil",
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "artest-trade-saga",
@@ -1291,7 +1288,7 @@
         "weekly-ind",
         "weekly-gsw"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "webber-returns-to-sacramento",
@@ -1314,7 +1311,7 @@
         "weekly-phi",
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "shaq-kobe-reunion",
@@ -1337,7 +1334,7 @@
         "weekly-lal",
         "weekly-mia"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kobe-odom-friction",
@@ -1359,7 +1356,7 @@
       "guidance": [
         "weekly-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kobe-81",
@@ -1383,7 +1380,7 @@
         "weekly-lal",
         "weekly-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "artest-for-peja",
@@ -1393,7 +1390,7 @@
         "ind",
         "sac"
       ],
-      "featured": true,
+      "featured": false,
       "article": {
         "headline": "Pacers: Artest-for-Peja deal finally done",
         "publisher": "ESPN",
@@ -1401,13 +1398,13 @@
         "publishedAt": "2006-01-25"
       },
       "kind": "trade",
-      "blockbuster": true,
+      "blockbuster": false,
       "guidance": [
         "retro-artest-trade",
         "weekly-ind",
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "davis-for-szczerbiak",
@@ -1431,7 +1428,7 @@
         "weekly-bos",
         "weekly-min"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "babcock-fired",
@@ -1453,7 +1450,7 @@
         "theme-coaching-changes",
         "weekly-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "artest-kings-debut",
@@ -1476,7 +1473,7 @@
         "retro-artest-trade",
         "weekly-sac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "boozer-hamstring",
@@ -1497,16 +1494,14 @@
       "guidance": [
         "weekly-uta"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "all-star-reserves",
       "title": "Four Pistons, Pau Gasol and Tony Parker named All-Star reserves",
       "eventDate": "2006-02-09",
       "teams": [
-        "det",
-        "mem",
-        "sas"
+        "det"
       ],
       "featured": false,
       "article": {
@@ -1521,7 +1516,7 @@
         "weekly-mem",
         "weekly-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "west-buzzer-avery-praise",
@@ -1544,7 +1539,7 @@
         "weekly-nop",
         "weekly-dal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "darko-to-magic",
@@ -1568,7 +1563,7 @@
         "weekly-det",
         "weekly-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lebron-all-star-mvp",
@@ -1590,7 +1585,7 @@
       "guidance": [
         "weekly-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "francis-to-knicks",
@@ -1614,7 +1609,7 @@
         "weekly-nyk",
         "weekly-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "colangelo-to-raptors",
@@ -1637,7 +1632,7 @@
         "theme-coaching-changes",
         "weekly-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "suns-front-office",
@@ -1659,7 +1654,7 @@
       "guidance": [
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nuggets-add-forwards",
@@ -1683,7 +1678,7 @@
         "theme-trade-deadline",
         "weekly-den"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "webber-montgomery-hot-seat",
@@ -1706,7 +1701,7 @@
         "weekly-phi",
         "weekly-gsw"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "magic-rebuild",
@@ -1727,7 +1722,7 @@
       "guidance": [
         "weekly-orl"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "cavs-fade",
@@ -1748,7 +1743,7 @@
       "guidance": [
         "weekly-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bucks-playoff-push",
@@ -1770,7 +1765,7 @@
       "guidance": [
         "weekly-mil"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lakers-celtics-rivalry",
@@ -1792,7 +1787,7 @@
       "guidance": [
         "weekly-bos"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mcgrady-out-yao-smothered",
@@ -1814,7 +1809,7 @@
       "guidance": [
         "weekly-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jermaine-returns",
@@ -1835,7 +1830,7 @@
       "guidance": [
         "weekly-ind"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "sixers-slump",
@@ -1858,7 +1853,7 @@
       "guidance": [
         "weekly-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "morey-to-rockets",
@@ -1881,7 +1876,7 @@
         "theme-coaching-changes",
         "weekly-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "heat-shaky-nets-streak",
@@ -1905,7 +1900,7 @@
         "weekly-mia",
         "weekly-bkn"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mvp-debate",
@@ -1917,7 +1912,7 @@
         "lal",
         "mia"
       ],
-      "featured": false,
+      "featured": true,
       "article": {
         "headline": "Let's see your valuables, sir",
         "publisher": "ESPN",
@@ -1929,17 +1924,14 @@
       "guidance": [
         "award-mvp"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "sixers-playoff-push",
       "title": "Sixers make a late playoff push",
       "eventDate": "2006-04-12",
       "teams": [
-        "phi",
-        "chi",
-        "atl",
-        "bkn"
+        "phi"
       ],
       "featured": false,
       "article": {
@@ -1953,7 +1945,7 @@
       "guidance": [
         "weekly-phi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "spurs-clinch-home-court",
@@ -1974,7 +1966,7 @@
       "guidance": [
         "weekly-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "avery-coach-of-year",
@@ -1996,7 +1988,7 @@
         "award-coy",
         "weekly-dal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kenyon-martin-suspended",
@@ -2017,7 +2009,7 @@
       "guidance": [
         "po-den"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "bulls-push-heat",
@@ -2040,7 +2032,7 @@
         "po-chi",
         "po-mia"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "miller-sixth-man",
@@ -2062,7 +2054,7 @@
         "award-6moy",
         "weekly-mem"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "redd-40-pistons",
@@ -2085,7 +2077,7 @@
         "po-mil",
         "po-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "kobe-buzzer-kings-even",
@@ -2110,7 +2102,7 @@
         "po-sac",
         "po-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "clippers-mavs-advance",
@@ -2137,7 +2129,7 @@
         "po-mem",
         "po-dal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "diaw-most-improved",
@@ -2159,7 +2151,7 @@
         "award-mip",
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "lebron-game-winner",
@@ -2182,7 +2174,7 @@
         "po-cle",
         "po-was"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "heat-beat-bulls",
@@ -2205,7 +2197,7 @@
         "po-mia",
         "po-chi"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nets-beat-pacers",
@@ -2228,7 +2220,7 @@
         "po-bkn",
         "po-ind"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "suns-rally-past-lakers",
@@ -2251,7 +2243,7 @@
         "po-phx",
         "po-lal"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "nash-second-mvp",
@@ -2274,7 +2266,7 @@
         "retro-nash-mvp",
         "weekly-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "wallace-dpoy",
@@ -2296,7 +2288,7 @@
         "award-dpoy",
         "weekly-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "paul-rookie-of-year",
@@ -2318,7 +2310,7 @@
         "award-roy",
         "weekly-nop"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "suns-clippers-double-ot",
@@ -2341,7 +2333,7 @@
         "po-phx",
         "po-lac"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "pistons-beat-cavs",
@@ -2364,7 +2356,7 @@
         "po-det",
         "po-cle"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mavs-beat-spurs-game-7",
@@ -2387,7 +2379,7 @@
         "po-dal",
         "po-sas"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "raptors-win-lottery",
@@ -2413,7 +2405,7 @@
         "draft-lottery",
         "weekly-tor"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "heat-beat-pistons",
@@ -2436,7 +2428,7 @@
         "po-mia",
         "po-det"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "mavs-beat-suns",
@@ -2459,7 +2451,7 @@
         "po-dal",
         "po-phx"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "jordan-buys-into-bobcats",
@@ -2480,7 +2472,7 @@
       "guidance": [
         "weekly-cha"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "heat-win-title",
@@ -2504,7 +2496,7 @@
         "po-mia",
         "retro-heat-title"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "larry-brown-fired",
@@ -2527,7 +2519,7 @@
         "theme-coaching-changes",
         "weekly-nyk"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "blazers-draft-night",
@@ -2552,7 +2544,7 @@
         "draft-2006",
         "weekly-por"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "gay-for-battier",
@@ -2575,7 +2567,7 @@
         "draft-2006",
         "weekly-hou"
       ],
-      "status": "pending"
+      "status": "included"
     },
     {
       "id": "draft-report-card",
@@ -2600,7 +2592,7 @@
       "guidance": [
         "draft-2006"
       ],
-      "status": "pending"
+      "status": "included"
     }
   ]
 }
