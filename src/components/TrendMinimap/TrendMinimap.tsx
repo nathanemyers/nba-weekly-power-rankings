@@ -20,7 +20,7 @@ export default function TrendMinimap(props: TrendMinimapProps) {
   const { season } = props
   const { rankings } = season.teams.find((t) => t.teamId === props.team)!
 
-  const gradientId = useId()
+  const clipId = useId().replace(/[^a-zA-Z0-9_-]/g, '')
   const width = props.width ?? 96
   const height = props.height ?? 40
   const plotWidth = width - MARGIN.left - MARGIN.right
@@ -38,8 +38,24 @@ export default function TrendMinimap(props: TrendMinimapProps) {
     })
     .join(' ')
 
-  const topBoundary = y(BAND_SIZE + 0.5) / height
-  const bottomBoundary = y(BAND_SIZE * 2 + 0.5) / height
+  const topBoundary = y(BAND_SIZE + 0.5)
+  const bottomBoundary = y(BAND_SIZE * 2 + 0.5)
+  // Safari misplaces gradients on non-scaling strokes, so each band is a solid line clipped to its slice
+  const bands = [
+    { name: 'top', top: 0, bottom: topBoundary, className: 'stroke-rank-up' },
+    {
+      name: 'middle',
+      top: topBoundary,
+      bottom: bottomBoundary,
+      className: 'stroke-rank-mid',
+    },
+    {
+      name: 'bottom',
+      top: bottomBoundary,
+      bottom: height,
+      className: 'stroke-rank-down',
+    },
+  ]
 
   return (
     // A size-* class opts out of library icon sizing, and preserveAspectRatio none lets callers stretch the line
@@ -52,45 +68,31 @@ export default function TrendMinimap(props: TrendMinimapProps) {
       aria-hidden="true"
     >
       <defs>
-        <linearGradient
-          id={gradientId}
-          gradientUnits="userSpaceOnUse"
-          x1={0}
-          y1={0}
-          x2={0}
-          y2={height}
-        >
-          <stop
-            offset={topBoundary}
-            data-band="top"
-            className="[stop-color:var(--color-rank-up)]"
-          />
-          <stop
-            offset={topBoundary}
-            data-band="middle"
-            className="[stop-color:var(--color-rank-mid)]"
-          />
-          <stop
-            offset={bottomBoundary}
-            data-band="middle"
-            className="[stop-color:var(--color-rank-mid)]"
-          />
-          <stop
-            offset={bottomBoundary}
-            data-band="bottom"
-            className="[stop-color:var(--color-rank-down)]"
-          />
-        </linearGradient>
+        {bands.map((band) => (
+          <clipPath key={band.name} id={`${clipId}-${band.name}`}>
+            <rect
+              x={0}
+              y={band.top}
+              width={width}
+              height={band.bottom - band.top}
+            />
+          </clipPath>
+        ))}
       </defs>
-      <path
-        d={d}
-        fill="none"
-        stroke={`url(#${gradientId})`}
-        strokeWidth={2}
-        vectorEffect="non-scaling-stroke"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      {bands.map((band) => (
+        <path
+          key={band.name}
+          data-band={band.name}
+          d={d}
+          clipPath={`url(#${clipId}-${band.name})`}
+          className={band.className}
+          fill="none"
+          strokeWidth={2}
+          vectorEffect="non-scaling-stroke"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      ))}
     </svg>
   )
 }
