@@ -1,6 +1,6 @@
 {
   "season": "2009-10",
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-12",
   "guidance": [
     {
       "id": "retro-lebron-free-agency",
@@ -1570,6 +1570,29 @@
       "status": "included"
     },
     {
+      "id": "jennings-34-playoff-debut",
+      "title": "Brandon Jennings scores 34 in his playoff debut",
+      "eventDate": "2010-04-17",
+      "teams": [
+        "mil",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Fast Breaks: Hawks-Bucks, Game 1",
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/more-sports/2010/04/18/hawks-bucksgame1",
+        "publishedAt": "2010-04-18"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mil",
+        "po-atl"
+      ],
+      "status": "excluded"
+    },
+    {
       "id": "bobcats-first-playoffs",
       "title": "Bobcats' first playoff game",
       "eventDate": "2010-04-18",
@@ -1749,6 +1772,29 @@
       "status": "excluded"
     },
     {
+      "id": "bucks-lead-hawks-3-2",
+      "title": "Bogut-less Bucks win three straight to lead Atlanta 3-2",
+      "eventDate": "2010-04-28",
+      "teams": [
+        "mil",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "Dwyane, LeBron and other humans",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/espn/page2/story?page=simmons/100429",
+        "publishedAt": "2010-04-29"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mil",
+        "po-atl"
+      ],
+      "status": "excluded"
+    },
+    {
       "id": "tyreke-roy",
       "title": "Tyreke Evans is Rookie of the Year",
       "eventDate": "2010-04-29",
@@ -1833,6 +1879,29 @@
       "blockbuster": false,
       "guidance": [
         "award-mvp"
+      ],
+      "status": "included"
+    },
+    {
+      "id": "hawks-outlast-bucks-game-7",
+      "title": "Hawks outlast 'Fear the Deer' Bucks in seven",
+      "eventDate": "2010-05-02",
+      "teams": [
+        "mil",
+        "atl"
+      ],
+      "featured": false,
+      "article": {
+        "headline": "NBA Playoffs: The 15 Most Exciting Playoff Series of the Last Decade",
+        "publisher": "Bleacher Report",
+        "url": "https://bleacherreport.com/articles/664897-nba-playoffs-the-15-most-exciting-playoff-series-of-the-last-decade",
+        "publishedAt": "2011-04-13"
+      },
+      "kind": "playoffs",
+      "blockbuster": false,
+      "guidance": [
+        "po-mil",
+        "po-atl"
       ],
       "status": "included"
     },
