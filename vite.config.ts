@@ -2,6 +2,7 @@ import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import babel from "@rolldown/plugin-babel";
 import { defineConfig } from "vitest/config";
+import { pagePreviews } from "./build/pagePreviews/plugin.ts";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,6 +11,7 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
+    pagePreviews(),
   ],
   resolve: {
     tsconfigPaths: true,

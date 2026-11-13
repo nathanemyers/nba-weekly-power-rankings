@@ -28,6 +28,7 @@ import {
   COMPACT_CHART_HEIGHT,
   COMPACT_CHART_MARGIN,
   COMPACT_CHART_WIDTH,
+  pageTitle,
 } from '@/constants'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 
@@ -99,6 +100,7 @@ export default function ChartView() {
 
   return (
     <div>
+      <title>{pageTitle(season ?? '')}</title>
       <header className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <h1 className="text-2xl leading-tight font-bold sm:text-4xl">

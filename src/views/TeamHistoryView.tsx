@@ -5,6 +5,7 @@ import TeamLogo from '@/components/TeamLogo'
 import TeamSelect from '@/components/TeamHistory/TeamSelect'
 import type { Season } from '@/data/seasonData'
 import { getTeamName, type Team } from '@/types'
+import { pageTitle } from '@/constants'
 
 type TeamHistoryLoaderData = { team: Team; seasons: Promise<Season[]> }
 
@@ -23,6 +24,7 @@ export default function TeamHistoryView() {
 
   return (
     <div className="flex flex-col lg:h-[calc(100dvh-4rem)]">
+      <title>{pageTitle(getTeamName(team))}</title>
       <div className="mb-6 flex shrink-0 flex-wrap items-center justify-between gap-3 sm:mb-10">
         <h1 className="flex flex-row items-center gap-3 text-2xl sm:gap-5 sm:text-4xl">
           <TeamLogo

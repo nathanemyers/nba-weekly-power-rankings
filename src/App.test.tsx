@@ -619,3 +619,19 @@ describe('Team history addresses', () => {
     expect(miamiLabel()).toHaveAttribute('font-weight', '700')
   })
 })
+
+describe('Browser tab title', () => {
+  it('names the season on the chart', async () => {
+    await renderWithRouter(['/long'])
+    await waitFor(() =>
+      expect(document.title).toBe('long · NBA Weekly Power Rankings')
+    )
+  })
+
+  it('names the team on its history page', async () => {
+    await renderWithRouter(['/teamHistory/bos'])
+    await waitFor(() =>
+      expect(document.title).toBe('Boston Celtics · NBA Weekly Power Rankings')
+    )
+  })
+})

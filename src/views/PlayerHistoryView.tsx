@@ -6,6 +6,7 @@ import PlayerSearch from '@/components/PlayerStats/PlayerSearch'
 import RatingKey from 'components/PlayerStats/RatingKey'
 import type { PlayerStint, PlayerSummary } from '@/data/playerHistory'
 import CareerHighlights from '@/components/PlayerStats/CareerHighlights'
+import { pageTitle, SITE_NAME } from '@/constants'
 
 type PlayerHistoryLoaderData = {
   playerId: string
@@ -20,10 +21,17 @@ function PlayerHistoryContent(props: {
 }) {
   const playerHistory = use(props.playerHistory)
   const playerSummary = use(props.playerSummary)
-  if (!playerHistory.length) return <NotFoundCard message="Player not found" />
+  if (!playerHistory.length)
+    return (
+      <>
+        <title>{SITE_NAME}</title>
+        <NotFoundCard message="Player not found" />
+      </>
+    )
 
   return (
     <div className="flex flex-col">
+      <title>{pageTitle(playerHistory[0].player.name)}</title>
       <h1 className="mb-4 text-2xl sm:text-4xl">{playerHistory[0].player.name}</h1>
       <div className="mb-6">
         <CareerHighlights player={playerSummary} limit={10} />
