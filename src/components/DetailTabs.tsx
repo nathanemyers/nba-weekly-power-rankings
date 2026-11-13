@@ -8,7 +8,6 @@ import {
   getTeamStorylines,
 } from '@/data/seasonData'
 import { getSeasonAwardGroups } from '@/data/awards'
-import { getMostDeclinedTeams, getMostImprovedTeams } from '@/data/analysis'
 import TeamStorylinesPane from './TeamStorylinesPane'
 import RankSwings from './RankSwings'
 import RosterPane from './RosterPane'
@@ -37,10 +36,7 @@ export default function DetailTabs() {
     storylines: team
       ? getTeamStorylines(season, team).length > 0
       : getSeasonStorylines(season).length > 0,
-    trends:
-      getMostImprovedTeams(season).length +
-        getMostDeclinedTeams(season).length >
-      0,
+    trends: season.teams.length > 0,
     roster: !!team && !!getTeamRankings(season, team)?.roster?.length,
     awards: getSeasonAwardGroups(season).length > 0,
   }
