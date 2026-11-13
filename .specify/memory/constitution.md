@@ -1,21 +1,3 @@
-<!--
-Sync Impact Report
-- Version change: 1.4.0 → 1.5.0
-- Modified principles:
-  - V. Simplicity: React Router added to the named existing stack. Title unchanged.
-- Modified sections:
-  - Hosting & Technology Constraints → State & Data Layer: loaded season data (ranking, playoff,
-    team) MAY be held by React Router route loaders instead of the Redux store, provided it is a
-    same-origin static asset validated with Zod. Redux remains the home for shared interaction
-    state. Navigation state (selected season, current view) lives in the URL.
-  - Hosting & Technology Constraints → Data Validation: Zod parsing now applies before data
-    enters route loader results as well as the Redux store or components.
-- Added sections: none
-- Removed sections: none
-- Templates requiring updates: none (templates read the constitution at runtime)
-- Follow-up TODOs: none. Driven by spec 018-react-router-data-loading (FR-015).
--->
-
 # NBA Weekly Power Rankings Constitution
 
 ## Core Principles
@@ -53,12 +35,21 @@ cannot mitigate; pre-built data keeps the site fast and reproducible.
 - The site MUST work when served from a sub-path (e.g., `/projects/nba-power-rankings/`), not
   only from a domain root. Asset and data URLs MUST be relative or derived from the configured
   build base.
-- Any in-app navigation or shareable view state MUST use mechanisms that need no server
-  rewrite rules (hash routing or query parameters). Deep links MUST load correctly on a fresh
-  page request.
+- In-app navigation and shareable view state MAY use path-based addresses, hash routing, or
+  query parameters, but MUST NOT depend on server rewrite rules. Deep links MUST load correctly
+  on a fresh page request.
+- Every path-based address the app links to MUST be served by a static file in the build: either
+  an entry page generated for that address at build time, or the host's standard not-found page
+  (`404.html`) when it boots the app and renders the requested address.
+- Addresses that need their own link previews, or that need a successful (non-404) response,
+  MUST have an entry page generated at build time. The not-found fallback is only for addresses
+  that need neither.
+- Changing the address format MUST keep previously published addresses working, by redirecting
+  them on the client to their current form.
 
 Rationale: GitHub Pages cannot rewrite unknown paths to `index.html`, and the site is embedded
-under a project path on a personal domain.
+under a project path on a personal domain. Entry pages generated at build time make clean
+addresses and page-specific link previews possible without a server.
 
 ### IV. Respectful, Offline Data Collection
 
@@ -148,4 +139,4 @@ Rationale: a small, single-maintainer visualization project stays maintainable b
 - Every feature plan and code review MUST verify compliance with the Core Principles; any
   justified deviation MUST be documented in the plan's complexity tracking.
 
-**Version**: 1.5.0 | **Ratified**: 2026-10-08 | **Last Amended**: 2026-10-26
+**Version**: 1.6.0 | **Ratified**: 2026-10-08 | **Last Amended**: 2026-11-12
