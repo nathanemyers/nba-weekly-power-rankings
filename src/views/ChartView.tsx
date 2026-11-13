@@ -104,12 +104,6 @@ export default function ChartView() {
           <h1 className="text-2xl leading-tight font-bold sm:text-4xl">
             NBA Weekly Power Rankings
           </h1>
-          <p className="mt-1 text-muted-foreground sm:text-lg">
-            <span className="sm:hidden">Tap a team to pin it</span>
-            <span className="hidden sm:inline">
-              Hover a line or dot, click a team to pin it, use arrow keys to pan
-            </span>
-          </p>
         </div>
         <GitHubBadge className="mt-1" />
       </header>
