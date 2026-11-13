@@ -1,15 +1,13 @@
 import type { Season } from '@/data/seasonData'
-import { getTeamName, PlayoffStage, Teams, type Team } from 'types'
+import { getTeamName, PlayoffStage, type Team } from 'types'
 
+// A page whose screenshot becomes its link-preview image.
 export type PreviewCard = {
   file: string
+  path: string
   heading: string
   fact: string
-  accentColor: string
-  logo: Team | null
 }
-
-export const NEUTRAL_ACCENT = '#a1a1aa'
 
 const STAGE_ORDER = [
   PlayoffStage.FirstRound,
@@ -27,22 +25,14 @@ const STAGE_LABELS: Record<PlayoffStage, string> = {
   [PlayoffStage.Champion]: 'Champions',
 }
 
-const teamColor = (team: Team) =>
-  Teams.find((t) => t.teamId === team)?.color ?? NEUTRAL_ACCENT
-
 export function seasonCard(season: Season): PreviewCard {
   const base = {
-    file: `previews/season-${season.name}.png`,
+    file: `previews/season-${season.name}.jpg`,
+    path: '/' + season.name,
     heading: season.name,
   }
-  if (season.champion) {
-    return {
-      ...base,
-      fact: `Champions: ${getTeamName(season.champion)}`,
-      accentColor: teamColor(season.champion),
-      logo: season.champion,
-    }
-  }
+  if (season.champion)
+    return { ...base, fact: `Champions: ${getTeamName(season.champion)}` }
   const leader = season.teams.find((team) =>
     team.rankings.some(
       (ranking) => ranking.week === season.maxWeek && ranking.rank === 1
@@ -53,8 +43,6 @@ export function seasonCard(season: Season): PreviewCard {
     fact: leader
       ? `#1 in week ${season.maxWeek}: ${leader.name}`
       : 'Weekly power rankings',
-    accentColor: NEUTRAL_ACCENT,
-    logo: leader?.teamId ?? null,
   }
 }
 
@@ -107,10 +95,9 @@ function teamFact(team: Team, seasons: Season[]): string {
 
 export function teamCard(team: Team, seasons: Season[]): PreviewCard {
   return {
-    file: `previews/team-${team}.png`,
+    file: `previews/team-${team}.jpg`,
+    path: '/teamHistory/' + team,
     heading: getTeamName(team),
     fact: teamFact(team, seasons),
-    accentColor: teamColor(team),
-    logo: team,
   }
 }

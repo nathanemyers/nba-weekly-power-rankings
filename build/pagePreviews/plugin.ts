@@ -1,26 +1,17 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
-import { dirname, extname, resolve } from 'node:path'
-import { Resvg } from '@resvg/resvg-js'
-import { runnerImport, type Plugin, type ResolvedConfig } from 'vite'
+import { dirname, resolve } from 'node:path'
+import { chromium, type Browser } from 'playwright-core'
+import {
+  preview,
+  runnerImport,
+  type Plugin,
+  type ResolvedConfig,
+} from 'vite'
 
 const SITE_ORIGIN = 'https://nathanemyers.github.io'
-
-// resvg cannot decode WebP, so the Wizards logo uses a PNG copy kept with the plugin.
-const LOGO_FILES: Record<string, string> = {
-  atl: 'atl.png', bos: 'bos.gif', bkn: 'bkn.png', cha: 'cha.png',
-  chi: 'chi2.png', cle: 'cle.png', dal: 'dal.png', den: 'den.png',
-  det: 'det.png', gsw: 'gsw.png', hou: 'hou.png', ind: 'ind.png',
-  lac: 'lac.png', lal: 'lal.png', mem: 'mem.png', mia: 'mia2.png',
-  mil: 'mil.png', min: 'min.png', nop: 'nop2.png', nyk: 'nyk.png',
-  okc: 'okc.png', orl: 'orl.png', phi: 'phi.png', phx: 'phx.png',
-  por: 'por.png', sac: 'sac.png', sas: 'sas.png', tor: 'tor.png',
-  uta: 'uta2.png', was: 'build/pagePreviews/logos/was.png',
-}
-
-const MIME: Record<string, string> = {
-  '.png': 'image/png',
-  '.gif': 'image/gif',
-}
+const WIDTH = 1200
+const HEIGHT = 630
+const PARALLEL_PAGES = 4
 
 type PageHead = {
   title: string
@@ -29,7 +20,7 @@ type PageHead = {
   imageUrl: string
 }
 type PageEntry = { file: string; head: PageHead | null }
-type PreviewCard = { file: string; logo: string | null }
+type PreviewCard = { file: string; path: string }
 type BuildEntry = {
   seasons: unknown[]
   buildPages: (
@@ -38,15 +29,58 @@ type BuildEntry = {
     base: string
   ) => { pages: PageEntry[]; cards: PreviewCard[] }
   applyHead: (html: string, head: PageHead) => string
-  cardSvg: (card: PreviewCard, logoDataUri: string | null) => string
 }
 
-async function write(path: string, contents: string | Buffer) {
+async function write(path: string, contents: string) {
   await mkdir(dirname(path), { recursive: true })
   await writeFile(path, contents)
 }
 
-// Writes an entry HTML file for every page address, a 404.html fallback, and preview card PNGs.
+async function launchChrome(): Promise<Browser> {
+  try {
+    return await chromium.launch({ channel: 'chrome' })
+  } catch (error) {
+    throw new Error(
+      'page-previews needs Google Chrome installed to screenshot pages.',
+      { cause: error }
+    )
+  }
+}
+
+async function screenshotPages(
+  siteUrl: string,
+  outDir: string,
+  cards: PreviewCard[]
+) {
+  const browser = await launchChrome()
+  try {
+    const context = await browser.newContext({
+      viewport: { width: WIDTH, height: HEIGHT },
+      deviceScaleFactor: 1,
+      colorScheme: 'dark',
+    })
+    const queue = [...cards]
+    const worker = async () => {
+      const page = await context.newPage()
+      for (let card = queue.shift(); card; card = queue.shift()) {
+        await page.goto(siteUrl + card.path.slice(1))
+        await page.waitForFunction(
+          "document.querySelector('h1') && !document.body.innerText.includes('Loading')"
+        )
+        await page.waitForTimeout(500)
+        const path = resolve(outDir, card.file)
+        await mkdir(dirname(path), { recursive: true })
+        await page.screenshot({ path, type: 'jpeg', quality: 85 })
+      }
+      await page.close()
+    }
+    await Promise.all(Array.from({ length: PARALLEL_PAGES }, worker))
+  } finally {
+    await browser.close()
+  }
+}
+
+// Writes an entry HTML file for every page address, a 404.html fallback, and page screenshots for link previews.
 export function pagePreviews(): Plugin {
   let config: ResolvedConfig
   return {
@@ -57,8 +91,6 @@ export function pagePreviews(): Plugin {
     },
     async closeBundle() {
       const outDir = resolve(config.root, config.build.outDir)
-      const fontDir = resolve(config.root, 'build/pagePreviews/fonts')
-      const logoDir = resolve(config.root, 'staticAssets/logos/1x')
       const { module } = await runnerImport<BuildEntry>(
         '/src/pagePreviews/buildEntry.ts',
         {
@@ -85,29 +117,22 @@ export function pagePreviews(): Plugin {
         )
       )
 
-      const fontFiles = ['Inter-Regular.ttf', 'Inter-Bold.ttf'].map((file) =>
-        resolve(fontDir, file)
-      )
-      for (const card of cards) {
-        let logoDataUri: string | null = null
-        if (card.logo) {
-          const file = LOGO_FILES[card.logo]
-          if (!file) throw new Error(`No logo file for team ${card.logo}`)
-          const data = await readFile(
-            file.includes('/') ? resolve(config.root, file) : resolve(logoDir, file)
-          )
-          logoDataUri = `data:${MIME[extname(file)]};base64,${data.toString('base64')}`
-        }
-        const png = new Resvg(module.cardSvg(card, logoDataUri), {
-          font: { fontFiles, loadSystemFonts: false, defaultFontFamily: 'Inter' },
-        })
-          .render()
-          .asPng()
-        await write(resolve(outDir, card.file), png)
+      const server = await preview({
+        configFile: false,
+        root: config.root,
+        base: config.base,
+        build: { outDir },
+        preview: { port: 4190 },
+        logLevel: 'warn',
+      })
+      try {
+        await screenshotPages(server.resolvedUrls!.local[0], outDir, cards)
+      } finally {
+        await server.close()
       }
 
       config.logger.info(
-        `page-previews: ${pages.length} entry pages, ${cards.length} preview cards, 404.html`
+        `page-previews: ${pages.length} entry pages, ${cards.length} screenshots, 404.html`
       )
     },
   }

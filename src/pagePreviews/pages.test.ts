@@ -85,7 +85,7 @@ describe('buildPages', () => {
       description:
         'Week-by-week power rankings for the 2024-25 NBA season. Champions: Oklahoma City Thunder.',
       canonicalUrl: site + '2024-25',
-      imageUrl: site + 'previews/season-2024-25.png',
+      imageUrl: site + 'previews/season-2024-25.jpg',
     })
   })
 
@@ -97,14 +97,14 @@ describe('buildPages', () => {
       description:
         "Boston Celtics' weekly power rankings and playoff results, season by season. Champions in 2023-24.",
       canonicalUrl: site + 'teamHistory/bos',
-      imageUrl: site + 'previews/team-bos.png',
+      imageUrl: site + 'previews/team-bos.jpg',
     })
   })
 
-  it('makes one card per season and per team', () => {
+  it('makes one preview image per season and per team', () => {
     expect(cards).toHaveLength(seasons.length + Teams.length)
     expect(cards.map((card) => card.file)).toContain(
-      'previews/team-okc.png'
+      'previews/team-okc.jpg'
     )
   })
 

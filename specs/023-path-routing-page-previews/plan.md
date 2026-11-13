@@ -10,7 +10,7 @@ Switch the app from the hash router to the browser router, with a `basename` set
 
 - a static HTML entry file for every season, team, and player address
 - a `404.html` fallback
-- 1200×630 title-card PNGs for each season and team, rendered from SVG with resvg
+- 1200×630 JPEG screenshots of each season and team page, taken with the installed Google Chrome
 
 Season and team entry files carry page-specific Open Graph tags. Player pages, the base address, and the fallback keep the site-wide preview. Each view sets its browser tab title with React 19's `<title>`.
 
@@ -18,9 +18,9 @@ Season and team entry files carry page-specific Open Graph tags. Player pages, t
 
 **Language/Version**: TypeScript ~6.0, React 19.2, Node 22 (CI and build)
 
-**Primary Dependencies**: React Router 8 (`createBrowserRouter`), Vite 8 (plugin hooks, `runnerImport`), Zod 4. New devDependency: `@resvg/resvg-js`. New committed asset: Inter TTF (OFL) for card text.
+**Primary Dependencies**: React Router 8 (`createBrowserRouter`), Vite 8 (plugin hooks, `runnerImport`), Zod 4. New devDependency: `playwright-core` (drives the installed Google Chrome; no browser download).
 
-**Storage**: Static files only. Inputs are `data/processed/seasons/*.json` and `staticAssets/logos/1x/*`. Outputs are generated into `dist/` and not committed.
+**Storage**: Static files only. Inputs are `data/processed/seasons/*.json` and the built site itself. Outputs are generated into `dist/` and not committed.
 
 **Testing**: Vitest (`npm test`). Unit tests cover page logic in `src/pagePreviews/`. Existing router tests stay on `createMemoryRouter`.
 
@@ -48,7 +48,7 @@ Season and team entry files carry page-specific Open Graph tags. Player pages, t
 | II. Data Prepared at Build Time | ✅ | Cards and tags are derived from committed `data/processed/` JSON at build time, with no network access. Generated files are build output, not data, so they aren't committed (research R7). |
 | III. Base-Path-Safe, Server-Free Navigation (v1.6.0) | ✅ | Every linked address has an entry file (R2). `404.html` covers unknown addresses. Old `#/` links are rewritten on the client (R4). URLs come from Vite `base`. |
 | IV. Respectful Data Collection | ✅ | Not affected. No scraping. |
-| V. Simplicity | ✅ | No new runtime dependency. One dev dependency (`@resvg/resvg-js`) with a stated need (R6). React 19 `<title>` instead of an effect (R5). |
+| V. Simplicity | ✅ | No new runtime dependency. One dev dependency (`playwright-core`, which drives the installed Chrome) with a stated need (R6). React 19 `<title>` instead of an effect (R5). |
 | Hosting: `npm run build` → self-contained `dist/` | ✅ | The plugin runs inside `vite build`. The deploy workflow is unchanged. |
 | State & Data Layer | ✅ | Navigation state stays in the URL and the router. The plugin reads JSON directly and validates it with the existing Zod schemas. |
 | Data Validation (Zod) | ✅ | Season JSON is parsed with `SeasonDataSchema` and the index with `SeasonIndexEntrySchema`. Invalid seasons are skipped. |
@@ -82,7 +82,6 @@ src/
 ├── pagePreviews/                   # NEW: pure page logic (app tsconfig, unit-tested)
 │   ├── pages.ts                    # PageEntry list: seasons, teams, players → paths, files, heads
 │   ├── cards.ts                    # PreviewCard derivation (champion, #1 team, team best result)
-│   ├── cardSvg.ts                  # SVG template for a 1200×630 card
 │   ├── head.ts                     # rewrite <title>/description/og:*/twitter:image in index.html
 │   ├── legacyHash.ts               # "#/x" → "<base>/x"
 │   └── *.test.ts
@@ -92,21 +91,19 @@ src/
     └── PlayerHistoryView.tsx       # + <title>
 
 build/pagePreviews/
-├── plugin.ts                       # NEW: Vite plugin (apply: 'build', closeBundle). runnerImport + fs + resvg
-└── fonts/Inter-{Regular,Bold}.ttf + OFL.txt
+└── plugin.ts                       # NEW: Vite plugin (apply: 'build', closeBundle). runnerImport + fs + preview server + Chrome screenshots
 
 vite.config.ts                      # register the plugin
 tsconfig.node.json                  # include build/pagePreviews/plugin.ts
-package.json                        # devDependency @resvg/resvg-js
+package.json                        # devDependency playwright-core
 ```
 
 **Structure Decision**: Single project. The pure logic stays in `src/` so it shares the team list, enums, and schemas with the app and is covered by Vitest. Only file I/O and rasterizing live in the node-side plugin (research R7a).
 
 ## Implementation Notes
 
-- **Order**: router switch + legacy rewrite + tab titles (Stories 1–2) can ship on their own. The build plugin (Story 3) builds on them. Spike `runnerImport` alias resolution and resvg GIF decoding first (R6, R7a).
-- **Fonts**: download Inter Regular and Bold TTF from its official release, and commit them with `OFL.txt`. Downloading needs the user's approval at implementation time.
-- **Colors**: card colors live in `cardSvg.ts`. That's the team-color exception in AGENTS.md, plus one neutral accent and a background matching `--background` (`#1d1d1f`).
+- **Order**: router switch + legacy rewrite + tab titles (Stories 1–2) can ship on their own. The build plugin (Story 3) builds on them. Spike `runnerImport` alias resolution first (R7a).
+- **Screenshots**: Google Chrome must be installed wherever `npm run build` runs. GitHub's Ubuntu runners include it.
 - **Spec follow-up**: the spec's Constitution Notes now point to the adopted v1.6.0 amendment.
 
 ## Complexity Tracking

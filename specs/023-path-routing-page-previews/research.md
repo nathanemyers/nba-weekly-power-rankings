@@ -39,16 +39,15 @@
 - **Rationale**: Built into React 19 (the project uses ^19.2.8), with no effect hook or new dependency.
 - **Alternatives considered**: `useEffect(() => { document.title = … })` (discouraged by AGENTS.md), or React Router `meta` exports (framework mode only, not data-router mode).
 
-## R6. Rendering preview images without a browser
+## R6. Taking the preview images
 
-- **Decision**: Build each card as an SVG string from a TypeScript template function, then rasterize it to a 1200×630 PNG with `@resvg/resvg-js` (a new **devDependency**). Text uses a font file committed to the repo (Inter, SIL Open Font License, Regular and Bold TTF, with the license file next to them) loaded through resvg's `fontFiles` option, with system fonts turned off. Team logos are embedded as base64 data URIs read from `staticAssets/logos/1x/`.
-- **Rationale**: The user chose designed title cards, not screenshots (spec clarification). resvg is a single prebuilt native package with no browser and no system font dependency. Committing the font makes output identical on macOS and the Ubuntu CI runner (Principle II: reproducible, no network at build). It's dev-only and never reaches the client bundle (constitution: dev dependencies are judged separately).
+- **Decision** (revised 2026-11-12, replacing designed title cards rendered with resvg): After the entry files are written, the plugin starts Vite's preview server on `dist/` and drives the installed Google Chrome through `playwright-core` (a new **devDependency**, with no browser download). It opens each season and team page at 1200×630 in dark mode, waits until the page has an `h1` and no "Loading" text, and saves a JPEG (quality 85) to `dist/previews/`. Four pages are captured at a time.
+- **Rationale**: The user asked for screenshots of the pages themselves. `playwright-core` with `channel: 'chrome'` uses the Chrome already on the machine, and GitHub's `ubuntu-latest` runners ship with Chrome, so neither CI nor local builds download a browser. JPEG keeps the 53 images to about 6 MB.
 - **Alternatives considered**:
-  - **Playwright or Puppeteer screenshots**: needs a headless browser in CI and goes against the chosen card style.
-  - **`satori` + resvg**: adds a layout engine that a fixed card layout doesn't need.
-  - **`node-canvas`**: native build dependencies (Cairo) on CI.
-  - **System fonts**: CI fonts differ from local, and the site's `system-ui` stack can't be pinned.
-- **Risk**: `bos.gif` is the one non-PNG logo. resvg decodes GIF images in `<image>`. If a rendering check shows otherwise, convert that one logo to PNG for the card generator only.
+  - **Full `playwright` with its bundled Chromium**: about a 150 MB download on every CI run.
+  - **Committing screenshots**: they would go stale whenever the data or UI changes.
+  - **The earlier resvg title cards**: replaced at the user's request.
+- **Cost**: `npm run build` takes about 28 s, up from about 7 s before this feature.
 
 ## R7. Where generation runs
 

@@ -211,3 +211,11 @@ Task: "T019 cards.ts"        Task: "T020 head.ts"
 - **T026**: `npm run build` went from about 7 s to about 15 s. `dist/` is 22 MB on disk (block-rounded). That includes 2,385 player entry files and 3.4 MB of cards.
 - **T029**: README has no hash-URL references, so no change was needed.
 - **T030**: pending. It needs a deploy.
+
+## Revision: screenshots instead of title cards (2026-11-12)
+
+At the user's request, the preview images are now screenshots of the pages (research R6, revised):
+- Replaced `@resvg/resvg-js` with `playwright-core`, and removed `src/pagePreviews/cardSvg.ts`, the Inter fonts, and the PNG Wizards logo.
+- `build/pagePreviews/plugin.ts` serves `dist/` with Vite's preview server and screenshots each season and team page in the installed Chrome (1200×630, dark mode, JPEG). The rest of the plugin is unchanged.
+- `PreviewCard` is now `{ file, path, heading, fact }`, with images at `previews/*.jpg`. The headline facts still appear in the preview descriptions.
+- `npm run build` takes about 28 s and needs Google Chrome installed. GitHub's Ubuntu runners include it.

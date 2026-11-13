@@ -26,22 +26,21 @@ Preview information written into a season or team entry file.
 | `title` | string | `2018-19 · NBA Weekly Power Rankings` |
 | `description` | string | `Week-by-week power rankings for the 2018-19 NBA season. Champions: Toronto Raptors.` |
 | `canonicalUrl` | absolute URL | `https://nathanemyers.github.io/nba-weekly-power-rankings/2018-19` |
-| `imageUrl` | absolute URL | `https://nathanemyers.github.io/nba-weekly-power-rankings/previews/season-2018-19.png` |
+| `imageUrl` | absolute URL | `https://nathanemyers.github.io/nba-weekly-power-rankings/previews/season-2018-19.jpg` |
 
 ## PreviewCard
 
-Input to the SVG template for one PNG.
+One page to screenshot for its link-preview image.
 
 | Field | Type | Notes |
 |-------|------|-------|
-| `file` | string | `previews/season-<name>.png` or `previews/team-<id>.png` |
-| `heading` | string | Season name, or the team's full name |
-| `fact` | string | Headline fact (see research R8) |
-| `accentColor` | hex string | Featured team's `color`, or the neutral site accent |
-| `logo` | `Team \| null` | Team whose logo is shown |
+| `file` | string | `previews/season-<name>.jpg` or `previews/team-<id>.jpg` |
+| `path` | string | Page to screenshot, e.g. `/2018-19` |
+| `heading` | string | Season name, or the team's full name (used in the preview title) |
+| `fact` | string | Headline fact for the preview description (see research R8) |
 
 **Derivation**
-- **Season**: `champion = seasonIndex[i].champion`. If it's set, the fact is "Champions: <name>" and `logo` and `accent` come from the champion. If not, the fact is "#1 in week <maxWeek>: <name>", where that team has `rank === 1` in the latest week. In that case `logo` is the #1 team and `accent` is neutral.
+- **Season**: `champion = seasonIndex[i].champion`. If it's set, the fact is "Champions: <name>". If not, the fact is "#1 in week <maxWeek>: <name>", where that team has `rank === 1` in the latest week.
 - **Team**: scan every season's `playoffs[team]` and `rankings[team]`, and use the first that applies:
   1. Championships: "Champions in <season>" for one title, or "N× champions since <first season>" for more than one.
   2. The deepest `PlayoffStage` reached, and the earliest season it was reached in.

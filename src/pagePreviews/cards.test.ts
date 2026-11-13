@@ -1,9 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { NEUTRAL_ACCENT, seasonCard, teamCard } from './cards'
+import { seasonCard, teamCard } from './cards'
 import { testSeason } from './testSeasons'
 import { PlayoffStage, Team } from 'types'
-
-const celticsColor = '#2EAD61'
 
 describe('seasonCard', () => {
   it('features the champion of a completed season', () => {
@@ -12,11 +10,10 @@ describe('seasonCard', () => {
       { team: Team.LALakers, ranks: [1, 2], playoff: PlayoffStage.Finals },
     ])
     expect(seasonCard(season)).toEqual({
-      file: 'previews/season-2007-08.png',
+      file: 'previews/season-2007-08.jpg',
+      path: '/2007-08',
       heading: '2007-08',
       fact: 'Champions: Boston Celtics',
-      accentColor: celticsColor,
-      logo: Team.Boston,
     })
   })
 
@@ -27,11 +24,10 @@ describe('seasonCard', () => {
       { team: Team.Miami, ranks: [3, 3, 1] },
     ])
     expect(seasonCard(season)).toEqual({
-      file: 'previews/season-2026-27.png',
+      file: 'previews/season-2026-27.jpg',
+      path: '/2026-27',
       heading: '2026-27',
       fact: '#1 in week 3: Miami Heat',
-      accentColor: NEUTRAL_ACCENT,
-      logo: Team.Miami,
     })
   })
 })
@@ -61,11 +57,10 @@ describe('teamCard', () => {
 
   it('counts several championships', () => {
     expect(teamCard(Team.Boston, seasons)).toEqual({
-      file: 'previews/team-bos.png',
+      file: 'previews/team-bos.jpg',
+      path: '/teamHistory/bos',
       heading: 'Boston Celtics',
       fact: '2× champions since 2003-04',
-      accentColor: celticsColor,
-      logo: Team.Boston,
     })
   })
 

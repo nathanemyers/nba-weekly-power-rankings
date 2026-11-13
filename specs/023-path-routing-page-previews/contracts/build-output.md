@@ -10,8 +10,8 @@ dist/
 ├── teamHistory/<team>.html       # one per Team enum value (30)
 ├── playerHistory/<id>.html       # one per player ID found in any season roster
 ├── previews/
-│   ├── season-<season>.png       # 1200×630
-│   └── team-<team>.png           # 1200×630
+│   ├── season-<season>.jpg       # 1200×630 page screenshot
+│   └── team-<team>.jpg           # 1200×630 page screenshot
 ├── sitePreview.png               # from public/
 └── apple-touch-icon.png          # from public/
 ```
@@ -41,4 +41,4 @@ Byte-identical to `dist/index.html`.
 ## Failure behavior
 
 - A season whose JSON fails validation is skipped with a logged warning, and the build continues.
-- A missing logo file or a font load failure fails the build, because it means the repo is broken rather than a data issue.
+- If Google Chrome isn't installed, or a page never finishes loading, the build fails with an error naming the cause.

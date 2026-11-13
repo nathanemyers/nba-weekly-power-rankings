@@ -3,6 +3,7 @@
 ## Prerequisites
 
 - `npm ci`
+- Google Chrome installed (the build uses it to screenshot pages)
 - Do **not** run `npm run build:summaries` (it spends API tokens).
 
 ## 1. Automated checks
@@ -27,14 +28,13 @@ diff dist/index.html dist/404.html && echo "404 matches index"
 Expected:
 - One season file per season and 30 team files.
 - The player file count is about 2,400.
-- The `og:image` values are absolute URLs that point to `previews/…png`.
+- The `og:image` values are absolute URLs that point to `previews/…jpg`.
 - `404.html` is identical to `index.html`.
 
-Open a few of the `dist/previews/*.png` files and confirm:
+Open a few of the `dist/previews/*.jpg` files and confirm:
 - They're 1200×630.
-- The text is legible.
-- The team card uses the team's color and logo.
-- The 2025-26 season card shows the Knicks as champions.
+- Each one shows the fully loaded page (no "Loading" text) in the dark theme.
+- The 2025-26 season page's description names the Knicks as champions.
 
 ## 3. Navigation under the sub-path
 

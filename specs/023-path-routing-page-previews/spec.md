@@ -21,7 +21,7 @@
 ### Session 2026-11-12
 
 - Q: Should player history pages get their own link preview? → A: No. Player pages show the site-wide preview (title, description, `sitePreview.png`). Only season and team pages get page-specific previews.
-- Q: What should season and team preview images show? → A: A designed title card (site name, page name, one headline fact, team colors and logo), not a screenshot of the chart.
+- Q: What should season and team preview images show? → A: Originally a designed title card. Changed later the same day: use screenshots of the pages themselves. The headline facts moved into the preview descriptions.
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -85,7 +85,7 @@ A visitor shares the Celtics team history page in a group chat. The preview card
 - **Team abbreviation case** (e.g. `teamHistory/BOS`): loads the same page as lower case, as today.
 - **Address outside the site's sub-path**: not served by this site and out of scope.
 - **New season or player added in a data refresh**: their pages (and, for a season, its preview) are produced the next time the site is built, with no manual step.
-- **Season in progress**: the current season has no champion yet. Its card shows the current #1 team instead and uses the site's own colors, and it updates at the next build after new rankings arrive.
+- **Season in progress**: the current season has no champion yet. Its preview description names the current #1 team instead, and its screenshot updates at the next build after new rankings arrive.
 - **Preview caches**: services that already cached the generic preview for an old link may keep showing it until their cache expires. That is outside the site's control.
 
 ## Requirements *(mandatory)*
@@ -109,11 +109,11 @@ A visitor shares the Celtics team history page in a group chat. The preview card
 - **FR-010**: Each season chart page MUST have its own preview image that identifies the season.
 - **FR-011**: Each team history page MUST have its own preview image that identifies the team.
 - **FR-012**: Player history pages MUST NOT get page-specific previews. A link-preview service fetching a player page address MUST see the site-wide title, description, and `sitePreview.png`.
-- **FR-013**: Season and team preview images MUST be designed title cards built from the site's data, not screenshots of the page. Each card MUST show the site name, the page's name (the season, e.g. "2018-19", or the team's full name), and one headline fact. For a season, the fact is the season's champion. For a team, it is the team's best season result (e.g. a championship count, or its highest finish). Team cards MUST use that team's colors and logo. Season cards MUST use the champion's colors, or the site's own colors when the season has no champion yet.
+- **FR-013**: Season and team preview images MUST be screenshots of the page itself (the top of the season chart or team history page, as a visitor sees it in the site's dark theme), taken at build time. Each page's preview description MUST include one headline fact: the champion for a season (or the current #1 team while a season is in progress), and the best result for a team.
 - **FR-014**: Preview images MUST be at least 1200×630 pixels with a roughly 1.91:1 shape so major services show them as a large card without cropping out important content.
 - **FR-015**: The base address, player pages, and unknown addresses MUST use the site-wide title, description, and `sitePreview.png`.
 - **FR-016**: The browser tab title MUST name the current page (season, team, or player) while the visitor browses.
-- **FR-017**: Season and team previews and images MUST be produced automatically as part of the normal site build from the committed data, with no paid services, API keys, or manual steps.
+- **FR-017**: Season and team previews and images MUST be produced automatically as part of the normal site build from the committed data, with no paid services, API keys, or manual steps. Taking screenshots requires Google Chrome on the build machine (it is preinstalled on GitHub's Ubuntu runners).
 
 ### Key Entities
 
