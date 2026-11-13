@@ -112,6 +112,13 @@ describe('Player history', () => {
     ).toBeInTheDocument()
   })
 
+  it("names the player in the browser tab", async () => {
+    await renderWithRouter(['/playerHistory/piercpa01'])
+    await settle()
+    const name = (await screen.findByRole('heading', { level: 1 })).textContent
+    expect(document.title).toBe(`${name} · NBA Weekly Power Rankings`)
+  })
+
   it('shows player not found for a malformed player id', async () => {
     await renderWithRouter(['/playerHistory/Curry'])
     expect(await screen.findByText('Player not found')).toBeInTheDocument()
