@@ -1,6 +1,7 @@
 import { Button } from './ui/button'
 import { useNavigate } from 'react-router'
 import { cn } from 'cn'
+import TeamLogo from './TeamLogo'
 import type { Team } from '@/types'
 
 interface ButtonProps {
@@ -19,6 +20,14 @@ export default function TeamHistoryButton(props: ButtonProps) {
       className={cn(disabled ? '' : 'cursor-pointer', props.className)}
       disabled={disabled}
     >
+      {props.team && (
+        <TeamLogo
+          team={props.team}
+          alt=""
+          data-icon="inline-start"
+          className="size-5 object-contain"
+        />
+      )}
       Team History
     </Button>
   )

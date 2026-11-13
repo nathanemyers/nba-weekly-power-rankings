@@ -287,7 +287,7 @@ describe('Season trends tab', () => {
   const trendsTab = () => screen.queryByRole('tab', { name: 'Trends' })
   const openTrends = async (user: ReturnType<typeof userEvent.setup>) => {
     await user.click(trendsTab()!)
-    await screen.findByRole('heading', { name: 'Biggest Up' })
+    await screen.findByRole('heading', { name: 'Most improved' })
   }
   // The team logos in a section, in display order
   const sectionTeams = (heading: string) =>
@@ -298,7 +298,9 @@ describe('Season trends tab', () => {
       .getAllByRole('img')
       .map((img) => img.getAttribute('alt'))
   const toggle = (team: string) =>
-    screen.getAllByRole('button', { name: `${team} logo` })[0]
+    within(screen.getByRole('tabpanel')).getAllByRole('button', {
+      name: new RegExp(`^${team} logo`),
+    })[0]
 
   it('lists the biggest risers and fallers of a completed season', async () => {
     const user = userEvent.setup()
@@ -306,13 +308,13 @@ describe('Season trends tab', () => {
     await chooseSeason(user, 'rising')
     await openTrends(user)
 
-    expect(sectionTeams('Biggest Up').slice(0, 2)).toEqual([
+    expect(sectionTeams('Most improved').slice(0, 2)).toEqual([
       'Indiana Pacers logo',
       'Miami Heat logo',
     ])
-    expect(sectionTeams('Biggest Up')).toHaveLength(3)
-    expect(sectionTeams('Biggest Down')[0]).toBe('Memphis Grizzlies logo')
-    expect(sectionTeams('Biggest Down')).toHaveLength(3)
+    expect(sectionTeams('Most improved')).toHaveLength(4)
+    expect(sectionTeams('Most declined')[0]).toBe('Memphis Grizzlies logo')
+    expect(sectionTeams('Most declined')).toHaveLength(4)
   })
 
   it('is enabled for a season in progress, with the storylines tab disabled', async () => {
@@ -367,7 +369,7 @@ describe('Season trends tab', () => {
       screen.queryByRole('button', { pressed: true })
     ).not.toBeInTheDocument()
     expect(
-      screen.queryByRole('button', { name: 'Indiana Pacers logo' })
+      screen.queryByRole('button', { name: /^Indiana Pacers logo/ })
     ).not.toBeInTheDocument()
   })
 

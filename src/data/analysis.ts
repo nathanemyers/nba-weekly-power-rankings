@@ -6,13 +6,13 @@ function getSeasonDelta(team: Team, season: Season) {
   if (!teamRankings) throw new Error('could not find team')
 
   // skip the first rank which is a preseason rank
-  const start = teamRankings.rankings[1]
+  const start = teamRankings.rankings[1] ?? teamRankings.rankings[0]
   const end = teamRankings.rankings[teamRankings.rankings.length - 1]
 
   return start.rank - end.rank
 }
 
-export function getMostImprovedTeams(season: Season, returnAmount = 3) {
+export function getMostImprovedTeams(season: Season, returnAmount = 5) {
   return season.teams
     .map((team) => {
       return {
@@ -20,13 +20,11 @@ export function getMostImprovedTeams(season: Season, returnAmount = 3) {
         value: getSeasonDelta(team.teamId, season),
       }
     })
-    .sort((a, b) => {
-      return a.value < b.value ? 1 : -1
-    })
+    .sort((a, b) => b.value - a.value || a.team.localeCompare(b.team))
     .slice(0, returnAmount)
 }
 
-export function getMostDeclinedTeams(season: Season, returnAmount = 3) {
+export function getMostDeclinedTeams(season: Season, returnAmount = 5) {
   return season.teams
     .map((team) => {
       return {
@@ -34,8 +32,6 @@ export function getMostDeclinedTeams(season: Season, returnAmount = 3) {
         value: getSeasonDelta(team.teamId, season),
       }
     })
-    .sort((a, b) => {
-      return a.value > b.value ? 1 : -1
-    })
+    .sort((a, b) => a.value - b.value || a.team.localeCompare(b.team))
     .slice(0, returnAmount)
 }

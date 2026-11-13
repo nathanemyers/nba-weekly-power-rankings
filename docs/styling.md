@@ -54,7 +54,7 @@ Names specific to this site:
 | --- | --- |
 | `foreground-soft` | Secondary body text, idle team labels, rank numbers |
 | `dim` | Team labels pushed back while another team is active |
-| `rank-up`, `rank-mid`, `rank-down` | Rising / middle / falling rank, in swing cards and trend minimaps |
+| `rank-up`, `rank-mid`, `rank-down` | Rising / middle / falling rank, in trend list rank changes and trend minimaps |
 | `series-won`, `series-lost` | Won / lost playoff series badges |
 | `stat-elite`, `stat-good`, `stat-fair`, `stat-poor` | Top-10% / top-quarter / middle / bottom-quarter player stats in the roster pane |
 | `move-joined`, `move-left` | Arrows on roster badges for players who joined / left mid-season |
