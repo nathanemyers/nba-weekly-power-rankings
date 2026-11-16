@@ -1,5 +1,9 @@
 import { fetchTextWithRetry } from '../lib/http.mjs'
 import { htmlToText } from '../lib/htmlToText.mjs'
+import { TEAM_SLUGS } from '../lib/articles.mjs'
+
+const WEEKLY_SLUG_RE = /^power-rankings-\d{4}-\d{2}-week-\d+$/
+const TEAM_HEADER_RE = /<h4>#(\d+)([\s\S]*?)<\/h4>/g
 
 const NEXT_DATA_RE =
   /<script id="__NEXT_DATA__" type="application\/json">(.*?)<\/script>/s
@@ -42,8 +46,32 @@ export async function fetchPowerRankingsArticle(url) {
   if (!raw) {
     throw new Error(`Article data missing from __NEXT_DATA__ for ${url}`)
   }
+  return parsePowerRankingsArticle(raw, url)
+}
 
-  const rankings = (raw.powerRankings ?? [])
+// Some weekly articles (e.g. 2026-27 Week 1) only carry the rankings as <h4>#N team</h4> sections in the HTML.
+function parseHtmlRankings(html) {
+  const headers = [...html.matchAll(TEAM_HEADER_RE)]
+  return headers.map((match, i) => {
+    const header = match[2]
+    const link = /<a href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/.exec(header)
+    const end = i + 1 < headers.length ? headers[i + 1].index : html.length
+    const summaryHtml = html.slice(match.index + match[0].length, end).trim()
+    return {
+      rank: parseInt(match[1], 10),
+      previousRank: null,
+      teamId: Number(/\/logos\/nba\/(\d+)\//.exec(header)?.[1]),
+      teamName: link ? htmlToText(link[2]) : null,
+      teamLink: link?.[1] ?? null,
+      summaryHtml,
+      summaryText: htmlToText(summaryHtml),
+    }
+  })
+}
+
+/** Parses an article object from a page's __NEXT_DATA__ into our normalized shape. */
+export function parsePowerRankingsArticle(raw, url) {
+  const structured = (raw.powerRankings ?? [])
     .map((entry) => ({
       rank: entry.currentWeekRank,
       previousRank: entry.lastWeekRank ?? null,
@@ -53,7 +81,11 @@ export async function fetchPowerRankingsArticle(url) {
       summaryHtml: entry.powerRankSummary,
       summaryText: htmlToText(entry.powerRankSummary),
     }))
-    .sort((a, b) => a.rank - b.rank)
+  const rankings = (
+    structured.length === 0 && WEEKLY_SLUG_RE.test(raw.slug)
+      ? parseHtmlRankings(raw.contentFiltered ?? '')
+      : structured
+  ).sort((a, b) => a.rank - b.rank)
 
   const hasStructuredRankings = rankings.length > 0
 
@@ -75,4 +107,22 @@ export async function fetchPowerRankingsArticle(url) {
       ? null
       : htmlToText(raw.contentFiltered || raw.contentText || ''),
   }
+}
+
+/** Throws unless a numbered weekly article from 2017-18 onward ranks all 30 teams exactly once. */
+export function validateWeeklyRankings(article) {
+  if (!WEEKLY_SLUG_RE.test(article.slug) || article.publishedAt < '2017-08-01') return
+  const ids = article.rankings.map((entry) => entry.teamId)
+  const ranks = article.rankings.map((entry) => entry.rank).sort((a, b) => a - b)
+  const problem =
+    ids.length !== 30
+      ? `${ids.length} teams`
+      : ids.some((id) => !TEAM_SLUGS[id])
+        ? 'an unknown team id'
+        : ids.some((id, i) => ids.indexOf(id) !== i)
+          ? 'a duplicated team'
+          : ranks.some((rank, i) => rank !== i + 1)
+            ? 'ranks other than 1-30'
+            : null
+  if (problem) throw new Error(`${article.slug} has ${problem}, expected all 30 teams ranked 1-30`)
 }

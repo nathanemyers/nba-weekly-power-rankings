@@ -1,5 +1,9 @@
 export const seasonIndex: unknown = [
   {
+    "name": "2026-27",
+    "source": "nba"
+  },
+  {
     "name": "2025-26",
     "source": "nba",
     "champion": "nyk"
@@ -117,6 +121,7 @@ export const seasonIndex: unknown = [
 ];
 
 export const seasonLoaders: Record<string, () => Promise<{ default: unknown }>> = {
+  "2026-27": () => import("./2026-27.json"),
   "2025-26": () => import("./2025-26.json"),
   "2024-25": () => import("./2024-25.json"),
   "2023-24": () => import("./2023-24.json"),

@@ -32,8 +32,10 @@ export default function SeasonSelect() {
           return (
             <SelectItem className="h-10 text-lg" key={s.name} value={s.name}>
               {s.name}
-              {s.champion && (
+              {s.champion ? (
                 <TeamLogo team={s.champion} className="size-8 object-contain" />
+              ) : (
+                <span className="text-sm text-muted-foreground">In progress</span>
               )}
             </SelectItem>
           )

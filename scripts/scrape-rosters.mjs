@@ -12,7 +12,9 @@ mkdirSync(outDir, { recursive: true })
 
 // Basketball-Reference names a season by the year it ends: 2018-19 is /leagues/NBA_2019_per_game.html
 const FIRST_END_YEAR = 2004
-const LAST_END_YEAR = 2026
+// A season starts in the fall, so from August on the newest season ends next year
+const today = new Date()
+const LAST_END_YEAR = today.getUTCFullYear() + (today.getUTCMonth() >= 7 ? 1 : 0)
 const CRAWL_DELAY_MS = 3000
 
 const force = process.argv.includes('--force')

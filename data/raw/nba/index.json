@@ -1,12 +1,42 @@
 [
   {
+    "id": 2425559,
+    "slug": "power-rankings-2026-27-week-4",
+    "title": "Power Rankings, Week 4: Spurs, Thunder, Wolves take over top 3 spots",
+    "season": "2026-27",
+    "week": 4,
+    "publishedAt": "2026-11-09T16:36:39Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2026-27/power-rankings-2026-27-week-4.json"
+  },
+  {
+    "id": 2410135,
+    "slug": "power-rankings-2026-27-week-3",
+    "title": "Power Rankings: Undefeated Grizzlies surge into Top 5",
+    "season": "2026-27",
+    "week": 3,
+    "publishedAt": "2026-11-02T21:19:16Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2026-27/power-rankings-2026-27-week-3.json"
+  },
+  {
+    "id": 2366473,
+    "slug": "power-rankings-2026-27-week-2",
+    "title": "Power Rankings, Week 2: Pistons, Timberwolves climb into Top 3",
+    "season": "2026-27",
+    "week": 2,
+    "publishedAt": "2026-10-26T13:33:22Z",
+    "hasStructuredRankings": true,
+    "file": "articles/2026-27/power-rankings-2026-27-week-2.json"
+  },
+  {
     "id": 2365921,
     "slug": "power-rankings-2026-27-week-1",
     "title": "Power Rankings: How all 30 teams measure up to begin 2026-27 season",
     "season": "2026-27",
     "week": 1,
     "publishedAt": "2026-10-19T18:39:52Z",
-    "hasStructuredRankings": false,
+    "hasStructuredRankings": true,
     "file": "articles/2026-27/power-rankings-2026-27-week-1.json"
   },
   {

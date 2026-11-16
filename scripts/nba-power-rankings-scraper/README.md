@@ -48,6 +48,13 @@ read from disk instead of re-fetched, so you can resume an interrupted run
 or extend the year range later without hitting NBA.com again for articles
 you already have.
 
+### Checks and fallbacks
+
+- **HTML fallback**: some numbered weekly articles (`power-rankings-YYYY-YY-week-N`), such as 2026-27 Week 1, ship an empty `powerRankings` array and only list the teams as `<h4>#N … Team</h4>` sections in the body. For those, the scraper reads rank, team id (from the logo URL), name, link and write-up out of the HTML instead. `previousRank` is `null`.
+- **30-team check**: a newly fetched numbered weekly article published from August 2017 on must rank all 30 teams exactly once. If it doesn't, it isn't saved and counts as failed.
+- **Exit code**: the CLI exits non-zero when any article failed.
+- **Index**: `index.json` lists every article inside the `--years` window plus any older article already saved on disk, so a sliding window never drops a season. It's only rewritten when its contents change.
+
 ## Output
 
 ```

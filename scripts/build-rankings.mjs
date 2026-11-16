@@ -24,7 +24,7 @@ function cleanSummary(summaryText) {
   const prose = summaryText
     .split('\n')
     .map((line) => line.trim())
-    .find((line) => line && !/^(Record:|\d{4}-\d{2}:|Pace:|OffRtg:|Week \d+:)/.test(line) && !/NetRtg:/.test(line))
+    .find((line) => line && !/^((Preseason r|R)ecord:|\d{4}-\d{2}:|Pace:|OffRtg:|Week \d+:)/.test(line) && !/NetRtg:/.test(line))
 
   if (!prose) return ''
   if (prose.length <= MAX_BLURB_LENGTH) return prose

@@ -148,6 +148,12 @@ describe('User Story 1 — read the chart correctly', () => {
     expect(lastWindow.container.querySelector('.playoff-column')).not.toBeNull()
   })
 
+  it('hides the medal column for a season with no playoff results yet', () => {
+    const teams = buildTeams().map((team) => ({ ...team, playoff: undefined }))
+    const { container } = render(chart({ teams, startWeek: 1, endWeek: 25 }))
+    expect(container.querySelector('.playoff-column')).toBeNull()
+  })
+
   it("keeps a gap in a team's line across a week it wasn't ranked", () => {
     const { container } = render(chart({ startWeek: 1, endWeek: 25 }))
     const d = linePath(container, LAKERS)?.getAttribute('d') ?? ''
