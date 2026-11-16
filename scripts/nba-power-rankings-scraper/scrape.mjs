@@ -1,9 +1,9 @@
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import path from 'node:path'
 
 import { listAllPowerRankingsArticles } from './contentApi.mjs'
-import { fetchPowerRankingsArticle } from './articlePage.mjs'
+import { fetchPowerRankingsArticle, validateWeeklyRankings } from './articlePage.mjs'
 import { sleep } from '../lib/http.mjs'
 
 function slugify(value) {
@@ -25,6 +25,13 @@ export async function scrape({ years, outDir, delayMs, force }) {
   console.log(`Found ${listItems.length} articles total.`)
 
   const inRange = listItems.filter((item) => new Date(item.date) >= cutoff)
+  // Older articles stay in the index when they're already saved, so a sliding window never drops a season.
+  const savedOutOfRange = []
+  for (const item of listItems) {
+    if (new Date(item.date) >= cutoff) continue
+    const existingPath = await findExistingArticleFile(outDir, item.slug)
+    if (existingPath) savedOutOfRange.push(existingPath)
+  }
   console.log(
     `${inRange.length} articles published on or after ${cutoff.toISOString().slice(0, 10)} ` +
       `(the rest of NBA.com's archive is older than the requested ${years}-year window).`
@@ -32,7 +39,10 @@ export async function scrape({ years, outDir, delayMs, force }) {
 
   await mkdir(outDir, { recursive: true })
 
-  const index = []
+  const index = savedOutOfRange.map((file) =>
+    indexRow(JSON.parse(readFileSync(file, 'utf8')))
+  )
+  const fetchedSlugs = []
   let fetched = 0
   let skipped = 0
   let failed = 0
@@ -51,23 +61,16 @@ export async function scrape({ years, outDir, delayMs, force }) {
         skipped++
       } else {
         article = await fetchPowerRankingsArticle(item.permalink)
+        validateWeeklyRankings(article)
         const filePath = path.join(outDir, articleFilePath(article))
         await mkdir(path.dirname(filePath), { recursive: true })
         await writeFile(filePath, JSON.stringify(article, null, 2), 'utf8')
         fetched++
+        fetchedSlugs.push(article.slug)
         await sleep(delayMs)
       }
 
-      index.push({
-        id: article.id,
-        slug: article.slug,
-        title: article.title,
-        season: article.season,
-        week: article.week,
-        publishedAt: article.publishedAt,
-        hasStructuredRankings: article.hasStructuredRankings,
-        file: articleFilePath(article),
-      })
+      index.push(indexRow(article))
     } catch (err) {
       failed++
       console.error(`  failed: ${String(err)}`)
@@ -78,16 +81,30 @@ export async function scrape({ years, outDir, delayMs, force }) {
     (a, b) =>
       new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   )
-  await writeFile(
-    path.join(outDir, 'index.json'),
-    JSON.stringify(index, null, 2),
-    'utf8'
-  )
+  const indexPath = path.join(outDir, 'index.json')
+  const indexJson = JSON.stringify(index, null, 2)
+  if (!existsSync(indexPath) || readFileSync(indexPath, 'utf8') !== indexJson) {
+    await writeFile(indexPath, indexJson, 'utf8')
+  }
 
   console.log(
     `\nDone. Fetched ${fetched}, skipped (already saved) ${skipped}, failed ${failed}. ` +
-      `Index written to ${path.join(outDir, 'index.json')}.`
+      `Index at ${indexPath}.`
   )
+  return { fetched, skipped, failed, fetchedSlugs }
+}
+
+function indexRow(article) {
+  return {
+    id: article.id,
+    slug: article.slug,
+    title: article.title,
+    season: article.season,
+    week: article.week,
+    publishedAt: article.publishedAt,
+    hasStructuredRankings: article.hasStructuredRankings,
+    file: articleFilePath(article),
+  }
 }
 
 /** Looks for a previously-saved article with this slug under any season subdirectory. */

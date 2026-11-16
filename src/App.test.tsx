@@ -414,6 +414,17 @@ describe('Season selector', () => {
     expect(within(option('active')).queryByRole('img')).not.toBeInTheDocument()
   })
 
+  it('marks a season without a champion as in progress', async () => {
+    const user = userEvent.setup()
+    await renderWithRouter()
+    await user.click(screen.getByRole('combobox'))
+
+    const option = (name: string) =>
+      screen.getByRole('option', { name: new RegExp(`^${name}`) })
+    expect(option('active')).toHaveTextContent('In progress')
+    expect(option('long')).not.toHaveTextContent('In progress')
+  })
+
   it('keeps the logo out of the closed selector', async () => {
     await renderWithRouter()
     const trigger = screen.getByRole('combobox')

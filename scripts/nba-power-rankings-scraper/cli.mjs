@@ -52,12 +52,13 @@ async function main() {
   const args = parseArgs(process.argv.slice(2))
   const outDir = args.outDir || path.join(root, 'data', 'raw', 'nba')
 
-  await scrape({
+  const { failed } = await scrape({
     years: args.years,
     outDir,
     delayMs: args.delayMs,
     force: args.force,
   })
+  if (failed > 0) process.exitCode = 1
 }
 
 main().catch((err) => {

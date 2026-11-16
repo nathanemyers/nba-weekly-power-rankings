@@ -280,7 +280,8 @@ export default function RankingsChart(props: ChartProps) {
             compact={props.compact}
           />
 
-          {props.endWeek >= lastWeek && (
+          {props.endWeek >= lastWeek &&
+            props.teams.some((team) => team.playoff) && (
             <g className="playoff-column">
               {!props.compact && (
                 <text
